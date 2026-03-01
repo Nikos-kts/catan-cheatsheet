@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CATAN: Traders & Barbarians — Complete Card Cheatsheet</title>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --gold: #c8943a;
+    --gold-light: #e8b860;
+    --gold-pale: #f5e4bc;
+    --dark: #1a1008;
+    --brown: #4a2c10;
+    --parchment: #f9f2e4;
+    --parchment-dark: #ede3cc;
+    --red: #8b1a1a;
+    --blue: #1a3a6b;
+    --green: #2a5a2a;
+    --purple: #4a1a5a;
+    --teal: #1a5a5a;
+    --orange: #7a3a10;
+    --border: #9a6a20;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  @media print {
+    body { background: white; }
+    .page-break { page-break-before: always; }
+    .section { break-inside: avoid; }
+  }
+
+  body {
+    font-family: 'Lato', sans-serif;
+    background: #1a1008;
+    color: var(--dark);
+    min-height: 100vh;
+  }
+
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* HEADER */
+  .header {
+    text-align: center;
+    background: linear-gradient(135deg, #2a1a06 0%, #4a2c10 40%, #2a1a06 100%);
+    border: 3px solid var(--gold);
+    border-radius: 12px;
+    padding: 28px 20px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute; inset: 4px;
+    border: 1px solid rgba(200,148,58,0.3);
+    border-radius: 9px;
+    pointer-events: none;
+  }
+  .header-ornament {
+    font-size: 22px;
+    color: var(--gold-light);
+    letter-spacing: 20px;
+    margin-bottom: 6px;
+  }
+  .header h1 {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 28px;
+    color: var(--gold-light);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.8);
+    line-height: 1.2;
+  }
+  .header h1 span {
+    display: block;
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+    color: var(--gold-pale);
+    letter-spacing: 4px;
+    margin-top: 4px;
+    font-weight: 400;
+  }
+  .header-subtitle {
+    font-family: 'Cinzel', serif;
+    font-size: 12px;
+    color: rgba(232,184,96,0.7);
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-top: 10px;
+  }
+
+  /* SECTION HEADERS */
+  .section-title {
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 18px;
+    border-radius: 6px 6px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .section-title .icon { font-size: 18px; }
+  .section-title .count {
+    margin-left: auto;
+    font-size: 10px;
+    opacity: 0.7;
+    background: rgba(0,0,0,0.3);
+    padding: 2px 8px;
+    border-radius: 10px;
+  }
+
+  /* CARD GRID WRAPPER */
+  .section-wrapper {
+    background: var(--parchment-dark);
+    border-radius: 0 0 8px 8px;
+    border: 2px solid var(--border);
+    border-top: none;
+    padding: 16px;
+    margin-bottom: 22px;
+  }
+
+  .section-block {
+    margin-bottom: 22px;
+  }
+
+  /* Individual cards */
+  .cards-grid {
+    display: grid;
+    gap: 12px;
+  }
+  .cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .cols-2 { grid-template-columns: repeat(2, 1fr); }
+  .cols-5 { grid-template-columns: repeat(5, 1fr); }
+
+  @media (max-width: 900px) {
+    .cols-4, .cols-3, .cols-5 { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  .card {
+    background: var(--parchment);
+    border-radius: 8px;
+    border: 1.5px solid var(--border);
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.12);
+    display: flex;
+    flex-direction: column;
+  }
+
+  .card-header {
+    padding: 8px 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .card-emoji {
+    font-size: 22px;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+
+  .card-name {
+    font-family: 'Cinzel', serif;
+    font-size: 11.5px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .card-qty {
+    margin-left: auto;
+    font-size: 10px;
+    font-weight: 700;
+    background: rgba(0,0,0,0.15);
+    padding: 2px 6px;
+    border-radius: 10px;
+    flex-shrink: 0;
+    font-family: 'Cinzel', serif;
+  }
+
+  .card-body {
+    padding: 6px 10px 10px;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #2a1a08;
+    flex: 1;
+    border-top: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .card-cost {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-top: 1px dashed rgba(0,0,0,0.12);
+    color: #5a3010;
+  }
+  .cost-label { opacity: 0.6; font-weight: 400; }
+
+  /* Color themes per section */
+  .theme-event .section-title { background: linear-gradient(90deg, #1a3a6b, #2a4a8b); color: #c8d8f8; }
+  .theme-event .section-wrapper { border-color: #3a5aab; }
+  .theme-event .card-header { background: linear-gradient(90deg, #d0d8f0, #e8ecf8); }
+  .theme-event .card-qty { background: rgba(26,58,107,0.2); color: #1a3a6b; }
+
+  .theme-dev .section-title { background: linear-gradient(90deg, #4a1a5a, #6a2a7a); color: #e8c8f8; }
+  .theme-dev .section-wrapper { border-color: #7a3a9a; }
+  .theme-dev .card-header { background: linear-gradient(90deg, #eed0f8, #f5e8ff); }
+  .theme-dev .card-qty { background: rgba(74,26,90,0.2); color: #4a1a5a; }
+
+  .theme-barbarian .section-title { background: linear-gradient(90deg, #8b1a1a, #aa2a2a); color: #fcd8c8; }
+  .theme-barbarian .section-wrapper { border-color: #aa3a3a; }
+  .theme-barbarian .card-header { background: linear-gradient(90deg, #f8d0c8, #fde8e4); }
+  .theme-barbarian .card-qty { background: rgba(139,26,26,0.2); color: #8b1a1a; }
+
+  .theme-baggage .section-title { background: linear-gradient(90deg, #4a3010, #6a4a20); color: #f8e0b0; }
+  .theme-baggage .section-wrapper { border-color: #8a6030; }
+  .theme-baggage .card-header { background: linear-gradient(90deg, #f0e0b8, #faf0d8); }
+  .theme-baggage .card-qty { background: rgba(74,48,16,0.2); color: #4a3010; }
+
+  .theme-fish .section-title { background: linear-gradient(90deg, #1a5a5a, #2a7a7a); color: #c8f0f0; }
+  .theme-fish .section-wrapper { border-color: #3a9a9a; }
+  .theme-fish .card-header { background: linear-gradient(90deg, #c8e8e8, #e0f4f4); }
+  .theme-fish .card-qty { background: rgba(26,90,90,0.2); color: #1a5a5a; }
+
+  .theme-variant .section-title { background: linear-gradient(90deg, #2a5a2a, #3a7a3a); color: #c8f0c8; }
+  .theme-variant .section-wrapper { border-color: #4a9a4a; }
+  .theme-variant .card-header { background: linear-gradient(90deg, #cce8cc, #e0f4e0); }
+  .theme-variant .card-qty { background: rgba(42,90,42,0.2); color: #2a5a2a; }
+
+  /* EVENT CARD special: show number prominently */
+  .event-number {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 22px;
+    font-weight: 900;
+    color: var(--blue);
+    flex-shrink: 0;
+    width: 36px;
+    text-align: center;
+    line-height: 1;
+  }
+
+  .event-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 2px 5px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .tag-production { background: #d4edda; color: #155724; }
+  .tag-event { background: #fff3cd; color: #856404; }
+  .tag-special { background: #f8d7da; color: #721c24; }
+
+  /* Legend */
+  .legend {
+    background: var(--parchment);
+    border: 2px solid var(--gold);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin-bottom: 22px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .legend-title {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--brown);
+    flex-basis: 100%;
+    margin-bottom: 4px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+  }
+  .legend-dot {
+    width: 12px; height: 12px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
+
+  /* Resources display */
+  .res-icons { display: inline-flex; gap: 3px; align-items: center; flex-wrap: wrap; }
+  .res {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 1px 5px;
+    border-radius: 3px;
+    white-space: nowrap;
+  }
+  .res-wood { background: #2d5a1b; color: #c8f0b0; }
+  .res-brick { background: #8b3a1a; color: #ffd0b0; }
+  .res-grain { background: #9a7a10; color: #fff0b0; }
+  .res-wool { background: #4a7a3a; color: #d4f0c0; }
+  .res-ore { background: #3a3a6a; color: #c8c8f0; }
+  .res-gold { background: #8a6010; color: #ffeeb0; }
+  .res-fish { background: #1a6a7a; color: #b0eef8; }
+
+  /* Divider */
+  .section-divider {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: var(--gold);
+    opacity: 0.6;
+    margin: 6px 0 12px;
+  }
+
+  .sub-header {
+    font-family: 'Cinzel', serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--brown);
+    margin-bottom: 8px;
+    padding-bottom: 4px;
+    border-bottom: 1px dashed var(--border);
+  }
+
+  /* Special card override for event numbers */
+  .event-card .card-header {
+    gap: 6px;
+    padding: 6px 8px;
+  }
+
+  .footer {
+    text-align: center;
+    padding: 14px;
+    font-family: 'Cinzel', serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: rgba(200,148,58,0.5);
+  }
+
+  .note-box {
+    background: rgba(200,148,58,0.1);
+    border-left: 3px solid var(--gold);
+    padding: 8px 12px;
+    margin-bottom: 12px;
+    font-size: 11px;
+    color: var(--brown);
+    border-radius: 0 4px 4px 0;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <div class="header-ornament">⚔ ✦ ⚔</div>
+    <h1>CATAN: TRADERS & BARBARIANS
+      <span>Complete Card Reference Cheatsheet</span>
+    </h1>
+    <div class="header-subtitle">All Cards — All Scenarios — All Variants</div>
+  </div>
+
+  <!-- LEGEND -->
+  <div class="legend">
+    <div class="legend-title">🗺 Card Sets Covered</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#2a4a8b"></div> Event Cards (Variant)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#6a2a7a"></div> Development Cards – Barbarian Attack</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#aa2a2a"></div> Development Cards – Traders & Barbarians</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#6a4a20"></div> Baggage Train Cards</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#2a7a7a"></div> Fish Cards (Fishermen of Catan)</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#3a7a3a"></div> Variant & Special Cards</div>
+  </div>
+
+  <!-- =================== SECTION 1: EVENT CARDS =================== -->
+  <div class="section-block theme-event">
+    <div class="section-title">
+      <span class="icon">🎴</span> CATAN EVENT CARDS — Dice Replacement Variant
+      <span class="count">36 Cards Total</span>
+    </div>
+    <div class="section-wrapper">
+      <div class="note-box">
+        <strong>How to use:</strong> Set aside "New Year". Shuffle remaining 35 cards; place New Year 6th from bottom. Each turn, flip the top card: resolve the event first, then produce resources based on the shown production number (replaces dice roll).
+      </div>
+
+      <div class="sub-header">Production Cards (No Special Event) — 18 cards</div>
+      <div class="cards-grid cols-4" style="margin-bottom:14px">
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="event-number">2</div>
+            <div>
+              <div class="event-tag tag-production">Production</div>
+              <div class="card-name">Production 2</div>
+            </div>
+            <div class="card-qty">×1</div>
+          </div>
+          <div class="card-body">All hexes with number token <strong>2</strong> produce resources for adjacent settlements and cities.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="event-number">3</div>
+            <div>
+              <div class="event-tag tag-production">Production</div>
+              <div class="card-name">Production 3</div>
+            </div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">All hexes with token <strong>3</strong> produce. Two copies — moderate probability.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="event-number">4</div>
+            <div>
+              <div class="event-tag tag-production">Production</div>
+              <div class="card-name">Production 4</div>
+            </div>
+            <div class="card-qty">×3</div>
+          </div>
+          <div class="card-body">All hexes with token <strong>4</strong> produce. Three copies in deck.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="event-number">5</div>
+            <div>
+              <div class="event-tag tag-production">Production</div>
+              <div class="card-name">Production 5</div>
+            </div>
+            <div class="card-qty">×4</div>
+          </div>
+          <div class="card-body">All hexes with token <strong>5</strong> produce. Four copies — high probability.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="event-number">6</div>
+            <div>
+              <div class="event-tag tag-production">Production</div>
+              <div class="card-name">Production 6</div>
+            </div>
+            <div class="card-qty">×5</div>
+          </div>
+          <div class="card-body">All hexes with token <strong>6</strong> produce. Five copies — most common number in deck.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="event-number">8</div>
+            <div>
+              <div class="event-tag tag-production">Production</div>
+              <div class="card-name">Production 8</div>
+            </div>
+            <div class="card-qty">×5</div>
+          </div>
+          <div class="card-body">All hexes with token <strong>8</strong> produce. Five copies — most common number in deck.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="event-number">9</div>
+            <div>
+              <div class="event-tag tag-production">Production</div>
+              <div class="card-name">Production 9</div>
+            </div>
+            <div class="card-qty">×4</div>
+          </div>
+          <div class="card-body">All hexes with token <strong>9</strong> produce.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="event-number">10</div>
+            <div>
+              <div class="event-tag tag-production">Production</div>
+              <div class="card-name">Production 10</div>
+            </div>
+            <div class="card-qty">×3</div>
+          </div>
+          <div class="card-body">All hexes with token <strong>10</strong> produce.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="event-number">11</div>
+            <div>
+              <div class="event-tag tag-production">Production</div>
+              <div class="card-name">Production 11</div>
+            </div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">All hexes with token <strong>11</strong> produce.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="event-number">12</div>
+            <div>
+              <div class="event-tag tag-production">Production</div>
+              <div class="card-name">Production 12</div>
+            </div>
+            <div class="card-qty">×1</div>
+          </div>
+          <div class="card-body">All hexes with token <strong>12</strong> produce. Only one copy — rare event.</div>
+        </div>
+
+      </div>
+
+      <div class="sub-header">Special Event Cards — 18 cards</div>
+      <div class="cards-grid cols-3">
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">📅</div>
+            <div>
+              <div class="event-tag tag-special">Special</div>
+              <div class="card-name">New Year</div>
+            </div>
+            <div class="card-qty">×1</div>
+          </div>
+          <div class="card-body">The deck is reshuffled! Place this card 6th from the bottom of the new shuffled deck. Production as shown on card still occurs.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">🤝</div>
+            <div>
+              <div class="event-tag tag-event">Event</div>
+              <div class="card-name">Good Neighbors</div>
+            </div>
+            <div class="card-qty">×3</div>
+          </div>
+          <div class="card-body">Each player receives 1 resource of their choice from the bank. Resolve before production. Three copies in deck.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">🌾</div>
+            <div>
+              <div class="event-tag tag-event">Event</div>
+              <div class="card-name">Rich Harvest</div>
+            </div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Each player with a settlement or city adjacent to any hex of the production number receives <strong>1 extra resource</strong> from that hex.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">🌊</div>
+            <div>
+              <div class="event-tag tag-event">Event</div>
+              <div class="card-name">Calm Seas</div>
+            </div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">No robber is moved, even if a 7 is the production number. All players feel safe from the robber this turn.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">🎭</div>
+            <div>
+              <div class="event-tag tag-event">Event</div>
+              <div class="card-name">Carnival</div>
+            </div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Each player may trade 2 resources of the same type for 1 resource of their choice from the bank. Optional for each player.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">💸</div>
+            <div>
+              <div class="event-tag tag-event">Event</div>
+              <div class="card-name">Trade</div>
+            </div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Each player may trade up to 2 resources (at standard rates) without using their building turn. Extra trading opportunity this turn.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">🐛</div>
+            <div>
+              <div class="event-tag tag-special">Special</div>
+              <div class="card-name">Plague</div>
+            </div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Each player with the <strong>most</strong> resource cards must discard 1 card of their choice. In case of a tie, all tied players discard 1 card.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">🌋</div>
+            <div>
+              <div class="event-tag tag-special">Special</div>
+              <div class="card-name">Earthquake</div>
+            </div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Each player removes 1 road (of their choice) from the board. Roads removed this way cannot be rebuilt this turn. The road is returned to the player.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">🏆</div>
+            <div>
+              <div class="event-tag tag-event">Event</div>
+              <div class="card-name">Tournament</div>
+            </div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Each player with the <strong>largest army</strong> (most played Knight cards) receives 1 resource of their choice. If a tie, all tied players receive 1 resource.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">⚗️</div>
+            <div>
+              <div class="event-tag tag-event">Event</div>
+              <div class="card-name">Invention</div>
+            </div>
+            <div class="card-qty">×1</div>
+          </div>
+          <div class="card-body">Each player receives 1 <strong>ore</strong> from the bank. Also triggers regular production for the shown number.</div>
+        </div>
+
+        <div class="card event-card">
+          <div class="card-header">
+            <div class="card-emoji">🪙</div>
+            <div>
+              <div class="event-tag tag-event">Event</div>
+              <div class="card-name">Trade Advantage</div>
+            </div>
+            <div class="card-qty">×1</div>
+          </div>
+          <div class="card-body">Each player with a settlement or city adjacent to a harbor may trade at <strong>2:1</strong> for any resource this turn, regardless of harbor type.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SECTION 2: BARBARIAN ATTACK DEV CARDS =================== -->
+  <div class="section-block theme-dev">
+    <div class="section-title">
+      <span class="icon">⚔️</span> DEVELOPMENT CARDS — Barbarian Attack Scenario
+      <span class="count">27 Cards Total</span>
+    </div>
+    <div class="section-wrapper">
+      <div class="note-box">
+        <strong>Used in:</strong> Barbarian Attack scenario only. Replaces standard Catan development cards. No Robber in this scenario — when a 7 is rolled or a Knight is played, a barbarian appears instead.
+      </div>
+      <div class="cards-grid cols-3">
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🗡️</div>
+            <div class="card-name">Knighthood</div>
+            <div class="card-qty">×6</div>
+          </div>
+          <div class="card-body">Place 1 <strong>knight</strong> on any path adjacent to the castle hex. Knights defend Catan from barbarian invasions. (6 copies — the most common card)</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🏅</div>
+            <div class="card-name">Victory Point</div>
+            <div class="card-qty">×5</div>
+          </div>
+          <div class="card-body">Worth <strong>+1 Victory Point</strong>. Counts immediately; kept face-down until the winning turn. No need to play it.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🛣️</div>
+            <div class="card-name">Road Building</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Place <strong>2 free roads</strong> on the board following normal road placement rules. Play before trading or building on your turn.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🎁</div>
+            <div class="card-name">Year of Plenty</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Take <strong>any 2 resource cards</strong> from the bank of your choice. Can be the same or different resources.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🪙</div>
+            <div class="card-name">Monopoly</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Announce <strong>1 resource type</strong>. All other players must give you ALL their cards of that type. No gold can be taken via Monopoly.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🏪</div>
+            <div class="card-name">Master Merchant</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Steal <strong>2 resource cards</strong> from the player with the <strong>most Victory Points</strong> (or one of the leaders if tied). You choose which cards to take.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">💒</div>
+            <div class="card-name">Wedding</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">All players with more Victory Points than you must <strong>give you 1 resource card</strong> of your choice from their hand. (They may choose which one if you don't specify.)</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">⚗️</div>
+            <div class="card-name">Alchemist</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Instead of rolling dice, secretly choose <strong>any production number</strong> (2–12). Reveal it — that number produces. Cannot choose "7". Played before rolling.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🔨</div>
+            <div class="card-name">Saboteur</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Choose any 1 player. That player must <strong>discard half their resource cards</strong> (rounded down), just as if they had rolled a 7.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SECTION 3: TRADERS & BARBARIANS DEV CARDS =================== -->
+  <div class="section-block theme-barbarian">
+    <div class="section-title">
+      <span class="icon">🛒</span> DEVELOPMENT CARDS — Traders & Barbarians Scenario
+      <span class="count">26 Cards Total</span>
+    </div>
+    <div class="section-wrapper">
+      <div class="note-box">
+        <strong>Used in:</strong> The Traders & Barbarians scenario. Replaces standard development cards. No Robber. Rolling a "7" moves a barbarian instead. Gold can be traded 2:1 for any resource.
+      </div>
+      <div class="cards-grid cols-3">
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🏅</div>
+            <div class="card-name">Victory Point</div>
+            <div class="card-qty">×5</div>
+          </div>
+          <div class="card-body"><strong>+1 Victory Point</strong>. Kept secret until you win. Counts the turn it is drawn — no need to play it openly.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🛣️</div>
+            <div class="card-name">Road Building</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Place <strong>2 free roads</strong> following normal rules. Played before trading and building. Cannot place on paths occupied by barbarians.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🎁</div>
+            <div class="card-name">Year of Plenty</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Take <strong>any 2 resources</strong> from the bank. Can be same or different. Great for filling gaps in your wagon delivery supply chain.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🪙</div>
+            <div class="card-name">Monopoly</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">All opponents give you ALL their cards of <strong>1 announced resource type</strong>. Gold cannot be stolen this way.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🏪</div>
+            <div class="card-name">Master Merchant</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Steal <strong>2 resource cards</strong> from the leader (most VP). You choose which cards. If tied for lead, pick one of the tied players.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">💒</div>
+            <div class="card-name">Wedding</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Every player with <strong>more VP than you</strong> gives you 1 resource card. Cards you receive are your choice (they pick randomly if you don't specify).</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">⚗️</div>
+            <div class="card-name">Alchemist</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Before rolling, secretly pick <strong>any production number 2–12</strong>. That number produces this turn. Replaces the roll entirely — no 7 penalty possible.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🔨</div>
+            <div class="card-name">Saboteur</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Target <strong>1 player</strong>. They must discard half their resource cards (rounded down), as if they rolled a 7. Gold is not discarded.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐎</div>
+            <div class="card-name">Scout</div>
+            <div class="card-qty">×3</div>
+          </div>
+          <div class="card-body">Look at the <strong>top 3 cards</strong> of the development card deck. Return them in any order. Powerful for planning your next purchases strategically.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🏗️</div>
+            <div class="card-name">Master Builder</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Immediately build <strong>1 road or 1 settlement for free</strong>. Normal placement rules apply. You may play this even if you haven't rolled yet (play before production).</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🚂</div>
+            <div class="card-name">Caravan</div>
+            <div class="card-qty">×2</div>
+          </div>
+          <div class="card-body">Move your wagon up to <strong>4 extra movement points</strong> this turn, in addition to its normal movement. Can help you make a delivery or reach a barbarian.</div>
+          <div class="card-cost"><span class="cost-label">Buy:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SECTION 4: BAGGAGE TRAIN CARDS =================== -->
+  <div class="section-block theme-baggage">
+    <div class="section-title">
+      <span class="icon">🐂</span> BAGGAGE TRAIN CARDS — Traders & Barbarians Scenario
+      <span class="count">5 Cards per Player (×4 Players = 20 Total)</span>
+    </div>
+    <div class="section-wrapper">
+      <div class="note-box">
+        <strong>How they work:</strong> Each player starts with a stack of 5 Baggage Train Cards. The face-up card is your <em>active</em> card. Pay the resources shown on the top card to upgrade. Upgrading the final card earns <strong>1 Victory Point</strong>.
+      </div>
+      <div class="cards-grid cols-5">
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🛻</div>
+            <div class="card-name">Baggage Train 1</div>
+          </div>
+          <div class="card-body">
+            <strong>Starting card.</strong><br>
+            🚶 <strong>4</strong> movement points<br>
+            🪙 <strong>1</strong> gold per delivery<br>
+            🎲 Drive off barbarian: roll <strong>6</strong>
+          </div>
+          <div class="card-cost"><span class="cost-label">Upgrade cost:</span> <span class="res res-wood">🪵 Wood</span><span class="res res-brick">🧱 Brick</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐎</div>
+            <div class="card-name">Baggage Train 2</div>
+          </div>
+          <div class="card-body">
+            <strong>First upgrade.</strong><br>
+            🚶 <strong>5</strong> movement points<br>
+            🪙 <strong>2</strong> gold per delivery<br>
+            🎲 Drive off barbarian: roll <strong>5 or 6</strong>
+          </div>
+          <div class="card-cost"><span class="cost-label">Upgrade cost:</span> <span class="res res-grain">🌾 Grain</span><span class="res res-wool">🐑 Wool</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐂</div>
+            <div class="card-name">Baggage Train 3</div>
+          </div>
+          <div class="card-body">
+            <strong>Second upgrade.</strong><br>
+            🚶 <strong>6</strong> movement points<br>
+            🪙 <strong>3</strong> gold per delivery<br>
+            🎲 Drive off barbarian: roll <strong>4, 5, or 6</strong>
+          </div>
+          <div class="card-cost"><span class="cost-label">Upgrade cost:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-grain">🌾 Grain</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐘</div>
+            <div class="card-name">Baggage Train 4</div>
+          </div>
+          <div class="card-body">
+            <strong>Third upgrade.</strong><br>
+            🚶 <strong>7</strong> movement points<br>
+            🪙 <strong>4</strong> gold per delivery<br>
+            🎲 Drive off barbarian: roll <strong>3, 4, 5, or 6</strong>
+          </div>
+          <div class="card-cost"><span class="cost-label">Upgrade cost:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-wool">🐑 Wool</span><span class="res res-wood">🪵 Wood</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">⭐</div>
+            <div class="card-name">Baggage Train 5</div>
+          </div>
+          <div class="card-body">
+            <strong>Final upgrade. Worth 1 VP!</strong><br>
+            🚶 <strong>8</strong> movement points<br>
+            🪙 <strong>5</strong> gold per delivery<br>
+            🎲 Drive off barbarian: roll <strong>2–6</strong>
+          </div>
+          <div class="card-cost"><span class="cost-label">+1 VP</span> 🏆 awarded when reached</div>
+        </div>
+
+      </div>
+
+      <div class="section-divider">— Movement Point Costs Reference —</div>
+      <div class="cards-grid cols-4" style="font-size:11px;">
+        <div class="card">
+          <div class="card-header"><div class="card-emoji">🛤️</div><div class="card-name">Your Own Road</div></div>
+          <div class="card-body"><strong>1 MP</strong> — cheapest movement. Build roads strategically to create fast trade routes.</div>
+        </div>
+        <div class="card">
+          <div class="card-header"><div class="card-emoji">🛣️</div><div class="card-name">Opponent's Road</div></div>
+          <div class="card-body"><strong>1 MP + 1 Gold</strong> paid to road owner. Bridges cost <strong>1 MP + 2 Gold</strong> to use.</div>
+        </div>
+        <div class="card">
+          <div class="card-header"><div class="card-emoji">🌿</div><div class="card-name">No Road (open path)</div></div>
+          <div class="card-body"><strong>2 MP</strong> — off-road travel is slow. Building roads reduces your own MP costs.</div>
+        </div>
+        <div class="card">
+          <div class="card-header"><div class="card-emoji">⚔️</div><div class="card-name">Path with Barbarian</div></div>
+          <div class="card-body"><strong>+2 extra MP</strong> on top of normal path cost. Drive off barbarians to clear the way!</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SECTION 5: FISH CARDS =================== -->
+  <div class="section-block theme-fish">
+    <div class="section-title">
+      <span class="icon">🐟</span> FISH CARDS — Fishermen of Catan Scenario
+      <span class="count">10 Unique Cards (multiple copies)</span>
+    </div>
+    <div class="section-wrapper">
+      <div class="note-box">
+        <strong>How to earn fish:</strong> Build settlements/cities adjacent to fishing grounds. When the fishing ground's number is rolled, collect fish tokens. Fish cards are purchased by spending accumulated fish tokens.
+      </div>
+      <div class="cards-grid cols-3">
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐟</div>
+            <div class="card-name">Small Catch</div>
+            <div class="card-qty">×3 fish</div>
+          </div>
+          <div class="card-body">Spend <strong>3 fish</strong>: Receive <strong>1 resource</strong> of your choice from the bank. The most basic fish trade — a simple conversion.</div>
+          <div class="card-cost"><span class="cost-label">Cost:</span> 🐟🐟🐟</div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐠</div>
+            <div class="card-name">Remove Robber</div>
+            <div class="card-qty">×4 fish</div>
+          </div>
+          <div class="card-body">Spend <strong>4 fish</strong>: Move the <strong>robber</strong> off any terrain hex and place it on the desert. The robber produces no effect until a new 7 is rolled.</div>
+          <div class="card-cost"><span class="cost-label">Cost:</span> 🐟×4</div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐡</div>
+            <div class="card-name">Knight Boost</div>
+            <div class="card-qty">×2 fish</div>
+          </div>
+          <div class="card-body">Spend <strong>2 fish</strong>: Increase your knight's movement by <strong>+2 paths</strong> for this turn. Useful to reach or block barbarians faster.</div>
+          <div class="card-cost"><span class="cost-label">Cost:</span> 🐟🐟</div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🦈</div>
+            <div class="card-name">Big Catch</div>
+            <div class="card-qty">×5 fish</div>
+          </div>
+          <div class="card-body">Spend <strong>5 fish</strong>: Receive <strong>2 resources</strong> of your choice from the bank. More efficient than Small Catch per fish spent.</div>
+          <div class="card-cost"><span class="cost-label">Cost:</span> 🐟×5</div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐳</div>
+            <div class="card-name">Whale Catch</div>
+            <div class="card-qty">×7 fish</div>
+          </div>
+          <div class="card-body">Spend <strong>7 fish</strong>: Receive <strong>1 Victory Point</strong>. Revealed and scored immediately. One of the few ways to get VP outside of buildings.</div>
+          <div class="card-cost"><span class="cost-label">Cost:</span> 🐟×7 → 🏆 +1 VP</div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐬</div>
+            <div class="card-name">Dolphin</div>
+            <div class="card-qty">×5 fish</div>
+          </div>
+          <div class="card-body">Spend <strong>5 fish</strong>: Move the <strong>robber or pirate</strong> to any location and steal 1 resource from an adjacent player — just like a standard 7 roll effect.</div>
+          <div class="card-cost"><span class="cost-label">Cost:</span> 🐟×5</div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐙</div>
+            <div class="card-name">Octopus</div>
+            <div class="card-qty">×6 fish</div>
+          </div>
+          <div class="card-body">Spend <strong>6 fish</strong>: Take <strong>1 resource card</strong> from each other player (you choose which from each). Powerful redistribution ability.</div>
+          <div class="card-cost"><span class="cost-label">Cost:</span> 🐟×6</div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🦀</div>
+            <div class="card-name">Crab</div>
+            <div class="card-qty">×3 fish</div>
+          </div>
+          <div class="card-body">Spend <strong>3 fish</strong>: Move your wagon <strong>+2 extra movement points</strong> this turn (T&B scenario only) OR increase knight movement +2 (Barbarian Attack).</div>
+          <div class="card-cost"><span class="cost-label">Cost:</span> 🐟🐟🐟</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- =================== SECTION 6: VARIANT & SPECIAL CARDS =================== -->
+  <div class="section-block theme-variant">
+    <div class="section-title">
+      <span class="icon">🏛️</span> VARIANT & SPECIAL CARDS
+      <span class="count">Harbormaster · Friendly Robber · 2-Player · Special Tiles</span>
+    </div>
+    <div class="section-wrapper">
+      <div class="cards-grid cols-2">
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">⚓</div>
+            <div class="card-name">Harbormaster Card</div>
+          </div>
+          <div class="card-body">
+            <strong>Variant Card — worth +2 Victory Points.</strong><br><br>
+            Awarded to the player with the <strong>most Harbor Points</strong> (minimum 3). A settlement adjacent to a harbor = 1 Harbor Point. A city adjacent to a harbor = 2 Harbor Points.<br><br>
+            If you lose the lead, the Harbormaster card passes to the new leader. <strong>Victory total to win increases by 1</strong> when this variant is used.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">😊</div>
+            <div class="card-name">Friendly Robber</div>
+          </div>
+          <div class="card-body">
+            <strong>Variant Rule — no card, just a rule change.</strong><br><br>
+            The robber <strong>may not</strong> be placed on a hex adjacent to a player's settlements who has <strong>2 or fewer Victory Points</strong>. Protects weaker players from being bullied.<br><br>
+            Compatible with any scenario. Often combined with Event Cards or standard play.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🪙</div>
+            <div class="card-name">Trade Token (2-Player Variant)</div>
+          </div>
+          <div class="card-body">
+            <strong>Used in Catan for Two (2-Player Variant).</strong><br><br>
+            Earned by building near desert/coastal hexes or sacrificing a Knight card. Trade tokens enable special actions: costs <strong>2 tokens for the leading player</strong> and <strong>1 token for the trailing player</strong>.<br><br>
+            Token Actions include: forced trades with opponent, extra resource draws, blocking neutral player expansion.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🐪</div>
+            <div class="card-name">Camel Token (Great Caravan)</div>
+          </div>
+          <div class="card-body">
+            <strong>Used in The Great Caravan scenario.</strong><br><br>
+            Camel figures mark the caravan route across the desert. Players guide their camels from oasis to oasis, earning gold and resources for each stop completed. Each camel placement must face a free intersection at the oasis hex.<br><br>
+            First to complete the route earns a Victory Point bonus.
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🌉</div>
+            <div class="card-name">Bridge</div>
+          </div>
+          <div class="card-body">
+            <strong>Used in Traders & Barbarians scenario.</strong><br><br>
+            Bridges are built across rivers. <strong>Cost: 1 Ore + 1 Wood + 1 Brick.</strong> Moving your wagon across a bridge costs only <strong>1 MP</strong> (vs 3 MP without a bridge).<br><br>
+            Opponents can use your bridge for <strong>1 MP + 2 Gold</strong> paid to you.
+          </div>
+          <div class="card-cost"><span class="cost-label">Build:</span> <span class="res res-ore">⛏ Ore</span><span class="res res-wood">🪵 Wood</span><span class="res res-brick">🧱 Brick</span></div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-emoji">🏰</div>
+            <div class="card-name">Castle / Victory Point Cards</div>
+          </div>
+          <div class="card-body">
+            <strong>Commodity Delivery VP tokens.</strong><br><br>
+            Each successful delivery to the correct trade hex (Castle ← Glass/Marble, Quarry ← Tools, Glassworks ← Sand) earns <strong>1 Victory Point token</strong> AND gold based on your Baggage Train level.<br><br>
+            13 VP needed to win in Traders & Barbarians scenario.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- QUICK REFERENCE BOX -->
+  <div style="background:linear-gradient(135deg,#2a1a06,#4a2c10); border:2px solid var(--gold); border-radius:10px; padding:18px 20px; margin-bottom:20px;">
+    <div style="font-family:'Cinzel',serif;font-size:13px;font-weight:700;letter-spacing:3px;text-transform:uppercase;color:var(--gold-light);margin-bottom:12px;">📋 Quick Reference — Scenario Card Sets</div>
+    <div class="cards-grid cols-3" style="gap:10px;">
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(200,148,58,0.3);border-radius:6px;padding:10px 12px;color:var(--parchment);">
+        <div style="font-family:'Cinzel',serif;font-size:11px;font-weight:700;color:var(--gold-light);margin-bottom:6px;">🐟 Fishermen of Catan</div>
+        <div style="font-size:11px;line-height:1.7;">
+          ✓ Standard Development Cards<br>
+          ✓ Fish Cards (fish tokens)<br>
+          ✓ Lake tile + Fishing Grounds<br>
+          ✗ Event Cards (optional)<br>
+          ✗ Baggage Train Cards
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(200,148,58,0.3);border-radius:6px;padding:10px 12px;color:var(--parchment);">
+        <div style="font-family:'Cinzel',serif;font-size:11px;font-weight:700;color:var(--gold-light);margin-bottom:6px;">⚔️ Barbarian Attack</div>
+        <div style="font-size:11px;line-height:1.7;">
+          ✓ Barbarian Attack Dev Cards (27)<br>
+          ✓ Knight figures<br>
+          ✓ Castle hex<br>
+          ✗ Robber (replaced by Barbarians)<br>
+          ✗ Longest Road special card
+        </div>
+      </div>
+      <div style="background:rgba(255,255,255,0.07);border:1px solid rgba(200,148,58,0.3);border-radius:6px;padding:10px 12px;color:var(--parchment);">
+        <div style="font-family:'Cinzel',serif;font-size:11px;font-weight:700;color:var(--gold-light);margin-bottom:6px;">🛒 Traders & Barbarians</div>
+        <div style="font-size:11px;line-height:1.7;">
+          ✓ T&B Dev Cards (26)<br>
+          ✓ Baggage Train Cards (×5/player)<br>
+          ✓ Wagons + Trade Hexes<br>
+          ✗ Robber (7 = move barbarian)<br>
+          ✗ Longest Road · 13 VP to win
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">⚔ CATAN: TRADERS & BARBARIANS — CHEATSHEET ✦ For personal use only ⚔</div>
+
+</div>
+</body>
+</html>
