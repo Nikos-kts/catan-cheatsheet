@@ -19,6 +19,7 @@
               "id": "lumber",
               "type": "resource",
               "icon": "🌲",
+              "image": "src/assets/images/common/lumber.png",
               "name": "Holz",
               "count": 19,
               "description": "Wird von Waldfeldern produziert, wenn ihre Zahl gewürfelt wird.",
@@ -31,6 +32,7 @@
               "id": "brick",
               "type": "resource",
               "icon": "🧱",
+              "image": "src/assets/images/common/brick.png",
               "name": "Lehm",
               "count": 19,
               "description": "Wird von Hügelfeldern produziert, wenn ihre Zahl gewürfelt wird.",
@@ -43,6 +45,7 @@
               "id": "wool",
               "type": "resource",
               "icon": "🐑",
+              "image": "src/assets/images/common/wool.png",
               "name": "Wolle",
               "count": 19,
               "description": "Wird von Weidelandfeldern produziert, wenn ihre Zahl gewürfelt wird.",
@@ -55,6 +58,7 @@
               "id": "grain",
               "type": "resource",
               "icon": "🌾",
+              "image": "src/assets/images/common/grain.png",
               "name": "Getreide",
               "count": 19,
               "description": "Wird von Getreidefeldern produziert, wenn ihre Zahl gewürfelt wird.",
@@ -68,6 +72,7 @@
               "id": "ore",
               "type": "resource",
               "icon": "⛏️",
+              "image": "src/assets/images/common/ore.png",
               "name": "Erz",
               "count": 19,
               "description": "Wird von Gebirgsfeldern produziert, wenn ihre Zahl gewürfelt wird.",
@@ -211,6 +216,7 @@
               "id": "longest-road",
               "type": "special",
               "icon": "🛣️",
+              "image": "src/assets/images/basic/longest-road.png",
               "name": "Längste Handelsstraße",
               "description": "Vergeben an den ersten Spieler mit einer zusammenhängenden Straße von 5+ Segmenten. Wert 2 Siegpunkte. Kann gestohlen werden.",
               "usages": [
@@ -222,6 +228,7 @@
               "id": "largest-army",
               "type": "special",
               "icon": "🪖",
+              "image": "src/assets/images/basic/longest-army.png",
               "name": "Größte Rittermacht",
               "description": "Vergeben an den ersten Spieler, der 3 Ritterkarten spielt. Wert 2 Siegpunkte. Kann gestohlen werden.",
               "usages": [
@@ -237,50 +244,17 @@
           "icon": "🔨",
           "cards": [
             {
-              "id": "road",
+              "id": "building-cost-card",
               "type": "resource",
-              "icon": "🛤️",
-              "name": "Straße",
-              "description": "Verbindet Siedlungen und Städte. Muss an eine bestehende Straße, Siedlung oder Stadt angrenzen.",
+              "icon": "🔨",
+              "image": "src/assets/images/common/building-cost.png",
+              "name": "Baukostenkarte",
+              "description": "Referenzkarte mit allen Baukosten in Catan.",
               "usages": [
-                "Kosten: 1 Holz + 1 Lehm",
-                "Max. 15 Straßen pro Spieler",
-                "Notwendig, bevor man sich neu ansiedeln kann"
-              ]
-            },
-            {
-              "id": "settlement",
-              "type": "resource",
-              "icon": "🏠",
-              "name": "Siedlung",
-              "description": "Wert 1 Siegpunkt. Produziert 1 Rohstoffkarte von jedem angrenzenden Feld, wenn dessen Zahl gewürfelt wird.",
-              "usages": [
-                "Kosten: 1 Holz + 1 Lehm + 1 Wolle + 1 Getreide",
-                "Max. 5 Siedlungen pro Spieler",
-                "Mindestens 2 Kreuzungen von jeder anderen Siedlung/Stadt entfernt"
-              ]
-            },
-            {
-              "id": "city",
-              "type": "resource",
-              "icon": "🏙️",
-              "name": "Stadt",
-              "description": "Wert 2 Siegpunkte. Produziert 2 Rohstoffkarten pro angrenzendem Feld. Ersetzt eine Siedlung.",
-              "usages": [
-                "Kosten: 3 Erz + 2 Getreide",
-                "Max. 4 Städte pro Spieler",
-                "Upgrade einer bestehenden Siedlung"
-              ]
-            },
-            {
-              "id": "dev-card",
-              "type": "development",
-              "icon": "🃏",
-              "name": "Entwicklungskarte",
-              "description": "Ziehe die oberste Karte vom Entwicklungsstapel. Kann nicht im selben Zug gespielt werden.",
-              "usages": [
-                "Kosten: 1 Erz + 1 Getreide + 1 Wolle",
-                "Max. 25 Karten im Stapel"
+                "Straße: 1 Holz + 1 Lehm",
+                "Siedlung: 1 Holz + 1 Lehm + 1 Wolle + 1 Getreide",
+                "Stadt: 3 Erz + 2 Getreide",
+                "Entwicklungskarte: 1 Erz + 1 Getreide + 1 Wolle"
               ]
             }
           ]

@@ -1,0 +1,521 @@
+{
+  "ui": {
+    "labelGame": "Spel",
+    "labelLang": "Taal",
+    "subtitle": "Snelle referentie voor kaarten & regels",
+    "footer": "Community-referentie — niet gelieerd aan Catan Studio."
+  },
+  "games": {
+    "base": {
+      "name": "Catan (Basisspel)",
+      "description": "Het klassieke Kolonisten van Catan. Verzamel grondstoffen, bouw wegen, dorpen en steden, handel met andere spelers en wees de eerste die 10 Overwinningspunten bereikt.",
+      "sections": [
+        {
+          "id": "resources",
+          "title": "Grondstofkaarten",
+          "icon": "🌾",
+          "cards": [
+            {
+              "id": "lumber",
+              "type": "resource",
+              "icon": "🌲",
+              "image": "src/assets/images/common/lumber.png",
+              "name": "Hout",
+              "count": 19,
+              "description": "Geproduceerd door Bosvelden wanneer hun nummer wordt gegooid.",
+              "usages": [
+                "Bouw een Weg (Hout + Klei)",
+                "Bouw een Dorp (Hout + Klei + Wol + Graan)"
+              ]
+            },
+            {
+              "id": "brick",
+              "type": "resource",
+              "icon": "🧱",
+              "image": "src/assets/images/common/brick.png",
+              "name": "Klei",
+              "count": 19,
+              "description": "Geproduceerd door Heuvelvelden wanneer hun nummer wordt gegooid.",
+              "usages": [
+                "Bouw een Weg (Hout + Klei)",
+                "Bouw een Dorp (Hout + Klei + Wol + Graan)"
+              ]
+            },
+            {
+              "id": "wool",
+              "type": "resource",
+              "icon": "🐑",
+              "image": "src/assets/images/common/wool.png",
+              "name": "Wol",
+              "count": 19,
+              "description": "Geproduceerd door Weidevelden wanneer hun nummer wordt gegooid.",
+              "usages": [
+                "Bouw een Dorp (Hout + Klei + Wol + Graan)",
+                "Koop een Ontwikkelingskaart (Erts + Graan + Wol)"
+              ]
+            },
+            {
+              "id": "grain",
+              "type": "resource",
+              "icon": "🌾",
+              "image": "src/assets/images/common/grain.png",
+              "name": "Graan",
+              "count": 19,
+              "description": "Geproduceerd door Akkervelden wanneer hun nummer wordt gegooid.",
+              "usages": [
+                "Bouw een Dorp (Hout + Klei + Wol + Graan)",
+                "Upgrade naar Stad (Erts×3 + Graan×2)",
+                "Koop een Ontwikkelingskaart (Erts + Graan + Wol)"
+              ]
+            },
+            {
+              "id": "ore",
+              "type": "resource",
+              "icon": "⛏️",
+              "image": "src/assets/images/common/ore.png",
+              "name": "Erts",
+              "count": 19,
+              "description": "Geproduceerd door Bergvelden wanneer hun nummer wordt gegooid.",
+              "usages": [
+                "Upgrade naar Stad (Erts×3 + Graan×2)",
+                "Koop een Ontwikkelingskaart (Erts + Graan + Wol)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "development",
+          "title": "Ontwikkelingskaarten",
+          "icon": "🃏",
+          "cards": [
+            {
+              "id": "knight",
+              "type": "development",
+              "icon": "⚔️",
+              "image": "src/assets/images/basic/development-cards/knight.png",
+              "name": "Ridder",
+              "count": 14,
+              "description": "Verplaats de Struikrover naar een willekeurig landschapsveld. Steel één grondstofkaart van een aangrenzende tegenstander.",
+              "usages": [
+                "Speel vóór het gooien van de dobbelstenen",
+                "Verkrijg de kaart Grootste Riddermacht bij 3 gespeelde Ridders (2 OP)"
+              ]
+            },
+            {
+              "id": "road-building",
+              "type": "development",
+              "icon": "🛤️",
+              "image": "src/assets/images/basic/development-cards/road-building.png",
+              "name": "Stratenbouw",
+              "count": 2,
+              "description": "Plaats 2 nieuwe wegen op het bord alsof je ze net hebt gebouwd.",
+              "usages": [
+                "Breid je netwerk snel uit",
+                "Strijd om de Langste Handelsroute (2 OP bij ≥5 wegen)"
+              ]
+            },
+            {
+              "id": "year-of-plenty",
+              "type": "development",
+              "icon": "🎁",
+              "image": "src/assets/images/basic/development-cards/year-of-plenty.png",
+              "name": "Uitvinding",
+              "count": 2,
+              "description": "Neem 2 willekeurige grondstofkaarten uit de bank en voeg ze toe aan je hand.",
+              "usages": [
+                "Pak precies de grondstoffen die je nodig hebt",
+                "Maak een combinatie compleet waar je één grondstof tekort komt"
+              ]
+            },
+            {
+              "id": "monopoly",
+              "type": "development",
+              "icon": "💰",
+              "image": "src/assets/images/basic/development-cards/monopoly.png",
+              "name": "Monopolie",
+              "count": 2,
+              "description": "Noem een grondstofsoort. Alle andere spelers moeten al hun kaarten van dat type aan jou geven.",
+              "usages": [
+                "Verstoor een tegenstander die op het punt staat veel te bouwen",
+                "Verzamel een grondstof die je dringend nodig hebt"
+              ]
+            },
+            {
+              "id": "chapel",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/chappel.png",
+              "name": "Kapel",
+              "count": 1,
+              "description": "1 Overwinningspunt waard. Houd geheim totdat je hem onthult om te winnen.",
+              "usages": [
+                "Telt mee voor 10 OP om te winnen",
+                "Speel ze allemaal tegelijk om tegenstanders te verrassen"
+              ]
+            },
+            {
+              "id": "great-hall",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/great-hall.png",
+              "name": "Grote Zaal",
+              "count": 1,
+              "description": "1 Overwinningspunt waard. Houd geheim totdat je hem onthult om te winnen.",
+              "usages": [
+                "Telt mee voor 10 OP om te winnen",
+                "Speel ze allemaal tegelijk om tegenstanders te verrassen"
+              ]
+            },
+            {
+              "id": "library",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/library.png",
+              "name": "Bibliotheek",
+              "count": 1,
+              "description": "1 Overwinningspunt waard. Houd geheim totdat je hem onthult om te winnen.",
+              "usages": [
+                "Telt mee voor 10 OP om te winnen",
+                "Speel ze allemaal tegelijk om tegenstanders te verrassen"
+              ]
+            },
+            {
+              "id": "market",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/market.png",
+              "name": "Markt",
+              "count": 1,
+              "description": "1 Overwinningspunt waard. Houd geheim totdat je hem onthult om te winnen.",
+              "usages": [
+                "Telt mee voor 10 OP om te winnen",
+                "Speel ze allemaal tegelijk om tegenstanders te verrassen"
+              ]
+            },
+            {
+              "id": "university",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/university.png",
+              "name": "Universiteit",
+              "count": 1,
+              "description": "1 Overwinningspunt waard. Houd geheim totdat je hem onthult om te winnen.",
+              "usages": [
+                "Telt mee voor 10 OP om te winnen",
+                "Speel ze allemaal tegelijk om tegenstanders te verrassen"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "special",
+          "title": "Speciale Kaarten",
+          "icon": "🏆",
+          "cards": [
+            {
+              "id": "longest-road",
+              "type": "special",
+              "icon": "🛣️",
+              "image": "src/assets/images/basic/longest-road.png",
+              "name": "Langste Handelsroute",
+              "description": "Toegekend aan de eerste speler met een aaneengesloten weg van 5+ segmenten. 2 Overwinningspunten waard. Kan worden gestolen.",
+              "usages": [
+                "Bouw agressief wegen om de kaart te claimen",
+                "Onderbreek de weg van een tegenstander door een dorp te plaatsen"
+              ]
+            },
+            {
+              "id": "largest-army",
+              "type": "special",
+              "icon": "🪖",
+              "image": "src/assets/images/basic/longest-army.png",
+              "name": "Grootste Riddermacht",
+              "description": "Toegekend aan de eerste speler die 3 Ridderkaarten speelt. 2 Overwinningspunten waard. Kan worden gestolen.",
+              "usages": [
+                "Speel Ridders om de Struikrover te beheersen en 2 OP te verdienen",
+                "Bescherm belangrijke velden tegen de Struikrover"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "building-costs",
+          "title": "Bouwkosten",
+          "icon": "🔨",
+          "cards": [
+            {
+              "id": "building-cost-card",
+              "type": "resource",
+              "icon": "🔨",
+              "image": "src/assets/images/common/building-cost.png",
+              "name": "Bouwkostenkaart",
+              "description": "Referentiekaart met alle bouwkosten in Catan.",
+              "usages": [
+                "Weg: 1 Hout + 1 Klei",
+                "Dorp: 1 Hout + 1 Klei + 1 Wol + 1 Graan",
+                "Stad: 3 Erts + 2 Graan",
+                "Ontwikkelingskaart: 1 Erts + 1 Graan + 1 Wol"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "seafarers": {
+      "name": "Zeevaarders",
+      "description": "Verken een archipel van eilanden. Bouw schepen om de zeeën te bevaren, ontdek nieuwe eilanden met goudvelden en vestig je op verre kusten voor bonus Overwinningspunten.",
+      "sections": [
+        {
+          "id": "ships",
+          "title": "Schepen",
+          "icon": "⛵",
+          "cards": [
+            {
+              "id": "ship",
+              "type": "ship",
+              "icon": "⛵",
+              "name": "Schip",
+              "description": "Schepen verlengen je handelsroutes over watervelden. Ze werken als wegen op zee.",
+              "usages": [
+                "Kosten: 1 Hout + 1 Wol",
+                "Het laatste schip van een open route mag eenmaal per beurt verplaatst worden",
+                "Max. 15 schepen per speler"
+              ]
+            },
+            {
+              "id": "gold-field",
+              "type": "resource",
+              "icon": "🪙",
+              "name": "Goudveld",
+              "description": "Speciaal veld dat een vrije grondstof produceert. Wanneer het nummer wordt gegooid, kiezen aangrenzende spelers een grondstof naar keuze.",
+              "usages": [
+                "Zeer waardevol — de moeite waard om vroeg te vestigen",
+                "Elk aangrenzend dorp levert 1 gratis grondstof naar keuze"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "seafarers-special",
+          "title": "Speciale Regels",
+          "icon": "🗺️",
+          "cards": [
+            {
+              "id": "discovery-vp",
+              "type": "special",
+              "icon": "🏆",
+              "name": "Nieuw Eiland Bonus",
+              "description": "In de meeste Zeevaarders-scenario's verdien je 1 extra Overwinningspunt voor je eerste dorp op een nieuw eiland.",
+              "usages": [
+                "Plan scheepsroutes om snel verre eilanden te bereiken",
+                "Meerdere spelers kunnen OP verdienen van hetzelfde eiland"
+              ]
+            },
+            {
+              "id": "pirate",
+              "type": "special",
+              "icon": "🏴‍☠️",
+              "name": "Piraat",
+              "description": "De Piraat vervangt de Struikrover in Zeevaarders. Verplaats hem naar een zeeveld om schepen te blokkeren. Steel van een aangrenzende speler met een schip.",
+              "usages": [
+                "Geactiveerd door het gooien van een 7 of het spelen van een Ridder",
+                "Blokkeert scheepsbewegingen door dat veld"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "cities-knights": {
+      "name": "Steden & Ridders",
+      "description": "Een diepere strategische ervaring. Handelswaren vervangen sommige grondstoffen, stadverbeteringen ontgrendelen krachtige vaardigheden en de Barbaren bedreigen elke beurt je steden.",
+      "sections": [
+        {
+          "id": "commodities",
+          "title": "Handelswarenkaarten",
+          "icon": "📦",
+          "cards": [
+            {
+              "id": "cloth",
+              "type": "commodity",
+              "icon": "🧵",
+              "name": "Stof",
+              "description": "Handelswaar geproduceerd door verbeterde Weidesteden. Wordt gebruikt om vooruit te komen in de Handelskolom van stadverbeteringen.",
+              "usages": [
+                "Geproduceerd door steden op Weidevelden",
+                "Investeer in Handels-stadverbeteringen"
+              ]
+            },
+            {
+              "id": "coin",
+              "type": "commodity",
+              "icon": "🪙",
+              "name": "Munt",
+              "description": "Handelswaar geproduceerd door verbeterde Bergsteden. Wordt gebruikt om vooruit te komen in de Wetenschapskolom.",
+              "usages": [
+                "Geproduceerd door steden op Bergvelden",
+                "Investeer in Wetenschaps-stadverbeteringen"
+              ]
+            },
+            {
+              "id": "paper",
+              "type": "commodity",
+              "icon": "📜",
+              "name": "Papier",
+              "description": "Handelswaar geproduceerd door verbeterde Bossteden. Wordt gebruikt om vooruit te komen in de Politiekkolom.",
+              "usages": [
+                "Geproduceerd door steden op Bosvelden",
+                "Investeer in Politiek-stadverbeteringen"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "progress-cards",
+          "title": "Vooruitgangskaarten (voorbeelden)",
+          "icon": "📋",
+          "cards": [
+            {
+              "id": "crane",
+              "type": "progress",
+              "icon": "🏗️",
+              "name": "Kraan (Wetenschap)",
+              "description": "Deze beurt mag je één stadverbetering bouwen voor 1 minder handelswaar dan normaal.",
+              "usages": [
+                "Bespaar een handelswaar bij het verbeteren van een stad"
+              ]
+            },
+            {
+              "id": "merchant",
+              "type": "progress",
+              "icon": "🧑‍💼",
+              "name": "Koopman (Handel)",
+              "description": "Plaats de Koopman op een willekeurig landschapsveld. Je handelt die grondstof 2:1 totdat een andere speler de Koopman overneemt. Ook 1 OP waard.",
+              "usages": [
+                "Beheers een belangrijke grondstofkoers",
+                "1 OP waard zolang je hem bezit"
+              ]
+            },
+            {
+              "id": "spy",
+              "type": "progress",
+              "icon": "🕵️",
+              "name": "Spion (Politiek)",
+              "description": "Steel een willekeurige vooruitgangskaart uit de hand van een tegenstander.",
+              "usages": ["Verstoor tegenstanders en verkrijg een nuttige kaart"]
+            },
+            {
+              "id": "engineer",
+              "type": "progress",
+              "icon": "🔧",
+              "name": "Ingenieur (Wetenschap)",
+              "description": "Bouw gratis een stadsmuur.",
+              "usages": [
+                "Bescherm een stad tegen Barbaren zonder grondstoffen uit te geven"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "barbarians",
+          "title": "Barbaren",
+          "icon": "⚔️",
+          "cards": [
+            {
+              "id": "barbarian-track",
+              "type": "special",
+              "icon": "🧟",
+              "name": "Barbarenaanval",
+              "description": "Elke beurt dat een schip wordt gegooid, schuift het Barbarenfiches op. Wanneer het Catan bereikt, volgt een gevecht. Als de Barbaren winnen, verliest de speler met de minste Ridders een stad.",
+              "usages": [
+                "Bouw en activeer Ridders om te verdedigen",
+                "Stadsmuren beschermen één stad tegen degradatie"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "traders-barbarians": {
+      "name": "Handelaren & Barbaren",
+      "description": "Een verzameling van vijf scenario's en varianten die nieuwe dimensies toevoegen aan het klassieke spel: handelsroutes, karavanen, barbareninvasies en meer.",
+      "sections": [
+        {
+          "id": "trade-routes",
+          "title": "Handelsroutekaarten",
+          "icon": "🚗",
+          "cards": [
+            {
+              "id": "caravan",
+              "type": "trade",
+              "icon": "🐪",
+              "name": "Karavaan",
+              "description": "In het Handelaren & Barbaren-scenario vervoeren karavanen goederen over wegen. Goederen afleveren bij het vriendelijke dorp levert Overwinningspunten op.",
+              "usages": [
+                "Verplaats karavanen tot 3 wegsegmenten per beurt",
+                "Verdien 1 OP per afgeleverd goederentoken"
+              ]
+            },
+            {
+              "id": "gold",
+              "type": "trade",
+              "icon": "🪙",
+              "name": "Gouden Munt Token",
+              "description": "Verdiend door handelsroutes te voltooien of goederen af te leveren. Kan gebruikt worden als een willekeurige grondstof.",
+              "usages": [
+                "Besteed als een willekeurige grondstofsoort",
+                "Wissel voor OP bij het vriendelijke dorp"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "explorers-pirates": {
+      "name": "Ontdekkers & Piraten",
+      "description": "Zet koers naar onbekende wateren. Bouw schepen en havens, voltooi missies zoals specerijenhandel of visvangst, en koloniseer verre landen.",
+      "sections": [
+        {
+          "id": "missions",
+          "title": "Missietegels",
+          "icon": "🎯",
+          "cards": [
+            {
+              "id": "spice-haul",
+              "type": "mission",
+              "icon": "🌶️",
+              "name": "Specerijenvervoer",
+              "description": "Vaar met je schip naar een ver specerij-eiland en breng specerijen terug naar je thuiseiland voor Overwinningspunten.",
+              "usages": [
+                "Elk voltooid vervoer levert 1 OP op",
+                "Vereist het bereiken en terugkeren van het specerijtegel"
+              ]
+            },
+            {
+              "id": "fish-camp",
+              "type": "mission",
+              "icon": "🐟",
+              "name": "Viskamp",
+              "description": "Vestig een viskamp op een ontdekte kust om elke ronde vistokens te genereren.",
+              "usages": [
+                "Vistokens kunnen geruild worden voor grondstoffen",
+                "Positioneer bij kustvelden met goede nummers"
+              ]
+            },
+            {
+              "id": "pirate-lair",
+              "type": "mission",
+              "icon": "🏴‍☠️",
+              "name": "Piratenschuilplaats",
+              "description": "Ontdek en vernietig piratenschuilplaatsen verspreid over de grens. Elk opgeruimd hol levert 1 Overwinningspunt op.",
+              "usages": [
+                "Bereik het hol met een schip om het op te ruimen",
+                "Levert onmiddellijk 1 OP op bij ontdekking"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

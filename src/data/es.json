@@ -19,6 +19,7 @@
               "id": "lumber",
               "type": "resource",
               "icon": "🌲",
+              "image": "src/assets/images/common/lumber.png",
               "name": "Madera",
               "count": 19,
               "description": "Producida por los hexágonos de Bosque cuando se lanza su número.",
@@ -31,6 +32,7 @@
               "id": "brick",
               "type": "resource",
               "icon": "🧱",
+              "image": "src/assets/images/common/brick.png",
               "name": "Arcilla",
               "count": 19,
               "description": "Producida por los hexágonos de Colinas cuando se lanza su número.",
@@ -43,6 +45,7 @@
               "id": "wool",
               "type": "resource",
               "icon": "🐑",
+              "image": "src/assets/images/common/wool.png",
               "name": "Lana",
               "count": 19,
               "description": "Producida por los hexágonos de Prado cuando se lanza su número.",
@@ -55,6 +58,7 @@
               "id": "grain",
               "type": "resource",
               "icon": "🌾",
+              "image": "src/assets/images/common/grain.png",
               "name": "Trigo",
               "count": 19,
               "description": "Producido por los hexágonos de Campo cuando se lanza su número.",
@@ -68,6 +72,7 @@
               "id": "ore",
               "type": "resource",
               "icon": "⛏️",
+              "image": "src/assets/images/common/ore.png",
               "name": "Mineral",
               "count": 19,
               "description": "Producido por los hexágonos de Montaña cuando se lanza su número.",
@@ -211,6 +216,7 @@
               "id": "longest-road",
               "type": "special",
               "icon": "🛣️",
+              "image": "src/assets/images/basic/longest-road.png",
               "name": "Camino más Largo",
               "description": "Se otorga al primer jugador con un camino continuo de 5+ tramos. Vale 2 Puntos de Victoria. Otro jugador puede robártela construyendo más.",
               "usages": [
@@ -222,6 +228,7 @@
               "id": "largest-army",
               "type": "special",
               "icon": "🪖",
+              "image": "src/assets/images/basic/longest-army.png",
               "name": "Ejército más Poderoso",
               "description": "Se otorga al primer jugador que juega 3 Caballeros. Vale 2 Puntos de Victoria. Otro jugador puede robártela jugando más.",
               "usages": [
@@ -237,50 +244,17 @@
           "icon": "🔨",
           "cards": [
             {
-              "id": "road",
+              "id": "building-cost-card",
               "type": "resource",
-              "icon": "🛤️",
-              "name": "Camino",
-              "description": "Conecta poblados y ciudades. Debe colocarse adyacente a tu camino, poblado o ciudad existente.",
+              "icon": "🔨",
+              "image": "src/assets/images/common/building-cost.png",
+              "name": "Carta de Costos",
+              "description": "Carta de referencia con todos los costos de construcción en Catan.",
               "usages": [
-                "Costo: 1 Madera + 1 Arcilla",
-                "Máx. 15 caminos por jugador",
-                "Necesario antes de asentarse en un nuevo lugar"
-              ]
-            },
-            {
-              "id": "settlement",
-              "type": "resource",
-              "icon": "🏠",
-              "name": "Poblado",
-              "description": "Vale 1 Punto de Victoria. Produce 1 carta de recurso de cada hexágono adyacente cuando se lanza su número.",
-              "usages": [
-                "Costo: 1 Madera + 1 Arcilla + 1 Lana + 1 Trigo",
-                "Máx. 5 poblados por jugador",
-                "Al menos 2 intersecciones de cualquier otro poblado/ciudad"
-              ]
-            },
-            {
-              "id": "city",
-              "type": "resource",
-              "icon": "🏙️",
-              "name": "Ciudad",
-              "description": "Vale 2 Puntos de Victoria. Produce 2 cartas de recurso por hexágono adyacente. Reemplaza un poblado.",
-              "usages": [
-                "Costo: 3 Mineral + 2 Trigo",
-                "Máx. 4 ciudades por jugador",
-                "Mejora cualquier poblado existente"
-              ]
-            },
-            {
-              "id": "dev-card",
-              "type": "development",
-              "icon": "🃏",
-              "name": "Carta de Desarrollo",
-              "description": "Roba la carta superior del mazo de desarrollo. No se puede jugar en el mismo turno que se compra.",
-              "usages": [
-                "Costo: 1 Mineral + 1 Trigo + 1 Lana",
-                "Máx. 25 cartas en el mazo"
+                "Camino: 1 Madera + 1 Arcilla",
+                "Poblado: 1 Madera + 1 Arcilla + 1 Lana + 1 Trigo",
+                "Ciudad: 3 Mineral + 2 Trigo",
+                "Carta de Desarrollo: 1 Mineral + 1 Trigo + 1 Lana"
               ]
             }
           ]

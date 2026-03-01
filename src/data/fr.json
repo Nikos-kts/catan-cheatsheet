@@ -19,6 +19,7 @@
               "id": "lumber",
               "type": "resource",
               "icon": "🌲",
+              "image": "src/assets/images/common/lumber.png",
               "name": "Bois",
               "count": 19,
               "description": "Produit par les cases Forêt quand leur chiffre est lancé.",
@@ -31,6 +32,7 @@
               "id": "brick",
               "type": "resource",
               "icon": "🧱",
+              "image": "src/assets/images/common/brick.png",
               "name": "Argile",
               "count": 19,
               "description": "Produite par les cases Collines quand leur chiffre est lancé.",
@@ -43,6 +45,7 @@
               "id": "wool",
               "type": "resource",
               "icon": "🐑",
+              "image": "src/assets/images/common/wool.png",
               "name": "Laine",
               "count": 19,
               "description": "Produite par les cases Prairie quand leur chiffre est lancé.",
@@ -55,6 +58,7 @@
               "id": "grain",
               "type": "resource",
               "icon": "🌾",
+              "image": "src/assets/images/common/grain.png",
               "name": "Blé",
               "count": 19,
               "description": "Produit par les cases Champs quand leur chiffre est lancé.",
@@ -68,6 +72,7 @@
               "id": "ore",
               "type": "resource",
               "icon": "⛏️",
+              "image": "src/assets/images/common/ore.png",
               "name": "Minerai",
               "count": 19,
               "description": "Produit par les cases Montagne quand leur chiffre est lancé.",
@@ -211,6 +216,7 @@
               "id": "longest-road",
               "type": "special",
               "icon": "🛣️",
+              "image": "src/assets/images/basic/longest-road.png",
               "name": "Plus Longue Route",
               "description": "Attribuée au premier joueur avec une route continue de 5+ tronçons. Vaut 2 Points de Victoire. Peut être volée.",
               "usages": [
@@ -222,6 +228,7 @@
               "id": "largest-army",
               "type": "special",
               "icon": "🪖",
+              "image": "src/assets/images/basic/longest-army.png",
               "name": "Grande Armée",
               "description": "Attribuée au premier joueur qui joue 3 Chevaliers. Vaut 2 Points de Victoire. Peut être volée.",
               "usages": [
@@ -237,50 +244,17 @@
           "icon": "🔨",
           "cards": [
             {
-              "id": "road",
+              "id": "building-cost-card",
               "type": "resource",
-              "icon": "🛤️",
-              "name": "Route",
-              "description": "Relie vos colonies et villes. Doit être adjacente à votre route, colonie ou ville existante.",
+              "icon": "🔨",
+              "image": "src/assets/images/common/building-cost.png",
+              "name": "Carte des Coûts",
+              "description": "Carte de référence montrant tous les coûts de construction dans Catan.",
               "usages": [
-                "Coût : 1 Bois + 1 Argile",
-                "Max. 15 routes par joueur",
-                "Nécessaire avant de s'installer en un nouveau lieu"
-              ]
-            },
-            {
-              "id": "settlement",
-              "type": "resource",
-              "icon": "🏠",
-              "name": "Colonie",
-              "description": "Vaut 1 Point de Victoire. Produit 1 carte ressource de chaque case adjacente quand son chiffre est lancé.",
-              "usages": [
-                "Coût : 1 Bois + 1 Argile + 1 Laine + 1 Blé",
-                "Max. 5 colonies par joueur",
-                "Au moins 2 intersections de toute autre colonie/ville"
-              ]
-            },
-            {
-              "id": "city",
-              "type": "resource",
-              "icon": "🏙️",
-              "name": "Ville",
-              "description": "Vaut 2 Points de Victoire. Produit 2 cartes ressource par case adjacente. Remplace une colonie.",
-              "usages": [
-                "Coût : 3 Minerai + 2 Blé",
-                "Max. 4 villes par joueur",
-                "Améliore toute colonie existante"
-              ]
-            },
-            {
-              "id": "dev-card",
-              "type": "development",
-              "icon": "🃏",
-              "name": "Carte Développement",
-              "description": "Piochez la carte du dessus du paquet de développement. Ne peut pas être jouée le tour même de l'achat.",
-              "usages": [
-                "Coût : 1 Minerai + 1 Blé + 1 Laine",
-                "Max. 25 cartes dans le paquet"
+                "Route : 1 Bois + 1 Argile",
+                "Colonie : 1 Bois + 1 Argile + 1 Laine + 1 Blé",
+                "Ville : 3 Minerai + 2 Blé",
+                "Carte Développement : 1 Minerai + 1 Blé + 1 Laine"
               ]
             }
           ]

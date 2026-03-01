@@ -19,6 +19,7 @@
               "id": "lumber",
               "type": "resource",
               "icon": "🌲",
+              "image": "src/assets/images/common/lumber.png",
               "name": "Lumber",
               "count": 19,
               "description": "Produced by Forest hexes when their number is rolled.",
@@ -31,6 +32,7 @@
               "id": "brick",
               "type": "resource",
               "icon": "🧱",
+              "image": "src/assets/images/common/brick.png",
               "name": "Brick",
               "count": 19,
               "description": "Produced by Hills hexes when their number is rolled.",
@@ -43,6 +45,7 @@
               "id": "wool",
               "type": "resource",
               "icon": "🐑",
+              "image": "src/assets/images/common/wool.png",
               "name": "Wool",
               "count": 19,
               "description": "Produced by Pasture hexes when their number is rolled.",
@@ -56,6 +59,7 @@
               "id": "grain",
               "type": "resource",
               "icon": "🌾",
+              "image": "src/assets/images/common/grain.png",
               "name": "Grain",
               "count": 19,
               "description": "Produced by Fields hexes when their number is rolled.",
@@ -69,6 +73,7 @@
               "id": "ore",
               "type": "resource",
               "icon": "⛏️",
+              "image": "src/assets/images/common/ore.png",
               "name": "Ore",
               "count": 19,
               "description": "Produced by Mountain hexes when their number is rolled.",
@@ -212,6 +217,7 @@
               "id": "longest-road",
               "type": "special",
               "icon": "🛣️",
+              "image": "src/assets/images/basic/longest-road.png",
               "name": "Longest Road",
               "description": "Awarded to the first player with a continuous road of 5+ segments. Worth 2 Victory Points. Another player can steal it by building a longer road.",
               "usages": [
@@ -223,6 +229,7 @@
               "id": "largest-army",
               "type": "special",
               "icon": "🪖",
+              "image": "src/assets/images/basic/longest-army.png",
               "name": "Largest Army",
               "description": "Awarded to the first player who plays 3 Knight cards. Worth 2 Victory Points. Another player can steal it by playing more Knights.",
               "usages": [
@@ -238,50 +245,17 @@
           "icon": "🔨",
           "cards": [
             {
-              "id": "road",
+              "id": "building-cost-card",
               "type": "resource",
-              "icon": "🛤️",
-              "name": "Road",
-              "description": "Connects your settlements and cities. Must be placed adjacent to your existing road, settlement or city.",
+              "icon": "🔨",
+              "image": "src/assets/images/common/building-cost.png",
+              "name": "Building Cost Card",
+              "description": "Reference card showing all construction costs in Catan.",
               "usages": [
-                "Cost: 1 Lumber + 1 Brick",
-                "Max 15 roads per player",
-                "Required before settling a new location"
-              ]
-            },
-            {
-              "id": "settlement",
-              "type": "resource",
-              "icon": "🏠",
-              "name": "Settlement",
-              "description": "Worth 1 Victory Point. Produces 1 resource card from each adjacent hex when its number is rolled.",
-              "usages": [
-                "Cost: 1 Lumber + 1 Brick + 1 Wool + 1 Grain",
-                "Max 5 settlements per player",
-                "Must be at least 2 intersections from any other settlement or city"
-              ]
-            },
-            {
-              "id": "city",
-              "type": "resource",
-              "icon": "🏙️",
-              "name": "City",
-              "description": "Worth 2 Victory Points. Produces 2 resource cards from each adjacent hex. Replaces a settlement on the board.",
-              "usages": [
-                "Cost: 3 Ore + 2 Grain",
-                "Max 4 cities per player",
-                "Upgrade any existing settlement"
-              ]
-            },
-            {
-              "id": "dev-card",
-              "type": "development",
-              "icon": "🃏",
-              "name": "Development Card",
-              "description": "Draw the top card from the development deck. Cannot be played on the same turn it was bought.",
-              "usages": [
-                "Cost: 1 Ore + 1 Grain + 1 Wool",
-                "Max 25 cards in the deck total"
+                "Road: 1 Lumber + 1 Brick",
+                "Settlement: 1 Lumber + 1 Brick + 1 Wool + 1 Grain",
+                "City: 3 Ore + 2 Grain",
+                "Development Card: 1 Ore + 1 Grain + 1 Wool"
               ]
             }
           ]

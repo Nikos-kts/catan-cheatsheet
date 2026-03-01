@@ -17,7 +17,7 @@ const GAME_IMAGE = {
     "src/assets/images/explorers-and-pirates/catan-explorers-and-pirates.png",
 };
 
-const SUPPORTED_LANGS = ["en", "de", "es", "fr", "el"];
+const SUPPORTED_LANGS = ["en", "de", "es", "fr", "el", "nl"];
 const DATA_PATH = "src/data/";
 
 // ── Boot ───────────────────────────────────────────────────────────────────
