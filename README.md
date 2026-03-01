@@ -1,4 +1,4 @@
-# [🏝️ Catan Cheatsheet](./docs/index.html)
+# [🏝️ Catan Cheatsheet](./index.html)
 
 A simple, friendly browser-based reference for Catan card explanations — supports multiple games and languages.
 
@@ -12,8 +12,8 @@ A simple, friendly browser-based reference for Catan card explanations — suppo
 ## Project Structure
 
 ```
-docs/
-├── index.html          # Main page
+index.html              # Main page (root)
+src/
 ├── css/
 │   └── styles.css      # Styles (earthy Catan colour palette)
 ├── js/
@@ -32,24 +32,24 @@ This project includes a **Dev Container** configuration. Open the folder in VS C
 
 1. Use a Node.js 20 image
 2. Install `serve` globally
-3. Automatically serve `docs/` on **port 3000** and open it in your browser
+3. Automatically serve the project on **port 3000** and open it in your browser
 
 ### Manual start (without dev container)
 
 ```bash
-npx serve docs -l 3000
+npx serve . -l 3000
 # or
-python3 -m http.server 3000 --directory docs
+python3 -m http.server 3000
 ```
 
 Then open [http://localhost:3000](http://localhost:3000).
 
 ## Adding a New Language
 
-1. Copy `docs/data/en.json` to `docs/data/<code>.json` (e.g. `it.json`)
+1. Copy `src/data/en.json` to `src/data/<code>.json` (e.g. `it.json`)
 2. Translate all `name`, `description`, and `usages` fields
 3. Update the `ui` block with translated labels
-4. Add the language option in `docs/index.html`:
+4. Add the language option in `index.html`:
    ```html
    <option value="it">🇮🇹 Italiano</option>
    ```

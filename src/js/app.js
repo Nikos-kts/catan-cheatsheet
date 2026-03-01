@@ -6,7 +6,7 @@ const state = {
 };
 
 const SUPPORTED_LANGS = ['en', 'de', 'es', 'fr', 'el'];
-const DATA_PATH = 'data/';
+const DATA_PATH = 'src/data/';
 
 // ── Boot ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {

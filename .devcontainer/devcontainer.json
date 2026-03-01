@@ -12,7 +12,7 @@
         }
     },
     "postCreateCommand": "npm install -g serve",
-    "postStartCommand": "serve /workspaces/catan-cheatsheet/docs -l 3000 &",
+    "postStartCommand": "serve /workspaces/catan-cheatsheet -l 3000 &",
     "customizations": {
         "vscode": {
             "extensions": [
@@ -28,7 +28,7 @@
                 "editor.formatOnSave": true,
                 "editor.defaultFormatter": "esbenp.prettier-vscode",
                 "liveServer.settings.port": 3000,
-                "liveServer.settings.root": "/docs"
+                "liveServer.settings.root": "/"
             }
         }
     }
