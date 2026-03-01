@@ -12,7 +12,7 @@ A simple, friendly browser-based reference for Catan card explanations — suppo
 ## Project Structure
 
 ```
-src/
+docs/
 ├── index.html          # Main page
 ├── css/
 │   └── styles.css      # Styles (earthy Catan colour palette)
@@ -32,24 +32,24 @@ This project includes a **Dev Container** configuration. Open the folder in VS C
 
 1. Use a Node.js 20 image
 2. Install `serve` globally
-3. Automatically serve `src/` on **port 3000** and open it in your browser
+3. Automatically serve `docs/` on **port 3000** and open it in your browser
 
 ### Manual start (without dev container)
 
 ```bash
-npx serve src -l 3000
+npx serve docs -l 3000
 # or
-python3 -m http.server 3000 --directory src
+python3 -m http.server 3000 --directory docs
 ```
 
 Then open [http://localhost:3000](http://localhost:3000).
 
 ## Adding a New Language
 
-1. Copy `src/data/en.json` to `src/data/<code>.json` (e.g. `it.json`)
+1. Copy `docs/data/en.json` to `docs/data/<code>.json` (e.g. `it.json`)
 2. Translate all `name`, `description`, and `usages` fields
 3. Update the `ui` block with translated labels
-4. Add the language option in `src/index.html`:
+4. Add the language option in `docs/index.html`:
    ```html
    <option value="it">🇮🇹 Italiano</option>
    ```
