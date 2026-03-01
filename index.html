@@ -9,40 +9,46 @@
 
   <body>
     <header>
-      <div class="header-inner">
+      <div class="header-top">
         <h1>🏝️ Catan Cheatsheet</h1>
         <p class="subtitle" id="app-subtitle">
           Quick reference for cards &amp; rules
         </p>
       </div>
+
+      <div class="header-hero">
+        <div class="game-banner-wrap" id="game-banner-wrap">
+          <img
+            id="game-banner"
+            src="src/assets/images/basic/catan.png"
+            alt="Game cover"
+          />
+        </div>
+
+        <div class="controls">
+          <div class="control-group">
+            <label for="game-select" id="label-game">Game</label>
+            <div class="select-wrap">
+              <select id="game-select"></select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="lang-select" id="label-lang">Language</label>
+            <div class="select-wrap">
+              <select id="lang-select">
+                <option value="en">🇬🇧 English</option>
+                <option value="el">🇬🇷 Ελληνικά</option>
+                <option value="es">🇪🇸 Español</option>
+                <option value="pt">🇵🇹 Português</option>
+                <option value="nl">🇳🇱 Nederlands</option>
+                <option value="de">🇩🇪 Deutsch</option>
+                <option value="fr">🇫🇷 Français</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-
-    <div class="controls">
-      <div class="control-group">
-        <label for="game-select" id="label-game">Game</label>
-        <select id="game-select"></select>
-      </div>
-      <div class="control-group">
-        <label for="lang-select" id="label-lang">Language</label>
-        <select id="lang-select">
-          <option value="en">🇬🇧 English</option>
-          <option value="el">🇬🇷 Ελληνικά</option>
-          <option value="es">🇪🇸 Español</option>
-          <option value="pt">🇵🇹 Português</option>
-          <option value="nl">🇳🇱 Nederlands</option>
-          <option value="de">🇩🇪 Deutsch</option>
-          <option value="fr">🇫🇷 Français</option>
-        </select>
-      </div>
-    </div>
-
-    <div class="game-banner-wrap" id="game-banner-wrap">
-      <img
-        id="game-banner"
-        src="src/assets/images/basic/catan.png"
-        alt="Game cover"
-      />
-    </div>
 
     <nav class="tabs" id="tabs">
       <button class="tab active" data-tab="cards" id="tab-cards">

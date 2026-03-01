@@ -18,6 +18,40 @@ const GAME_IMAGE = {
     "src/assets/images/explorers-and-pirates/catan-explorers-and-pirates.png",
 };
 
+// ── Game → theme colour map ────────────────────────────────────────────────
+const GAME_THEME = {
+  base: {
+    header: "linear-gradient(160deg, #922b21 0%, #c0392b 40%, #a93226 100%)",
+    body: "#f5e6c8",
+    sandDk: "#e8d0a0",
+    tabActive: "#c0392b",
+  },
+  seafarers: {
+    header: "linear-gradient(160deg, #077ead 0%, #09a4da 40%, #0690c2 100%)",
+    body: "#e2f4fb",
+    sandDk: "#c0e4f3",
+    tabActive: "#09a4da",
+  },
+  "cities-knights": {
+    header: "linear-gradient(160deg, #b06a2a 0%, #d38441 40%, #c47735 100%)",
+    body: "#faf0e3",
+    sandDk: "#f0dcc2",
+    tabActive: "#d38441",
+  },
+  "traders-barbarians": {
+    header: "linear-gradient(160deg, #711e63 0%, #92257b 40%, #832070 100%)",
+    body: "#f5e4f2",
+    sandDk: "#e6c8e0",
+    tabActive: "#92257b",
+  },
+  "explorers-pirates": {
+    header: "linear-gradient(160deg, #3a4d63 0%, #4c5f76 40%, #435569 100%)",
+    body: "#e6ebf0",
+    sandDk: "#cdd5de",
+    tabActive: "#4c5f76",
+  },
+};
+
 const SUPPORTED_LANGS = ["en", "de", "es", "pt", "fr", "el", "nl"];
 const DATA_PATH = "src/data/";
 
@@ -150,6 +184,20 @@ function updateGameBanner(gameId) {
   };
   img.alt = gameId;
   img.src = src;
+
+  applyGameTheme(gameId);
+}
+
+function applyGameTheme(gameId) {
+  const theme = GAME_THEME[gameId] || GAME_THEME["base"];
+  const root = document.documentElement;
+
+  document.querySelector("header").style.background = theme.header;
+  root.style.setProperty("--sand", theme.body);
+  root.style.setProperty("--sand-dk", theme.sandDk);
+
+  // Update tab active accent
+  root.style.setProperty("--theme-accent", theme.tabActive);
 }
 
 function renderGame() {
