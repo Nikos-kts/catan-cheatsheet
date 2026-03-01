@@ -1,493 +1,546 @@
 {
-    "ui": {
-        "labelGame": "Game",
-        "labelLang": "Language",
-        "subtitle": "Quick reference for cards & rules",
-        "footer": "Community reference — not affiliated with Catan Studio."
-    },
-    "games": {
-        "base": {
-            "name": "Catan (Base Game)",
-            "description": "The classic Settlers of Catan. Collect resources, build roads, settlements and cities, trade with other players and be the first to reach 10 Victory Points.",
-            "sections": [
-                {
-                    "id": "resources",
-                    "title": "Resource Cards",
-                    "icon": "🌾",
-                    "cards": [
-                        {
-                            "id": "lumber",
-                            "type": "resource",
-                            "icon": "🌲",
-                            "name": "Lumber",
-                            "count": 19,
-                            "description": "Produced by Forest hexes when their number is rolled.",
-                            "usages": [
-                                "Build a Road (Lumber + Brick)",
-                                "Build a Settlement (Lumber + Brick + Wool + Grain)"
-                            ]
-                        },
-                        {
-                            "id": "brick",
-                            "type": "resource",
-                            "icon": "🧱",
-                            "name": "Brick",
-                            "count": 19,
-                            "description": "Produced by Hills hexes when their number is rolled.",
-                            "usages": [
-                                "Build a Road (Lumber + Brick)",
-                                "Build a Settlement (Lumber + Brick + Wool + Grain)"
-                            ]
-                        },
-                        {
-                            "id": "wool",
-                            "type": "resource",
-                            "icon": "🐑",
-                            "name": "Wool",
-                            "count": 19,
-                            "description": "Produced by Pasture hexes when their number is rolled.",
-                            "usages": [
-                                "Build a Settlement (Lumber + Brick + Wool + Grain)",
-                                "Build a City (× in City cost)",
-                                "Buy a Development Card (Ore + Grain + Wool)"
-                            ]
-                        },
-                        {
-                            "id": "grain",
-                            "type": "resource",
-                            "icon": "🌾",
-                            "name": "Grain",
-                            "count": 19,
-                            "description": "Produced by Fields hexes when their number is rolled.",
-                            "usages": [
-                                "Build a Settlement (Lumber + Brick + Wool + Grain)",
-                                "Upgrade to City (Ore×3 + Grain×2)",
-                                "Buy a Development Card (Ore + Grain + Wool)"
-                            ]
-                        },
-                        {
-                            "id": "ore",
-                            "type": "resource",
-                            "icon": "⛏️",
-                            "name": "Ore",
-                            "count": 19,
-                            "description": "Produced by Mountain hexes when their number is rolled.",
-                            "usages": [
-                                "Upgrade to City (Ore×3 + Grain×2)",
-                                "Buy a Development Card (Ore + Grain + Wool)"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "development",
-                    "title": "Development Cards",
-                    "icon": "🃏",
-                    "cards": [
-                        {
-                            "id": "knight",
-                            "type": "development",
-                            "icon": "⚔️",
-                            "name": "Knight",
-                            "count": 14,
-                            "description": "Move the Robber to any terrain hex. Steal one resource card from an adjacent opponent.",
-                            "usages": [
-                                "Activate before rolling the dice",
-                                "Collect Largest Army card when you play 3 knights (2 VP)"
-                            ]
-                        },
-                        {
-                            "id": "road-building",
-                            "type": "development",
-                            "icon": "🛤️",
-                            "name": "Road Building",
-                            "count": 2,
-                            "description": "Place 2 new roads on the board as if you had just built them.",
-                            "usages": [
-                                "Expand your network quickly",
-                                "Compete for Longest Road (2 VP when ≥5 roads)"
-                            ]
-                        },
-                        {
-                            "id": "year-of-plenty",
-                            "type": "development",
-                            "icon": "🎁",
-                            "name": "Year of Plenty",
-                            "count": 2,
-                            "description": "Take any 2 resource cards from the bank. Add them to your hand.",
-                            "usages": [
-                                "Grab the exact resources you need to build",
-                                "Complete a combination you're one resource short on"
-                            ]
-                        },
-                        {
-                            "id": "monopoly",
-                            "type": "development",
-                            "icon": "💰",
-                            "name": "Monopoly",
-                            "count": 2,
-                            "description": "Name any resource type. All other players must give you all of their cards of that type.",
-                            "usages": [
-                                "Disrupt an opponent on the verge of a big build",
-                                "Collect a resource you urgently need"
-                            ]
-                        },
-                        {
-                            "id": "victory-point",
-                            "type": "development",
-                            "icon": "⭐",
-                            "name": "Victory Point",
-                            "count": 5,
-                            "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
-                            "usages": [
-                                "Count towards 10 VP to win",
-                                "Play all at once to surprise opponents when claiming victory"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "special",
-                    "title": "Special Cards",
-                    "icon": "🏆",
-                    "cards": [
-                        {
-                            "id": "longest-road",
-                            "type": "special",
-                            "icon": "🛣️",
-                            "name": "Longest Road",
-                            "description": "Awarded to the first player with a continuous road of 5+ segments. Worth 2 Victory Points. Another player can steal it by building a longer road.",
-                            "usages": [
-                                "Build roads aggressively to claim the card",
-                                "Break an opponent's road by placing a settlement in the middle"
-                            ]
-                        },
-                        {
-                            "id": "largest-army",
-                            "type": "special",
-                            "icon": "🪖",
-                            "name": "Largest Army",
-                            "description": "Awarded to the first player who plays 3 Knight cards. Worth 2 Victory Points. Another player can steal it by playing more Knights.",
-                            "usages": [
-                                "Play Knights to control the Robber and earn 2 VP",
-                                "Protect wheat/ore hexes from the Robber"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "building-costs",
-                    "title": "Building Costs",
-                    "icon": "🔨",
-                    "cards": [
-                        {
-                            "id": "road",
-                            "type": "resource",
-                            "icon": "🛤️",
-                            "name": "Road",
-                            "description": "Connects your settlements and cities. Must be placed adjacent to your existing road, settlement or city.",
-                            "usages": [
-                                "Cost: 1 Lumber + 1 Brick",
-                                "Max 15 roads per player",
-                                "Required before settling a new location"
-                            ]
-                        },
-                        {
-                            "id": "settlement",
-                            "type": "resource",
-                            "icon": "🏠",
-                            "name": "Settlement",
-                            "description": "Worth 1 Victory Point. Produces 1 resource card from each adjacent hex when its number is rolled.",
-                            "usages": [
-                                "Cost: 1 Lumber + 1 Brick + 1 Wool + 1 Grain",
-                                "Max 5 settlements per player",
-                                "Must be at least 2 intersections from any other settlement or city"
-                            ]
-                        },
-                        {
-                            "id": "city",
-                            "type": "resource",
-                            "icon": "🏙️",
-                            "name": "City",
-                            "description": "Worth 2 Victory Points. Produces 2 resource cards from each adjacent hex. Replaces a settlement on the board.",
-                            "usages": [
-                                "Cost: 3 Ore + 2 Grain",
-                                "Max 4 cities per player",
-                                "Upgrade any existing settlement"
-                            ]
-                        },
-                        {
-                            "id": "dev-card",
-                            "type": "development",
-                            "icon": "🃏",
-                            "name": "Development Card",
-                            "description": "Draw the top card from the development deck. Cannot be played on the same turn it was bought.",
-                            "usages": [
-                                "Cost: 1 Ore + 1 Grain + 1 Wool",
-                                "Max 25 cards in the deck total"
-                            ]
-                        }
-                    ]
-                }
-            ]
+  "ui": {
+    "labelGame": "Game",
+    "labelLang": "Language",
+    "subtitle": "Quick reference for cards & rules",
+    "footer": "Community reference — not affiliated with Catan Studio."
+  },
+  "games": {
+    "base": {
+      "name": "Catan (Base Game)",
+      "description": "The classic Settlers of Catan. Collect resources, build roads, settlements and cities, trade with other players and be the first to reach 10 Victory Points.",
+      "sections": [
+        {
+          "id": "resources",
+          "title": "Resource Cards",
+          "icon": "🌾",
+          "cards": [
+            {
+              "id": "lumber",
+              "type": "resource",
+              "icon": "🌲",
+              "name": "Lumber",
+              "count": 19,
+              "description": "Produced by Forest hexes when their number is rolled.",
+              "usages": [
+                "Build a Road (Lumber + Brick)",
+                "Build a Settlement (Lumber + Brick + Wool + Grain)"
+              ]
+            },
+            {
+              "id": "brick",
+              "type": "resource",
+              "icon": "🧱",
+              "name": "Brick",
+              "count": 19,
+              "description": "Produced by Hills hexes when their number is rolled.",
+              "usages": [
+                "Build a Road (Lumber + Brick)",
+                "Build a Settlement (Lumber + Brick + Wool + Grain)"
+              ]
+            },
+            {
+              "id": "wool",
+              "type": "resource",
+              "icon": "🐑",
+              "name": "Wool",
+              "count": 19,
+              "description": "Produced by Pasture hexes when their number is rolled.",
+              "usages": [
+                "Build a Settlement (Lumber + Brick + Wool + Grain)",
+                "Build a City (× in City cost)",
+                "Buy a Development Card (Ore + Grain + Wool)"
+              ]
+            },
+            {
+              "id": "grain",
+              "type": "resource",
+              "icon": "🌾",
+              "name": "Grain",
+              "count": 19,
+              "description": "Produced by Fields hexes when their number is rolled.",
+              "usages": [
+                "Build a Settlement (Lumber + Brick + Wool + Grain)",
+                "Upgrade to City (Ore×3 + Grain×2)",
+                "Buy a Development Card (Ore + Grain + Wool)"
+              ]
+            },
+            {
+              "id": "ore",
+              "type": "resource",
+              "icon": "⛏️",
+              "name": "Ore",
+              "count": 19,
+              "description": "Produced by Mountain hexes when their number is rolled.",
+              "usages": [
+                "Upgrade to City (Ore×3 + Grain×2)",
+                "Buy a Development Card (Ore + Grain + Wool)"
+              ]
+            }
+          ]
         },
-        "seafarers": {
-            "name": "Seafarers",
-            "description": "Explore an archipelago of islands. Build ships to sail the seas, discover new islands with gold fields, and settle distant shores for bonus Victory Points.",
-            "sections": [
-                {
-                    "id": "ships",
-                    "title": "Ships",
-                    "icon": "⛵",
-                    "cards": [
-                        {
-                            "id": "ship",
-                            "type": "ship",
-                            "icon": "⛵",
-                            "name": "Ship",
-                            "description": "Ships extend your trade routes across water hexes. They work like roads on the sea.",
-                            "usages": [
-                                "Cost: 1 Lumber + 1 Wool",
-                                "Can be moved (the end ship of an open route) once per turn",
-                                "Max 15 ships per player"
-                            ]
-                        },
-                        {
-                            "id": "gold-field",
-                            "type": "resource",
-                            "icon": "🪙",
-                            "name": "Gold Field",
-                            "description": "Special hex that produces a wild resource. When its number is rolled, adjacent players choose any resource they want from the bank.",
-                            "usages": [
-                                "Highly valuable — worth settling early",
-                                "Each adjacent settlement yields 1 free resource of choice"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "seafarers-special",
-                    "title": "Special Rules",
-                    "icon": "🗺️",
-                    "cards": [
-                        {
-                            "id": "discovery-vp",
-                            "type": "special",
-                            "icon": "🏆",
-                            "name": "New Island Bonus",
-                            "description": "In most Seafarers scenarios, placing your first settlement on a new island earns you 1 extra Victory Point.",
-                            "usages": [
-                                "Plan ship routes to reach distant islands quickly",
-                                "Multiple players can earn VP from the same island"
-                            ]
-                        },
-                        {
-                            "id": "pirate",
-                            "type": "special",
-                            "icon": "🏴‍☠️",
-                            "name": "Pirate",
-                            "description": "The Pirate replaces the Robber in Seafarers. Move it to any sea hex to block ships. Steal from an adjacent player with a ship there.",
-                            "usages": [
-                                "Activated by rolling a 7 or playing a Knight",
-                                "Blocks ship movement through that hex"
-                            ]
-                        }
-                    ]
-                }
-            ]
+        {
+          "id": "development",
+          "title": "Development Cards",
+          "icon": "🃏",
+          "cards": [
+            {
+              "id": "knight",
+              "type": "development",
+              "icon": "⚔️",
+              "image": "src/assets/images/basic/development-cards/knight.png",
+              "name": "Knight",
+              "count": 14,
+              "description": "Move the Robber to any terrain hex. Steal one resource card from an adjacent opponent.",
+              "usages": [
+                "Activate before rolling the dice",
+                "Collect Largest Army card when you play 3 knights (2 VP)"
+              ]
+            },
+            {
+              "id": "road-building",
+              "type": "development",
+              "icon": "🛤️",
+              "image": "src/assets/images/basic/development-cards/road-building.png",
+              "name": "Road Building",
+              "count": 2,
+              "description": "Place 2 new roads on the board as if you had just built them.",
+              "usages": [
+                "Expand your network quickly",
+                "Compete for Longest Road (2 VP when ≥5 roads)"
+              ]
+            },
+            {
+              "id": "year-of-plenty",
+              "type": "development",
+              "icon": "🎁",
+              "image": "src/assets/images/basic/development-cards/year-of-plenty.png",
+              "name": "Year of Plenty",
+              "count": 2,
+              "description": "Take any 2 resource cards from the bank. Add them to your hand.",
+              "usages": [
+                "Grab the exact resources you need to build",
+                "Complete a combination you're one resource short on"
+              ]
+            },
+            {
+              "id": "monopoly",
+              "type": "development",
+              "icon": "💰",
+              "image": "src/assets/images/basic/development-cards/monopoly.png",
+              "name": "Monopoly",
+              "count": 2,
+              "description": "Name any resource type. All other players must give you all of their cards of that type.",
+              "usages": [
+                "Disrupt an opponent on the verge of a big build",
+                "Collect a resource you urgently need"
+              ]
+            },
+            {
+              "id": "chapel",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/chappel.png",
+              "name": "Chapel",
+              "count": 1,
+              "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
+              "usages": [
+                "Count towards 10 VP to win",
+                "Play all at once to surprise opponents when claiming victory"
+              ]
+            },
+            {
+              "id": "great-hall",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/great-hall.png",
+              "name": "Great Hall",
+              "count": 1,
+              "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
+              "usages": [
+                "Count towards 10 VP to win",
+                "Play all at once to surprise opponents when claiming victory"
+              ]
+            },
+            {
+              "id": "library",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/library.png",
+              "name": "Library",
+              "count": 1,
+              "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
+              "usages": [
+                "Count towards 10 VP to win",
+                "Play all at once to surprise opponents when claiming victory"
+              ]
+            },
+            {
+              "id": "market",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/market.png",
+              "name": "Market",
+              "count": 1,
+              "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
+              "usages": [
+                "Count towards 10 VP to win",
+                "Play all at once to surprise opponents when claiming victory"
+              ]
+            },
+            {
+              "id": "university",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/university.png",
+              "name": "University",
+              "count": 1,
+              "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
+              "usages": [
+                "Count towards 10 VP to win",
+                "Play all at once to surprise opponents when claiming victory"
+              ]
+            }
+          ]
         },
-        "cities-knights": {
-            "name": "Cities & Knights",
-            "description": "A deeper strategic experience. Commodities replace some resources, city improvements unlock powerful abilities, and the Barbarians threaten your cities each turn.",
-            "sections": [
-                {
-                    "id": "commodities",
-                    "title": "Commodity Cards",
-                    "icon": "📦",
-                    "cards": [
-                        {
-                            "id": "cloth",
-                            "type": "commodity",
-                            "icon": "🧵",
-                            "name": "Cloth",
-                            "description": "Commodity produced by upgraded Pasture cities (Metropolis). Used to advance in the Trade column of city improvements.",
-                            "usages": [
-                                "Produced by cities on Pasture hexes (doubled roll)",
-                                "Invest in Trade city improvements"
-                            ]
-                        },
-                        {
-                            "id": "coin",
-                            "type": "commodity",
-                            "icon": "🪙",
-                            "name": "Coin",
-                            "description": "Commodity produced by upgraded Mountain cities. Used to advance in the Science column.",
-                            "usages": [
-                                "Produced by cities on Mountain hexes",
-                                "Invest in Science city improvements"
-                            ]
-                        },
-                        {
-                            "id": "paper",
-                            "type": "commodity",
-                            "icon": "📜",
-                            "name": "Paper",
-                            "description": "Commodity produced by upgraded Forest cities. Used to advance in the Politics column.",
-                            "usages": [
-                                "Produced by cities on Forest hexes",
-                                "Invest in Politics city improvements"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "progress-cards",
-                    "title": "Progress Cards (examples)",
-                    "icon": "📋",
-                    "cards": [
-                        {
-                            "id": "crane",
-                            "type": "progress",
-                            "icon": "🏗️",
-                            "name": "Crane (Science)",
-                            "description": "This turn, you may build one city improvement for 1 fewer commodity than normal.",
-                            "usages": [
-                                "Save a commodity when upgrading city"
-                            ]
-                        },
-                        {
-                            "id": "merchant",
-                            "type": "progress",
-                            "icon": "🧑‍💼",
-                            "name": "Merchant (Trade)",
-                            "description": "Place the Merchant on any terrain hex. You trade that resource at 2:1 until another player takes the Merchant. Also worth 1 VP.",
-                            "usages": [
-                                "Control a key resource trading rate",
-                                "Worth 1 VP while you hold it"
-                            ]
-                        },
-                        {
-                            "id": "spy",
-                            "type": "progress",
-                            "icon": "🕵️",
-                            "name": "Spy (Politics)",
-                            "description": "Steal one progress card at random from any opponent's hand.",
-                            "usages": [
-                                "Disrupt opponents, gain a useful card"
-                            ]
-                        },
-                        {
-                            "id": "engineer",
-                            "type": "progress",
-                            "icon": "🔧",
-                            "name": "Engineer (Science)",
-                            "description": "Build one city wall for free.",
-                            "usages": [
-                                "Protect a city from Barbarians without spending resources"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "barbarians",
-                    "title": "Barbarians",
-                    "icon": "⚔️",
-                    "cards": [
-                        {
-                            "id": "barbarian-track",
-                            "type": "special",
-                            "icon": "🧟",
-                            "name": "Barbarian Attack",
-                            "description": "Each turn a ship is rolled, the Barbarian token advances. When it reaches Catan, a battle is resolved. If barbarians win, the player with fewest knights loses a city.",
-                            "usages": [
-                                "Build and activate Knights to defend",
-                                "City Walls protect one city from being downgraded"
-                            ]
-                        }
-                    ]
-                }
-            ]
+        {
+          "id": "special",
+          "title": "Special Cards",
+          "icon": "🏆",
+          "cards": [
+            {
+              "id": "longest-road",
+              "type": "special",
+              "icon": "🛣️",
+              "name": "Longest Road",
+              "description": "Awarded to the first player with a continuous road of 5+ segments. Worth 2 Victory Points. Another player can steal it by building a longer road.",
+              "usages": [
+                "Build roads aggressively to claim the card",
+                "Break an opponent's road by placing a settlement in the middle"
+              ]
+            },
+            {
+              "id": "largest-army",
+              "type": "special",
+              "icon": "🪖",
+              "name": "Largest Army",
+              "description": "Awarded to the first player who plays 3 Knight cards. Worth 2 Victory Points. Another player can steal it by playing more Knights.",
+              "usages": [
+                "Play Knights to control the Robber and earn 2 VP",
+                "Protect wheat/ore hexes from the Robber"
+              ]
+            }
+          ]
         },
-        "traders-barbarians": {
-            "name": "Traders & Barbarians",
-            "description": "A collection of five scenarios and variants that add new dimensions to the classic game: trade routes, caravans, barbarian invasions, and more.",
-            "sections": [
-                {
-                    "id": "trade-routes",
-                    "title": "Trade Route Cards",
-                    "icon": "🚗",
-                    "cards": [
-                        {
-                            "id": "caravan",
-                            "type": "trade",
-                            "icon": "🐪",
-                            "name": "Caravan",
-                            "description": "In the Traders & Barbarians scenario, caravans carry goods along roads. Delivering goods to the friendly village earns Victory Points.",
-                            "usages": [
-                                "Move caravans up to 3 road segments per turn",
-                                "Earn 1 VP per delivered goods token"
-                            ]
-                        },
-                        {
-                            "id": "gold",
-                            "type": "trade",
-                            "icon": "🪙",
-                            "name": "Gold Coin Token",
-                            "description": "Earned by completing trade routes or delivering goods. Can be used like a wild resource or traded for VP in certain scenarios.",
-                            "usages": [
-                                "Spend as any resource type",
-                                "Trade for VP at the friendly village"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "explorers-pirates": {
-            "name": "Explorers & Pirates",
-            "description": "Set sail to explore unknown waters. Build ships and harbors, complete missions like spice trade or fish hauls, and colonize new lands far from home.",
-            "sections": [
-                {
-                    "id": "missions",
-                    "title": "Mission Tiles",
-                    "icon": "🎯",
-                    "cards": [
-                        {
-                            "id": "spice-haul",
-                            "type": "mission",
-                            "icon": "🌶️",
-                            "name": "Spice Haul",
-                            "description": "Sail your ship to a distant spice island and haul spices back to your home island for Victory Points.",
-                            "usages": [
-                                "Each completed haul earns 1 VP",
-                                "Requires reaching and returning from the spice tile"
-                            ]
-                        },
-                        {
-                            "id": "fish-camp",
-                            "type": "mission",
-                            "icon": "🐟",
-                            "name": "Fish Camp",
-                            "description": "Establish a fish camp on a discovered coast to generate fish tokens each round.",
-                            "usages": [
-                                "Fish tokens can be traded for resources",
-                                "Position near coastal hexes with good numbers"
-                            ]
-                        },
-                        {
-                            "id": "pirate-lair",
-                            "type": "mission",
-                            "icon": "🏴‍☠️",
-                            "name": "Pirate Lair",
-                            "description": "Discover and destroy pirate lairs scattered across the frontier. Each cleared lair earns 1 Victory Point.",
-                            "usages": [
-                                "Reach the lair with a ship to clear it",
-                                "Earns 1 VP immediately upon discovery"
-                            ]
-                        }
-                    ]
-                }
-            ]
+        {
+          "id": "building-costs",
+          "title": "Building Costs",
+          "icon": "🔨",
+          "cards": [
+            {
+              "id": "road",
+              "type": "resource",
+              "icon": "🛤️",
+              "name": "Road",
+              "description": "Connects your settlements and cities. Must be placed adjacent to your existing road, settlement or city.",
+              "usages": [
+                "Cost: 1 Lumber + 1 Brick",
+                "Max 15 roads per player",
+                "Required before settling a new location"
+              ]
+            },
+            {
+              "id": "settlement",
+              "type": "resource",
+              "icon": "🏠",
+              "name": "Settlement",
+              "description": "Worth 1 Victory Point. Produces 1 resource card from each adjacent hex when its number is rolled.",
+              "usages": [
+                "Cost: 1 Lumber + 1 Brick + 1 Wool + 1 Grain",
+                "Max 5 settlements per player",
+                "Must be at least 2 intersections from any other settlement or city"
+              ]
+            },
+            {
+              "id": "city",
+              "type": "resource",
+              "icon": "🏙️",
+              "name": "City",
+              "description": "Worth 2 Victory Points. Produces 2 resource cards from each adjacent hex. Replaces a settlement on the board.",
+              "usages": [
+                "Cost: 3 Ore + 2 Grain",
+                "Max 4 cities per player",
+                "Upgrade any existing settlement"
+              ]
+            },
+            {
+              "id": "dev-card",
+              "type": "development",
+              "icon": "🃏",
+              "name": "Development Card",
+              "description": "Draw the top card from the development deck. Cannot be played on the same turn it was bought.",
+              "usages": [
+                "Cost: 1 Ore + 1 Grain + 1 Wool",
+                "Max 25 cards in the deck total"
+              ]
+            }
+          ]
         }
+      ]
+    },
+    "seafarers": {
+      "name": "Seafarers",
+      "description": "Explore an archipelago of islands. Build ships to sail the seas, discover new islands with gold fields, and settle distant shores for bonus Victory Points.",
+      "sections": [
+        {
+          "id": "ships",
+          "title": "Ships",
+          "icon": "⛵",
+          "cards": [
+            {
+              "id": "ship",
+              "type": "ship",
+              "icon": "⛵",
+              "name": "Ship",
+              "description": "Ships extend your trade routes across water hexes. They work like roads on the sea.",
+              "usages": [
+                "Cost: 1 Lumber + 1 Wool",
+                "Can be moved (the end ship of an open route) once per turn",
+                "Max 15 ships per player"
+              ]
+            },
+            {
+              "id": "gold-field",
+              "type": "resource",
+              "icon": "🪙",
+              "name": "Gold Field",
+              "description": "Special hex that produces a wild resource. When its number is rolled, adjacent players choose any resource they want from the bank.",
+              "usages": [
+                "Highly valuable — worth settling early",
+                "Each adjacent settlement yields 1 free resource of choice"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "seafarers-special",
+          "title": "Special Rules",
+          "icon": "🗺️",
+          "cards": [
+            {
+              "id": "discovery-vp",
+              "type": "special",
+              "icon": "🏆",
+              "name": "New Island Bonus",
+              "description": "In most Seafarers scenarios, placing your first settlement on a new island earns you 1 extra Victory Point.",
+              "usages": [
+                "Plan ship routes to reach distant islands quickly",
+                "Multiple players can earn VP from the same island"
+              ]
+            },
+            {
+              "id": "pirate",
+              "type": "special",
+              "icon": "🏴‍☠️",
+              "name": "Pirate",
+              "description": "The Pirate replaces the Robber in Seafarers. Move it to any sea hex to block ships. Steal from an adjacent player with a ship there.",
+              "usages": [
+                "Activated by rolling a 7 or playing a Knight",
+                "Blocks ship movement through that hex"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "cities-knights": {
+      "name": "Cities & Knights",
+      "description": "A deeper strategic experience. Commodities replace some resources, city improvements unlock powerful abilities, and the Barbarians threaten your cities each turn.",
+      "sections": [
+        {
+          "id": "commodities",
+          "title": "Commodity Cards",
+          "icon": "📦",
+          "cards": [
+            {
+              "id": "cloth",
+              "type": "commodity",
+              "icon": "🧵",
+              "name": "Cloth",
+              "description": "Commodity produced by upgraded Pasture cities (Metropolis). Used to advance in the Trade column of city improvements.",
+              "usages": [
+                "Produced by cities on Pasture hexes (doubled roll)",
+                "Invest in Trade city improvements"
+              ]
+            },
+            {
+              "id": "coin",
+              "type": "commodity",
+              "icon": "🪙",
+              "name": "Coin",
+              "description": "Commodity produced by upgraded Mountain cities. Used to advance in the Science column.",
+              "usages": [
+                "Produced by cities on Mountain hexes",
+                "Invest in Science city improvements"
+              ]
+            },
+            {
+              "id": "paper",
+              "type": "commodity",
+              "icon": "📜",
+              "name": "Paper",
+              "description": "Commodity produced by upgraded Forest cities. Used to advance in the Politics column.",
+              "usages": [
+                "Produced by cities on Forest hexes",
+                "Invest in Politics city improvements"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "progress-cards",
+          "title": "Progress Cards (examples)",
+          "icon": "📋",
+          "cards": [
+            {
+              "id": "crane",
+              "type": "progress",
+              "icon": "🏗️",
+              "name": "Crane (Science)",
+              "description": "This turn, you may build one city improvement for 1 fewer commodity than normal.",
+              "usages": ["Save a commodity when upgrading city"]
+            },
+            {
+              "id": "merchant",
+              "type": "progress",
+              "icon": "🧑‍💼",
+              "name": "Merchant (Trade)",
+              "description": "Place the Merchant on any terrain hex. You trade that resource at 2:1 until another player takes the Merchant. Also worth 1 VP.",
+              "usages": [
+                "Control a key resource trading rate",
+                "Worth 1 VP while you hold it"
+              ]
+            },
+            {
+              "id": "spy",
+              "type": "progress",
+              "icon": "🕵️",
+              "name": "Spy (Politics)",
+              "description": "Steal one progress card at random from any opponent's hand.",
+              "usages": ["Disrupt opponents, gain a useful card"]
+            },
+            {
+              "id": "engineer",
+              "type": "progress",
+              "icon": "🔧",
+              "name": "Engineer (Science)",
+              "description": "Build one city wall for free.",
+              "usages": [
+                "Protect a city from Barbarians without spending resources"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "barbarians",
+          "title": "Barbarians",
+          "icon": "⚔️",
+          "cards": [
+            {
+              "id": "barbarian-track",
+              "type": "special",
+              "icon": "🧟",
+              "name": "Barbarian Attack",
+              "description": "Each turn a ship is rolled, the Barbarian token advances. When it reaches Catan, a battle is resolved. If barbarians win, the player with fewest knights loses a city.",
+              "usages": [
+                "Build and activate Knights to defend",
+                "City Walls protect one city from being downgraded"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "traders-barbarians": {
+      "name": "Traders & Barbarians",
+      "description": "A collection of five scenarios and variants that add new dimensions to the classic game: trade routes, caravans, barbarian invasions, and more.",
+      "sections": [
+        {
+          "id": "trade-routes",
+          "title": "Trade Route Cards",
+          "icon": "🚗",
+          "cards": [
+            {
+              "id": "caravan",
+              "type": "trade",
+              "icon": "🐪",
+              "name": "Caravan",
+              "description": "In the Traders & Barbarians scenario, caravans carry goods along roads. Delivering goods to the friendly village earns Victory Points.",
+              "usages": [
+                "Move caravans up to 3 road segments per turn",
+                "Earn 1 VP per delivered goods token"
+              ]
+            },
+            {
+              "id": "gold",
+              "type": "trade",
+              "icon": "🪙",
+              "name": "Gold Coin Token",
+              "description": "Earned by completing trade routes or delivering goods. Can be used like a wild resource or traded for VP in certain scenarios.",
+              "usages": [
+                "Spend as any resource type",
+                "Trade for VP at the friendly village"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "explorers-pirates": {
+      "name": "Explorers & Pirates",
+      "description": "Set sail to explore unknown waters. Build ships and harbors, complete missions like spice trade or fish hauls, and colonize new lands far from home.",
+      "sections": [
+        {
+          "id": "missions",
+          "title": "Mission Tiles",
+          "icon": "🎯",
+          "cards": [
+            {
+              "id": "spice-haul",
+              "type": "mission",
+              "icon": "🌶️",
+              "name": "Spice Haul",
+              "description": "Sail your ship to a distant spice island and haul spices back to your home island for Victory Points.",
+              "usages": [
+                "Each completed haul earns 1 VP",
+                "Requires reaching and returning from the spice tile"
+              ]
+            },
+            {
+              "id": "fish-camp",
+              "type": "mission",
+              "icon": "🐟",
+              "name": "Fish Camp",
+              "description": "Establish a fish camp on a discovered coast to generate fish tokens each round.",
+              "usages": [
+                "Fish tokens can be traded for resources",
+                "Position near coastal hexes with good numbers"
+              ]
+            },
+            {
+              "id": "pirate-lair",
+              "type": "mission",
+              "icon": "🏴‍☠️",
+              "name": "Pirate Lair",
+              "description": "Discover and destroy pirate lairs scattered across the frontier. Each cleared lair earns 1 Victory Point.",
+              "usages": [
+                "Reach the lair with a ship to clear it",
+                "Earns 1 VP immediately upon discovery"
+              ]
+            }
+          ]
+        }
+      ]
     }
+  }
 }

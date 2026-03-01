@@ -1,492 +1,547 @@
 {
-    "ui": {
-        "labelGame": "Jeu",
-        "labelLang": "Langue",
-        "subtitle": "Référence rapide des cartes et règles",
-        "footer": "Référence communautaire — non affiliée à Catan Studio."
-    },
-    "games": {
-        "base": {
-            "name": "Catan (Jeu de Base)",
-            "description": "Le classique Les Colons de Catane. Collectez des ressources, construisez des routes, des colonies et des villes, échangez avec les autres joueurs et soyez le premier à atteindre 10 Points de Victoire.",
-            "sections": [
-                {
-                    "id": "resources",
-                    "title": "Cartes Ressource",
-                    "icon": "🌾",
-                    "cards": [
-                        {
-                            "id": "lumber",
-                            "type": "resource",
-                            "icon": "🌲",
-                            "name": "Bois",
-                            "count": 19,
-                            "description": "Produit par les cases Forêt quand leur chiffre est lancé.",
-                            "usages": [
-                                "Construire une Route (Bois + Argile)",
-                                "Construire une Colonie (Bois + Argile + Laine + Blé)"
-                            ]
-                        },
-                        {
-                            "id": "brick",
-                            "type": "resource",
-                            "icon": "🧱",
-                            "name": "Argile",
-                            "count": 19,
-                            "description": "Produite par les cases Collines quand leur chiffre est lancé.",
-                            "usages": [
-                                "Construire une Route (Bois + Argile)",
-                                "Construire une Colonie (Bois + Argile + Laine + Blé)"
-                            ]
-                        },
-                        {
-                            "id": "wool",
-                            "type": "resource",
-                            "icon": "🐑",
-                            "name": "Laine",
-                            "count": 19,
-                            "description": "Produite par les cases Prairie quand leur chiffre est lancé.",
-                            "usages": [
-                                "Construire une Colonie (Bois + Argile + Laine + Blé)",
-                                "Acheter une Carte Développement (Minerai + Blé + Laine)"
-                            ]
-                        },
-                        {
-                            "id": "grain",
-                            "type": "resource",
-                            "icon": "🌾",
-                            "name": "Blé",
-                            "count": 19,
-                            "description": "Produit par les cases Champs quand leur chiffre est lancé.",
-                            "usages": [
-                                "Construire une Colonie (Bois + Argile + Laine + Blé)",
-                                "Améliorer en Ville (Minerai×3 + Blé×2)",
-                                "Acheter une Carte Développement (Minerai + Blé + Laine)"
-                            ]
-                        },
-                        {
-                            "id": "ore",
-                            "type": "resource",
-                            "icon": "⛏️",
-                            "name": "Minerai",
-                            "count": 19,
-                            "description": "Produit par les cases Montagne quand leur chiffre est lancé.",
-                            "usages": [
-                                "Améliorer en Ville (Minerai×3 + Blé×2)",
-                                "Acheter une Carte Développement (Minerai + Blé + Laine)"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "development",
-                    "title": "Cartes Développement",
-                    "icon": "🃏",
-                    "cards": [
-                        {
-                            "id": "knight",
-                            "type": "development",
-                            "icon": "⚔️",
-                            "name": "Chevalier",
-                            "count": 14,
-                            "description": "Déplacez le Voleur sur n'importe quelle case. Volez une carte ressource à un adversaire adjacent.",
-                            "usages": [
-                                "Jouer avant de lancer les dés",
-                                "Obtenez la Grande Armée en jouant 3 Chevaliers (2 PV)"
-                            ]
-                        },
-                        {
-                            "id": "road-building",
-                            "type": "development",
-                            "icon": "🛤️",
-                            "name": "Construction de Routes",
-                            "count": 2,
-                            "description": "Posez 2 nouvelles routes gratuitement sur le plateau.",
-                            "usages": [
-                                "Étendez rapidement votre réseau",
-                                "Concourez pour la Plus Longue Route (2 PV avec ≥5 tronçons)"
-                            ]
-                        },
-                        {
-                            "id": "year-of-plenty",
-                            "type": "development",
-                            "icon": "🎁",
-                            "name": "Année d'Abondance",
-                            "count": 2,
-                            "description": "Prenez 2 cartes ressource au choix dans la banque.",
-                            "usages": [
-                                "Obtenez exactement les ressources pour construire",
-                                "Complétez une combinaison dont il vous manque un élément"
-                            ]
-                        },
-                        {
-                            "id": "monopoly",
-                            "type": "development",
-                            "icon": "💰",
-                            "name": "Monopole",
-                            "count": 2,
-                            "description": "Nommez un type de ressource. Tous les autres joueurs doivent vous donner toutes leurs cartes de ce type.",
-                            "usages": [
-                                "Désorganiser un adversaire sur le point de construire",
-                                "Récupérer une ressource dont vous avez besoin d'urgence"
-                            ]
-                        },
-                        {
-                            "id": "victory-point",
-                            "type": "development",
-                            "icon": "⭐",
-                            "name": "Point de Victoire",
-                            "count": 5,
-                            "description": "Vaut 1 Point de Victoire. Gardé secret jusqu'à ce que vous le révéliez pour gagner.",
-                            "usages": [
-                                "Compte vers les 10 PV pour la victoire",
-                                "Révélez tous à la fois pour surprendre les adversaires"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "special",
-                    "title": "Cartes Spéciales",
-                    "icon": "🏆",
-                    "cards": [
-                        {
-                            "id": "longest-road",
-                            "type": "special",
-                            "icon": "🛣️",
-                            "name": "Plus Longue Route",
-                            "description": "Attribuée au premier joueur avec une route continue de 5+ tronçons. Vaut 2 Points de Victoire. Peut être volée.",
-                            "usages": [
-                                "Construisez des routes agressivement",
-                                "Interrompez la route d'un adversaire avec une colonie"
-                            ]
-                        },
-                        {
-                            "id": "largest-army",
-                            "type": "special",
-                            "icon": "🪖",
-                            "name": "Grande Armée",
-                            "description": "Attribuée au premier joueur qui joue 3 Chevaliers. Vaut 2 Points de Victoire. Peut être volée.",
-                            "usages": [
-                                "Jouez des Chevaliers pour contrôler le Voleur et gagner 2 PV",
-                                "Protégez des cases clés du Voleur"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "building-costs",
-                    "title": "Coûts de Construction",
-                    "icon": "🔨",
-                    "cards": [
-                        {
-                            "id": "road",
-                            "type": "resource",
-                            "icon": "🛤️",
-                            "name": "Route",
-                            "description": "Relie vos colonies et villes. Doit être adjacente à votre route, colonie ou ville existante.",
-                            "usages": [
-                                "Coût : 1 Bois + 1 Argile",
-                                "Max. 15 routes par joueur",
-                                "Nécessaire avant de s'installer en un nouveau lieu"
-                            ]
-                        },
-                        {
-                            "id": "settlement",
-                            "type": "resource",
-                            "icon": "🏠",
-                            "name": "Colonie",
-                            "description": "Vaut 1 Point de Victoire. Produit 1 carte ressource de chaque case adjacente quand son chiffre est lancé.",
-                            "usages": [
-                                "Coût : 1 Bois + 1 Argile + 1 Laine + 1 Blé",
-                                "Max. 5 colonies par joueur",
-                                "Au moins 2 intersections de toute autre colonie/ville"
-                            ]
-                        },
-                        {
-                            "id": "city",
-                            "type": "resource",
-                            "icon": "🏙️",
-                            "name": "Ville",
-                            "description": "Vaut 2 Points de Victoire. Produit 2 cartes ressource par case adjacente. Remplace une colonie.",
-                            "usages": [
-                                "Coût : 3 Minerai + 2 Blé",
-                                "Max. 4 villes par joueur",
-                                "Améliore toute colonie existante"
-                            ]
-                        },
-                        {
-                            "id": "dev-card",
-                            "type": "development",
-                            "icon": "🃏",
-                            "name": "Carte Développement",
-                            "description": "Piochez la carte du dessus du paquet de développement. Ne peut pas être jouée le tour même de l'achat.",
-                            "usages": [
-                                "Coût : 1 Minerai + 1 Blé + 1 Laine",
-                                "Max. 25 cartes dans le paquet"
-                            ]
-                        }
-                    ]
-                }
-            ]
+  "ui": {
+    "labelGame": "Jeu",
+    "labelLang": "Langue",
+    "subtitle": "Référence rapide des cartes et règles",
+    "footer": "Référence communautaire — non affiliée à Catan Studio."
+  },
+  "games": {
+    "base": {
+      "name": "Catan (Jeu de Base)",
+      "description": "Le classique Les Colons de Catane. Collectez des ressources, construisez des routes, des colonies et des villes, échangez avec les autres joueurs et soyez le premier à atteindre 10 Points de Victoire.",
+      "sections": [
+        {
+          "id": "resources",
+          "title": "Cartes Ressource",
+          "icon": "🌾",
+          "cards": [
+            {
+              "id": "lumber",
+              "type": "resource",
+              "icon": "🌲",
+              "name": "Bois",
+              "count": 19,
+              "description": "Produit par les cases Forêt quand leur chiffre est lancé.",
+              "usages": [
+                "Construire une Route (Bois + Argile)",
+                "Construire une Colonie (Bois + Argile + Laine + Blé)"
+              ]
+            },
+            {
+              "id": "brick",
+              "type": "resource",
+              "icon": "🧱",
+              "name": "Argile",
+              "count": 19,
+              "description": "Produite par les cases Collines quand leur chiffre est lancé.",
+              "usages": [
+                "Construire une Route (Bois + Argile)",
+                "Construire une Colonie (Bois + Argile + Laine + Blé)"
+              ]
+            },
+            {
+              "id": "wool",
+              "type": "resource",
+              "icon": "🐑",
+              "name": "Laine",
+              "count": 19,
+              "description": "Produite par les cases Prairie quand leur chiffre est lancé.",
+              "usages": [
+                "Construire une Colonie (Bois + Argile + Laine + Blé)",
+                "Acheter une Carte Développement (Minerai + Blé + Laine)"
+              ]
+            },
+            {
+              "id": "grain",
+              "type": "resource",
+              "icon": "🌾",
+              "name": "Blé",
+              "count": 19,
+              "description": "Produit par les cases Champs quand leur chiffre est lancé.",
+              "usages": [
+                "Construire une Colonie (Bois + Argile + Laine + Blé)",
+                "Améliorer en Ville (Minerai×3 + Blé×2)",
+                "Acheter une Carte Développement (Minerai + Blé + Laine)"
+              ]
+            },
+            {
+              "id": "ore",
+              "type": "resource",
+              "icon": "⛏️",
+              "name": "Minerai",
+              "count": 19,
+              "description": "Produit par les cases Montagne quand leur chiffre est lancé.",
+              "usages": [
+                "Améliorer en Ville (Minerai×3 + Blé×2)",
+                "Acheter une Carte Développement (Minerai + Blé + Laine)"
+              ]
+            }
+          ]
         },
-        "seafarers": {
-            "name": "Marins",
-            "description": "Explorez un archipel. Construisez des bateaux pour naviguer, découvrez de nouvelles îles avec des champs d'or et colonisez des rivages lointains pour des Points de Victoire supplémentaires.",
-            "sections": [
-                {
-                    "id": "ships",
-                    "title": "Bateaux",
-                    "icon": "⛵",
-                    "cards": [
-                        {
-                            "id": "ship",
-                            "type": "ship",
-                            "icon": "⛵",
-                            "name": "Bateau",
-                            "description": "Les bateaux prolongent vos routes commerciales sur les cases eau. Ils fonctionnent comme des routes sur mer.",
-                            "usages": [
-                                "Coût : 1 Bois + 1 Laine",
-                                "Le dernier bateau d'une route ouverte peut être déplacé une fois par tour",
-                                "Max. 15 bateaux par joueur"
-                            ]
-                        },
-                        {
-                            "id": "gold-field",
-                            "type": "resource",
-                            "icon": "🪙",
-                            "name": "Champ d'Or",
-                            "description": "Case spéciale qui produit une ressource libre. Les joueurs adjacents choisissent n'importe quelle ressource quand son chiffre est lancé.",
-                            "usages": [
-                                "Très précieux — colonisez tôt",
-                                "Chaque colonie adjacente rapporte 1 ressource libre au choix"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "seafarers-special",
-                    "title": "Règles Spéciales",
-                    "icon": "🗺️",
-                    "cards": [
-                        {
-                            "id": "discovery-vp",
-                            "type": "special",
-                            "icon": "🏆",
-                            "name": "Bonus Nouvelle Île",
-                            "description": "Dans la plupart des scénarios Marins, la première colonie sur une nouvelle île rapporte 1 PV supplémentaire.",
-                            "usages": [
-                                "Planifiez des routes de bateaux vers des îles lointaines",
-                                "Plusieurs joueurs peuvent gagner des PV de la même île"
-                            ]
-                        },
-                        {
-                            "id": "pirate",
-                            "type": "special",
-                            "icon": "🏴‍☠️",
-                            "name": "Pirate",
-                            "description": "Le Pirate remplace le Voleur dans Marins. Déplacez-le sur n'importe quelle case maritime pour bloquer les bateaux.",
-                            "usages": [
-                                "Activé en lançant un 7 ou en jouant un Chevalier",
-                                "Bloque le mouvement des bateaux à travers cette case"
-                            ]
-                        }
-                    ]
-                }
-            ]
+        {
+          "id": "development",
+          "title": "Cartes Développement",
+          "icon": "🃏",
+          "cards": [
+            {
+              "id": "knight",
+              "type": "development",
+              "icon": "⚔️",
+              "image": "src/assets/images/basic/development-cards/knight.png",
+              "name": "Chevalier",
+              "count": 14,
+              "description": "Déplacez le Voleur sur n'importe quelle case. Volez une carte ressource à un adversaire adjacent.",
+              "usages": [
+                "Jouer avant de lancer les dés",
+                "Obtenez la Grande Armée en jouant 3 Chevaliers (2 PV)"
+              ]
+            },
+            {
+              "id": "road-building",
+              "type": "development",
+              "icon": "🛤️",
+              "image": "src/assets/images/basic/development-cards/road-building.png",
+              "name": "Construction de Routes",
+              "count": 2,
+              "description": "Posez 2 nouvelles routes gratuitement sur le plateau.",
+              "usages": [
+                "Étendez rapidement votre réseau",
+                "Concourez pour la Plus Longue Route (2 PV avec ≥5 tronçons)"
+              ]
+            },
+            {
+              "id": "year-of-plenty",
+              "type": "development",
+              "icon": "🎁",
+              "image": "src/assets/images/basic/development-cards/year-of-plenty.png",
+              "name": "Année d'Abondance",
+              "count": 2,
+              "description": "Prenez 2 cartes ressource au choix dans la banque.",
+              "usages": [
+                "Obtenez exactement les ressources pour construire",
+                "Complétez une combinaison dont il vous manque un élément"
+              ]
+            },
+            {
+              "id": "monopoly",
+              "type": "development",
+              "icon": "💰",
+              "image": "src/assets/images/basic/development-cards/monopoly.png",
+              "name": "Monopole",
+              "count": 2,
+              "description": "Nommez un type de ressource. Tous les autres joueurs doivent vous donner toutes leurs cartes de ce type.",
+              "usages": [
+                "Désorganiser un adversaire sur le point de construire",
+                "Récupérer une ressource dont vous avez besoin d'urgence"
+              ]
+            },
+            {
+              "id": "chapel",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/chappel.png",
+              "name": "Chapelle",
+              "count": 1,
+              "description": "Vaut 1 Point de Victoire. Gardé secret jusqu'à ce que vous le révéliez pour gagner.",
+              "usages": [
+                "Compte vers les 10 PV pour la victoire",
+                "Révélez tous à la fois pour surprendre les adversaires"
+              ]
+            },
+            {
+              "id": "great-hall",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/great-hall.png",
+              "name": "Grande Salle",
+              "count": 1,
+              "description": "Vaut 1 Point de Victoire. Gardé secret jusqu'à ce que vous le révéliez pour gagner.",
+              "usages": [
+                "Compte vers les 10 PV pour la victoire",
+                "Révélez tous à la fois pour surprendre les adversaires"
+              ]
+            },
+            {
+              "id": "library",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/library.png",
+              "name": "Bibliothèque",
+              "count": 1,
+              "description": "Vaut 1 Point de Victoire. Gardé secret jusqu'à ce que vous le révéliez pour gagner.",
+              "usages": [
+                "Compte vers les 10 PV pour la victoire",
+                "Révélez tous à la fois pour surprendre les adversaires"
+              ]
+            },
+            {
+              "id": "market",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/market.png",
+              "name": "Marché",
+              "count": 1,
+              "description": "Vaut 1 Point de Victoire. Gardé secret jusqu'à ce que vous le révéliez pour gagner.",
+              "usages": [
+                "Compte vers les 10 PV pour la victoire",
+                "Révélez tous à la fois pour surprendre les adversaires"
+              ]
+            },
+            {
+              "id": "university",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/university.png",
+              "name": "Université",
+              "count": 1,
+              "description": "Vaut 1 Point de Victoire. Gardé secret jusqu'à ce que vous le révéliez pour gagner.",
+              "usages": [
+                "Compte vers les 10 PV pour la victoire",
+                "Révélez tous à la fois pour surprendre les adversaires"
+              ]
+            }
+          ]
         },
-        "cities-knights": {
-            "name": "Villes & Chevaliers",
-            "description": "Une expérience stratégique plus profonde. Les marchandises remplacent certaines ressources, les améliorations de ville débloquent des capacités puissantes et les Barbares menacent vos villes chaque tour.",
-            "sections": [
-                {
-                    "id": "commodities",
-                    "title": "Cartes Marchandise",
-                    "icon": "📦",
-                    "cards": [
-                        {
-                            "id": "cloth",
-                            "type": "commodity",
-                            "icon": "🧵",
-                            "name": "Tissu",
-                            "description": "Marchandise produite par les villes améliorées sur Prairie. Utilisée pour la colonne Commerce.",
-                            "usages": [
-                                "Produit par les villes sur cases Prairie",
-                                "Investissez dans les améliorations Commerce"
-                            ]
-                        },
-                        {
-                            "id": "coin",
-                            "type": "commodity",
-                            "icon": "🪙",
-                            "name": "Pièce",
-                            "description": "Marchandise produite par les villes améliorées sur Montagne. Utilisée pour la colonne Science.",
-                            "usages": [
-                                "Produit par les villes sur cases Montagne",
-                                "Investissez dans les améliorations Science"
-                            ]
-                        },
-                        {
-                            "id": "paper",
-                            "type": "commodity",
-                            "icon": "📜",
-                            "name": "Papier",
-                            "description": "Marchandise produite par les villes améliorées sur Forêt. Utilisée pour la colonne Politique.",
-                            "usages": [
-                                "Produit par les villes sur cases Forêt",
-                                "Investissez dans les améliorations Politique"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "progress-cards",
-                    "title": "Cartes Progrès (exemples)",
-                    "icon": "📋",
-                    "cards": [
-                        {
-                            "id": "crane",
-                            "type": "progress",
-                            "icon": "🏗️",
-                            "name": "Grue (Science)",
-                            "description": "Ce tour, vous pouvez construire une amélioration de ville pour 1 marchandise de moins.",
-                            "usages": [
-                                "Économisez une marchandise lors d'une amélioration"
-                            ]
-                        },
-                        {
-                            "id": "merchant",
-                            "type": "progress",
-                            "icon": "🧑‍💼",
-                            "name": "Marchand (Commerce)",
-                            "description": "Placez le Marchand sur une case de terrain. Vous échangez cette ressource à 2:1 jusqu'à ce qu'un autre joueur le prenne. Vaut aussi 1 PV.",
-                            "usages": [
-                                "Contrôlez le taux d'échange d'une ressource clé",
-                                "Vaut 1 PV tant que vous le détenez"
-                            ]
-                        },
-                        {
-                            "id": "spy",
-                            "type": "progress",
-                            "icon": "🕵️",
-                            "name": "Espion (Politique)",
-                            "description": "Volez une carte Progrès au hasard dans la main d'un adversaire.",
-                            "usages": [
-                                "Désorganisez les adversaires et gagnez une carte utile"
-                            ]
-                        },
-                        {
-                            "id": "engineer",
-                            "type": "progress",
-                            "icon": "🔧",
-                            "name": "Ingénieur (Science)",
-                            "description": "Construisez gratuitement un rempart de ville.",
-                            "usages": [
-                                "Protégez une ville des Barbares sans dépenser de ressources"
-                            ]
-                        }
-                    ]
-                },
-                {
-                    "id": "barbarians",
-                    "title": "Barbares",
-                    "icon": "⚔️",
-                    "cards": [
-                        {
-                            "id": "barbarian-track",
-                            "type": "special",
-                            "icon": "🧟",
-                            "name": "Attaque Barbare",
-                            "description": "Chaque fois qu'un bateau est lancé, les Barbares avancent. Quand ils atteignent Catane, une bataille est résolue. Si les défenseurs perdent, le joueur avec le moins de chevaliers perd une ville.",
-                            "usages": [
-                                "Construisez et activez des Chevaliers pour vous défendre",
-                                "Les remparts protègent une ville de la rétrogradation"
-                            ]
-                        }
-                    ]
-                }
-            ]
+        {
+          "id": "special",
+          "title": "Cartes Spéciales",
+          "icon": "🏆",
+          "cards": [
+            {
+              "id": "longest-road",
+              "type": "special",
+              "icon": "🛣️",
+              "name": "Plus Longue Route",
+              "description": "Attribuée au premier joueur avec une route continue de 5+ tronçons. Vaut 2 Points de Victoire. Peut être volée.",
+              "usages": [
+                "Construisez des routes agressivement",
+                "Interrompez la route d'un adversaire avec une colonie"
+              ]
+            },
+            {
+              "id": "largest-army",
+              "type": "special",
+              "icon": "🪖",
+              "name": "Grande Armée",
+              "description": "Attribuée au premier joueur qui joue 3 Chevaliers. Vaut 2 Points de Victoire. Peut être volée.",
+              "usages": [
+                "Jouez des Chevaliers pour contrôler le Voleur et gagner 2 PV",
+                "Protégez des cases clés du Voleur"
+              ]
+            }
+          ]
         },
-        "traders-barbarians": {
-            "name": "Marchands & Barbares",
-            "description": "Une collection de cinq scénarios et variantes : routes commerciales, caravanes, invasions barbares et plus encore.",
-            "sections": [
-                {
-                    "id": "trade-routes",
-                    "title": "Cartes Route Commerciale",
-                    "icon": "🚗",
-                    "cards": [
-                        {
-                            "id": "caravan",
-                            "type": "trade",
-                            "icon": "🐪",
-                            "name": "Caravane",
-                            "description": "Les caravanes transportent des marchandises le long des routes. Livrer des marchandises au village ami rapporte des PV.",
-                            "usages": [
-                                "Déplacez les caravanes jusqu'à 3 tronçons de route par tour",
-                                "Gagnez 1 PV par jeton de marchandise livré"
-                            ]
-                        },
-                        {
-                            "id": "gold",
-                            "type": "trade",
-                            "icon": "🪙",
-                            "name": "Jeton Monnaie d'Or",
-                            "description": "Gagné en complétant des routes commerciales. Peut être utilisé comme n'importe quel type de ressource.",
-                            "usages": [
-                                "Dépensez comme n'importe quelle ressource",
-                                "Échangez contre des PV au village ami"
-                            ]
-                        }
-                    ]
-                }
-            ]
-        },
-        "explorers-pirates": {
-            "name": "Explorateurs & Pirates",
-            "description": "Partez en mer vers des eaux inconnues. Construisez bateaux et ports, accomplissez des missions comme le commerce d'épices et colonisez de nouvelles terres.",
-            "sections": [
-                {
-                    "id": "missions",
-                    "title": "Tuiles Mission",
-                    "icon": "🎯",
-                    "cards": [
-                        {
-                            "id": "spice-haul",
-                            "type": "mission",
-                            "icon": "🌶️",
-                            "name": "Cargaison d'Épices",
-                            "description": "Naviguez jusqu'à une île aux épices lointaine et rapportez la cargaison pour des PV.",
-                            "usages": [
-                                "Chaque cargaison complétée rapporte 1 PV",
-                                "Vous devez aller et revenir de l'île aux épices"
-                            ]
-                        },
-                        {
-                            "id": "fish-camp",
-                            "type": "mission",
-                            "icon": "🐟",
-                            "name": "Camp de Pêche",
-                            "description": "Établissez un camp de pêche sur une côte découverte pour obtenir des jetons de poisson chaque round.",
-                            "usages": [
-                                "Les jetons de poisson peuvent être échangés contre des ressources",
-                                "Positionnez-vous près des cases côtières avec de bons chiffres"
-                            ]
-                        },
-                        {
-                            "id": "pirate-lair",
-                            "type": "mission",
-                            "icon": "🏴‍☠️",
-                            "name": "Repaire Pirate",
-                            "description": "Découvrez et détruisez des repaires pirates dispersés aux confins. Chaque repaire éliminé rapporte 1 PV.",
-                            "usages": [
-                                "Atteignez le repaire avec un bateau pour l'éliminer",
-                                "Rapporte 1 PV immédiatement à la découverte"
-                            ]
-                        }
-                    ]
-                }
-            ]
+        {
+          "id": "building-costs",
+          "title": "Coûts de Construction",
+          "icon": "🔨",
+          "cards": [
+            {
+              "id": "road",
+              "type": "resource",
+              "icon": "🛤️",
+              "name": "Route",
+              "description": "Relie vos colonies et villes. Doit être adjacente à votre route, colonie ou ville existante.",
+              "usages": [
+                "Coût : 1 Bois + 1 Argile",
+                "Max. 15 routes par joueur",
+                "Nécessaire avant de s'installer en un nouveau lieu"
+              ]
+            },
+            {
+              "id": "settlement",
+              "type": "resource",
+              "icon": "🏠",
+              "name": "Colonie",
+              "description": "Vaut 1 Point de Victoire. Produit 1 carte ressource de chaque case adjacente quand son chiffre est lancé.",
+              "usages": [
+                "Coût : 1 Bois + 1 Argile + 1 Laine + 1 Blé",
+                "Max. 5 colonies par joueur",
+                "Au moins 2 intersections de toute autre colonie/ville"
+              ]
+            },
+            {
+              "id": "city",
+              "type": "resource",
+              "icon": "🏙️",
+              "name": "Ville",
+              "description": "Vaut 2 Points de Victoire. Produit 2 cartes ressource par case adjacente. Remplace une colonie.",
+              "usages": [
+                "Coût : 3 Minerai + 2 Blé",
+                "Max. 4 villes par joueur",
+                "Améliore toute colonie existante"
+              ]
+            },
+            {
+              "id": "dev-card",
+              "type": "development",
+              "icon": "🃏",
+              "name": "Carte Développement",
+              "description": "Piochez la carte du dessus du paquet de développement. Ne peut pas être jouée le tour même de l'achat.",
+              "usages": [
+                "Coût : 1 Minerai + 1 Blé + 1 Laine",
+                "Max. 25 cartes dans le paquet"
+              ]
+            }
+          ]
         }
+      ]
+    },
+    "seafarers": {
+      "name": "Marins",
+      "description": "Explorez un archipel. Construisez des bateaux pour naviguer, découvrez de nouvelles îles avec des champs d'or et colonisez des rivages lointains pour des Points de Victoire supplémentaires.",
+      "sections": [
+        {
+          "id": "ships",
+          "title": "Bateaux",
+          "icon": "⛵",
+          "cards": [
+            {
+              "id": "ship",
+              "type": "ship",
+              "icon": "⛵",
+              "name": "Bateau",
+              "description": "Les bateaux prolongent vos routes commerciales sur les cases eau. Ils fonctionnent comme des routes sur mer.",
+              "usages": [
+                "Coût : 1 Bois + 1 Laine",
+                "Le dernier bateau d'une route ouverte peut être déplacé une fois par tour",
+                "Max. 15 bateaux par joueur"
+              ]
+            },
+            {
+              "id": "gold-field",
+              "type": "resource",
+              "icon": "🪙",
+              "name": "Champ d'Or",
+              "description": "Case spéciale qui produit une ressource libre. Les joueurs adjacents choisissent n'importe quelle ressource quand son chiffre est lancé.",
+              "usages": [
+                "Très précieux — colonisez tôt",
+                "Chaque colonie adjacente rapporte 1 ressource libre au choix"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "seafarers-special",
+          "title": "Règles Spéciales",
+          "icon": "🗺️",
+          "cards": [
+            {
+              "id": "discovery-vp",
+              "type": "special",
+              "icon": "🏆",
+              "name": "Bonus Nouvelle Île",
+              "description": "Dans la plupart des scénarios Marins, la première colonie sur une nouvelle île rapporte 1 PV supplémentaire.",
+              "usages": [
+                "Planifiez des routes de bateaux vers des îles lointaines",
+                "Plusieurs joueurs peuvent gagner des PV de la même île"
+              ]
+            },
+            {
+              "id": "pirate",
+              "type": "special",
+              "icon": "🏴‍☠️",
+              "name": "Pirate",
+              "description": "Le Pirate remplace le Voleur dans Marins. Déplacez-le sur n'importe quelle case maritime pour bloquer les bateaux.",
+              "usages": [
+                "Activé en lançant un 7 ou en jouant un Chevalier",
+                "Bloque le mouvement des bateaux à travers cette case"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "cities-knights": {
+      "name": "Villes & Chevaliers",
+      "description": "Une expérience stratégique plus profonde. Les marchandises remplacent certaines ressources, les améliorations de ville débloquent des capacités puissantes et les Barbares menacent vos villes chaque tour.",
+      "sections": [
+        {
+          "id": "commodities",
+          "title": "Cartes Marchandise",
+          "icon": "📦",
+          "cards": [
+            {
+              "id": "cloth",
+              "type": "commodity",
+              "icon": "🧵",
+              "name": "Tissu",
+              "description": "Marchandise produite par les villes améliorées sur Prairie. Utilisée pour la colonne Commerce.",
+              "usages": [
+                "Produit par les villes sur cases Prairie",
+                "Investissez dans les améliorations Commerce"
+              ]
+            },
+            {
+              "id": "coin",
+              "type": "commodity",
+              "icon": "🪙",
+              "name": "Pièce",
+              "description": "Marchandise produite par les villes améliorées sur Montagne. Utilisée pour la colonne Science.",
+              "usages": [
+                "Produit par les villes sur cases Montagne",
+                "Investissez dans les améliorations Science"
+              ]
+            },
+            {
+              "id": "paper",
+              "type": "commodity",
+              "icon": "📜",
+              "name": "Papier",
+              "description": "Marchandise produite par les villes améliorées sur Forêt. Utilisée pour la colonne Politique.",
+              "usages": [
+                "Produit par les villes sur cases Forêt",
+                "Investissez dans les améliorations Politique"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "progress-cards",
+          "title": "Cartes Progrès (exemples)",
+          "icon": "📋",
+          "cards": [
+            {
+              "id": "crane",
+              "type": "progress",
+              "icon": "🏗️",
+              "name": "Grue (Science)",
+              "description": "Ce tour, vous pouvez construire une amélioration de ville pour 1 marchandise de moins.",
+              "usages": ["Économisez une marchandise lors d'une amélioration"]
+            },
+            {
+              "id": "merchant",
+              "type": "progress",
+              "icon": "🧑‍💼",
+              "name": "Marchand (Commerce)",
+              "description": "Placez le Marchand sur une case de terrain. Vous échangez cette ressource à 2:1 jusqu'à ce qu'un autre joueur le prenne. Vaut aussi 1 PV.",
+              "usages": [
+                "Contrôlez le taux d'échange d'une ressource clé",
+                "Vaut 1 PV tant que vous le détenez"
+              ]
+            },
+            {
+              "id": "spy",
+              "type": "progress",
+              "icon": "🕵️",
+              "name": "Espion (Politique)",
+              "description": "Volez une carte Progrès au hasard dans la main d'un adversaire.",
+              "usages": [
+                "Désorganisez les adversaires et gagnez une carte utile"
+              ]
+            },
+            {
+              "id": "engineer",
+              "type": "progress",
+              "icon": "🔧",
+              "name": "Ingénieur (Science)",
+              "description": "Construisez gratuitement un rempart de ville.",
+              "usages": [
+                "Protégez une ville des Barbares sans dépenser de ressources"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "barbarians",
+          "title": "Barbares",
+          "icon": "⚔️",
+          "cards": [
+            {
+              "id": "barbarian-track",
+              "type": "special",
+              "icon": "🧟",
+              "name": "Attaque Barbare",
+              "description": "Chaque fois qu'un bateau est lancé, les Barbares avancent. Quand ils atteignent Catane, une bataille est résolue. Si les défenseurs perdent, le joueur avec le moins de chevaliers perd une ville.",
+              "usages": [
+                "Construisez et activez des Chevaliers pour vous défendre",
+                "Les remparts protègent une ville de la rétrogradation"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "traders-barbarians": {
+      "name": "Marchands & Barbares",
+      "description": "Une collection de cinq scénarios et variantes : routes commerciales, caravanes, invasions barbares et plus encore.",
+      "sections": [
+        {
+          "id": "trade-routes",
+          "title": "Cartes Route Commerciale",
+          "icon": "🚗",
+          "cards": [
+            {
+              "id": "caravan",
+              "type": "trade",
+              "icon": "🐪",
+              "name": "Caravane",
+              "description": "Les caravanes transportent des marchandises le long des routes. Livrer des marchandises au village ami rapporte des PV.",
+              "usages": [
+                "Déplacez les caravanes jusqu'à 3 tronçons de route par tour",
+                "Gagnez 1 PV par jeton de marchandise livré"
+              ]
+            },
+            {
+              "id": "gold",
+              "type": "trade",
+              "icon": "🪙",
+              "name": "Jeton Monnaie d'Or",
+              "description": "Gagné en complétant des routes commerciales. Peut être utilisé comme n'importe quel type de ressource.",
+              "usages": [
+                "Dépensez comme n'importe quelle ressource",
+                "Échangez contre des PV au village ami"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "explorers-pirates": {
+      "name": "Explorateurs & Pirates",
+      "description": "Partez en mer vers des eaux inconnues. Construisez bateaux et ports, accomplissez des missions comme le commerce d'épices et colonisez de nouvelles terres.",
+      "sections": [
+        {
+          "id": "missions",
+          "title": "Tuiles Mission",
+          "icon": "🎯",
+          "cards": [
+            {
+              "id": "spice-haul",
+              "type": "mission",
+              "icon": "🌶️",
+              "name": "Cargaison d'Épices",
+              "description": "Naviguez jusqu'à une île aux épices lointaine et rapportez la cargaison pour des PV.",
+              "usages": [
+                "Chaque cargaison complétée rapporte 1 PV",
+                "Vous devez aller et revenir de l'île aux épices"
+              ]
+            },
+            {
+              "id": "fish-camp",
+              "type": "mission",
+              "icon": "🐟",
+              "name": "Camp de Pêche",
+              "description": "Établissez un camp de pêche sur une côte découverte pour obtenir des jetons de poisson chaque round.",
+              "usages": [
+                "Les jetons de poisson peuvent être échangés contre des ressources",
+                "Positionnez-vous près des cases côtières avec de bons chiffres"
+              ]
+            },
+            {
+              "id": "pirate-lair",
+              "type": "mission",
+              "icon": "🏴‍☠️",
+              "name": "Repaire Pirate",
+              "description": "Découvrez et détruisez des repaires pirates dispersés aux confins. Chaque repaire éliminé rapporte 1 PV.",
+              "usages": [
+                "Atteignez le repaire avec un bateau pour l'éliminer",
+                "Rapporte 1 PV immédiatement à la découverte"
+              ]
+            }
+          ]
+        }
+      ]
     }
+  }
 }

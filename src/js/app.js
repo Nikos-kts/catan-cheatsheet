@@ -1,198 +1,239 @@
 // ── State ──────────────────────────────────────────────────────────────────
 const state = {
-    lang: 'en',
-    game: 'base',
-    data: null,
+  lang: "en",
+  game: "base",
+  data: null,
 };
 
-const SUPPORTED_LANGS = ['en', 'de', 'es', 'fr', 'el'];
-const DATA_PATH = 'src/data/';
+// ── Game → cover image map ─────────────────────────────────────────────────
+const GAME_IMAGE = {
+  base: "src/assets/images/basic/catan.png",
+  seafarers: "src/assets/images/seafarers/catan-seafarers.png",
+  "cities-knights":
+    "src/assets/images/cities-and-knights/catan-cities-and-knights.png",
+  "traders-barbarians":
+    "src/assets/images/traders-and-barbarians/catan-traders-and-barbarians.png",
+  "explorers-pirates":
+    "src/assets/images/explorers-and-pirates/catan-explorers-and-pirates.png",
+};
+
+const SUPPORTED_LANGS = ["en", "de", "es", "fr", "el"];
+const DATA_PATH = "src/data/";
 
 // ── Boot ───────────────────────────────────────────────────────────────────
-document.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('catan-lang');
-    const savedGame = localStorage.getItem('catan-game');
+document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("catan-lang");
+  const savedGame = localStorage.getItem("catan-game");
 
-    const langSelect = document.getElementById('lang-select');
-    if (savedLang && SUPPORTED_LANGS.includes(savedLang)) {
-        langSelect.value = savedLang;
-        state.lang = savedLang;
-    }
+  const langSelect = document.getElementById("lang-select");
+  if (savedLang && SUPPORTED_LANGS.includes(savedLang)) {
+    langSelect.value = savedLang;
+    state.lang = savedLang;
+  }
 
-    langSelect.addEventListener('change', (e) => {
-        state.lang = e.target.value;
-        localStorage.setItem('catan-lang', state.lang);
-        loadData();
-    });
-
-    document.getElementById('game-select').addEventListener('change', (e) => {
-        state.game = e.target.value;
-        localStorage.setItem('catan-game', state.game);
-        renderGame();
-    });
-
-    if (savedGame) state.game = savedGame;
-
+  langSelect.addEventListener("change", (e) => {
+    state.lang = e.target.value;
+    localStorage.setItem("catan-lang", state.lang);
     loadData();
+  });
+
+  document.getElementById("game-select").addEventListener("change", (e) => {
+    state.game = e.target.value;
+    localStorage.setItem("catan-game", state.game);
+    renderGame();
+  });
+
+  if (savedGame) state.game = savedGame;
+
+  loadData();
 });
 
 // ── Data Loading ───────────────────────────────────────────────────────────
 async function loadData() {
-    showLoading(true);
-    const url = `${DATA_PATH}${state.lang}.json`;
+  showLoading(true);
+  const url = `${DATA_PATH}${state.lang}.json`;
 
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    state.data = await res.json();
+  } catch {
+    // Fallback to English
     try {
-        const res = await fetch(url);
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        state.data = await res.json();
-    } catch {
-        // Fallback to English
-        try {
-            const res = await fetch(`${DATA_PATH}en.json`);
-            state.data = await res.json();
-        } catch (err) {
-            showError('Could not load cheatsheet data.');
-            return;
-        }
+      const res = await fetch(`${DATA_PATH}en.json`);
+      state.data = await res.json();
+    } catch (err) {
+      showError("Could not load cheatsheet data.");
+      return;
     }
+  }
 
-    populateGameSelector();
-    renderUI();
-    showLoading(false);
+  populateGameSelector();
+  renderUI();
+  showLoading(false);
 }
 
 // ── UI Population ──────────────────────────────────────────────────────────
 function populateGameSelector() {
-    const sel = document.getElementById('game-select');
-    const ui = state.data.ui;
-    const prev = state.game;
+  const sel = document.getElementById("game-select");
+  const ui = state.data.ui;
+  const prev = state.game;
 
-    sel.innerHTML = '';
-    Object.entries(state.data.games).forEach(([id, game]) => {
-        const opt = document.createElement('option');
-        opt.value = id;
-        opt.textContent = game.name;
-        sel.appendChild(opt);
-    });
+  sel.innerHTML = "";
+  Object.entries(state.data.games).forEach(([id, game]) => {
+    const opt = document.createElement("option");
+    opt.value = id;
+    opt.textContent = game.name;
+    sel.appendChild(opt);
+  });
 
-    // Restore previously selected game if available
-    if (state.data.games[prev]) {
-        sel.value = prev;
-        state.game = prev;
-    } else {
-        state.game = sel.value;
-    }
+  // Restore previously selected game if available
+  if (state.data.games[prev]) {
+    sel.value = prev;
+    state.game = prev;
+  } else {
+    state.game = sel.value;
+  }
 
-    // Update UI text labels
-    document.getElementById('label-game').textContent = ui.labelGame;
-    document.getElementById('label-lang').textContent = ui.labelLang;
-    document.getElementById('app-subtitle').textContent = ui.subtitle;
-    document.getElementById('footer-text').textContent = ui.footer;
+  // Update UI text labels
+  document.getElementById("label-game").textContent = ui.labelGame;
+  document.getElementById("label-lang").textContent = ui.labelLang;
+  document.getElementById("app-subtitle").textContent = ui.subtitle;
+  document.getElementById("footer-text").textContent = ui.footer;
 }
 
 function renderUI() {
-    renderGame();
+  renderGame();
+}
+
+function updateGameBanner(gameId) {
+  const wrap = document.getElementById("game-banner-wrap");
+  const img = document.getElementById("game-banner");
+  const src = GAME_IMAGE[gameId] || GAME_IMAGE["base"];
+
+  img.onerror = () => {
+    wrap.style.display = "none";
+  };
+  img.onload = () => {
+    wrap.style.display = "";
+  };
+  img.alt = gameId;
+  img.src = src;
 }
 
 function renderGame() {
-    const game = state.data.games[state.game];
-    if (!game) return;
+  const game = state.data.games[state.game];
+  if (!game) return;
 
-    const main = document.getElementById('content');
-    main.innerHTML = '';
+  updateGameBanner(state.game);
 
-    // Game description
-    if (game.description) {
-        const desc = document.createElement('div');
-        desc.className = 'game-description';
-        desc.textContent = game.description;
-        main.appendChild(desc);
-    }
+  const main = document.getElementById("content");
+  main.innerHTML = "";
 
-    // Sections
-    game.sections.forEach((section) => {
-        const sectionEl = document.createElement('section');
-        sectionEl.className = 'section';
+  // Game description
+  if (game.description) {
+    const desc = document.createElement("div");
+    desc.className = "game-description";
+    desc.textContent = game.description;
+    main.appendChild(desc);
+  }
 
-        const title = document.createElement('h2');
-        title.className = 'section-title';
-        title.innerHTML = `${section.icon || ''} ${section.title}`;
-        sectionEl.appendChild(title);
+  // Sections
+  game.sections.forEach((section) => {
+    const sectionEl = document.createElement("section");
+    sectionEl.className = "section";
 
-        const grid = document.createElement('div');
-        grid.className = 'card-grid';
+    const title = document.createElement("h2");
+    title.className = "section-title";
+    title.innerHTML = `${section.icon || ""} ${section.title}`;
+    sectionEl.appendChild(title);
 
-        section.cards.forEach((card) => {
-            grid.appendChild(buildCard(card));
-        });
+    const grid = document.createElement("div");
+    grid.className = "card-grid";
 
-        sectionEl.appendChild(grid);
-        main.appendChild(sectionEl);
+    section.cards.forEach((card) => {
+      grid.appendChild(buildCard(card));
     });
+
+    sectionEl.appendChild(grid);
+    main.appendChild(sectionEl);
+  });
 }
 
 // ── Card Builder ───────────────────────────────────────────────────────────
 function buildCard(card) {
-    const el = document.createElement('div');
-    el.className = `card ${card.type || ''}`;
+  const el = document.createElement("div");
+  el.className = `card ${card.type || ""}`;
 
-    const header = document.createElement('div');
-    header.className = 'card-header';
+  if (card.image) {
+    const wrap = document.createElement("div");
+    wrap.className = "card-thumbnail-wrap";
+    const img = document.createElement("img");
+    img.src = card.image;
+    img.alt = card.name;
+    img.className = "card-thumbnail";
+    img.loading = "lazy";
+    wrap.appendChild(img);
+    el.appendChild(wrap);
+  }
 
-    const icon = document.createElement('span');
-    icon.className = 'card-icon';
-    icon.textContent = card.icon || '🃏';
+  const header = document.createElement("div");
+  header.className = "card-header";
 
-    const name = document.createElement('span');
-    name.className = 'card-name';
-    name.textContent = card.name;
+  const icon = document.createElement("span");
+  icon.className = "card-icon";
+  icon.textContent = card.icon || "🃏";
 
-    header.appendChild(icon);
-    header.appendChild(name);
+  const name = document.createElement("span");
+  name.className = "card-name";
+  name.textContent = card.name;
 
-    if (card.count !== undefined) {
-        const count = document.createElement('span');
-        count.className = 'card-count';
-        count.textContent = `×${card.count}`;
-        header.appendChild(count);
-    }
+  header.appendChild(icon);
+  header.appendChild(name);
 
-    el.appendChild(header);
+  if (card.count !== undefined) {
+    const count = document.createElement("span");
+    count.className = "card-count";
+    count.textContent = `×${card.count}`;
+    header.appendChild(count);
+  }
 
-    if (card.description) {
-        const desc = document.createElement('p');
-        desc.className = 'card-description';
-        desc.textContent = card.description;
-        el.appendChild(desc);
-    }
+  el.appendChild(header);
 
-    if (card.usages && card.usages.length) {
-        const ul = document.createElement('ul');
-        ul.className = 'card-usages';
-        card.usages.forEach((u) => {
-            const li = document.createElement('li');
-            li.textContent = u;
-            ul.appendChild(li);
-        });
-        el.appendChild(ul);
-    }
+  if (card.description) {
+    const desc = document.createElement("p");
+    desc.className = "card-description";
+    desc.textContent = card.description;
+    el.appendChild(desc);
+  }
 
-    return el;
+  if (card.usages && card.usages.length) {
+    const ul = document.createElement("ul");
+    ul.className = "card-usages";
+    card.usages.forEach((u) => {
+      const li = document.createElement("li");
+      li.textContent = u;
+      ul.appendChild(li);
+    });
+    el.appendChild(ul);
+  }
+
+  return el;
 }
 
 // ── Helpers ────────────────────────────────────────────────────────────────
 function showLoading(visible) {
-    let el = document.getElementById('loading-indicator');
-    if (!el) {
-        el = document.createElement('div');
-        el.id = 'loading-indicator';
-        el.className = 'loading';
-        document.getElementById('content').prepend(el);
-    }
-    el.style.display = visible ? 'block' : 'none';
+  let el = document.getElementById("loading-indicator");
+  if (!el) {
+    el = document.createElement("div");
+    el.id = "loading-indicator";
+    el.className = "loading";
+    document.getElementById("content").prepend(el);
+  }
+  el.style.display = visible ? "block" : "none";
 }
 
 function showError(msg) {
-    const main = document.getElementById('content');
-    main.innerHTML = `<div class="loading" style="color:#c0392b;">${msg}</div>`;
+  const main = document.getElementById("content");
+  main.innerHTML = `<div class="loading" style="color:#c0392b;">${msg}</div>`;
 }
