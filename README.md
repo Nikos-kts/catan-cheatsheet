@@ -1,4 +1,4 @@
-# 🏝️ Catan Cheatsheet
+# [🏝️ Catan Cheatsheet](./docs/index.html)
 
 A simple, friendly browser-based reference for Catan card explanations — supports multiple games and languages.
 
