@@ -221,7 +221,15 @@ function renderCards(game) {
   if (game.description) {
     const desc = document.createElement("div");
     desc.className = "game-description";
-    desc.textContent = game.description;
+    if (game.descriptionTitle) {
+      const title = document.createElement("div");
+      title.className = "game-description-title";
+      title.textContent = game.descriptionTitle;
+      desc.appendChild(title);
+    }
+    const text = document.createElement("p");
+    text.textContent = game.description;
+    desc.appendChild(text);
     main.appendChild(desc);
   }
 
@@ -289,7 +297,15 @@ function renderGameplay(game) {
   if (game.description) {
     const desc = document.createElement("div");
     desc.className = "game-description";
-    desc.textContent = game.description;
+    if (game.descriptionTitle) {
+      const title = document.createElement("div");
+      title.className = "game-description-title";
+      title.textContent = game.descriptionTitle;
+      desc.appendChild(title);
+    }
+    const text = document.createElement("p");
+    text.textContent = game.description;
+    desc.appendChild(text);
     main.appendChild(desc);
   }
 
@@ -423,6 +439,19 @@ function renderRuleSection(parent, title, icon, rules) {
         t.className = "rule-title";
         t.textContent = rule.title;
         li.appendChild(t);
+      }
+      if (rule.images && rule.images.length) {
+        const imgRow = document.createElement("div");
+        imgRow.className = "rule-images";
+        rule.images.forEach((img) => {
+          const imgEl = document.createElement("img");
+          imgEl.src = img.src;
+          imgEl.alt = img.alt || "";
+          imgEl.className = "rule-inline-img";
+          imgEl.loading = "lazy";
+          imgRow.appendChild(imgEl);
+        });
+        li.appendChild(imgRow);
       }
       if (rule.detail) {
         const d = document.createElement("div");

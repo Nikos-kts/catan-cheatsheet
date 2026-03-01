@@ -283,14 +283,26 @@ main {
 /* ── Game Description ── */
 .game-description {
   background: var(--card-bg);
-  border-left: 5px solid var(--brick);
+  border-left: 5px solid var(--theme-accent, var(--brick));
   border-radius: var(--radius);
-  padding: 1rem 1.25rem;
+  padding: 1.1rem 1.25rem;
   margin-bottom: 1.75rem;
   box-shadow: var(--shadow);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.93rem;
+  line-height: 1.65;
   color: var(--text-lt);
+}
+
+.game-description-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.game-description p {
+  margin: 0;
 }
 
 /* ── Section ── */
@@ -390,6 +402,10 @@ main {
 
 .card.progress-politics {
   border-top-color: var(--ocean);
+}
+
+.card.city-improvement {
+  border-top-color: #8e44ad;
 }
 
 .card.trade {
@@ -588,6 +604,21 @@ details[open] > .subcategory-summary {
 .rule-item .rule-detail {
   color: var(--text-lt);
   font-size: 0.85rem;
+}
+
+.rule-images {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin: 0.4rem 0;
+}
+
+.rule-inline-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
 .variant-grid {

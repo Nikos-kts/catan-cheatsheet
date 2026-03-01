@@ -18,7 +18,8 @@
   "games": {
     "base": {
       "name": "Catan (Base Game)",
-      "description": "The classic Settlers of Catan. Collect resources, build roads, settlements and cities, trade with other players and be the first to reach 10 Victory Points.",
+      "descriptionTitle": "🏜️ Welcome to the Island of Broken Friendships",
+      "description": "The classic Settlers of Catan — where you'll learn that your closest friends will happily blockade your only road for a single piece of wheat. Collect resources, build roads, settlements and cities, trade with increasingly hostile neighbors, and desperately race to 10 Victory Points before someone drops a Monopoly card on you. Simple rules, infinite grudges.",
       "sections": [
         {
           "id": "resources",
@@ -350,7 +351,8 @@
     },
     "seafarers": {
       "name": "Catan: Seafarers",
-      "description": "Explore an archipelago of islands. Build ships to sail the seas, discover new islands with gold fields, and settle distant shores for bonus Victory Points.",
+      "descriptionTitle": "⛵ Because One Island Wasn't Enough Drama",
+      "description": "Explore an archipelago of islands because apparently ruining friendships on a single landmass wasn't satisfying enough. Build ships to sail the seas, discover new islands with gold fields (that everyone will immediately fight over), and settle distant shores for bonus VP. Now your road-blocking nemesis can follow you across the ocean.",
       "sections": [
         {
           "id": "ships",
@@ -532,7 +534,8 @@
     },
     "cities-knights": {
       "name": "Catan: Cities & Knights",
-      "description": "A deeper strategic experience. Commodities replace some resources, city improvements unlock powerful abilities, and the Barbarians threaten your cities each turn.",
+      "descriptionTitle": "🏰 If base Catan felt cozy. . .",
+      "description": "A deeper strategic experience for people who thought base Catan was too relaxing. Commodities replace some resources (more things to fight over!), city improvements unlock powerful abilities (that your opponents will use against you), and the Barbarians threaten your cities every single turn — because you needed one more thing to worry about. Features 3 decks of progress cards, knights that constantly need feeding, and the joy of watching your undefended city get pillaged. 13 VP to win, infinite regret along the way and the gold standard of “it’s just a game.”",
       "sections": [
         {
           "id": "commodities",
@@ -931,6 +934,49 @@
           ]
         },
         {
+          "id": "city-improvements",
+          "title": "City Improvements",
+          "icon": "🏛️",
+          "cards": [
+            {
+              "id": "science-improvement",
+              "type": "city-improvement",
+              "icon": "🔬",
+              "name": "Science (Coin)",
+              "description": "If you receive no cards during the Production phase, you may take 1 resource card of your choice (except when a 7 is rolled).",
+              "usages": [
+                "Requires level 3 on the Science track",
+                "Commodity used: Coin (from Mountain cities)",
+                "Level 4 earns the Science Metropolis (2 VP)"
+              ]
+            },
+            {
+              "id": "trade-improvement",
+              "type": "city-improvement",
+              "icon": "💰",
+              "name": "Trade (Cloth)",
+              "description": "You may trade commodities at a 2:1 ratio for any resource or other commodity.",
+              "usages": [
+                "Requires level 3 on the Trade track",
+                "Commodity used: Cloth (from Pasture cities)",
+                "Level 4 earns the Trade Metropolis (2 VP)"
+              ]
+            },
+            {
+              "id": "politics-improvement",
+              "type": "city-improvement",
+              "icon": "🏛️",
+              "name": "Politics (Paper)",
+              "description": "You may promote strong knights (level 2) to mighty knights (level 3).",
+              "usages": [
+                "Requires level 3 on the Politics track",
+                "Commodity used: Paper (from Forest cities)",
+                "Level 4 earns the Politics Metropolis (2 VP)"
+              ]
+            }
+          ]
+        },
+        {
           "id": "barbarians",
           "title": "Barbarians",
           "icon": "⚔️",
@@ -938,7 +984,7 @@
             {
               "id": "barbarian-track",
               "type": "special",
-              "icon": "🧟",
+              "icon": "🏴‍☠️",
               "name": "Barbarian Attack",
               "description": "Each turn a ship is rolled, the Barbarian token advances. When it reaches Catan, a battle is resolved. If barbarians win, the player with fewest knights loses a city.",
               "usages": [
@@ -958,12 +1004,22 @@
           "No Largest Army tile.",
           "Each player's second starting piece is a city (not a settlement).",
           "Each player gets a city improvement board with 3 tracks and 3 cubes.",
-          "Robber starts off the board until the first barbarian attack."
+          "🥷 Robber starts off the board until the first barbarian attack."
         ],
         "turnOverview": [
           {
-            "title": "1. Roll Dice + Event Die",
-            "detail": "Production die determines resources. Event die advances barbarians or triggers progress card draws."
+            "title": "1. Roll Dice + Event Dice",
+            "detail": "Production dice determines resources. Event dice advances barbarians or triggers progress card draws.",
+            "images": [
+              {
+                "src": "src/assets/images/common/roll-dice.png",
+                "alt": "Roll Dice"
+              },
+              {
+                "src": "src/assets/images/cities-and-knights/event-dice.png",
+                "alt": "Event Dice"
+              }
+            ]
           },
           {
             "title": "2. Commodities",
@@ -1012,7 +1068,8 @@
     },
     "traders-barbarians": {
       "name": "Catan: Traders & Barbarians",
-      "description": "A collection of five scenarios and variants that add new dimensions to the classic game: trade routes, caravans, barbarian invasions, and more.",
+      "descriptionTitle": "🐫 Five Ways to Complicate a Perfectly Good Board Game",
+      "description": "A collection of five scenarios and variants that add new dimensions to the classic game — because someone at Catan Studio looked at the base game and thought 'needs more camels.' Features trade routes where you deliver goods across the island like an unpaid intern, barbarian invasions that keep you on your toes, and enough variant rules to make your rulebook thicker than a phone book. Perfect for the group that's played base Catan 200 times and needs fresh reasons to argue.",
       "sections": [
         {
           "id": "trade-routes",
@@ -1146,7 +1203,8 @@
     },
     "explorers-pirates": {
       "name": "Catan: Explorers & Pirates",
-      "description": "Set sail to explore unknown waters. Build ships and harbors, complete missions like spice trade or fish hauls, and colonize new lands far from home.",
+      "descriptionTitle": "🏴‍☠️ Catan Goes Full Columbus (Minus the Controversy)",
+      "description": "Set sail to explore unknown waters because sitting on a known island was getting boring. Build ships and harbors, complete missions like spice trade or fish hauls (yes, fish — peak adventure), and colonize new lands far from home. Think of it as Seafarers' ambitious older sibling who studied abroad and won't stop talking about it. More moving pieces, more missions, more 'wait, whose turn is it?' moments.",
       "sections": [
         {
           "id": "missions",
