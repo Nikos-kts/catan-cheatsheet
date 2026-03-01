@@ -459,7 +459,9 @@
             "name": "Auf zu neuen Ufern",
             "vp": "14 SP",
             "description": "Kleine Inseln über das Meer besiedeln.",
-            "details": ["+2 SP für erste Siedlung auf jeder kleinen Insel"]
+            "details": [
+              "+2 SP für erste Siedlung auf jeder kleinen Insel"
+            ]
           },
           {
             "name": "Die vier Inseln",
@@ -526,7 +528,9 @@
             "name": "Neue Welt",
             "vp": "12 SP",
             "description": "Komplett zufälliges Insellayout.",
-            "details": ["+1 SP pro Siedlung auf unerforschter Insel"]
+            "details": [
+              "+1 SP pro Siedlung auf unerforschter Insel"
+            ]
           }
         ]
       }
@@ -759,7 +763,9 @@
                   "name": "Bergbau",
                   "count": 2,
                   "description": "Nimm 2 Erz aus der Bank für jede Siedlung/Stadt neben einem Gebirgsfeld.",
-                  "usages": ["Große Erzquelle bei guter Platzierung"]
+                  "usages": [
+                    "Große Erzquelle bei guter Platzierung"
+                  ]
                 },
                 {
                   "id": "printer",
@@ -769,7 +775,9 @@
                   "name": "Drucker",
                   "count": 2,
                   "description": "Ziehe 2 Fortschrittskarten und behalte 1 davon.",
-                  "usages": ["Kartenvorteil erhalten"]
+                  "usages": [
+                    "Kartenvorteil erhalten"
+                  ]
                 },
                 {
                   "id": "road-building",
@@ -779,7 +787,9 @@
                   "name": "Straßenbau",
                   "count": 2,
                   "description": "Baue sofort 2 Straßen zum Preis von 0 Ressourcen.",
-                  "usages": ["Schnell Straßen zum Blockieren bauen"]
+                  "usages": [
+                    "Schnell Straßen zum Blockieren bauen"
+                  ]
                 },
                 {
                   "id": "smith",
@@ -789,7 +799,9 @@
                   "name": "Schmied",
                   "count": 2,
                   "description": "Zahle 1 Erz: aktiviere einen rekrutierten Ritter sofort.",
-                  "usages": ["Ritter ohne Weizen aktivieren"]
+                  "usages": [
+                    "Ritter ohne Weizen aktivieren"
+                  ]
                 }
               ]
             },
@@ -807,7 +819,9 @@
                   "name": "Bischof",
                   "count": 2,
                   "description": "Zahle eine Ware, um eine gegnerische Fortschrittskarte zu entwerten (zum Ablagestapel).",
-                  "usages": ["Gegnerische Schlüsselaktionen neutralisieren"]
+                  "usages": [
+                    "Gegnerische Schlüsselaktionen neutralisieren"
+                  ]
                 },
                 {
                   "id": "constitution",
@@ -853,7 +867,9 @@
                   "name": "Intrige",
                   "count": 2,
                   "description": "Tausche 1 Karte aus deiner Hand mit 1 Karte aus der Hand eines Gegners (zufällig ausgewählt).",
-                  "usages": ["Handdesorganisation von Gegnern"]
+                  "usages": [
+                    "Handdesorganisation von Gegnern"
+                  ]
                 },
                 {
                   "id": "saboteur",
@@ -863,7 +879,9 @@
                   "name": "Saboteur",
                   "count": 2,
                   "description": "Jeder Gegner mit gleich oder mehr Siegpunkten als du muss die Hälfte seiner Hand (abgerundet) abgeben.",
-                  "usages": ["Führe starken Druck gegen führende Spieler aus"]
+                  "usages": [
+                    "Führe starken Druck gegen führende Spieler aus"
+                  ]
                 },
                 {
                   "id": "spy",
@@ -873,7 +891,9 @@
                   "name": "Spion",
                   "count": 3,
                   "description": "Siehe die Fortschrittskartenhand eines Gegners und stehle eine Karte deiner Wahl.",
-                  "usages": ["Information und mächtige Karten stehlen"]
+                  "usages": [
+                    "Information und mächtige Karten stehlen"
+                  ]
                 },
                 {
                   "id": "warlord",
@@ -883,7 +903,9 @@
                   "name": "Kriegsherr",
                   "count": 2,
                   "description": "Aktiviere alle deine Ritter kostenlos (ohne Weizen+Erz zu zahlen).",
-                  "usages": ["Bereite sofortige Verteidigung vor"]
+                  "usages": [
+                    "Bereite sofortige Verteidigung vor"
+                  ]
                 },
                 {
                   "id": "wedding",
@@ -1096,13 +1118,17 @@
             "name": "Der freundliche Räuber",
             "vp": "Variante",
             "description": "Der Räuber darf nicht auf ein Feld mit Gebäude eines Spielers mit nur 2 SP gestellt werden.",
-            "details": ["Schützt Anfänger vor frühzeitigem Angriff"]
+            "details": [
+              "Schützt Anfänger vor frühzeitigem Angriff"
+            ]
           },
           {
             "name": "Häfen von Catan",
             "vp": "11 SP",
             "description": "Stärkster-Häfen-Plättchen (2 SP) für den Spieler mit den meisten SP in Hafen-Gebäuden.",
-            "details": ["Fördert Hafen-Baustrategie"]
+            "details": [
+              "Fördert Hafen-Baustrategie"
+            ]
           },
           {
             "name": "CATAN Ereigniskarten",
@@ -1282,7 +1308,9 @@
             "name": "Land in Sicht!",
             "vp": "Einführung",
             "description": "Erkundungsgrundlagen lernen.",
-            "details": ["Felder entdecken, Siedlungen auf neuen Inseln bauen"]
+            "details": [
+              "Felder entdecken, Siedlungen auf neuen Inseln bauen"
+            ]
           },
           {
             "name": "Piratenverstecke",

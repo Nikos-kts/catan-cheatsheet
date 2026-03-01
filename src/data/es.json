@@ -459,13 +459,17 @@
             "name": "Rumbo a Nuevas Costas",
             "vp": "14 PV",
             "description": "Colonizar pequeñas islas a través del mar.",
-            "details": ["+2 PV por primer poblado en cada isla pequeña"]
+            "details": [
+              "+2 PV por primer poblado en cada isla pequeña"
+            ]
           },
           {
             "name": "Las Cuatro Islas",
             "vp": "13 PV",
             "description": "Cuatro islas separadas a colonizar.",
-            "details": ["+2 PV por primer poblado en cada isla inexplorada"]
+            "details": [
+              "+2 PV por primer poblado en cada isla inexplorada"
+            ]
           },
           {
             "name": "Las Islas de Niebla",
@@ -480,7 +484,9 @@
             "name": "A Través del Desierto",
             "vp": "14 PV",
             "description": "Un desierto divide la isla en regiones.",
-            "details": ["+2 PV por primer poblado en cada región inexplorada"]
+            "details": [
+              "+2 PV por primer poblado en cada región inexplorada"
+            ]
           },
           {
             "name": "La Tribu Olvidada",
@@ -522,7 +528,9 @@
             "name": "Nuevo Mundo",
             "vp": "12 PV",
             "description": "Disposición de islas totalmente aleatoria.",
-            "details": ["+1 PV por poblado en isla inexplorada"]
+            "details": [
+              "+1 PV por poblado en isla inexplorada"
+            ]
           }
         ]
       }
@@ -755,7 +763,9 @@
                   "name": "Minería",
                   "count": 2,
                   "description": "Toma 2 Minerales del banco por cada asentamiento/ciudad adyacente a una montaña.",
-                  "usages": ["Fuente grande de Minerales"]
+                  "usages": [
+                    "Fuente grande de Minerales"
+                  ]
                 },
                 {
                   "id": "printer",
@@ -765,7 +775,9 @@
                   "name": "Imprenta",
                   "count": 2,
                   "description": "Roba 2 cartas de progreso y guarda 1.",
-                  "usages": ["Ventaja de cartas"]
+                  "usages": [
+                    "Ventaja de cartas"
+                  ]
                 },
                 {
                   "id": "road-building",
@@ -775,7 +787,9 @@
                   "name": "Construcción de Caminos",
                   "count": 2,
                   "description": "Construye 2 carreteras gratis inmediatamente.",
-                  "usages": ["Rápido bloqueo de rutas"]
+                  "usages": [
+                    "Rápido bloqueo de rutas"
+                  ]
                 },
                 {
                   "id": "smith",
@@ -785,7 +799,9 @@
                   "name": "Herrero",
                   "count": 2,
                   "description": "Paga 1 Mineral: activa un caballero reclutado inmediatamente.",
-                  "usages": ["Activar caballeros sin Trigo"]
+                  "usages": [
+                    "Activar caballeros sin Trigo"
+                  ]
                 }
               ]
             },
@@ -803,7 +819,9 @@
                   "name": "Obispo",
                   "count": 2,
                   "description": "Paga 1 mercancía para descartar una carta de progreso de un oponente.",
-                  "usages": ["Neutralizar cartas clave de rivales"]
+                  "usages": [
+                    "Neutralizar cartas clave de rivales"
+                  ]
                 },
                 {
                   "id": "constitution",
@@ -813,7 +831,9 @@
                   "name": "Constitución",
                   "count": 2,
                   "description": "Gana 1 habilidad permanente basada en tu nivel más alto de mejora de ciudad.",
-                  "usages": ["Ventajas a largo plazo según tu especialización"]
+                  "usages": [
+                    "Ventajas a largo plazo según tu especialización"
+                  ]
                 },
                 {
                   "id": "deserter",
@@ -835,7 +855,9 @@
                   "name": "Diplomático",
                   "count": 2,
                   "description": "Mueve la lealtad de un marcador neutral a tu favor.",
-                  "usages": ["Controlar marcadores neutrales"]
+                  "usages": [
+                    "Controlar marcadores neutrales"
+                  ]
                 },
                 {
                   "id": "intrigue",
@@ -845,7 +867,9 @@
                   "name": "Intriga",
                   "count": 2,
                   "description": "Intercambia 1 carta de tu mano con 1 carta aleatoria de la mano de un oponente.",
-                  "usages": ["Desorganizar manos rivales"]
+                  "usages": [
+                    "Desorganizar manos rivales"
+                  ]
                 },
                 {
                   "id": "saboteur",
@@ -855,7 +879,9 @@
                   "name": "Saboteador",
                   "count": 2,
                   "description": "Cada oponente con igual o más PV que tú debe descartar la mitad de su mano (redondeada hacia abajo).",
-                  "usages": ["Presionar a los jugadores líderes"]
+                  "usages": [
+                    "Presionar a los jugadores líderes"
+                  ]
                 },
                 {
                   "id": "spy",
@@ -865,7 +891,9 @@
                   "name": "Espía",
                   "count": 3,
                   "description": "Mira la mano de cartas de progreso de un rival y roba 1 carta a tu elección.",
-                  "usages": ["Obtener información y robar cartas poderosas"]
+                  "usages": [
+                    "Obtener información y robar cartas poderosas"
+                  ]
                 },
                 {
                   "id": "warlord",
@@ -875,7 +903,9 @@
                   "name": "Señor de la Guerra",
                   "count": 2,
                   "description": "Activa todos tus caballeros gratis (sin pagar Trigo+Mineral).",
-                  "usages": ["Preparar defensa masiva instantánea"]
+                  "usages": [
+                    "Preparar defensa masiva instantánea"
+                  ]
                 },
                 {
                   "id": "wedding",
@@ -885,7 +915,9 @@
                   "name": "Boda",
                   "count": 2,
                   "description": "Cada oponente con más PV que tú debe darte 2 cartas (recurso o mercancía) a su elección.",
-                  "usages": ["Obtener cartas de jugadores que van por delante"]
+                  "usages": [
+                    "Obtener cartas de jugadores que van por delante"
+                  ]
                 }
               ]
             }
@@ -1085,13 +1117,17 @@
             "name": "El Ladrón Amistoso",
             "vp": "Variante",
             "description": "El Ladrón no puede moverse a un hexágono con edificio de un jugador con solo 2 PV.",
-            "details": ["Protege a principiantes de ataques tempranos"]
+            "details": [
+              "Protege a principiantes de ataques tempranos"
+            ]
           },
           {
             "name": "Puertos de Catan",
             "vp": "11 PV",
             "description": "Ficha de Puertos Más Fuertes (2 PV) para el jugador con más PV en edificios portuarios.",
-            "details": ["Fomenta estrategia de construcción en puertos"]
+            "details": [
+              "Fomenta estrategia de construcción en puertos"
+            ]
           },
           {
             "name": "Cartas de Evento CATAN",

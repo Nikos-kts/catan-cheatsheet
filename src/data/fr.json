@@ -459,7 +459,9 @@
             "name": "Cap sur de Nouveaux Rivages",
             "vp": "14 PV",
             "description": "Coloniser de petites îles à travers la mer.",
-            "details": ["+2 PV pour la première colonie sur chaque petite île"]
+            "details": [
+              "+2 PV pour la première colonie sur chaque petite île"
+            ]
           },
           {
             "name": "Les Quatre Îles",
@@ -526,7 +528,9 @@
             "name": "Nouveau Monde",
             "vp": "12 PV",
             "description": "Disposition d'îles entièrement aléatoire.",
-            "details": ["+1 PV par colonie sur île inexplorée"]
+            "details": [
+              "+1 PV par colonie sur île inexplorée"
+            ]
           }
         ]
       }
@@ -949,6 +953,49 @@
               ]
             }
           ]
+        },
+        {
+          "id": "city-improvements",
+          "title": "City Improvements",
+          "icon": "🏛️",
+          "cards": [
+            {
+              "id": "science-improvement",
+              "type": "city-improvement",
+              "icon": "🔬",
+              "name": "Science (Coin)",
+              "description": "If you receive no cards during the Production phase, you may take 1 resource card of your choice (except when a 7 is rolled).",
+              "usages": [
+                "Requires level 3 on the Science track",
+                "Commodity used: Coin (from Mountain cities)",
+                "Level 4 earns the Science Metropolis (2 VP)"
+              ]
+            },
+            {
+              "id": "trade-improvement",
+              "type": "city-improvement",
+              "icon": "💰",
+              "name": "Trade (Cloth)",
+              "description": "You may trade commodities at a 2:1 ratio for any resource or other commodity.",
+              "usages": [
+                "Requires level 3 on the Trade track",
+                "Commodity used: Cloth (from Pasture cities)",
+                "Level 4 earns the Trade Metropolis (2 VP)"
+              ]
+            },
+            {
+              "id": "politics-improvement",
+              "type": "city-improvement",
+              "icon": "🏛️",
+              "name": "Politics (Paper)",
+              "description": "You may promote strong knights (level 2) to mighty knights (level 3).",
+              "usages": [
+                "Requires level 3 on the Politics track",
+                "Commodity used: Paper (from Forest cities)",
+                "Level 4 earns the Politics Metropolis (2 VP)"
+              ]
+            }
+          ]
         }
       ],
       "gameplay": {
@@ -1083,13 +1130,17 @@
             "name": "Le Voleur Amical",
             "vp": "Variante",
             "description": "Le Voleur ne peut pas être déplacé sur un hexagone avec un bâtiment d'un joueur qui n'a que 2 PV.",
-            "details": ["Protège les débutants des attaques précoces"]
+            "details": [
+              "Protège les débutants des attaques précoces"
+            ]
           },
           {
             "name": "Ports de Catan",
             "vp": "11 PV",
             "description": "Tuile Ports les Plus Forts (2 PV) pour le joueur avec le plus de PV en bâtiments portuaires.",
-            "details": ["Encourage la stratégie de construction portuaire"]
+            "details": [
+              "Encourage la stratégie de construction portuaire"
+            ]
           },
           {
             "name": "Cartes Événement CATAN",
