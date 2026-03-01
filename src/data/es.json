@@ -18,7 +18,8 @@
   "games": {
     "base": {
       "name": "Catan (Juego Base)",
-      "description": "El clásico Los Colonos de Catan. Recolecta recursos, construye caminos, poblados y ciudades, negocia con otros jugadores y sé el primero en alcanzar 10 Puntos de Victoria.",
+      "descriptionTitle": "🏜️ Bienvenido a la isla de amistades rotas",
+      "description": "El clásico Los Colonos de Catan — donde aprenderás que tus mejores amigos bloquearán tu única carretera por un trigo. Recolecta recursos, construye, comercia y lucha por 10 PV mientras las alianzas cambian. Reglas simples, rencores eternos.",
       "sections": [
         {
           "id": "resources",
@@ -349,7 +350,8 @@
     },
     "seafarers": {
       "name": "Navegantes",
-      "description": "Explora un archipiélago. Construye barcos para navegar los mares, descubre nuevas islas con campos de oro y coloniza costas lejanas por Puntos de Victoria adicionales.",
+      "descriptionTitle": "⛵ Porque una isla no era suficiente drama",
+      "description": "Explora múltiples islas, construye barcos y descubre nuevos recursos. El mapa modular crea nuevas tensiones por puertos y rutas comerciales.",
       "sections": [
         {
           "id": "ships",
@@ -527,7 +529,8 @@
     },
     "cities-knights": {
       "name": "Ciudades y Caballeros",
-      "description": "Una experiencia estratégica más profunda. Las mercancías reemplazan algunos recursos, las mejoras de ciudad desbloquean habilidades poderosas y los Bárbaros amenazan tus ciudades cada turno.",
+      "descriptionTitle": "🏰 Si el Catan base te parecía demasiado tranquilo...",
+      "description": "Una experiencia estratégica más profunda: las mercancías reemplazan ciertos recursos, las mejoras de ciudad otorgan habilidades potentes y los Bárbaros amenazan tus ciudades cada turno — añadiendo tensión y decisiones tácticas. Incluye 3 mazos de progreso, caballeros y metrópolis. 13 PV para ganar.",
       "sections": [
         {
           "id": "commodities",
@@ -571,44 +574,362 @@
         },
         {
           "id": "progress-cards",
-          "title": "Cartas de Progreso (ejemplos)",
+          "title": "Cartas de Progreso",
           "icon": "📋",
-          "cards": [
+          "subcategories": [
             {
-              "id": "crane",
-              "type": "progress",
-              "icon": "🏗️",
-              "name": "Grúa (Ciencia)",
-              "description": "Este turno puedes construir una mejora de ciudad por 1 mercancía menos de lo normal.",
-              "usages": ["Ahorra una mercancía al mejorar la ciudad"]
-            },
-            {
-              "id": "merchant",
-              "type": "progress",
-              "icon": "🧑‍💼",
-              "name": "Mercader (Comercio)",
-              "description": "Coloca al Mercader en cualquier hexágono. Comercias ese recurso a 2:1 hasta que otro jugador lo reclame. También vale 1 PV.",
-              "usages": [
-                "Controla la tasa de cambio de un recurso clave",
-                "Vale 1 PV mientras lo tengas"
+              "id": "trade",
+              "title": "Comercio",
+              "icon": "💰",
+              "color": "#d4a017",
+              "cards": [
+                {
+                  "id": "commercial-harbor",
+                  "type": "progress-trade",
+                  "icon": "⚓",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.png",
+                  "name": "Puerto Comercial",
+                  "count": 2,
+                  "description": "Cada oponente elige una carta de mercancía de su mano y te la da a cambio de una carta de recurso tuya.",
+                  "usages": [
+                    "Forzar intercambios favorables de todos los rivales",
+                    "Agotar las mercancías de los oponentes"
+                  ]
+                },
+                {
+                  "id": "master-merchant",
+                  "type": "progress-trade",
+                  "icon": "🧑‍💼",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
+                  "name": "Gran Mercader",
+                  "count": 2,
+                  "description": "Mira la mano de un rival adyacente y toma 2 cartas a tu elección.",
+                  "usages": [
+                    "Obtener información de la mano rival",
+                    "Robar 2 cartas específicas"
+                  ]
+                },
+                {
+                  "id": "merchant",
+                  "type": "progress-trade",
+                  "icon": "🏪",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.png",
+                  "name": "Mercader",
+                  "count": 6,
+                  "description": "Coloca el Mercader junto a uno de tus edificios. Mientras lo controlas, comercias ese recurso a 2:1. Vale 1 PV.",
+                  "usages": [
+                    "Obtener ratio 2:1 en un recurso elegido",
+                    "Vale 1 PV mientras lo mantengas"
+                  ]
+                },
+                {
+                  "id": "merchant-fleet",
+                  "type": "progress-trade",
+                  "icon": "🚢",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.png",
+                  "name": "Flota Mercante",
+                  "count": 2,
+                  "description": "Elige 1 tipo de recurso o mercancía: por el resto del turno, cambia 2 de ese tipo por 1 de otro.",
+                  "usages": [
+                    "Obtener temporalmente 2:1 en un tipo",
+                    "Útil con excedentes"
+                  ]
+                },
+                {
+                  "id": "resource-monopoly",
+                  "type": "progress-trade",
+                  "icon": "💎",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
+                  "name": "Monopolio de Recurso",
+                  "count": 4,
+                  "description": "Nombra 1 recurso. Cada oponente que tenga 2+ de ese recurso debe darte exactamente 2 cartas.",
+                  "usages": [
+                    "Recolectar recursos de varios oponentes",
+                    "Menos fuerte que Monopolio base pero poderoso"
+                  ]
+                },
+                {
+                  "id": "trade-monopoly",
+                  "type": "progress-trade",
+                  "icon": "📊",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.png",
+                  "name": "Monopolio Comercial",
+                  "count": 2,
+                  "description": "Nombra 1 mercancía. Cada oponente con 1+ debe darte exactamente 1.",
+                  "usages": [
+                    "Recolectar mercancías de todos",
+                    "Interrumpir planes de mejora de ciudades"
+                  ]
+                }
               ]
             },
             {
-              "id": "spy",
-              "type": "progress",
-              "icon": "🕵️",
-              "name": "Espía (Política)",
-              "description": "Roba una carta de progreso al azar de la mano de cualquier rival.",
-              "usages": ["Interrumpe rivales y consigue una carta útil"]
+              "id": "science",
+              "title": "Ciencia",
+              "icon": "🔬",
+              "color": "#27ae60",
+              "cards": [
+                {
+                  "id": "alchemist",
+                  "type": "progress-science",
+                  "icon": "⚗️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.png",
+                  "name": "Alquimista",
+                  "count": 2,
+                  "description": "Antes de tirar los dados este turno, elige el resultado de producción (ambos números). El dado de evento se tira normalmente.",
+                  "usages": [
+                    "Garantizar producción en tus mejores hexágonos",
+                    "Provocar una 7 estratégicamente"
+                  ]
+                },
+                {
+                  "id": "crane",
+                  "type": "progress-science",
+                  "icon": "🏗️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.png",
+                  "name": "Grúa",
+                  "count": 2,
+                  "description": "Este turno puedes construir una mejora de ciudad por 1 mercancía menos.",
+                  "usages": [
+                    "Ahorrar una mercancía al mejorar",
+                    "Subir de nivel más rápido"
+                  ]
+                },
+                {
+                  "id": "engineer",
+                  "type": "progress-science",
+                  "icon": "🔧",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.png",
+                  "name": "Ingeniero",
+                  "count": 1,
+                  "description": "Construye una muralla de ciudad gratis bajo una de tus ciudades.",
+                  "usages": [
+                    "Proteger una ciudad sin coste",
+                    "Murallas aumentan el límite de mano en 7 en +2"
+                  ]
+                },
+                {
+                  "id": "inventor",
+                  "type": "progress-science",
+                  "icon": "💡",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.png",
+                  "name": "Inventor",
+                  "count": 2,
+                  "description": "Intercambia 2 fichas de número en el tablero (no 2,6,8,12).",
+                  "usages": [
+                    "Mejorar producción propia",
+                    "Debilitar a un rival"
+                  ]
+                },
+                {
+                  "id": "irrigation",
+                  "type": "progress-science",
+                  "icon": "💧",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
+                  "name": "Irrigación",
+                  "count": 2,
+                  "description": "Toma 2 cartas de Trigo del banco por cada asentamiento/ciudad adyacente a un hex de Trigo.",
+                  "usages": [
+                    "Gran empuje de Trigo",
+                    "Ideal para activar caballeros"
+                  ]
+                },
+                {
+                  "id": "medicine",
+                  "type": "progress-science",
+                  "icon": "💊",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
+                  "name": "Medicina",
+                  "count": 2,
+                  "description": "Mejora un poblado a ciudad por sólo 1 Mineral + 1 Trigo (en lugar de 3 Mineral + 2 Trigo).",
+                  "usages": [
+                    "Construir ciudad a bajo coste",
+                    "Expandir rápidamente"
+                  ]
+                },
+                {
+                  "id": "mining",
+                  "type": "progress-science",
+                  "icon": "⛏️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
+                  "name": "Minería",
+                  "count": 2,
+                  "description": "Toma 2 Minerales del banco por cada asentamiento/ciudad adyacente a una montaña.",
+                  "usages": ["Fuente grande de Minerales"]
+                },
+                {
+                  "id": "printer",
+                  "type": "progress-science",
+                  "icon": "🖨️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
+                  "name": "Imprenta",
+                  "count": 2,
+                  "description": "Roba 2 cartas de progreso y guarda 1.",
+                  "usages": ["Ventaja de cartas"]
+                },
+                {
+                  "id": "road-building",
+                  "type": "progress-science",
+                  "icon": "🛣️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.png",
+                  "name": "Construcción de Caminos",
+                  "count": 2,
+                  "description": "Construye 2 carreteras gratis inmediatamente.",
+                  "usages": ["Rápido bloqueo de rutas"]
+                },
+                {
+                  "id": "smith",
+                  "type": "progress-science",
+                  "icon": "🛠️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
+                  "name": "Herrero",
+                  "count": 2,
+                  "description": "Paga 1 Mineral: activa un caballero reclutado inmediatamente.",
+                  "usages": ["Activar caballeros sin Trigo"]
+                }
+              ]
             },
             {
-              "id": "engineer",
-              "type": "progress",
-              "icon": "🔧",
-              "name": "Ingeniero (Ciencia)",
-              "description": "Construye gratuitamente una muralla de ciudad.",
+              "id": "politics",
+              "title": "Política",
+              "icon": "🏛️",
+              "color": "#c0392b",
+              "cards": [
+                {
+                  "id": "bishop",
+                  "type": "progress-politics",
+                  "icon": "⛪",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
+                  "name": "Obispo",
+                  "count": 2,
+                  "description": "Paga 1 mercancía para descartar una carta de progreso de un oponente.",
+                  "usages": ["Neutralizar cartas clave de rivales"]
+                },
+                {
+                  "id": "constitution",
+                  "type": "progress-politics",
+                  "icon": "📜",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.png",
+                  "name": "Constitución",
+                  "count": 2,
+                  "description": "Gana 1 habilidad permanente basada en tu nivel más alto de mejora de ciudad.",
+                  "usages": ["Ventajas a largo plazo según tu especialización"]
+                },
+                {
+                  "id": "deserter",
+                  "type": "progress-politics",
+                  "icon": "🏃",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
+                  "name": "Desertor",
+                  "count": 2,
+                  "description": "Paga 1 mercancía, toma un caballero enemigo activo (desactívalo) y reclútalo como tuyo (inactivo).",
+                  "usages": [
+                    "Debilitar caballeros enemigos y reforzar los tuyos"
+                  ]
+                },
+                {
+                  "id": "diplomat",
+                  "type": "progress-politics",
+                  "icon": "🫡",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
+                  "name": "Diplomático",
+                  "count": 2,
+                  "description": "Mueve la lealtad de un marcador neutral a tu favor.",
+                  "usages": ["Controlar marcadores neutrales"]
+                },
+                {
+                  "id": "intrigue",
+                  "type": "progress-politics",
+                  "icon": "🕵️‍♀️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
+                  "name": "Intriga",
+                  "count": 2,
+                  "description": "Intercambia 1 carta de tu mano con 1 carta aleatoria de la mano de un oponente.",
+                  "usages": ["Desorganizar manos rivales"]
+                },
+                {
+                  "id": "saboteur",
+                  "type": "progress-politics",
+                  "icon": "💣",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.png",
+                  "name": "Saboteador",
+                  "count": 2,
+                  "description": "Cada oponente con igual o más PV que tú debe descartar la mitad de su mano (redondeada hacia abajo).",
+                  "usages": ["Presionar a los jugadores líderes"]
+                },
+                {
+                  "id": "spy",
+                  "type": "progress-politics",
+                  "icon": "🕵️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
+                  "name": "Espía",
+                  "count": 3,
+                  "description": "Mira la mano de cartas de progreso de un rival y roba 1 carta a tu elección.",
+                  "usages": ["Obtener información y robar cartas poderosas"]
+                },
+                {
+                  "id": "warlord",
+                  "type": "progress-politics",
+                  "icon": "⚔️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
+                  "name": "Señor de la Guerra",
+                  "count": 2,
+                  "description": "Activa todos tus caballeros gratis (sin pagar Trigo+Mineral).",
+                  "usages": ["Preparar defensa masiva instantánea"]
+                },
+                {
+                  "id": "wedding",
+                  "type": "progress-politics",
+                  "icon": "💒",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.png",
+                  "name": "Boda",
+                  "count": 2,
+                  "description": "Cada oponente con más PV que tú debe darte 2 cartas (recurso o mercancía) a su elección.",
+                  "usages": ["Obtener cartas de jugadores que van por delante"]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "city-improvements",
+          "title": "Mejoras de Ciudad",
+          "icon": "🏛️",
+          "cards": [
+            {
+              "id": "science-improvement",
+              "type": "city-improvement",
+              "icon": "🔬",
+              "name": "Ciencia (Moneda)",
+              "description": "Si no recibes cartas en Producción, puedes tomar 1 recurso a elección (excepto al sacar 7).",
               "usages": [
-                "Protege una ciudad de los Bárbaros sin gastar recursos"
+                "Requiere nivel 3 en la vía de Ciencia",
+                "Mercancía: Moneda (ciudades en Montaña)",
+                "Nivel 4 otorga Metrópoli de Ciencia (2 PV)"
+              ]
+            },
+            {
+              "id": "trade-improvement",
+              "type": "city-improvement",
+              "icon": "💰",
+              "name": "Comercio (Tela)",
+              "description": "Puedes intercambiar mercancías a 2:1 por cualquier recurso u otra mercancía.",
+              "usages": [
+                "Requiere nivel 3 en la vía de Comercio",
+                "Mercancía: Tela (ciudades en Prado)",
+                "Nivel 4 otorga Metrópoli de Comercio (2 PV)"
+              ]
+            },
+            {
+              "id": "politics-improvement",
+              "type": "city-improvement",
+              "icon": "🏛️",
+              "name": "Política (Papel)",
+              "description": "Puedes promover caballeros fuertes (nivel 2) a caballeros poderosos (nivel 3).",
+              "usages": [
+                "Requiere nivel 3 en la vía de Política",
+                "Mercancía: Papel (ciudades en Bosque)",
+                "Nivel 4 otorga Metrópoli de Política (2 PV)"
               ]
             }
           ]
@@ -621,7 +942,7 @@
             {
               "id": "barbarian-track",
               "type": "special",
-              "icon": "🧟",
+              "icon": "🏴‍☠️",
               "name": "Ataque Bárbaro",
               "description": "Cada vez que se saca un barco, los Bárbaros avanzan. Al llegar a Catan se resuelve la batalla. Si los defensores pierden, el jugador con menos caballeros pierde una ciudad.",
               "usages": [
@@ -640,12 +961,23 @@
           "Cada jugador reemplaza 1 poblado por una ciudad (recibe ventaja de ciudad).",
           "Colocar el barco bárbaro en la posición 7 de la barra.",
           "Preparar cartas de caballero, murallas y ciudad.",
-          "Barajar 3 mazos de cartas de progreso: Comercio, Ciencia, Política."
+          "Barajar 3 mazos de cartas de progreso: Comercio, Ciencia, Política.",
+          "🥷 El Ladrón comienza fuera del tablero hasta el primer ataque bárbaro."
         ],
         "turnOverview": [
           {
-            "title": "1. Dado de Evento",
-            "detail": "El barco bárbaro avanza o se produce una tirada de carta de progreso. Cuando los bárbaros llegan a la costa, atacan."
+            "title": "1. Tirada de Dados + Dado de Evento",
+            "detail": "Tira los dados de producción y el dado de evento; los bárbaros avanzan o se desencadenan cartas de progreso.",
+            "images": [
+              {
+                "src": "src/assets/images/common/roll-dice.png",
+                "alt": "Tirar Dados"
+              },
+              {
+                "src": "src/assets/images/cities-and-knights/event-dice.png",
+                "alt": "Dado de Evento"
+              }
+            ]
           },
           {
             "title": "2. Producción",
@@ -695,7 +1027,8 @@
     },
     "traders-barbarians": {
       "name": "Mercaderes y Bárbaros",
-      "description": "Una colección de cinco escenarios y variantes: rutas comerciales, caravanas, invasiones bárbaras y más.",
+      "descriptionTitle": "🐫 Cinco maneras de complicar un buen juego",
+      "description": "Colección de escenarios que introduce comercio, caravanas e invasiones bárbaras en diversas variantes. Cada escenario altera la dinámica y los objetivos del juego.",
       "sections": [
         {
           "id": "trade-routes",
@@ -835,7 +1168,8 @@
     },
     "explorers-pirates": {
       "name": "Exploradores y Piratas",
-      "description": "Navega aguas desconocidas. Construye barcos y puertos, completa misiones como el comercio de especias y coloniza nuevas tierras.",
+      "descriptionTitle": "🏴‍☠️ Catan se vuelve explorador (sin polémica)",
+      "description": "Navega a nuevas islas, establece puestos y enfréntate a piratas. Misiones y exploración aportan nuevas formas de puntuar y competir en el mar.",
       "sections": [
         {
           "id": "missions",

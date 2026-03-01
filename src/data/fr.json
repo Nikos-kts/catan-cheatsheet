@@ -18,7 +18,8 @@
   "games": {
     "base": {
       "name": "Catan (Jeu de Base)",
-      "description": "Le classique Les Colons de Catane. Collectez des ressources, construisez des routes, des colonies et des villes, échangez avec les autres joueurs et soyez le premier à atteindre 10 Points de Victoire.",
+      "descriptionTitle": "🏜️ Bienvenue sur l'île des amitiés brisées",
+      "description": "Le classique Les Colons de Catane — où vous apprendrez que vos amis les plus proches bloqueront volontiers votre unique route pour un simple blé. Collectez des ressources, construisez routes, colonies et villes, échangez avec des voisins de plus en plus hostiles, et courez désespérément vers 10 Points de Victoire avant que quelqu'un ne joue une carte Monopole contre vous. Règles simples, rancœurs infinies.",
       "sections": [
         {
           "id": "resources",
@@ -349,7 +350,8 @@
     },
     "seafarers": {
       "name": "Marins",
-      "description": "Explorez un archipel. Construisez des bateaux pour naviguer, découvrez de nouvelles îles avec des champs d'or et colonisez des rivages lointains pour des Points de Victoire supplémentaires.",
+      "descriptionTitle": "⛵ Parce qu'une île ne suffisait pas pour le drame",
+      "description": "Explorez un archipel — visiblement, ruiner des amitiés sur une seule île ne suffisait pas. Construisez des navires pour traverser les mers, découvrez de nouvelles îles avec des champs d'or (dont tout le monde se disputera immédiatement) et colonisez des rivages lointains pour des PV bonus. Maintenant, votre voisin qui bloquait votre route peut vous suivre jusque sur l'océan.",
       "sections": [
         {
           "id": "ships",
@@ -531,7 +533,8 @@
     },
     "cities-knights": {
       "name": "Villes & Chevaliers",
-      "description": "Une expérience stratégique plus profonde. Les marchandises remplacent certaines ressources, les améliorations de ville débloquent des capacités puissantes et les Barbares menacent vos villes chaque tour.",
+      "descriptionTitle": "🏰 Si le Catan de base semblait trop tranquille...",
+      "description": "Une expérience stratégique plus profonde pour ceux qui trouvaient le Catan de base trop relaxant. Les marchandises remplacent certains ressources (encore plus de sujets de dispute !), les améliorations de ville débloquent des capacités puissantes (que vos adversaires utiliseront contre vous), et les Barbares menacent vos villes à chaque tour — parce qu'il fallait bien une préoccupation supplémentaire. Comprend 3 paquets de cartes de progrès, des chevaliers affamés, et la joie de voir une ville sans défense pillée. 13 PV pour gagner, regrets garantis.",
       "sections": [
         {
           "id": "commodities",
@@ -575,46 +578,356 @@
         },
         {
           "id": "progress-cards",
-          "title": "Cartes Progrès (exemples)",
+          "title": "Cartes de Progrès",
           "icon": "📋",
-          "cards": [
+          "subcategories": [
             {
-              "id": "crane",
-              "type": "progress",
-              "icon": "🏗️",
-              "name": "Grue (Science)",
-              "description": "Ce tour, vous pouvez construire une amélioration de ville pour 1 marchandise de moins.",
-              "usages": ["Économisez une marchandise lors d'une amélioration"]
-            },
-            {
-              "id": "merchant",
-              "type": "progress",
-              "icon": "🧑‍💼",
-              "name": "Marchand (Commerce)",
-              "description": "Placez le Marchand sur une case de terrain. Vous échangez cette ressource à 2:1 jusqu'à ce qu'un autre joueur le prenne. Vaut aussi 1 PV.",
-              "usages": [
-                "Contrôlez le taux d'échange d'une ressource clé",
-                "Vaut 1 PV tant que vous le détenez"
+              "id": "trade",
+              "title": "Commerce",
+              "icon": "💰",
+              "color": "#d4a017",
+              "cards": [
+                {
+                  "id": "commercial-harbor",
+                  "type": "progress-trade",
+                  "icon": "⚓",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.png",
+                  "name": "Port commercial",
+                  "count": 2,
+                  "description": "Chaque adversaire choisit une carte marchandise de sa main et vous la donne en échange d'une carte ressource de votre choix.",
+                  "usages": [
+                    "Forcer des échanges avantageux avec tous les adversaires",
+                    "Épuiser les réserves de marchandises des adversaires"
+                  ]
+                },
+                {
+                  "id": "master-merchant",
+                  "type": "progress-trade",
+                  "icon": "🧑‍💼",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
+                  "name": "Grand marchand",
+                  "count": 2,
+                  "description": "Regardez la main d'un adversaire adjacent à un de vos bâtiments. Prenez 2 cartes (ressource ou marchandise) de votre choix.",
+                  "usages": [
+                    "Obtenir des informations sur une main adverse",
+                    "Voler 2 cartes spécifiques"
+                  ]
+                },
+                {
+                  "id": "merchant",
+                  "type": "progress-trade",
+                  "icon": "🏪",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.png",
+                  "name": "Marchand",
+                  "count": 6,
+                  "description": "Placez le Marchand sur un hex adjacent à une de vos colonies ou villes. Tant que vous le contrôlez, vous échangez cette ressource à 2:1. Vaut 1 PV.",
+                  "usages": [
+                    "Obtenir un ratio 2:1 sur une ressource choisie",
+                    "Vaut 1 PV tant que vous le détenez"
+                  ]
+                },
+                {
+                  "id": "merchant-fleet",
+                  "type": "progress-trade",
+                  "icon": "🚢",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.png",
+                  "name": "Flotte marchande",
+                  "count": 2,
+                  "description": "Choisissez 1 type de ressource ou marchandise. Pour le restant de ce tour, échangez 2 de ce type contre 1 autre ressource ou marchandise.",
+                  "usages": [
+                    "Obtenir temporairement un ratio 2:1 sur un type",
+                    "Utile avec un surplus"
+                  ]
+                },
+                {
+                  "id": "resource-monopoly",
+                  "type": "progress-trade",
+                  "icon": "💎",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
+                  "name": "Monopole de ressource",
+                  "count": 4,
+                  "description": "Nommez 1 type de ressource. Chaque adversaire qui a 2+ de ce type doit vous donner exactement 2 cartes.",
+                  "usages": [
+                    "Collecter jusqu'à 6 ressources de 3 adversaires",
+                    "Moins puissant que Monopole de base mais toujours fort"
+                  ]
+                },
+                {
+                  "id": "trade-monopoly",
+                  "type": "progress-trade",
+                  "icon": "📊",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.png",
+                  "name": "Monopole commercial",
+                  "count": 2,
+                  "description": "Nommez 1 type de marchandise. Chaque adversaire qui a 1+ de cette marchandise doit vous donner exactement 1.",
+                  "usages": [
+                    "Collecter des marchandises de tous les adversaires",
+                    "Perturber les plans d'amélioration de ville"
+                  ]
+                }
               ]
             },
             {
-              "id": "spy",
-              "type": "progress",
-              "icon": "🕵️",
-              "name": "Espion (Politique)",
-              "description": "Volez une carte Progrès au hasard dans la main d'un adversaire.",
-              "usages": [
-                "Désorganisez les adversaires et gagnez une carte utile"
+              "id": "science",
+              "title": "Science",
+              "icon": "🔬",
+              "color": "#27ae60",
+              "cards": [
+                {
+                  "id": "alchemist",
+                  "type": "progress-science",
+                  "icon": "⚗️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.png",
+                  "name": "Alchimiste",
+                  "count": 2,
+                  "description": "Avant de lancer les dés ce tour, choisissez le résultat des dés de production (les deux nombres). Le dé d'événement est lancé normalement.",
+                  "usages": [
+                    "Garantir la production de vos meilleures cases",
+                    "Provoquer un 7 stratégiquement pour activer le Voleur"
+                  ]
+                },
+                {
+                  "id": "crane",
+                  "type": "progress-science",
+                  "icon": "🏗️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.png",
+                  "name": "Grue",
+                  "count": 2,
+                  "description": "Ce tour, vous pouvez construire une amélioration de ville pour 1 marchandise en moins que le coût normal.",
+                  "usages": [
+                    "Économiser une marchandise sur une amélioration",
+                    "Atteindre les niveaux supérieurs plus rapidement"
+                  ]
+                },
+                {
+                  "id": "engineer",
+                  "type": "progress-science",
+                  "icon": "🔧",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.png",
+                  "name": "Ingénieur",
+                  "count": 1,
+                  "description": "Construisez 1 rempart de ville gratuitement (sans ressources). Placez-le sous une de vos villes.",
+                  "usages": [
+                    "Protéger une ville sans coût",
+                    "Les remparts ajoutent +2 à la limite de main sur un 7"
+                  ]
+                },
+                {
+                  "id": "inventor",
+                  "type": "progress-science",
+                  "icon": "💡",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.png",
+                  "name": "Inventeur",
+                  "count": 2,
+                  "description": "Échangez 2 jetons de numéro sur le plateau. Vous ne pouvez pas échanger les jetons 2, 6, 8 ou 12.",
+                  "usages": [
+                    "Améliorer les chances de production sur vos cases",
+                    "Affaiblir la case productive d'un adversaire"
+                  ]
+                },
+                {
+                  "id": "irrigation",
+                  "type": "progress-science",
+                  "icon": "💧",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
+                  "name": "Irrigation",
+                  "count": 2,
+                  "description": "Prenez 2 cartes Blé de la banque pour chaque colonie/ville adjacente à un hex Champ.",
+                  "usages": [
+                    "Grosse poussée de Blé si bien placé",
+                    "Idéal pour activer des chevaliers"
+                  ]
+                },
+                {
+                  "id": "medicine",
+                  "type": "progress-science",
+                  "icon": "💊",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
+                  "name": "Médecine",
+                  "count": 2,
+                  "description": "Ce tour, vous pouvez améliorer une colonie en ville à coût réduit : seulement 1 Minerai + 1 Blé (au lieu de 3 Minerai + 2 Blé).",
+                  "usages": [
+                    "Construire une ville pour une fraction du coût",
+                    "Étendre rapidement votre réseau de villes"
+                  ]
+                },
+                {
+                  "id": "mining",
+                  "type": "progress-science",
+                  "icon": "⛏️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
+                  "name": "Extraction",
+                  "count": 2,
+                  "description": "Prenez 2 cartes Minerai de la banque pour chaque colonie/ville adjacente à un hex Montagne.",
+                  "usages": [
+                    "Gros gain de Minerai si proche de plusieurs montagnes",
+                    "Alimenter upgrades de ville et recrutement de chevaliers"
+                  ]
+                },
+                {
+                  "id": "printer",
+                  "type": "progress-science",
+                  "icon": "🖨️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
+                  "name": "Imprimeur",
+                  "count": 1,
+                  "description": "Vaut 1 Point de Victoire. Cette carte reste face visible devant vous pour le reste de la partie.",
+                  "usages": [
+                    "+1 PV permanent — jouez-la immédiatement",
+                    "Ne peut pas être volée ni perdue"
+                  ]
+                },
+                {
+                  "id": "road-building",
+                  "type": "progress-science",
+                  "icon": "🛤️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.png",
+                  "name": "Construction de routes",
+                  "count": 2,
+                  "description": "Placez 2 routes sur le plateau gratuitement.",
+                  "usages": [
+                    "Étendre rapidement votre réseau",
+                    "Competez pour la Plus Longue Route (2 PV)"
+                  ]
+                },
+                {
+                  "id": "smith",
+                  "type": "progress-science",
+                  "icon": "🔨",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
+                  "name": "Forgeron",
+                  "count": 2,
+                  "description": "Promouvez jusqu'à 2 de vos chevaliers gratuitement (ex. Basique → Fort, Fort → Puissant).",
+                  "usages": [
+                    "Renforcez votre défense sans dépenser de ressources",
+                    "Préparez-vous aux attaques barbares efficacement"
+                  ]
+                }
               ]
             },
             {
-              "id": "engineer",
-              "type": "progress",
-              "icon": "🔧",
-              "name": "Ingénieur (Science)",
-              "description": "Construisez gratuitement un rempart de ville.",
-              "usages": [
-                "Protégez une ville des Barbares sans dépenser de ressources"
+              "id": "politics",
+              "title": "Politique",
+              "icon": "🏛️",
+              "color": "#2980b9",
+              "cards": [
+                {
+                  "id": "bishop",
+                  "type": "progress-politics",
+                  "icon": "⛪",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
+                  "name": "Évêque",
+                  "count": 2,
+                  "description": "Déplacez le Voleur sur n'importe quel hex. Chaque adversaire avec un bâtiment adjacent doit vous donner 1 ressource de son choix.",
+                  "usages": [
+                    "Collecter 1 ressource de chaque adversaire affecté",
+                    "Relocaliser le Voleur pour perturber plusieurs joueurs"
+                  ]
+                },
+                {
+                  "id": "constitution",
+                  "type": "progress-politics",
+                  "icon": "📜",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.png",
+                  "name": "Constitution",
+                  "count": 1,
+                  "description": "Vaut 1 PV. Cette carte reste face visible devant vous pour le reste de la partie.",
+                  "usages": [
+                    "+1 PV permanent — jouez-la immédiatement",
+                    "Ne peut pas être volée"
+                  ]
+                },
+                {
+                  "id": "deserter",
+                  "type": "progress-politics",
+                  "icon": "🏃",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
+                  "name": "Déserteur",
+                  "count": 2,
+                  "description": "Retirez un chevalier adverse du plateau. L'adversaire reprend la pièce dans sa réserve.",
+                  "usages": [
+                    "Affaiblir une défense avant une attaque barbare",
+                    "Retirer un chevalier qui bloque une route"
+                  ]
+                },
+                {
+                  "id": "diplomat",
+                  "type": "progress-politics",
+                  "icon": "🤝",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
+                  "name": "Diplomate",
+                  "count": 2,
+                  "description": "Retirez une route ouverte. Si c'est la vôtre, vous pouvez la replacer ailleurs gratuitement.",
+                  "usages": [
+                    "Déplacer une de vos routes stratégiquement",
+                    "Supprimer une route adverse pour briser la Plus Longue Route"
+                  ]
+                },
+                {
+                  "id": "intrigue",
+                  "type": "progress-politics",
+                  "icon": "🗡️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
+                  "name": "Intrigue",
+                  "count": 2,
+                  "description": "Déplacez un chevalier adverse d'une intersection adjacente à un de vos bâtiments. L'adversaire doit le déplacer légalement ou le retirer.",
+                  "usages": [
+                    "Libérer une intersection clé",
+                    "Forcer un adversaire à repositionner son chevalier"
+                  ]
+                },
+                {
+                  "id": "saboteur",
+                  "type": "progress-politics",
+                  "icon": "💣",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.png",
+                  "name": "Saboteur",
+                  "count": 2,
+                  "description": "Chaque adversaire ayant autant ou plus de PV que vous doit défausser la moitié de sa main (arrondi vers le bas).",
+                  "usages": [
+                    "Punir les leaders",
+                    "Utile quand vous êtes en retard en PV"
+                  ]
+                },
+                {
+                  "id": "spy",
+                  "type": "progress-politics",
+                  "icon": "🕵️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
+                  "name": "Espion",
+                  "count": 3,
+                  "description": "Regardez la main d'un adversaire adjacent à un de vos bâtiments et volez 1 carte Progrès de votre choix.",
+                  "usages": [
+                    "Obtenir des infos et voler une carte puissante",
+                    "Déstabiliser la stratégie d'un adversaire"
+                  ]
+                },
+                {
+                  "id": "warlord",
+                  "type": "progress-politics",
+                  "icon": "⚔️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
+                  "name": "Seigneur de guerre",
+                  "count": 2,
+                  "description": "Activez tous vos chevaliers gratuitement (sans payer Blé ou Minerai).",
+                  "usages": [
+                    "Préparer rapidement la défense contre les barbares",
+                    "Économiser des ressources d'activation"
+                  ]
+                },
+                {
+                  "id": "wedding",
+                  "type": "progress-politics",
+                  "icon": "💒",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.png",
+                  "name": "Mariage",
+                  "count": 2,
+                  "description": "Chaque adversaire ayant plus de PV que vous doit vous donner 2 cartes ressource ou marchandise de son choix.",
+                  "usages": [
+                    "Prendre des cartes aux leaders",
+                    "Très efficace quand vous êtes en retard en PV"
+                  ]
+                }
               ]
             }
           ]
@@ -627,7 +940,7 @@
             {
               "id": "barbarian-track",
               "type": "special",
-              "icon": "🧟",
+              "icon": "🏴‍☠️",
               "name": "Attaque Barbare",
               "description": "Chaque fois qu'un bateau est lancé, les Barbares avancent. Quand ils atteignent Catane, une bataille est résolue. Si les défenseurs perdent, le joueur avec le moins de chevaliers perd une ville.",
               "usages": [
@@ -646,12 +959,23 @@
           "Chaque joueur remplace 1 colonie par une ville (reçoit l'avantage de ville).",
           "Placer le navire barbare sur la position 7 de la piste.",
           "Préparer les cartes chevalier, murailles et ville.",
-          "Mélanger 3 paquets de cartes de progrès : Commerce, Science, Politique."
+          "Mélanger 3 paquets de cartes de progrès : Commerce, Science, Politique.",
+          "🥷 Le Voleur commence hors du plateau jusqu'à la première attaque barbare."
         ],
         "turnOverview": [
           {
-            "title": "1. Dé d'Événement",
-            "detail": "Le navire barbare avance ou un tirage de carte de progrès a lieu. Quand les barbares atteignent la côte, ils attaquent."
+            "title": "1. Lancez les dés + Dés d'événement",
+            "detail": "Les dés de production déterminent les ressources. Les dés d'événement avancent les barbares ou déclenchent le tirage de cartes de progrès.",
+            "images": [
+              {
+                "src": "src/assets/images/common/roll-dice.png",
+                "alt": "Roll Dice"
+              },
+              {
+                "src": "src/assets/images/cities-and-knights/event-dice.png",
+                "alt": "Event Dice"
+              }
+            ]
           },
           {
             "title": "2. Production",
@@ -701,7 +1025,8 @@
     },
     "traders-barbarians": {
       "name": "Marchands & Barbares",
-      "description": "Une collection de cinq scénarios et variantes : routes commerciales, caravanes, invasions barbares et plus encore.",
+      "descriptionTitle": "🐫 Cinq manières de compliquer un jeu déjà parfait",
+      "description": "Une collection de cinq scénarios et variantes qui ajoutent de nouvelles dimensions au jeu classique — parce que quelqu'un a pensé que le jeu de base avait besoin de plus de chameaux. Comprend des routes commerciales, des caravanes, des invasions barbares et assez de règles alternatives pour épaissir votre livret de règles. Idéal pour le groupe qui a joué 200 parties et cherche de nouvelles raisons de se disputer.",
       "sections": [
         {
           "id": "trade-routes",
@@ -841,7 +1166,8 @@
     },
     "explorers-pirates": {
       "name": "Explorateurs & Pirates",
-      "description": "Partez en mer vers des eaux inconnues. Construisez bateaux et ports, accomplissez des missions comme le commerce d'épices et colonisez de nouvelles terres.",
+      "descriptionTitle": "🏴‍☠️ Le Catan part à l'aventure (sans la controverse)",
+      "description": "Partez en mer vers des eaux inconnues parce que rester sur une île connue devenait ennuyeux. Construisez navires et ports, accomplissez des missions comme le commerce d'épices et colonisez de nouvelles terres loin de chez vous. Pensez-y comme le grand frère ambitieux des Marins — plus de pièces mobiles, plus de missions, et plus de 'attendez, à qui le tour est‑il ?'.",
       "sections": [
         {
           "id": "missions",
