@@ -18,12 +18,19 @@ src/
 │   └── styles.css      # Styles (earthy Catan colour palette)
 ├── js/
 │   └── app.js          # App logic (data loading, rendering)
-└── data/
-    ├── en.json         # English
-    ├── de.json         # German
-    ├── es.json         # Spanish
-    ├── fr.json         # French
-    └── el.json         # Greek
+├── data/
+│   ├── en.json         # English
+│   ├── de.json         # German
+│   ├── es.json         # Spanish
+│   ├── fr.json         # French
+│   └── el.json         # Greek
+└── assets/
+    └── images/
+        ├── basic/                    # Base Catan images
+        ├── seafarers/                # Seafarers expansion images
+        ├── traders-and-barbarians/   # Traders & Barbarians expansion images
+        ├── cities-and-knights/       # Cities & Knights expansion images
+        └── explorers-and-pirates/    # Explorers & Pirates expansion images
 ```
 
 ## Running Locally (Dev Container)
@@ -43,6 +50,40 @@ python3 -m http.server 3000
 ```
 
 Then open [http://localhost:3000](http://localhost:3000).
+
+## Adding Images for an Expansion
+
+Each expansion has a dedicated folder under `src/assets/images/`. Follow this workflow when fetching and adding images:
+
+| Expansion            | Folder                                      |
+| -------------------- | ------------------------------------------- |
+| Base Catan           | `src/assets/images/basic/`                  |
+| Seafarers            | `src/assets/images/seafarers/`              |
+| Traders & Barbarians | `src/assets/images/traders-and-barbarians/` |
+| Cities & Knights     | `src/assets/images/cities-and-knights/`     |
+| Explorers & Pirates  | `src/assets/images/explorers-and-pirates/`  |
+
+### Workflow
+
+1. **Fetch / download** the image (card art, board tile, token, etc.)
+2. **Rename** it clearly, using lowercase and hyphens (e.g. `ore-card.png`, `robber-token.png`)
+3. **Drop** it into the correct expansion folder
+4. **Reference** it in `index.html` or inside a card definition:
+   ```html
+   <img src="src/assets/images/basic/ore-card.png" alt="Ore card" />
+   ```
+   Or inside a JSON card entry:
+   ```json
+   "image": "src/assets/images/seafarers/ship.png"
+   ```
+
+### Naming conventions
+
+- Use lowercase letters, numbers and hyphens only — no spaces
+- Prefer descriptive names: `knight-card.png` over `img1.png`
+- Recommended formats: `.png` (transparency), `.webp` (smaller size), `.jpg` (photos)
+
+---
 
 ## Adding a New Language
 
@@ -75,4 +116,4 @@ Add a new key under `"games"` in each language's JSON file following the existin
 
 ---
 
-*Community reference — not affiliated with Catan Studio.*
+_Community reference — not affiliated with Catan Studio._
