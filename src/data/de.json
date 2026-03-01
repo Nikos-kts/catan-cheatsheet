@@ -3,7 +3,17 @@
     "labelGame": "Spiel",
     "labelLang": "Sprache",
     "subtitle": "Schnellreferenz für Karten & Regeln",
-    "footer": "Community-Referenz — nicht mit Catan Studio verbunden."
+    "footer": "Community-Referenz — nicht mit Catan Studio verbunden.",
+    "tabCards": "Karten",
+    "tabGameplay": "Spielablauf",
+    "noGameplay": "Spielablauf-Informationen folgen in Kürze.",
+    "labelPlayers": "Spieler",
+    "labelVP": "Siegpunkte zum Gewinnen",
+    "titleSetup": "Aufbau",
+    "titleTurn": "Zugübersicht",
+    "titleRules": "Wichtige Regeln",
+    "titleSpecial": "Sonderregeln",
+    "titleScenarios": "Szenarien & Varianten"
   },
   "games": {
     "base": {
@@ -259,7 +269,83 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "10",
+        "setup": [
+          "Seerahmen zusammensetzen, 19 Landschaftsfelder und Zahlenchips platzieren.",
+          "Rohstoffkarten in 5 Stapel sortieren; Entwicklungskarten verdeckt mischen.",
+          "Den Räuber auf das Wüstenfeld stellen.",
+          "Jeder Spieler platziert 2 Siedlungen und 2 Straßen (Runde 1 im Uhrzeigersinn, Runde 2 umgekehrt).",
+          "Startrohstoffe von den Feldern an der zweiten Siedlung einsammeln."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Produktionsphase",
+            "detail": "Optional eine Entwicklungskarte spielen, dann mit beiden Würfeln würfeln. Alle Spieler erhalten Rohstoffe von passenden Feldern. Bei einer 7: Spieler mit >7 Karten geben die Hälfte ab, dann den Räuber versetzen und stehlen."
+          },
+          {
+            "title": "2. Aktionsphase",
+            "detail": "Mit Spielern oder dem Vorrat handeln (4:1, 3:1 oder 2:1 über Häfen). Straßen, Siedlungen, Städte bauen oder Entwicklungskarten kaufen. 1 Entwicklungskarte spielen (sofern nicht vor dem Wurf gespielt)."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Straßen",
+            "detail": "Kosten: 1 Holz + 1 Lehm. Muss an bestehendes Netzwerk anschließen. Max. 15 pro Spieler. Wert: 0 SP."
+          },
+          {
+            "title": "Siedlungen",
+            "detail": "Kosten: 1 Holz + 1 Lehm + 1 Wolle + 1 Getreide. Abstandsregel beachten (2 Kanten zu jedem Gebäude). Max. 5 pro Spieler. Wert: 1 SP."
+          },
+          {
+            "title": "Städte",
+            "detail": "Kosten: 3 Erz + 2 Getreide. Siedlung aufwerten (produziert 2 Rohstoffe). Max. 4 pro Spieler. Wert: 2 SP."
+          },
+          {
+            "title": "Entwicklungskarten",
+            "detail": "Kosten: 1 Erz + 1 Getreide + 1 Wolle. Typen: Ritter (14), Straßenbau (2), Erfindung (2), Monopol (2), SP-Karten (5). Nicht in der Kaufrunde spielbar."
+          },
+          {
+            "title": "Längste Handelsstraße",
+            "detail": "Erster Spieler mit 5+ zusammenhängenden Straßen erhält dieses Plättchen (2 SP). Kann gestohlen werden."
+          },
+          {
+            "title": "Größte Rittermacht",
+            "detail": "Erster Spieler mit 3 gespielten Rittern erhält dieses Plättchen (2 SP). Kann durch mehr Ritter gestohlen werden."
+          },
+          {
+            "title": "Räuber (bei 7)",
+            "detail": "Spieler mit >7 Karten geben die Hälfte ab. Aktiver Spieler versetzt den Räuber und stiehlt 1 zufällige Karte eines Mitspielers."
+          },
+          {
+            "title": "Handel",
+            "detail": "In deinem Zug: Frei mit Spielern handeln oder mit dem Vorrat zu 4:1 (allgemein), 3:1 (beliebiger Hafen) oder 2:1 (spezieller Hafen) tauschen."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Fester Aufbau",
+            "vp": "10 SP",
+            "description": "Vorgegebenes Feld- und Zahlenlayout für Anfänger.",
+            "details": [
+              "Felder und Zahlen wie in der Anleitung platzieren",
+              "Empfohlen für erste Partie"
+            ]
+          },
+          {
+            "name": "Variabler Aufbau",
+            "vp": "10 SP",
+            "description": "Zufälliger Spielplan für erfahrene Spieler.",
+            "details": [
+              "Seerahmenteile und Landschaftsfelder mischen",
+              "Zahlenchips alphabetisch gegen den Uhrzeigersinn platzieren, Wüste überspringen",
+              "Siedlungen in zwei Runden platzieren (im/gegen den Uhrzeigersinn)"
+            ]
+          }
+        ]
+      }
     },
     "seafarers": {
       "name": "Seefahrer",
@@ -324,7 +410,124 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "13",
+        "setup": [
+          "Standard-Catan-Aufbau plus Seerahmen-Anpassungen für Seefahrer-Szenarien.",
+          "Jeder Spieler erhält 15 Schiffe zusätzlich zu den normalen Spielmaterialien.",
+          "Piratenfigur auf ein beliebiges Seefeld stellen.",
+          "Je nach Szenario: Feste oder variable Inseln aufbauen."
+        ],
+        "turnOverview": [
+          {
+            "title": "Produktion & Aktion",
+            "detail": "Wie im Grundspiel, aber Schiffe können gebaut und bewegt werden. Bei einer 7: Räuber ODER Pirat versetzen."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Schiffe",
+            "detail": "Kosten: 1 Holz + 1 Wolle. Auf Seefeldkanten platziert. Zählen zur Längsten Route. Nicht in der Baurunde bewegbar."
+          },
+          {
+            "title": "Goldfelder",
+            "detail": "Bei passender Zahl wählt jeder angrenzende Spieler 1 beliebigen Rohstoff (2 für eine Stadt)."
+          },
+          {
+            "title": "Pirat",
+            "detail": "Auf ein beliebiges Seefeld bewegen. 1 Rohstoff von einem Spieler mit Schiff dort stehlen. Blockiert Schiffbau/-bewegung."
+          },
+          {
+            "title": "Längste Route",
+            "detail": "Straßen und Schiffe ergeben eine Route, verbinden sich aber nur über eigene Gebäude (Siedlungen/Städte)."
+          },
+          {
+            "title": "Straßenbaukarte",
+            "detail": "Kann 2 Straßen, 2 Schiffe oder je 1 bauen."
+          },
+          {
+            "title": "Inselboni",
+            "detail": "In vielen Szenarien erhält der erste Spieler auf einer neuen Insel VP-Bonus."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Auf zu neuen Ufern",
+            "vp": "14 SP",
+            "description": "Kleine Inseln über das Meer besiedeln.",
+            "details": ["+2 SP für erste Siedlung auf jeder kleinen Insel"]
+          },
+          {
+            "name": "Die vier Inseln",
+            "vp": "13 SP",
+            "description": "Vier separate Inseln kolonisieren.",
+            "details": [
+              "+2 SP für erste Siedlung auf jeder unerforschten Insel"
+            ]
+          },
+          {
+            "name": "Die Nebelinseln",
+            "vp": "12 SP",
+            "description": "Verdeckte Felder werden beim Bauen aufgedeckt.",
+            "details": [
+              "1 Rohstoff bei Entdeckung",
+              "Unbekanntes Terrain sorgt für Überraschungen"
+            ]
+          },
+          {
+            "name": "Durch die Wüste",
+            "vp": "14 SP",
+            "description": "Eine Wüste teilt die Insel in Regionen.",
+            "details": [
+              "+2 SP für erste Siedlung in jeder unerforschten Region"
+            ]
+          },
+          {
+            "name": "Der vergessene Stamm",
+            "vp": "12 SP",
+            "description": "Dörfer auf kleinen Inseln produzieren Stoffmarken.",
+            "details": [
+              "Handelsrouten zu Dörfern aufbauen",
+              "Paar Stoffmarken = 1 SP"
+            ]
+          },
+          {
+            "name": "Stoff für Catan",
+            "vp": "14 SP",
+            "description": "Stoffmarken aus Dorfhandelsrouten.",
+            "details": [
+              "Spiel kann auch enden, wenn 5+ Dörfer leer sind",
+              "Stoff oder Rohstoffe per Pirat stehlen"
+            ]
+          },
+          {
+            "name": "Die Pirateninseln",
+            "vp": "10 SP + Festung",
+            "description": "Kriegsschiffe bauen und Piratenfestungen erobern.",
+            "details": [
+              "Ritterkarten verwandeln Schiffe in Kriegsschiffe",
+              "Keine Längste Route / Größte Rittermacht"
+            ]
+          },
+          {
+            "name": "Die Wunder von Catan",
+            "vp": "10+ SP oder Wunder",
+            "description": "Ein Weltwunder beanspruchen und bauen, um zu gewinnen.",
+            "details": [
+              "4 Stufen, je 5 Rohstoffe Kosten",
+              "Wunder vervollständigen ODER 10+ SP mit höchster Wunderstufe"
+            ]
+          },
+          {
+            "name": "Neue Welt",
+            "vp": "12 SP",
+            "description": "Komplett zufälliges Insellayout.",
+            "details": ["+1 SP pro Siedlung auf unerforschter Insel"]
+          }
+        ]
+      }
     },
     "cities-knights": {
       "name": "Städte & Ritter",
@@ -432,7 +635,68 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "13",
+        "setup": [
+          "Standard-Catan-Aufbau plus Stadtverbesserungstableaus und Fortschrittskartendecks.",
+          "Jeder Spieler ersetzt 1 Siedlung durch eine Stadt (erhält Stadtvorteil).",
+          "Barbarenschiff auf Position 7 der Leiste platzieren.",
+          "Ritter-, Stadtmauer- und Stadtkarten vorbereiten.",
+          "3 Fortschrittskartendecks mischen: Handel, Wissenschaft, Politik."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Ereigniswürfel",
+            "detail": "Barbarenschiff rückt vor oder ein Fortschrittskarten-Wurf findet statt. Wenn die Barbaren die Küste erreichen, wird angegriffen."
+          },
+          {
+            "title": "2. Produktion",
+            "detail": "Wie im Grundspiel, aber Städte produzieren Waren (Stoff, Münze, Papier) statt zusätzlicher Rohstoffe aus den passenden Feldern.",
+            "detail2": ""
+          },
+          {
+            "title": "3. Aktion",
+            "detail": "Handeln und Bauen wie gewohnt, zusätzlich Ritter einsetzen/aufwerten, Stadtmauern bauen, Stadtverbesserungen kaufen."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Waren",
+            "detail": "Stoff (Weide), Münze (Gebirge), Papier (Wald). Werden für Stadtverbesserungen benötigt, nicht für normales Bauen."
+          },
+          {
+            "title": "Stadtverbesserungen",
+            "detail": "3 Leisten: Handel (Stoff), Politik (Münze), Wissenschaft (Papier). Stufen geben bessere Fortschrittskarten und Metropolen-Chancen."
+          },
+          {
+            "title": "Metropolen",
+            "detail": "Bei Stufe 4 einer Verbesserung: Metropole beanspruchen (2 zusätzliche SP). Nur 1 pro Leiste. Kann durch Stufe 5 eines Gegners gestohlen werden."
+          },
+          {
+            "title": "Ritter",
+            "detail": "3 Stärkestufen: Einfach, Stark, Mächtig. Müssen rekrutiert und dann aktiviert werden (1 Getreide + 1 Erz). Können bewegt werden, schwächere feindliche Ritter verdrängen oder den Räuber vertreiben. Alle werden nach Barbarenangriff deaktiviert."
+          },
+          {
+            "title": "Barbarenangriff",
+            "detail": "Barbarenstärke = Gesamtzahl der Städte auf dem Spielplan. Verteidigungsstärke = Summe aktiver Ritter. Wenn die Barbaren gewinnen: Spieler mit wenigsten aktiven Rittern verliert eine Stadt (wird zur Siedlung). Metropolen sind immun."
+          },
+          {
+            "title": "Stadtmauern",
+            "detail": "Unter Städte gelegt. Jede Mauer erhöht das Handkartenlimit bei einer 7 um 2. Max. 3 Mauern."
+          },
+          {
+            "title": "Fortschrittskarten",
+            "detail": "Gezogen basierend auf Ereigniswürfel + Stufenlevel. Handlimit: 4 Fortschrittskarten. Viele einzigartige Effekte in 3 Decks (Handel, Wissenschaft, Politik)."
+          },
+          {
+            "title": "Der Kaufmann",
+            "detail": "Über Fortschrittskarte auf ein Feld neben eigenem Gebäude gesetzt. Gibt 2:1-Tausch für den Rohstoff und ist 1 SP wert."
+          }
+        ],
+        "scenarios": []
+      }
     },
     "traders-barbarians": {
       "name": "Händler & Barbaren",
@@ -467,7 +731,112 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "Variabel",
+        "setup": [
+          "Standard-Catan-Aufbau mit modularen Szenarien und Varianten.",
+          "Jedes Szenario hat eigene Aufbauregeln und Sondermaterialien.",
+          "Varianten können miteinander kombiniert werden."
+        ],
+        "turnOverview": [
+          {
+            "title": "Grundablauf",
+            "detail": "Wie im Grundspiel: Würfeln, Rohstoffe sammeln, handeln und bauen. Szenarien fügen zusätzliche Aktionen und Materialien hinzu."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Modulares Design",
+            "detail": "Varianten und Szenarien können frei kombiniert werden, um das Spiel anzupassen und zu erweitern."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Der freundliche Räuber",
+            "vp": "Variante",
+            "description": "Der Räuber darf nicht auf ein Feld mit Gebäude eines Spielers mit nur 2 SP gestellt werden.",
+            "details": ["Schützt Anfänger vor frühzeitigem Angriff"]
+          },
+          {
+            "name": "Häfen von Catan",
+            "vp": "11 SP",
+            "description": "Stärkster-Häfen-Plättchen (2 SP) für den Spieler mit den meisten SP in Hafen-Gebäuden.",
+            "details": ["Fördert Hafen-Baustrategie"]
+          },
+          {
+            "name": "CATAN Ereigniskarten",
+            "vp": "Variante",
+            "description": "37-Karten-Ereignisstapel ersetzt Würfelwürfe.",
+            "details": [
+              "Karten haben Produktionszahlen + Sonderereignisse",
+              "Ereignisse: Erdbeben, Epidemie, Gute Nachbarn",
+              "Neujahrskarte löst Neustart des Stapels aus"
+            ]
+          },
+          {
+            "name": "CATAN zu Zweit",
+            "vp": "Variante",
+            "description": "2-Spieler-Variante mit neutralen Spielern.",
+            "details": [
+              "Doppelte Produktionsphase (zweimal würfeln)",
+              "Handelsmarken für erzwungenen Tausch oder Räuber",
+              "Muss für neutrale Spieler bauen, wenn man selbst baut"
+            ]
+          },
+          {
+            "name": "Fische fangen",
+            "vp": "10 SP",
+            "description": "Seefeld ersetzt Wüste mit Fischgründen an den Küsten.",
+            "details": [
+              "Fischmarken durch Produktion verdient",
+              "Fische ausgeben: Räuber entfernen (2), Karte stehlen (3), Rohstoff (4), Straße (5), Entwicklungskarte (7)",
+              "Alter Stiefel = 1 SP mehr zum Gewinnen nötig"
+            ]
+          },
+          {
+            "name": "Flüsse von Catan",
+            "vp": "10 SP",
+            "description": "Flussfelder ersetzen 7 Felder. Brücken überqueren Flüsse.",
+            "details": [
+              "Brückenkosten: 2 Lehm + 1 Holz",
+              "Goldmünzen von Flussfeldern",
+              "Reichster Cataner (1 SP) / Ärmster (-2 SP)"
+            ]
+          },
+          {
+            "name": "Karawanen",
+            "vp": "12 SP",
+            "description": "Wagen bilden Züge von der Tränke.",
+            "details": [
+              "Wagen beim Bauen gesammelt, per Abstimmung platziert",
+              "Gebäude zwischen 2 Wagen = +1 SP je",
+              "Wagen zählen zur Längsten Route"
+            ]
+          },
+          {
+            "name": "Barbarenangriff",
+            "vp": "12 SP",
+            "description": "Burgfeld auf dem Spielplan. Ritter verteidigen gegen Barbarenlandungen.",
+            "details": [
+              "Kein Räuber oder Basisentwicklungskarten",
+              "Ritter auf Feldkanten platziert",
+              "3 Barbaren erobern ein Feld; Gefangene = SP"
+            ]
+          },
+          {
+            "name": "Handelsrouten",
+            "vp": "13 SP",
+            "description": "3 Warenfelder. Wagen transportieren Güter.",
+            "details": [
+              "Wagenaufwertungen erhöhen Bewegung",
+              "Gold durch Lieferungen verdient",
+              "Barbaren blockieren Straßen"
+            ]
+          }
+        ]
+      }
     },
     "explorers-pirates": {
       "name": "Entdecker & Piraten",
@@ -513,7 +882,106 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "2–4",
+        "vpToWin": "17",
+        "setup": [
+          "Große Abweichung vom Grundspiel: Keine Entwicklungskarten, keine Städte, kein Räuber.",
+          "Spielplan hat eine Startinsel + 2 unerforschte Regionen (verdeckte Felder).",
+          "Erstes Bauwerk ist eine Hafensiedlung (an der Küste, 2 SP); zweites eine normale Siedlung.",
+          "Jeder Spieler startet mit 2 Goldmünzen.",
+          "Tausch mit dem Vorrat zu 3:1 (keine Häfen). 2 Gold für 1 Rohstoff tauschen (zweimal pro Zug)."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Produktion",
+            "detail": "Würfeln für Rohstoffe. Spieler ohne Produktion erhalten stattdessen 1 Gold."
+          },
+          {
+            "title": "2. Handeln & Bauen",
+            "detail": "Handeln, Siedlungen/Schiffe bauen, Siedler und Crews rekrutieren."
+          },
+          {
+            "title": "3. Schiffbewegung",
+            "detail": "Jedes Schiff hat 4 Bewegungspunkte. 1 Wolle zahlen für +2 BP. Schiffe transportieren Siedler, Crews, Gewürzsäcke und Fischfänge."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Hafensiedlungen",
+            "detail": "Wert: 2 SP. An Küstenmarkierungen gebaut. Können 1 großes oder 2 kleine Teile aufnehmen. Schiffe müssen angrenzend gebaut werden."
+          },
+          {
+            "title": "Schiffe",
+            "detail": "Kosten: 1 Wolle + 1 Holz. Haben 4 BP pro Zug. Transportieren Teile zu Zielen. Bis zu 2 Schiffe pro Kante."
+          },
+          {
+            "title": "Erkunden",
+            "detail": "Ein Schiff neben ein verdecktes Feld bewegen deckt es auf. Landfelder erhalten Zahlenchips. 1 passender Rohstoff (oder 2 Gold) bei Entdeckung."
+          },
+          {
+            "title": "Siedler",
+            "detail": "Kosten: 1 Getreide + 1 Erz. Werden auf Schiffen transportiert. Siedlung bauen durch Abladen an einer Landfeld-Kreuzung."
+          },
+          {
+            "title": "Crews",
+            "detail": "Kosten: 1 Getreide + 1 Wolle. Für Piratenversteck-Eroberungen und Gewürzfarm-Aktivierung benötigt."
+          },
+          {
+            "title": "Piratenschiff",
+            "detail": "Bei einer 7: Piratenschiff auf ein Seefeld stellen. 1 Rohstoff von einem Spieler mit Schiff dort stehlen. Vorbeifahren kostet 1 Gold Tribut."
+          },
+          {
+            "title": "Piraten vertreiben",
+            "detail": "Unbewegtes Schiff neben Piratenfeld würfelt 1 Würfel; eine 6 vertreibt den Piraten."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Land in Sicht!",
+            "vp": "Einführung",
+            "description": "Erkundungsgrundlagen lernen.",
+            "details": ["Felder entdecken, Siedlungen auf neuen Inseln bauen"]
+          },
+          {
+            "name": "Piratenverstecke",
+            "vp": "+ Mission",
+            "description": "Piratenverstecke auf Goldfeldern erobern.",
+            "details": [
+              "3 Crew einsetzen, um ein Versteck zu erobern",
+              "Held (höchster Würfel + Crew) rückt extra auf Missionsleiste"
+            ]
+          },
+          {
+            "name": "Fische für Catan",
+            "vp": "+ Mission",
+            "description": "Fische fangen und an den Rat von Catan liefern.",
+            "details": [
+              "Würfel während der Bewegung; passender Fischschwarm = Fischfang",
+              "An den Rat liefern, um auf der Missionsleiste vorzurücken"
+            ]
+          },
+          {
+            "name": "Gewürze für Catan",
+            "vp": "+ Mission",
+            "description": "Gewürzsäcke an den Rat liefern.",
+            "details": [
+              "Crew auf Gewürzfarm abladen, Gewürzsack laden, liefern",
+              "Jede Farm gewährt einen permanenten Bonus (Schnelle Reise, Piratenbonus, Schnelles Gold)"
+            ]
+          },
+          {
+            "name": "Entdecker & Piraten (Komplett)",
+            "vp": "17 SP",
+            "description": "Das komplette Erlebnis mit allen 3 Missionen.",
+            "details": [
+              "Alle Missionen gleichzeitig aktiv",
+              "Missionsleisten-Positionen und Bonus-SP-Plättchen tragen zum Sieg bei"
+            ]
+          }
+        ]
+      }
     }
   }
 }

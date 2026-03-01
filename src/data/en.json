@@ -3,7 +3,17 @@
     "labelGame": "Game",
     "labelLang": "Language",
     "subtitle": "Quick reference for cards & rules",
-    "footer": "Community reference — not affiliated with Catan Studio."
+    "footer": "Community reference — not affiliated with Catan Studio.",
+    "tabCards": "Cards",
+    "tabGameplay": "Gameplay",
+    "noGameplay": "Gameplay information coming soon.",
+    "labelPlayers": "Players",
+    "labelVP": "Victory Points to Win",
+    "titleSetup": "Setup",
+    "titleTurn": "Turn Overview",
+    "titleRules": "Key Rules",
+    "titleSpecial": "Special Rules",
+    "titleScenarios": "Scenarios & Variants"
   },
   "games": {
     "base": {
@@ -260,10 +270,86 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "10",
+        "setup": [
+          "Assemble the sea frame, place 19 terrain hexes and number discs inside.",
+          "Sort resource cards into 5 stacks; shuffle development cards facedown.",
+          "Place the Robber on the desert hex.",
+          "Each player places 2 settlements and 2 roads (round 1 clockwise, round 2 reverse).",
+          "Collect starting resources from hexes adjacent to your second settlement."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Production Phase",
+            "detail": "Optionally play a development card, then roll both dice. All players collect resources from hexes matching the roll. On a 7: players with >7 cards discard half, then move the Robber and steal."
+          },
+          {
+            "title": "2. Action Phase",
+            "detail": "Trade with players or the supply (4:1, 3:1, or 2:1 via ports). Build roads, settlements, cities, or buy development cards. Play 1 development card if you didn't before the roll."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Roads",
+            "detail": "Cost: 1 Lumber + 1 Brick. Must connect to your existing network. Max 15 per player. Worth 0 VP."
+          },
+          {
+            "title": "Settlements",
+            "detail": "Cost: 1 Lumber + 1 Brick + 1 Wool + 1 Grain. Must obey distance rule (2 edges from any building). Max 5 per player. Worth 1 VP."
+          },
+          {
+            "title": "Cities",
+            "detail": "Cost: 3 Ore + 2 Grain. Upgrade a settlement (produces 2 resources). Max 4 per player. Worth 2 VP."
+          },
+          {
+            "title": "Development Cards",
+            "detail": "Cost: 1 Ore + 1 Grain + 1 Wool. Types: Knight (14), Road Building (2), Year of Plenty (2), Monopoly (2), VP cards (5). Cannot play on the turn bought."
+          },
+          {
+            "title": "Longest Road",
+            "detail": "First player with 5+ continuous roads gets this tile (2 VP). Can be stolen if another player builds longer."
+          },
+          {
+            "title": "Largest Army",
+            "detail": "First player to play 3 Knights gets this tile (2 VP). Can be stolen by playing more."
+          },
+          {
+            "title": "Robber (rolling a 7)",
+            "detail": "Players with >7 cards discard half. Active player moves the Robber to a new hex and steals 1 random card from an adjacent player."
+          },
+          {
+            "title": "Trading",
+            "detail": "On your turn: trade freely with other players, or trade with the supply at 4:1 (general), 3:1 (any port), or 2:1 (specific port)."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Fixed Setup",
+            "vp": "10 VP",
+            "description": "Pre-determined hex and number layout for beginners.",
+            "details": [
+              "Terrain hexes and numbers placed as shown in rulebook",
+              "Recommended for first-time players"
+            ]
+          },
+          {
+            "name": "Variable Setup",
+            "vp": "10 VP",
+            "description": "Randomized board for experienced players.",
+            "details": [
+              "Shuffle sea frame pieces and terrain hexes",
+              "Place number discs alphabetically counterclockwise, skip the desert",
+              "Players place settlements in two rounds (clockwise then reverse)"
+            ]
+          }
+        ]
+      }
     },
     "seafarers": {
-      "name": "Seafarers",
+      "name": "Catan: Seafarers",
       "description": "Explore an archipelago of islands. Build ships to sail the seas, discover new islands with gold fields, and settle distant shores for bonus Victory Points.",
       "sections": [
         {
@@ -325,10 +411,127 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "Varies by scenario (12–14)",
+        "setup": [
+          "Uses a special Seafarers sea frame with multiple islands.",
+          "Place terrain hexes, sea hexes, and gold field hexes per scenario map.",
+          "Each player receives 15 ships in addition to standard pieces.",
+          "Robber and Pirate are both in play."
+        ],
+        "turnOverview": [
+          {
+            "title": "Production & Action",
+            "detail": "Same as base game, but ships can be built and moved. On a 7, choose to move the Robber OR the Pirate."
+          },
+          {
+            "title": "Ship Movement",
+            "detail": "Once per turn, move 1 ship that has an open end (not connected on both sides) to a new legal position."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Ships",
+            "detail": "Cost: 1 Lumber + 1 Wool. Placed on sea hex edges. Count toward Longest Route. Cannot move on the turn built."
+          },
+          {
+            "title": "Gold Fields",
+            "detail": "When the number is rolled, each adjacent player chooses any 1 resource (2 for a city)."
+          },
+          {
+            "title": "Pirate",
+            "detail": "Move to any sea hex. Steal 1 resource from a player with a ship there. Blocks ship placement/movement."
+          },
+          {
+            "title": "Longest Route",
+            "detail": "Roads and ships combine into a route, but only connect through your own buildings (settlements/cities)."
+          },
+          {
+            "title": "Road Building card",
+            "detail": "Can build 2 roads, 2 ships, or 1 of each."
+          },
+          {
+            "title": "Knight card",
+            "detail": "Lets you move the Robber OR the Pirate."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Heading for New Shores",
+            "vp": "14 VP",
+            "description": "Settle small islands across the sea.",
+            "details": ["+2 VP for first settlement on each small island"]
+          },
+          {
+            "name": "The Four Islands",
+            "vp": "13 VP",
+            "description": "Four separate islands to colonize.",
+            "details": ["+2 VP for first settlement on each unexplored island"]
+          },
+          {
+            "name": "The Fog Islands",
+            "vp": "12 VP",
+            "description": "Facedown hexes revealed when you build adjacent.",
+            "details": [
+              "Gain 1 resource on discovery",
+              "Unknown terrain adds exploration challenge"
+            ]
+          },
+          {
+            "name": "Through the Desert",
+            "vp": "14 VP",
+            "description": "A desert divides the island into regions.",
+            "details": ["+2 VP for first settlement in each unexplored region"]
+          },
+          {
+            "name": "The Forgotten Tribe",
+            "vp": "12 VP",
+            "description": "Villages on small islands produce cloth tokens.",
+            "details": [
+              "Establish trade routes to villages",
+              "Pair of cloth tokens = 1 VP"
+            ]
+          },
+          {
+            "name": "Cloth for Catan",
+            "vp": "14 VP",
+            "description": "Cloth tokens from village trade routes.",
+            "details": [
+              "Game can also end when 5+ villages are empty",
+              "Steal cloth or resources via pirate"
+            ]
+          },
+          {
+            "name": "The Pirate Islands",
+            "vp": "10 VP + fortress",
+            "description": "Build warships and conquer pirate fortresses.",
+            "details": [
+              "Knight cards convert ships to warships",
+              "No Longest Route/Largest Army tiles"
+            ]
+          },
+          {
+            "name": "The Wonders of Catan",
+            "vp": "10+ VP or Wonder",
+            "description": "Claim and build one of 5 Wonders to win.",
+            "details": [
+              "4 levels, each costs 5 resources",
+              "Complete your Wonder OR reach 10+ VP with highest wonder level"
+            ]
+          },
+          {
+            "name": "New World",
+            "vp": "12 VP",
+            "description": "Fully randomized island layout.",
+            "details": ["+1 VP per settlement on unexplored island"]
+          }
+        ]
+      }
     },
     "cities-knights": {
-      "name": "Cities & Knights",
+      "name": "Catan: Cities & Knights",
       "description": "A deeper strategic experience. Commodities replace some resources, city improvements unlock powerful abilities, and the Barbarians threaten your cities each turn.",
       "sections": [
         {
@@ -433,10 +636,70 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "13",
+        "setup": [
+          "Uses the C&K sea frame with barbarian track.",
+          "No base game development cards — replaced by progress cards (3 decks).",
+          "No Largest Army tile.",
+          "Each player's second starting piece is a city (not a settlement).",
+          "Each player gets a city improvement board with 3 tracks and 3 cubes.",
+          "Robber starts off the board until the first barbarian attack."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Roll Dice + Event Die",
+            "detail": "Production die determines resources. Event die advances barbarians or triggers progress card draws."
+          },
+          {
+            "title": "2. Commodities",
+            "detail": "Cities on mountains produce Coin (+Ore), on pastures produce Cloth (+Wool), on forests produce Paper (+Wood)."
+          },
+          {
+            "title": "3. Action Phase",
+            "detail": "Trade, build, improve cities, recruit/activate knights, or play progress cards."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Commodities",
+            "detail": "Cities produce commodities alongside resources: Coin (mountains), Cloth (pastures), Paper (forests). Used to advance city improvement tracks."
+          },
+          {
+            "title": "City Improvements",
+            "detail": "3 tracks — Trade, Science, Politics. Advance by spending commodities. Level 3 unlocks a permanent ability. Level 4 earns a Metropolis (2 VP)."
+          },
+          {
+            "title": "Metropolis",
+            "detail": "First to level 4 on a track gains that Metropolis (placed on a city, total 4 VP). First to level 5 gets permanent control. Cannot be pillaged."
+          },
+          {
+            "title": "Knights",
+            "detail": "3 strength levels: Basic, Strong, Mighty. Must be recruited then activated (costs 1 Grain + 1 Ore). Can move, displace weaker enemy knights, or chase the robber. All deactivate after barbarian attack."
+          },
+          {
+            "title": "Barbarian Attack",
+            "detail": "Barbarian strength = total cities on board. Defender strength = sum of active knights. If barbarians win: player with fewest active knights loses a city (downgraded to settlement). Metropolises are immune."
+          },
+          {
+            "title": "City Walls",
+            "detail": "Placed under cities. Each wall adds +2 to your hand limit when a 7 is rolled. Max 3 walls."
+          },
+          {
+            "title": "Progress Cards",
+            "detail": "Drawn based on event die + your track level. Hand limit of 4 progress cards. Many unique effects across 3 decks (Trade, Science, Politics)."
+          },
+          {
+            "title": "The Merchant",
+            "detail": "Placed via progress card on a hex adjacent to your building. Gives 2:1 trade on that resource and is worth 1 VP."
+          }
+        ]
+      }
     },
     "traders-barbarians": {
-      "name": "Traders & Barbarians",
+      "name": "Catan: Traders & Barbarians",
       "description": "A collection of five scenarios and variants that add new dimensions to the classic game: trade routes, caravans, barbarian invasions, and more.",
       "sections": [
         {
@@ -468,10 +731,109 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "2–4",
+        "vpToWin": "Varies by scenario (10–13)",
+        "setup": [
+          "Modular expansion — 4 standalone variants and 5 standalone scenarios.",
+          "Variants and scenarios can be mixed and matched.",
+          "Includes a 2-player variant with neutral players."
+        ],
+        "keyRules": [
+          {
+            "title": "Modular Design",
+            "detail": "Each variant/scenario adds or changes specific rules. Pick and combine freely with the base game."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "The Friendly Robber",
+            "vp": "Variant",
+            "description": "The Robber cannot be moved to a hex with a building of a player who only has 2 VP.",
+            "details": ["Protects beginners from early-game targeting"]
+          },
+          {
+            "name": "Harbors of Catan",
+            "vp": "11 VP",
+            "description": "Strongest Ports tile (2 VP) for the player with most VP in buildings on ports.",
+            "details": ["Encourages port building strategy"]
+          },
+          {
+            "name": "CATAN Event Cards",
+            "vp": "Variant",
+            "description": "37-card event deck replaces dice rolls.",
+            "details": [
+              "Cards have production numbers + special events",
+              "Events include Earthquake, Epidemic, Good Neighbors",
+              "New Year card triggers deck reshuffle"
+            ]
+          },
+          {
+            "name": "CATAN for Two",
+            "vp": "Variant",
+            "description": "2-player variant with neutral players.",
+            "details": [
+              "Double production phase (roll twice)",
+              "Trade tokens for forced trades or moving the robber",
+              "Must build for neutral players when you build"
+            ]
+          },
+          {
+            "name": "Fishing on Catan",
+            "vp": "10 VP",
+            "description": "Lake hex replaces desert with fishing grounds on coasts.",
+            "details": [
+              "Fish tokens earned from production",
+              "Spend fish: remove robber (2), steal card (3), free resource (4), free road (5), free dev card (7)",
+              "Old boot = need +1 VP to win"
+            ]
+          },
+          {
+            "name": "Rivers of Catan",
+            "vp": "10 VP",
+            "description": "River tiles replace 7 hexes. Bridges cross rivers.",
+            "details": [
+              "Bridge cost: 2 Brick + 1 Wood",
+              "Gold coins from river tiles",
+              "Wealthiest Catanian (1 VP) / Poorest (-2 VP)"
+            ]
+          },
+          {
+            "name": "Merchant Trains",
+            "vp": "12 VP",
+            "description": "Wagons form trains from the watering hole.",
+            "details": [
+              "Wagons collected when building, placed via voting",
+              "Buildings between 2 wagons = +1 VP each",
+              "Wagons count toward Longest Route"
+            ]
+          },
+          {
+            "name": "Barbarian Attack",
+            "vp": "12 VP",
+            "description": "Castle hex on board. Knights defend against barbarian landings.",
+            "details": [
+              "No robber or base development cards",
+              "Knights placed on hex edges",
+              "3 barbarians conquer a hex; prisoners = VP"
+            ]
+          },
+          {
+            "name": "Trade Routes",
+            "vp": "13 VP",
+            "description": "3 commodity hexes. Wagons transport goods between them.",
+            "details": [
+              "Wagon upgrades increase movement",
+              "Gold earned from deliveries",
+              "Barbarians block roads"
+            ]
+          }
+        ]
+      }
     },
     "explorers-pirates": {
-      "name": "Explorers & Pirates",
+      "name": "Catan: Explorers & Pirates",
       "description": "Set sail to explore unknown waters. Build ships and harbors, complete missions like spice trade or fish hauls, and colonize new lands far from home.",
       "sections": [
         {
@@ -514,7 +876,106 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "2–4",
+        "vpToWin": "17",
+        "setup": [
+          "Major departure from base game: no development cards, no cities, no robber.",
+          "Board has a starting island + 2 unexplored regions (facedown hexes).",
+          "First piece is a harbor settlement (on coast, worth 2 VP); second is a regular settlement.",
+          "Each player starts with 2 gold coins.",
+          "Trade with supply at 3:1 (no ports). Trade 2 gold for 1 resource (twice per turn)."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Production",
+            "detail": "Roll dice for resources. Players with no production receive 1 gold instead."
+          },
+          {
+            "title": "2. Trade & Build",
+            "detail": "Trade, build settlements/ships, recruit settlers and crews."
+          },
+          {
+            "title": "3. Ship Movement",
+            "detail": "Each ship has 4 movement points. Pay 1 Wool for +2 MP. Ships carry settlers, crews, spice sacks, and fish hauls."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Harbor Settlements",
+            "detail": "Worth 2 VP. Built on coast markers. Can hold 1 large piece or 2 small pieces. Ships must be built adjacent."
+          },
+          {
+            "title": "Ships",
+            "detail": "Cost: 1 Wool + 1 Lumber. Have 4 MP per turn. Carry pieces to destinations. Up to 2 ships per edge."
+          },
+          {
+            "title": "Exploring",
+            "detail": "Moving a ship adjacent to a facedown hex flips it. Land hexes get a number disc. Gain 1 matching resource (or 2 gold) on discovery."
+          },
+          {
+            "title": "Settlers",
+            "detail": "Cost: 1 Grain + 1 Ore. Carried on ships. Build a settlement by unloading at a land hex intersection."
+          },
+          {
+            "title": "Crews",
+            "detail": "Cost: 1 Grain + 1 Wool. Used for pirate lair captures and spice farm activation."
+          },
+          {
+            "title": "Pirate Ship",
+            "detail": "On a 7, place your pirate ship on a sea hex. Steal 1 resource from a player with a ship there. Moving past costs 1 gold tribute."
+          },
+          {
+            "title": "Chase Away Pirate",
+            "detail": "Unmoved ship adjacent to pirate hex rolls 1 die; a 6 chases the pirate away."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Land Ho!",
+            "vp": "Introductory",
+            "description": "Learn exploration basics.",
+            "details": ["Discover hexes, build settlements on new islands"]
+          },
+          {
+            "name": "Pirate Lairs",
+            "vp": "+ mission",
+            "description": "Capture pirate lairs on gold field hexes.",
+            "details": [
+              "Place 3 crew to capture a lair",
+              "Hero (highest die + crew) advances extra on mission track"
+            ]
+          },
+          {
+            "name": "Fish for Catan",
+            "vp": "+ mission",
+            "description": "Catch and deliver fish to the Council of Catan.",
+            "details": [
+              "Roll die during movement; matching fish shoal = fish haul",
+              "Deliver to Council to advance mission track"
+            ]
+          },
+          {
+            "name": "Spices for Catan",
+            "vp": "+ mission",
+            "description": "Deliver spice sacks to the Council.",
+            "details": [
+              "Unload crew on spice farm, load spice sack, deliver",
+              "Each farm grants a permanent bonus (Swift Voyage, Pirate Bonus, Fast Gold)"
+            ]
+          },
+          {
+            "name": "Explorers & Pirates (Full)",
+            "vp": "17 VP",
+            "description": "The complete experience with all 3 missions.",
+            "details": [
+              "All missions active simultaneously",
+              "Mission track positions and bonus VP tiles contribute to victory"
+            ]
+          }
+        ]
+      }
     }
   }
 }

@@ -1,0 +1,640 @@
+{
+  "ui": {
+    "labelGame": "Jogo",
+    "labelLang": "Idioma",
+    "subtitle": "Referência rápida de cartas e regras",
+    "footer": "Referência da comunidade — não afiliada à Catan Studio.",
+    "tabCards": "Cartas",
+    "tabGameplay": "Jogabilidade",
+    "noGameplay": "Informação de jogabilidade em breve.",
+    "labelPlayers": "Jogadores",
+    "labelVP": "Pontos de Vitória para vencer",
+    "titleSetup": "Preparação",
+    "titleTurn": "Visão geral do turno",
+    "titleRules": "Regras principais",
+    "titleSpecial": "Regras especiais",
+    "titleScenarios": "Cenários e variantes"
+  },
+  "games": {
+    "base": {
+      "name": "Catan (Jogo Base)",
+      "description": "O clássico Colonizadores de Catan. Colete recursos, construa estradas, povoações e cidades, negocie com outros jogadores e seja o primeiro a atingir 10 Pontos de Vitória.",
+      "sections": [
+        {
+          "id": "resources",
+          "title": "Cartas de Recurso",
+          "icon": "🌾",
+          "cards": [
+            {
+              "id": "lumber",
+              "type": "resource",
+              "icon": "🌲",
+              "image": "src/assets/images/common/lumber.png",
+              "name": "Madeira",
+              "count": 19,
+              "description": "Produzido pelos hexágonos de Floresta quando o seu número é rolado.",
+              "usages": []
+            },
+            {
+              "id": "brick",
+              "type": "resource",
+              "icon": "🧱",
+              "image": "src/assets/images/common/brick.png",
+              "name": "Tijolo",
+              "count": 19,
+              "description": "Produzido pelos hexágonos de Colina quando o seu número é rolado.",
+              "usages": []
+            },
+            {
+              "id": "wool",
+              "type": "resource",
+              "icon": "🐑",
+              "image": "src/assets/images/common/wool.png",
+              "name": "Lã",
+              "count": 19,
+              "description": "Produzido pelos hexágonos de Pastagem quando o seu número é rolado.",
+              "usages": []
+            },
+            {
+              "id": "grain",
+              "type": "resource",
+              "icon": "🌾",
+              "image": "src/assets/images/common/grain.png",
+              "name": "Grão",
+              "count": 19,
+              "description": "Produzido pelos hexágonos de Campos quando o seu número é rolado.",
+              "usages": []
+            },
+            {
+              "id": "ore",
+              "type": "resource",
+              "icon": "⛏️",
+              "image": "src/assets/images/common/ore.png",
+              "name": "Minério",
+              "count": 19,
+              "description": "Produzido pelos hexágonos de Montanha quando o seu número é rolado.",
+              "usages": []
+            }
+          ]
+        },
+        {
+          "id": "development",
+          "title": "Cartas de Desenvolvimento",
+          "icon": "🃏",
+          "cards": [
+            {
+              "id": "knight",
+              "type": "development",
+              "icon": "⚔️",
+              "image": "src/assets/images/basic/development-cards/knight.png",
+              "name": "Cavaleiro",
+              "count": 14,
+              "description": "Desloque o Ladrão para qualquer hexágono de terreno. Roube uma carta de recurso de um oponente adjacente.",
+              "usages": []
+            },
+            {
+              "id": "road-building",
+              "type": "development",
+              "icon": "🛤️",
+              "image": "src/assets/images/basic/development-cards/road-building.png",
+              "name": "Construção de Estradas",
+              "count": 2,
+              "description": "Coloque 2 novas estradas no tabuleiro como se as tivesse acabado de construir.",
+              "usages": []
+            },
+            {
+              "id": "year-of-plenty",
+              "type": "development",
+              "icon": "🎁",
+              "image": "src/assets/images/basic/development-cards/year-of-plenty.png",
+              "name": "Ano da Abundância",
+              "count": 2,
+              "description": "Tome quaisquer 2 cartas de recurso do banco. Adicione-as à sua mão.",
+              "usages": []
+            },
+            {
+              "id": "monopoly",
+              "type": "development",
+              "icon": "💰",
+              "image": "src/assets/images/basic/development-cards/monopoly.png",
+              "name": "Monopólio",
+              "count": 2,
+              "description": "Nomeie um tipo de recurso. Todos os outros jogadores devem dar-lhe todas as suas cartas desse tipo.",
+              "usages": []
+            },
+            {
+              "id": "chapel",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/chappel.png",
+              "name": "Capela",
+              "count": 1,
+              "description": "Vale 1 Ponto de Vitória. Mantida em segredo até a revelar para vencer (ou até o fim do jogo).",
+              "usages": []
+            },
+            {
+              "id": "great-hall",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/great-hall.png",
+              "name": "Grande Sala",
+              "count": 1,
+              "description": "Vale 1 Ponto de Vitória. Mantida em segredo até a revelar para vencer (ou até o fim do jogo).",
+              "usages": []
+            },
+            {
+              "id": "library",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/library.png",
+              "name": "Biblioteca",
+              "count": 1,
+              "description": "Vale 1 Ponto de Vitória. Mantida em segredo até a revelar para vencer (ou até o fim do jogo).",
+              "usages": []
+            },
+            {
+              "id": "market",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/market.png",
+              "name": "Mercado",
+              "count": 1,
+              "description": "Vale 1 Ponto de Vitória. Mantida em segredo até a revelar para vencer (ou até o fim do jogo).",
+              "usages": []
+            },
+            {
+              "id": "university",
+              "type": "development",
+              "icon": "⭐",
+              "image": "src/assets/images/basic/development-cards/university.png",
+              "name": "Universidade",
+              "count": 1,
+              "description": "Vale 1 Ponto de Vitória. Mantida em segredo até a revelar para vencer (ou até o fim do jogo).",
+              "usages": []
+            }
+          ]
+        },
+        {
+          "id": "special",
+          "title": "Cartas Especiais",
+          "icon": "🏆",
+          "cards": [
+            {
+              "id": "longest-road",
+              "type": "special",
+              "icon": "🛣️",
+              "image": "src/assets/images/basic/longest-road.png",
+              "name": "Estrada Mais Longa",
+              "description": "Atribuída ao primeiro jogador com uma estrada contínua de 5+ segmentos. Vale 2 Pontos de Vitória. Outro jogador pode roubá-la construindo uma estrada mais longa.",
+              "usages": []
+            },
+            {
+              "id": "largest-army",
+              "type": "special",
+              "icon": "🪖",
+              "image": "src/assets/images/basic/longest-army.png",
+              "name": "Maior Exército",
+              "description": "Atribuído ao primeiro jogador que joga 3 cartas de Cavaleiro. Vale 2 Pontos de Vitória. Outro jogador pode roubá-lo jogando mais Cavaleiros.",
+              "usages": []
+            }
+          ]
+        },
+        {
+          "id": "building-costs",
+          "title": "Custos de Construção",
+          "icon": "🔨",
+          "cards": [
+            {
+              "id": "building-cost-card",
+              "type": "resource",
+              "icon": "🔨",
+              "image": "src/assets/images/common/building-cost.png",
+              "name": "Carta de Custos de Construção",
+              "description": "Carta de referência mostrando todos os custos de construção em Catan.",
+              "usages": []
+            }
+          ]
+        }
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "10",
+        "setup": [
+          "Monte a moldura do mar, coloque 19 hexágonos de terreno e os discos de número no interior.",
+          "Separe as cartas de recurso em 5 montes; embaralhe as cartas de desenvolvimento e coloque-as viradas para baixo.",
+          "Coloque o Ladrão no hexágono do deserto.",
+          "Cada jogador coloca 2 povoações e 2 estradas (1.ª ronda no sentido horário, 2.ª ronda em sentido inverso).",
+          "Colete recursos iniciais dos hexágonos adjacentes à sua segunda povoação."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Fase de Produção",
+            "detail": "Opcionalmente jogue uma carta de desenvolvimento, depois role os dois dados. Todos os jogadores coletam recursos dos hexágonos que correspondem ao resultado. Com 7: jogadores com >7 cartas descartam metade, depois movem o Ladrão e roubam."
+          },
+          {
+            "title": "2. Fase de Ação",
+            "detail": "Negocie com jogadores ou com a reserva (4:1, 3:1, ou 2:1 via portos). Construa estradas, povoações, cidades ou compre cartas de desenvolvimento. Jogue 1 carta de desenvolvimento se não a tiver jogado antes do lançamento."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Estradas",
+            "detail": "Custo: 1 Madeira + 1 Tijolo. Devem ligar à sua rede existente. Máx. 15 por jogador. Não valem VP."
+          },
+          {
+            "title": "Povoações",
+            "detail": "Custo: 1 Madeira + 1 Tijolo + 1 Lã + 1 Grão. Devem obedecer à regra de distância (2 arestas de qualquer edifício). Máx. 5 por jogador. Valem 1 VP."
+          },
+          {
+            "title": "Cidades",
+            "detail": "Custo: 3 Minério + 2 Grão. Atualiza uma povoação (produz 2 recursos). Máx. 4 por jogador. Valem 2 VP."
+          },
+          {
+            "title": "Cartas de Desenvolvimento",
+            "detail": "Custo: 1 Minério + 1 Grão + 1 Lã. Tipos: Cavaleiro (14), Construção de Estradas (2), Ano da Abundância (2), Monopólio (2), Cartas de VP (5). Não podem ser jogadas no turno em que são compradas."
+          },
+          {
+            "title": "Estrada Mais Longa",
+            "detail": "O primeiro jogador com 5+ estradas contínuas recebe esta peça (2 VP). Pode ser tomada por outro jogador que construa uma estrada mais longa."
+          },
+          {
+            "title": "Maior Exército",
+            "detail": "O primeiro jogador a jogar 3 Cavaleiros recebe esta peça (2 VP). Pode ser tomada por outro jogador que jogue mais Cavaleiros."
+          },
+          {
+            "title": "Ladrão (rolando um 7)",
+            "detail": "Jogadores com >7 cartas descartam metade. O jogador ativo move o Ladrão para um novo hexágono e rouba 1 carta aleatória de um jogador adjacente."
+          },
+          {
+            "title": "Trocas",
+            "detail": "No seu turno: troque livremente com outros jogadores, ou com a reserva a 4:1 (geral), 3:1 (porto qualquer), ou 2:1 (porto específico)."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Montagem Fixa",
+            "vp": "10 VP",
+            "description": "Layout de hexágonos e números pré-determinado para iniciantes.",
+            "details": [
+              "Hexágonos de terreno e números colocados conforme o manual",
+              "Recomendado para jogadores de primeira vez"
+            ]
+          },
+          {
+            "name": "Montagem Variável",
+            "vp": "10 VP",
+            "description": "Tabuleiro aleatório para jogadores experientes.",
+            "details": [
+              "Embaralhe as peças da moldura do mar e os hexágonos de terreno",
+              "Coloque os discos de número alfabeticamente em sentido anti-horário, ignore o deserto",
+              "Os jogadores colocam povoações em duas rondas (horário depois inverso)"
+            ]
+          }
+        ]
+      }
+    },
+    "seafarers": {
+      "name": "Catan: Navegantes",
+      "description": "Explore um arquipélago de ilhas. Construa navios para navegar os mares, descubra novas ilhas com campos de ouro e colonize costas distantes para bónus de Pontos de Vitória.",
+      "sections": [
+        {
+          "id": "ships",
+          "title": "Navios",
+          "icon": "⛵",
+          "cards": [
+            {
+              "id": "ship",
+              "type": "ship",
+              "icon": "⛵",
+              "name": "Navio",
+              "description": "Os navios estendem as suas rotas através de hexágonos de mar. Funcionam como estradas no mar.",
+              "usages": []
+            },
+            {
+              "id": "gold-field",
+              "type": "resource",
+              "icon": "🪙",
+              "name": "Campo de Ouro",
+              "description": "Hex especial que produz um recurso selvagem. Quando o seu número é rolado, os jogadores adjacentes escolhem qualquer recurso do banco.",
+              "usages": []
+            }
+          ]
+        },
+        {
+          "id": "seafarers-special",
+          "title": "Regras Especiais",
+          "icon": "🗺️",
+          "cards": [
+            {
+              "id": "discovery-vp",
+              "type": "special",
+              "icon": "🏆",
+              "name": "Bónus por Nova Ilha",
+              "description": "Na maioria dos cenários de Navegantes, colocar a sua primeira povoação numa nova ilha dá-lhe 1 Ponto de Vitória extra.",
+              "usages": []
+            },
+            {
+              "id": "pirate",
+              "type": "special",
+              "icon": "🏴‍☠️",
+              "name": "Pirata",
+              "description": "O Pirata substitui o Ladrão nos Navegantes. Mova-o para qualquer hexágono de mar para bloquear navios. Roube a um jogador adjacente com um navio aí.",
+              "usages": []
+            }
+          ]
+        }
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "Varia por cenário (12–14)",
+        "setup": [
+          "Usa uma moldura especial de Navegantes com múltiplas ilhas.",
+          "Coloque hexágonos de terreno, hexágonos de mar e campos de ouro conforme o mapa do cenário.",
+          "Cada jogador recebe 15 navios além das peças padrão.",
+          "O Ladrão e o Pirata estão ambos em jogo."
+        ],
+        "turnOverview": [
+          {
+            "title": "Produção & Ação",
+            "detail": "Igual ao jogo base, mas podem construir e mover navios. Com 7, escolha mover o Ladrão OU o Pirata."
+          },
+          {
+            "title": "Movimento de Navios",
+            "detail": "Uma vez por turno, mova 1 navio que tenha uma extremidade aberta (não ligado em ambas as laterais) para uma nova posição legal."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Navios",
+            "detail": "Custo: 1 Madeira + 1 Lã. Colocados nas arestas de hexágonos de mar. Contam para a Maior Rota. Não podem mover no turno em que são construídos."
+          },
+          {
+            "title": "Campos de Ouro",
+            "detail": "Quando o número é rolado, cada jogador adjacente escolhe qualquer 1 recurso (2 para uma cidade)."
+          },
+          {
+            "title": "Pirata",
+            "detail": "Mova para qualquer hexágono de mar. Roube 1 recurso a um jogador com um navio aí. Bloqueia colocação/movimento de navios."
+          },
+          {
+            "title": "Maior Rota",
+            "detail": "Estradas e navios combinam numa rota, mas só se ligam através das suas próprias construções (povoações/cidades)."
+          },
+          {
+            "title": "Carta Construção de Estradas",
+            "detail": "Pode construir 2 estradas, 2 navios, ou 1 de cada."
+          },
+          {
+            "title": "Carta Cavaleiro",
+            "detail": "Permite mover o Ladrão OU o Pirata."
+          }
+        ],
+        "scenarios": []
+      }
+    },
+    "cities-knights": {
+      "name": "Catan: Cidades e Cavaleiros",
+      "description": "Uma experiência estratégica mais profunda. Mercadorias substituem alguns recursos, melhorias de cidade desbloqueiam habilidades poderosas, e os Bárbaros ameaçam as suas cidades a cada turno.",
+      "sections": [
+        {
+          "id": "commodities",
+          "title": "Cartas de Mercadoria",
+          "icon": "📦",
+          "cards": [
+            {
+              "id": "cloth",
+              "type": "commodity",
+              "icon": "🧵",
+              "name": "Tecido",
+              "description": "Mercadoria produzida por cidades melhoradas em Pastagens. Usada para avançar na coluna de Comércio das melhorias da cidade.",
+              "usages": []
+            },
+            {
+              "id": "coin",
+              "type": "commodity",
+              "icon": "🪙",
+              "name": "Moeda",
+              "description": "Mercadoria produzida por cidades melhoradas em Montanhas. Usada para avançar na coluna de Ciência.",
+              "usages": []
+            },
+            {
+              "id": "paper",
+              "type": "commodity",
+              "icon": "📜",
+              "name": "Papel",
+              "description": "Mercadoria produzida por cidades melhoradas em Florestas. Usada para avançar na coluna de Política.",
+              "usages": []
+            }
+          ]
+        },
+        {
+          "id": "progress-cards",
+          "title": "Cartas de Progresso (exemplos)",
+          "icon": "📋",
+          "cards": [
+            {
+              "id": "crane",
+              "type": "progress",
+              "icon": "🏗️",
+              "name": "Guindaste (Ciência)",
+              "description": "Neste turno, pode construir uma melhoria de cidade por 1 mercadoria a menos do que o normal.",
+              "usages": [
+                "Poupar uma mercadoria ao subir uma melhoria de cidade"
+              ]
+            },
+            {
+              "id": "merchant",
+              "type": "progress",
+              "icon": "🧑‍💼",
+              "name": "Mercador (Comércio)",
+              "description": "Efeito de progresso que beneficia trocas e pode dar vantagens temporárias.",
+              "usages": []
+            }
+          ]
+        },
+        {
+          "id": "barbarians",
+          "title": "Bárbaros",
+          "icon": "⚔️",
+          "cards": []
+        }
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "13",
+        "setup": [
+          "Usa a moldura C&K com pista dos bárbaros.",
+          "Sem cartas de desenvolvimento do jogo base — substituídas por cartas de progresso (3 baralhos).",
+          "Sem peça Maior Exército.",
+          "A segunda peça inicial de cada jogador é uma cidade (não uma povoação).",
+          "Cada jogador recebe um tabuleiro de melhorias de cidade com 3 trilhos e 3 cubos.",
+          "O Ladrão começa fora do tabuleiro até ao primeiro ataque bárbaro."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Lançar Dados + Dado de Evento",
+            "detail": "O dado de produção determina recursos. O dado de evento avança os bárbaros ou dispara a compra de cartas de progresso."
+          },
+          {
+            "title": "2. Mercadorias",
+            "detail": "Cidades produzem mercadorias: Moeda (montanhas), Tecido (pastagens), Papel (florestas)."
+          },
+          {
+            "title": "3. Fase de Ação",
+            "detail": "Negocie, construa, melhore cidades, recrute/ative cavaleiros ou jogue cartas de progresso."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Mercadorias",
+            "detail": "Cidades produzem mercadorias além dos recursos: Moeda (montanhas), Tecido (pastagens), Papel (florestas). Usadas para subir nas trilhas de melhorias."
+          },
+          {
+            "title": "Melhorias de Cidade",
+            "detail": "3 trilhos — Comércio, Ciência, Política. Avance gastando mercadorias. Nível 3 desbloqueia uma habilidade permanente. Nível 4 dá um Metropolis (2 VP)."
+          },
+          {
+            "title": "Metrópole",
+            "detail": "O primeiro a alcançar o nível 4 numa trilha ganha essa Metrópole (colocada numa cidade, total 4 VP). Primeiro a chegar ao nível 5 ganha controle permanente. Imune a pilhagem."
+          },
+          {
+            "title": "Cavaleiros",
+            "detail": "3 níveis de força: Básico, Forte, Poderoso. Devem ser recrutados e depois ativados (custa 1 Grão + 1 Minério). Podem mover, deslocar cavaleiros mais fracos ou expulsar o ladrão. Todos desativam após ataque bárbaro."
+          },
+          {
+            "title": "Ataque Bárbaro",
+            "detail": "Força bárbara = número de cidades em jogo. Força dos defensores = soma dos cavaleiros ativos. Se os bárbaros vencerem: o jogador com menos cavaleiros ativos perde uma cidade (rebaixada a povoação). Metrópoles são imunes."
+          },
+          {
+            "title": "Muros da Cidade",
+            "detail": "Colocados sob cidades. Cada muro adiciona +2 ao limite de cartas na mão quando um 7 é rolado. Máx. 3 muros."
+          },
+          {
+            "title": "Cartas de Progresso",
+            "detail": "Compradas com base no dado de evento + nível na trilha. Limite de mão de 4 cartas de progresso. Muitos efeitos únicos em 3 baralhos (Comércio, Ciência, Política)."
+          },
+          {
+            "title": "O Mercador",
+            "detail": "Colocado via carta de progresso num hexágono adjacente à sua construção. Dá troca 2:1 nesse recurso e vale 1 VP."
+          }
+        ]
+      }
+    },
+    "traders-barbarians": {
+      "name": "Catan: Comerciantes e Bárbaros",
+      "description": "Uma coleção de cinco cenários e variantes que adicionam novas dimensões ao jogo clássico: rotas comerciais, carretas, invasões bárbaras e mais.",
+      "sections": [
+        {
+          "id": "trade-routes",
+          "title": "Rotas Comerciais",
+          "icon": "🚗",
+          "cards": []
+        }
+      ],
+      "gameplay": {
+        "players": "2–4",
+        "vpToWin": "Varia por cenário (10–13)",
+        "setup": [
+          "Design modular — 4 variantes independentes e 5 cenários independentes.",
+          "Variantes e cenários podem ser combinados livremente.",
+          "Inclui uma variante para 2 jogadores com jogadores neutros."
+        ],
+        "keyRules": [
+          {
+            "title": "Design Modular",
+            "detail": "Cada variante/cenário adiciona ou altera regras específicas. Escolha e combine livremente com o jogo base."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "O Ladrão Amigável",
+            "vp": "Variante",
+            "description": "O Ladrão não pode ser movido para um hexágono com um edifício de um jogador que só tem 2 VP.",
+            "details": ["Protege iniciantes de ataques iniciais"]
+          },
+          {
+            "name": "Portos de Catan",
+            "vp": "11 VP",
+            "description": "Peça de Portos mais forte (2 VP) para o jogador com mais VP em construções nos portos.",
+            "details": ["Incentiva estratégia de construção em portos"]
+          }
+        ]
+      }
+    },
+    "explorers-pirates": {
+      "name": "Catan: Exploradores e Piratas",
+      "description": "Zarpe para explorar águas desconhecidas. Construa navios e portos, complete missões como comércio de especiarias ou pescarias, e colonize novas terras distantes.",
+      "sections": [
+        {
+          "id": "missions",
+          "title": "Peças de Missão",
+          "icon": "🎯",
+          "cards": []
+        }
+      ],
+      "gameplay": {
+        "players": "2–4",
+        "vpToWin": "17",
+        "setup": [
+          "Grande desvio do jogo base: sem cartas de desenvolvimento, sem cidades, sem ladrão.",
+          "O tabuleiro tem uma ilha inicial + 2 regiões inexploradas (hexágonos virados para baixo).",
+          "A primeira peça é uma povoação de porto (na costa, vale 2 VP); a segunda é uma povoação normal.",
+          "Cada jogador começa com 2 moedas de ouro.",
+          "Troque com a reserva a 3:1 (sem portos). Troque 2 ouro por 1 recurso (duas vezes por turno)."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Produção",
+            "detail": "Role os dados para recursos. Jogadores sem produção recebem 1 ouro em vez disso."
+          },
+          {
+            "title": "2. Troca & Construção",
+            "detail": "Negocie, construa povoações/navios, recrute colonos e tripulações."
+          },
+          {
+            "title": "3. Movimento de Navios",
+            "detail": "Cada navio tem 4 pontos de movimento. Pague 1 Lã por +2 PM. Navios transportam colonos, tripulações, sacos de especiarias e cargas de peixe."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Povoações de Porto",
+            "detail": "Valem 2 VP. Construídas em marcadores costeiros. Podem conter 1 peça grande ou 2 pequenas. Navios devem ser construídos adjacentes."
+          },
+          {
+            "title": "Navios",
+            "detail": "Custo: 1 Lã + 1 Madeira. Têm 4 PM por turno. Transportam peças para destinos. Máx. 2 navios por aresta."
+          },
+          {
+            "title": "Exploração",
+            "detail": "Mover um navio adjacente a um hexágono virado para baixo vira-o. Hexágonos de terra recebem um disco de número. Ganhe 1 recurso correspondente (ou 2 ouro) na descoberta."
+          },
+          {
+            "title": "Colonizadores",
+            "detail": "Custo: 1 Grão + 1 Minério. Carregados em navios. Construa uma povoação descarregando numa interseção terrestre."
+          },
+          {
+            "title": "Tripulações",
+            "detail": "Custo: 1 Grão + 1 Lã. Usadas para capturar covis piratas e ativar fazendas de especiarias."
+          },
+          {
+            "title": "Navio Pirata",
+            "detail": "Com 7, coloque o seu navio pirata num hexágono de mar. Roube 1 recurso a um jogador com um navio aí. Passar por ele custa 1 ouro de tributo."
+          },
+          {
+            "title": "Expulsar o Pirata",
+            "detail": "Um navio imóvel adjacente a um hexágono do pirata rola 1 dado; um 6 expulsa o pirata."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Terra à Vista!",
+            "vp": "Introdutório",
+            "description": "Aprenda os princípios da exploração.",
+            "details": ["Descubra hexágonos, construa povoações em novas ilhas"]
+          }
+        ]
+      }
+    }
+  }
+}

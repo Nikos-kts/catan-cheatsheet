@@ -3,7 +3,17 @@
     "labelGame": "Juego",
     "labelLang": "Idioma",
     "subtitle": "Referencia rápida de cartas y reglas",
-    "footer": "Referencia comunitaria — no afiliada con Catan Studio."
+    "footer": "Referencia comunitaria — no afiliada con Catan Studio.",
+    "tabCards": "Cartas",
+    "tabGameplay": "Juego",
+    "noGameplay": "Información de juego próximamente.",
+    "labelPlayers": "Jugadores",
+    "labelVP": "Puntos de Victoria para Ganar",
+    "titleSetup": "Preparación",
+    "titleTurn": "Resumen del Turno",
+    "titleRules": "Reglas Clave",
+    "titleSpecial": "Reglas Especiales",
+    "titleScenarios": "Escenarios y Variantes"
   },
   "games": {
     "base": {
@@ -259,7 +269,83 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "10",
+        "setup": [
+          "Montar el marco marítimo, colocar 19 hexágonos de terreno y fichas de números.",
+          "Separar cartas de recurso en 5 pilas; barajar cartas de desarrollo boca abajo.",
+          "Colocar el Ladrón en el desierto.",
+          "Cada jugador coloca 2 poblados y 2 caminos (ronda 1 en sentido horario, ronda 2 inverso).",
+          "Recoger recursos iniciales de los hexágonos junto al segundo poblado."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Fase de Producción",
+            "detail": "Opcionalmente jugar una carta de desarrollo, luego lanzar ambos dados. Todos los jugadores reciben recursos de los hexágonos coincidentes. Con un 7: jugadores con >7 cartas descartan la mitad, luego mover el Ladrón y robar."
+          },
+          {
+            "title": "2. Fase de Acción",
+            "detail": "Comerciar con jugadores o el suministro (4:1, 3:1 o 2:1 vía puertos). Construir caminos, poblados, ciudades o comprar cartas de desarrollo. Jugar 1 carta de desarrollo si no se jugó antes de la tirada."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Caminos",
+            "detail": "Coste: 1 Madera + 1 Arcilla. Debe conectar a tu red existente. Máx. 15 por jugador. Valor: 0 PV."
+          },
+          {
+            "title": "Poblados",
+            "detail": "Coste: 1 Madera + 1 Arcilla + 1 Lana + 1 Cereal. Regla de distancia (2 aristas de cualquier edificio). Máx. 5 por jugador. Valor: 1 PV."
+          },
+          {
+            "title": "Ciudades",
+            "detail": "Coste: 3 Mineral + 2 Cereal. Mejora un poblado (produce 2 recursos). Máx. 4 por jugador. Valor: 2 PV."
+          },
+          {
+            "title": "Cartas de Desarrollo",
+            "detail": "Coste: 1 Mineral + 1 Cereal + 1 Lana. Tipos: Caballero (14), Construcción de Caminos (2), Año de Abundancia (2), Monopolio (2), cartas de PV (5). No se puede jugar en el turno de compra."
+          },
+          {
+            "title": "Ruta Comercial Más Larga",
+            "detail": "Primer jugador con 5+ caminos continuos recibe esta ficha (2 PV). Puede ser robada."
+          },
+          {
+            "title": "Ejército Más Grande",
+            "detail": "Primer jugador que juega 3 Caballeros recibe esta ficha (2 PV). Puede ser robada jugando más."
+          },
+          {
+            "title": "Ladrón (al sacar 7)",
+            "detail": "Jugadores con >7 cartas descartan la mitad. El jugador activo mueve el Ladrón y roba 1 carta aleatoria de un jugador adyacente."
+          },
+          {
+            "title": "Comercio",
+            "detail": "En tu turno: comercia libremente con otros jugadores, o intercambia con el suministro a 4:1 (general), 3:1 (cualquier puerto) o 2:1 (puerto específico)."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Configuración Fija",
+            "vp": "10 PV",
+            "description": "Disposición predeterminada para principiantes.",
+            "details": [
+              "Terrenos y números colocados según el manual",
+              "Recomendado para la primera partida"
+            ]
+          },
+          {
+            "name": "Configuración Variable",
+            "vp": "10 PV",
+            "description": "Tablero aleatorio para jugadores experimentados.",
+            "details": [
+              "Mezclar piezas del marco y hexágonos de terreno",
+              "Colocar fichas de números alfabéticamente en sentido antihorario, saltar el desierto",
+              "Colocar poblados en dos rondas (horario y antihorario)"
+            ]
+          }
+        ]
+      }
     },
     "seafarers": {
       "name": "Navegantes",
@@ -324,7 +410,120 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "13",
+        "setup": [
+          "Configuración estándar de Catan más adaptaciones para escenarios de Navegantes.",
+          "Cada jugador recibe 15 barcos además del material normal.",
+          "Colocar la figura de Pirata en un hexágono de mar.",
+          "Según el escenario: montar islas fijas o variables."
+        ],
+        "turnOverview": [
+          {
+            "title": "Producción y Acción",
+            "detail": "Como en el juego base, pero se pueden construir y mover barcos. Con un 7: mover el Ladrón O el Pirata."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Barcos",
+            "detail": "Coste: 1 Madera + 1 Lana. Se colocan en aristas de hexágonos de mar. Cuentan para la Ruta Más Larga. No se pueden mover en el turno de construcción."
+          },
+          {
+            "title": "Campos de Oro",
+            "detail": "Cuando sale su número, cada jugador adyacente elige 1 recurso (2 por una ciudad)."
+          },
+          {
+            "title": "Pirata",
+            "detail": "Mover a cualquier hexágono de mar. Robar 1 recurso de un jugador con barco allí. Bloquea construcción/movimiento de barcos."
+          },
+          {
+            "title": "Ruta Más Larga",
+            "detail": "Caminos y barcos forman una ruta, pero solo se conectan a través de edificios propios (poblados/ciudades)."
+          },
+          {
+            "title": "Carta de Construcción",
+            "detail": "Puede construir 2 caminos, 2 barcos o 1 de cada."
+          },
+          {
+            "title": "Bonos de Isla",
+            "detail": "En muchos escenarios, el primer jugador en una nueva isla recibe bonus de PV."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Rumbo a Nuevas Costas",
+            "vp": "14 PV",
+            "description": "Colonizar pequeñas islas a través del mar.",
+            "details": ["+2 PV por primer poblado en cada isla pequeña"]
+          },
+          {
+            "name": "Las Cuatro Islas",
+            "vp": "13 PV",
+            "description": "Cuatro islas separadas a colonizar.",
+            "details": ["+2 PV por primer poblado en cada isla inexplorada"]
+          },
+          {
+            "name": "Las Islas de Niebla",
+            "vp": "12 PV",
+            "description": "Hexágonos boca abajo revelados al construir adyacente.",
+            "details": [
+              "1 recurso al descubrir",
+              "Terreno desconocido añade desafío de exploración"
+            ]
+          },
+          {
+            "name": "A Través del Desierto",
+            "vp": "14 PV",
+            "description": "Un desierto divide la isla en regiones.",
+            "details": ["+2 PV por primer poblado en cada región inexplorada"]
+          },
+          {
+            "name": "La Tribu Olvidada",
+            "vp": "12 PV",
+            "description": "Aldeas en islas pequeñas producen fichas de tela.",
+            "details": [
+              "Establecer rutas comerciales a aldeas",
+              "Par de fichas de tela = 1 PV"
+            ]
+          },
+          {
+            "name": "Tela para Catan",
+            "vp": "14 PV",
+            "description": "Fichas de tela de rutas comerciales con aldeas.",
+            "details": [
+              "El juego puede terminar cuando 5+ aldeas estén vacías",
+              "Robar tela o recursos vía pirata"
+            ]
+          },
+          {
+            "name": "Las Islas Pirata",
+            "vp": "10 PV + fortaleza",
+            "description": "Construir barcos de guerra y conquistar fortalezas piratas.",
+            "details": [
+              "Cartas de Caballero convierten barcos en barcos de guerra",
+              "Sin Ruta Más Larga / Ejército Más Grande"
+            ]
+          },
+          {
+            "name": "Las Maravillas de Catan",
+            "vp": "10+ PV o Maravilla",
+            "description": "Reclamar y construir una de 5 Maravillas para ganar.",
+            "details": [
+              "4 niveles, cada uno cuesta 5 recursos",
+              "Completar la Maravilla O alcanzar 10+ PV con el nivel más alto"
+            ]
+          },
+          {
+            "name": "Nuevo Mundo",
+            "vp": "12 PV",
+            "description": "Disposición de islas totalmente aleatoria.",
+            "details": ["+1 PV por poblado en isla inexplorada"]
+          }
+        ]
+      }
     },
     "cities-knights": {
       "name": "Ciudades y Caballeros",
@@ -432,7 +631,67 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "13",
+        "setup": [
+          "Configuración estándar de Catan más tableros de mejora de ciudad y mazos de cartas de progreso.",
+          "Cada jugador reemplaza 1 poblado por una ciudad (recibe ventaja de ciudad).",
+          "Colocar el barco bárbaro en la posición 7 de la barra.",
+          "Preparar cartas de caballero, murallas y ciudad.",
+          "Barajar 3 mazos de cartas de progreso: Comercio, Ciencia, Política."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Dado de Evento",
+            "detail": "El barco bárbaro avanza o se produce una tirada de carta de progreso. Cuando los bárbaros llegan a la costa, atacan."
+          },
+          {
+            "title": "2. Producción",
+            "detail": "Como en el juego base, pero las ciudades producen mercancías (Tela, Moneda, Papel) en lugar de recursos adicionales de los hexágonos correspondientes."
+          },
+          {
+            "title": "3. Acción",
+            "detail": "Comerciar y construir como siempre, además reclutar/mejorar caballeros, construir murallas, comprar mejoras de ciudad."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Mercancías",
+            "detail": "Tela (Prado), Moneda (Montaña), Papel (Bosque). Se usan para mejoras de ciudad, no para construcción normal."
+          },
+          {
+            "title": "Mejoras de Ciudad",
+            "detail": "3 vías: Comercio (Tela), Política (Moneda), Ciencia (Papel). Los niveles dan mejores cartas de progreso y oportunidades de Metrópoli."
+          },
+          {
+            "title": "Metrópolis",
+            "detail": "Al nivel 4 de una mejora: reclamar Metrópoli (2 PV adicionales). Solo 1 por vía. Puede ser robada por un oponente de nivel 5."
+          },
+          {
+            "title": "Caballeros",
+            "detail": "3 niveles de fuerza: Básico, Fuerte, Poderoso. Deben reclutarse y luego activarse (1 Cereal + 1 Mineral). Pueden moverse, desplazar caballeros enemigos más débiles o expulsar al Ladrón. Todos se desactivan tras ataque bárbaro."
+          },
+          {
+            "title": "Ataque Bárbaro",
+            "detail": "Fuerza bárbara = total de ciudades en el tablero. Fuerza defensiva = suma de caballeros activos. Si ganan los bárbaros: el jugador con menos caballeros activos pierde una ciudad (degradada a poblado). Las Metrópolis son inmunes."
+          },
+          {
+            "title": "Murallas",
+            "detail": "Colocadas bajo ciudades. Cada muralla añade +2 al límite de mano al sacar un 7. Máx. 3 murallas."
+          },
+          {
+            "title": "Cartas de Progreso",
+            "detail": "Se roban según dado de evento + nivel de vía. Límite de mano: 4 cartas de progreso. Muchos efectos únicos en 3 mazos (Comercio, Ciencia, Política)."
+          },
+          {
+            "title": "El Mercader",
+            "detail": "Colocado vía carta de progreso en un hexágono adyacente a tu edificio. Da comercio 2:1 de ese recurso y vale 1 PV."
+          }
+        ],
+        "scenarios": []
+      }
     },
     "traders-barbarians": {
       "name": "Mercaderes y Bárbaros",
@@ -467,7 +726,112 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "Variable",
+        "setup": [
+          "Configuración estándar de Catan con escenarios y variantes modulares.",
+          "Cada escenario tiene sus propias reglas de preparación y materiales especiales.",
+          "Las variantes se pueden combinar entre sí."
+        ],
+        "turnOverview": [
+          {
+            "title": "Flujo Básico",
+            "detail": "Como en el juego base: lanzar dados, recoger recursos, comerciar y construir. Los escenarios añaden acciones y materiales adicionales."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Diseño Modular",
+            "detail": "Variantes y escenarios se pueden combinar libremente para personalizar y ampliar el juego."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "El Ladrón Amistoso",
+            "vp": "Variante",
+            "description": "El Ladrón no puede moverse a un hexágono con edificio de un jugador con solo 2 PV.",
+            "details": ["Protege a principiantes de ataques tempranos"]
+          },
+          {
+            "name": "Puertos de Catan",
+            "vp": "11 PV",
+            "description": "Ficha de Puertos Más Fuertes (2 PV) para el jugador con más PV en edificios portuarios.",
+            "details": ["Fomenta estrategia de construcción en puertos"]
+          },
+          {
+            "name": "Cartas de Evento CATAN",
+            "vp": "Variante",
+            "description": "Mazo de 37 cartas de evento reemplaza los dados.",
+            "details": [
+              "Cartas con números de producción + eventos especiales",
+              "Eventos: Terremoto, Epidemia, Buenos Vecinos",
+              "Carta de Año Nuevo reinicia el mazo"
+            ]
+          },
+          {
+            "name": "CATAN para Dos",
+            "vp": "Variante",
+            "description": "Variante para 2 jugadores con jugadores neutrales.",
+            "details": [
+              "Doble fase de producción (tirar dos veces)",
+              "Fichas de comercio para intercambios forzados o mover al Ladrón",
+              "Debes construir para jugadores neutrales cuando construyes"
+            ]
+          },
+          {
+            "name": "Pesca en Catan",
+            "vp": "10 PV",
+            "description": "Hexágono de lago reemplaza al desierto con zonas de pesca en costas.",
+            "details": [
+              "Fichas de pez ganadas por producción",
+              "Gastar peces: quitar ladrón (2), robar carta (3), recurso gratis (4), camino gratis (5), carta de desarrollo (7)",
+              "Bota vieja = necesitas +1 PV para ganar"
+            ]
+          },
+          {
+            "name": "Ríos de Catan",
+            "vp": "10 PV",
+            "description": "Fichas de río reemplazan 7 hexágonos. Puentes cruzan ríos.",
+            "details": [
+              "Coste del puente: 2 Arcilla + 1 Madera",
+              "Monedas de oro de fichas de río",
+              "Cataneo más Rico (1 PV) / Más Pobre (-2 PV)"
+            ]
+          },
+          {
+            "name": "Caravanas",
+            "vp": "12 PV",
+            "description": "Vagones forman trenes desde el abrevadero.",
+            "details": [
+              "Vagones recolectados al construir, colocados por votación",
+              "Edificios entre 2 vagones = +1 PV cada uno",
+              "Vagones cuentan para la Ruta Más Larga"
+            ]
+          },
+          {
+            "name": "Ataque Bárbaro",
+            "vp": "12 PV",
+            "description": "Hexágono de castillo en el tablero. Caballeros defienden contra desembarcos bárbaros.",
+            "details": [
+              "Sin ladrón ni cartas de desarrollo base",
+              "Caballeros colocados en aristas de hexágonos",
+              "3 bárbaros conquistan un hexágono; prisioneros = PV"
+            ]
+          },
+          {
+            "name": "Rutas Comerciales",
+            "vp": "13 PV",
+            "description": "3 hexágonos de mercancía. Vagones transportan bienes.",
+            "details": [
+              "Mejoras de vagón aumentan movimiento",
+              "Oro ganado por entregas",
+              "Bárbaros bloquean caminos"
+            ]
+          }
+        ]
+      }
     },
     "explorers-pirates": {
       "name": "Exploradores y Piratas",
@@ -513,7 +877,108 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "2–4",
+        "vpToWin": "17",
+        "setup": [
+          "Gran diferencia con el juego base: sin cartas de desarrollo, sin ciudades, sin ladrón.",
+          "El tablero tiene una isla inicial + 2 regiones inexploradas (hexágonos boca abajo).",
+          "Primera pieza es un poblado portuario (en costa, vale 2 PV); segunda es un poblado normal.",
+          "Cada jugador empieza con 2 monedas de oro.",
+          "Comercio con el suministro a 3:1 (sin puertos). Cambiar 2 oro por 1 recurso (dos veces por turno)."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Producción",
+            "detail": "Lanzar dados para recursos. Jugadores sin producción reciben 1 oro en su lugar."
+          },
+          {
+            "title": "2. Comerciar y Construir",
+            "detail": "Comerciar, construir poblados/barcos, reclutar colonos y tripulaciones."
+          },
+          {
+            "title": "3. Movimiento de Barcos",
+            "detail": "Cada barco tiene 4 puntos de movimiento. Pagar 1 Lana por +2 PM. Los barcos transportan colonos, tripulaciones, sacos de especias y capturas de peces."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Poblados Portuarios",
+            "detail": "Valen 2 PV. Construidos en marcadores de costa. Pueden contener 1 pieza grande o 2 pequeñas. Los barcos deben construirse adyacentes."
+          },
+          {
+            "title": "Barcos",
+            "detail": "Coste: 1 Lana + 1 Madera. Tienen 4 PM por turno. Transportan piezas a destinos. Hasta 2 barcos por arista."
+          },
+          {
+            "title": "Explorar",
+            "detail": "Mover un barco junto a un hexágono boca abajo lo revela. Los hexágonos de tierra reciben fichas de números. 1 recurso coincidente (o 2 oro) al descubrir."
+          },
+          {
+            "title": "Colonos",
+            "detail": "Coste: 1 Cereal + 1 Mineral. Transportados en barcos. Construir poblado descargándolo en una intersección de tierra."
+          },
+          {
+            "title": "Tripulaciones",
+            "detail": "Coste: 1 Cereal + 1 Lana. Usadas para capturas de guaridas piratas y activación de granjas de especias."
+          },
+          {
+            "title": "Barco Pirata",
+            "detail": "Con un 7: colocar barco pirata en un hexágono de mar. Robar 1 recurso de un jugador con barco allí. Pasar al lado cuesta 1 tributo de oro."
+          },
+          {
+            "title": "Ahuyentar al Pirata",
+            "detail": "Barco inmóvil junto a hexágono pirata lanza 1 dado; un 6 ahuyenta al pirata."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "¡Tierra a la Vista!",
+            "vp": "Introductorio",
+            "description": "Aprender lo básico de exploración.",
+            "details": [
+              "Descubrir hexágonos, construir poblados en nuevas islas"
+            ]
+          },
+          {
+            "name": "Guaridas Piratas",
+            "vp": "+ misión",
+            "description": "Capturar guaridas piratas en hexágonos de oro.",
+            "details": [
+              "Colocar 3 tripulación para capturar una guarida",
+              "Héroe (mejor dado + tripulación) avanza extra en la pista de misión"
+            ]
+          },
+          {
+            "name": "Peces para Catan",
+            "vp": "+ misión",
+            "description": "Pescar y entregar peces al Consejo de Catan.",
+            "details": [
+              "Lanzar dado durante movimiento; banco de peces coincidente = captura",
+              "Entregar al Consejo para avanzar en la pista de misión"
+            ]
+          },
+          {
+            "name": "Especias para Catan",
+            "vp": "+ misión",
+            "description": "Entregar sacos de especias al Consejo.",
+            "details": [
+              "Descargar tripulación en granja de especias, cargar saco, entregar",
+              "Cada granja da un bonus permanente (Viaje Rápido, Bonus Pirata, Oro Rápido)"
+            ]
+          },
+          {
+            "name": "Exploradores y Piratas (Completo)",
+            "vp": "17 PV",
+            "description": "La experiencia completa con las 3 misiones.",
+            "details": [
+              "Todas las misiones activas simultáneamente",
+              "Posiciones en pistas de misión y fichas de bonus PV contribuyen a la victoria"
+            ]
+          }
+        ]
+      }
     }
   }
 }

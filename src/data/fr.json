@@ -3,7 +3,17 @@
     "labelGame": "Jeu",
     "labelLang": "Langue",
     "subtitle": "Référence rapide des cartes et règles",
-    "footer": "Référence communautaire — non affiliée à Catan Studio."
+    "footer": "Référence communautaire — non affiliée à Catan Studio.",
+    "tabCards": "Cartes",
+    "tabGameplay": "Jeu",
+    "noGameplay": "Informations de jeu à venir.",
+    "labelPlayers": "Joueurs",
+    "labelVP": "Points de Victoire pour Gagner",
+    "titleSetup": "Mise en Place",
+    "titleTurn": "Aperçu du Tour",
+    "titleRules": "Règles Clés",
+    "titleSpecial": "Règles Spéciales",
+    "titleScenarios": "Scénarios et Variantes"
   },
   "games": {
     "base": {
@@ -259,7 +269,83 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "10",
+        "setup": [
+          "Assembler le cadre maritime, placer 19 tuiles de terrain et les jetons numérotés.",
+          "Trier les cartes ressource en 5 piles ; mélanger les cartes développement face cachée.",
+          "Placer le Voleur sur le désert.",
+          "Chaque joueur place 2 colonies et 2 routes (tour 1 dans le sens horaire, tour 2 inversé).",
+          "Récolter les ressources de départ des hexagones adjacents à la deuxième colonie."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Phase de Production",
+            "detail": "Jouer éventuellement une carte développement, puis lancer les deux dés. Tous les joueurs reçoivent des ressources des hexagones correspondants. Sur un 7 : les joueurs avec >7 cartes défaussent la moitié, puis déplacer le Voleur et voler."
+          },
+          {
+            "title": "2. Phase d'Action",
+            "detail": "Commercer avec les joueurs ou la réserve (4:1, 3:1 ou 2:1 via les ports). Construire des routes, colonies, villes ou acheter des cartes développement. Jouer 1 carte développement si non jouée avant le lancé."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Routes",
+            "detail": "Coût : 1 Bois + 1 Argile. Doit se connecter à votre réseau existant. Max 15 par joueur. Valeur : 0 PV."
+          },
+          {
+            "title": "Colonies",
+            "detail": "Coût : 1 Bois + 1 Argile + 1 Laine + 1 Blé. Règle de distance (2 arêtes de tout bâtiment). Max 5 par joueur. Valeur : 1 PV."
+          },
+          {
+            "title": "Villes",
+            "detail": "Coût : 3 Minerai + 2 Blé. Améliore une colonie (produit 2 ressources). Max 4 par joueur. Valeur : 2 PV."
+          },
+          {
+            "title": "Cartes Développement",
+            "detail": "Coût : 1 Minerai + 1 Blé + 1 Laine. Types : Chevalier (14), Construction de Routes (2), Invention (2), Monopole (2), cartes PV (5). Ne peut être jouée au tour d'achat."
+          },
+          {
+            "title": "Route la Plus Longue",
+            "detail": "Premier joueur avec 5+ routes continues reçoit cette tuile (2 PV). Peut être volée."
+          },
+          {
+            "title": "Armée la Plus Grande",
+            "detail": "Premier joueur à jouer 3 Chevaliers reçoit cette tuile (2 PV). Peut être volée en jouant plus."
+          },
+          {
+            "title": "Voleur (sur un 7)",
+            "detail": "Les joueurs avec >7 cartes défaussent la moitié. Le joueur actif déplace le Voleur et vole 1 carte aléatoire d'un joueur adjacent."
+          },
+          {
+            "title": "Commerce",
+            "detail": "Pendant votre tour : commercez librement avec les joueurs, ou échangez avec la réserve à 4:1 (général), 3:1 (port quelconque) ou 2:1 (port spécifique)."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Configuration Fixe",
+            "vp": "10 PV",
+            "description": "Disposition prédéterminée pour les débutants.",
+            "details": [
+              "Terrains et numéros placés selon le livret de règles",
+              "Recommandé pour la première partie"
+            ]
+          },
+          {
+            "name": "Configuration Variable",
+            "vp": "10 PV",
+            "description": "Plateau aléatoire pour joueurs expérimentés.",
+            "details": [
+              "Mélanger les pièces du cadre et les tuiles de terrain",
+              "Placer les jetons numérotés alphabétiquement dans le sens antihoraire, sauter le désert",
+              "Placer les colonies en deux tours (horaire puis inversé)"
+            ]
+          }
+        ]
+      }
     },
     "seafarers": {
       "name": "Marins",
@@ -324,7 +410,124 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "13",
+        "setup": [
+          "Configuration standard de Catan plus adaptations pour les scénarios Marins.",
+          "Chaque joueur reçoit 15 bateaux en plus du matériel normal.",
+          "Placer la figurine Pirate sur un hexagone maritime.",
+          "Selon le scénario : monter des îles fixes ou variables."
+        ],
+        "turnOverview": [
+          {
+            "title": "Production et Action",
+            "detail": "Comme dans le jeu de base, mais les bateaux peuvent être construits et déplacés. Sur un 7 : déplacer le Voleur OU le Pirate."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Bateaux",
+            "detail": "Coût : 1 Bois + 1 Laine. Placés sur les arêtes de mer. Comptent pour la Route la Plus Longue. Ne peuvent pas être déplacés au tour de construction."
+          },
+          {
+            "title": "Champs d'Or",
+            "detail": "Quand leur numéro sort, chaque joueur adjacent choisit 1 ressource (2 pour une ville)."
+          },
+          {
+            "title": "Pirate",
+            "detail": "Déplacer sur n'importe quel hexagone maritime. Voler 1 ressource d'un joueur avec un bateau là. Bloque la construction/déplacement de bateaux."
+          },
+          {
+            "title": "Route la Plus Longue",
+            "detail": "Routes et bateaux forment une route mais ne se connectent qu'à travers vos propres bâtiments (colonies/villes)."
+          },
+          {
+            "title": "Carte Construction",
+            "detail": "Peut construire 2 routes, 2 bateaux ou 1 de chaque."
+          },
+          {
+            "title": "Bonus d'Île",
+            "detail": "Dans de nombreux scénarios, le premier joueur sur une nouvelle île reçoit un bonus de PV."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Cap sur de Nouveaux Rivages",
+            "vp": "14 PV",
+            "description": "Coloniser de petites îles à travers la mer.",
+            "details": ["+2 PV pour la première colonie sur chaque petite île"]
+          },
+          {
+            "name": "Les Quatre Îles",
+            "vp": "13 PV",
+            "description": "Quatre îles séparées à coloniser.",
+            "details": [
+              "+2 PV pour la première colonie sur chaque île inexplorée"
+            ]
+          },
+          {
+            "name": "Les Îles de Brume",
+            "vp": "12 PV",
+            "description": "Hexagones face cachée révélés lors de la construction adjacente.",
+            "details": [
+              "1 ressource à la découverte",
+              "Terrain inconnu ajoute un défi d'exploration"
+            ]
+          },
+          {
+            "name": "À Travers le Désert",
+            "vp": "14 PV",
+            "description": "Un désert divise l'île en régions.",
+            "details": [
+              "+2 PV pour la première colonie dans chaque région inexplorée"
+            ]
+          },
+          {
+            "name": "La Tribu Oubliée",
+            "vp": "12 PV",
+            "description": "Les villages sur les petites îles produisent des jetons de tissu.",
+            "details": [
+              "Établir des routes commerciales vers les villages",
+              "Paire de jetons de tissu = 1 PV"
+            ]
+          },
+          {
+            "name": "Tissu pour Catan",
+            "vp": "14 PV",
+            "description": "Jetons de tissu des routes commerciales avec les villages.",
+            "details": [
+              "Le jeu peut aussi finir quand 5+ villages sont vides",
+              "Voler tissu ou ressources via le pirate"
+            ]
+          },
+          {
+            "name": "Les Îles Pirates",
+            "vp": "10 PV + forteresse",
+            "description": "Construire des navires de guerre et conquérir des forteresses pirates.",
+            "details": [
+              "Les cartes Chevalier convertissent les bateaux en navires de guerre",
+              "Pas de Route Plus Longue / Armée Plus Grande"
+            ]
+          },
+          {
+            "name": "Les Merveilles de Catan",
+            "vp": "10+ PV ou Merveille",
+            "description": "Réclamer et construire l'une des 5 Merveilles pour gagner.",
+            "details": [
+              "4 niveaux, chacun coûte 5 ressources",
+              "Compléter votre Merveille OU atteindre 10+ PV avec le niveau le plus élevé"
+            ]
+          },
+          {
+            "name": "Nouveau Monde",
+            "vp": "12 PV",
+            "description": "Disposition d'îles entièrement aléatoire.",
+            "details": ["+1 PV par colonie sur île inexplorée"]
+          }
+        ]
+      }
     },
     "cities-knights": {
       "name": "Villes & Chevaliers",
@@ -434,7 +637,67 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "13",
+        "setup": [
+          "Configuration standard de Catan plus tableaux d'amélioration de ville et paquets de cartes de progrès.",
+          "Chaque joueur remplace 1 colonie par une ville (reçoit l'avantage de ville).",
+          "Placer le navire barbare sur la position 7 de la piste.",
+          "Préparer les cartes chevalier, murailles et ville.",
+          "Mélanger 3 paquets de cartes de progrès : Commerce, Science, Politique."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Dé d'Événement",
+            "detail": "Le navire barbare avance ou un tirage de carte de progrès a lieu. Quand les barbares atteignent la côte, ils attaquent."
+          },
+          {
+            "title": "2. Production",
+            "detail": "Comme dans le jeu de base, mais les villes produisent des marchandises (Tissu, Pièce, Papier) au lieu de ressources supplémentaires des hexagones correspondants."
+          },
+          {
+            "title": "3. Action",
+            "detail": "Commercer et construire comme d'habitude, plus recruter/améliorer des chevaliers, construire des murailles, acheter des améliorations de ville."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Marchandises",
+            "detail": "Tissu (Pré), Pièce (Montagne), Papier (Forêt). Utilisées pour les améliorations de ville, pas pour la construction normale."
+          },
+          {
+            "title": "Améliorations de Ville",
+            "detail": "3 voies : Commerce (Tissu), Politique (Pièce), Science (Papier). Les niveaux donnent de meilleures cartes de progrès et des chances de Métropole."
+          },
+          {
+            "title": "Métropoles",
+            "detail": "Au niveau 4 d'une amélioration : réclamer une Métropole (2 PV supplémentaires). 1 seule par voie. Peut être volée par un adversaire de niveau 5."
+          },
+          {
+            "title": "Chevaliers",
+            "detail": "3 niveaux de force : Basique, Fort, Puissant. Doivent être recrutés puis activés (1 Blé + 1 Minerai). Peuvent se déplacer, chasser des chevaliers ennemis plus faibles ou chasser le Voleur. Tous désactivés après attaque barbare."
+          },
+          {
+            "title": "Attaque Barbare",
+            "detail": "Force barbare = nombre total de villes sur le plateau. Force de défense = somme des chevaliers actifs. Si les barbares gagnent : le joueur avec le moins de chevaliers actifs perd une ville (rétrogradée en colonie). Les Métropoles sont immunes."
+          },
+          {
+            "title": "Murailles",
+            "detail": "Placées sous les villes. Chaque muraille ajoute +2 à la limite de main quand un 7 est lancé. Max 3 murailles."
+          },
+          {
+            "title": "Cartes de Progrès",
+            "detail": "Tirées selon le dé d'événement + votre niveau de voie. Limite de main : 4 cartes de progrès. De nombreux effets uniques dans 3 paquets (Commerce, Science, Politique)."
+          },
+          {
+            "title": "Le Marchand",
+            "detail": "Placé via carte de progrès sur un hexagone adjacent à votre bâtiment. Donne un commerce 2:1 sur cette ressource et vaut 1 PV."
+          }
+        ],
+        "scenarios": []
+      }
     },
     "traders-barbarians": {
       "name": "Marchands & Barbares",
@@ -469,7 +732,112 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "3–4",
+        "vpToWin": "Variable",
+        "setup": [
+          "Configuration standard de Catan avec scénarios et variantes modulaires.",
+          "Chaque scénario a ses propres règles de mise en place et matériel spécial.",
+          "Les variantes peuvent être combinées entre elles."
+        ],
+        "turnOverview": [
+          {
+            "title": "Flux de Base",
+            "detail": "Comme dans le jeu de base : lancer les dés, récolter les ressources, commercer et construire. Les scénarios ajoutent des actions et matériels supplémentaires."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Conception Modulaire",
+            "detail": "Les variantes et scénarios peuvent être combinés librement pour personnaliser et étendre le jeu."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Le Voleur Amical",
+            "vp": "Variante",
+            "description": "Le Voleur ne peut pas être déplacé sur un hexagone avec un bâtiment d'un joueur qui n'a que 2 PV.",
+            "details": ["Protège les débutants des attaques précoces"]
+          },
+          {
+            "name": "Ports de Catan",
+            "vp": "11 PV",
+            "description": "Tuile Ports les Plus Forts (2 PV) pour le joueur avec le plus de PV en bâtiments portuaires.",
+            "details": ["Encourage la stratégie de construction portuaire"]
+          },
+          {
+            "name": "Cartes Événement CATAN",
+            "vp": "Variante",
+            "description": "Paquet de 37 cartes événement remplace les dés.",
+            "details": [
+              "Cartes avec numéros de production + événements spéciaux",
+              "Événements : Tremblement de Terre, Épidémie, Bons Voisins",
+              "Carte Nouvel An relance le paquet"
+            ]
+          },
+          {
+            "name": "CATAN à Deux",
+            "vp": "Variante",
+            "description": "Variante 2 joueurs avec joueurs neutres.",
+            "details": [
+              "Double phase de production (lancer deux fois)",
+              "Jetons de commerce pour échanges forcés ou déplacer le Voleur",
+              "Doit construire pour les joueurs neutres quand vous construisez"
+            ]
+          },
+          {
+            "name": "Pêche à Catan",
+            "vp": "10 PV",
+            "description": "Hexagone lac remplace le désert avec des zones de pêche côtières.",
+            "details": [
+              "Jetons de poisson gagnés par la production",
+              "Dépenser des poissons : retirer le voleur (2), voler une carte (3), ressource gratuite (4), route gratuite (5), carte développement (7)",
+              "Vieille botte = +1 PV nécessaire pour gagner"
+            ]
+          },
+          {
+            "name": "Rivières de Catan",
+            "vp": "10 PV",
+            "description": "Tuiles de rivière remplacent 7 hexagones. Des ponts traversent les rivières.",
+            "details": [
+              "Coût du pont : 2 Argile + 1 Bois",
+              "Pièces d'or des tuiles de rivière",
+              "Catanais le Plus Riche (1 PV) / Plus Pauvre (-2 PV)"
+            ]
+          },
+          {
+            "name": "Caravanes",
+            "vp": "12 PV",
+            "description": "Des wagons forment des trains depuis l'abreuvoir.",
+            "details": [
+              "Wagons collectés lors de la construction, placés par vote",
+              "Bâtiments entre 2 wagons = +1 PV chacun",
+              "Wagons comptent pour la Route la Plus Longue"
+            ]
+          },
+          {
+            "name": "Attaque Barbare",
+            "vp": "12 PV",
+            "description": "Hexagone château sur le plateau. Des chevaliers défendent contre les débarquements barbares.",
+            "details": [
+              "Pas de voleur ni de cartes développement de base",
+              "Chevaliers placés sur les arêtes d'hexagones",
+              "3 barbares conquèrent un hexagone ; prisonniers = PV"
+            ]
+          },
+          {
+            "name": "Routes Commerciales",
+            "vp": "13 PV",
+            "description": "3 hexagones de marchandise. Des wagons transportent des marchandises.",
+            "details": [
+              "Améliorations de wagon augmentent le déplacement",
+              "Or gagné par les livraisons",
+              "Barbares bloquent les routes"
+            ]
+          }
+        ]
+      }
     },
     "explorers-pirates": {
       "name": "Explorateurs & Pirates",
@@ -515,7 +883,108 @@
             }
           ]
         }
-      ]
+      ],
+      "gameplay": {
+        "players": "2–4",
+        "vpToWin": "17",
+        "setup": [
+          "Grande différence avec le jeu de base : pas de cartes développement, pas de villes, pas de voleur.",
+          "Le plateau a une île de départ + 2 régions inexplorées (hexagones face cachée).",
+          "Première pièce est une colonie portuaire (sur la côte, vaut 2 PV) ; deuxième est une colonie normale.",
+          "Chaque joueur commence avec 2 pièces d'or.",
+          "Commerce avec la réserve à 3:1 (pas de ports). Échanger 2 or contre 1 ressource (deux fois par tour)."
+        ],
+        "turnOverview": [
+          {
+            "title": "1. Production",
+            "detail": "Lancer les dés pour les ressources. Les joueurs sans production reçoivent 1 or à la place."
+          },
+          {
+            "title": "2. Commerce et Construction",
+            "detail": "Commercer, construire des colonies/bateaux, recruter des colons et des équipages."
+          },
+          {
+            "title": "3. Déplacement des Bateaux",
+            "detail": "Chaque bateau a 4 points de mouvement. Payer 1 Laine pour +2 PM. Les bateaux transportent colons, équipages, sacs d'épices et cargaisons de poisson."
+          }
+        ],
+        "keyRules": [
+          {
+            "title": "Colonies Portuaires",
+            "detail": "Valent 2 PV. Construites sur les marqueurs côtiers. Peuvent contenir 1 grande pièce ou 2 petites. Les bateaux doivent être construits à côté."
+          },
+          {
+            "title": "Bateaux",
+            "detail": "Coût : 1 Laine + 1 Bois. Ont 4 PM par tour. Transportent des pièces vers les destinations. Jusqu'à 2 bateaux par arête."
+          },
+          {
+            "title": "Explorer",
+            "detail": "Déplacer un bateau à côté d'un hexagone face cachée le révèle. Les hexagones terrestres reçoivent des jetons numérotés. 1 ressource correspondante (ou 2 or) à la découverte."
+          },
+          {
+            "title": "Colons",
+            "detail": "Coût : 1 Blé + 1 Minerai. Transportés sur les bateaux. Construire une colonie en déchargeant à une intersection terrestre."
+          },
+          {
+            "title": "Équipages",
+            "detail": "Coût : 1 Blé + 1 Laine. Utilisés pour les captures de repaires pirates et l'activation de fermes d'épices."
+          },
+          {
+            "title": "Navire Pirate",
+            "detail": "Sur un 7 : placer le navire pirate sur un hexagone maritime. Voler 1 ressource d'un joueur avec un bateau là. Passer à côté coûte 1 tribut d'or."
+          },
+          {
+            "title": "Chasser le Pirate",
+            "detail": "Bateau immobile adjacent à l'hexagone pirate lance 1 dé ; un 6 chasse le pirate."
+          }
+        ],
+        "scenarios": [
+          {
+            "name": "Terre en Vue !",
+            "vp": "Introduction",
+            "description": "Apprendre les bases de l'exploration.",
+            "details": [
+              "Découvrir des hexagones, construire des colonies sur de nouvelles îles"
+            ]
+          },
+          {
+            "name": "Repaires Pirates",
+            "vp": "+ mission",
+            "description": "Capturer des repaires pirates sur des hexagones d'or.",
+            "details": [
+              "Placer 3 équipages pour capturer un repaire",
+              "Héros (meilleur dé + équipage) avance en plus sur la piste de mission"
+            ]
+          },
+          {
+            "name": "Poissons pour Catan",
+            "vp": "+ mission",
+            "description": "Pêcher et livrer du poisson au Conseil de Catan.",
+            "details": [
+              "Lancer le dé pendant le déplacement ; banc de poissons correspondant = cargaison",
+              "Livrer au Conseil pour avancer sur la piste de mission"
+            ]
+          },
+          {
+            "name": "Épices pour Catan",
+            "vp": "+ mission",
+            "description": "Livrer des sacs d'épices au Conseil.",
+            "details": [
+              "Décharger l'équipage sur la ferme d'épices, charger le sac, livrer",
+              "Chaque ferme donne un bonus permanent (Voyage Rapide, Bonus Pirate, Or Rapide)"
+            ]
+          },
+          {
+            "name": "Explorateurs et Pirates (Complet)",
+            "vp": "17 PV",
+            "description": "L'expérience complète avec les 3 missions.",
+            "details": [
+              "Toutes les missions actives simultanément",
+              "Positions sur les pistes de mission et tuiles bonus PV contribuent à la victoire"
+            ]
+          }
+        ]
+      }
     }
   }
 }
