@@ -1,0 +1,492 @@
+{
+    "ui": {
+        "labelGame": "Spiel",
+        "labelLang": "Sprache",
+        "subtitle": "Schnellreferenz für Karten & Regeln",
+        "footer": "Community-Referenz — nicht mit Catan Studio verbunden."
+    },
+    "games": {
+        "base": {
+            "name": "Catan (Grundspiel)",
+            "description": "Das klassische Siedler von Catan. Sammle Rohstoffe, baue Straßen, Siedlungen und Städte, handle mit anderen Spielern und erreiche als Erster 10 Siegpunkte.",
+            "sections": [
+                {
+                    "id": "resources",
+                    "title": "Rohstoffkarten",
+                    "icon": "🌾",
+                    "cards": [
+                        {
+                            "id": "lumber",
+                            "type": "resource",
+                            "icon": "🌲",
+                            "name": "Holz",
+                            "count": 19,
+                            "description": "Wird von Waldfeldern produziert, wenn ihre Zahl gewürfelt wird.",
+                            "usages": [
+                                "Straße bauen (Holz + Lehm)",
+                                "Siedlung bauen (Holz + Lehm + Wolle + Getreide)"
+                            ]
+                        },
+                        {
+                            "id": "brick",
+                            "type": "resource",
+                            "icon": "🧱",
+                            "name": "Lehm",
+                            "count": 19,
+                            "description": "Wird von Hügelfeldern produziert, wenn ihre Zahl gewürfelt wird.",
+                            "usages": [
+                                "Straße bauen (Holz + Lehm)",
+                                "Siedlung bauen (Holz + Lehm + Wolle + Getreide)"
+                            ]
+                        },
+                        {
+                            "id": "wool",
+                            "type": "resource",
+                            "icon": "🐑",
+                            "name": "Wolle",
+                            "count": 19,
+                            "description": "Wird von Weidelandfeldern produziert, wenn ihre Zahl gewürfelt wird.",
+                            "usages": [
+                                "Siedlung bauen (Holz + Lehm + Wolle + Getreide)",
+                                "Entwicklungskarte kaufen (Erz + Getreide + Wolle)"
+                            ]
+                        },
+                        {
+                            "id": "grain",
+                            "type": "resource",
+                            "icon": "🌾",
+                            "name": "Getreide",
+                            "count": 19,
+                            "description": "Wird von Getreidefeldern produziert, wenn ihre Zahl gewürfelt wird.",
+                            "usages": [
+                                "Siedlung bauen (Holz + Lehm + Wolle + Getreide)",
+                                "Stadt ausbauen (Erz×3 + Getreide×2)",
+                                "Entwicklungskarte kaufen (Erz + Getreide + Wolle)"
+                            ]
+                        },
+                        {
+                            "id": "ore",
+                            "type": "resource",
+                            "icon": "⛏️",
+                            "name": "Erz",
+                            "count": 19,
+                            "description": "Wird von Gebirgsfeldern produziert, wenn ihre Zahl gewürfelt wird.",
+                            "usages": [
+                                "Stadt ausbauen (Erz×3 + Getreide×2)",
+                                "Entwicklungskarte kaufen (Erz + Getreide + Wolle)"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "development",
+                    "title": "Entwicklungskarten",
+                    "icon": "🃏",
+                    "cards": [
+                        {
+                            "id": "knight",
+                            "type": "development",
+                            "icon": "⚔️",
+                            "name": "Ritter",
+                            "count": 14,
+                            "description": "Versetze den Räuber auf ein beliebiges Geländefeld. Stiehl eine Rohstoffkarte von einem benachbarten Mitspieler.",
+                            "usages": [
+                                "Vor dem Würfeln spielen",
+                                "Erhalte die Karte 'Größte Rittermacht' bei 3 gespielten Rittern (2 SP)"
+                            ]
+                        },
+                        {
+                            "id": "road-building",
+                            "type": "development",
+                            "icon": "🛤️",
+                            "name": "Straßenbau",
+                            "count": 2,
+                            "description": "Lege kostenlos 2 neue Straßen auf das Spielfeld.",
+                            "usages": [
+                                "Netzwerk schnell ausbauen",
+                                "Um die 'Längste Handelsstraße' kämpfen (2 SP ab ≥5 Straßen)"
+                            ]
+                        },
+                        {
+                            "id": "year-of-plenty",
+                            "type": "development",
+                            "icon": "🎁",
+                            "name": "Erfindung",
+                            "count": 2,
+                            "description": "Nimm beliebige 2 Rohstoffkarten aus dem Vorrat.",
+                            "usages": [
+                                "Genau die Rohstoffe nehmen, die du zum Bauen brauchst",
+                                "Eine fehlende Kombination vervollständigen"
+                            ]
+                        },
+                        {
+                            "id": "monopoly",
+                            "type": "development",
+                            "icon": "💰",
+                            "name": "Monopol",
+                            "count": 2,
+                            "description": "Nenne einen Rohstofftyp. Alle anderen Spieler müssen dir alle Karten dieses Typs abgeben.",
+                            "usages": [
+                                "Einen Mitspieler kurz vor einem Großbau stören",
+                                "Dringend benötigten Rohstoff sammeln"
+                            ]
+                        },
+                        {
+                            "id": "victory-point",
+                            "type": "development",
+                            "icon": "⭐",
+                            "name": "Siegpunkt",
+                            "count": 5,
+                            "description": "Wert 1 Siegpunkt. Wird geheim gehalten, bis du sie zum Sieg aufdeckst.",
+                            "usages": [
+                                "Zählt zu den 10 SP für den Sieg",
+                                "Alle auf einmal aufdecken, um Gegner zu überraschen"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "special",
+                    "title": "Sonderkarten",
+                    "icon": "🏆",
+                    "cards": [
+                        {
+                            "id": "longest-road",
+                            "type": "special",
+                            "icon": "🛣️",
+                            "name": "Längste Handelsstraße",
+                            "description": "Vergeben an den ersten Spieler mit einer zusammenhängenden Straße von 5+ Segmenten. Wert 2 Siegpunkte. Kann gestohlen werden.",
+                            "usages": [
+                                "Aggressiv Straßen bauen, um die Karte zu sichern",
+                                "Gegnerische Straße durch Siedlungsbau unterbrechen"
+                            ]
+                        },
+                        {
+                            "id": "largest-army",
+                            "type": "special",
+                            "icon": "🪖",
+                            "name": "Größte Rittermacht",
+                            "description": "Vergeben an den ersten Spieler, der 3 Ritterkarten spielt. Wert 2 Siegpunkte. Kann gestohlen werden.",
+                            "usages": [
+                                "Ritter spielen, um den Räuber zu kontrollieren und 2 SP zu erhalten",
+                                "Wichtige Felder vor dem Räuber schützen"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "building-costs",
+                    "title": "Baukosten",
+                    "icon": "🔨",
+                    "cards": [
+                        {
+                            "id": "road",
+                            "type": "resource",
+                            "icon": "🛤️",
+                            "name": "Straße",
+                            "description": "Verbindet Siedlungen und Städte. Muss an eine bestehende Straße, Siedlung oder Stadt angrenzen.",
+                            "usages": [
+                                "Kosten: 1 Holz + 1 Lehm",
+                                "Max. 15 Straßen pro Spieler",
+                                "Notwendig, bevor man sich neu ansiedeln kann"
+                            ]
+                        },
+                        {
+                            "id": "settlement",
+                            "type": "resource",
+                            "icon": "🏠",
+                            "name": "Siedlung",
+                            "description": "Wert 1 Siegpunkt. Produziert 1 Rohstoffkarte von jedem angrenzenden Feld, wenn dessen Zahl gewürfelt wird.",
+                            "usages": [
+                                "Kosten: 1 Holz + 1 Lehm + 1 Wolle + 1 Getreide",
+                                "Max. 5 Siedlungen pro Spieler",
+                                "Mindestens 2 Kreuzungen von jeder anderen Siedlung/Stadt entfernt"
+                            ]
+                        },
+                        {
+                            "id": "city",
+                            "type": "resource",
+                            "icon": "🏙️",
+                            "name": "Stadt",
+                            "description": "Wert 2 Siegpunkte. Produziert 2 Rohstoffkarten pro angrenzendem Feld. Ersetzt eine Siedlung.",
+                            "usages": [
+                                "Kosten: 3 Erz + 2 Getreide",
+                                "Max. 4 Städte pro Spieler",
+                                "Upgrade einer bestehenden Siedlung"
+                            ]
+                        },
+                        {
+                            "id": "dev-card",
+                            "type": "development",
+                            "icon": "🃏",
+                            "name": "Entwicklungskarte",
+                            "description": "Ziehe die oberste Karte vom Entwicklungsstapel. Kann nicht im selben Zug gespielt werden.",
+                            "usages": [
+                                "Kosten: 1 Erz + 1 Getreide + 1 Wolle",
+                                "Max. 25 Karten im Stapel"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "seafarers": {
+            "name": "Seefahrer",
+            "description": "Erkunde einen Archipel. Baue Schiffe, um die Meere zu befahren, entdecke neue Inseln mit Goldfeldern und besiedle ferne Küsten für Bonussiegpunkte.",
+            "sections": [
+                {
+                    "id": "ships",
+                    "title": "Schiffe",
+                    "icon": "⛵",
+                    "cards": [
+                        {
+                            "id": "ship",
+                            "type": "ship",
+                            "icon": "⛵",
+                            "name": "Schiff",
+                            "description": "Schiffe verlängern deine Handelsrouten über Wasserfelder. Sie funktionieren wie Straßen auf dem Meer.",
+                            "usages": [
+                                "Kosten: 1 Holz + 1 Wolle",
+                                "Das letzte Schiff einer offenen Route kann einmal pro Zug versetzt werden",
+                                "Max. 15 Schiffe pro Spieler"
+                            ]
+                        },
+                        {
+                            "id": "gold-field",
+                            "type": "resource",
+                            "icon": "🪙",
+                            "name": "Goldfeld",
+                            "description": "Sonderfeld, das einen freien Rohstoff produziert. Angrenzende Spieler wählen bei gewürfelter Zahl einen beliebigen Rohstoff.",
+                            "usages": [
+                                "Sehr wertvoll — frühzeitig besiedeln",
+                                "Jede angrenzende Siedlung bringt 1 freien Rohstoff nach Wahl"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "seafarers-special",
+                    "title": "Sonderregeln",
+                    "icon": "🗺️",
+                    "cards": [
+                        {
+                            "id": "discovery-vp",
+                            "type": "special",
+                            "icon": "🏆",
+                            "name": "Neue Insel Bonus",
+                            "description": "In den meisten Seefahrer-Szenarien erhält man 1 Extra-Siegpunkt für die erste Siedlung auf einer neuen Insel.",
+                            "usages": [
+                                "Schiffsrouten zu entlegenen Inseln planen",
+                                "Mehrere Spieler können VP von derselben Insel verdienen"
+                            ]
+                        },
+                        {
+                            "id": "pirate",
+                            "type": "special",
+                            "icon": "🏴‍☠️",
+                            "name": "Pirat",
+                            "description": "Der Pirat ersetzt den Räuber in Seefahrer. Auf einem Seefeld platziert blockiert er Schiffe und stiehlt von angrenzenden Spielern.",
+                            "usages": [
+                                "Aktiviert durch Würfeln einer 7 oder Spielen eines Ritters",
+                                "Blockiert Schiffsbewegung durch das Feld"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "cities-knights": {
+            "name": "Städte & Ritter",
+            "description": "Ein tieferes strategisches Erlebnis. Waren ersetzen einige Rohstoffe, Stadtverbesserungen schalten mächtige Fähigkeiten frei und Barbaren bedrohen jede Runde deine Städte.",
+            "sections": [
+                {
+                    "id": "commodities",
+                    "title": "Warenkarten",
+                    "icon": "📦",
+                    "cards": [
+                        {
+                            "id": "cloth",
+                            "type": "commodity",
+                            "icon": "🧵",
+                            "name": "Tuch",
+                            "description": "Ware von ausgebauten Weidestadt-Metropolen. Wird für Verbesserungen der Handelsspalte verwendet.",
+                            "usages": [
+                                "Von Städten auf Weidelandfeldern produziert",
+                                "In Handelsstadtverbesserungen investieren"
+                            ]
+                        },
+                        {
+                            "id": "coin",
+                            "type": "commodity",
+                            "icon": "🪙",
+                            "name": "Münze",
+                            "description": "Ware von ausgebauten Gebirgsstadt-Metropolen. Wird für die Wissenschaftsspalte verwendet.",
+                            "usages": [
+                                "Von Städten auf Gebirgsfeldern produziert",
+                                "In Wissenschaftsstadtverbesserungen investieren"
+                            ]
+                        },
+                        {
+                            "id": "paper",
+                            "type": "commodity",
+                            "icon": "📜",
+                            "name": "Papier",
+                            "description": "Ware von ausgebauten Waldstadt-Metropolen. Wird für die Politikspalte verwendet.",
+                            "usages": [
+                                "Von Städten auf Waldfeldern produziert",
+                                "In Politikstadtverbesserungen investieren"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "progress-cards",
+                    "title": "Fortschrittskarten (Beispiele)",
+                    "icon": "📋",
+                    "cards": [
+                        {
+                            "id": "crane",
+                            "type": "progress",
+                            "icon": "🏗️",
+                            "name": "Kran (Wissenschaft)",
+                            "description": "In diesem Zug kannst du eine Stadtverbesserung für 1 weniger Ware als normal kaufen.",
+                            "usages": [
+                                "Eine Ware beim Stadtausbau sparen"
+                            ]
+                        },
+                        {
+                            "id": "merchant",
+                            "type": "progress",
+                            "icon": "🧑‍💼",
+                            "name": "Händler (Handel)",
+                            "description": "Lege den Händler auf ein beliebiges Geländefeld. Du tauschst diesen Rohstoff 2:1, bis jemand den Händler übernimmt. Wert auch 1 SP.",
+                            "usages": [
+                                "Wichtigen Rohstoff zu günstigem Kurs handeln",
+                                "Wert 1 SP, solange du ihn hältst"
+                            ]
+                        },
+                        {
+                            "id": "spy",
+                            "type": "progress",
+                            "icon": "🕵️",
+                            "name": "Spion (Politik)",
+                            "description": "Stiehl eine zufällige Fortschrittskarte aus der Hand eines beliebigen Gegners.",
+                            "usages": [
+                                "Gegner stören und nützliche Karte erhalten"
+                            ]
+                        },
+                        {
+                            "id": "engineer",
+                            "type": "progress",
+                            "icon": "🔧",
+                            "name": "Ingenieur (Wissenschaft)",
+                            "description": "Baue kostenlos eine Stadtmauer.",
+                            "usages": [
+                                "Eine Stadt vor Barbaren schützen ohne Ressourcen auszugeben"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "barbarians",
+                    "title": "Barbaren",
+                    "icon": "⚔️",
+                    "cards": [
+                        {
+                            "id": "barbarian-track",
+                            "type": "special",
+                            "icon": "🧟",
+                            "name": "Barbarenangriff",
+                            "description": "Wenn ein Schiff gewürfelt wird, rücken die Barbaren vor. Wenn sie Catan erreichen, wird eine Schlacht ausgewertet. Verlieren die Verteidiger, verliert der Spieler mit den wenigsten Rittern eine Stadt.",
+                            "usages": [
+                                "Ritter bauen und aktivieren, um zu verteidigen",
+                                "Stadtmauern schützen eine Stadt vor dem Abbau"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "traders-barbarians": {
+            "name": "Händler & Barbaren",
+            "description": "Eine Sammlung von fünf Szenarien und Varianten: Handelsrouten, Karawanen, Barbareninvasionen und mehr.",
+            "sections": [
+                {
+                    "id": "trade-routes",
+                    "title": "Handelsroutenkarten",
+                    "icon": "🚗",
+                    "cards": [
+                        {
+                            "id": "caravan",
+                            "type": "trade",
+                            "icon": "🐪",
+                            "name": "Karawane",
+                            "description": "Karawanen transportieren Waren auf Straßen. Waren ins freundliche Dorf liefern bringt Siegpunkte.",
+                            "usages": [
+                                "Karawanen bis zu 3 Straßenabschnitte pro Zug bewegen",
+                                "1 SP pro geliefertem Warenmarker verdienen"
+                            ]
+                        },
+                        {
+                            "id": "gold",
+                            "type": "trade",
+                            "icon": "🪙",
+                            "name": "Goldmünz-Marker",
+                            "description": "Durch abgeschlossene Handelsrouten verdient. Kann als beliebiger Rohstoff verwendet werden.",
+                            "usages": [
+                                "Als beliebigen Rohstoff ausgeben",
+                                "Im freundlichen Dorf gegen SP tauschen"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "explorers-pirates": {
+            "name": "Entdecker & Piraten",
+            "description": "Stich in See unbekannter Gewässer. Baue Schiffe und Häfen, erfülle Missionen wie Gewürzhandel, und besiedele ferne Länder.",
+            "sections": [
+                {
+                    "id": "missions",
+                    "title": "Missionskärtchen",
+                    "icon": "🎯",
+                    "cards": [
+                        {
+                            "id": "spice-haul",
+                            "type": "mission",
+                            "icon": "🌶️",
+                            "name": "Gewürztransport",
+                            "description": "Segele zu einer fernen Gewürzinsel und bringe Gewürze zur Heimatinsel für Siegpunkte.",
+                            "usages": [
+                                "Jeder abgeschlossene Transport bringt 1 SP",
+                                "Reise von der Gewürzinsel zurück erforderlich"
+                            ]
+                        },
+                        {
+                            "id": "fish-camp",
+                            "type": "mission",
+                            "icon": "🐟",
+                            "name": "Fischlager",
+                            "description": "Errichte ein Fischlager an einer entdeckten Küste, um jede Runde Fischmarker zu erhalten.",
+                            "usages": [
+                                "Fischmarker können gegen Rohstoffe getauscht werden",
+                                "In Küstenfeldern mit guten Zahlen positionieren"
+                            ]
+                        },
+                        {
+                            "id": "pirate-lair",
+                            "type": "mission",
+                            "icon": "🏴‍☠️",
+                            "name": "Piratenversteck",
+                            "description": "Entdecke und zerstöre Piratenverstecke der Grenzregion. Jedes beseitigte Versteck bringt 1 SP.",
+                            "usages": [
+                                "Mit einem Schiff zum Versteck segeln, um es zu räumen",
+                                "Bringt sofort 1 SP nach der Entdeckung"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,492 @@
+{
+    "ui": {
+        "labelGame": "Juego",
+        "labelLang": "Idioma",
+        "subtitle": "Referencia rápida de cartas y reglas",
+        "footer": "Referencia comunitaria — no afiliada con Catan Studio."
+    },
+    "games": {
+        "base": {
+            "name": "Catan (Juego Base)",
+            "description": "El clásico Los Colonos de Catan. Recolecta recursos, construye caminos, poblados y ciudades, negocia con otros jugadores y sé el primero en alcanzar 10 Puntos de Victoria.",
+            "sections": [
+                {
+                    "id": "resources",
+                    "title": "Cartas de Recurso",
+                    "icon": "🌾",
+                    "cards": [
+                        {
+                            "id": "lumber",
+                            "type": "resource",
+                            "icon": "🌲",
+                            "name": "Madera",
+                            "count": 19,
+                            "description": "Producida por los hexágonos de Bosque cuando se lanza su número.",
+                            "usages": [
+                                "Construir Camino (Madera + Arcilla)",
+                                "Construir Poblado (Madera + Arcilla + Lana + Trigo)"
+                            ]
+                        },
+                        {
+                            "id": "brick",
+                            "type": "resource",
+                            "icon": "🧱",
+                            "name": "Arcilla",
+                            "count": 19,
+                            "description": "Producida por los hexágonos de Colinas cuando se lanza su número.",
+                            "usages": [
+                                "Construir Camino (Madera + Arcilla)",
+                                "Construir Poblado (Madera + Arcilla + Lana + Trigo)"
+                            ]
+                        },
+                        {
+                            "id": "wool",
+                            "type": "resource",
+                            "icon": "🐑",
+                            "name": "Lana",
+                            "count": 19,
+                            "description": "Producida por los hexágonos de Prado cuando se lanza su número.",
+                            "usages": [
+                                "Construir Poblado (Madera + Arcilla + Lana + Trigo)",
+                                "Comprar Carta de Desarrollo (Mineral + Trigo + Lana)"
+                            ]
+                        },
+                        {
+                            "id": "grain",
+                            "type": "resource",
+                            "icon": "🌾",
+                            "name": "Trigo",
+                            "count": 19,
+                            "description": "Producido por los hexágonos de Campo cuando se lanza su número.",
+                            "usages": [
+                                "Construir Poblado (Madera + Arcilla + Lana + Trigo)",
+                                "Mejorar a Ciudad (Mineral×3 + Trigo×2)",
+                                "Comprar Carta de Desarrollo (Mineral + Trigo + Lana)"
+                            ]
+                        },
+                        {
+                            "id": "ore",
+                            "type": "resource",
+                            "icon": "⛏️",
+                            "name": "Mineral",
+                            "count": 19,
+                            "description": "Producido por los hexágonos de Montaña cuando se lanza su número.",
+                            "usages": [
+                                "Mejorar a Ciudad (Mineral×3 + Trigo×2)",
+                                "Comprar Carta de Desarrollo (Mineral + Trigo + Lana)"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "development",
+                    "title": "Cartas de Desarrollo",
+                    "icon": "🃏",
+                    "cards": [
+                        {
+                            "id": "knight",
+                            "type": "development",
+                            "icon": "⚔️",
+                            "name": "Caballero",
+                            "count": 14,
+                            "description": "Mueve al Ladrón a cualquier hexágono. Roba una carta de recurso de un jugador adyacente.",
+                            "usages": [
+                                "Jugar antes de lanzar los dados",
+                                "Gana el Ejército más Poderoso jugando 3 Caballeros (2 PV)"
+                            ]
+                        },
+                        {
+                            "id": "road-building",
+                            "type": "development",
+                            "icon": "🛤️",
+                            "name": "Construcción de Caminos",
+                            "count": 2,
+                            "description": "Coloca 2 caminos en el tablero de forma gratuita.",
+                            "usages": [
+                                "Expande tu red rápidamente",
+                                "Compite por el Camino más Largo (2 PV con ≥5 tramos)"
+                            ]
+                        },
+                        {
+                            "id": "year-of-plenty",
+                            "type": "development",
+                            "icon": "🎁",
+                            "name": "Año de Abundancia",
+                            "count": 2,
+                            "description": "Toma cualquier 2 cartas de recurso del banco.",
+                            "usages": [
+                                "Obtén exactamente los recursos que necesitas para construir",
+                                "Completa una combinación que te falta"
+                            ]
+                        },
+                        {
+                            "id": "monopoly",
+                            "type": "development",
+                            "icon": "💰",
+                            "name": "Monopolio",
+                            "count": 2,
+                            "description": "Nombra un tipo de recurso. Todos los demás jugadores deben entregarte todas sus cartas de ese tipo.",
+                            "usages": [
+                                "Interrumpir a un rival que está a punto de construir",
+                                "Conseguir un recurso que necesitas urgentemente"
+                            ]
+                        },
+                        {
+                            "id": "victory-point",
+                            "type": "development",
+                            "icon": "⭐",
+                            "name": "Punto de Victoria",
+                            "count": 5,
+                            "description": "Vale 1 Punto de Victoria. Se mantiene en secreto hasta que lo revelas para ganar.",
+                            "usages": [
+                                "Cuenta hacia los 10 PV para ganar",
+                                "Revélalos todos a la vez para sorprender a los rivales"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "special",
+                    "title": "Cartas Especiales",
+                    "icon": "🏆",
+                    "cards": [
+                        {
+                            "id": "longest-road",
+                            "type": "special",
+                            "icon": "🛣️",
+                            "name": "Camino más Largo",
+                            "description": "Se otorga al primer jugador con un camino continuo de 5+ tramos. Vale 2 Puntos de Victoria. Otro jugador puede robártela construyendo más.",
+                            "usages": [
+                                "Construye caminos agresivamente para reclamarla",
+                                "Interrumpe el camino rival colocando un poblado en su ruta"
+                            ]
+                        },
+                        {
+                            "id": "largest-army",
+                            "type": "special",
+                            "icon": "🪖",
+                            "name": "Ejército más Poderoso",
+                            "description": "Se otorga al primer jugador que juega 3 Caballeros. Vale 2 Puntos de Victoria. Otro jugador puede robártela jugando más.",
+                            "usages": [
+                                "Juega Caballeros para controlar al Ladrón y ganar 2 PV",
+                                "Protege hexágonos clave del Ladrón"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "building-costs",
+                    "title": "Costos de Construcción",
+                    "icon": "🔨",
+                    "cards": [
+                        {
+                            "id": "road",
+                            "type": "resource",
+                            "icon": "🛤️",
+                            "name": "Camino",
+                            "description": "Conecta poblados y ciudades. Debe colocarse adyacente a tu camino, poblado o ciudad existente.",
+                            "usages": [
+                                "Costo: 1 Madera + 1 Arcilla",
+                                "Máx. 15 caminos por jugador",
+                                "Necesario antes de asentarse en un nuevo lugar"
+                            ]
+                        },
+                        {
+                            "id": "settlement",
+                            "type": "resource",
+                            "icon": "🏠",
+                            "name": "Poblado",
+                            "description": "Vale 1 Punto de Victoria. Produce 1 carta de recurso de cada hexágono adyacente cuando se lanza su número.",
+                            "usages": [
+                                "Costo: 1 Madera + 1 Arcilla + 1 Lana + 1 Trigo",
+                                "Máx. 5 poblados por jugador",
+                                "Al menos 2 intersecciones de cualquier otro poblado/ciudad"
+                            ]
+                        },
+                        {
+                            "id": "city",
+                            "type": "resource",
+                            "icon": "🏙️",
+                            "name": "Ciudad",
+                            "description": "Vale 2 Puntos de Victoria. Produce 2 cartas de recurso por hexágono adyacente. Reemplaza un poblado.",
+                            "usages": [
+                                "Costo: 3 Mineral + 2 Trigo",
+                                "Máx. 4 ciudades por jugador",
+                                "Mejora cualquier poblado existente"
+                            ]
+                        },
+                        {
+                            "id": "dev-card",
+                            "type": "development",
+                            "icon": "🃏",
+                            "name": "Carta de Desarrollo",
+                            "description": "Roba la carta superior del mazo de desarrollo. No se puede jugar en el mismo turno que se compra.",
+                            "usages": [
+                                "Costo: 1 Mineral + 1 Trigo + 1 Lana",
+                                "Máx. 25 cartas en el mazo"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "seafarers": {
+            "name": "Navegantes",
+            "description": "Explora un archipiélago. Construye barcos para navegar los mares, descubre nuevas islas con campos de oro y coloniza costas lejanas por Puntos de Victoria adicionales.",
+            "sections": [
+                {
+                    "id": "ships",
+                    "title": "Barcos",
+                    "icon": "⛵",
+                    "cards": [
+                        {
+                            "id": "ship",
+                            "type": "ship",
+                            "icon": "⛵",
+                            "name": "Barco",
+                            "description": "Los barcos extienden tus rutas comerciales por hexágonos de agua. Funcionan como caminos en el mar.",
+                            "usages": [
+                                "Costo: 1 Madera + 1 Lana",
+                                "El último barco de una ruta abierta puede moverse una vez por turno",
+                                "Máx. 15 barcos por jugador"
+                            ]
+                        },
+                        {
+                            "id": "gold-field",
+                            "type": "resource",
+                            "icon": "🪙",
+                            "name": "Campo de Oro",
+                            "description": "Hexágono especial que produce un recurso libre. Los jugadores adyacentes eligen cualquier recurso del banco.",
+                            "usages": [
+                                "Muy valioso — asiéntate aquí cuanto antes",
+                                "Cada poblado adyacente genera 1 recurso libre a elección"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "seafarers-special",
+                    "title": "Reglas Especiales",
+                    "icon": "🗺️",
+                    "cards": [
+                        {
+                            "id": "discovery-vp",
+                            "type": "special",
+                            "icon": "🏆",
+                            "name": "Bonus de Nueva Isla",
+                            "description": "En la mayoría de escenarios de Navegantes, el primer poblado en una isla nueva otorga 1 PV extra.",
+                            "usages": [
+                                "Planea rutas de barcos hacia islas lejanas",
+                                "Varios jugadores pueden ganar PV de la misma isla"
+                            ]
+                        },
+                        {
+                            "id": "pirate",
+                            "type": "special",
+                            "icon": "🏴‍☠️",
+                            "name": "Pirata",
+                            "description": "El Pirata reemplaza al Ladrón en Navegantes. Muévelo a cualquier hexágono marítimo para bloquear barcos.",
+                            "usages": [
+                                "Se activa al sacar un 7 o jugar un Caballero",
+                                "Bloquea el movimiento de barcos por ese hexágono"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "cities-knights": {
+            "name": "Ciudades y Caballeros",
+            "description": "Una experiencia estratégica más profunda. Las mercancías reemplazan algunos recursos, las mejoras de ciudad desbloquean habilidades poderosas y los Bárbaros amenazan tus ciudades cada turno.",
+            "sections": [
+                {
+                    "id": "commodities",
+                    "title": "Cartas de Mercancía",
+                    "icon": "📦",
+                    "cards": [
+                        {
+                            "id": "cloth",
+                            "type": "commodity",
+                            "icon": "🧵",
+                            "name": "Tela",
+                            "description": "Mercancía producida por ciudades mejoradas en Prado. Usada para avanzar en la columna de Comercio.",
+                            "usages": [
+                                "Producida por ciudades en hexágonos de Prado",
+                                "Invierte en mejoras de ciudad de Comercio"
+                            ]
+                        },
+                        {
+                            "id": "coin",
+                            "type": "commodity",
+                            "icon": "🪙",
+                            "name": "Moneda",
+                            "description": "Mercancía producida por ciudades mejoradas en Montaña. Usada para la columna de Ciencia.",
+                            "usages": [
+                                "Producida por ciudades en hexágonos de Montaña",
+                                "Invierte en mejoras de ciudad de Ciencia"
+                            ]
+                        },
+                        {
+                            "id": "paper",
+                            "type": "commodity",
+                            "icon": "📜",
+                            "name": "Papel",
+                            "description": "Mercancía producida por ciudades mejoradas en Bosque. Usada para la columna de Política.",
+                            "usages": [
+                                "Producida por ciudades en hexágonos de Bosque",
+                                "Invierte en mejoras de ciudad de Política"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "progress-cards",
+                    "title": "Cartas de Progreso (ejemplos)",
+                    "icon": "📋",
+                    "cards": [
+                        {
+                            "id": "crane",
+                            "type": "progress",
+                            "icon": "🏗️",
+                            "name": "Grúa (Ciencia)",
+                            "description": "Este turno puedes construir una mejora de ciudad por 1 mercancía menos de lo normal.",
+                            "usages": [
+                                "Ahorra una mercancía al mejorar la ciudad"
+                            ]
+                        },
+                        {
+                            "id": "merchant",
+                            "type": "progress",
+                            "icon": "🧑‍💼",
+                            "name": "Mercader (Comercio)",
+                            "description": "Coloca al Mercader en cualquier hexágono. Comercias ese recurso a 2:1 hasta que otro jugador lo reclame. También vale 1 PV.",
+                            "usages": [
+                                "Controla la tasa de cambio de un recurso clave",
+                                "Vale 1 PV mientras lo tengas"
+                            ]
+                        },
+                        {
+                            "id": "spy",
+                            "type": "progress",
+                            "icon": "🕵️",
+                            "name": "Espía (Política)",
+                            "description": "Roba una carta de progreso al azar de la mano de cualquier rival.",
+                            "usages": [
+                                "Interrumpe rivales y consigue una carta útil"
+                            ]
+                        },
+                        {
+                            "id": "engineer",
+                            "type": "progress",
+                            "icon": "🔧",
+                            "name": "Ingeniero (Ciencia)",
+                            "description": "Construye gratuitamente una muralla de ciudad.",
+                            "usages": [
+                                "Protege una ciudad de los Bárbaros sin gastar recursos"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "id": "barbarians",
+                    "title": "Bárbaros",
+                    "icon": "⚔️",
+                    "cards": [
+                        {
+                            "id": "barbarian-track",
+                            "type": "special",
+                            "icon": "🧟",
+                            "name": "Ataque Bárbaro",
+                            "description": "Cada vez que se saca un barco, los Bárbaros avanzan. Al llegar a Catan se resuelve la batalla. Si los defensores pierden, el jugador con menos caballeros pierde una ciudad.",
+                            "usages": [
+                                "Construye y activa Caballeros para defenderte",
+                                "Las murallas protegen una ciudad de ser degradada"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "traders-barbarians": {
+            "name": "Mercaderes y Bárbaros",
+            "description": "Una colección de cinco escenarios y variantes: rutas comerciales, caravanas, invasiones bárbaras y más.",
+            "sections": [
+                {
+                    "id": "trade-routes",
+                    "title": "Cartas de Ruta Comercial",
+                    "icon": "🚗",
+                    "cards": [
+                        {
+                            "id": "caravan",
+                            "type": "trade",
+                            "icon": "🐪",
+                            "name": "Caravana",
+                            "description": "Las caravanas transportan mercancías por caminos. Entregar mercancías al pueblo amigo se recompensa con PV.",
+                            "usages": [
+                                "Mueve caravanas hasta 3 tramos de camino por turno",
+                                "Gana 1 PV por cada ficha de mercancía entregada"
+                            ]
+                        },
+                        {
+                            "id": "gold",
+                            "type": "trade",
+                            "icon": "🪙",
+                            "name": "Ficha de Moneda de Oro",
+                            "description": "Ganada al completar rutas comerciales. Puede usarse como cualquier tipo de recurso.",
+                            "usages": [
+                                "Gástala como cualquier recurso",
+                                "Cámbiala por PV en el pueblo amigo"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        "explorers-pirates": {
+            "name": "Exploradores y Piratas",
+            "description": "Navega aguas desconocidas. Construye barcos y puertos, completa misiones como el comercio de especias y coloniza nuevas tierras.",
+            "sections": [
+                {
+                    "id": "missions",
+                    "title": "Fichas de Misión",
+                    "icon": "🎯",
+                    "cards": [
+                        {
+                            "id": "spice-haul",
+                            "type": "mission",
+                            "icon": "🌶️",
+                            "name": "Carga de Especias",
+                            "description": "Navega hasta una isla de especias lejana y regresa con la carga para ganar PV.",
+                            "usages": [
+                                "Cada carga completada otorga 1 PV",
+                                "Debes ir y volver de la isla de especias"
+                            ]
+                        },
+                        {
+                            "id": "fish-camp",
+                            "type": "mission",
+                            "icon": "🐟",
+                            "name": "Campamento de Pesca",
+                            "description": "Establece un campamento de pesca en una costa descubierta para obtener fichas de pescado cada ronda.",
+                            "usages": [
+                                "Las fichas de pescado se pueden canjear por recursos",
+                                "Posiciónate cerca de hexágonos costeros con buenos números"
+                            ]
+                        },
+                        {
+                            "id": "pirate-lair",
+                            "type": "mission",
+                            "icon": "🏴‍☠️",
+                            "name": "Guarida Pirata",
+                            "description": "Descubre y destruye guaridas piratas dispersas por la frontera. Cada guarida eliminada otorga 1 PV.",
+                            "usages": [
+                                "Llega a la guarida con un barco para eliminarla",
+                                "Otorga 1 PV inmediatamente al descubrirla"
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
