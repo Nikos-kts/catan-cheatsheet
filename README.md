@@ -1,11 +1,11 @@
 # [🏝️ Catan Cheatsheet](./index.html)
 
-A simple, friendly browser-based reference for Catan card explanations — supports multiple games and languages.
+A lightweight, browser-based reference for Catan card explanations — supports multiple games and languages.
 
 ## Features
 
-- **5 Games / Expansions**: Base Catan, Seafarers, Cities & Knights, Traders & Barbarians, Explorers & Pirates
-- **5 Languages**: English, German (Deutsch), Spanish (Español), French (Français), Greek (Ελληνικά)
+- **Games / Expansions**: Base Catan, Seafarers, Cities & Knights, Traders & Barbarians, Explorers & Pirates
+- **Languages**: English, German (Deutsch), Spanish (Español), French (Français), Greek (Ελληνικά), Dutch (Nederlands), Portuguese (Português)
 - Selections are remembered across sessions via `localStorage`
 - Pure HTML + CSS + vanilla JavaScript — no build step needed
 
@@ -19,11 +19,13 @@ src/
 ├── js/
 │   └── app.js          # App logic (data loading, rendering)
 ├── data/
-│   ├── en.json         # English
+│   ├── en.json         # English (canonical)
 │   ├── de.json         # German
 │   ├── es.json         # Spanish
 │   ├── fr.json         # French
-│   └── el.json         # Greek
+│   ├── el.json         # Greek
+│   ├── nl.json         # Dutch
+│   └── pt.json         # Portuguese
 └── assets/
     └── images/
         ├── basic/                    # Base Catan images
@@ -83,21 +85,38 @@ Each expansion has a dedicated folder under `src/assets/images/`. Follow this wo
 - Prefer descriptive names: `knight-card.png` over `img1.png`
 - Recommended formats: `.png` (transparency), `.webp` (smaller size), `.jpg` (photos)
 
----
-
 ## Adding a New Language
 
-1. Copy `src/data/en.json` to `src/data/<code>.json` (e.g. `it.json`)
-2. Translate all `name`, `description`, and `usages` fields
-3. Update the `ui` block with translated labels
+1. Copy `src/data/en.json` to `src/data/<code>.json` (e.g. `it.json`). `en.json` is the canonical source of truth.
+2. Translate all human-readable strings: `name`, `description`, `usages`, `ui` labels, etc. Keep `id`, `type`, and image paths unchanged.
+3. Update the `ui` block with translated labels.
 4. Add the language option in `index.html`:
    ```html
    <option value="it">🇮🇹 Italiano</option>
    ```
 
+### Syncing and Automation
+
+A helper script was added at `scripts/sync-translations.js` to keep other language files in sync with `en.json` and (optionally) translate missing strings using a LibreTranslate-style endpoint.
+
+Quick usage (from project root):
+
+```bash
+# install runtime dependency used by the script (only needed once)
+npm install node-fetch@2
+
+# structural sync only (writes changes to files)
+node scripts/sync-translations.js
+
+# sync + translate strings (requires a translation service URL and key)
+TRANSLATE=true NODE_TRANSLATE_URL=<url> NODE_TRANSLATE_KEY=<key> node scripts/sync-translations.js
+```
+
+The script merges missing keys from `en.json` into each target language file, aligns array entries by `id`, and preserves non-translatable identifiers (ids, types, image paths). Use the `TRANSLATE` mode only with a translation provider you control.
+
 ## Adding a New Game / Expansion
 
-Add a new key under `"games"` in each language's JSON file following the existing structure:
+Add a new key under "games" in each language's JSON file following the existing structure:
 
 ```json
 "my-expansion": {
@@ -114,6 +133,16 @@ Add a new key under `"games"` in each language's JSON file following the existin
 }
 ```
 
----
+## Validation
+
+After editing or syncing translations, validate JSON quickly:
+
+```bash
+# using jq to check JSON validity
+for f in src/data/*.json; do jq . "$f" > /dev/null || echo "Invalid JSON: $f"; done
+
+# show git diff of changes
+git --no-pager diff -- src/data/
+```
 
 _Community reference — not affiliated with Catan Studio._

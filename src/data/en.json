@@ -18,7 +18,8 @@
   "games": {
     "base": {
       "name": "Catan (Base Game)",
-      "description": "The classic Settlers of Catan. Collect resources, build roads, settlements and cities, trade with other players and be the first to reach 10 Victory Points.",
+      "descriptionTitle": "🏜️ Welcome to the Island of Broken Friendships",
+      "description": "The classic Settlers of Catan — where you'll learn that your closest friends will happily blockade your only road for a single piece of wheat. Collect resources, build roads, settlements and cities, trade with increasingly hostile neighbors, and desperately race to 10 Victory Points before someone drops a Monopoly card on you. Simple rules, infinite grudges.",
       "sections": [
         {
           "id": "resources",
@@ -350,7 +351,8 @@
     },
     "seafarers": {
       "name": "Catan: Seafarers",
-      "description": "Explore an archipelago of islands. Build ships to sail the seas, discover new islands with gold fields, and settle distant shores for bonus Victory Points.",
+      "descriptionTitle": "⛵ Because One Island Wasn't Enough Drama",
+      "description": "Explore an archipelago of islands because apparently ruining friendships on a single landmass wasn't satisfying enough. Build ships to sail the seas, discover new islands with gold fields (that everyone will immediately fight over), and settle distant shores for bonus VP. Now your road-blocking nemesis can follow you across the ocean.",
       "sections": [
         {
           "id": "ships",
@@ -532,7 +534,8 @@
     },
     "cities-knights": {
       "name": "Catan: Cities & Knights",
-      "description": "A deeper strategic experience. Commodities replace some resources, city improvements unlock powerful abilities, and the Barbarians threaten your cities each turn.",
+      "descriptionTitle": "🏰 If base Catan felt cozy. . .",
+      "description": "A deeper strategic experience for people who thought base Catan was too relaxing. Commodities replace some resources (more things to fight over!), city improvements unlock powerful abilities (that your opponents will use against you), and the Barbarians threaten your cities every single turn — because you needed one more thing to worry about. Features 3 decks of progress cards, knights that constantly need feeding, and the joy of watching your undefended city get pillaged. 13 VP to win, infinite regret along the way and the gold standard of “it’s just a game.”",
       "sections": [
         {
           "id": "commodities",
@@ -576,44 +579,399 @@
         },
         {
           "id": "progress-cards",
-          "title": "Progress Cards (examples)",
+          "title": "Progress Cards",
           "icon": "📋",
-          "cards": [
+          "subcategories": [
             {
-              "id": "crane",
-              "type": "progress",
-              "icon": "🏗️",
-              "name": "Crane (Science)",
-              "description": "This turn, you may build one city improvement for 1 fewer commodity than normal.",
-              "usages": ["Save a commodity when upgrading city"]
-            },
-            {
-              "id": "merchant",
-              "type": "progress",
-              "icon": "🧑‍💼",
-              "name": "Merchant (Trade)",
-              "description": "Place the Merchant on any terrain hex. You trade that resource at 2:1 until another player takes the Merchant. Also worth 1 VP.",
-              "usages": [
-                "Control a key resource trading rate",
-                "Worth 1 VP while you hold it"
+              "id": "trade",
+              "title": "Trade",
+              "icon": "💰",
+              "color": "#d4a017",
+              "cards": [
+                {
+                  "id": "commercial-harbor",
+                  "type": "progress-trade",
+                  "icon": "⚓",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.png",
+                  "name": "Commercial Harbor",
+                  "count": 2,
+                  "description": "Each opponent must choose a commodity card from their hand and give it to you in exchange for a resource card of your choice from your hand.",
+                  "usages": [
+                    "Force advantageous trades with all opponents",
+                    "Deplete opponents' commodity reserves"
+                  ]
+                },
+                {
+                  "id": "master-merchant",
+                  "type": "progress-trade",
+                  "icon": "🧑‍💼",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
+                  "name": "Master Merchant",
+                  "count": 2,
+                  "description": "Look at the hand cards of an opponent who has a settlement or city adjacent to one of your own. Take 2 resource or commodity cards of your choice from that hand.",
+                  "usages": [
+                    "Gain intelligence on an opponent's hand",
+                    "Steal 2 specific cards from a neighbor"
+                  ]
+                },
+                {
+                  "id": "merchant",
+                  "type": "progress-trade",
+                  "icon": "🏪",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.png",
+                  "name": "Merchant",
+                  "count": 6,
+                  "description": "Place the Merchant on any land hex adjacent to one of your settlements or cities. While you hold the Merchant, you trade that hex's resource at 2:1. Worth 1 VP.",
+                  "usages": [
+                    "Gain a 2:1 trade ratio on a chosen resource",
+                    "Worth 1 VP while you control the Merchant"
+                  ]
+                },
+                {
+                  "id": "merchant-fleet",
+                  "type": "progress-trade",
+                  "icon": "🚢",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.png",
+                  "name": "Merchant Fleet",
+                  "count": 2,
+                  "description": "Select 1 type of resource or commodity. For the remainder of this turn, you may trade 2 of that type for any 1 other resource or commodity.",
+                  "usages": [
+                    "Get a temporary 2:1 trade ratio on any type",
+                    "Great when you have a surplus of one resource"
+                  ]
+                },
+                {
+                  "id": "resource-monopoly",
+                  "type": "progress-trade",
+                  "icon": "💎",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
+                  "name": "Resource Monopoly",
+                  "count": 4,
+                  "description": "Name 1 resource type. Each opponent who has 2 or more of that resource must give you exactly 2 of them.",
+                  "usages": [
+                    "Collect up to 6 resources from 3 opponents",
+                    "Weaker than base game Monopoly but still powerful"
+                  ]
+                },
+                {
+                  "id": "trade-monopoly",
+                  "type": "progress-trade",
+                  "icon": "📊",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.png",
+                  "name": "Trade Monopoly",
+                  "count": 2,
+                  "description": "Name 1 commodity type. Each opponent who has 1 or more of that commodity must give you exactly 1 of them.",
+                  "usages": [
+                    "Collect commodities from all opponents at once",
+                    "Disrupts opponents' city improvement plans"
+                  ]
+                }
               ]
             },
             {
-              "id": "spy",
-              "type": "progress",
-              "icon": "🕵️",
-              "name": "Spy (Politics)",
-              "description": "Steal one progress card at random from any opponent's hand.",
-              "usages": ["Disrupt opponents, gain a useful card"]
+              "id": "science",
+              "title": "Science",
+              "icon": "🔬",
+              "color": "#27ae60",
+              "cards": [
+                {
+                  "id": "alchemist",
+                  "type": "progress-science",
+                  "icon": "⚗️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.png",
+                  "name": "Alchemist",
+                  "count": 2,
+                  "description": "Before rolling the dice on your turn, choose the result of the production dice (both numbers). The event die is still rolled normally.",
+                  "usages": [
+                    "Guarantee production from your best hexes",
+                    "Trigger a 7 to activate the robber strategically"
+                  ]
+                },
+                {
+                  "id": "crane",
+                  "type": "progress-science",
+                  "icon": "🏗️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.png",
+                  "name": "Crane",
+                  "count": 2,
+                  "description": "This turn, you may build one city improvement for 1 fewer commodity than the normal cost.",
+                  "usages": [
+                    "Save a commodity when upgrading a city track",
+                    "Reach higher improvement levels faster"
+                  ]
+                },
+                {
+                  "id": "engineer",
+                  "type": "progress-science",
+                  "icon": "🔧",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.png",
+                  "name": "Engineer",
+                  "count": 1,
+                  "description": "Build 1 city wall for free (no resources required). Place it under one of your cities.",
+                  "usages": [
+                    "Protect a city without spending resources",
+                    "City walls add +2 to your hand limit when a 7 is rolled"
+                  ]
+                },
+                {
+                  "id": "inventor",
+                  "type": "progress-science",
+                  "icon": "💡",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.png",
+                  "name": "Inventor",
+                  "count": 2,
+                  "description": "Swap 2 number tokens on the board. You may not swap the tokens with the numbers 2, 6, 8, or 12.",
+                  "usages": [
+                    "Improve production odds on your hexes",
+                    "Weaken an opponent's hex by moving a good number away"
+                  ]
+                },
+                {
+                  "id": "irrigation",
+                  "type": "progress-science",
+                  "icon": "💧",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
+                  "name": "Irrigation",
+                  "count": 2,
+                  "description": "Take 2 grain cards from the bank for each of your settlements and cities adjacent to a field hex.",
+                  "usages": [
+                    "Massive grain boost if well-positioned on fields",
+                    "Great for fueling knight activations"
+                  ]
+                },
+                {
+                  "id": "medicine",
+                  "type": "progress-science",
+                  "icon": "💊",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
+                  "name": "Medicine",
+                  "count": 2,
+                  "description": "This turn, you may upgrade one settlement to a city at a reduced cost: only 1 Ore + 1 Grain (instead of 3 Ore + 2 Grain).",
+                  "usages": [
+                    "Build a city at a fraction of the normal cost",
+                    "Quickly expand your city network"
+                  ]
+                },
+                {
+                  "id": "mining",
+                  "type": "progress-science",
+                  "icon": "⛏️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
+                  "name": "Mining",
+                  "count": 2,
+                  "description": "Take 2 ore cards from the bank for each of your settlements and cities adjacent to a mountain hex.",
+                  "usages": [
+                    "Huge ore gain if you border multiple mountains",
+                    "Fuel city upgrades and knight recruitment"
+                  ]
+                },
+                {
+                  "id": "printer",
+                  "type": "progress-science",
+                  "icon": "🖨️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
+                  "name": "Printer",
+                  "count": 1,
+                  "description": "Worth 1 Victory Point. This card remains face-up in front of you for the rest of the game.",
+                  "usages": [
+                    "Permanent 1 VP — play it immediately",
+                    "Cannot be stolen or lost"
+                  ]
+                },
+                {
+                  "id": "road-building",
+                  "type": "progress-science",
+                  "icon": "🛤️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.png",
+                  "name": "Road Building",
+                  "count": 2,
+                  "description": "Place 2 roads on the board for free, as if you had just built them.",
+                  "usages": [
+                    "Expand your network quickly",
+                    "Compete for Longest Road (2 VP)"
+                  ]
+                },
+                {
+                  "id": "smith",
+                  "type": "progress-science",
+                  "icon": "🔨",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
+                  "name": "Smith",
+                  "count": 2,
+                  "description": "Promote up to 2 of your knights for free (e.g., Basic → Strong, or Strong → Mighty).",
+                  "usages": [
+                    "Strengthen your defense without spending resources",
+                    "Prepare for barbarian attacks efficiently"
+                  ]
+                }
+              ]
             },
             {
-              "id": "engineer",
-              "type": "progress",
-              "icon": "🔧",
-              "name": "Engineer (Science)",
-              "description": "Build one city wall for free.",
+              "id": "politics",
+              "title": "Politics",
+              "icon": "🏛️",
+              "color": "#2980b9",
+              "cards": [
+                {
+                  "id": "bishop",
+                  "type": "progress-politics",
+                  "icon": "⛪",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
+                  "name": "Bishop",
+                  "count": 2,
+                  "description": "Move the robber to any hex. Each opponent with a building adjacent to the robber's new hex must give you 1 resource of their choice.",
+                  "usages": [
+                    "Collect 1 resource from each affected opponent",
+                    "Relocate the robber to disrupt multiple players"
+                  ]
+                },
+                {
+                  "id": "constitution",
+                  "type": "progress-politics",
+                  "icon": "📜",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.png",
+                  "name": "Constitution",
+                  "count": 1,
+                  "description": "Worth 1 Victory Point. This card remains face-up in front of you for the rest of the game.",
+                  "usages": [
+                    "Permanent 1 VP — play it immediately",
+                    "Cannot be stolen or lost"
+                  ]
+                },
+                {
+                  "id": "deserter",
+                  "type": "progress-politics",
+                  "icon": "🏃",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
+                  "name": "Deserter",
+                  "count": 2,
+                  "description": "Remove one of an opponent's knights from the board. The opponent takes the knight piece back to their supply.",
+                  "usages": [
+                    "Weaken an opponent's defense before a barbarian attack",
+                    "Remove a knight blocking your road"
+                  ]
+                },
+                {
+                  "id": "diplomat",
+                  "type": "progress-politics",
+                  "icon": "🤝",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
+                  "name": "Diplomat",
+                  "count": 2,
+                  "description": "Remove any open road (a road with at least one end not connected to another road, settlement, or city). If it is your own road, you may immediately place it elsewhere for free.",
+                  "usages": [
+                    "Relocate one of your own roads strategically",
+                    "Remove an opponent's road to break their Longest Road"
+                  ]
+                },
+                {
+                  "id": "intrigue",
+                  "type": "progress-politics",
+                  "icon": "🗡️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
+                  "name": "Intrigue",
+                  "count": 2,
+                  "description": "Displace an opponent's knight from an intersection adjacent to one of your own buildings. The opponent must move their knight to another legal intersection or remove it from the board.",
+                  "usages": [
+                    "Clear a key intersection for your own use",
+                    "Force an opponent's knight out of a strategic position"
+                  ]
+                },
+                {
+                  "id": "saboteur",
+                  "type": "progress-politics",
+                  "icon": "💣",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.png",
+                  "name": "Saboteur",
+                  "count": 2,
+                  "description": "Each opponent with equal or more victory points than you must discard half of their hand cards (rounded down).",
+                  "usages": [
+                    "Punish the leading players",
+                    "Effective when you are behind in VP"
+                  ]
+                },
+                {
+                  "id": "spy",
+                  "type": "progress-politics",
+                  "icon": "🕵️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
+                  "name": "Spy",
+                  "count": 3,
+                  "description": "Look at an opponent's hand of progress cards and steal 1 of your choice.",
+                  "usages": [
+                    "Gain intelligence and steal a powerful card",
+                    "Disrupt an opponent's planned strategy"
+                  ]
+                },
+                {
+                  "id": "warlord",
+                  "type": "progress-politics",
+                  "icon": "⚔️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
+                  "name": "Warlord",
+                  "count": 2,
+                  "description": "Activate all of your knights for free (without paying grain and ore).",
+                  "usages": [
+                    "Instantly prepare all knights for barbarian defense",
+                    "Save significant resources on activations"
+                  ]
+                },
+                {
+                  "id": "wedding",
+                  "type": "progress-politics",
+                  "icon": "💒",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.png",
+                  "name": "Wedding",
+                  "count": 2,
+                  "description": "Each opponent with more victory points than you must give you 2 resource or commodity cards of their choice.",
+                  "usages": [
+                    "Gain cards from players who are ahead",
+                    "Most effective when you are trailing in VP"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "city-improvements",
+          "title": "City Improvements",
+          "icon": "🏛️",
+          "cards": [
+            {
+              "id": "science-improvement",
+              "type": "city-improvement",
+              "icon": "🔬",
+              "name": "Science (Coin)",
+              "description": "If you receive no cards during the Production phase, you may take 1 resource card of your choice (except when a 7 is rolled).",
               "usages": [
-                "Protect a city from Barbarians without spending resources"
+                "Requires level 3 on the Science track",
+                "Commodity used: Coin (from Mountain cities)",
+                "Level 4 earns the Science Metropolis (2 VP)"
+              ]
+            },
+            {
+              "id": "trade-improvement",
+              "type": "city-improvement",
+              "icon": "💰",
+              "name": "Trade (Cloth)",
+              "description": "You may trade commodities at a 2:1 ratio for any resource or other commodity.",
+              "usages": [
+                "Requires level 3 on the Trade track",
+                "Commodity used: Cloth (from Pasture cities)",
+                "Level 4 earns the Trade Metropolis (2 VP)"
+              ]
+            },
+            {
+              "id": "politics-improvement",
+              "type": "city-improvement",
+              "icon": "🏛️",
+              "name": "Politics (Paper)",
+              "description": "You may promote strong knights (level 2) to mighty knights (level 3).",
+              "usages": [
+                "Requires level 3 on the Politics track",
+                "Commodity used: Paper (from Forest cities)",
+                "Level 4 earns the Politics Metropolis (2 VP)"
               ]
             }
           ]
@@ -626,7 +984,7 @@
             {
               "id": "barbarian-track",
               "type": "special",
-              "icon": "🧟",
+              "icon": "🏴‍☠️",
               "name": "Barbarian Attack",
               "description": "Each turn a ship is rolled, the Barbarian token advances. When it reaches Catan, a battle is resolved. If barbarians win, the player with fewest knights loses a city.",
               "usages": [
@@ -646,12 +1004,22 @@
           "No Largest Army tile.",
           "Each player's second starting piece is a city (not a settlement).",
           "Each player gets a city improvement board with 3 tracks and 3 cubes.",
-          "Robber starts off the board until the first barbarian attack."
+          "🥷 Robber starts off the board until the first barbarian attack."
         ],
         "turnOverview": [
           {
-            "title": "1. Roll Dice + Event Die",
-            "detail": "Production die determines resources. Event die advances barbarians or triggers progress card draws."
+            "title": "1. Roll Dice + Event Dice",
+            "detail": "Production dice determines resources. Event dice advances barbarians or triggers progress card draws.",
+            "images": [
+              {
+                "src": "src/assets/images/common/roll-dice.png",
+                "alt": "Roll Dice"
+              },
+              {
+                "src": "src/assets/images/cities-and-knights/event-dice.png",
+                "alt": "Event Dice"
+              }
+            ]
           },
           {
             "title": "2. Commodities",
@@ -700,7 +1068,8 @@
     },
     "traders-barbarians": {
       "name": "Catan: Traders & Barbarians",
-      "description": "A collection of five scenarios and variants that add new dimensions to the classic game: trade routes, caravans, barbarian invasions, and more.",
+      "descriptionTitle": "🐫 Five Ways to Complicate a Perfectly Good Board Game",
+      "description": "A collection of five scenarios and variants that add new dimensions to the classic game — because someone at Catan Studio looked at the base game and thought 'needs more camels.' Features trade routes where you deliver goods across the island like an unpaid intern, barbarian invasions that keep you on your toes, and enough variant rules to make your rulebook thicker than a phone book. Perfect for the group that's played base Catan 200 times and needs fresh reasons to argue.",
       "sections": [
         {
           "id": "trade-routes",
@@ -834,7 +1203,8 @@
     },
     "explorers-pirates": {
       "name": "Catan: Explorers & Pirates",
-      "description": "Set sail to explore unknown waters. Build ships and harbors, complete missions like spice trade or fish hauls, and colonize new lands far from home.",
+      "descriptionTitle": "🏴‍☠️ Catan Goes Full Columbus (Minus the Controversy)",
+      "description": "Set sail to explore unknown waters because sitting on a known island was getting boring. Build ships and harbors, complete missions like spice trade or fish hauls (yes, fish — peak adventure), and colonize new lands far from home. Think of it as Seafarers' ambitious older sibling who studied abroad and won't stop talking about it. More moving pieces, more missions, more 'wait, whose turn is it?' moments.",
       "sections": [
         {
           "id": "missions",

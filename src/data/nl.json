@@ -18,7 +18,8 @@
   "games": {
     "base": {
       "name": "Catan (Basisspel)",
-      "description": "Het klassieke Kolonisten van Catan. Verzamel grondstoffen, bouw wegen, dorpen en steden, handel met andere spelers en wees de eerste die 10 Overwinningspunten bereikt.",
+      "descriptionTitle": "🏜️ Welkom op het eiland van gebroken vriendschappen",
+      "description": "De klassieke Kolonisten van Catan — waar je leert dat je beste vrienden graag je enige weg blokkeren voor een stuk graan. Verzamel grondstoffen, bouw en handel en streef naar 10 OP terwijl allianties verschuiven. Simpele regels, eindeloze wrok.",
       "sections": [
         {
           "id": "resources",
@@ -347,7 +348,8 @@
     },
     "seafarers": {
       "name": "Catan: Zeevaarders",
-      "description": "Het eiland krijgt kusten en er worden meer eilandengroepen te ontdekkken. Koop bootjes, bevaar langs kusten, ontwijk piraten, spoor Goud op voor 1 extra V.P's of scenario gestuurde punt waarden.",
+      "descriptionTitle": "⛵ Omdat één eiland niet genoeg drama was",
+      "description": "Verken meerdere eilanden, bouw schepen en vind nieuwe grondstoffen. Het modulaire bord creëert nieuwe kansen en conflicten om havens en handelsroutes.",
       "sections": [
         {
           "id": "ships",
@@ -445,14 +447,17 @@
             "name": "Scenario's",
             "vp": "14",
             "description": "Verderop bouwen",
-            "details": ["Variaties van the board in regelboekje van Zeevaarders!"]
+            "details": [
+              "Variaties van the board in regelboekje van Zeevaarders!"
+            ]
           }
         ]
       }
     },
     "cities-knights": {
       "name": "Catan: Steden & Ridders",
-      "description": "Complexer spel. Speelt met ridders die indringers wegsturen, steden opbouwen met boeken of theedoeken naar metropolen.",
+      "descriptionTitle": "🏰 Als het basisspel te vredig was...",
+      "description": "Een dieper strategisch spel: handelsgoederen vervangen sommige grondstoffen, stadsverbeteringen geven sterke voordelen, en de barbaren bedreigen je steden elke ronde — perfect om extra spanning te brengen. 13 OP om te winnen.",
       "sections": [
         {
           "id": "commodities",
@@ -465,7 +470,9 @@
               "icon": "🧵",
               "name": "Laken / Stof",
               "description": "Weide dorp /stad = + laken.",
-              "usages": ["Trade track op het bordje."]
+              "usages": [
+                "Trade track op het bordje."
+              ]
             },
             {
               "id": "coin",
@@ -473,7 +480,9 @@
               "icon": "🪙",
               "name": "Munt",
               "description": "Bergen = + Muntstukje.",
-              "usages": ["Science track!"]
+              "usages": [
+                "Science track!"
+              ]
             },
             {
               "id": "paper",
@@ -481,30 +490,393 @@
               "icon": "📜",
               "name": "Boek / Papier",
               "description": "Hout = + Boekwaarde.",
-              "usages": ["Politiek track!"]
+              "usages": [
+                "Politiek track!"
+              ]
             }
           ]
         },
         {
           "id": "progress-cards",
-          "title": "Voortgang in Steden",
+          "title": "Voortgangskaarten",
           "icon": "📋",
-          "cards": [
+          "subcategories": [
             {
-              "id": "crane",
-              "type": "progress",
-              "icon": "🏗️",
-              "name": "Kraan (Wetenschap)",
-              "description": "Betaal -1 koopwaar voor stadsupgrades.",
-              "usages": ["Maakt bouwen steden track beter"]
+              "id": "trade",
+              "title": "Handel",
+              "icon": "💰",
+              "color": "#d4a017",
+              "cards": [
+                {
+                  "id": "commercial-harbor",
+                  "type": "progress-trade",
+                  "icon": "⚓",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.png",
+                  "name": "Handelshaven",
+                  "count": 2,
+                  "description": "Elke tegenstander kiest een handelskaart uit zijn hand en geeft die aan jou in ruil voor een grondstof van jouw keuze.",
+                  "usages": [
+                    "Forceer voordelige ruilen",
+                    "Maak handelsvoorraden van tegenstanders leeg"
+                  ]
+                },
+                {
+                  "id": "master-merchant",
+                  "type": "progress-trade",
+                  "icon": "🧑‍💼",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
+                  "name": "Meesterhandelaar",
+                  "count": 2,
+                  "description": "Kijk naar de hand van een aangrenzende tegenstander en neem 2 kaarten naar keuze.",
+                  "usages": [
+                    "Krijg informatie",
+                    "Steel 2 specifieke kaarten"
+                  ]
+                },
+                {
+                  "id": "merchant",
+                  "type": "progress-trade",
+                  "icon": "🏪",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.png",
+                  "name": "Handelaar",
+                  "count": 6,
+                  "description": "Plaats de handelaar naast één van je gebouwen. Zolang jij hem controleert, ruil je die grondstof 2:1. Waard 1 OP.",
+                  "usages": [
+                    "Blijf 2:1 op een gekozen grondstof krijgen",
+                    "Waarde 1 OP zolang gehouden"
+                  ]
+                },
+                {
+                  "id": "merchant-fleet",
+                  "type": "progress-trade",
+                  "icon": "🚢",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.png",
+                  "name": "Handelsvloot",
+                  "count": 2,
+                  "description": "Kies 1 type grondstof/handel; voor de rest van de beurt ruil je 2 daarvan voor 1 andere kaart.",
+                  "usages": [
+                    "Tijdelijk 2:1 krijgen op een type",
+                    "Handig bij overschotten"
+                  ]
+                },
+                {
+                  "id": "resource-monopoly",
+                  "type": "progress-trade",
+                  "icon": "💎",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
+                  "name": "Grondstofmonopolie",
+                  "count": 4,
+                  "description": "Noem 1 grondstof. Elke tegenstander met 2+ van die grondstof moet je precies 2 geven.",
+                  "usages": [
+                    "Verzamel veel grondstoffen van tegenstanders"
+                  ]
+                },
+                {
+                  "id": "trade-monopoly",
+                  "type": "progress-trade",
+                  "icon": "📊",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.png",
+                  "name": "Handelsmonopolie",
+                  "count": 2,
+                  "description": "Noem 1 handelsgoed. Elke tegenstander met 1+ moet je precies 1 geven.",
+                  "usages": [
+                    "Verzamel handelsgoederen van iedereen"
+                  ]
+                }
+              ]
             },
             {
-              "id": "merchant",
-              "type": "progress",
-              "icon": "🧑‍💼",
-              "name": "Handelaar",
-              "description": "Levert specifieke haven-eigenschap (2:1) + 1 OP zolang die onder je controle blijft.",
-              "usages": ["Economische push voor benodigde stenen."]
+              "id": "science",
+              "title": "Wetenschap",
+              "icon": "🔬",
+              "color": "#27ae60",
+              "cards": [
+                {
+                  "id": "alchemist",
+                  "type": "progress-science",
+                  "icon": "⚗️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.png",
+                  "name": "Alchemist",
+                  "count": 2,
+                  "description": "Kies vóór het gooien dit productie-worp (beide nummers). De evenementdobbelsteen wordt normaal gegooid.",
+                  "usages": [
+                    "Garandeer productie op je beste velden",
+                    "Provoceer strategisch een 7"
+                  ]
+                },
+                {
+                  "id": "crane",
+                  "type": "progress-science",
+                  "icon": "🏗️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.png",
+                  "name": "Kraan",
+                  "count": 2,
+                  "description": "Bouw deze beurt een stadsverbetering voor 1 minder handelsgoed.",
+                  "usages": [
+                    "Bespaar één handelsgoed",
+                    "Sneller niveaus halen"
+                  ]
+                },
+                {
+                  "id": "engineer",
+                  "type": "progress-science",
+                  "icon": "🔧",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.png",
+                  "name": "Ingenieur",
+                  "count": 1,
+                  "description": "Bouw gratis 1 stadsmuur onder één van je steden.",
+                  "usages": [
+                    "Bescherm een stad zonder kosten",
+                    "Muren verhogen handlimiet bij 7 met +2"
+                  ]
+                },
+                {
+                  "id": "inventor",
+                  "type": "progress-science",
+                  "icon": "💡",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.png",
+                  "name": "Uitvinder",
+                  "count": 2,
+                  "description": "Ruil 2 nummermarkers op het bord (niet 2,6,8,12).",
+                  "usages": [
+                    "Verbeter je productiekansen",
+                    "Verzwak iemands winnende hex"
+                  ]
+                },
+                {
+                  "id": "irrigation",
+                  "type": "progress-science",
+                  "icon": "💧",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
+                  "name": "Irrigatie",
+                  "count": 2,
+                  "description": "Neem 2 Tarwe-kaarten uit de voorraad voor elke nederzetting/stad naast een Tarwe-hex.",
+                  "usages": [
+                    "Grote tarweboost",
+                    "Goed om ridders te activeren"
+                  ]
+                },
+                {
+                  "id": "medicine",
+                  "type": "progress-science",
+                  "icon": "💊",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
+                  "name": "Geneeskunde",
+                  "count": 2,
+                  "description": "Upgrade een nederzetting naar stad voor slechts 1 Oer + 1 Tarwe (in plaats van 3 Oer + 2 Tarwe).",
+                  "usages": [
+                    "Goedkoop stad bouwen",
+                    "Snel uitbreiden"
+                  ]
+                },
+                {
+                  "id": "mining",
+                  "type": "progress-science",
+                  "icon": "⛏️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
+                  "name": "Mijnbouw",
+                  "count": 2,
+                  "description": "Neem 2 Oer uit de voorraad voor elke nederzetting/stad naast een Berg-hex.",
+                  "usages": [
+                    "Grote Oerbron bij goede plaatsing"
+                  ]
+                },
+                {
+                  "id": "printer",
+                  "type": "progress-science",
+                  "icon": "🖨️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
+                  "name": "Drukpers",
+                  "count": 2,
+                  "description": "Trek 2 voortgangskaarten en hou 1.",
+                  "usages": [
+                    "Kaartvoordeel"
+                  ]
+                },
+                {
+                  "id": "road-building",
+                  "type": "progress-science",
+                  "icon": "🛣️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.png",
+                  "name": "Wegenbouw",
+                  "count": 2,
+                  "description": "Bouw direct 2 wegen zonder kosten.",
+                  "usages": [
+                    "Snel blokkeren"
+                  ]
+                },
+                {
+                  "id": "smith",
+                  "type": "progress-science",
+                  "icon": "🛠️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
+                  "name": "Smid",
+                  "count": 2,
+                  "description": "Betaal 1 Oer: activeer een gerekruteerde ridder meteen.",
+                  "usages": [
+                    "Ridders activeren zonder Tarwe"
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "politics",
+              "title": "Politiek",
+              "icon": "🏛️",
+              "color": "#c0392b",
+              "cards": [
+                {
+                  "id": "bishop",
+                  "type": "progress-politics",
+                  "icon": "⛪",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
+                  "name": "Bisschop",
+                  "count": 2,
+                  "description": "Betaal 1 handelsgoed om een voortgangskaart van een tegenstander te laten ontkrachten (naar afleg).",
+                  "usages": [
+                    "Neutraliseer belangrijke acties van tegenstanders"
+                  ]
+                },
+                {
+                  "id": "constitution",
+                  "type": "progress-politics",
+                  "icon": "📜",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.png",
+                  "name": "Grondwet",
+                  "count": 2,
+                  "description": "Krijg 1 permanente vaardigheid gebaseerd op je hoogste stadsverbeteringsniveau.",
+                  "usages": [
+                    "Langetermijnvoordelen naar specialisatie"
+                  ]
+                },
+                {
+                  "id": "deserter",
+                  "type": "progress-politics",
+                  "icon": "🏃",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
+                  "name": "Deserteur",
+                  "count": 2,
+                  "description": "Betaal 1 handelsgoed, neem een actieve vijandelijke ridder (deactiveer) en rekruteer hem als jouw eigen (inactief).",
+                  "usages": [
+                    "Verzwak vijandelijke ridders en versterk de jouwe"
+                  ]
+                },
+                {
+                  "id": "diplomat",
+                  "type": "progress-politics",
+                  "icon": "🫡",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
+                  "name": "Diplomaat",
+                  "count": 2,
+                  "description": "Verplaats de loyaliteit van een neutrale invloedmarker in jouw voordeel.",
+                  "usages": [
+                    "Controleer neutrale markers en voorkom stadsdiefstal"
+                  ]
+                },
+                {
+                  "id": "intrigue",
+                  "type": "progress-politics",
+                  "icon": "🕵️‍♀️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
+                  "name": "Intrige",
+                  "count": 2,
+                  "description": "Ruil 1 kaart uit jouw hand met 1 kaart uit de hand van een tegenstander (willekeurig gekozen).",
+                  "usages": [
+                    "Maak handen van tegenstanders chaotisch"
+                  ]
+                },
+                {
+                  "id": "saboteur",
+                  "type": "progress-politics",
+                  "icon": "💣",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.png",
+                  "name": "Saboteur",
+                  "count": 2,
+                  "description": "Elke tegenstander met gelijk of meer OP moet de helft van zijn hand (afronden naar beneden) afleggen.",
+                  "usages": [
+                    "Druk uit op leidende spelers"
+                  ]
+                },
+                {
+                  "id": "spy",
+                  "type": "progress-politics",
+                  "icon": "🕵️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
+                  "name": "Spion",
+                  "count": 3,
+                  "description": "Bekijk een tegenstanders voortgangskaartenhand en steel 1 kaart naar keuze.",
+                  "usages": [
+                    "Informatie verkrijgen en krachtige kaarten stelen"
+                  ]
+                },
+                {
+                  "id": "warlord",
+                  "type": "progress-politics",
+                  "icon": "⚔️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
+                  "name": "Oorlogsheer",
+                  "count": 2,
+                  "description": "Activeer al jouw ridders gratis (zonder Tarwe+Oer te betalen).",
+                  "usages": [
+                    "Bereid onmiddellijke verdediging voor"
+                  ]
+                },
+                {
+                  "id": "wedding",
+                  "type": "progress-politics",
+                  "icon": "💒",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.png",
+                  "name": "Bruiloft",
+                  "count": 2,
+                  "description": "Elke tegenstander met meer OP dan jij moet je 2 kaarten (grondstof of handelsgoed) van zijn keuze geven.",
+                  "usages": [
+                    "Krijg kaarten van spelers die voorop lopen"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "city-improvements",
+          "title": "Stadsverbeteringen",
+          "icon": "🏛️",
+          "cards": [
+            {
+              "id": "science-improvement",
+              "type": "city-improvement",
+              "icon": "🔬",
+              "name": "Wetenschap (Munt)",
+              "description": "Als je tijdens de productiefase geen kaarten ontvangt, mag je 1 grondstof naar keuze nemen (niet bij een 7).",
+              "usages": [
+                "Vereist niveau 3 op de Wetenschapsbaan",
+                "Handelsgoed: Munt (bergsteden)",
+                "Niveau 4 geeft Wetenschaps-Metropool (2 OP)"
+              ]
+            },
+            {
+              "id": "trade-improvement",
+              "type": "city-improvement",
+              "icon": "💰",
+              "name": "Handel (Doek)",
+              "description": "Je mag handelsgoederen ruilen tegen andere kaartsoorten in een 2:1 verhouding.",
+              "usages": [
+                "Vereist niveau 3 op de Handelsbaan",
+                "Handelsgoed: Doek (weidesteden)",
+                "Niveau 4 geeft Handels-Metropool (2 OP)"
+              ]
+            },
+            {
+              "id": "politics-improvement",
+              "type": "city-improvement",
+              "icon": "🏛️",
+              "name": "Politiek (Papier)",
+              "description": "Je mag sterke ridders (niveau 2) bevorderen tot machtige ridders (niveau 3).",
+              "usages": [
+                "Vereist niveau 3 op de Politieke baan",
+                "Handelsgoed: Papier (woudsteden)",
+                "Niveau 4 geeft Politieke Metropool (2 OP)"
+              ]
             }
           ]
         },
@@ -516,10 +888,12 @@
             {
               "id": "barbarian-track",
               "type": "special",
-              "icon": "🧟",
+              "icon": "🏴‍☠️",
               "name": "Aanval vanuit Zee",
               "description": "Tel de koppen en sla ze allemaal ter neer! Zoniet, speler met minste verdediging omlaag met de stad!",
-              "usages": ["Activeer ridders (graan)."]
+              "usages": [
+                "Activeer ridders (graan)."
+              ]
             }
           ]
         }
@@ -528,12 +902,23 @@
         "players": "3–4",
         "vpToWin": "13",
         "setup": [
-          "Iedere speler start in Steden en Ridders met 1 dorp EN 1 STAD als tweede geplaatste vestiging."
+          "Iedere speler start in Steden en Ridders met 1 dorp EN 1 STAD als tweede geplaatste vestiging.",
+          "🥷 De rover begint buiten het bord tot de eerste barbarenaanval."
         ],
         "turnOverview": [
           {
-            "title": "Dobbels",
-            "detail": "Kleurige dobbelsteen samenlezing bepaalt en de goederen kaarten event (en het ridders schip)"
+            "title": "1. Dobbel + Evenementdobbelsteen",
+            "detail": "Gooi de productie-dobbelstenen en de evenement-dobbelsteen; barbaren rukken op of voortgangskaarten worden geactiveerd.",
+            "images": [
+              {
+                "src": "src/assets/images/common/roll-dice.png",
+                "alt": "Dobbel"
+              },
+              {
+                "src": "src/assets/images/cities-and-knights/event-dice.png",
+                "alt": "Evenementdobbelsteen"
+              }
+            ]
           }
         ],
         "keyRules": [
@@ -547,7 +932,8 @@
     },
     "traders-barbarians": {
       "name": "Catan: Handelaren & Barbaren",
-      "description": "Bevat veel mini-expansies die samen of los gegooid mogen zijn",
+      "descriptionTitle": "🐫 Vijf manieren om een goed spel te compliceren",
+      "description": "Verzameling scenario's die handel, karavanen en barbaarse invasies introduceert in verschillende varianten. Elk scenario verandert de spelflow.",
       "sections": [
         {
           "id": "trade-routes",
@@ -560,7 +946,9 @@
               "icon": "🐪",
               "name": "De Karavaan",
               "description": "Kamelen als wegelement die twee punten aan je road toebrengen.",
-              "usages": ["Verbeter stappen"]
+              "usages": [
+                "Verbeter stappen"
+              ]
             },
             {
               "id": "gold",
@@ -568,7 +956,9 @@
               "icon": "🪙",
               "name": "Goud!",
               "description": "Met dit kan je betalen wanneer t mist in grond.",
-              "usages": ["Wildcarding de economie"]
+              "usages": [
+                "Wildcarding de economie"
+              ]
             }
           ]
         }
@@ -576,22 +966,27 @@
       "gameplay": {
         "players": "2–4",
         "vpToWin": "12-14",
-        "setup": ["Speel scenario apart of combineer alles door de varianten mix als visserij in the zee / 2 speler systemem en events aan elkaar te lijmen,"],
+        "setup": [
+          "Speel scenario apart of combineer alles door de varianten mix als visserij in the zee / 2 speler systemem en events aan elkaar te lijmen,"
+        ],
         "turnOverview": [],
         "keyRules": [],
         "scenarios": [
           {
-             "name": "Rivers of Catan / Handel / Vissende havens",
-             "vp": "13",
-             "description": "Je volgt alle combinaties.",
-             "details": ["Geweldige mix"]
+            "name": "Rivers of Catan / Handel / Vissende havens",
+            "vp": "13",
+            "description": "Je volgt alle combinaties.",
+            "details": [
+              "Geweldige mix"
+            ]
           }
         ]
       }
     },
     "explorers-pirates": {
       "name": "Catan: Ontdekkers & Piraten",
-      "description": "Gedraaid concept waar ontdekkingsprikkels super hoog in vaandel hebben staan",
+      "descriptionTitle": "🏴‍☠️ Catan wordt ontdekkingsreiziger (zonder controverse)",
+      "description": "Zeil naar nieuwe eilanden, vestig posten en bestrijd piraten. Missies en verkenning bieden nieuwe manieren om te scoren en te concurreren op zee.",
       "sections": [
         {
           "id": "missions",
@@ -604,7 +999,9 @@
               "icon": "🌶️",
               "name": "Specerijen Eiland",
               "description": "Binnenvaren, uitladen, kruiden zak inladen en thuisbrengen voor winst in je Haven",
-              "usages": ["Missions"]
+              "usages": [
+                "Missions"
+              ]
             },
             {
               "id": "fish-camp",
@@ -612,7 +1009,9 @@
               "icon": "🐟",
               "name": "Visser Vloot",
               "description": "Rondhangen als nummer is geweest the vissen met vloot verplaatsen.",
-              "usages": ["Spaar Vis"]
+              "usages": [
+                "Spaar Vis"
+              ]
             },
             {
               "id": "pirate-lair",
@@ -620,7 +1019,9 @@
               "icon": "🏴‍☠️",
               "name": "Piraat Kampement Vegen",
               "description": "Vechters of kolonisten worden uitgegooit op land the eiland the vijanden verslagen",
-              "usages": ["Kustwacht voor VPs"]
+              "usages": [
+                "Kustwacht voor VPs"
+              ]
             }
           ]
         }
@@ -628,18 +1029,20 @@
       "gameplay": {
         "players": "2–4",
         "vpToWin": "15-17",
-        "setup": ["Opzetten in een groot driehoek of langwerpig framework de boten de crews al de plastic componenten apart leggen"],
+        "setup": [
+          "Opzetten in een groot driehoek of langwerpig framework de boten de crews al de plastic componenten apart leggen"
+        ],
         "turnOverview": [
-           {
-              "title": "Vloot vaart!",
-              "detail": "Korte 4 velden stap en betalen voor meer verplaatsingen."
-           }
+          {
+            "title": "Vloot vaart!",
+            "detail": "Korte 4 velden stap en betalen voor meer verplaatsingen."
+          }
         ],
         "keyRules": [
-           {
-              "title": "Havendorp Opbouwe",
-              "detail": "Kunt 2 kleinere bootjes of crew the stad vullen (waarde is 2 pnt)"
-           }
+          {
+            "title": "Havendorp Opbouwe",
+            "detail": "Kunt 2 kleinere bootjes of crew the stad vullen (waarde is 2 pnt)"
+          }
         ],
         "scenarios": []
       }
