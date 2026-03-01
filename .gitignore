@@ -8,6 +8,9 @@ Thumbs.db
 ehthumbs.db
 Desktop.ini
 
+# Reference PDFs (large files, not needed in repo)
+docs/
+
 # Node
 node_modules/
 npm-debug.log*
