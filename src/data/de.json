@@ -18,7 +18,8 @@
   "games": {
     "base": {
       "name": "Catan (Grundspiel)",
-      "description": "Das klassische Siedler von Catan. Sammle Rohstoffe, baue Straßen, Siedlungen und Städte, handle mit anderen Spielern und erreiche als Erster 10 Siegpunkte.",
+      "descriptionTitle": "🏜️ Willkommen auf der Insel der zerbrochenen Freundschaften",
+      "description": "Das klassische Siedler von Catan — hier lernst du, dass deine engsten Freunde bereitwillig deine einzige Straße für ein Stück Getreide blockieren. Sammle Rohstoffe, baue Straßen, Siedlungen und Städte, handle mit zunehmend misstrauischen Mitspielern und erreiche 10 Siegpunkte, bevor jemand eine Monopolkarte spielt. Einfache Regeln, endlose Fehden.",
       "sections": [
         {
           "id": "resources",
@@ -349,7 +350,8 @@
     },
     "seafarers": {
       "name": "Seefahrer",
-      "description": "Erkunde einen Archipel. Baue Schiffe, um die Meere zu befahren, entdecke neue Inseln mit Goldfeldern und besiedle ferne Küsten für Bonussiegpunkte.",
+      "descriptionTitle": "⛵ Weil eine Insel nicht genug Drama war",
+      "description": "Erkunde mehrere Inseln, baue Schiffe und finde neue Rohstoffe. Die modulare Karte schafft neue Chancen und Konflikte um Häfen und Handelsrouten — ideal, um euren üblichen Feldkampf aufs Meer zu verlegen.",
       "sections": [
         {
           "id": "ships",
@@ -457,7 +459,9 @@
             "name": "Auf zu neuen Ufern",
             "vp": "14 SP",
             "description": "Kleine Inseln über das Meer besiedeln.",
-            "details": ["+2 SP für erste Siedlung auf jeder kleinen Insel"]
+            "details": [
+              "+2 SP für erste Siedlung auf jeder kleinen Insel"
+            ]
           },
           {
             "name": "Die vier Inseln",
@@ -524,14 +528,17 @@
             "name": "Neue Welt",
             "vp": "12 SP",
             "description": "Komplett zufälliges Insellayout.",
-            "details": ["+1 SP pro Siedlung auf unerforschter Insel"]
+            "details": [
+              "+1 SP pro Siedlung auf unerforschter Insel"
+            ]
           }
         ]
       }
     },
     "cities-knights": {
       "name": "Städte & Ritter",
-      "description": "Ein tieferes strategisches Erlebnis. Waren ersetzen einige Rohstoffe, Stadtverbesserungen schalten mächtige Fähigkeiten frei und Barbaren bedrohen jede Runde deine Städte.",
+      "descriptionTitle": "🏰 Wenn das Basis-Catan zu gemütlich war...",
+      "description": "Ein tieferes strategisches Erlebnis für Spieler, die mehr Komplexität suchen. Waren ersetzen bestimmte Rohstoffe, Stadtverbesserungen schalten starke Fähigkeiten frei, und die Barbaren bedrohen deine Städte jede Runde — das sorgt für zusätzliche Dramatik. Drei Fortschrittsdecks, Metropolen, und Ritterkämpfe bringen intensive Entscheidungen; 13 Siegpunkte zum Sieg.",
       "sections": [
         {
           "id": "commodities",
@@ -575,44 +582,386 @@
         },
         {
           "id": "progress-cards",
-          "title": "Fortschrittskarten (Beispiele)",
+          "title": "Fortschrittskarten",
           "icon": "📋",
-          "cards": [
+          "subcategories": [
             {
-              "id": "crane",
-              "type": "progress",
-              "icon": "🏗️",
-              "name": "Kran (Wissenschaft)",
-              "description": "In diesem Zug kannst du eine Stadtverbesserung für 1 weniger Ware als normal kaufen.",
-              "usages": ["Eine Ware beim Stadtausbau sparen"]
-            },
-            {
-              "id": "merchant",
-              "type": "progress",
-              "icon": "🧑‍💼",
-              "name": "Händler (Handel)",
-              "description": "Lege den Händler auf ein beliebiges Geländefeld. Du tauschst diesen Rohstoff 2:1, bis jemand den Händler übernimmt. Wert auch 1 SP.",
-              "usages": [
-                "Wichtigen Rohstoff zu günstigem Kurs handeln",
-                "Wert 1 SP, solange du ihn hältst"
+              "id": "trade",
+              "title": "Handel",
+              "icon": "💰",
+              "color": "#d4a017",
+              "cards": [
+                {
+                  "id": "commercial-harbor",
+                  "type": "progress-trade",
+                  "icon": "⚓",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.png",
+                  "name": "Handelshafen",
+                  "count": 2,
+                  "description": "Jeder Gegner wählt eine Warenkarte aus seiner Hand und gibt sie dir im Tausch gegen eine Rohstoffkarte deiner Wahl.",
+                  "usages": [
+                    "Erzwinge profitable Tauschangebote von allen Gegnern",
+                    "Leere die Warenbestände deiner Gegner"
+                  ]
+                },
+                {
+                  "id": "master-merchant",
+                  "type": "progress-trade",
+                  "icon": "🧑‍💼",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
+                  "name": "Meisterhändler",
+                  "count": 2,
+                  "description": "Schau dir die Hand eines benachbarten Gegners an und nimm 2 Karten deiner Wahl.",
+                  "usages": [
+                    "Informationen über gegnerische Hände erhalten",
+                    "Gezielt 2 Karten stehlen"
+                  ]
+                },
+                {
+                  "id": "merchant",
+                  "type": "progress-trade",
+                  "icon": "🏪",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.png",
+                  "name": "Händler",
+                  "count": 6,
+                  "description": "Setze den Händler neben eines deiner Gebäude. Solange du ihn kontrollierst, tauschst du diese Ressource 2:1. Wert 1 SP.",
+                  "usages": [
+                    "Biete dauerhaft 2:1 für eine gewählte Ressource",
+                    "Wert 1 SP solange gehalten"
+                  ]
+                },
+                {
+                  "id": "merchant-fleet",
+                  "type": "progress-trade",
+                  "icon": "🚢",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.png",
+                  "name": "Handelsflotte",
+                  "count": 2,
+                  "description": "Wähle 1 Ressource oder Ware: für den Rest des Zuges tauschst du 2 davon gegen 1 andere Karte.",
+                  "usages": [
+                    "Kurzzeitig 2:1 auf einen Typ erhalten",
+                    "Nützlich bei Überschuss"
+                  ]
+                },
+                {
+                  "id": "resource-monopoly",
+                  "type": "progress-trade",
+                  "icon": "💎",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
+                  "name": "Rohstoffmonopol",
+                  "count": 4,
+                  "description": "Nenne 1 Rohstoff. Jeder Gegner mit 2+ dieser Ressource muss dir genau 2 Karten geben.",
+                  "usages": [
+                    "Sammle viele Rohstoffe von mehreren Gegnern",
+                    "Stark, aber weniger mächtig als Basis-Monopol"
+                  ]
+                },
+                {
+                  "id": "trade-monopoly",
+                  "type": "progress-trade",
+                  "icon": "📊",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.png",
+                  "name": "Handelsmonopol",
+                  "count": 2,
+                  "description": "Nenne 1 Ware. Jeder Gegner mit mindestens 1 dieser Ware muss dir genau 1 geben.",
+                  "usages": [
+                    "Sammle Waren von allen Gegnern",
+                    "Störe gegnerische Verbesserungspläne"
+                  ]
+                }
               ]
             },
             {
-              "id": "spy",
-              "type": "progress",
-              "icon": "🕵️",
-              "name": "Spion (Politik)",
-              "description": "Stiehl eine zufällige Fortschrittskarte aus der Hand eines beliebigen Gegners.",
-              "usages": ["Gegner stören und nützliche Karte erhalten"]
+              "id": "science",
+              "title": "Wissenschaft",
+              "icon": "🔬",
+              "color": "#27ae60",
+              "cards": [
+                {
+                  "id": "alchemist",
+                  "type": "progress-science",
+                  "icon": "⚗️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.png",
+                  "name": "Alchemist",
+                  "count": 2,
+                  "description": "Wähle vor dem Würfeln dieses Zuges das Produktionswürfelergebnis (beide Zahlen). Der Ereigniswürfel wird normal geworfen.",
+                  "usages": [
+                    "Produktion auf deinen besten Feldern garantieren",
+                    "Strategisch eine 7 provozieren"
+                  ]
+                },
+                {
+                  "id": "crane",
+                  "type": "progress-science",
+                  "icon": "🏗️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.png",
+                  "name": "Kran",
+                  "count": 2,
+                  "description": "Baue diese Runde eine Stadtverbesserung für 1 weniger Ware als normal.",
+                  "usages": [
+                    "Eine Ware bei einer Verbesserung sparen",
+                    "Schneller auf höhere Stufen kommen"
+                  ]
+                },
+                {
+                  "id": "engineer",
+                  "type": "progress-science",
+                  "icon": "🔧",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.png",
+                  "name": "Ingenieur",
+                  "count": 1,
+                  "description": "Baue kostenlos eine Stadtmauer unter eine deiner Städte.",
+                  "usages": [
+                    "Stadtschutz ohne Kosten",
+                    "Mauern erhöhen Handkartenlimit bei 7 um +2"
+                  ]
+                },
+                {
+                  "id": "inventor",
+                  "type": "progress-science",
+                  "icon": "💡",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.png",
+                  "name": "Erfinder",
+                  "count": 2,
+                  "description": "Tausche 2 Nummernmarker auf dem Brett (nicht 2,6,8,12).",
+                  "usages": [
+                    "Erhöhe deine Produktionschancen",
+                    "Schwäche die Felder eines Gegners"
+                  ]
+                },
+                {
+                  "id": "irrigation",
+                  "type": "progress-science",
+                  "icon": "💧",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
+                  "name": "Bewässerung",
+                  "count": 2,
+                  "description": "Nimm 2 Weizenkarten pro Siedlung/Stadt neben einem Feld mit Getreide aus der Bank.",
+                  "usages": [
+                    "Großer Weizeschub bei guter Platzierung",
+                    "Gut zum Aktivieren von Rittern"
+                  ]
+                },
+                {
+                  "id": "medicine",
+                  "type": "progress-science",
+                  "icon": "💊",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
+                  "name": "Medizin",
+                  "count": 2,
+                  "description": "Verbessere eine Siedlung zur Stadt für nur 1 Erz + 1 Weizen (statt 3 Erz + 2 Weizen).",
+                  "usages": [
+                    "Stadt günstig bauen",
+                    "Schnell mehr Städte errichten"
+                  ]
+                },
+                {
+                  "id": "mining",
+                  "type": "progress-science",
+                  "icon": "⛏️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
+                  "name": "Bergbau",
+                  "count": 2,
+                  "description": "Nimm 2 Erz aus der Bank für jede Siedlung/Stadt neben einem Gebirgsfeld.",
+                  "usages": [
+                    "Große Erzquelle bei guter Platzierung"
+                  ]
+                },
+                {
+                  "id": "printer",
+                  "type": "progress-science",
+                  "icon": "🖨️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
+                  "name": "Drucker",
+                  "count": 2,
+                  "description": "Ziehe 2 Fortschrittskarten und behalte 1 davon.",
+                  "usages": [
+                    "Kartenvorteil erhalten"
+                  ]
+                },
+                {
+                  "id": "road-building",
+                  "type": "progress-science",
+                  "icon": "🛣️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.png",
+                  "name": "Straßenbau",
+                  "count": 2,
+                  "description": "Baue sofort 2 Straßen zum Preis von 0 Ressourcen.",
+                  "usages": [
+                    "Schnell Straßen zum Blockieren bauen"
+                  ]
+                },
+                {
+                  "id": "smith",
+                  "type": "progress-science",
+                  "icon": "🛠️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
+                  "name": "Schmied",
+                  "count": 2,
+                  "description": "Zahle 1 Erz: aktiviere einen rekrutierten Ritter sofort.",
+                  "usages": [
+                    "Ritter ohne Weizen aktivieren"
+                  ]
+                }
+              ]
             },
             {
-              "id": "engineer",
-              "type": "progress",
-              "icon": "🔧",
-              "name": "Ingenieur (Wissenschaft)",
-              "description": "Baue kostenlos eine Stadtmauer.",
+              "id": "politics",
+              "title": "Politik",
+              "icon": "🏛️",
+              "color": "#c0392b",
+              "cards": [
+                {
+                  "id": "bishop",
+                  "type": "progress-politics",
+                  "icon": "⛪",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
+                  "name": "Bischof",
+                  "count": 2,
+                  "description": "Zahle eine Ware, um eine gegnerische Fortschrittskarte zu entwerten (zum Ablagestapel).",
+                  "usages": [
+                    "Gegnerische Schlüsselaktionen neutralisieren"
+                  ]
+                },
+                {
+                  "id": "constitution",
+                  "type": "progress-politics",
+                  "icon": "📜",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.png",
+                  "name": "Verfassung",
+                  "count": 2,
+                  "description": "Erhalte 1 dauerhafte Fähigkeit basierend auf deiner höchsten Stadtverbesserungsstufe.",
+                  "usages": [
+                    "Langfristige Vorteile basierend auf deiner Spezialisierung"
+                  ]
+                },
+                {
+                  "id": "deserter",
+                  "type": "progress-politics",
+                  "icon": "🏃",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
+                  "name": "Deserteur",
+                  "count": 2,
+                  "description": "Zahle 1 Ware, nimm einen aktiven feindlichen Ritter (deaktiviere ihn) und rekrutiere ihn als deinen eigenen (inaktiv).",
+                  "usages": [
+                    "Feindliche Ritter schwächen und eigene Truppen stärken"
+                  ]
+                },
+                {
+                  "id": "diplomat",
+                  "type": "progress-politics",
+                  "icon": "🫡",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
+                  "name": "Diplomat",
+                  "count": 2,
+                  "description": "Verschiebe die Loyalität eines neutralen Einflussmarkers zu deinen Gunsten.",
+                  "usages": [
+                    "Kontrolliere neutrale Marker und verhindere Diebstahl von Metropolen"
+                  ]
+                },
+                {
+                  "id": "intrigue",
+                  "type": "progress-politics",
+                  "icon": "🕵️‍♀️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
+                  "name": "Intrige",
+                  "count": 2,
+                  "description": "Tausche 1 Karte aus deiner Hand mit 1 Karte aus der Hand eines Gegners (zufällig ausgewählt).",
+                  "usages": [
+                    "Handdesorganisation von Gegnern"
+                  ]
+                },
+                {
+                  "id": "saboteur",
+                  "type": "progress-politics",
+                  "icon": "💣",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.png",
+                  "name": "Saboteur",
+                  "count": 2,
+                  "description": "Jeder Gegner mit gleich oder mehr Siegpunkten als du muss die Hälfte seiner Hand (abgerundet) abgeben.",
+                  "usages": [
+                    "Führe starken Druck gegen führende Spieler aus"
+                  ]
+                },
+                {
+                  "id": "spy",
+                  "type": "progress-politics",
+                  "icon": "🕵️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
+                  "name": "Spion",
+                  "count": 3,
+                  "description": "Siehe die Fortschrittskartenhand eines Gegners und stehle eine Karte deiner Wahl.",
+                  "usages": [
+                    "Information und mächtige Karten stehlen"
+                  ]
+                },
+                {
+                  "id": "warlord",
+                  "type": "progress-politics",
+                  "icon": "⚔️",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
+                  "name": "Kriegsherr",
+                  "count": 2,
+                  "description": "Aktiviere alle deine Ritter kostenlos (ohne Weizen+Erz zu zahlen).",
+                  "usages": [
+                    "Bereite sofortige Verteidigung vor"
+                  ]
+                },
+                {
+                  "id": "wedding",
+                  "type": "progress-politics",
+                  "icon": "💒",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.png",
+                  "name": "Hochzeit",
+                  "count": 2,
+                  "description": "Jeder Gegner mit mehr Siegpunkten als du muss dir 2 Karten (Rohstoff oder Ware) seiner Wahl geben.",
+                  "usages": [
+                    "Gezielte Kartenbeschaffung von führenden Spielern"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "city-improvements",
+          "title": "Stadtverbesserungen",
+          "icon": "🏛️",
+          "cards": [
+            {
+              "id": "science-improvement",
+              "type": "city-improvement",
+              "icon": "🔬",
+              "name": "Wissenschaft (Münze)",
+              "description": "Wenn du in der Produktionsphase keine Karten erhältst, kannst du 1 Rohstoff deiner Wahl nehmen (außer bei einer 7).",
               "usages": [
-                "Eine Stadt vor Barbaren schützen ohne Ressourcen auszugeben"
+                "Benötigt Stufe 3 auf dem Wissenschafts-Track",
+                "Ware: Münze (aus Gebirgsstädten)",
+                "Stufe 4 gibt die Wissenschafts-Metropole (2 SP)"
+              ]
+            },
+            {
+              "id": "trade-improvement",
+              "type": "city-improvement",
+              "icon": "💰",
+              "name": "Handel (Tuch)",
+              "description": "Du kannst Waren zu einem Verhältnis von 2:1 gegen beliebige Rohstoffe oder andere Waren tauschen.",
+              "usages": [
+                "Benötigt Stufe 3 auf dem Handels-Track",
+                "Ware: Tuch (aus Weidestädten)",
+                "Stufe 4 gibt die Handels-Metropole (2 SP)"
+              ]
+            },
+            {
+              "id": "politics-improvement",
+              "type": "city-improvement",
+              "icon": "🏛️",
+              "name": "Politik (Papier)",
+              "description": "Du darfst starke Ritter (Stufe 2) zu mächtigen Rittern (Stufe 3) befördern.",
+              "usages": [
+                "Benötigt Stufe 3 auf dem Politik-Track",
+                "Ware: Papier (aus Waldstädten)",
+                "Stufe 4 gibt die Politik-Metropole (2 SP)"
               ]
             }
           ]
@@ -625,7 +974,7 @@
             {
               "id": "barbarian-track",
               "type": "special",
-              "icon": "🧟",
+              "icon": "🏴‍☠️",
               "name": "Barbarenangriff",
               "description": "Wenn ein Schiff gewürfelt wird, rücken die Barbaren vor. Wenn sie Catan erreichen, wird eine Schlacht ausgewertet. Verlieren die Verteidiger, verliert der Spieler mit den wenigsten Rittern eine Stadt.",
               "usages": [
@@ -644,12 +993,23 @@
           "Jeder Spieler ersetzt 1 Siedlung durch eine Stadt (erhält Stadtvorteil).",
           "Barbarenschiff auf Position 7 der Leiste platzieren.",
           "Ritter-, Stadtmauer- und Stadtkarten vorbereiten.",
-          "3 Fortschrittskartendecks mischen: Handel, Wissenschaft, Politik."
+          "3 Fortschrittskartendecks mischen: Handel, Wissenschaft, Politik.",
+          "🥷 Räuber startet außerhalb des Spielbretts bis zum ersten Barbareneinfall."
         ],
         "turnOverview": [
           {
-            "title": "1. Ereigniswürfel",
-            "detail": "Barbarenschiff rückt vor oder ein Fortschrittskarten-Wurf findet statt. Wenn die Barbaren die Küste erreichen, wird angegriffen."
+            "title": "1. Würfel + Ereigniswürfel",
+            "detail": "Würfle Produktionswürfel und Ereigniswürfel; Barbaren rücken vor oder Fortschrittskarten werden ausgelöst.",
+            "images": [
+              {
+                "src": "src/assets/images/common/roll-dice.png",
+                "alt": "Würfeln"
+              },
+              {
+                "src": "src/assets/images/cities-and-knights/event-dice.png",
+                "alt": "Ereigniswürfel"
+              }
+            ]
           },
           {
             "title": "2. Produktion",
@@ -700,7 +1060,8 @@
     },
     "traders-barbarians": {
       "name": "Händler & Barbaren",
-      "description": "Eine Sammlung von fünf Szenarien und Varianten: Handelsrouten, Karawanen, Barbareninvasionen und mehr.",
+      "descriptionTitle": "🐫 Fünf Wege, ein eigentlich gutes Brettspiel zu verkomplizieren",
+      "description": "Eine Sammlung von Szenarien und Varianten, die Handel, Karawanen und Barbareninvasionen auf neue Weise kombinieren. Jedes Szenario verändert den Spielfluss und bietet neue Wege, Siegpunkte zu erzielen.",
       "sections": [
         {
           "id": "trade-routes",
@@ -757,13 +1118,17 @@
             "name": "Der freundliche Räuber",
             "vp": "Variante",
             "description": "Der Räuber darf nicht auf ein Feld mit Gebäude eines Spielers mit nur 2 SP gestellt werden.",
-            "details": ["Schützt Anfänger vor frühzeitigem Angriff"]
+            "details": [
+              "Schützt Anfänger vor frühzeitigem Angriff"
+            ]
           },
           {
             "name": "Häfen von Catan",
             "vp": "11 SP",
             "description": "Stärkster-Häfen-Plättchen (2 SP) für den Spieler mit den meisten SP in Hafen-Gebäuden.",
-            "details": ["Fördert Hafen-Baustrategie"]
+            "details": [
+              "Fördert Hafen-Baustrategie"
+            ]
           },
           {
             "name": "CATAN Ereigniskarten",
@@ -840,7 +1205,8 @@
     },
     "explorers-pirates": {
       "name": "Entdecker & Piraten",
-      "description": "Stich in See unbekannter Gewässer. Baue Schiffe und Häfen, erfülle Missionen wie Gewürzhandel, und besiedele ferne Länder.",
+      "descriptionTitle": "🏴‍☠️ Catan wird zum Entdecker (ohne die Kontroverse)",
+      "description": "Segle zu neuen Inseln, errichte Außenposten und rüste dich gegen Piraten. Missionen, Schiffsbewegung und Seegebiete bringen Exploration und Wettbewerb aufs Meer — weniger gemütlich, deutlich abenteuerlicher.",
       "sections": [
         {
           "id": "missions",
@@ -942,7 +1308,9 @@
             "name": "Land in Sicht!",
             "vp": "Einführung",
             "description": "Erkundungsgrundlagen lernen.",
-            "details": ["Felder entdecken, Siedlungen auf neuen Inseln bauen"]
+            "details": [
+              "Felder entdecken, Siedlungen auf neuen Inseln bauen"
+            ]
           },
           {
             "name": "Piratenverstecke",

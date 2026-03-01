@@ -283,14 +283,26 @@ main {
 /* ── Game Description ── */
 .game-description {
   background: var(--card-bg);
-  border-left: 5px solid var(--brick);
+  border-left: 5px solid var(--theme-accent, var(--brick));
   border-radius: var(--radius);
-  padding: 1rem 1.25rem;
+  padding: 1.1rem 1.25rem;
   margin-bottom: 1.75rem;
   box-shadow: var(--shadow);
-  font-size: 0.95rem;
-  line-height: 1.6;
+  font-size: 0.93rem;
+  line-height: 1.65;
   color: var(--text-lt);
+}
+
+.game-description-title {
+  font-size: 1.1rem;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.01em;
+}
+
+.game-description p {
+  margin: 0;
 }
 
 /* ── Section ── */
@@ -380,12 +392,116 @@ main {
   border-top-color: var(--wheat);
 }
 
+.card.progress-trade {
+  border-top-color: #d4a017;
+}
+
+.card.progress-science {
+  border-top-color: var(--forest);
+}
+
+.card.progress-politics {
+  border-top-color: var(--ocean);
+}
+
+.card.city-improvement {
+  border-top-color: #8e44ad;
+}
+
 .card.trade {
   border-top-color: var(--wood);
 }
 
 .card.mission {
   border-top-color: #8e44ad;
+}
+
+/* ── Subcategory Collapsible ── */
+.subcategory-collapsible {
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+.subcategory-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  background: var(--sand-dk);
+  border-bottom: 2px solid transparent;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.subcategory-summary::-webkit-details-marker {
+  display: none;
+}
+
+.subcategory-summary::before {
+  content: "▶";
+  font-size: 0.7rem;
+  transition: transform 0.25s ease;
+  color: var(--text-lt);
+  flex-shrink: 0;
+}
+
+details[open] > .subcategory-summary::before {
+  transform: rotate(90deg);
+}
+
+.subcategory-summary:hover {
+  background: #dcc98e;
+}
+
+details[open] > .subcategory-summary {
+  border-bottom-color: #d4b87a;
+}
+
+.subcategory-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.subcategory-count {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-lt);
+  background: var(--sand);
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.subcategory-collapsible > .card-grid {
+  padding: 1rem;
+}
+
+/* ── Placeholder Thumbnail ── */
+.card-thumbnail-placeholder {
+  background: linear-gradient(135deg, #e8dcc8 0%, #d4c9b0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-icon {
+  font-size: 3.5rem;
+  opacity: 0.5;
+  filter: grayscale(0.3);
 }
 
 .card-header {
@@ -488,6 +604,21 @@ main {
 .rule-item .rule-detail {
   color: var(--text-lt);
   font-size: 0.85rem;
+}
+
+.rule-images {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  margin: 0.4rem 0;
+}
+
+.rule-inline-img {
+  height: 36px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  vertical-align: middle;
 }
 
 .variant-grid {

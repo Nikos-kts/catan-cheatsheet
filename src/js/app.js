@@ -221,7 +221,15 @@ function renderCards(game) {
   if (game.description) {
     const desc = document.createElement("div");
     desc.className = "game-description";
-    desc.textContent = game.description;
+    if (game.descriptionTitle) {
+      const title = document.createElement("div");
+      title.className = "game-description-title";
+      title.textContent = game.descriptionTitle;
+      desc.appendChild(title);
+    }
+    const text = document.createElement("p");
+    text.textContent = game.description;
+    desc.appendChild(text);
     main.appendChild(desc);
   }
 
@@ -235,14 +243,41 @@ function renderCards(game) {
     title.innerHTML = `${section.icon || ""} ${section.title}`;
     sectionEl.appendChild(title);
 
-    const grid = document.createElement("div");
-    grid.className = "card-grid";
+    // Subcategory-based section (collapsible groups)
+    if (section.subcategories && section.subcategories.length) {
+      section.subcategories.forEach((sub) => {
+        const details = document.createElement("details");
+        details.className = "subcategory-collapsible";
+        details.open = false;
 
-    section.cards.forEach((card) => {
-      grid.appendChild(buildCard(card));
-    });
+        const summary = document.createElement("summary");
+        summary.className = "subcategory-summary";
+        const colorDot = sub.color
+          ? `<span class="subcategory-dot" style="background:${sub.color}"></span>`
+          : "";
+        summary.innerHTML = `${colorDot}${sub.icon || ""} ${sub.title} <span class="subcategory-count">${sub.cards.length} cards</span>`;
+        details.appendChild(summary);
 
-    sectionEl.appendChild(grid);
+        const grid = document.createElement("div");
+        grid.className = "card-grid";
+        sub.cards.forEach((card) => {
+          grid.appendChild(buildCard(card));
+        });
+        details.appendChild(grid);
+        sectionEl.appendChild(details);
+      });
+    } else {
+      // Flat card list
+      const grid = document.createElement("div");
+      grid.className = "card-grid";
+
+      section.cards.forEach((card) => {
+        grid.appendChild(buildCard(card));
+      });
+
+      sectionEl.appendChild(grid);
+    }
+
     main.appendChild(sectionEl);
   });
 }
@@ -262,7 +297,15 @@ function renderGameplay(game) {
   if (game.description) {
     const desc = document.createElement("div");
     desc.className = "game-description";
-    desc.textContent = game.description;
+    if (game.descriptionTitle) {
+      const title = document.createElement("div");
+      title.className = "game-description-title";
+      title.textContent = game.descriptionTitle;
+      desc.appendChild(title);
+    }
+    const text = document.createElement("p");
+    text.textContent = game.description;
+    desc.appendChild(text);
     main.appendChild(desc);
   }
 
@@ -397,6 +440,19 @@ function renderRuleSection(parent, title, icon, rules) {
         t.textContent = rule.title;
         li.appendChild(t);
       }
+      if (rule.images && rule.images.length) {
+        const imgRow = document.createElement("div");
+        imgRow.className = "rule-images";
+        rule.images.forEach((img) => {
+          const imgEl = document.createElement("img");
+          imgEl.src = img.src;
+          imgEl.alt = img.alt || "";
+          imgEl.className = "rule-inline-img";
+          imgEl.loading = "lazy";
+          imgRow.appendChild(imgEl);
+        });
+        li.appendChild(imgRow);
+      }
       if (rule.detail) {
         const d = document.createElement("div");
         d.className = "rule-detail";
@@ -425,6 +481,15 @@ function buildCard(card) {
     img.className = "card-thumbnail";
     img.loading = "lazy";
     wrap.appendChild(img);
+    el.appendChild(wrap);
+  } else if (card.image === null) {
+    // Explicit null → show placeholder thumbnail
+    const wrap = document.createElement("div");
+    wrap.className = "card-thumbnail-wrap card-thumbnail-placeholder";
+    const span = document.createElement("span");
+    span.className = "placeholder-icon";
+    span.textContent = card.icon || "🃏";
+    wrap.appendChild(span);
     el.appendChild(wrap);
   }
 
