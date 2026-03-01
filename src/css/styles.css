@@ -267,12 +267,112 @@ main {
   border-top-color: var(--wheat);
 }
 
+.card.progress-trade {
+  border-top-color: #d4a017;
+}
+
+.card.progress-science {
+  border-top-color: var(--forest);
+}
+
+.card.progress-politics {
+  border-top-color: var(--ocean);
+}
+
 .card.trade {
   border-top-color: var(--wood);
 }
 
 .card.mission {
   border-top-color: #8e44ad;
+}
+
+/* ── Subcategory Collapsible ── */
+.subcategory-collapsible {
+  margin-bottom: 1rem;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+}
+
+.subcategory-summary {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.85rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text);
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  background: var(--sand-dk);
+  border-bottom: 2px solid transparent;
+  transition:
+    background 0.2s,
+    border-color 0.2s;
+}
+
+.subcategory-summary::-webkit-details-marker {
+  display: none;
+}
+
+.subcategory-summary::before {
+  content: "▶";
+  font-size: 0.7rem;
+  transition: transform 0.25s ease;
+  color: var(--text-lt);
+  flex-shrink: 0;
+}
+
+details[open] > .subcategory-summary::before {
+  transform: rotate(90deg);
+}
+
+.subcategory-summary:hover {
+  background: #dcc98e;
+}
+
+details[open] > .subcategory-summary {
+  border-bottom-color: #d4b87a;
+}
+
+.subcategory-dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.subcategory-count {
+  margin-left: auto;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--text-lt);
+  background: var(--sand);
+  padding: 0.15rem 0.55rem;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+.subcategory-collapsible > .card-grid {
+  padding: 1rem;
+}
+
+/* ── Placeholder Thumbnail ── */
+.card-thumbnail-placeholder {
+  background: linear-gradient(135deg, #e8dcc8 0%, #d4c9b0 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.placeholder-icon {
+  font-size: 3.5rem;
+  opacity: 0.5;
+  filter: grayscale(0.3);
 }
 
 .card-header {
