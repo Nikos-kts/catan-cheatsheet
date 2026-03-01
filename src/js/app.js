@@ -2,6 +2,7 @@
 const state = {
   lang: "en",
   game: "base",
+  tab: "cards",
   data: null,
 };
 
@@ -17,7 +18,7 @@ const GAME_IMAGE = {
     "src/assets/images/explorers-and-pirates/catan-explorers-and-pirates.png",
 };
 
-const SUPPORTED_LANGS = ["en", "de", "es", "fr", "el", "nl"];
+const SUPPORTED_LANGS = ["en", "de", "es", "pt", "fr", "el", "nl"];
 const DATA_PATH = "src/data/";
 
 // ── Boot ───────────────────────────────────────────────────────────────────
@@ -43,7 +44,30 @@ document.addEventListener("DOMContentLoaded", () => {
     renderGame();
   });
 
+  // Tab switching
+  document.querySelectorAll(".tab").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document
+        .querySelectorAll(".tab")
+        .forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      state.tab = btn.dataset.tab;
+      localStorage.setItem("catan-tab", state.tab);
+      renderGame();
+    });
+  });
+
   if (savedGame) state.game = savedGame;
+
+  const savedTab = localStorage.getItem("catan-tab");
+  if (savedTab && ["cards", "gameplay"].includes(savedTab)) {
+    state.tab = savedTab;
+    document
+      .querySelectorAll(".tab")
+      .forEach((b) => b.classList.remove("active"));
+    const activeBtn = document.querySelector(`.tab[data-tab="${savedTab}"]`);
+    if (activeBtn) activeBtn.classList.add("active");
+  }
 
   loadData();
 });
@@ -100,6 +124,13 @@ function populateGameSelector() {
   document.getElementById("label-lang").textContent = ui.labelLang;
   document.getElementById("app-subtitle").textContent = ui.subtitle;
   document.getElementById("footer-text").textContent = ui.footer;
+
+  // Update tab labels
+  const tabCards = document.getElementById("tab-cards");
+  const tabGameplay = document.getElementById("tab-gameplay");
+  if (tabCards) tabCards.textContent = `🃏 ${ui.tabCards || "Cards"}`;
+  if (tabGameplay)
+    tabGameplay.textContent = `🎲 ${ui.tabGameplay || "Gameplay"}`;
 }
 
 function renderUI() {
@@ -127,6 +158,14 @@ function renderGame() {
 
   updateGameBanner(state.game);
 
+  if (state.tab === "gameplay") {
+    renderGameplay(game);
+  } else {
+    renderCards(game);
+  }
+}
+
+function renderCards(game) {
   const main = document.getElementById("content");
   main.innerHTML = "";
 
@@ -158,6 +197,170 @@ function renderGame() {
     sectionEl.appendChild(grid);
     main.appendChild(sectionEl);
   });
+}
+
+// ── Gameplay Renderer ──────────────────────────────────────────────────────
+function renderGameplay(game) {
+  const gp = game.gameplay;
+  const main = document.getElementById("content");
+  main.innerHTML = "";
+
+  if (!gp) {
+    main.innerHTML = `<div class="loading">${state.data.ui.noGameplay || "Gameplay information coming soon."}</div>`;
+    return;
+  }
+
+  // Game description
+  if (game.description) {
+    const desc = document.createElement("div");
+    desc.className = "game-description";
+    desc.textContent = game.description;
+    main.appendChild(desc);
+  }
+
+  // Info boxes (players, VP target)
+  if (gp.players || gp.vpToWin) {
+    const info = document.createElement("div");
+    info.className = "info-box";
+    const parts = [];
+    if (gp.players)
+      parts.push(
+        `<strong>${state.data.ui.labelPlayers || "Players"}:</strong> ${gp.players}`,
+      );
+    if (gp.vpToWin)
+      parts.push(
+        `<strong>${state.data.ui.labelVP || "Victory Points to Win"}:</strong> ${gp.vpToWin}`,
+      );
+    info.innerHTML = parts.join(" &nbsp;|&nbsp; ");
+    main.appendChild(info);
+  }
+
+  // Setup section
+  if (gp.setup && gp.setup.length) {
+    renderRuleSection(
+      main,
+      state.data.ui.titleSetup || "Setup",
+      "⚙️",
+      gp.setup,
+    );
+  }
+
+  // Turn overview
+  if (gp.turnOverview && gp.turnOverview.length) {
+    renderRuleSection(
+      main,
+      state.data.ui.titleTurn || "Turn Overview",
+      "🔄",
+      gp.turnOverview,
+    );
+  }
+
+  // Key rules
+  if (gp.keyRules && gp.keyRules.length) {
+    renderRuleSection(
+      main,
+      state.data.ui.titleRules || "Key Rules",
+      "📜",
+      gp.keyRules,
+    );
+  }
+
+  // Special rules
+  if (gp.specialRules && gp.specialRules.length) {
+    renderRuleSection(
+      main,
+      state.data.ui.titleSpecial || "Special Rules",
+      "⚡",
+      gp.specialRules,
+    );
+  }
+
+  // Scenarios / Variants
+  if (gp.scenarios && gp.scenarios.length) {
+    const sec = document.createElement("div");
+    sec.className = "gameplay-section";
+    const h = document.createElement("h2");
+    h.innerHTML = `🗺️ ${state.data.ui.titleScenarios || "Scenarios & Variants"}`;
+    sec.appendChild(h);
+
+    const grid = document.createElement("div");
+    grid.className = "variant-grid";
+
+    gp.scenarios.forEach((s) => {
+      const card = document.createElement("div");
+      card.className = "variant-card";
+
+      const nameRow = document.createElement("div");
+      nameRow.className = "variant-name";
+      nameRow.textContent = s.name;
+      if (s.vp) {
+        const vp = document.createElement("span");
+        vp.className = "variant-vp";
+        vp.textContent = s.vp;
+        nameRow.appendChild(vp);
+      }
+      card.appendChild(nameRow);
+
+      if (s.description) {
+        const desc = document.createElement("p");
+        desc.className = "variant-desc";
+        desc.textContent = s.description;
+        card.appendChild(desc);
+      }
+
+      if (s.details && s.details.length) {
+        const ul = document.createElement("ul");
+        ul.className = "variant-details";
+        s.details.forEach((d) => {
+          const li = document.createElement("li");
+          li.textContent = d;
+          ul.appendChild(li);
+        });
+        card.appendChild(ul);
+      }
+
+      grid.appendChild(card);
+    });
+
+    sec.appendChild(grid);
+    main.appendChild(sec);
+  }
+}
+
+function renderRuleSection(parent, title, icon, rules) {
+  const sec = document.createElement("div");
+  sec.className = "gameplay-section";
+  const h = document.createElement("h2");
+  h.innerHTML = `${icon} ${title}`;
+  sec.appendChild(h);
+
+  const ul = document.createElement("ul");
+  ul.className = "rule-list";
+
+  rules.forEach((rule) => {
+    const li = document.createElement("li");
+    li.className = "rule-item";
+    if (typeof rule === "string") {
+      li.textContent = rule;
+    } else {
+      if (rule.title) {
+        const t = document.createElement("div");
+        t.className = "rule-title";
+        t.textContent = rule.title;
+        li.appendChild(t);
+      }
+      if (rule.detail) {
+        const d = document.createElement("div");
+        d.className = "rule-detail";
+        d.textContent = rule.detail;
+        li.appendChild(d);
+      }
+    }
+    ul.appendChild(li);
+  });
+
+  sec.appendChild(ul);
+  parent.appendChild(sec);
 }
 
 // ── Card Builder ───────────────────────────────────────────────────────────

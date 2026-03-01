@@ -26,11 +26,12 @@
         <label for="lang-select" id="label-lang">Language</label>
         <select id="lang-select">
           <option value="en">🇬🇧 English</option>
-          <option value="de">🇩🇪 Deutsch</option>
-          <option value="es">🇪🇸 Español</option>
-          <option value="fr">🇫🇷 Français</option>
           <option value="el">🇬🇷 Ελληνικά</option>
+          <option value="es">🇪🇸 Español</option>
+          <option value="pt">🇵🇹 Português</option>
           <option value="nl">🇳🇱 Nederlands</option>
+          <option value="de">🇩🇪 Deutsch</option>
+          <option value="fr">🇫🇷 Français</option>
         </select>
       </div>
     </div>
@@ -42,6 +43,15 @@
         alt="Game cover"
       />
     </div>
+
+    <nav class="tabs" id="tabs">
+      <button class="tab active" data-tab="cards" id="tab-cards">
+        🃏 Cards
+      </button>
+      <button class="tab" data-tab="gameplay" id="tab-gameplay">
+        🎲 Gameplay
+      </button>
+    </nav>
 
     <main id="content">
       <div class="loading" id="loading-indicator">Loading…</div>
