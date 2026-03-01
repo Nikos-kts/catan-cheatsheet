@@ -1,35 +1,33 @@
 {
-    "name": "Catan Cheatsheet",
-    "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
-    "features": {},
-    "forwardPorts": [
-        3000
-    ],
-    "portsAttributes": {
-        "3000": {
-            "label": "Catan Cheatsheet",
-            "onAutoForward": "openBrowser"
-        }
-    },
-    "postCreateCommand": "npm install -g serve",
-    "postStartCommand": "serve /workspaces/catan-cheatsheet -l 3000 &",
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ecmel.vscode-html-css",
-                "esbenp.prettier-vscode",
-                "ritwickdey.LiveServer",
-                "formulahendry.auto-rename-tag",
-                "ms-vscode.live-server",
-                "zignd.html-css-class-completion",
-                "christian-kohler.path-intellisense"
-            ],
-            "settings": {
-                "editor.formatOnSave": true,
-                "editor.defaultFormatter": "esbenp.prettier-vscode",
-                "liveServer.settings.port": 3000,
-                "liveServer.settings.root": "/"
-            }
-        }
+  "name": "Catan Cheatsheet",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-20-bullseye",
+  "features": {},
+  "forwardPorts": [3000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Catan Cheatsheet",
+      "onAutoForward": "openBrowser"
     }
+  },
+  "postCreateCommand": "npm install -g serve",
+  "postStartCommand": "serve /workspaces/catan-cheatsheet -l tcp://0.0.0.0:3000",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ecmel.vscode-html-css",
+        "esbenp.prettier-vscode",
+        "ritwickdey.LiveServer",
+        "formulahendry.auto-rename-tag",
+        "ms-vscode.live-server",
+        "zignd.html-css-class-completion",
+        "christian-kohler.path-intellisense"
+      ],
+      "settings": {
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "liveServer.settings.port": 3000,
+        "liveServer.settings.root": "/"
+      }
+    }
+  }
 }
