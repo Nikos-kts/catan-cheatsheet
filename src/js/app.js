@@ -106,6 +106,28 @@ document.addEventListener("DOMContentLoaded", () => {
   loadData();
 });
 
+// Sticky tabs: toggle .stuck when tabs reach top during scroll
+(function initStickyTabs() {
+  const tabs = document.getElementById("tabs");
+  if (!tabs) return;
+
+  let tabsTop = tabs.getBoundingClientRect().top + window.scrollY;
+
+  function onScroll() {
+    if (window.scrollY >= tabsTop) tabs.classList.add("stuck");
+    else tabs.classList.remove("stuck");
+  }
+
+  window.addEventListener("scroll", onScroll, { passive: true });
+  window.addEventListener("resize", () => {
+    tabsTop = tabs.getBoundingClientRect().top + window.scrollY;
+    onScroll();
+  });
+
+  // Initial check in case page is restored scrolled
+  setTimeout(onScroll, 0);
+})();
+
 // ── Data Loading ───────────────────────────────────────────────────────────
 async function loadData() {
   showLoading(true);
@@ -234,51 +256,110 @@ function renderCards(game) {
   }
 
   // Sections
+  const collapsibleSections = new Set([
+    "resources",
+    "development",
+    "special",
+    "building-costs",
+  ]);
   game.sections.forEach((section) => {
-    const sectionEl = document.createElement("section");
-    sectionEl.className = "section";
+    // If this section should be collapsible, render as a <details>
+    if (collapsibleSections.has(section.id)) {
+      const detailsRoot = document.createElement("details");
+      detailsRoot.className = "subcategory-collapsible section-collapsible";
+      detailsRoot.open = false;
 
-    const title = document.createElement("h2");
-    title.className = "section-title";
-    title.innerHTML = `${section.icon || ""} ${section.title}`;
-    sectionEl.appendChild(title);
+      const summaryRoot = document.createElement("summary");
+      summaryRoot.className = "subcategory-summary section-summary";
+      const count = section.cards
+        ? section.cards.length
+        : section.subcategories
+          ? section.subcategories.reduce(
+              (s, sc) => s + (sc.cards ? sc.cards.length : 0),
+              0,
+            )
+          : 0;
+      summaryRoot.innerHTML = `${section.icon || ""} ${section.title} <span class="subcategory-count">${count} cards</span>`;
+      detailsRoot.appendChild(summaryRoot);
 
-    // Subcategory-based section (collapsible groups)
-    if (section.subcategories && section.subcategories.length) {
-      section.subcategories.forEach((sub) => {
-        const details = document.createElement("details");
-        details.className = "subcategory-collapsible";
-        details.open = false;
+      // Subcategory-based section (collapsible groups)
+      if (section.subcategories && section.subcategories.length) {
+        section.subcategories.forEach((sub) => {
+          const details = document.createElement("details");
+          details.className = "subcategory-collapsible";
+          details.open = false;
 
-        const summary = document.createElement("summary");
-        summary.className = "subcategory-summary";
-        const colorDot = sub.color
-          ? `<span class="subcategory-dot" style="background:${sub.color}"></span>`
-          : "";
-        summary.innerHTML = `${colorDot}${sub.icon || ""} ${sub.title} <span class="subcategory-count">${sub.cards.length} cards</span>`;
-        details.appendChild(summary);
+          const summary = document.createElement("summary");
+          summary.className = "subcategory-summary";
+          const colorDot = sub.color
+            ? `<span class="subcategory-dot" style="background:${sub.color}"></span>`
+            : "";
+          summary.innerHTML = `${colorDot}${sub.icon || ""} ${sub.title} <span class="subcategory-count">${sub.cards.length} cards</span>`;
+          details.appendChild(summary);
 
+          const grid = document.createElement("div");
+          grid.className = "card-grid";
+          sub.cards.forEach((card) => {
+            grid.appendChild(buildCard(card));
+          });
+          details.appendChild(grid);
+          detailsRoot.appendChild(details);
+        });
+      } else {
+        // Flat card list
         const grid = document.createElement("div");
         grid.className = "card-grid";
-        sub.cards.forEach((card) => {
+
+        (section.cards || []).forEach((card) => {
           grid.appendChild(buildCard(card));
         });
-        details.appendChild(grid);
-        sectionEl.appendChild(details);
-      });
+
+        detailsRoot.appendChild(grid);
+      }
+      main.appendChild(detailsRoot);
     } else {
-      // Flat card list
-      const grid = document.createElement("div");
-      grid.className = "card-grid";
+      // Non-collapsible section (existing behavior)
+      const sectionEl = document.createElement("section");
+      sectionEl.className = "section";
 
-      section.cards.forEach((card) => {
-        grid.appendChild(buildCard(card));
-      });
+      const title = document.createElement("h2");
+      title.className = "section-title";
+      title.innerHTML = `${section.icon || ""} ${section.title}`;
+      sectionEl.appendChild(title);
 
-      sectionEl.appendChild(grid);
+      if (section.subcategories && section.subcategories.length) {
+        section.subcategories.forEach((sub) => {
+          const details = document.createElement("details");
+          details.className = "subcategory-collapsible";
+          details.open = false;
+
+          const summary = document.createElement("summary");
+          summary.className = "subcategory-summary";
+          const colorDot = sub.color
+            ? `<span class="subcategory-dot" style="background:${sub.color}"></span>`
+            : "";
+          summary.innerHTML = `${colorDot}${sub.icon || ""} ${sub.title} <span class="subcategory-count">${sub.cards.length} cards</span>`;
+          details.appendChild(summary);
+
+          const grid = document.createElement("div");
+          grid.className = "card-grid";
+          sub.cards.forEach((card) => {
+            grid.appendChild(buildCard(card));
+          });
+          details.appendChild(grid);
+          sectionEl.appendChild(details);
+        });
+      } else {
+        const grid = document.createElement("div");
+        grid.className = "card-grid";
+        (section.cards || []).forEach((card) => {
+          grid.appendChild(buildCard(card));
+        });
+        sectionEl.appendChild(grid);
+      }
+
+      main.appendChild(sectionEl);
     }
-
-    main.appendChild(sectionEl);
   });
 }
 
