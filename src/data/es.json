@@ -561,10 +561,10 @@
               "type": "commodity",
               "icon": "🪙",
               "name": "Moneda",
-              "description": "Mercancía producida por ciudades mejoradas en Montaña. Usada para la columna de Ciencia.",
+              "description": "Mercancía producida por ciudades mejoradas en Montaña. Usada para la columna de Política.",
               "usages": [
                 "Producida por ciudades en hexágonos de Montaña",
-                "Invierte en mejoras de ciudad de Ciencia"
+                "Invierte en mejoras de ciudad de Política"
               ]
             },
             {
@@ -572,10 +572,10 @@
               "type": "commodity",
               "icon": "📜",
               "name": "Papel",
-              "description": "Mercancía producida por ciudades mejoradas en Bosque. Usada para la columna de Política.",
+              "description": "Mercancía producida por ciudades mejoradas en Bosque. Usada para la columna de Ciencia.",
               "usages": [
                 "Producida por ciudades en hexágonos de Bosque",
-                "Invierte en mejoras de ciudad de Política"
+                "Invierte en mejoras de ciudad de Ciencia"
               ]
             }
           ]
@@ -929,18 +929,6 @@
           "icon": "🏛️",
           "cards": [
             {
-              "id": "science-improvement",
-              "type": "city-improvement",
-              "icon": "🔬",
-              "name": "Ciencia (Moneda)",
-              "description": "Si no recibes cartas en Producción, puedes tomar 1 recurso a elección (excepto al sacar 7).",
-              "usages": [
-                "Requiere nivel 3 en la vía de Ciencia",
-                "Mercancía: Moneda (ciudades en Montaña)",
-                "Nivel 4 otorga Metrópoli de Ciencia (2 PV)"
-              ]
-            },
-            {
               "id": "trade-improvement",
               "type": "city-improvement",
               "icon": "💰",
@@ -956,12 +944,24 @@
               "id": "politics-improvement",
               "type": "city-improvement",
               "icon": "🏛️",
-              "name": "Política (Papel)",
+              "name": "Política (Moneda)",
               "description": "Puedes promover caballeros fuertes (nivel 2) a caballeros poderosos (nivel 3).",
               "usages": [
                 "Requiere nivel 3 en la vía de Política",
-                "Mercancía: Papel (ciudades en Bosque)",
+                "Mercancía: Moneda (ciudades en Montaña)",
                 "Nivel 4 otorga Metrópoli de Política (2 PV)"
+              ]
+            },
+            {
+              "id": "science-improvement",
+              "type": "city-improvement",
+              "icon": "🔬",
+              "name": "Ciencia (Papel)",
+              "description": "Si no recibes cartas en Producción, puedes tomar 1 recurso a elección (excepto al sacar 7).",
+              "usages": [
+                "Requiere nivel 3 en la vía de Ciencia",
+                "Mercancía: Papel (ciudades en Bosque)",
+                "Nivel 4 otorga Metrópoli de Ciencia (2 PV)"
               ]
             }
           ]

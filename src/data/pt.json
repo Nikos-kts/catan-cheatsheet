@@ -417,16 +417,22 @@
               "type": "commodity",
               "icon": "🪙",
               "name": "Moeda",
-              "description": "Mercadoria produzida por cidades melhoradas em Montanhas. Usada para avançar na coluna de Ciência.",
-              "usages": []
+              "description": "Mercadoria produzida por cidades melhoradas em Montanhas. Usada para avançar na coluna de Política.",
+              "usages": [
+                "Produzida por cidades em hexágonos de Montanha",
+                "Invista em melhorias de cidade da via Política"
+              ]
             },
             {
               "id": "paper",
               "type": "commodity",
               "icon": "📜",
               "name": "Papel",
-              "description": "Mercadoria produzida por cidades melhoradas em Florestas. Usada para avançar na coluna de Política.",
-              "usages": []
+              "description": "Mercadoria produzida por cidades melhoradas em Florestas. Usada para avançar na coluna de Ciência.",
+              "usages": [
+                "Produzida por cidades em hexágonos de Floresta",
+                "Invista em melhorias de cidade da via Ciência"
+              ]
             }
           ]
         },
@@ -462,10 +468,7 @@
                   "name": "Grande Mercador",
                   "count": 2,
                   "description": "Olhe a mão de um oponente adjacente e tome 2 cartas à sua escolha.",
-                  "usages": [
-                    "Obter informação",
-                    "Roubar 2 cartas específicas"
-                  ]
+                  "usages": ["Obter informação", "Roubar 2 cartas específicas"]
                 },
                 {
                   "id": "merchant",
@@ -488,10 +491,7 @@
                   "name": "Frota Mercante",
                   "count": 2,
                   "description": "Escolha 1 tipo de recurso/mercadoria: pelo resto do turno, troque 2 desse tipo por 1 outro.",
-                  "usages": [
-                    "Receber 2:1 temporário",
-                    "Útil em excesso"
-                  ]
+                  "usages": ["Receber 2:1 temporário", "Útil em excesso"]
                 },
                 {
                   "id": "resource-monopoly",
@@ -501,9 +501,7 @@
                   "name": "Monopólio de Recurso",
                   "count": 4,
                   "description": "Nomeie 1 recurso. Cada oponente com 2+ desse recurso deve dar exatamente 2 cartas.",
-                  "usages": [
-                    "Coletar muitos recursos de oponentes"
-                  ]
+                  "usages": ["Coletar muitos recursos de oponentes"]
                 },
                 {
                   "id": "trade-monopoly",
@@ -612,9 +610,7 @@
                   "name": "Mineração",
                   "count": 2,
                   "description": "Pegue 2 Minérios do banco por cada povoação/cidade adjacente a um hex de Montanha.",
-                  "usages": [
-                    "Grande fonte de Minério com bom posicionamento"
-                  ]
+                  "usages": ["Grande fonte de Minério com bom posicionamento"]
                 },
                 {
                   "id": "printer",
@@ -624,9 +620,7 @@
                   "name": "Impressora",
                   "count": 2,
                   "description": "Compre 2 cartas de progresso e mantenha 1.",
-                  "usages": [
-                    "Vantagem de compra de cartas"
-                  ]
+                  "usages": ["Vantagem de compra de cartas"]
                 },
                 {
                   "id": "road-building",
@@ -636,9 +630,7 @@
                   "name": "Construção de Estrada",
                   "count": 2,
                   "description": "Construa 2 estradas imediatamente de graça.",
-                  "usages": [
-                    "Bloquear rapidamente rotas"
-                  ]
+                  "usages": ["Bloquear rapidamente rotas"]
                 },
                 {
                   "id": "smith",
@@ -648,9 +640,7 @@
                   "name": "Ferreiro",
                   "count": 2,
                   "description": "Pague 1 Minério: ative um cavaleiro recrutado imediatamente.",
-                  "usages": [
-                    "Ativar cavaleiros sem Trigo"
-                  ]
+                  "usages": ["Ativar cavaleiros sem Trigo"]
                 }
               ]
             },
@@ -668,9 +658,7 @@
                   "name": "Bispo",
                   "count": 2,
                   "description": "Pague 1 mercadoria para anular uma carta de progresso de um oponente (colocando-a no descarte).",
-                  "usages": [
-                    "Neutralizar ações-chave de oponentes"
-                  ]
+                  "usages": ["Neutralizar ações-chave de oponentes"]
                 },
                 {
                   "id": "constitution",
@@ -716,9 +704,7 @@
                   "name": "Intriga",
                   "count": 2,
                   "description": "Troque 1 carta de sua mão com 1 carta aleatória da mão de um oponente.",
-                  "usages": [
-                    "Desorganizar as mãos dos oponentes"
-                  ]
+                  "usages": ["Desorganizar as mãos dos oponentes"]
                 },
                 {
                   "id": "saboteur",
@@ -728,9 +714,7 @@
                   "name": "Sabotador",
                   "count": 2,
                   "description": "Cada oponente com igual ou mais PV que você deve descartar metade da sua mão (arredondado para baixo).",
-                  "usages": [
-                    "Pressionar jogadores na liderança"
-                  ]
+                  "usages": ["Pressionar jogadores na liderança"]
                 },
                 {
                   "id": "spy",
@@ -740,9 +724,7 @@
                   "name": "Espião",
                   "count": 3,
                   "description": "Olhe a mão de cartas de progresso de um oponente e roube 1 à sua escolha.",
-                  "usages": [
-                    "Obter informação e roubar cartas poderosas"
-                  ]
+                  "usages": ["Obter informação e roubar cartas poderosas"]
                 },
                 {
                   "id": "warlord",
@@ -752,9 +734,7 @@
                   "name": "Senhor da Guerra",
                   "count": 2,
                   "description": "Ative todos os seus cavaleiros gratuitamente (sem pagar Trigo+Minério).",
-                  "usages": [
-                    "Preparar defesa instantânea"
-                  ]
+                  "usages": ["Preparar defesa instantânea"]
                 },
                 {
                   "id": "wedding",
@@ -764,9 +744,7 @@
                   "name": "Casamento",
                   "count": 2,
                   "description": "Cada oponente com mais PV que você deve lhe dar 2 cartas (recurso ou mercadoria) à sua escolha.",
-                  "usages": [
-                    "Obter cartas de jogadores à frente"
-                  ]
+                  "usages": ["Obter cartas de jogadores à frente"]
                 }
               ]
             }
@@ -778,18 +756,6 @@
           "icon": "🏛️",
           "cards": [
             {
-              "id": "science-improvement",
-              "type": "city-improvement",
-              "icon": "🔬",
-              "name": "Ciência (Moeda)",
-              "description": "Se você não receber cartas durante Produção, pode pegar 1 recurso à sua escolha (exceto quando sair 7).",
-              "usages": [
-                "Requer nível 3 na trilha de Ciência",
-                "Mercadoria: Moeda (cidades em Montanha)",
-                "Nível 4 ganha a Metrópole de Ciência (2 PV)"
-              ]
-            },
-            {
               "id": "trade-improvement",
               "type": "city-improvement",
               "icon": "💰",
@@ -798,19 +764,31 @@
               "usages": [
                 "Requer nível 3 na trilha de Comércio",
                 "Mercadoria: Tecido (cidades em Pastagem)",
-                "Nível 4 ganha a Metrópole de Comércio (2 PV)"
+                "Nível 4 ganha a Metrópole do Comércio (2 PV)"
               ]
             },
             {
               "id": "politics-improvement",
               "type": "city-improvement",
               "icon": "🏛️",
-              "name": "Política (Papel)",
+              "name": "Política (Moeda)",
               "description": "Você pode promover cavaleiros fortes (nível 2) para cavaleiros poderosos (nível 3).",
               "usages": [
                 "Requer nível 3 na trilha de Política",
+                "Mercadoria: Moeda (cidades em Montanha)",
+                "Nível 4 ganha a Metrópole da Política (2 PV)"
+              ]
+            },
+            {
+              "id": "science-improvement",
+              "type": "city-improvement",
+              "icon": "🔬",
+              "name": "Ciência (Papel)",
+              "description": "Se você não receber cartas durante Produção, pode pegar 1 recurso à sua escolha (exceto quando sair 7).",
+              "usages": [
+                "Requer nível 3 na trilha de Ciência",
                 "Mercadoria: Papel (cidades em Floresta)",
-                "Nível 4 ganha a Metrópole de Política (2 PV)"
+                "Nível 4 ganha a Metrópole da Ciência (2 PV)"
               ]
             }
           ]
@@ -959,17 +937,13 @@
             "name": "O Ladrão Amigável",
             "vp": "Variante",
             "description": "O Ladrão não pode ser movido para um hexágono com um edifício de um jogador que só tem 2 VP.",
-            "details": [
-              "Protege iniciantes de ataques iniciais"
-            ]
+            "details": ["Protege iniciantes de ataques iniciais"]
           },
           {
             "name": "Portos de Catan",
             "vp": "11 VP",
             "description": "Peça de Portos mais forte (2 VP) para o jogador com mais VP em construções nos portos.",
-            "details": [
-              "Incentiva estratégia de construção em portos"
-            ]
+            "details": ["Incentiva estratégia de construção em portos"]
           }
         ]
       }
@@ -1079,9 +1053,7 @@
             "name": "Terra à Vista!",
             "vp": "Introdutório",
             "description": "Aprenda os princípios da exploração.",
-            "details": [
-              "Descubra hexágonos, construa povoações em novas ilhas"
-            ]
+            "details": ["Descubra hexágonos, construa povoações em novas ilhas"]
           }
         ]
       }

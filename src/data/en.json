@@ -939,18 +939,6 @@
           "icon": "🏛️",
           "cards": [
             {
-              "id": "science-improvement",
-              "type": "city-improvement",
-              "icon": "🔬",
-              "name": "Science (Coin)",
-              "description": "If you receive no cards during the Production phase, you may take 1 resource card of your choice (except when a 7 is rolled).",
-              "usages": [
-                "Requires level 3 on the Science track",
-                "Commodity used: Coin (from Mountain cities)",
-                "Level 4 earns the Science Metropolis (2 VP)"
-              ]
-            },
-            {
               "id": "trade-improvement",
               "type": "city-improvement",
               "icon": "💰",
@@ -966,12 +954,24 @@
               "id": "politics-improvement",
               "type": "city-improvement",
               "icon": "🏛️",
-              "name": "Politics (Paper)",
+              "name": "Politics (Coin)",
               "description": "You may promote strong knights (level 2) to mighty knights (level 3).",
               "usages": [
                 "Requires level 3 on the Politics track",
-                "Commodity used: Paper (from Forest cities)",
+                "Commodity used: Coin (from Mountain cities)",
                 "Level 4 earns the Politics Metropolis (2 VP)"
+              ]
+            },
+            {
+              "id": "science-improvement",
+              "type": "city-improvement",
+              "icon": "🔬",
+              "name": "Science (Paper)",
+              "description": "If you receive no cards during the Production phase, you may take 1 resource card of your choice (except when a 7 is rolled).",
+              "usages": [
+                "Requires level 3 on the Science track",
+                "Commodity used: Paper (from Forest cities)",
+                "Level 4 earns the Science Metropolis (2 VP)"
               ]
             }
           ]
