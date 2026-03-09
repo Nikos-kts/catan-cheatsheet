@@ -18,6 +18,19 @@ const GAME_IMAGE = {
     "src/assets/images/explorers-and-pirates/catan-explorers-and-pirates.png",
 };
 
+// ── Game → official rules URL map ─────────────────────────────────────────
+const GAME_URL = {
+  base: "https://drive.google.com/drive/folders/1zAmbOLVscsoLbcxPWu0aMBmH930lgewP",
+  seafarers:
+    "https://drive.google.com/drive/folders/1S1VMNsnwsOZx7vl1vTl0QE-NKejCv5ld",
+  "cities-knights":
+    "https://drive.google.com/drive/folders/1xKI5W88ems41y4oH061yqicTTQdiSxtn",
+  "traders-barbarians":
+    "https://drive.google.com/drive/folders/196MHzXg_jWBtvR1e9YQIhsB6UfEJLZWP",
+  "explorers-pirates":
+    "https://drive.google.com/drive/folders/1W53p6QRB__B-bKjIOn0qyIf0nH02XMtk",
+};
+
 // ── Game → theme colour map ────────────────────────────────────────────────
 const GAME_THEME = {
   base: {
@@ -196,6 +209,7 @@ function renderUI() {
 function updateGameBanner(gameId) {
   const wrap = document.getElementById("game-banner-wrap");
   const img = document.getElementById("game-banner");
+  const link = document.getElementById("game-banner-link");
   const src = GAME_IMAGE[gameId] || GAME_IMAGE["base"];
 
   img.onerror = () => {
@@ -206,6 +220,10 @@ function updateGameBanner(gameId) {
   };
   img.alt = gameId;
   img.src = src;
+
+  if (link) {
+    link.href = GAME_URL[gameId] || GAME_URL["base"];
+  }
 
   applyGameTheme(gameId);
 }
