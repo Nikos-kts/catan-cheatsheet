@@ -288,67 +288,8 @@ function renderCards(game) {
   }
 
   sections.forEach((section) => {
-    // If this section should be collapsible, render as a <details>
-    if (collapsibleSections.has(section.id)) {
-      const detailsRoot = document.createElement("details");
-      detailsRoot.className = "subcategory-collapsible section-collapsible";
-      detailsRoot.open = false;
-
-      const summaryRoot = document.createElement("summary");
-      summaryRoot.className = "subcategory-summary section-summary";
-      const count = section.cards
-        ? section.cards.length
-        : section.subcategories
-          ? section.subcategories.reduce(
-              (s, sc) => s + (sc.cards ? sc.cards.length : 0),
-              0,
-            )
-          : 0;
-      summaryRoot.innerHTML = `${section.icon || ""} ${section.title} <span class="subcategory-count">${count} cards</span>`;
-      detailsRoot.appendChild(summaryRoot);
-
-      // Subcategory-based section (collapsible groups)
-      if (section.subcategories && section.subcategories.length) {
-        section.subcategories.forEach((sub) => {
-          const details = document.createElement("details");
-          details.className = "subcategory-collapsible";
-          details.open = false;
-
-          const summary = document.createElement("summary");
-          summary.className = "subcategory-summary";
-          const colorDot = sub.color
-            ? `<span class="subcategory-dot" style="background:${sub.color}"></span>`
-            : "";
-          summary.innerHTML = `${colorDot}${sub.icon || ""} ${sub.title} <span class="subcategory-count">${sub.cards.length} cards</span>`;
-          details.appendChild(summary);
-
-          const grid = document.createElement("div");
-          grid.className = "card-grid";
-          sub.cards.forEach((card) => {
-            grid.appendChild(buildCard(card));
-          });
-          const body = document.createElement("div");
-          body.className = "collapsible-body";
-          body.appendChild(grid);
-          details.appendChild(body);
-          detailsRoot.appendChild(details);
-        });
-      } else {
-        // Flat card list
-        const grid = document.createElement("div");
-        grid.className = "card-grid";
-
-        (section.cards || []).forEach((card) => {
-          grid.appendChild(buildCard(card));
-        });
-        const body = document.createElement("div");
-        body.className = "collapsible-body";
-        body.appendChild(grid);
-        detailsRoot.appendChild(body);
-      }
-      main.appendChild(detailsRoot);
-    } else {
-      // Non-collapsible section (existing behavior)
+    // Exception: for Cities & Knights, render the 'progress-cards' section as non-collapsible
+    if (state.game === "cities-knights" && section.id === "progress-cards") {
       const sectionEl = document.createElement("section");
       sectionEl.className = "section";
 
@@ -373,26 +314,82 @@ function renderCards(game) {
 
           const grid = document.createElement("div");
           grid.className = "card-grid";
-          sub.cards.forEach((card) => {
-            grid.appendChild(buildCard(card));
-          });
+          sub.cards.forEach((card) => grid.appendChild(buildCard(card)));
+
           const body = document.createElement("div");
           body.className = "collapsible-body";
           body.appendChild(grid);
           details.appendChild(body);
+
           sectionEl.appendChild(details);
         });
       } else {
         const grid = document.createElement("div");
         grid.className = "card-grid";
-        (section.cards || []).forEach((card) => {
-          grid.appendChild(buildCard(card));
-        });
+        (section.cards || []).forEach((card) =>
+          grid.appendChild(buildCard(card)),
+        );
         sectionEl.appendChild(grid);
       }
 
       main.appendChild(sectionEl);
+      return;
     }
+
+    const detailsRoot = document.createElement("details");
+    detailsRoot.className = "subcategory-collapsible section-collapsible";
+    detailsRoot.open = false;
+
+    const summaryRoot = document.createElement("summary");
+    summaryRoot.className = "subcategory-summary section-summary";
+    const count = section.cards
+      ? section.cards.length
+      : section.subcategories
+        ? section.subcategories.reduce(
+            (s, sc) => s + (sc.cards ? sc.cards.length : 0),
+            0,
+          )
+        : 0;
+    summaryRoot.innerHTML = `${section.icon || ""} ${section.title} <span class="subcategory-count">${count} cards</span>`;
+    detailsRoot.appendChild(summaryRoot);
+
+    if (section.subcategories && section.subcategories.length) {
+      section.subcategories.forEach((sub) => {
+        const details = document.createElement("details");
+        details.className = "subcategory-collapsible";
+        details.open = false;
+
+        const summary = document.createElement("summary");
+        summary.className = "subcategory-summary";
+        const colorDot = sub.color
+          ? `<span class="subcategory-dot" style="background:${sub.color}"></span>`
+          : "";
+        summary.innerHTML = `${colorDot}${sub.icon || ""} ${sub.title} <span class="subcategory-count">${sub.cards.length} cards</span>`;
+        details.appendChild(summary);
+
+        const grid = document.createElement("div");
+        grid.className = "card-grid";
+        sub.cards.forEach((card) => grid.appendChild(buildCard(card)));
+
+        const body = document.createElement("div");
+        body.className = "collapsible-body";
+        body.appendChild(grid);
+        details.appendChild(body);
+        detailsRoot.appendChild(details);
+      });
+    } else {
+      const grid = document.createElement("div");
+      grid.className = "card-grid";
+      (section.cards || []).forEach((card) =>
+        grid.appendChild(buildCard(card)),
+      );
+      const body = document.createElement("div");
+      body.className = "collapsible-body";
+      body.appendChild(grid);
+      detailsRoot.appendChild(body);
+    }
+
+    main.appendChild(detailsRoot);
   });
   // Initialize accordion behavior for rendered sections
   initAccordions();
