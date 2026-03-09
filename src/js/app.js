@@ -262,7 +262,32 @@ function renderCards(game) {
     "special",
     "building-costs",
   ]);
-  game.sections.forEach((section) => {
+
+  // Allow game-specific ordering (e.g., Cities & Knights)
+  let sections = Array.isArray(game.sections) ? game.sections.slice() : [];
+  if (state.game === "cities-knights") {
+    const desired = [
+      "progress-cards",
+      "city-improvements",
+      "commodities",
+      "barbarians",
+    ];
+    const byId = new Map(sections.map((s) => [s.id, s]));
+    const reordered = [];
+    desired.forEach((id) => {
+      if (byId.has(id)) {
+        reordered.push(byId.get(id));
+        byId.delete(id);
+      }
+    });
+    // append any remaining sections in original order
+    sections.forEach((s) => {
+      if (byId.has(s.id)) reordered.push(s);
+    });
+    sections = reordered;
+  }
+
+  sections.forEach((section) => {
     // If this section should be collapsible, render as a <details>
     if (collapsibleSections.has(section.id)) {
       const detailsRoot = document.createElement("details");
