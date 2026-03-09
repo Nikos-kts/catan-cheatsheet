@@ -437,6 +437,20 @@ main {
   box-shadow: var(--shadow);
 }
 
+/* Collapsible body animation */
+.collapsible-body {
+  overflow: hidden;
+  max-height: 0;
+  transition:
+    max-height 300ms ease,
+    opacity 200ms ease;
+  opacity: 1;
+}
+.collapsible-body > * {
+  /* ensure children don't collapse margin into body */
+  margin-top: 0.5rem;
+}
+
 .subcategory-summary {
   display: flex;
   align-items: center;

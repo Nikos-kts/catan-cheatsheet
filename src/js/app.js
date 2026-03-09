@@ -302,7 +302,10 @@ function renderCards(game) {
           sub.cards.forEach((card) => {
             grid.appendChild(buildCard(card));
           });
-          details.appendChild(grid);
+          const body = document.createElement("div");
+          body.className = "collapsible-body";
+          body.appendChild(grid);
+          details.appendChild(body);
           detailsRoot.appendChild(details);
         });
       } else {
@@ -313,8 +316,10 @@ function renderCards(game) {
         (section.cards || []).forEach((card) => {
           grid.appendChild(buildCard(card));
         });
-
-        detailsRoot.appendChild(grid);
+        const body = document.createElement("div");
+        body.className = "collapsible-body";
+        body.appendChild(grid);
+        detailsRoot.appendChild(body);
       }
       main.appendChild(detailsRoot);
     } else {
@@ -346,7 +351,10 @@ function renderCards(game) {
           sub.cards.forEach((card) => {
             grid.appendChild(buildCard(card));
           });
-          details.appendChild(grid);
+          const body = document.createElement("div");
+          body.className = "collapsible-body";
+          body.appendChild(grid);
+          details.appendChild(body);
           sectionEl.appendChild(details);
         });
       } else {
@@ -502,7 +510,10 @@ function renderGameplay(game) {
       grid.appendChild(card);
     });
 
-    detailsRoot.appendChild(grid);
+    const body = document.createElement("div");
+    body.className = "collapsible-body";
+    body.appendChild(grid);
+    detailsRoot.appendChild(body);
     main.appendChild(detailsRoot);
   }
 
@@ -611,13 +622,20 @@ function renderRuleSection(parent, title, icon, rules, options = {}) {
     ul.appendChild(li);
   });
 
-  details.appendChild(ul);
+  const body = document.createElement("div");
+  body.className = "collapsible-body";
+  body.appendChild(ul);
+  details.appendChild(body);
   parent.appendChild(details);
 }
 
 // Accordion initializer: ensure only one details in each group is open at a time
 function initAccordions() {
-  const groups = [".section-collapsible", ".gameplay-collapsible"];
+  const groups = [
+    ".section-collapsible",
+    ".gameplay-collapsible",
+    ".subcategory-collapsible",
+  ];
   groups.forEach((selector) => {
     const items = Array.from(document.querySelectorAll(selector));
     if (!items.length) return;
@@ -626,12 +644,45 @@ function initAccordions() {
       if (item._accordionHandler)
         item.removeEventListener("toggle", item._accordionHandler);
       const handler = () => {
-        if (!item.open) return;
-        items.forEach((other) => {
-          if (other !== item) other.open = false;
-        });
+        const body = item.querySelector(".collapsible-body");
+        // collapse others and reset their body height
+        if (item.open) {
+          items.forEach((other) => {
+            if (other !== item) {
+              other.open = false;
+              const ob = other.querySelector(".collapsible-body");
+              if (ob) ob.style.maxHeight = "0px";
+            }
+          });
+
+          // expand this body's max-height smoothly
+          if (body) {
+            // temporarily set to auto to get the scrollHeight
+            const h = body.scrollHeight;
+            body.style.maxHeight = h + "px";
+          }
+
+          // scroll summary into view beneath tabs
+          const tabs = document.getElementById("tabs");
+          const tabsHeight = tabs ? tabs.offsetHeight : 0;
+          const rect = item.getBoundingClientRect();
+          const top = rect.top + window.scrollY - tabsHeight - 8;
+          window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });
+        } else {
+          // closing: collapse body
+          if (body) body.style.maxHeight = "0px";
+        }
       };
-      item.addEventListener("toggle", handler);
+      // ensure initial body maxHeight reflects open state
+      const initBody = item.querySelector(".collapsible-body");
+      if (initBody) {
+        initBody.style.overflow = "hidden";
+        initBody.style.transition = "max-height 300ms ease";
+        initBody.style.maxHeight = item.open
+          ? initBody.scrollHeight + "px"
+          : "0px";
+      }
+      item.addEventListener("toggle", handler, { passive: true });
       item._accordionHandler = handler;
     });
   });
