@@ -52,7 +52,7 @@ const GAME_THEME = {
   },
 };
 
-const SUPPORTED_LANGS = ["en", "de", "es", "pt", "fr", "el", "nl"];
+const SUPPORTED_LANGS = ["en", "es", "pt", "el"];
 const DATA_PATH = "src/data/";
 
 // ── Boot ───────────────────────────────────────────────────────────────────
