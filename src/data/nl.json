@@ -469,9 +469,10 @@
               "type": "commodity",
               "icon": "🧵",
               "name": "Laken / Stof",
-              "description": "Weide dorp /stad = + laken.",
+              "description": "Geproduceerd door steden op weidevelden. Wordt gebruikt voor verbeteringen op de Handelsbaan.",
               "usages": [
-                "Trade track op het bordje."
+                "Geproduceerd door steden op weidevelden",
+                "Investeer in Handelsstadverbeteringen"
               ]
             },
             {
@@ -479,9 +480,10 @@
               "type": "commodity",
               "icon": "🪙",
               "name": "Munt",
-              "description": "Bergen = + Muntstukje.",
+              "description": "Geproduceerd door steden op bergvelden. Wordt gebruikt voor verbeteringen op de Politieke baan.",
               "usages": [
-                "Science track!"
+                "Geproduceerd door steden op bergvelden",
+                "Investeer in Politieke stadsverbeteringen"
               ]
             },
             {
@@ -489,9 +491,10 @@
               "type": "commodity",
               "icon": "📜",
               "name": "Boek / Papier",
-              "description": "Hout = + Boekwaarde.",
+              "description": "Geproduceerd door steden op bosvelden. Wordt gebruikt voor verbeteringen op de Wetenschapsbaan.",
               "usages": [
-                "Politiek track!"
+                "Geproduceerd door steden op bosvelden",
+                "Investeer in Wetenschappelijke stadsverbeteringen"
               ]
             }
           ]
@@ -528,10 +531,7 @@
                   "name": "Meesterhandelaar",
                   "count": 2,
                   "description": "Kijk naar de hand van een aangrenzende tegenstander en neem 2 kaarten naar keuze.",
-                  "usages": [
-                    "Krijg informatie",
-                    "Steel 2 specifieke kaarten"
-                  ]
+                  "usages": ["Krijg informatie", "Steel 2 specifieke kaarten"]
                 },
                 {
                   "id": "merchant",
@@ -567,9 +567,7 @@
                   "name": "Grondstofmonopolie",
                   "count": 4,
                   "description": "Noem 1 grondstof. Elke tegenstander met 2+ van die grondstof moet je precies 2 geven.",
-                  "usages": [
-                    "Verzamel veel grondstoffen van tegenstanders"
-                  ]
+                  "usages": ["Verzamel veel grondstoffen van tegenstanders"]
                 },
                 {
                   "id": "trade-monopoly",
@@ -579,9 +577,7 @@
                   "name": "Handelsmonopolie",
                   "count": 2,
                   "description": "Noem 1 handelsgoed. Elke tegenstander met 1+ moet je precies 1 geven.",
-                  "usages": [
-                    "Verzamel handelsgoederen van iedereen"
-                  ]
+                  "usages": ["Verzamel handelsgoederen van iedereen"]
                 }
               ]
             },
@@ -612,10 +608,7 @@
                   "name": "Kraan",
                   "count": 2,
                   "description": "Bouw deze beurt een stadsverbetering voor 1 minder handelsgoed.",
-                  "usages": [
-                    "Bespaar één handelsgoed",
-                    "Sneller niveaus halen"
-                  ]
+                  "usages": ["Bespaar één handelsgoed", "Sneller niveaus halen"]
                 },
                 {
                   "id": "engineer",
@@ -651,10 +644,7 @@
                   "name": "Irrigatie",
                   "count": 2,
                   "description": "Neem 2 Tarwe-kaarten uit de voorraad voor elke nederzetting/stad naast een Tarwe-hex.",
-                  "usages": [
-                    "Grote tarweboost",
-                    "Goed om ridders te activeren"
-                  ]
+                  "usages": ["Grote tarweboost", "Goed om ridders te activeren"]
                 },
                 {
                   "id": "medicine",
@@ -664,10 +654,7 @@
                   "name": "Geneeskunde",
                   "count": 2,
                   "description": "Upgrade een nederzetting naar stad voor slechts 1 Oer + 1 Tarwe (in plaats van 3 Oer + 2 Tarwe).",
-                  "usages": [
-                    "Goedkoop stad bouwen",
-                    "Snel uitbreiden"
-                  ]
+                  "usages": ["Goedkoop stad bouwen", "Snel uitbreiden"]
                 },
                 {
                   "id": "mining",
@@ -677,9 +664,7 @@
                   "name": "Mijnbouw",
                   "count": 2,
                   "description": "Neem 2 Oer uit de voorraad voor elke nederzetting/stad naast een Berg-hex.",
-                  "usages": [
-                    "Grote Oerbron bij goede plaatsing"
-                  ]
+                  "usages": ["Grote Oerbron bij goede plaatsing"]
                 },
                 {
                   "id": "printer",
@@ -689,9 +674,7 @@
                   "name": "Drukpers",
                   "count": 2,
                   "description": "Trek 2 voortgangskaarten en hou 1.",
-                  "usages": [
-                    "Kaartvoordeel"
-                  ]
+                  "usages": ["Kaartvoordeel"]
                 },
                 {
                   "id": "road-building",
@@ -701,9 +684,7 @@
                   "name": "Wegenbouw",
                   "count": 2,
                   "description": "Bouw direct 2 wegen zonder kosten.",
-                  "usages": [
-                    "Snel blokkeren"
-                  ]
+                  "usages": ["Snel blokkeren"]
                 },
                 {
                   "id": "smith",
@@ -713,9 +694,7 @@
                   "name": "Smid",
                   "count": 2,
                   "description": "Betaal 1 Oer: activeer een gerekruteerde ridder meteen.",
-                  "usages": [
-                    "Ridders activeren zonder Tarwe"
-                  ]
+                  "usages": ["Ridders activeren zonder Tarwe"]
                 }
               ]
             },
@@ -745,9 +724,7 @@
                   "name": "Grondwet",
                   "count": 2,
                   "description": "Krijg 1 permanente vaardigheid gebaseerd op je hoogste stadsverbeteringsniveau.",
-                  "usages": [
-                    "Langetermijnvoordelen naar specialisatie"
-                  ]
+                  "usages": ["Langetermijnvoordelen naar specialisatie"]
                 },
                 {
                   "id": "deserter",
@@ -781,9 +758,7 @@
                   "name": "Intrige",
                   "count": 2,
                   "description": "Ruil 1 kaart uit jouw hand met 1 kaart uit de hand van een tegenstander (willekeurig gekozen).",
-                  "usages": [
-                    "Maak handen van tegenstanders chaotisch"
-                  ]
+                  "usages": ["Maak handen van tegenstanders chaotisch"]
                 },
                 {
                   "id": "saboteur",
@@ -793,9 +768,7 @@
                   "name": "Saboteur",
                   "count": 2,
                   "description": "Elke tegenstander met gelijk of meer OP moet de helft van zijn hand (afronden naar beneden) afleggen.",
-                  "usages": [
-                    "Druk uit op leidende spelers"
-                  ]
+                  "usages": ["Druk uit op leidende spelers"]
                 },
                 {
                   "id": "spy",
@@ -817,9 +790,7 @@
                   "name": "Oorlogsheer",
                   "count": 2,
                   "description": "Activeer al jouw ridders gratis (zonder Tarwe+Oer te betalen).",
-                  "usages": [
-                    "Bereid onmiddellijke verdediging voor"
-                  ]
+                  "usages": ["Bereid onmiddellijke verdediging voor"]
                 },
                 {
                   "id": "wedding",
@@ -829,9 +800,7 @@
                   "name": "Bruiloft",
                   "count": 2,
                   "description": "Elke tegenstander met meer OP dan jij moet je 2 kaarten (grondstof of handelsgoed) van zijn keuze geven.",
-                  "usages": [
-                    "Krijg kaarten van spelers die voorop lopen"
-                  ]
+                  "usages": ["Krijg kaarten van spelers die voorop lopen"]
                 }
               ]
             }
@@ -842,18 +811,6 @@
           "title": "Stadsverbeteringen",
           "icon": "🏛️",
           "cards": [
-            {
-              "id": "science-improvement",
-              "type": "city-improvement",
-              "icon": "🔬",
-              "name": "Wetenschap (Munt)",
-              "description": "Als je tijdens de productiefase geen kaarten ontvangt, mag je 1 grondstof naar keuze nemen (niet bij een 7).",
-              "usages": [
-                "Vereist niveau 3 op de Wetenschapsbaan",
-                "Handelsgoed: Munt (bergsteden)",
-                "Niveau 4 geeft Wetenschaps-Metropool (2 OP)"
-              ]
-            },
             {
               "id": "trade-improvement",
               "type": "city-improvement",
@@ -870,12 +827,24 @@
               "id": "politics-improvement",
               "type": "city-improvement",
               "icon": "🏛️",
-              "name": "Politiek (Papier)",
+              "name": "Politiek (Munt)",
               "description": "Je mag sterke ridders (niveau 2) bevorderen tot machtige ridders (niveau 3).",
               "usages": [
                 "Vereist niveau 3 op de Politieke baan",
-                "Handelsgoed: Papier (woudsteden)",
+                "Handelsgoed: Munt (bergsteden)",
                 "Niveau 4 geeft Politieke Metropool (2 OP)"
+              ]
+            },
+            {
+              "id": "science-improvement",
+              "type": "city-improvement",
+              "icon": "🔬",
+              "name": "Wetenschap (Papier)",
+              "description": "Als je tijdens de productiefase geen kaarten ontvangt, mag je 1 grondstof naar keuze nemen (niet bij een 7).",
+              "usages": [
+                "Vereist niveau 3 op de Wetenschapsbaan",
+                "Handelsgoed: Papier (woudsteden)",
+                "Niveau 4 geeft Wetenschaps-Metropool (2 OP)"
               ]
             }
           ]
@@ -891,9 +860,7 @@
               "icon": "🏴‍☠️",
               "name": "Aanval vanuit Zee",
               "description": "Tel de koppen en sla ze allemaal ter neer! Zoniet, speler met minste verdediging omlaag met de stad!",
-              "usages": [
-                "Activeer ridders (graan)."
-              ]
+              "usages": ["Activeer ridders (graan)."]
             }
           ]
         }
@@ -946,9 +913,7 @@
               "icon": "🐪",
               "name": "De Karavaan",
               "description": "Kamelen als wegelement die twee punten aan je road toebrengen.",
-              "usages": [
-                "Verbeter stappen"
-              ]
+              "usages": ["Verbeter stappen"]
             },
             {
               "id": "gold",
@@ -956,9 +921,7 @@
               "icon": "🪙",
               "name": "Goud!",
               "description": "Met dit kan je betalen wanneer t mist in grond.",
-              "usages": [
-                "Wildcarding de economie"
-              ]
+              "usages": ["Wildcarding de economie"]
             }
           ]
         }
@@ -976,9 +939,7 @@
             "name": "Rivers of Catan / Handel / Vissende havens",
             "vp": "13",
             "description": "Je volgt alle combinaties.",
-            "details": [
-              "Geweldige mix"
-            ]
+            "details": ["Geweldige mix"]
           }
         ]
       }
@@ -999,9 +960,7 @@
               "icon": "🌶️",
               "name": "Specerijen Eiland",
               "description": "Binnenvaren, uitladen, kruiden zak inladen en thuisbrengen voor winst in je Haven",
-              "usages": [
-                "Missions"
-              ]
+              "usages": ["Missions"]
             },
             {
               "id": "fish-camp",
@@ -1009,9 +968,7 @@
               "icon": "🐟",
               "name": "Visser Vloot",
               "description": "Rondhangen als nummer is geweest the vissen met vloot verplaatsen.",
-              "usages": [
-                "Spaar Vis"
-              ]
+              "usages": ["Spaar Vis"]
             },
             {
               "id": "pirate-lair",
@@ -1019,9 +976,7 @@
               "icon": "🏴‍☠️",
               "name": "Piraat Kampement Vegen",
               "description": "Vechters of kolonisten worden uitgegooit op land the eiland the vijanden verslagen",
-              "usages": [
-                "Kustwacht voor VPs"
-              ]
+              "usages": ["Kustwacht voor VPs"]
             }
           ]
         }
