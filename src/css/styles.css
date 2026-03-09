@@ -250,20 +250,6 @@ header h1 {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
-/* Height of the tabs bar used as offset for sticky section headers */
-:root {
-  --tabs-height: 56px;
-}
-
-/* Make top-level section summaries sticky beneath the tabs */
-.section-summary {
-  position: sticky;
-  top: var(--tabs-height);
-  z-index: 79;
-  margin: 0;
-  background: inherit;
-}
-
 .tab {
   padding: 0.8rem 1.8rem;
   font-size: 0.95rem;
