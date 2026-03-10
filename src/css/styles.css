@@ -759,10 +759,20 @@ footer {
   color: var(--accent, #c0392b);
   text-decoration: none;
   font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
 }
 
 .footer-sponsor a:hover {
   text-decoration: underline;
+}
+
+/* PayPal logo in footer sponsor link */
+.footer-sponsor .paypal-logo {
+  height: 20px;
+  width: auto;
+  display: block;
 }
 
 /* ── Responsive ── */
