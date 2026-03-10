@@ -55,11 +55,11 @@ from hosting.
 
 ## Sponsorship
 
-Voluntary sponsorships received through
-[GitHub Sponsors](https://github.com/sponsors/Nikos-kts) go directly to the
-individual maintainer(s) to support their time and effort. Sponsoring this
-project does not create any commercial relationship with Catan Studio or
-constitute purchase of any Catan product.
+Voluntary donations are gratefully accepted via
+[PayPal](https://www.paypal.com/donate/?hosted_button_id=VJVL67LPK7JTG). Donations
+go directly to the individual maintainer(s) to support their time and effort.
+Receiving donations does not create any commercial relationship with Catan
+Studio or constitute purchase of any Catan product.
 
 ---
 
