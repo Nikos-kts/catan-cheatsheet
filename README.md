@@ -2,6 +2,10 @@
 
 A lightweight, browser-based reference for Catan card explanations — supports multiple games and languages.
 
+> **⚠️ Legal Notice:** This is an independent community project. CATAN® and all related marks are trademarks of Catan GmbH & Co. KG and Catan Studio Inc. This project is **not** affiliated with, endorsed by, or connected to Catan GmbH, Catan Studio, or any official Catan entity. See [DISCLAIMER.md](./DISCLAIMER.md) for full details.
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-pink?logo=github-sponsors)](https://github.com/sponsors/Nikos-kts)
+
 ## Features
 
 - **Games / Expansions**: Base Catan, Seafarers, Cities & Knights, Traders & Barbarians, Explorers & Pirates
@@ -145,4 +149,8 @@ for f in src/data/*.json; do jq . "$f" > /dev/null || echo "Invalid JSON: $f"; d
 git --no-pager diff -- src/data/
 ```
 
-_Community reference — not affiliated with Catan Studio._
+_Community reference — not affiliated with Catan Studio. See [DISCLAIMER.md](./DISCLAIMER.md) for full legal notice._
+
+## Support This Project
+
+If you find this cheatsheet helpful, consider sponsoring its continued development via **[GitHub Sponsors](https://github.com/sponsors/Nikos-kts)**. Sponsorships help keep the project maintained and expanded with new languages and expansions.

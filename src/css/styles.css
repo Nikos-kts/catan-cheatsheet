@@ -742,6 +742,29 @@ footer {
   background: var(--sand-dk);
 }
 
+.footer-legal {
+  font-size: 0.72rem;
+  color: var(--text-lt);
+  max-width: 640px;
+  margin: 0.5rem auto 0;
+  line-height: 1.5;
+  opacity: 0.8;
+}
+
+.footer-sponsor {
+  margin-top: 0.75rem;
+}
+
+.footer-sponsor a {
+  color: var(--accent, #c0392b);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-sponsor a:hover {
+  text-decoration: underline;
+}
+
 /* ── Responsive ── */
 @media (max-width: 480px) {
   .card-grid {
