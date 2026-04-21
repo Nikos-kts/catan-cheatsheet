@@ -13,7 +13,85 @@
     "titleTurn": "Επισκόπηση Γύρου",
     "titleRules": "Βασικοί Κανόνες",
     "titleSpecial": "Ειδικοί Κανόνες",
-    "titleScenarios": "Σενάρια & Παραλλαγές"
+    "titleScenarios": "Σενάρια & Παραλλαγές",
+    "tabReference": "Reference",
+    "tabStrategy": "Strategy",
+    "tabTools": "Tools",
+    "reference": {
+      "heading": "Numeric Cheat Sheet",
+      "subheading": "Hard numbers you can glance at mid-turn.",
+      "buildingCosts": "Building Costs",
+      "diceProbabilities": "Dice Probabilities",
+      "tradingRatios": "Trading Ratios",
+      "turnFlow": "Turn Flow",
+      "countItems": "items",
+      "countRolls": "rolls",
+      "countRatios": "ratios",
+      "countSteps": "steps",
+      "colRoll": "Roll",
+      "colWays": "Ways (of 36)",
+      "colProb": "Probability",
+      "colPips": "Pips",
+      "pipTooltip": "dots on the number token",
+      "diceNote": "Red numbers (6 and 8) have the highest per-roll chance. A 7 rolls the robber."
+    },
+    "strategy": {
+      "heading": "Strategy Guide",
+      "subheading": "Tips grouped by level. Use the pills to filter, or overlay tips from other expansions.",
+      "filterLabel": "Filter by level",
+      "levelAll": "All",
+      "level_beginner": "Beginner",
+      "level_intermediate": "Intermediate",
+      "level_advanced": "Advanced",
+      "countTips": "tips",
+      "extrasLabel": "Also show strategy from:",
+      "overlayBadge": "from",
+      "empty": "No strategy tips for this selection yet."
+    },
+    "tools": {
+      "heading": "Interactive Tools",
+      "subheading": "Small helpers — dice odds, starting-spot scoring, and robber tracking.",
+      "diceOdds": {
+        "title": "Dice Odds Calculator",
+        "intro": "Tap the numbers on your hexes to see combined production odds.",
+        "hint": "Left-click to add a hex, right-click to remove one. 7 is excluded (robber roll).",
+        "reset": "Reset",
+        "totalPips": "Total pips",
+        "perRoll": "Expected resources per roll",
+        "empty": "Add some numbers to see results.",
+        "pipsLabel": "pips"
+      },
+      "startingSpot": {
+        "title": "Starting-Spot Helper",
+        "intro": "Pick the three hexes meeting at your candidate intersection. Score = pips × diversity − desert penalty.",
+        "hexLabel": "Hex",
+        "none": "—",
+        "diversityLabel": "Diversity multiplier",
+        "desertsLabel": "Desert/water penalty",
+        "verdictGreat": "Excellent spot",
+        "verdictGood": "Strong spot",
+        "verdictOk": "Decent spot",
+        "verdictWeak": "Weak spot",
+        "verdictBad": "Poor spot",
+        "res_lumber": "Lumber",
+        "res_brick": "Brick",
+        "res_wool": "Wool",
+        "res_grain": "Grain",
+        "res_ore": "Ore",
+        "res_gold": "Gold field",
+        "res_desert": "Desert / water"
+      },
+      "robberTimer": {
+        "title": "Robber 7-Timer",
+        "intro": "Theoretical 7-frequency: 6/36 = 16.67% (≈1 in 6 rolls). Use the buttons to track your session.",
+        "rollBtn": "+1 Roll",
+        "sevenBtn": "+1 Seven",
+        "reset": "Reset",
+        "rolls": "Total rolls",
+        "sevensObserved": "Sevens observed",
+        "sevensExpected": "Sevens expected"
+      }
+    }
   },
   "games": {
     "base": {
@@ -346,6 +424,323 @@
             ]
           }
         ]
+      },
+      "reference": {
+        "buildingCosts": [
+          {
+            "id": "road",
+            "icon": "🛣️",
+            "name": "Road",
+            "vp": "0 VP",
+            "cost": [
+              {
+                "resource": "Lumber",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Brick",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              }
+            ],
+            "note": "Must connect to your network. Max 15 per player."
+          },
+          {
+            "id": "settlement",
+            "icon": "🏠",
+            "name": "Settlement",
+            "vp": "1 VP",
+            "cost": [
+              {
+                "resource": "Lumber",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Brick",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              },
+              {
+                "resource": "Wool",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Grain",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Respect the 2-edge distance rule. Max 5 per player."
+          },
+          {
+            "id": "city",
+            "icon": "🏛️",
+            "name": "City",
+            "vp": "2 VP",
+            "cost": [
+              {
+                "resource": "Ore",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 3
+              },
+              {
+                "resource": "Grain",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 2
+              }
+            ],
+            "note": "Upgrades a settlement; produces 2 resources per roll. Max 4 per player."
+          },
+          {
+            "id": "dev-card",
+            "icon": "🃏",
+            "name": "Development Card",
+            "vp": "—",
+            "cost": [
+              {
+                "resource": "Ore",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              },
+              {
+                "resource": "Grain",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              },
+              {
+                "resource": "Wool",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              }
+            ],
+            "note": "Cannot be played on the turn bought (except VP cards on a winning turn)."
+          }
+        ],
+        "trading": [
+          {
+            "icon": "🏦",
+            "title": "Bank",
+            "ratio": "4:1",
+            "detail": "Any 4 identical resources for 1 of your choice, anytime on your turn."
+          },
+          {
+            "icon": "⚓",
+            "title": "Generic Harbour",
+            "ratio": "3:1",
+            "detail": "Build a settlement/city on a 3:1 port to trade any 3 identical resources for 1."
+          },
+          {
+            "icon": "🛳️",
+            "title": "Specific Harbour",
+            "ratio": "2:1",
+            "detail": "Five resource-specific ports let you swap 2 of that resource for 1 of anything."
+          },
+          {
+            "icon": "🤝",
+            "title": "Player Trade",
+            "ratio": "any:any",
+            "detail": "Negotiate freely with other players during your turn — rates are whatever you can convince them to accept."
+          }
+        ],
+        "tradingNote": "You can only trade on your own turn, and only before or after the roll (not during production).",
+        "turnFlow": [
+          {
+            "icon": "🃏",
+            "title": "Play a dev card (optional)",
+            "detail": "May be played before rolling if bought on a prior turn."
+          },
+          {
+            "icon": "🎲",
+            "title": "Roll the dice",
+            "detail": "Sum of both dice determines which hexes produce this turn."
+          },
+          {
+            "icon": "🌾",
+            "title": "Production",
+            "detail": "Each player collects resources from their settlements (×1) and cities (×2) adjacent to a producing hex."
+          },
+          {
+            "icon": "🕵️",
+            "title": "On a 7: Robber",
+            "detail": "Players with >7 cards discard half (rounded down). Active player moves the robber and steals 1 random card."
+          },
+          {
+            "icon": "🤝",
+            "title": "Trade",
+            "detail": "Trade with other players, or with the bank/ports at 4:1 / 3:1 / 2:1."
+          },
+          {
+            "icon": "🔨",
+            "title": "Build",
+            "detail": "Spend resources on roads, settlements, cities, or development cards."
+          },
+          {
+            "icon": "➡️",
+            "title": "Pass",
+            "detail": "End your turn by passing the dice to the player on your left."
+          }
+        ]
+      },
+      "strategy": {
+        "beginner": [
+          {
+            "id": "pip-counting",
+            "icon": "🔢",
+            "title": "Count the pips, not the numbers",
+            "body": "Each number token has small red dots (pips) equal to how many ways it rolls on 2d6. A 6 or 8 is 5 pips; a 2 or 12 is 1 pip. Score a candidate spot by summing its pips — higher is better.",
+            "tags": [
+              "placement",
+              "fundamentals"
+            ]
+          },
+          {
+            "id": "resource-diversity",
+            "icon": "🌈",
+            "title": "Cover all five resources",
+            "body": "With your two starting settlements, aim to touch all five resource types. Missing one forces expensive bank trades (4:1) and slows every build in the midgame.",
+            "tags": [
+              "placement",
+              "opening"
+            ]
+          },
+          {
+            "id": "road-wood-brick",
+            "icon": "🌲",
+            "title": "Wood + brick = early expansion",
+            "body": "Roads and settlements both cost wood and brick. A strong first-turn settlement usually sits on decent wood and brick so you can race to a third settlement before the wheat/ore phase begins.",
+            "tags": [
+              "opening",
+              "resources"
+            ]
+          },
+          {
+            "id": "ports-are-traps",
+            "icon": "⚓",
+            "title": "Ports are good, not great",
+            "body": "A 2:1 port on a resource you massively over-produce is excellent; a port without the matching production is a VP you could have used on a resource settlement instead.",
+            "tags": [
+              "placement",
+              "trading"
+            ]
+          },
+          {
+            "id": "dont-chase-vp-cards",
+            "icon": "🎁",
+            "title": "Dev cards are not free points",
+            "body": "Only 5 of ~25 dev cards are VPs. Buy development cards because you want Knights for Largest Army or flexibility — treat the VPs as a bonus, not a plan.",
+            "tags": [
+              "dev-cards"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "id": "longest-road-timing",
+            "icon": "🛣️",
+            "title": "Commit to Longest Road, or don't",
+            "body": "Longest Road is 2 VP but needs 5+ segments and is vulnerable to a disrupting settlement. Either commit early (wood/brick-heavy start) or skip it entirely — half-investing loses you resources AND the VP.",
+            "tags": [
+              "longest-road",
+              "tempo"
+            ]
+          },
+          {
+            "id": "largest-army-pressure",
+            "icon": "🪖",
+            "title": "Largest Army is cheaper than it looks",
+            "body": "3 Knights = 2 VP plus ongoing robber control. If your opponents have no knight pressure, you can often claim it uncontested for what amounts to 6 dev-card buys.",
+            "tags": [
+              "dev-cards",
+              "largest-army"
+            ]
+          },
+          {
+            "id": "robber-on-leader",
+            "icon": "🎯",
+            "title": "Robber the leader, not the nearest",
+            "body": "The robber is a political weapon. Move it onto the hex producing the most for whoever is closest to winning, not the hex nearest to you. Target the score leader's best production — you'll get repaid in goodwill.",
+            "tags": [
+              "robber",
+              "politics"
+            ]
+          },
+          {
+            "id": "trade-psychology",
+            "icon": "🧠",
+            "title": "Anchor high, accept the second offer",
+            "body": "Open trades at rates worse than 1:1. Opponents compare to your anchor, not to the 4:1 bank. You'll often land a 2:1 player trade simply because it looks generous next to your first ask.",
+            "tags": [
+              "trading",
+              "psychology"
+            ]
+          },
+          {
+            "id": "block-not-build",
+            "icon": "🚧",
+            "title": "Sometimes the best play is a blocking road",
+            "body": "A road you will never extend can still be worth building if it walls off an opponent's only expansion lane. Cost-benefit: 1 wood + 1 brick vs. denying your rival a 10-pip settlement.",
+            "tags": [
+              "placement",
+              "denial"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "id": "production-variance",
+            "icon": "📊",
+            "title": "Chase expected value, not variance",
+            "body": "Two 4-pip hexes produce the same long-run total as one 8-pip hex, but with less variance — fewer empty turns. For consistent builds, prefer spreading across 3-4 medium numbers over stacking two hot numbers.",
+            "tags": [
+              "probability",
+              "planning"
+            ]
+          },
+          {
+            "id": "card-counting",
+            "icon": "🃏",
+            "title": "Track opponent hands",
+            "body": "After each roll, note who collects what. When an opponent has clearly not drawn wheat for 8 rolls, a wheat Monopoly nets you 6-8 cards from the other players instead — retarget on the fly.",
+            "tags": [
+              "dev-cards",
+              "information"
+            ]
+          },
+          {
+            "id": "two-settlement-threat",
+            "icon": "♟️",
+            "title": "Threaten two cities at once",
+            "body": "In the endgame, keep 8+ resources that could buy a city upgrade on either of two settlements. Opponents can only robber one — your next turn still builds.",
+            "tags": [
+              "endgame",
+              "tempo"
+            ]
+          },
+          {
+            "id": "kingmaker-hedge",
+            "icon": "👑",
+            "title": "Avoid kingmaker math in 4p",
+            "body": "If you can't win this turn, don't hand a free trade to the player about to. Ratio-fair trades with the second-place player are always better than charity to the leader — even if it means you pay 4:1 to the bank.",
+            "tags": [
+              "trading",
+              "politics"
+            ]
+          }
+        ]
       }
     },
     "seafarers": {
@@ -534,6 +929,57 @@
             "description": "Εντελώς τυχαία διάταξη νησιών.",
             "details": [
               "+1 ΠΝ ανά οικισμό σε ανεξερεύνητο νησί"
+            ]
+          }
+        ]
+      },
+      "reference": {
+        "tradingNote": "Seafarers keeps base-game trading ratios — no new trade rules, but coastal ports remain exceptionally strong when shipping routes connect them."
+      },
+      "strategy": {
+        "beginner": [
+          {
+            "id": "ship-network",
+            "icon": "⛵",
+            "title": "Ships are roads you can move",
+            "body": "Once per turn, the open end of a ship chain can be moved. Build ships loosely at first; you'll reroute them toward whichever island your opponents underbid.",
+            "tags": [
+              "ships",
+              "opening"
+            ]
+          },
+          {
+            "id": "settle-new-islands",
+            "icon": "🏝️",
+            "title": "Island VPs beat resource VPs",
+            "body": "Most scenarios grant +1–2 VP per first-settlement on a new island. A 4-pip spot on a new island usually beats an 8-pip spot at home once you factor in the bonus.",
+            "tags": [
+              "placement",
+              "scoring"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "id": "pirate-vs-robber",
+            "icon": "🏴‍☠️",
+            "title": "Pirate, not robber, on shipping leaders",
+            "body": "On a 7, move the pirate onto a hex full of opponent ships rather than robbing production. It freezes their expansion AND lets you steal — two birds, one die.",
+            "tags": [
+              "robber",
+              "ships"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "id": "chain-break",
+            "icon": "⚠️",
+            "title": "Guard the fragile end of your chain",
+            "body": "A single opponent ship placed at an ambiguous junction can sever your longest shipping route from the settlement that anchors it — nullifying Longest Route and possibly 2 VP. Leave no unprotected endings in the last 3 turns.",
+            "tags": [
+              "endgame",
+              "longest-route"
             ]
           }
         ]
@@ -1071,6 +1517,94 @@
             "detail": "Τοποθετείται μέσω κάρτας προόδου σε εξάγωνο που γειτνιάζει με κτίριό σας. Δίνει ανταλλαγή 2:1 σε αυτόν τον πόρο και αξίζει 1 ΠΝ."
           }
         ]
+      },
+      "reference": {
+        "tradingNote": "C&K adds commodity trades via the Trade Progress deck and the Merchant token (2:1 on an adjacent hex). Commodities (coin / paper / cloth) also trade 4:1 at the bank.",
+        "turnFlow": [
+          {
+            "icon": "🃏",
+            "title": "Play a progress card (optional)",
+            "detail": "Up to 1 progress card before rolling if you have them."
+          },
+          {
+            "icon": "🎲",
+            "title": "Roll production + event die",
+            "detail": "Red + yellow production dice AND the colored event die (barbarian, town gate, or castle)."
+          },
+          {
+            "icon": "🌾",
+            "title": "Production & commodities",
+            "detail": "Settlements → 1 resource. Cities → 1 resource + 1 commodity from pasture/forest/mountain hexes."
+          },
+          {
+            "icon": "🏴‍☠️",
+            "title": "Barbarian advance",
+            "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, undefended cities become settlements; strongest-knight player wins a Defender of Catan VP."
+          },
+          {
+            "icon": "🕵️",
+            "title": "On a 7: Robber",
+            "detail": "As base game. Knights on the board are unaffected."
+          },
+          {
+            "icon": "🤝",
+            "title": "Trade / Build / Activate knights",
+            "detail": "Spend resources & commodities. Knights must be activated (1 Grain) before they can move/chase robber."
+          },
+          {
+            "icon": "➡️",
+            "title": "Pass",
+            "detail": "End turn, hand dice to left."
+          }
+        ]
+      },
+      "strategy": {
+        "beginner": [
+          {
+            "id": "build-city-first",
+            "icon": "🏛️",
+            "title": "Race to a second city fast",
+            "body": "Only cities produce commodities, and almost every progress-card effect assumes you have commodities to spend. Two cities by turn 5–6 is the C&K version of 'good opening'.",
+            "tags": [
+              "cities",
+              "opening"
+            ]
+          },
+          {
+            "id": "keep-a-knight",
+            "icon": "⚔️",
+            "title": "Always have one active knight",
+            "body": "An active knight defends Catan during barbarian attacks. Being the sole defender earns Defender of Catan (VP), and being undefended loses you a city — the swing is huge.",
+            "tags": [
+              "knights",
+              "barbarians"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "id": "track-tempo",
+            "icon": "📏",
+            "title": "Pick one track and commit",
+            "body": "Trade, Science and Politics each unlock powerful tempo spikes at levels 3+. Spreading across all three keeps you at level 1 in all — a wasted tempo.",
+            "tags": [
+              "improvements",
+              "tempo"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "id": "metro-timing",
+            "icon": "🏙️",
+            "title": "Time the metropolis before barbarians",
+            "body": "Reaching track level 4 lets you build a metropolis (2 extra VP). Do it when barbarians are 1–2 rolls from landing: the metropolis city can't be pillaged, so your VP is locked in even if Catan falls.",
+            "tags": [
+              "endgame",
+              "barbarians"
+            ]
+          }
+        ]
       }
     },
     "traders-barbarians": {
@@ -1207,6 +1741,73 @@
               "Αναβαθμίσεις άμαξας αυξάνουν την κίνηση",
               "Χρυσός κερδίζεται από παραδόσεις",
               "Βάρβαροι μπλοκάρουν δρόμους"
+            ]
+          }
+        ]
+      },
+      "reference": {
+        "tradingNote": "T&B introduces caravans, trade routes and gold — some scenarios replace the standard bank trade with delivery-based VP. Always check the specific scenario rules before assuming 4:1 still applies.",
+        "trading": [
+          {
+            "icon": "🏦",
+            "title": "Bank",
+            "ratio": "4:1",
+            "detail": "Same as base game."
+          },
+          {
+            "icon": "⚓",
+            "title": "Harbours",
+            "ratio": "3:1 / 2:1",
+            "detail": "Ports unchanged from base game."
+          },
+          {
+            "icon": "🐪",
+            "title": "Caravans (scenario)",
+            "ratio": "1 delivery = 1 VP",
+            "detail": "Move caravans up to 3 road segments per turn; deliver goods tokens to the friendly village for a VP."
+          },
+          {
+            "icon": "🪙",
+            "title": "Gold (scenario)",
+            "ratio": "2 gold = 1 resource",
+            "detail": "Trade gold tokens earned from rivers or trade routes at 2:1 at the bank."
+          }
+        ]
+      },
+      "strategy": {
+        "beginner": [
+          {
+            "id": "caravan-paths",
+            "icon": "🐪",
+            "title": "Plan the caravan route first",
+            "body": "In Traders & Barbarians, the village-route geometry decides your opening. Your first two settlements should touch the road path your caravans will travel, not necessarily the best pip hexes.",
+            "tags": [
+              "caravans",
+              "placement"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "id": "barbarian-attacker",
+            "icon": "🏴‍☠️",
+            "title": "Use barbarians as a knight",
+            "body": "In the Barbarian Attack variant, you can march barbarians toward an opponent's cluster of settlements for a fee. The fee pays for itself if it stalls their biggest producer by even one turn.",
+            "tags": [
+              "barbarians",
+              "denial"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "id": "gold-stacking",
+            "icon": "🪙",
+            "title": "Bank gold, don't spend it",
+            "body": "Gold converts at 2:1. In scenarios with river gold, holding 8+ gold lets you assemble a city or dev card on demand without revealing the resource mix to opponents — pure information advantage.",
+            "tags": [
+              "gold",
+              "information"
             ]
           }
         ]
@@ -1355,6 +1956,47 @@
             "details": [
               "Όλες οι αποστολές ενεργές ταυτόχρονα",
               "Οι θέσεις σε δείκτες αποστολών και τα πλακίδια από μπόνους ΠΝ συμβάλλουν στη νίκη"
+            ]
+          }
+        ]
+      },
+      "reference": {
+        "tradingNote": "E&P keeps base bank/harbour ratios but adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
+      },
+      "strategy": {
+        "beginner": [
+          {
+            "id": "pick-two-missions",
+            "icon": "🎯",
+            "title": "Pick two missions, skip the third",
+            "body": "Trying to score fish, spices and pirate lairs equally spreads you thin. Invest in two tracks deeply — the third mission's final reward usually goes to whoever is losing on the others.",
+            "tags": [
+              "missions",
+              "planning"
+            ]
+          }
+        ],
+        "intermediate": [
+          {
+            "id": "ship-crew-balance",
+            "icon": "⚖️",
+            "title": "Crew > speed, until the endgame",
+            "body": "Ships with 2 crew deliver twice the mission progress per trip even if they're slower. Only upgrade for movement in the last 4 turns when you need to reach a distant spice farm in time.",
+            "tags": [
+              "ships",
+              "missions"
+            ]
+          }
+        ],
+        "advanced": [
+          {
+            "id": "pirate-lair-race",
+            "icon": "🏴‍☠️",
+            "title": "Block a pirate lair first, capture later",
+            "body": "Capturing a pirate lair takes 3 crew drops. Simply parking 1 crew adjacent delays an opponent's capture attempt by a full turn, often long enough for you to reach it first with a full crew.",
+            "tags": [
+              "pirates",
+              "denial"
             ]
           }
         ]

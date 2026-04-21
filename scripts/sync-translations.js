@@ -137,6 +137,33 @@ async function main() {
   const enRaw = fs.readFileSync(EN_FILE, "utf8");
   const enObj = JSON.parse(enRaw);
 
+  // JSON-shape sanity check on en.json itself — warn if any expected
+  // top-level block (sections / gameplay / reference / strategy) is missing
+  // for a game. These power the five app tabs, so a missing block implies
+  // a tab will silently render an empty state.
+  const expectedGameKeys = ["sections", "gameplay", "reference", "strategy"];
+  const expectedUiKeys = ["reference", "strategy", "tools"];
+  if (enObj && enObj.games) {
+    Object.entries(enObj.games).forEach(([id, game]) => {
+      expectedGameKeys.forEach((k) => {
+        if (!game[k]) {
+          console.warn(
+            `[shape] en.json: game "${id}" is missing "${k}" — the corresponding tab may render empty.`,
+          );
+        }
+      });
+    });
+  }
+  if (enObj && enObj.ui) {
+    expectedUiKeys.forEach((k) => {
+      if (!enObj.ui[k]) {
+        console.warn(
+          `[shape] en.json: ui is missing "${k}" namespace — new-feature labels may fall back to hardcoded English.`,
+        );
+      }
+    });
+  }
+
   const files = fs
     .readdirSync(DATA_DIR)
     .filter((f) => f.endsWith(".json") && f !== "en.json");
@@ -147,6 +174,22 @@ async function main() {
     const raw = fs.readFileSync(full, "utf8");
     const tgt = JSON.parse(raw);
     await mergeEnIntoTarget(enObj, tgt, lang);
+
+    // Warn on structural gaps for this language (post-merge, these should
+    // normally all be present because mergeEnIntoTarget copies them over —
+    // but we check defensively).
+    if (tgt && tgt.games) {
+      Object.entries(tgt.games).forEach(([id, game]) => {
+        expectedGameKeys.forEach((k) => {
+          if (!game[k]) {
+            console.warn(
+              `[shape] ${file}: game "${id}" is missing "${k}" after sync.`,
+            );
+          }
+        });
+      });
+    }
+
     // write back with 2-space indent
     fs.writeFileSync(full, JSON.stringify(tgt, null, 2) + "\n", "utf8");
     console.log("Updated", file);
