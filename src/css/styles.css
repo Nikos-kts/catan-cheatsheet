@@ -787,6 +787,7 @@ footer {
   /* Slightly tighter card thumbnails on phones so more cards fit above the fold */
   .card-thumbnail-wrap {
     height: 140px;
+    margin: -0.9rem -0.9rem 0.7rem;
   }
   .card-thumbnail {
     max-height: 140px;
@@ -794,9 +795,6 @@ footer {
   /* Slightly reduce card padding for phone real-estate */
   .card {
     padding: 0.9rem 0.9rem 1.1rem;
-  }
-  .card-thumbnail-wrap {
-    margin: -0.9rem -0.9rem 0.7rem;
   }
 }
 
