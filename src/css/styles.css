@@ -779,9 +779,24 @@ footer {
 @media (max-width: 480px) {
   .card-grid {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
   .reference-grid {
     grid-template-columns: 1fr;
+  }
+  /* Slightly tighter card thumbnails on phones so more cards fit above the fold */
+  .card-thumbnail-wrap {
+    height: 140px;
+  }
+  .card-thumbnail {
+    max-height: 140px;
+  }
+  /* Slightly reduce card padding for phone real-estate */
+  .card {
+    padding: 0.9rem 0.9rem 1.1rem;
+  }
+  .card-thumbnail-wrap {
+    margin: -0.9rem -0.9rem 0.7rem;
   }
 }
 
