@@ -251,7 +251,7 @@ function renderDiceTable(ui) {
     const pipCount = Math.min(ways, 5);
     tdPips.setAttribute(
       "data-tooltip",
-      `${pipCount} ${(ui.pipTooltip || "dots on the number token").toString()}`,
+      `${pipCount} ${ui.pipTooltip || "dots on the number token"}`,
     );
     for (let i = 0; i < pipCount; i++) {
       const dot = document.createElement("span");

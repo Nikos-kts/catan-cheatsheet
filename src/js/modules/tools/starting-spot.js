@@ -64,7 +64,7 @@ export function mount(root, ui = {}) {
     const detail = document.createElement("p");
     detail.className = "tool-hint";
     detail.textContent =
-      `${ui.diversityLabel || "Diversity"}: ×${diversity.toFixed(2)}` +
+      `${ui.diversityLabel || "Diversity multiplier"}: ×${diversity.toFixed(2)}` +
       (deserts
         ? `  •  ${ui.desertsLabel || "Desert/water penalty"}: −${deserts * 2}`
         : "");
