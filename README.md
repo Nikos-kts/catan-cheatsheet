@@ -10,8 +10,10 @@ A lightweight, browser-based reference for Catan card explanations — supports 
 
 - **Games / Expansions**: Base Catan, Seafarers, Cities & Knights, Traders & Barbarians, Explorers & Pirates
 - **Languages**: English, German (Deutsch), Spanish (Español), French (Français), Greek (Ελληνικά), Dutch (Nederlands), Portuguese (Português)
-- Selections are remembered across sessions via `localStorage`
-- Pure HTML + CSS + vanilla JavaScript — no build step needed
+- **Five tabs**: 🃏 Cards, 🎲 Gameplay, 📋 Reference (building costs / dice probabilities / trading ratios / turn flow), 🧠 Strategy (beginner → advanced tips with per-expansion overlays), 🧮 Tools (dice odds calculator, starting-spot helper, robber 7-timer)
+- Selections are remembered across sessions via `localStorage` (`catan-lang`, `catan-game`, `catan-tab`, `catan-strategy-extras`)
+- Pure HTML + CSS + vanilla JavaScript ES modules — no build step needed
+- Accessible: `role="tablist"` tabs with arrow-key navigation, `aria-live` content region, `prefers-reduced-motion`-aware animations
 
 ## Project Structure
 
@@ -21,7 +23,25 @@ src/
 ├── css/
 │   └── styles.css      # Styles (earthy Catan colour palette)
 ├── js/
-│   └── app.js          # App logic (data loading, rendering)
+│   ├── app.js          # Thin bootstrapper wiring modules together
+│   └── modules/        # ES modules (split per responsibility)
+│       ├── state.js            # Central state + pub/sub
+│       ├── constants.js        # Game maps, theme, localStorage keys
+│       ├── storage.js          # localStorage wrapper
+│       ├── data-loader.js      # Fetch + EN fallback for missing keys
+│       ├── theme.js            # Per-game theming / banner
+│       ├── tabs.js             # Tab switching + sticky tabs + a11y
+│       ├── accordions.js       # Single-open accordion animation
+│       ├── image.js            # buildImage() placeholder helper
+│       ├── render-cards.js     # Cards tab
+│       ├── render-gameplay.js  # Gameplay tab
+│       ├── render-reference.js # Reference tab (📋)
+│       ├── render-strategy.js  # Strategy tab (🧠)
+│       ├── render-tools.js     # Tools tab (🧮)
+│       └── tools/
+│           ├── dice-odds.js    # Probability calculator
+│           ├── starting-spot.js# Heuristic spot scorer
+│           └── robber-timer.js # 7-frequency tracker
 ├── data/
 │   ├── en.json         # English (canonical)
 │   ├── de.json         # German
@@ -38,6 +58,11 @@ src/
         ├── cities-and-knights/       # Cities & Knights expansion images
         └── explorers-and-pirates/    # Explorers & Pirates expansion images
 ```
+
+> **Note on ES modules + `file://`:** the app loads ES modules and JSON via
+> `fetch()`, which most browsers block on the `file://` protocol. Open the site
+> via a local HTTP server (`npx serve .` or `python3 -m http.server`) or via
+> GitHub Pages — don't double-click `index.html`.
 
 ## Running Locally (Dev Container)
 
@@ -116,7 +141,53 @@ node scripts/sync-translations.js
 TRANSLATE=true NODE_TRANSLATE_URL=<url> NODE_TRANSLATE_KEY=<key> node scripts/sync-translations.js
 ```
 
-The script merges missing keys from `en.json` into each target language file, aligns array entries by `id`, and preserves non-translatable identifiers (ids, types, image paths). Use the `TRANSLATE` mode only with a translation provider you control.
+The script merges missing keys from `en.json` into each target language file, aligns array entries by `id`, and preserves non-translatable identifiers (ids, types, image paths). It also prints a warning for any game that is missing an expected top-level block (`sections`, `gameplay`, `reference`, or `strategy`). Use the `TRANSLATE` mode only with a translation provider you control.
+
+> **Missing translations fall back gracefully:** at runtime, the app merges
+> any keys still missing from a language file with the English values loaded
+> from `en.json`. This means new features (e.g. the Reference and Strategy
+> tabs) always render, even before translators have filled in the new keys.
+
+## Adding a Reference Entry
+
+The Reference tab is rendered from `games.<id>.reference` in each language's
+JSON, with UI labels under `ui.reference.*`. A `reference` block can
+override any of these keys (others fall back to `games.base.reference`):
+
+| Key             | Purpose                                                                 |
+| --------------- | ----------------------------------------------------------------------- |
+| `buildingCosts` | Array of `{ id, icon, name, vp, cost: [{ resource, icon, image, qty }], note }` |
+| `trading`       | Array of `{ icon, title, ratio, detail }`                               |
+| `tradingNote`   | Free-text caveat shown below the trading list (e.g. expansion-specific) |
+| `turnFlow`      | Ordered array of `{ icon, title, detail }` steps                        |
+
+Dice-probability rows are generated from a constant table inside
+`render-reference.js` (same for every game).
+
+## Adding a Strategy Tip
+
+Strategy tips live under `games.<id>.strategy` with three level buckets:
+
+```jsonc
+"strategy": {
+  "beginner":     [ { "id": "...", "icon": "🌱", "title": "...", "body": "...", "tags": ["placement"] } ],
+  "intermediate": [ ... ],
+  "advanced":     [ ... ]
+}
+```
+
+Each tip needs `id`, `title`, and `body`; `icon` and `tags` are optional.
+Tips from other expansions can be overlaid in the UI via the "Also show
+strategy from:" checkboxes on the Strategy tab (persisted as
+`catan-strategy-extras` in `localStorage`).
+
+## Adding a Tool
+
+Each tool is a self-contained ES module under `src/js/modules/tools/` that
+exports a single `mount(rootEl, ui)` function. Register it by adding an entry
+to the `TOOLS` array in `src/js/modules/render-tools.js`. UI labels should be
+read from the passed-in `ui` object so they remain translatable; defaults
+live under `ui.tools.<toolKey>` in `src/data/en.json`.
 
 ## Adding a New Game / Expansion
 
