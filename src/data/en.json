@@ -1685,31 +1685,255 @@
         ]
       },
       "strategy": {
-        "beginner": [
+        "subheading": "Traders & Barbarians is a toolbox of scenarios and variants — open the one you're playing.",
+        "groups": [
           {
-            "id": "caravan-paths",
+            "id": "fishermen",
+            "icon": "🐟",
+            "name": "The Fishermen of Catan",
+            "tips": [
+              {
+                "id": "fish-insurance",
+                "icon": "🎣",
+                "level": "beginner",
+                "title": "Fish are free insurance",
+                "body": "Lakes give fish tokens, not resources. A spot by the lake lets you turn fish into the exact resource you're short on, quietly smoothing out bad rolls.",
+                "tags": ["fishing", "placement"]
+              },
+              {
+                "id": "fish-spend",
+                "icon": "🔄",
+                "level": "intermediate",
+                "title": "Spend fish, don't hoard",
+                "body": "Fish cash in (in the printed combos) to draw a resource from the bank, swipe a card, or shove the robber. Steady small spends keep your plan moving; a giant pile is wasted tempo.",
+                "tags": ["fishing", "resources"]
+              },
+              {
+                "id": "fish-small-hand",
+                "icon": "🤏",
+                "level": "advanced",
+                "title": "Fish let you play small-handed",
+                "body": "Since fish fetch what you need on demand, keep your hand under the robber limit and convert only at the moment you build.",
+                "tags": ["fishing", "robber"]
+              }
+            ]
+          },
+          {
+            "id": "rivers",
+            "icon": "🏞️",
+            "name": "The Rivers of Catan",
+            "tips": [
+              {
+                "id": "gold-voucher",
+                "icon": "🪙",
+                "level": "beginner",
+                "title": "Gold is a 2:1 voucher",
+                "body": "River gold isn't built with directly; two gold buys any one resource, any time. A flexible wild that's never the wrong card.",
+                "tags": ["gold", "resources"]
+              },
+              {
+                "id": "gold-convert",
+                "icon": "💱",
+                "level": "intermediate",
+                "title": "Convert gold as you build",
+                "body": "Don't sit on a pile; cash it the turn you build. Gold also hides your plan — opponents can't read what you'll make from it.",
+                "tags": ["gold", "information"]
+              },
+              {
+                "id": "gold-bridge",
+                "icon": "🌉",
+                "level": "advanced",
+                "title": "Bridge for an unblockable road",
+                "body": "A bridge crosses a river section no one else can. One in the right gap claims or extends Longest Road where rivals can't cut you — a quiet 2 VP swing.",
+                "tags": ["bridges", "longest-route"]
+              }
+            ]
+          },
+          {
+            "id": "caravans",
             "icon": "🐪",
-            "title": "Plan the caravan route first",
-            "body": "In Traders & Barbarians, the village-route geometry decides your opening. Your first two settlements should touch the road path your caravans will travel, not necessarily the best pip hexes.",
-            "tags": ["caravans", "placement"]
-          }
-        ],
-        "intermediate": [
+            "name": "The Caravans",
+            "tips": [
+              {
+                "id": "caravan-place",
+                "icon": "🗺️",
+                "level": "beginner",
+                "title": "Place along the camel paths",
+                "body": "Your opening follows the oasis routes, not the hottest pips. Settle where your caravans can reach oases — those deliveries are a big slice of your income.",
+                "tags": ["caravans", "placement"]
+              },
+              {
+                "id": "caravan-idle",
+                "icon": "🐫",
+                "level": "intermediate",
+                "title": "Never leave a camel idle",
+                "body": "A parked caravan earns nothing. Each turn, advance one toward — ideally onto — an oasis; steady delivery beats a perfect haul that arrives too late.",
+                "tags": ["caravans", "tempo"]
+              },
+              {
+                "id": "caravan-race",
+                "icon": "🏁",
+                "level": "advanced",
+                "title": "Race or dodge for oases",
+                "body": "Read which oases rivals are aiming at. Sprint a contested one only when you'll clearly win; otherwise take the longer path to an uncontested oasis for a guaranteed score.",
+                "tags": ["caravans", "denial"]
+              }
+            ]
+          },
           {
-            "id": "barbarian-attacker",
-            "icon": "🏴‍☠️",
-            "title": "Use barbarians as a knight",
-            "body": "In the Barbarian Attack variant, you can march barbarians toward an opponent's cluster of settlements for a fee. The fee pays for itself if it stalls their biggest producer by even one turn.",
-            "tags": ["barbarians", "denial"]
-          }
-        ],
-        "advanced": [
+            "id": "barbarian-attack",
+            "icon": "🛡️",
+            "name": "Barbarian Attack",
+            "tips": [
+              {
+                "id": "barb-knight-early",
+                "icon": "⚔️",
+                "level": "beginner",
+                "title": "Have a knight before they land",
+                "body": "Barbarians strike the coast, and an undefended coastal settlement is destroyed, not just downgraded. Build at least one knight before the army arrives.",
+                "tags": ["barbarians", "defense"]
+              },
+              {
+                "id": "barb-turn-ahead",
+                "icon": "📅",
+                "level": "intermediate",
+                "title": "Defend a turn ahead",
+                "body": "Watch the barbarians' advance and have knights in place one turn before they hit, covering your most valuable coastal spots. Reacting after the landing is usually too late.",
+                "tags": ["barbarians", "tempo"]
+              },
+              {
+                "id": "barb-triage",
+                "icon": "🎯",
+                "level": "advanced",
+                "title": "Triage the coastline",
+                "body": "When you can't cover everything, let the cheapest corner fall and mass knights on your cities and key production. Bake the barbarians' pace into your build order so you're never caught flat.",
+                "tags": ["barbarians", "endgame"]
+              }
+            ]
+          },
           {
-            "id": "gold-stacking",
-            "icon": "🪙",
-            "title": "Bank gold, don't spend it",
-            "body": "Gold converts at 2:1. In scenarios with river gold, holding 8+ gold lets you assemble a city or dev card on demand without revealing the resource mix to opponents — pure information advantage.",
-            "tags": ["gold", "information"]
+            "id": "trade-routes",
+            "icon": "🚚",
+            "name": "Traders & Barbarians (main scenario)",
+            "tips": [
+              {
+                "id": "trade-roads",
+                "icon": "🛣️",
+                "level": "beginner",
+                "title": "Roads are delivery routes",
+                "body": "Your roads carry trade goods to the castle, not just chase Longest Road. Aim your first roads at the goods and the castle so deliveries start early.",
+                "tags": ["trade-route", "roads"]
+              },
+              {
+                "id": "trade-routes-pay",
+                "icon": "🏰",
+                "level": "intermediate",
+                "title": "Run the routes that pay most",
+                "body": "Favor short, high-value deliveries, and lay one road spine that serves several pickups. Delivery income is reliable — it doesn't depend on the dice the way production does.",
+                "tags": ["trade-route", "tempo"]
+              },
+              {
+                "id": "trade-balance",
+                "icon": "⚖️",
+                "level": "advanced",
+                "title": "Balance hauling vs. the VP race",
+                "body": "Don't tunnel on deliveries while a rival closes on the win. Keep an eye on barbarian defense and points, and convert your delivery income into VP at the moment it matters.",
+                "tags": ["trade-route", "scoring"]
+              }
+            ]
+          },
+          {
+            "id": "harbor-master",
+            "icon": "⚓",
+            "name": "The Harbor Master",
+            "tips": [
+              {
+                "id": "harbor-cities",
+                "icon": "🏙️",
+                "level": "beginner",
+                "title": "Cities on harbors score double",
+                "body": "A harbor settlement is 1 point and a harbor city is 2 toward the +2 VP Harbor Master card. Upgrading your harbor spots is the cheapest path to it.",
+                "tags": ["harbors", "scoring"]
+              },
+              {
+                "id": "harbor-minimum",
+                "icon": "🥇",
+                "level": "intermediate",
+                "title": "Lead by the minimum",
+                "body": "Harbor Master works like Largest Army — you only need to be ahead. Claim it with the fewest points spent and reinforce only when someone actually threatens it.",
+                "tags": ["harbors", "tempo"]
+              },
+              {
+                "id": "harbor-buzzer",
+                "icon": "⏱️",
+                "level": "advanced",
+                "title": "Flip it at the buzzer",
+                "body": "It can change hands on the last turn. Keep a coastal city upgrade ready to steal the 2 VP when it counts, and track whether a rival is one point from taking it from you.",
+                "tags": ["harbors", "endgame"]
+              }
+            ]
+          },
+          {
+            "id": "friendly-robber",
+            "icon": "🛟",
+            "name": "The Friendly Robber",
+            "tips": [
+              {
+                "id": "robber-safe",
+                "icon": "🛡️",
+                "level": "beginner",
+                "title": "You're safe at 2 VP or fewer",
+                "body": "The robber can't sit on you and no one can steal from you while you're on 2 VP or fewer. Expand freely early — your start is protected.",
+                "tags": ["robber", "placement"]
+              },
+              {
+                "id": "robber-leaders",
+                "icon": "🎯",
+                "level": "intermediate",
+                "title": "The robber chases the leaders",
+                "body": "Once you pull ahead you become the only legal target, so expect the robber and 7s to land on you. Keep your hand lean and your production spread so one blocked hex doesn't sink you.",
+                "tags": ["robber", "resources"]
+              },
+              {
+                "id": "robber-timing",
+                "icon": "⏳",
+                "level": "advanced",
+                "title": "Time when you cross 2 VP",
+                "body": "Jumping from 2 to 3 VP drops your immunity. Occasionally it's worth holding at 2 a little longer to keep producing safely, then surging once your engine is set.",
+                "tags": ["robber", "planning"]
+              }
+            ]
+          },
+          {
+            "id": "event-cards",
+            "icon": "🎴",
+            "name": "Event Cards",
+            "tips": [
+              {
+                "id": "event-deck",
+                "icon": "🃏",
+                "level": "beginner",
+                "title": "Numbers come from a deck",
+                "body": "The dice are replaced by a card deck, so over a full pass every number shows up its fair share. The luck still evens out — it just does so on a schedule.",
+                "tags": ["event-cards", "probability"]
+              },
+              {
+                "id": "event-count",
+                "icon": "🔢",
+                "level": "intermediate",
+                "title": "Count what's been played",
+                "body": "A number that's already shown all its copies can't return until the reshuffle. Favor placements on numbers that are still 'due' and lean away from ones that are spent.",
+                "tags": ["event-cards", "probability"]
+              },
+              {
+                "id": "event-sevens",
+                "icon": "⚠️",
+                "level": "advanced",
+                "title": "Track the 7s and the reshuffle",
+                "body": "Sevens arrive on a known cadence, so drop your hand under the limit as one nears. Right after the dangerous cards are spent is the safest window to carry resources and make big builds.",
+                "tags": ["event-cards", "robber"]
+              }
+            ]
           }
         ]
       }

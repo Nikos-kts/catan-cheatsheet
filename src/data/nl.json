@@ -1614,39 +1614,254 @@
         ]
       },
       "strategy": {
-        "beginner": [
+        "subheading": "Handelaren & Barbaren is een gereedschapskist vol scenario's en varianten — open degene die je speelt.",
+        "groups": [
           {
-            "id": "caravan-paths",
+            "id": "fishermen",
+            "icon": "🐟",
+            "name": "De Vissers van Catan",
+            "tips": [
+              {
+                "id": "fish-insurance",
+                "icon": "🎣",
+                "level": "beginner",
+                "title": "Vis is gratis verzekering",
+                "body": "Meren leveren visfiches op, geen grondstoffen. Een plek aan het meer laat je vis omzetten in precies de grondstof die je mist, zodat slechte worpen ongemerkt worden opgevangen.",
+                "tags": ["fishing", "placement"]
+              },
+              {
+                "id": "fish-spend",
+                "icon": "🔄",
+                "level": "intermediate",
+                "title": "Geef vis uit, hamster niet",
+                "body": "Vis verzilver je (volgens de afgedrukte combinaties) om een grondstof uit de bank te trekken, een kaart te stelen of de struikrover te verzetten. Regelmatig kleine uitgaven houden je plan in beweging; een grote stapel is verspild tempo.",
+                "tags": ["fishing", "resources"]
+              },
+              {
+                "id": "fish-small-hand",
+                "icon": "🤏",
+                "level": "advanced",
+                "title": "Met vis speel je met een kleine hand",
+                "body": "Omdat vis op afroep haalt wat je nodig hebt, houd je hand onder de struikrover-limiet en zet je pas om op het moment dat je bouwt.",
+                "tags": ["fishing", "robber"]
+              }
+            ]
+          },
+          {
+            "id": "rivers",
+            "icon": "🏞️",
+            "name": "De Rivieren van Catan",
+            "tips": [
+              {
+                "id": "gold-voucher",
+                "icon": "🪙",
+                "level": "beginner",
+                "title": "Goud is een 2:1-bon",
+                "body": "Riviergoud bouw je niet rechtstreeks mee; twee goud koopt op elk moment elke grondstof. Een flexibele joker die nooit de verkeerde kaart is.",
+                "tags": ["gold", "resources"]
+              },
+              {
+                "id": "gold-convert",
+                "icon": "💱",
+                "level": "intermediate",
+                "title": "Wissel goud in terwijl je bouwt",
+                "body": "Blijf niet op een stapel zitten; verzilver het in de beurt dat je bouwt. Goud verbergt ook je plan — tegenstanders kunnen niet zien wat je ermee gaat maken.",
+                "tags": ["gold", "information"]
+              },
+              {
+                "id": "gold-bridge",
+                "icon": "🌉",
+                "level": "advanced",
+                "title": "Bouw een brug voor een onblokkeerbare weg",
+                "body": "Een brug steekt een rivierstuk over waar niemand anders langs kan. Eentje in het juiste gat pakt of verlengt de Langste Handelsroute waar rivalen je niet kunnen afsnijden — een rustige winst van 2 OP.",
+                "tags": ["bridges", "longest-route"]
+              }
+            ]
+          },
+          {
+            "id": "caravans",
             "icon": "🐪",
-            "title": "Plan the caravan route first",
-            "body": "In Traders & Barbarians, the village-route geometry decides your opening. Your first two settlements should touch the road path your caravans will travel, not necessarily the best pip hexes.",
-            "tags": [
-              "caravans",
-              "placement"
+            "name": "De Karavanen",
+            "tips": [
+              {
+                "id": "caravan-place",
+                "icon": "🗺️",
+                "level": "beginner",
+                "title": "Bouw langs de kamelenpaden",
+                "body": "Je openingszet volgt de oaseroutes, niet de heetste getallen. Bouw waar je karavanen oases kunnen bereiken — die leveringen vormen een groot deel van je inkomen.",
+                "tags": ["caravans", "placement"]
+              },
+              {
+                "id": "caravan-idle",
+                "icon": "🐫",
+                "level": "intermediate",
+                "title": "Laat nooit een kameel stilstaan",
+                "body": "Een stilstaande karavaan levert niets op. Schuif er elke beurt eentje richting — het liefst tot op — een oase; gestage levering verslaat een perfecte buit die te laat aankomt.",
+                "tags": ["caravans", "tempo"]
+              },
+              {
+                "id": "caravan-race",
+                "icon": "🏁",
+                "level": "advanced",
+                "title": "Race om oases of ontwijk ze",
+                "body": "Lees af op welke oases rivalen mikken. Sprint alleen naar een betwiste oase als je duidelijk wint; neem anders de langere route naar een vrije oase voor een gegarandeerde score.",
+                "tags": ["caravans", "denial"]
+              }
             ]
-          }
-        ],
-        "intermediate": [
+          },
           {
-            "id": "barbarian-attacker",
-            "icon": "🏴‍☠️",
-            "title": "Use barbarians as a knight",
-            "body": "In the Barbarian Attack variant, you can march barbarians toward an opponent's cluster of settlements for a fee. The fee pays for itself if it stalls their biggest producer by even one turn.",
-            "tags": [
-              "barbarians",
-              "denial"
+            "id": "barbarian-attack",
+            "icon": "🛡️",
+            "name": "De Barbarenaanval",
+            "tips": [
+              {
+                "id": "barb-knight-early",
+                "icon": "⚔️",
+                "level": "beginner",
+                "title": "Zorg voor een ridder voordat ze landen",
+                "body": "Barbaren slaan toe op de kust, en een onverdedigd kustdorp wordt verwoest, niet alleen gedegradeerd. Bouw minstens één ridder voordat het leger aankomt.",
+                "tags": ["barbarians", "defense"]
+              },
+              {
+                "id": "barb-turn-ahead",
+                "icon": "📅",
+                "level": "intermediate",
+                "title": "Verdedig een beurt vooruit",
+                "body": "Houd de opmars van de barbaren in de gaten en zet je ridders één beurt voor de klap klaar, op je waardevolste kustplekken. Pas reageren na de landing is meestal te laat.",
+                "tags": ["barbarians", "tempo"]
+              },
+              {
+                "id": "barb-triage",
+                "icon": "🎯",
+                "level": "advanced",
+                "title": "Maak keuzes langs de kustlijn",
+                "body": "Als je niet alles kunt dekken, laat dan de goedkoopste hoek vallen en bundel je ridders bij je steden en belangrijkste productie. Verwerk het tempo van de barbaren in je bouwvolgorde, zodat je nooit wordt verrast.",
+                "tags": ["barbarians", "endgame"]
+              }
             ]
-          }
-        ],
-        "advanced": [
+          },
           {
-            "id": "gold-stacking",
-            "icon": "🪙",
-            "title": "Bank gold, don't spend it",
-            "body": "Gold converts at 2:1. In scenarios with river gold, holding 8+ gold lets you assemble a city or dev card on demand without revealing the resource mix to opponents — pure information advantage.",
-            "tags": [
-              "gold",
-              "information"
+            "id": "trade-routes",
+            "icon": "🚚",
+            "name": "Handelaren & Barbaren (hoofdscenario)",
+            "tips": [
+              {
+                "id": "trade-roads",
+                "icon": "🛣️",
+                "level": "beginner",
+                "title": "Wegen zijn leveringsroutes",
+                "body": "Je wegen brengen handelsgoederen naar het kasteel, ze jagen niet alleen op de Langste Handelsroute. Richt je eerste wegen op de goederen en het kasteel, zodat het afleveren vroeg begint.",
+                "tags": ["trade-route", "roads"]
+              },
+              {
+                "id": "trade-routes-pay",
+                "icon": "🏰",
+                "level": "intermediate",
+                "title": "Rijd de routes die het meest opleveren",
+                "body": "Geef voorrang aan korte, waardevolle leveringen en leg één hoofdader van wegen aan die meerdere ophaalpunten bedient. Leveringsinkomen is betrouwbaar — het hangt niet van de dobbelstenen af zoals productie.",
+                "tags": ["trade-route", "tempo"]
+              },
+              {
+                "id": "trade-balance",
+                "icon": "⚖️",
+                "level": "advanced",
+                "title": "Balanceer sjouwen tegen de OP-race",
+                "body": "Focus niet blind op leveringen terwijl een rivaal de winst nadert. Houd je barbarenverdediging en de punten in de gaten, en zet je leveringsinkomen om in OP op het moment dat het ertoe doet.",
+                "tags": ["trade-route", "scoring"]
+              }
+            ]
+          },
+          {
+            "id": "harbor-master",
+            "icon": "⚓",
+            "name": "De Havenmeester",
+            "tips": [
+              {
+                "id": "harbor-cities",
+                "icon": "🏙️",
+                "level": "beginner",
+                "title": "Steden op havens tellen dubbel",
+                "body": "Een havendorp is 1 punt en een havenstad 2 voor de Havenmeester-kaart van +2 OP. Je havenplekken upgraden is de goedkoopste weg ernaartoe.",
+                "tags": ["harbors", "scoring"]
+              },
+              {
+                "id": "harbor-minimum",
+                "icon": "🥇",
+                "level": "intermediate",
+                "title": "Leid met het minimum",
+                "body": "De Havenmeester werkt als de Grootste Riddermacht — je hoeft alleen voor te liggen. Claim hem met zo min mogelijk punten en versterk pas als iemand hem echt bedreigt.",
+                "tags": ["harbors", "tempo"]
+              },
+              {
+                "id": "harbor-buzzer",
+                "icon": "⏱️",
+                "level": "advanced",
+                "title": "Pak hem in de slotbeurt",
+                "body": "Hij kan in de laatste beurt van eigenaar wisselen. Houd een upgrade van een kuststad klaar om de 2 OP te stelen wanneer het telt, en let op of een rivaal nog één punt verwijderd is van het overnemen.",
+                "tags": ["harbors", "endgame"]
+              }
+            ]
+          },
+          {
+            "id": "friendly-robber",
+            "icon": "🛟",
+            "name": "De Vriendelijke Struikrover",
+            "tips": [
+              {
+                "id": "robber-safe",
+                "icon": "🛡️",
+                "level": "beginner",
+                "title": "Bij 2 OP of minder ben je veilig",
+                "body": "De struikrover mag niet op jou staan en niemand kan van je stelen zolang je op 2 OP of minder staat. Breid in het begin vrijuit uit — je start is beschermd.",
+                "tags": ["robber", "placement"]
+              },
+              {
+                "id": "robber-leaders",
+                "icon": "🎯",
+                "level": "intermediate",
+                "title": "De struikrover jaagt op de koplopers",
+                "body": "Zodra je voorop loopt, ben je het enige toegestane doelwit, dus reken erop dat de struikrover en de 7'en bij jou landen. Houd je hand klein en je productie gespreid, zodat één geblokkeerd veld je niet kopje-onder duwt.",
+                "tags": ["robber", "resources"]
+              },
+              {
+                "id": "robber-timing",
+                "icon": "⏳",
+                "level": "advanced",
+                "title": "Kies je moment om voorbij 2 OP te gaan",
+                "body": "Springen van 2 naar 3 OP haalt je onschendbaarheid weg. Soms loont het om iets langer op 2 te blijven om veilig te blijven produceren, en dan door te stoten zodra je motor staat.",
+                "tags": ["robber", "planning"]
+              }
+            ]
+          },
+          {
+            "id": "event-cards",
+            "icon": "🎴",
+            "name": "Gebeurteniskaarten",
+            "tips": [
+              {
+                "id": "event-deck",
+                "icon": "🃏",
+                "level": "beginner",
+                "title": "Getallen komen uit een stapel",
+                "body": "De dobbelstenen worden vervangen door een kaartstapel, dus over een volledige ronde verschijnt elk getal zijn eerlijke deel. Het geluk vlakt nog steeds uit — alleen volgens een vast schema.",
+                "tags": ["event-cards", "probability"]
+              },
+              {
+                "id": "event-count",
+                "icon": "🔢",
+                "level": "intermediate",
+                "title": "Tel wat er al gespeeld is",
+                "body": "Een getal dat al zijn exemplaren heeft laten zien, komt pas na het opnieuw schudden terug. Geef voorrang aan plekken op getallen die nog 'aan de beurt' zijn en mijd getallen die op zijn.",
+                "tags": ["event-cards", "probability"]
+              },
+              {
+                "id": "event-sevens",
+                "icon": "⚠️",
+                "level": "advanced",
+                "title": "Houd de 7'en en het schudden bij",
+                "body": "Zevens komen op een bekend ritme, dus breng je hand onder de limiet als er een nadert. Vlak nadat de gevaarlijke kaarten op zijn, is het veiligste moment om grondstoffen vast te houden en groot te bouwen.",
+                "tags": ["event-cards", "robber"]
+              }
             ]
           }
         ]

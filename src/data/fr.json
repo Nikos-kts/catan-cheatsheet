@@ -1843,39 +1843,254 @@
         ]
       },
       "strategy": {
-        "beginner": [
+        "subheading": "Marchands & Barbares est une boîte à outils de scénarios et de variantes — ouvrez celui auquel vous jouez.",
+        "groups": [
           {
-            "id": "caravan-paths",
+            "id": "fishermen",
+            "icon": "🐟",
+            "name": "Les Pêcheurs de Catan",
+            "tips": [
+              {
+                "id": "fish-insurance",
+                "icon": "🎣",
+                "level": "beginner",
+                "title": "Le poisson, une assurance gratuite",
+                "body": "Les lacs donnent des jetons de poisson, pas des ressources. Une intersection au bord du lac vous laisse transformer le poisson en la ressource exacte qui vous manque, lissant discrètement les mauvais lancers.",
+                "tags": ["fishing", "placement"]
+              },
+              {
+                "id": "fish-spend",
+                "icon": "🔄",
+                "level": "intermediate",
+                "title": "Dépensez le poisson, ne l'accumulez pas",
+                "body": "Le poisson s'échange (selon les combinaisons imprimées) pour piocher une ressource à la réserve, voler une carte ou déplacer le Voleur. De petites dépenses régulières font avancer votre plan ; un gros tas n'est que du tempo gaspillé.",
+                "tags": ["fishing", "resources"]
+              },
+              {
+                "id": "fish-small-hand",
+                "icon": "🤏",
+                "level": "advanced",
+                "title": "Le poisson permet de jouer main légère",
+                "body": "Comme le poisson fournit à la demande ce dont vous avez besoin, gardez votre main sous la limite du Voleur et ne convertissez qu'au moment de construire.",
+                "tags": ["fishing", "robber"]
+              }
+            ]
+          },
+          {
+            "id": "rivers",
+            "icon": "🏞️",
+            "name": "Les Rivières de Catan",
+            "tips": [
+              {
+                "id": "gold-voucher",
+                "icon": "🪙",
+                "level": "beginner",
+                "title": "L'or est un bon 2:1",
+                "body": "L'or des rivières ne sert pas à construire directement ; deux or achètent n'importe quelle ressource, à tout moment. Un joker souple qui n'est jamais la mauvaise carte.",
+                "tags": ["gold", "resources"]
+              },
+              {
+                "id": "gold-convert",
+                "icon": "💱",
+                "level": "intermediate",
+                "title": "Convertissez l'or au fil des constructions",
+                "body": "N'accumulez pas un tas ; échangez-le le tour où vous construisez. L'or masque aussi votre plan — vos adversaires ne devinent pas ce que vous allez en faire.",
+                "tags": ["gold", "information"]
+              },
+              {
+                "id": "gold-bridge",
+                "icon": "🌉",
+                "level": "advanced",
+                "title": "Un pont pour une route imprenable",
+                "body": "Un pont franchit un tronçon de rivière inaccessible aux autres. Placé dans la bonne brèche, il prend ou prolonge la Route la Plus Longue là où vos rivaux ne peuvent vous couper — un gain discret de 2 PV.",
+                "tags": ["bridges", "longest-route"]
+              }
+            ]
+          },
+          {
+            "id": "caravans",
             "icon": "🐪",
-            "title": "Plan the caravan route first",
-            "body": "In Traders & Barbarians, the village-route geometry decides your opening. Your first two settlements should touch the road path your caravans will travel, not necessarily the best pip hexes.",
-            "tags": [
-              "caravans",
-              "placement"
+            "name": "Les Caravanes",
+            "tips": [
+              {
+                "id": "caravan-place",
+                "icon": "🗺️",
+                "level": "beginner",
+                "title": "Placez-vous le long des pistes à chameaux",
+                "body": "Votre ouverture suit les routes des oasis, pas les meilleurs chiffres. Installez-vous là où vos caravanes atteignent les oasis — ces livraisons représentent une grande part de vos revenus.",
+                "tags": ["caravans", "placement"]
+              },
+              {
+                "id": "caravan-idle",
+                "icon": "🐫",
+                "level": "intermediate",
+                "title": "Ne laissez jamais un chameau inactif",
+                "body": "Une caravane à l'arrêt ne rapporte rien. Chaque tour, faites-en avancer une vers une oasis — idéalement dessus ; une livraison régulière vaut mieux qu'un chargement parfait arrivé trop tard.",
+                "tags": ["caravans", "tempo"]
+              },
+              {
+                "id": "caravan-race",
+                "icon": "🏁",
+                "level": "advanced",
+                "title": "Foncez ou contournez pour les oasis",
+                "body": "Repérez les oasis visées par vos rivaux. Ne sprintez vers une oasis disputée que si vous gagnez clairement ; sinon, prenez le chemin plus long vers une oasis libre pour un score garanti.",
+                "tags": ["caravans", "denial"]
+              }
             ]
-          }
-        ],
-        "intermediate": [
+          },
           {
-            "id": "barbarian-attacker",
-            "icon": "🏴‍☠️",
-            "title": "Use barbarians as a knight",
-            "body": "In the Barbarian Attack variant, you can march barbarians toward an opponent's cluster of settlements for a fee. The fee pays for itself if it stalls their biggest producer by even one turn.",
-            "tags": [
-              "barbarians",
-              "denial"
+            "id": "barbarian-attack",
+            "icon": "🛡️",
+            "name": "L'Attaque des Barbares",
+            "tips": [
+              {
+                "id": "barb-knight-early",
+                "icon": "⚔️",
+                "level": "beginner",
+                "title": "Ayez un chevalier avant qu'ils débarquent",
+                "body": "Les barbares frappent la côte, et une colonie côtière sans défense est détruite, pas seulement rétrogradée. Construisez au moins un chevalier avant l'arrivée de l'armée.",
+                "tags": ["barbarians", "defense"]
+              },
+              {
+                "id": "barb-turn-ahead",
+                "icon": "📅",
+                "level": "intermediate",
+                "title": "Défendez un tour à l'avance",
+                "body": "Surveillez l'avancée des barbares et placez vos chevaliers un tour avant l'impact, sur vos points côtiers les plus précieux. Réagir après le débarquement est presque toujours trop tard.",
+                "tags": ["barbarians", "tempo"]
+              },
+              {
+                "id": "barb-triage",
+                "icon": "🎯",
+                "level": "advanced",
+                "title": "Faites le tri sur la côte",
+                "body": "Quand vous ne pouvez pas tout protéger, laissez tomber le coin le moins coûteux et concentrez vos chevaliers sur vos villes et votre production clé. Intégrez le rythme des barbares à votre ordre de construction pour ne jamais être pris au dépourvu.",
+                "tags": ["barbarians", "endgame"]
+              }
             ]
-          }
-        ],
-        "advanced": [
+          },
           {
-            "id": "gold-stacking",
-            "icon": "🪙",
-            "title": "Bank gold, don't spend it",
-            "body": "Gold converts at 2:1. In scenarios with river gold, holding 8+ gold lets you assemble a city or dev card on demand without revealing the resource mix to opponents — pure information advantage.",
-            "tags": [
-              "gold",
-              "information"
+            "id": "trade-routes",
+            "icon": "🚚",
+            "name": "Marchands & Barbares (scénario principal)",
+            "tips": [
+              {
+                "id": "trade-roads",
+                "icon": "🛣️",
+                "level": "beginner",
+                "title": "Les routes sont des voies de livraison",
+                "body": "Vos routes acheminent les marchandises vers le château, elles ne courent pas seulement après la Route la Plus Longue. Dirigez vos premières routes vers les marchandises et le château pour livrer tôt.",
+                "tags": ["trade-route", "roads"]
+              },
+              {
+                "id": "trade-routes-pay",
+                "icon": "🏰",
+                "level": "intermediate",
+                "title": "Exploitez les routes les plus rentables",
+                "body": "Privilégiez les livraisons courtes et à forte valeur, et posez une colonne vertébrale de routes qui dessert plusieurs points de ramassage. Le revenu des livraisons est fiable — il ne dépend pas des dés comme la production.",
+                "tags": ["trade-route", "tempo"]
+              },
+              {
+                "id": "trade-balance",
+                "icon": "⚖️",
+                "level": "advanced",
+                "title": "Équilibrez le transport et la course aux PV",
+                "body": "Ne vous focalisez pas sur les livraisons pendant qu'un rival approche de la victoire. Gardez un œil sur la défense contre les barbares et sur les points, et convertissez vos revenus de livraison en PV au moment décisif.",
+                "tags": ["trade-route", "scoring"]
+              }
+            ]
+          },
+          {
+            "id": "harbor-master",
+            "icon": "⚓",
+            "name": "Le Maître du Port",
+            "tips": [
+              {
+                "id": "harbor-cities",
+                "icon": "🏙️",
+                "level": "beginner",
+                "title": "Les villes portuaires comptent double",
+                "body": "Une colonie portuaire vaut 1 point et une ville portuaire 2 pour la carte Ports les Plus Forts (+2 PV). Améliorer vos emplacements portuaires est le moyen le moins cher de l'obtenir.",
+                "tags": ["harbors", "scoring"]
+              },
+              {
+                "id": "harbor-minimum",
+                "icon": "🥇",
+                "level": "intermediate",
+                "title": "Menez avec le strict minimum",
+                "body": "Le Maître du Port fonctionne comme l'Armée la Plus Grande — il suffit d'être en tête. Prenez-le en dépensant le moins de points possible et ne renforcez que si quelqu'un le menace vraiment.",
+                "tags": ["harbors", "tempo"]
+              },
+              {
+                "id": "harbor-buzzer",
+                "icon": "⏱️",
+                "level": "advanced",
+                "title": "Renversez-le sur le fil",
+                "body": "Il peut changer de mains au dernier tour. Gardez une amélioration de ville côtière prête pour rafler les 2 PV au bon moment, et surveillez si un rival est à un point de vous le prendre.",
+                "tags": ["harbors", "endgame"]
+              }
+            ]
+          },
+          {
+            "id": "friendly-robber",
+            "icon": "🛟",
+            "name": "Le Voleur Amical",
+            "tips": [
+              {
+                "id": "robber-safe",
+                "icon": "🛡️",
+                "level": "beginner",
+                "title": "Vous êtes à l'abri à 2 PV ou moins",
+                "body": "Le Voleur ne peut pas se poser sur vous et personne ne peut vous voler tant que vous êtes à 2 PV ou moins. Développez-vous librement au début — votre départ est protégé.",
+                "tags": ["robber", "placement"]
+              },
+              {
+                "id": "robber-leaders",
+                "icon": "🎯",
+                "level": "intermediate",
+                "title": "Le Voleur poursuit les meneurs",
+                "body": "Dès que vous prenez la tête, vous devenez la seule cible légale : attendez-vous à voir le Voleur et les 7 tomber sur vous. Gardez une main légère et une production dispersée pour qu'un seul hexagone bloqué ne vous coule pas.",
+                "tags": ["robber", "resources"]
+              },
+              {
+                "id": "robber-timing",
+                "icon": "⏳",
+                "level": "advanced",
+                "title": "Choisissez le moment de dépasser 2 PV",
+                "body": "Passer de 2 à 3 PV vous fait perdre votre immunité. Parfois, il vaut mieux rester à 2 un peu plus longtemps pour produire en sécurité, puis bondir une fois votre moteur en place.",
+                "tags": ["robber", "planning"]
+              }
+            ]
+          },
+          {
+            "id": "event-cards",
+            "icon": "🎴",
+            "name": "Les Cartes Événement",
+            "tips": [
+              {
+                "id": "event-deck",
+                "icon": "🃏",
+                "level": "beginner",
+                "title": "Les chiffres sortent d'un paquet",
+                "body": "Les dés sont remplacés par un paquet de cartes, donc sur un cycle complet chaque chiffre apparaît sa juste part. La chance s'équilibre toujours — simplement de façon prévisible.",
+                "tags": ["event-cards", "probability"]
+              },
+              {
+                "id": "event-count",
+                "icon": "🔢",
+                "level": "intermediate",
+                "title": "Comptez ce qui a déjà été joué",
+                "body": "Un chiffre dont toutes les copies sont déjà sorties ne peut pas revenir avant le remélange. Privilégiez les emplacements sur les chiffres encore « attendus » et délaissez ceux déjà épuisés.",
+                "tags": ["event-cards", "probability"]
+              },
+              {
+                "id": "event-sevens",
+                "icon": "⚠️",
+                "level": "advanced",
+                "title": "Suivez les 7 et le remélange",
+                "body": "Les 7 arrivent à une cadence connue, alors descendez votre main sous la limite quand l'un approche. Juste après que les cartes dangereuses sont sorties se trouve la fenêtre la plus sûre pour garder des ressources et faire de grosses constructions.",
+                "tags": ["event-cards", "robber"]
+              }
             ]
           }
         ]

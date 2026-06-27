@@ -1177,6 +1177,34 @@ footer {
   padding: 0.1rem 0.55rem;
 }
 
+/* Per-card level chip, shown in the variation layout (e.g. Traders & Barbarians)
+   where a card's level isn't implied by its section. */
+.strategy-card-level {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 0.12rem 0.55rem;
+  background: var(--sand);
+  color: var(--text-lt);
+}
+
+.strategy-card-level.level-beginner {
+  background: rgba(76, 175, 80, 0.18);
+  color: #2e7d32;
+}
+
+.strategy-card-level.level-intermediate {
+  background: rgba(255, 152, 0, 0.18);
+  color: #b25e00;
+}
+
+.strategy-card-level.level-advanced {
+  background: rgba(156, 39, 176, 0.16);
+  color: #7b1fa2;
+}
+
 /* ── Tools tab ── */
 .tool-mount {
   padding: 1rem;

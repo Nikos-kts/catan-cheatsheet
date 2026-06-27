@@ -1831,39 +1831,254 @@
         ]
       },
       "strategy": {
-        "beginner": [
+        "subheading": "Händler & Barbaren ist ein Baukasten aus Szenarien und Varianten — öffne einfach das, das ihr gerade spielt.",
+        "groups": [
           {
-            "id": "caravan-paths",
+            "id": "fishermen",
+            "icon": "🐟",
+            "name": "Die Fischer von Catan",
+            "tips": [
+              {
+                "id": "fish-insurance",
+                "icon": "🎣",
+                "level": "beginner",
+                "title": "Fische sind eine Gratis-Versicherung",
+                "body": "Der See liefert Fischmarken statt Rohstoffe. Ein Platz am See lässt dich Fische genau in den Rohstoff verwandeln, der dir fehlt — und gleicht schlechte Würfe unauffällig aus.",
+                "tags": ["fishing", "placement"]
+              },
+              {
+                "id": "fish-spend",
+                "icon": "🔄",
+                "level": "intermediate",
+                "title": "Fische ausgeben, nicht horten",
+                "body": "Fischmarken kannst du (in den aufgedruckten Stufen) gegen einen Rohstoff aus der Bank, eine gestohlene Karte oder das Versetzen des Räubers eintauschen. Stetige kleine Ausgaben halten deinen Plan in Bewegung; ein riesiger Stapel ist verschenktes Tempo.",
+                "tags": ["fishing", "resources"]
+              },
+              {
+                "id": "fish-small-hand",
+                "icon": "🤏",
+                "level": "advanced",
+                "title": "Mit Fischen spielst du mit kleiner Hand",
+                "body": "Da Fische dir auf Abruf liefern, was du brauchst, halte deine Hand unter dem Räuber-Limit und tausche erst im Moment des Bauens um.",
+                "tags": ["fishing", "robber"]
+              }
+            ]
+          },
+          {
+            "id": "rivers",
+            "icon": "🏞️",
+            "name": "Die Flüsse von Catan",
+            "tips": [
+              {
+                "id": "gold-voucher",
+                "icon": "🪙",
+                "level": "beginner",
+                "title": "Gold ist ein 2:1-Gutschein",
+                "body": "Mit Flussgold baust du nicht direkt; zwei Gold kaufen jederzeit einen beliebigen Rohstoff. Ein flexibler Joker, der nie die falsche Karte ist.",
+                "tags": ["gold", "resources"]
+              },
+              {
+                "id": "gold-convert",
+                "icon": "💱",
+                "level": "intermediate",
+                "title": "Gold beim Bauen umtauschen",
+                "body": "Hocke nicht auf einem Stapel; tausche es in dem Zug ein, in dem du baust. Gold verschleiert zudem deinen Plan — Gegner sehen nicht, was du daraus machst.",
+                "tags": ["gold", "information"]
+              },
+              {
+                "id": "gold-bridge",
+                "icon": "🌉",
+                "level": "advanced",
+                "title": "Brücke für eine unblockierbare Straße",
+                "body": "Eine Brücke überquert einen Flussabschnitt, den sonst niemand kreuzen kann. An der richtigen Lücke holt oder verlängert sie die Längste Handelsstraße dort, wo Rivalen dich nicht trennen können — ein stiller Vorsprung von 2 SP.",
+                "tags": ["bridges", "longest-route"]
+              }
+            ]
+          },
+          {
+            "id": "caravans",
             "icon": "🐪",
-            "title": "Plan the caravan route first",
-            "body": "In Traders & Barbarians, the village-route geometry decides your opening. Your first two settlements should touch the road path your caravans will travel, not necessarily the best pip hexes.",
-            "tags": [
-              "caravans",
-              "placement"
+            "name": "Die Karawanen",
+            "tips": [
+              {
+                "id": "caravan-place",
+                "icon": "🗺️",
+                "level": "beginner",
+                "title": "Entlang der Kamelwege siedeln",
+                "body": "Dein Start folgt den Oasenrouten, nicht den heißesten Zahlen. Siedle dort, wo deine Karawanen Oasen erreichen — diese Lieferungen machen einen großen Teil deines Einkommens aus.",
+                "tags": ["caravans", "placement"]
+              },
+              {
+                "id": "caravan-idle",
+                "icon": "🐫",
+                "level": "intermediate",
+                "title": "Lass nie ein Kamel untätig",
+                "body": "Eine geparkte Karawane bringt nichts. Bewege jeden Zug eine Richtung Oase — idealerweise auf eine; stetige Lieferungen schlagen den perfekten Transport, der zu spät kommt.",
+                "tags": ["caravans", "tempo"]
+              },
+              {
+                "id": "caravan-race",
+                "icon": "🏁",
+                "level": "advanced",
+                "title": "Um Oasen wetteifern oder ausweichen",
+                "body": "Erkenne, welche Oasen deine Rivalen anvisieren. Sprinte nur dann zu einer umkämpften, wenn du klar gewinnst; sonst nimm den längeren Weg zu einer freien Oase für sichere Punkte.",
+                "tags": ["caravans", "denial"]
+              }
             ]
-          }
-        ],
-        "intermediate": [
+          },
           {
-            "id": "barbarian-attacker",
-            "icon": "🏴‍☠️",
-            "title": "Use barbarians as a knight",
-            "body": "In the Barbarian Attack variant, you can march barbarians toward an opponent's cluster of settlements for a fee. The fee pays for itself if it stalls their biggest producer by even one turn.",
-            "tags": [
-              "barbarians",
-              "denial"
+            "id": "barbarian-attack",
+            "icon": "🛡️",
+            "name": "Der Barbarenüberfall",
+            "tips": [
+              {
+                "id": "barb-knight-early",
+                "icon": "⚔️",
+                "level": "beginner",
+                "title": "Habe einen Ritter, bevor sie landen",
+                "body": "Barbaren treffen die Küste, und eine ungeschützte Küstensiedlung wird zerstört, nicht nur zurückgestuft. Baue mindestens einen Ritter, bevor das Heer eintrifft.",
+                "tags": ["barbarians", "defense"]
+              },
+              {
+                "id": "barb-turn-ahead",
+                "icon": "📅",
+                "level": "intermediate",
+                "title": "Verteidige einen Zug im Voraus",
+                "body": "Beobachte das Vorrücken der Barbaren und stelle deine Ritter einen Zug vor dem Angriff bereit, um deine wertvollsten Küstenplätze zu decken. Erst nach der Landung zu reagieren ist meist zu spät.",
+                "tags": ["barbarians", "tempo"]
+              },
+              {
+                "id": "barb-triage",
+                "icon": "🎯",
+                "level": "advanced",
+                "title": "Priorisiere an der Küste",
+                "body": "Wenn du nicht alles decken kannst, lass die billigste Ecke fallen und bündle deine Ritter an Städten und wichtiger Produktion. Plane das Tempo der Barbaren in deine Baureihenfolge ein, damit dich nie etwas kalt erwischt.",
+                "tags": ["barbarians", "endgame"]
+              }
             ]
-          }
-        ],
-        "advanced": [
+          },
           {
-            "id": "gold-stacking",
-            "icon": "🪙",
-            "title": "Bank gold, don't spend it",
-            "body": "Gold converts at 2:1. In scenarios with river gold, holding 8+ gold lets you assemble a city or dev card on demand without revealing the resource mix to opponents — pure information advantage.",
-            "tags": [
-              "gold",
-              "information"
+            "id": "trade-routes",
+            "icon": "🚚",
+            "name": "Händler & Barbaren (Hauptszenario)",
+            "tips": [
+              {
+                "id": "trade-roads",
+                "icon": "🛣️",
+                "level": "beginner",
+                "title": "Straßen sind Lieferwege",
+                "body": "Deine Straßen tragen Handelswaren zur Burg, statt nur die Längste Handelsstraße zu jagen. Richte deine ersten Straßen auf die Waren und die Burg aus, damit Lieferungen früh anlaufen.",
+                "tags": ["trade-route", "roads"]
+              },
+              {
+                "id": "trade-routes-pay",
+                "icon": "🏰",
+                "level": "intermediate",
+                "title": "Fahre die lohnendsten Routen",
+                "body": "Bevorzuge kurze, hochwertige Lieferungen und lege eine Hauptstraße an, die mehrere Abholungen bedient. Liefereinkommen ist verlässlich — es hängt nicht wie die Produktion vom Würfel ab.",
+                "tags": ["trade-route", "tempo"]
+              },
+              {
+                "id": "trade-balance",
+                "icon": "⚖️",
+                "level": "advanced",
+                "title": "Liefern und SP-Rennen ausbalancieren",
+                "body": "Versteife dich nicht aufs Liefern, während ein Rivale dem Sieg entgegenrückt. Behalte Barbarenabwehr und Punkte im Blick und verwandle dein Liefereinkommen genau dann in SP, wenn es zählt.",
+                "tags": ["trade-route", "scoring"]
+              }
+            ]
+          },
+          {
+            "id": "harbor-master",
+            "icon": "⚓",
+            "name": "Der Hafenmeister",
+            "tips": [
+              {
+                "id": "harbor-cities",
+                "icon": "🏙️",
+                "level": "beginner",
+                "title": "Städte an Häfen zählen doppelt",
+                "body": "Eine Hafensiedlung bringt 1 Punkt, eine Hafenstadt 2 für das Hafenmeister-Plättchen (+2 SP). Deine Hafenplätze zur Stadt auszubauen ist der günstigste Weg dorthin.",
+                "tags": ["harbors", "scoring"]
+              },
+              {
+                "id": "harbor-minimum",
+                "icon": "🥇",
+                "level": "intermediate",
+                "title": "Führe nur knapp",
+                "body": "Der Hafenmeister funktioniert wie die Größte Rittermacht — du musst nur vorne liegen. Hol ihn mit möglichst wenig Aufwand und verstärke erst, wenn dich jemand wirklich bedroht.",
+                "tags": ["harbors", "tempo"]
+              },
+              {
+                "id": "harbor-buzzer",
+                "icon": "⏱️",
+                "level": "advanced",
+                "title": "Schnapp ihn dir auf den letzten Drücker",
+                "body": "Er kann im letzten Zug den Besitzer wechseln. Halte einen Küstenstadt-Ausbau bereit, um die 2 SP im richtigen Moment zu stehlen, und behalte im Blick, ob ein Rivale nur einen Punkt davon entfernt ist, ihn dir wegzunehmen.",
+                "tags": ["harbors", "endgame"]
+              }
+            ]
+          },
+          {
+            "id": "friendly-robber",
+            "icon": "🛟",
+            "name": "Der freundliche Räuber",
+            "tips": [
+              {
+                "id": "robber-safe",
+                "icon": "🛡️",
+                "level": "beginner",
+                "title": "Bei 2 SP oder weniger bist du sicher",
+                "body": "Solange du bei 2 SP oder weniger stehst, kann der Räuber dich nicht blockieren und niemand bei dir stehlen. Breite dich früh frei aus — dein Start ist geschützt.",
+                "tags": ["robber", "placement"]
+              },
+              {
+                "id": "robber-leaders",
+                "icon": "🎯",
+                "level": "intermediate",
+                "title": "Der Räuber jagt die Führenden",
+                "body": "Sobald du in Führung gehst, bist du das einzige erlaubte Ziel — rechne also damit, dass Räuber und 7en bei dir landen. Halte deine Hand schlank und deine Produktion verteilt, damit ein blockiertes Feld dich nicht versenkt.",
+                "tags": ["robber", "resources"]
+              },
+              {
+                "id": "robber-timing",
+                "icon": "⏳",
+                "level": "advanced",
+                "title": "Wähle den Moment, 2 SP zu überschreiten",
+                "body": "Der Sprung von 2 auf 3 SP nimmt dir die Immunität. Manchmal lohnt es sich, etwas länger bei 2 zu bleiben, um sicher zu produzieren, und dann durchzustarten, wenn deine Maschine läuft.",
+                "tags": ["robber", "planning"]
+              }
+            ]
+          },
+          {
+            "id": "event-cards",
+            "icon": "🎴",
+            "name": "Ereigniskarten",
+            "tips": [
+              {
+                "id": "event-deck",
+                "icon": "🃏",
+                "level": "beginner",
+                "title": "Die Zahlen kommen aus einem Stapel",
+                "body": "Die Würfel werden durch einen Kartenstapel ersetzt, sodass über einen ganzen Durchlauf jede Zahl ihren fairen Anteil zeigt. Das Glück gleicht sich weiterhin aus — nur eben nach Plan.",
+                "tags": ["event-cards", "probability"]
+              },
+              {
+                "id": "event-count",
+                "icon": "🔢",
+                "level": "intermediate",
+                "title": "Zähle, was gespielt wurde",
+                "body": "Eine Zahl, die schon alle ihre Exemplare gezeigt hat, kehrt erst nach dem Neumischen zurück. Bevorzuge Plätze auf Zahlen, die noch 'ausstehen', und meide aufgebrauchte.",
+                "tags": ["event-cards", "probability"]
+              },
+              {
+                "id": "event-sevens",
+                "icon": "⚠️",
+                "level": "advanced",
+                "title": "Behalte die 7en und das Neumischen im Auge",
+                "body": "Die 7en kommen in bekanntem Takt — drücke deine Hand unter das Limit, wenn eine naht. Direkt nachdem die gefährlichen Karten aufgebraucht sind, ist das sicherste Fenster, um Rohstoffe zu halten und groß zu bauen.",
+                "tags": ["event-cards", "robber"]
+              }
             ]
           }
         ]

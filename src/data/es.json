@@ -1830,39 +1830,254 @@
         ]
       },
       "strategy": {
-        "beginner": [
+        "subheading": "Mercaderes y Bárbaros es una caja de herramientas de escenarios y variantes: abre la que estés jugando.",
+        "groups": [
           {
-            "id": "caravan-paths",
+            "id": "fishermen",
+            "icon": "🐟",
+            "name": "Pesca en Catan",
+            "tips": [
+              {
+                "id": "fish-insurance",
+                "icon": "🎣",
+                "level": "beginner",
+                "title": "Los peces son un seguro gratis",
+                "body": "Los lagos dan fichas de pez, no recursos. Un sitio junto al lago te deja convertir peces en el recurso exacto que te falta y suavizar las malas tiradas sin que se note.",
+                "tags": ["fishing", "placement"]
+              },
+              {
+                "id": "fish-spend",
+                "icon": "🔄",
+                "level": "intermediate",
+                "title": "Gasta los peces, no los acumules",
+                "body": "Según las combinaciones impresas, los peces sirven para sacar un recurso del banco, robar una carta o mover al Ladrón. Gastar poco y a menudo mantiene tu plan en marcha; un montón enorme es tempo desperdiciado.",
+                "tags": ["fishing", "resources"]
+              },
+              {
+                "id": "fish-small-hand",
+                "icon": "🤏",
+                "level": "advanced",
+                "title": "Los peces te dejan jugar con pocas cartas",
+                "body": "Como los peces te consiguen lo que necesitas al momento, mantén la mano por debajo del límite de 7 cartas y conviértelos solo justo cuando vayas a construir.",
+                "tags": ["fishing", "robber"]
+              }
+            ]
+          },
+          {
+            "id": "rivers",
+            "icon": "🏞️",
+            "name": "Ríos de Catan",
+            "tips": [
+              {
+                "id": "gold-voucher",
+                "icon": "🪙",
+                "level": "beginner",
+                "title": "El oro es un vale 2:1",
+                "body": "El oro de los ríos no se usa para construir directamente: dos de oro compran cualquier recurso, en cualquier momento. Un comodín flexible que nunca es la carta equivocada.",
+                "tags": ["gold", "resources"]
+              },
+              {
+                "id": "gold-convert",
+                "icon": "💱",
+                "level": "intermediate",
+                "title": "Convierte el oro al construir",
+                "body": "No te sientes sobre un montón: cámbialo el turno en que construyes. El oro además oculta tu plan, porque los rivales no pueden adivinar qué harás con él.",
+                "tags": ["gold", "information"]
+              },
+              {
+                "id": "gold-bridge",
+                "icon": "🌉",
+                "level": "advanced",
+                "title": "Un puente para un camino imbloqueable",
+                "body": "Un puente cruza un tramo de río que nadie más puede. Uno en el hueco adecuado reclama o alarga la Ruta Más Larga donde los rivales no pueden cortarte: un sigiloso vuelco de 2 PV.",
+                "tags": ["bridges", "longest-route"]
+              }
+            ]
+          },
+          {
+            "id": "caravans",
             "icon": "🐪",
-            "title": "Plan the caravan route first",
-            "body": "In Traders & Barbarians, the village-route geometry decides your opening. Your first two settlements should touch the road path your caravans will travel, not necessarily the best pip hexes.",
-            "tags": [
-              "caravans",
-              "placement"
+            "name": "Caravanas",
+            "tips": [
+              {
+                "id": "caravan-place",
+                "icon": "🗺️",
+                "level": "beginner",
+                "title": "Coloca a lo largo de las rutas de camellos",
+                "body": "Tu salida sigue las rutas de los abrevaderos, no los pips más calientes. Asiéntate donde tus caravanas puedan alcanzar los abrevaderos: esas entregas son una gran parte de tus ingresos.",
+                "tags": ["caravans", "placement"]
+              },
+              {
+                "id": "caravan-idle",
+                "icon": "🐫",
+                "level": "intermediate",
+                "title": "Nunca dejes un camello parado",
+                "body": "Una caravana parada no gana nada. Cada turno, avanza una hacia un abrevadero —idealmente hasta él—; entregar de forma constante vale más que un cargamento perfecto que llega tarde.",
+                "tags": ["caravans", "tempo"]
+              },
+              {
+                "id": "caravan-race",
+                "icon": "🏁",
+                "level": "advanced",
+                "title": "Corre o esquiva por los abrevaderos",
+                "body": "Fíjate a qué abrevaderos apuntan tus rivales. Esprinta hacia uno disputado solo cuando vayas a ganar con claridad; si no, toma el camino más largo hasta un abrevadero libre para puntuar seguro.",
+                "tags": ["caravans", "denial"]
+              }
             ]
-          }
-        ],
-        "intermediate": [
+          },
           {
-            "id": "barbarian-attacker",
-            "icon": "🏴‍☠️",
-            "title": "Use barbarians as a knight",
-            "body": "In the Barbarian Attack variant, you can march barbarians toward an opponent's cluster of settlements for a fee. The fee pays for itself if it stalls their biggest producer by even one turn.",
-            "tags": [
-              "barbarians",
-              "denial"
+            "id": "barbarian-attack",
+            "icon": "🛡️",
+            "name": "Ataque Bárbaro",
+            "tips": [
+              {
+                "id": "barb-knight-early",
+                "icon": "⚔️",
+                "level": "beginner",
+                "title": "Ten un caballero antes de que desembarquen",
+                "body": "Los bárbaros golpean la costa, y un poblado costero sin defensa queda destruido, no solo degradado. Levanta al menos un caballero antes de que llegue el ejército.",
+                "tags": ["barbarians", "defense"]
+              },
+              {
+                "id": "barb-turn-ahead",
+                "icon": "📅",
+                "level": "intermediate",
+                "title": "Defiende con un turno de antelación",
+                "body": "Vigila el avance de los bárbaros y ten caballeros listos un turno antes del impacto, cubriendo tus puntos costeros más valiosos. Reaccionar tras el desembarco suele ser demasiado tarde.",
+                "tags": ["barbarians", "tempo"]
+              },
+              {
+                "id": "barb-triage",
+                "icon": "🎯",
+                "level": "advanced",
+                "title": "Prioriza la línea de costa",
+                "body": "Cuando no puedas cubrirlo todo, deja caer el rincón más barato y concentra caballeros en tus ciudades y tu producción clave. Incorpora el ritmo de los bárbaros a tu orden de construcción para que nunca te pillen desprevenido.",
+                "tags": ["barbarians", "endgame"]
+              }
             ]
-          }
-        ],
-        "advanced": [
+          },
           {
-            "id": "gold-stacking",
-            "icon": "🪙",
-            "title": "Bank gold, don't spend it",
-            "body": "Gold converts at 2:1. In scenarios with river gold, holding 8+ gold lets you assemble a city or dev card on demand without revealing the resource mix to opponents — pure information advantage.",
-            "tags": [
-              "gold",
-              "information"
+            "id": "trade-routes",
+            "icon": "🚚",
+            "name": "Mercaderes y Bárbaros (escenario principal)",
+            "tips": [
+              {
+                "id": "trade-roads",
+                "icon": "🛣️",
+                "level": "beginner",
+                "title": "Los caminos son rutas de entrega",
+                "body": "Tus caminos llevan mercancías al castillo, no solo persiguen la Ruta Más Larga. Apunta tus primeros caminos hacia las mercancías y el castillo para empezar a entregar pronto.",
+                "tags": ["trade-route", "roads"]
+              },
+              {
+                "id": "trade-routes-pay",
+                "icon": "🏰",
+                "level": "intermediate",
+                "title": "Explota las rutas que más pagan",
+                "body": "Prioriza entregas cortas y de alto valor, y traza una espina dorsal de caminos que sirva varias recogidas. Los ingresos por entrega son fiables: no dependen de los dados como la producción.",
+                "tags": ["trade-route", "tempo"]
+              },
+              {
+                "id": "trade-balance",
+                "icon": "⚖️",
+                "level": "advanced",
+                "title": "Equilibra el transporte y la carrera por los PV",
+                "body": "No te obsesiones con las entregas mientras un rival se acerca a la victoria. Vigila la defensa contra los bárbaros y los puntos, y convierte tus ingresos de entrega en PV justo cuando importa.",
+                "tags": ["trade-route", "scoring"]
+              }
+            ]
+          },
+          {
+            "id": "harbor-master",
+            "icon": "⚓",
+            "name": "Puertos de Catan",
+            "tips": [
+              {
+                "id": "harbor-cities",
+                "icon": "🏙️",
+                "level": "beginner",
+                "title": "Las ciudades en puerto puntúan el doble",
+                "body": "Un poblado en puerto vale 1 punto y una ciudad en puerto vale 2 de cara a la carta Puertos Más Fuertes (+2 PV). Mejorar tus sitios portuarios es el camino más barato hacia ella.",
+                "tags": ["harbors", "scoring"]
+              },
+              {
+                "id": "harbor-minimum",
+                "icon": "🥇",
+                "level": "intermediate",
+                "title": "Lidera por lo mínimo",
+                "body": "Puertos Más Fuertes funciona como el Ejército más Poderoso: solo necesitas ir por delante. Reclámala gastando los menos puntos posibles y refuérzala solo cuando alguien la amenace de verdad.",
+                "tags": ["harbors", "tempo"]
+              },
+              {
+                "id": "harbor-buzzer",
+                "icon": "⏱️",
+                "level": "advanced",
+                "title": "Róbala en el último segundo",
+                "body": "Puede cambiar de manos en el último turno. Ten lista la mejora de una ciudad costera para arrebatar los 2 PV cuando cuente, y controla si un rival está a un punto de quitártela.",
+                "tags": ["harbors", "endgame"]
+              }
+            ]
+          },
+          {
+            "id": "friendly-robber",
+            "icon": "🛟",
+            "name": "El Ladrón Amistoso",
+            "tips": [
+              {
+                "id": "robber-safe",
+                "icon": "🛡️",
+                "level": "beginner",
+                "title": "Estás a salvo con 2 PV o menos",
+                "body": "El Ladrón no puede plantarse sobre ti y nadie puede robarte mientras tengas 2 PV o menos. Expándete con libertad al principio: tu salida está protegida.",
+                "tags": ["robber", "placement"]
+              },
+              {
+                "id": "robber-leaders",
+                "icon": "🎯",
+                "level": "intermediate",
+                "title": "El Ladrón persigue a los líderes",
+                "body": "En cuanto te adelantas te conviertes en el único objetivo legal, así que cuenta con que el Ladrón y los 7 caigan sobre ti. Mantén la mano ligera y la producción repartida para que un hexágono bloqueado no te hunda.",
+                "tags": ["robber", "resources"]
+              },
+              {
+                "id": "robber-timing",
+                "icon": "⏳",
+                "level": "advanced",
+                "title": "Calcula cuándo pasas de 2 PV",
+                "body": "Saltar de 2 a 3 PV te quita la inmunidad. A veces conviene quedarte en 2 un poco más para seguir produciendo a salvo y luego dispararte cuando tu motor esté listo.",
+                "tags": ["robber", "planning"]
+              }
+            ]
+          },
+          {
+            "id": "event-cards",
+            "icon": "🎴",
+            "name": "Cartas de Evento",
+            "tips": [
+              {
+                "id": "event-deck",
+                "icon": "🃏",
+                "level": "beginner",
+                "title": "Los números salen de un mazo",
+                "body": "Los dados se sustituyen por un mazo de cartas, así que a lo largo de una pasada completa cada número aparece su parte justa. La suerte sigue equilibrándose, solo que con un calendario.",
+                "tags": ["event-cards", "probability"]
+              },
+              {
+                "id": "event-count",
+                "icon": "🔢",
+                "level": "intermediate",
+                "title": "Cuenta lo que ya ha salido",
+                "body": "Un número que ya ha mostrado todas sus copias no vuelve hasta el rebaraje. Favorece colocaciones en números que aún están pendientes y aléjate de los que ya se han agotado.",
+                "tags": ["event-cards", "probability"]
+              },
+              {
+                "id": "event-sevens",
+                "icon": "⚠️",
+                "level": "advanced",
+                "title": "Sigue los 7 y el rebaraje",
+                "body": "Los 7 llegan con una cadencia conocida, así que baja la mano por debajo del límite cuando se acerque uno. Justo después de gastar las cartas peligrosas es la ventana más segura para acumular recursos y hacer grandes construcciones.",
+                "tags": ["event-cards", "robber"]
+              }
             ]
           }
         ]
