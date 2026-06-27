@@ -2249,38 +2249,92 @@
       "strategy": {
         "beginner": [
           {
-            "id": "pick-two-missions",
-            "icon": "🎯",
-            "title": "Pick two missions, skip the third",
-            "body": "Trying to score fish, spices and pirate lairs equally spreads you thin. Invest in two tracks deeply — the third mission's final reward usually goes to whoever is losing on the others.",
-            "tags": [
-              "missions",
-              "planning"
-            ]
+            "id": "harbor-open",
+            "icon": "⚓",
+            "title": "Ouvrez avec votre colonie portuaire",
+            "body": "Votre première pièce est une colonie portuaire (2 PV) sur la côte, et les bateaux ne peuvent être construits qu'à côté d'une colonie portuaire. Choisissez une côte qui ouvre de bonnes voies maritimes — c'est votre base de départ pour tout le reste.",
+            "tags": ["placement", "ships"]
+          },
+          {
+            "id": "ships-are-roads",
+            "icon": "🚢",
+            "title": "Les bateaux sont vos routes",
+            "body": "Ici, il n'y a pas de routes terrestres. Les bateaux (1 Laine + 1 Bois, 4 PM) transportent colons, équipages, poisson et épices à travers la mer — gardez une petite flotte en mouvement à chaque tour.",
+            "tags": ["ships", "tempo"]
+          },
+          {
+            "id": "explore-rewards",
+            "icon": "🔍",
+            "title": "Explorez pour des récompenses gratuites",
+            "body": "Déplacez un bateau à côté d'un hexagone face cachée pour le révéler : la découverte vous rapporte 1 ressource correspondante (ou 2 or). Explorer tôt, c'est du revenu gratuit et de nouvelles terres à coloniser.",
+            "tags": ["exploration", "resources"]
+          },
+          {
+            "id": "gold-safety-net",
+            "icon": "🪙",
+            "title": "Pas de production ? Prenez l'or",
+            "body": "Sans cartes développement ni villes, l'or est votre filet de sécurité — un tour sans production vous donne 1 or, et 2 or achètent n'importe quelle ressource (deux fois par tour). Appuyez-vous dessus pour continuer à construire.",
+            "tags": ["gold", "resources"]
           }
         ],
         "intermediate": [
           {
-            "id": "ship-crew-balance",
-            "icon": "⚖️",
-            "title": "Crew > speed, until the endgame",
-            "body": "Ships with 2 crew deliver twice the mission progress per trip even if they're slower. Only upgrade for movement in the last 4 turns when you need to reach a distant spice farm in time.",
-            "tags": [
-              "ships",
-              "missions"
-            ]
+            "id": "settle-islands",
+            "icon": "🏝️",
+            "title": "Colonisez les îles que vous découvrez",
+            "body": "Les colons (1 Blé + 1 Minerai) voyagent sur un bateau et débarquent sur une nouvelle intersection terrestre. De nouvelles îles, c'est de la production en plus et davantage d'emplacements portuaires — c'est par la mer que vous grandissez.",
+            "tags": ["settlers", "expansion"]
+          },
+          {
+            "id": "two-missions",
+            "icon": "🎯",
+            "title": "Engagez-vous sur deux missions, pas trois",
+            "body": "Poisson, épices et repaires pirates font tous avancer sur la piste de mission, mais courir après les trois vous laisse médiocre partout. Choisissez les deux que votre plateau favorise et poussez-les à fond.",
+            "tags": ["missions", "planning"]
+          },
+          {
+            "id": "load-crews",
+            "icon": "👥",
+            "title": "Embarquez des équipages, pas seulement des colons",
+            "body": "Les équipages (1 Blé + 1 Laine) sont les bêtes de somme des missions : ils capturent les repaires pirates, activent les fermes d'épices et rapportent du poisson. Un bateau avec un équipage fait ce qu'un colon ne peut pas faire.",
+            "tags": ["crews", "missions"]
+          },
+          {
+            "id": "deliver-fast",
+            "icon": "🛟",
+            "title": "Livrez vite au Conseil",
+            "body": "Les missions poisson et épices ne marquent que lorsque la cargaison atteint le Conseil. Planifiez l'aller-retour — une boucle de livraison courte vaut mieux qu'une source plus riche hors de portée à temps ; payez 1 Laine pour +2 PM quand le temps presse.",
+            "tags": ["missions", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "pirate-lair-race",
+            "id": "spice-bonuses",
+            "icon": "🌶️",
+            "title": "Visez les bonus des fermes d'épices",
+            "body": "Chaque ferme d'épices activée accorde un bonus permanent — Voyage Rapide, Bonus Pirate ou Or Rapide. Prenez tôt celui qui renforce votre plan ; il rapporte toute la partie.",
+            "tags": ["spices", "tempo"]
+          },
+          {
+            "id": "hero-race",
             "icon": "🏴‍☠️",
-            "title": "Block a pirate lair first, capture later",
-            "body": "Capturing a pirate lair takes 3 crew drops. Simply parking 1 crew adjacent delays an opponent's capture attempt by a full turn, often long enough for you to reach it first with a full crew.",
-            "tags": [
-              "pirates",
-              "denial"
-            ]
+            "title": "Gagnez la course au héros aux repaires pirates",
+            "body": "Capturer un repaire demande 3 équipages, et le héros (meilleur dé + équipage) avance en plus sur la piste de mission. Arrivez avec un équipage complet et l'avantage aux dés — ou bloquez le repaire d'un rival avec un équipage pour gagner un tour.",
+            "tags": ["pirates", "missions"]
+          },
+          {
+            "id": "respect-pirate",
+            "icon": "🦜",
+            "title": "Méfiez-vous du navire pirate",
+            "body": "Sur un 7, le pirate se poste sur un hexagone maritime, vole les bateaux qui s'y trouvent et exige 1 tribut d'or pour passer à côté. Gardez un bateau immobile à côté pour le chasser sur un 6, et contournez-le avec vos cargaisons en fin de partie.",
+            "tags": ["pirates", "defense"]
+          },
+          {
+            "id": "race-to-17",
+            "icon": "🏁",
+            "title": "Foncez vers 17, engrangez les points faciles",
+            "body": "La victoire vient des colonies portuaires, des colonies, des positions sur les pistes de mission et des tuiles bonus PV. En fin de partie, prenez le point le moins cher disponible — une colonie portuaire ou un pas de mission vaut souvent mieux qu'une nouvelle île lointaine.",
+            "tags": ["endgame", "scoring"]
           }
         ]
       }

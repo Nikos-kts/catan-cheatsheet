@@ -1978,38 +1978,92 @@
       "strategy": {
         "beginner": [
           {
-            "id": "pick-two-missions",
-            "icon": "🎯",
-            "title": "Pick two missions, skip the third",
-            "body": "Trying to score fish, spices and pirate lairs equally spreads you thin. Invest in two tracks deeply — the third mission's final reward usually goes to whoever is losing on the others.",
-            "tags": [
-              "missions",
-              "planning"
-            ]
+            "id": "harbor-open",
+            "icon": "⚓",
+            "title": "Comece pela sua povoação de porto",
+            "body": "A sua primeira peça é uma povoação de porto (2 VP) na costa, e os navios só podem ser construídos junto a povoações de porto. Escolha uma costa que abra boas rotas marítimas — é o seu ponto de partida para tudo.",
+            "tags": ["placement", "ships"]
+          },
+          {
+            "id": "ships-are-roads",
+            "icon": "🚢",
+            "title": "Os navios são as suas estradas",
+            "body": "Aqui não há estradas em terra. Os navios (1 Lã + 1 Madeira, 4 PM) transportam colonos, tripulações, peixe e especiarias pelo mar — mantenha uma pequena frota a mover-se todos os turnos.",
+            "tags": ["ships", "tempo"]
+          },
+          {
+            "id": "explore-rewards",
+            "icon": "🔍",
+            "title": "Explore para ganhar recompensas grátis",
+            "body": "Mova um navio para junto de um hexágono virado para baixo para o revelar: ganha 1 recurso correspondente (ou 2 ouro) pela descoberta. A exploração inicial é rendimento grátis e abre novas terras para colonizar.",
+            "tags": ["exploration", "resources"]
+          },
+          {
+            "id": "gold-safety-net",
+            "icon": "🪙",
+            "title": "Sem produção? Fique com o ouro",
+            "body": "Sem cartas de desenvolvimento nem cidades, o ouro é a sua rede de segurança — um turno sem produção dá-lhe 1 ouro, e 2 ouro compram qualquer recurso (duas vezes por turno). Apoie-se nisso para continuar a construir.",
+            "tags": ["gold", "resources"]
           }
         ],
         "intermediate": [
           {
-            "id": "ship-crew-balance",
-            "icon": "⚖️",
-            "title": "Crew > speed, until the endgame",
-            "body": "Ships with 2 crew deliver twice the mission progress per trip even if they're slower. Only upgrade for movement in the last 4 turns when you need to reach a distant spice farm in time.",
-            "tags": [
-              "ships",
-              "missions"
-            ]
+            "id": "settle-islands",
+            "icon": "🏝️",
+            "title": "Colonize as ilhas que descobrir",
+            "body": "Os colonos (1 Grão + 1 Minério) viajam num navio e desembarcam numa nova interseção terrestre. Ilhas novas significam nova produção e mais locais para portos — a expansão por mar é como se cresce.",
+            "tags": ["settlers", "expansion"]
+          },
+          {
+            "id": "two-missions",
+            "icon": "🎯",
+            "title": "Aposte em duas missões, não em três",
+            "body": "Peixe, especiarias e covis piratas fazem todos avançar o trilho de missões, mas tentar os três deixa-o medíocre em tudo. Escolha as duas que o seu tabuleiro favorece e invista a fundo.",
+            "tags": ["missions", "planning"]
+          },
+          {
+            "id": "load-crews",
+            "icon": "👥",
+            "title": "Carregue tripulações, não só colonos",
+            "body": "As tripulações (1 Grão + 1 Lã) são a força de trabalho das missões: capturam covis piratas, ativam fazendas de especiarias e trazem peixe. Um navio com uma tripulação faz o que um colono não consegue.",
+            "tags": ["crews", "missions"]
+          },
+          {
+            "id": "deliver-fast",
+            "icon": "🛟",
+            "title": "Entregue depressa ao Conselho",
+            "body": "As missões de peixe e especiarias só pontuam quando a carga chega ao Conselho. Planeie a viagem de ida e volta — um percurso de entrega curto vale mais do que uma fonte rica que não alcança a tempo; pague 1 Lã por +2 PM quando o prazo apertar.",
+            "tags": ["missions", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "pirate-lair-race",
+            "id": "spice-bonuses",
+            "icon": "🌶️",
+            "title": "Vá atrás dos bónus das fazendas de especiarias",
+            "body": "Cada fazenda de especiarias que ativar concede uma vantagem permanente — Viagem Rápida, Bónus Pirata ou Ouro Rápido. Garanta cedo a que reforça o seu plano; rende durante todo o jogo.",
+            "tags": ["spices", "tempo"]
+          },
+          {
+            "id": "hero-race",
             "icon": "🏴‍☠️",
-            "title": "Block a pirate lair first, capture later",
-            "body": "Capturing a pirate lair takes 3 crew drops. Simply parking 1 crew adjacent delays an opponent's capture attempt by a full turn, often long enough for you to reach it first with a full crew.",
-            "tags": [
-              "pirates",
-              "denial"
-            ]
+            "title": "Vença a corrida ao herói nos covis piratas",
+            "body": "Capturar um covil exige 3 tripulações, e o herói (dado mais alto + tripulação) avança mais no trilho de missões. Chegue com a tripulação completa e a vantagem nos dados — ou bloqueie o covil de um rival com uma tripulação para ganhar um turno.",
+            "tags": ["pirates", "missions"]
+          },
+          {
+            "id": "respect-pirate",
+            "icon": "🦜",
+            "title": "Respeite o navio pirata",
+            "body": "Com um 7, o pirata estaciona num hexágono de mar, rouba os navios aí presentes e cobra 1 ouro de tributo para passar. Mantenha um navio imóvel ao lado para o expulsar com um 6, e desvie a sua carga dele perto do fim do jogo.",
+            "tags": ["pirates", "defense"]
+          },
+          {
+            "id": "race-to-17",
+            "icon": "🏁",
+            "title": "Corra para os 17, garanta os pontos baratos",
+            "body": "A vitória vem de povoações de porto, povoações, posições no trilho de missões e peças de VP de bónus. No fim do jogo, agarre o ponto mais barato disponível — uma povoação de porto ou um passo numa missão valem muitas vezes mais do que uma ilha nova e distante.",
+            "tags": ["endgame", "scoring"]
           }
         ]
       }

@@ -1936,38 +1936,92 @@
       "strategy": {
         "beginner": [
           {
-            "id": "pick-two-missions",
-            "icon": "🎯",
-            "title": "Pick two missions, skip the third",
-            "body": "Trying to score fish, spices and pirate lairs equally spreads you thin. Invest in two tracks deeply — the third mission's final reward usually goes to whoever is losing on the others.",
-            "tags": [
-              "missions",
-              "planning"
-            ]
+            "id": "harbor-open",
+            "icon": "⚓",
+            "title": "Open met je havendorp",
+            "body": "Je eerste stuk is een havendorp (2 OP) aan de kust, en schepen bouw je alleen naast een havendorp. Kies een kust die goede vaarroutes opent — het is je startpunt voor alles.",
+            "tags": ["placement", "ships"]
+          },
+          {
+            "id": "ships-are-roads",
+            "icon": "🚢",
+            "title": "Schepen zijn je wegen",
+            "body": "Hier zijn geen landwegen. Schepen (1 wol + 1 hout, 4 verplaatsingen) vervoeren kolonisten, crews, vis en specerijen over zee — houd elke beurt een kleine vloot in beweging.",
+            "tags": ["ships", "tempo"]
+          },
+          {
+            "id": "explore-rewards",
+            "icon": "🔍",
+            "title": "Verken voor gratis beloningen",
+            "body": "Vaar een schip naast een omgekeerde tegel om hem om te draaien: je krijgt 1 bijpassende grondstof (of 2 goud) voor de ontdekking. Vroeg verkennen is gratis inkomen en opent nieuw land om te koloniseren.",
+            "tags": ["exploration", "resources"]
+          },
+          {
+            "id": "gold-safety-net",
+            "icon": "🪙",
+            "title": "Geen productie? Pak het goud",
+            "body": "Zonder ontwikkelingskaarten of steden is goud je vangnet — een dode productiebeurt levert 1 goud op, en 2 goud koopt elke grondstof (twee keer per beurt). Leun erop om te blijven bouwen.",
+            "tags": ["gold", "resources"]
           }
         ],
         "intermediate": [
           {
-            "id": "ship-crew-balance",
-            "icon": "⚖️",
-            "title": "Crew > speed, until the endgame",
-            "body": "Ships with 2 crew deliver twice the mission progress per trip even if they're slower. Only upgrade for movement in the last 4 turns when you need to reach a distant spice farm in time.",
-            "tags": [
-              "ships",
-              "missions"
-            ]
+            "id": "settle-islands",
+            "icon": "🏝️",
+            "title": "Koloniseer de eilanden die je ontdekt",
+            "body": "Kolonisten (1 graan + 1 erts) varen mee op een schip en stappen uit op een nieuw kruispunt aan land. Nieuwe eilanden betekenen nieuwe productie en meer havenplekken — uitbreiden over zee is hoe je groeit.",
+            "tags": ["settlers", "expansion"]
+          },
+          {
+            "id": "two-missions",
+            "icon": "🎯",
+            "title": "Kies twee missies, niet drie",
+            "body": "Vis, specerijen en piratenkampen brengen je allemaal vooruit op het missiespoor, maar alle drie najagen houdt je overal middelmatig. Kies de twee die je bord ondersteunt en zet daar vol op in.",
+            "tags": ["missions", "planning"]
+          },
+          {
+            "id": "load-crews",
+            "icon": "👥",
+            "title": "Laad crews, niet alleen kolonisten",
+            "body": "Crews (1 graan + 1 wol) zijn de werkpaarden van de missies: ze veroveren piratenkampen, activeren specerijenboerderijen en halen vis binnen. Een schip met een crew doet werk dat een kolonist niet kan.",
+            "tags": ["crews", "missions"]
+          },
+          {
+            "id": "deliver-fast",
+            "icon": "🛟",
+            "title": "Lever snel bij de Raad",
+            "body": "Vis- en specerijenmissies scoren pas als je lading de Raad bereikt. Plan de hele rondreis — een korte leverroute is beter dan een rijkere bron die je niet op tijd haalt; betaal 1 wol voor +2 verplaatsing als de tijd dringt.",
+            "tags": ["missions", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "pirate-lair-race",
+            "id": "spice-bonuses",
+            "icon": "🌶️",
+            "title": "Jaag op de specerijenboerderij-bonussen",
+            "body": "Elke specerijenboerderij die je activeert geeft een blijvend voordeel — Snelle Reis, Piratenbonus of Snel Goud. Pak vroeg degene die je plan versterkt; daar profiteer je het hele spel van.",
+            "tags": ["spices", "tempo"]
+          },
+          {
+            "id": "hero-race",
             "icon": "🏴‍☠️",
-            "title": "Block a pirate lair first, capture later",
-            "body": "Capturing a pirate lair takes 3 crew drops. Simply parking 1 crew adjacent delays an opponent's capture attempt by a full turn, often long enough for you to reach it first with a full crew.",
-            "tags": [
-              "pirates",
-              "denial"
-            ]
+            "title": "Win de heldenrace bij piratenkampen",
+            "body": "Een kamp veroveren kost 3 crew, en de held (hoogste worp + crew) komt extra vooruit op het missiespoor. Kom aan met een volle crew en het voordeel van de dobbelsteen — of blokkeer het kamp van een rivaal met één crew om een beurt te winnen.",
+            "tags": ["pirates", "missions"]
+          },
+          {
+            "id": "respect-pirate",
+            "icon": "🦜",
+            "title": "Respecteer het piratenschip",
+            "body": "Bij een 7 parkeert de piraat op een zeetegel, berooft daar schepen en vraagt 1 goud tol om er langs te varen. Houd er een nog niet verplaatst schip naast om hem met een 6 te verjagen, en stuur je lading er tegen het eind van het spel omheen.",
+            "tags": ["pirates", "defense"]
+          },
+          {
+            "id": "race-to-17",
+            "icon": "🏁",
+            "title": "Race naar 17, sleep de goedkope punten binnen",
+            "body": "De overwinning komt van havendorpen, dorpen, posities op het missiespoor en bonus-OP-tegels. Pak laat in het spel het goedkoopste punt dat er is — een havendorp of één stap op het missiespoor is vaak beter dan een ver afgelegen nieuw eiland.",
+            "tags": ["endgame", "scoring"]
           }
         ]
       }

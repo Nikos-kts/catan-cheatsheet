@@ -2089,29 +2089,92 @@
       "strategy": {
         "beginner": [
           {
-            "id": "pick-two-missions",
-            "icon": "🎯",
-            "title": "Pick two missions, skip the third",
-            "body": "Trying to score fish, spices and pirate lairs equally spreads you thin. Invest in two tracks deeply — the third mission's final reward usually goes to whoever is losing on the others.",
-            "tags": ["missions", "planning"]
+            "id": "harbor-open",
+            "icon": "⚓",
+            "title": "Open with your harbor settlement",
+            "body": "Your first piece is a harbor settlement (2 VP) on the coast, and ships can only be built next to harbor settlements. Pick a coast that opens good sea lanes — it's your launchpad for everything.",
+            "tags": ["placement", "ships"]
+          },
+          {
+            "id": "ships-are-roads",
+            "icon": "🚢",
+            "title": "Ships are your roads",
+            "body": "There are no land roads here. Ships (1 wool + 1 lumber, 4 movement) carry settlers, crews, fish and spices across the sea — keep a small fleet moving every turn.",
+            "tags": ["ships", "tempo"]
+          },
+          {
+            "id": "explore-rewards",
+            "icon": "🔍",
+            "title": "Explore for free rewards",
+            "body": "Move a ship next to a face-down hex to flip it: you gain 1 matching resource (or 2 gold) for the discovery. Early exploration is free income and opens new land to settle.",
+            "tags": ["exploration", "resources"]
+          },
+          {
+            "id": "gold-safety-net",
+            "icon": "🪙",
+            "title": "No production? Take the gold",
+            "body": "With no dev cards or cities, gold is your safety net — a dead production turn gives you 1 gold, and 2 gold buys any resource (twice per turn). Lean on it to keep building.",
+            "tags": ["gold", "resources"]
           }
         ],
         "intermediate": [
           {
-            "id": "ship-crew-balance",
-            "icon": "⚖️",
-            "title": "Crew > speed, until the endgame",
-            "body": "Ships with 2 crew deliver twice the mission progress per trip even if they're slower. Only upgrade for movement in the last 4 turns when you need to reach a distant spice farm in time.",
-            "tags": ["ships", "missions"]
+            "id": "settle-islands",
+            "icon": "🏝️",
+            "title": "Settle the islands you discover",
+            "body": "Settlers (1 grain + 1 ore) ride a ship and drop on a new land intersection. Fresh islands mean new production and more harbor spots — expansion by sea is how you grow.",
+            "tags": ["settlers", "expansion"]
+          },
+          {
+            "id": "two-missions",
+            "icon": "🎯",
+            "title": "Commit to two missions, not three",
+            "body": "Fish, spices and pirate lairs all advance the mission track, but chasing all three keeps you middling everywhere. Pick the two your board supports and push them hard.",
+            "tags": ["missions", "planning"]
+          },
+          {
+            "id": "load-crews",
+            "icon": "👥",
+            "title": "Load crews, not just settlers",
+            "body": "Crews (1 grain + 1 wool) are the mission workhorses: they capture pirate lairs, activate spice farms and bring in fish. A ship carrying a crew does work a settler can't.",
+            "tags": ["crews", "missions"]
+          },
+          {
+            "id": "deliver-fast",
+            "icon": "🛟",
+            "title": "Deliver to the Council fast",
+            "body": "Fish and spice missions only score when cargo reaches the Council. Plan the round trip — a short delivery loop beats a richer source you can't reach in time; pay 1 wool for +2 movement when a deadline is tight.",
+            "tags": ["missions", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "pirate-lair-race",
+            "id": "spice-bonuses",
+            "icon": "🌶️",
+            "title": "Chase the spice-farm bonuses",
+            "body": "Each spice farm you activate grants a permanent perk — Swift Voyage, Pirate Bonus or Fast Gold. Grab the one that compounds your plan early; it pays off all game.",
+            "tags": ["spices", "tempo"]
+          },
+          {
+            "id": "hero-race",
             "icon": "🏴‍☠️",
-            "title": "Block a pirate lair first, capture later",
-            "body": "Capturing a pirate lair takes 3 crew drops. Simply parking 1 crew adjacent delays an opponent's capture attempt by a full turn, often long enough for you to reach it first with a full crew.",
-            "tags": ["pirates", "denial"]
+            "title": "Win the hero race at pirate lairs",
+            "body": "Capturing a lair takes 3 crew, and the hero (highest die + crew) advances extra on the mission track. Arrive with a full crew and the dice edge — or block a rival's lair with one crew to buy yourself a turn.",
+            "tags": ["pirates", "missions"]
+          },
+          {
+            "id": "respect-pirate",
+            "icon": "🦜",
+            "title": "Respect the pirate ship",
+            "body": "On a 7 the pirate parks on a sea hex, robs ships there, and charges 1 gold tribute to sail past. Keep an unmoved ship beside it for a 6-to-chase, and route cargo around it near the endgame.",
+            "tags": ["pirates", "defense"]
+          },
+          {
+            "id": "race-to-17",
+            "icon": "🏁",
+            "title": "Race to 17, bank the cheap points",
+            "body": "Victory comes from harbor settlements, settlements, mission-track positions and bonus VP tiles. Late game, take the cheapest point available — a harbor settlement or one mission step often beats a far-flung new island.",
+            "tags": ["endgame", "scoring"]
           }
         ]
       }

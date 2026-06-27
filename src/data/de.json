@@ -2237,38 +2237,92 @@
       "strategy": {
         "beginner": [
           {
-            "id": "pick-two-missions",
-            "icon": "🎯",
-            "title": "Pick two missions, skip the third",
-            "body": "Trying to score fish, spices and pirate lairs equally spreads you thin. Invest in two tracks deeply — the third mission's final reward usually goes to whoever is losing on the others.",
-            "tags": [
-              "missions",
-              "planning"
-            ]
+            "id": "harbor-open",
+            "icon": "⚓",
+            "title": "Eröffne mit deiner Hafensiedlung",
+            "body": "Dein erstes Bauwerk ist eine Hafensiedlung (2 SP) an der Küste, und Schiffe lassen sich nur neben Hafensiedlungen bauen. Wähle eine Küste, die gute Seewege eröffnet — sie ist deine Startrampe für alles Weitere.",
+            "tags": ["placement", "ships"]
+          },
+          {
+            "id": "ships-are-roads",
+            "icon": "🚢",
+            "title": "Schiffe sind deine Straßen",
+            "body": "An Land gibt es hier keine Straßen. Schiffe (1 Wolle + 1 Holz, 4 BP) transportieren Siedler, Crews, Fisch und Gewürze über das Meer — halte jede Runde eine kleine Flotte in Bewegung.",
+            "tags": ["ships", "tempo"]
+          },
+          {
+            "id": "explore-rewards",
+            "icon": "🔍",
+            "title": "Erkunde für kostenlose Belohnungen",
+            "body": "Bewege ein Schiff neben ein verdecktes Feld, um es aufzudecken: Für die Entdeckung erhältst du 1 passenden Rohstoff (oder 2 Gold). Frühes Erkunden ist gratis Einkommen und erschließt neues Land zum Besiedeln.",
+            "tags": ["exploration", "resources"]
+          },
+          {
+            "id": "gold-safety-net",
+            "icon": "🪙",
+            "title": "Keine Produktion? Nimm das Gold",
+            "body": "Ohne Entwicklungskarten und Städte ist Gold dein Sicherheitsnetz — ein Zug ohne Produktion bringt dir 1 Gold, und 2 Gold kaufen jeden beliebigen Rohstoff (zweimal pro Zug). Setze darauf, um weiterzubauen.",
+            "tags": ["gold", "resources"]
           }
         ],
         "intermediate": [
           {
-            "id": "ship-crew-balance",
-            "icon": "⚖️",
-            "title": "Crew > speed, until the endgame",
-            "body": "Ships with 2 crew deliver twice the mission progress per trip even if they're slower. Only upgrade for movement in the last 4 turns when you need to reach a distant spice farm in time.",
-            "tags": [
-              "ships",
-              "missions"
-            ]
+            "id": "settle-islands",
+            "icon": "🏝️",
+            "title": "Besiedle die Inseln, die du entdeckst",
+            "body": "Siedler (1 Getreide + 1 Erz) reisen per Schiff und werden an einer neuen Kreuzung an Land abgesetzt. Frische Inseln bringen neue Produktion und mehr Hafenplätze — Expansion über das Meer ist dein Wachstum.",
+            "tags": ["settlers", "expansion"]
+          },
+          {
+            "id": "two-missions",
+            "icon": "🎯",
+            "title": "Setze auf zwei Missionen, nicht auf drei",
+            "body": "Fisch, Gewürze und Piratenverstecke bringen dich alle auf der Missionsleiste voran, doch wer allen dreien hinterherjagt, bleibt überall mittelmäßig. Wähle die zwei, die dein Spielplan hergibt, und treibe sie konsequent voran.",
+            "tags": ["missions", "planning"]
+          },
+          {
+            "id": "load-crews",
+            "icon": "👥",
+            "title": "Lade Crews, nicht nur Siedler",
+            "body": "Crews (1 Getreide + 1 Wolle) sind die Arbeitstiere der Missionen: Sie erobern Piratenverstecke, aktivieren Gewürzfarmen und holen Fisch. Ein Schiff mit Crew leistet, was ein Siedler nicht kann.",
+            "tags": ["crews", "missions"]
+          },
+          {
+            "id": "deliver-fast",
+            "icon": "🛟",
+            "title": "Liefere schnell an den Rat",
+            "body": "Fisch- und Gewürzmissionen punkten erst, wenn die Ladung den Rat erreicht. Plane die Rundreise — eine kurze Lieferschleife schlägt eine ergiebigere Quelle, die du nicht rechtzeitig erreichst; zahle 1 Wolle für +2 BP, wenn es knapp wird.",
+            "tags": ["missions", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "pirate-lair-race",
+            "id": "spice-bonuses",
+            "icon": "🌶️",
+            "title": "Jage die Gewürzfarm-Boni",
+            "body": "Jede Gewürzfarm, die du aktivierst, gewährt einen permanenten Vorteil — Schnelle Reise, Piratenbonus oder Schnelles Gold. Schnapp dir früh den, der deinen Plan verstärkt; er zahlt sich das ganze Spiel über aus.",
+            "tags": ["spices", "tempo"]
+          },
+          {
+            "id": "hero-race",
             "icon": "🏴‍☠️",
-            "title": "Block a pirate lair first, capture later",
-            "body": "Capturing a pirate lair takes 3 crew drops. Simply parking 1 crew adjacent delays an opponent's capture attempt by a full turn, often long enough for you to reach it first with a full crew.",
-            "tags": [
-              "pirates",
-              "denial"
-            ]
+            "title": "Gewinne das Helden-Rennen an Piratenverstecken",
+            "body": "Ein Versteck zu erobern kostet 3 Crew, und der Held (höchster Würfel + Crew) rückt extra auf der Missionsleiste vor. Komme mit voller Crew und dem Würfelvorteil an — oder blockiere das Versteck eines Rivalen mit einer Crew, um dir einen Zug zu verschaffen.",
+            "tags": ["pirates", "missions"]
+          },
+          {
+            "id": "respect-pirate",
+            "icon": "🦜",
+            "title": "Respektiere das Piratenschiff",
+            "body": "Bei einer 7 stellt sich der Pirat auf ein Seefeld, beraubt dort Schiffe und kassiert 1 Gold Tribut fürs Vorbeifahren. Halte ein unbewegtes Schiff daneben bereit, um ihn mit einer 6 zu vertreiben, und leite deine Ladung gegen Spielende um ihn herum.",
+            "tags": ["pirates", "defense"]
+          },
+          {
+            "id": "race-to-17",
+            "icon": "🏁",
+            "title": "Wettlauf zu 17 — sichere die billigen Punkte",
+            "body": "Der Sieg kommt aus Hafensiedlungen, Siedlungen, Missionsleisten-Positionen und Bonus-SP-Plättchen. Im Endspiel nimm den günstigsten verfügbaren Punkt — eine Hafensiedlung oder ein Missionsschritt schlägt oft eine weit entfernte neue Insel.",
+            "tags": ["endgame", "scoring"]
           }
         ]
       }
