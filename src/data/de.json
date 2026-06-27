@@ -933,48 +933,78 @@
       "strategy": {
         "beginner": [
           {
-            "id": "ship-network",
+            "id": "ships-movable",
             "icon": "⛵",
-            "title": "Ships are roads you can move",
-            "body": "Once per turn, the open end of a ship chain can be moved. Build ships loosely at first; you'll reroute them toward whichever island your opponents underbid.",
-            "tags": [
-              "ships",
-              "opening"
-            ]
+            "title": "Schiffe sind bewegliche Straßen",
+            "body": "Baue Schiffe, um Wasser zu überqueren — einmal pro Zug darfst du das offene Ende einer Kette versetzen. Lege sie locker aus und ziele dann auf die Insel, die deine Gegner offen lassen.",
+            "tags": ["ships", "opening"]
           },
           {
-            "id": "settle-new-islands",
+            "id": "ship-economy",
+            "icon": "🐑",
+            "title": "Schiffe kosten Holz + Wolle",
+            "body": "Straßen an Land kosten Holz + Lehm, doch jedes Schiff kostet 1 Holz + 1 Wolle. Wähle einen Startplatz mit stetigem Holz- und Wollnachschub, damit du dir das Segeln überhaupt leisten kannst.",
+            "tags": ["ships", "resources"]
+          },
+          {
+            "id": "new-island-bonus",
             "icon": "🏝️",
-            "title": "Island VPs beat resource VPs",
-            "body": "Most scenarios grant +1–2 VP per first-settlement on a new island. A 4-pip spot on a new island usually beats an 8-pip spot at home once you factor in the bonus.",
-            "tags": [
-              "placement",
-              "scoring"
-            ]
+            "title": "Inselboni einsammeln",
+            "body": "Die meisten Szenarien vergeben Bonus-SP für deine erste Siedlung auf jeder neuen Insel — oft mehr wert als eine heißere Zahl daheim.",
+            "tags": ["placement", "scoring"]
+          },
+          {
+            "id": "gold-wild",
+            "icon": "🪙",
+            "title": "Gold ist ein Joker-Rohstoff",
+            "body": "Goldfelder liefern einen beliebigen Rohstoff deiner Wahl — ein Goldplatz ist also flexibler, als seine Augenzahl vermuten lässt. Behandle ihn wie eine Top-Zahl.",
+            "tags": ["placement", "resources"]
           }
         ],
         "intermediate": [
           {
             "id": "pirate-vs-robber",
             "icon": "🏴‍☠️",
-            "title": "Pirate, not robber, on shipping leaders",
-            "body": "On a 7, move the pirate onto a hex full of opponent ships rather than robbing production. It freezes their expansion AND lets you steal — two birds, one die.",
-            "tags": [
-              "robber",
-              "ships"
-            ]
+            "title": "Auf See schlägt der Pirat den Räuber",
+            "body": "Stelle bei einer 7 den Piraten neben gegnerische Schiffe: Das friert ihre Ausbreitung auf dem Meer ein und du darfst trotzdem stehlen — meist besser, als ein Landfeld zu blockieren.",
+            "tags": ["robber", "ships"]
+          },
+          {
+            "id": "longest-route-ships",
+            "icon": "🛣️",
+            "title": "Die Längste Route zählt auch Schiffe",
+            "body": "Bei der Längsten Route zählen Straßen und Schiffe zusammen. Wenn Gegner dir den Landweg zumauern, kann ein Seeabschnitt die 2 SP holen oder halten.",
+            "tags": ["longest-route", "tempo"]
+          },
+          {
+            "id": "ship-roi",
+            "icon": "🧭",
+            "title": "Jedes Schiff muss sich lohnen",
+            "body": "Eine Inselsiedlung kostet mehrere Schiffe plus den eigentlichen Bau. Investiere nur, wenn die neue Produktion oder der Inselbonus diese Rohstoffe klar wieder hereinholt.",
+            "tags": ["resources", "planning"]
           }
         ],
         "advanced": [
           {
             "id": "chain-break",
             "icon": "⚠️",
-            "title": "Guard the fragile end of your chain",
-            "body": "A single opponent ship placed at an ambiguous junction can sever your longest shipping route from the settlement that anchors it — nullifying Longest Route and possibly 2 VP. Leave no unprotected endings in the last 3 turns.",
-            "tags": [
-              "endgame",
-              "longest-route"
-            ]
+            "title": "Schütze das offene Ende deiner Route",
+            "body": "Ein einziges gegnerisches Schiff an einer mehrdeutigen Kreuzung kann deine längste Route von ihrer Ankersiedlung abtrennen — und kostet dich die Längste Route und 2 SP. Lass in den letzten Zügen kein offenes Ende ungeschützt.",
+            "tags": ["endgame", "longest-route"]
+          },
+          {
+            "id": "landing-race",
+            "icon": "🏁",
+            "title": "Gewinne den Wettlauf zur Insel",
+            "body": "Die Boni für die erste Siedlung gehen an den, der zuerst da ist. Buhlt ein Gegner um dieselbe Insel, kann ein zusätzliches Schiff, mit dem du einen Zug früher anlandest, unterm Strich einen SP bringen.",
+            "tags": ["endgame", "scoring"]
+          },
+          {
+            "id": "feed-engine",
+            "icon": "⚡",
+            "title": "Füttere den Schiffsmotor",
+            "body": "Die Expansion übers Meer frisst Rohstoffe im Eiltempo, darum schmerzen tote Züge umso mehr. Verankere dich auf Gold- und 6/8-Feldern für die Wolle und das Holz, die eine Route am Laufen halten.",
+            "tags": ["probability", "resources"]
           }
         ]
       }

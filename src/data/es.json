@@ -933,48 +933,78 @@
       "strategy": {
         "beginner": [
           {
-            "id": "ship-network",
+            "id": "ships-movable",
             "icon": "⛵",
-            "title": "Ships are roads you can move",
-            "body": "Once per turn, the open end of a ship chain can be moved. Build ships loosely at first; you'll reroute them toward whichever island your opponents underbid.",
-            "tags": [
-              "ships",
-              "opening"
-            ]
+            "title": "Los barcos son caminos que se mueven",
+            "body": "Construye barcos para cruzar el agua; una vez por turno puedes redirigir el extremo abierto de la cadena. Colócalos sin compromiso y apunta a la isla que los rivales dejen libre.",
+            "tags": ["ships", "opening"]
           },
           {
-            "id": "settle-new-islands",
+            "id": "ship-economy",
+            "icon": "🐑",
+            "title": "Los barcos cuestan Madera + Lana",
+            "body": "Los caminos terrestres son Madera + Arcilla, pero cada barco cuesta 1 Madera + 1 Lana. Elige una salida con Lana y Madera constantes para poder permitirte navegar de verdad.",
+            "tags": ["ships", "resources"]
+          },
+          {
+            "id": "new-island-bonus",
             "icon": "🏝️",
-            "title": "Island VPs beat resource VPs",
-            "body": "Most scenarios grant +1–2 VP per first-settlement on a new island. A 4-pip spot on a new island usually beats an 8-pip spot at home once you factor in the bonus.",
-            "tags": [
-              "placement",
-              "scoring"
-            ]
+            "title": "Persigue los bonus de nueva isla",
+            "body": "La mayoría de los escenarios otorgan PV extra por tu primer poblado en cada isla nueva, a menudo más valiosos que un número más caliente en casa.",
+            "tags": ["placement", "scoring"]
+          },
+          {
+            "id": "gold-wild",
+            "icon": "🪙",
+            "title": "El oro es un recurso comodín",
+            "body": "Los hexágonos de Campo de Oro producen cualquier recurso que elijas, así que un punto de oro es más flexible de lo que aparentan sus pips. Trátalo como un número de primera.",
+            "tags": ["placement", "resources"]
           }
         ],
         "intermediate": [
           {
             "id": "pirate-vs-robber",
             "icon": "🏴‍☠️",
-            "title": "Pirate, not robber, on shipping leaders",
-            "body": "On a 7, move the pirate onto a hex full of opponent ships rather than robbing production. It freezes their expansion AND lets you steal — two birds, one die.",
-            "tags": [
-              "robber",
-              "ships"
-            ]
+            "title": "En el mar, el Pirata gana al Ladrón",
+            "body": "Al sacar un 7, plantar el Pirata junto a los barcos de un rival congela su expansión marítima y encima te deja robar — normalmente mejor que bloquear un hexágono de tierra.",
+            "tags": ["robber", "ships"]
+          },
+          {
+            "id": "longest-route-ships",
+            "icon": "🛣️",
+            "title": "La Ruta Más Larga también cuenta los barcos",
+            "body": "La Ruta Más Larga suma caminos y barcos en una sola ruta. Cuando los rivales te cierran el paso por tierra, un tramo marítimo puede ganar o conservar los 2 PV.",
+            "tags": ["longest-route", "tempo"]
+          },
+          {
+            "id": "ship-roi",
+            "icon": "🧭",
+            "title": "Que cada barco se pague solo",
+            "body": "Un poblado en una isla son varios barcos más la propia construcción. Comprométete solo cuando la nueva producción o el bonus de isla recuperen claramente esos recursos.",
+            "tags": ["resources", "planning"]
           }
         ],
         "advanced": [
           {
             "id": "chain-break",
             "icon": "⚠️",
-            "title": "Guard the fragile end of your chain",
-            "body": "A single opponent ship placed at an ambiguous junction can sever your longest shipping route from the settlement that anchors it — nullifying Longest Route and possibly 2 VP. Leave no unprotected endings in the last 3 turns.",
-            "tags": [
-              "endgame",
-              "longest-route"
-            ]
+            "title": "Protege el extremo abierto de tu ruta",
+            "body": "Un solo barco enemigo en un cruce ambiguo puede desconectar tu ruta más larga del poblado que la ancla, costándote la Ruta Más Larga y 2 PV. No dejes extremos abiertos en los turnos finales.",
+            "tags": ["endgame", "longest-route"]
+          },
+          {
+            "id": "landing-race",
+            "icon": "🏁",
+            "title": "Gana la carrera por desembarcar",
+            "body": "Los bonus por primer poblado son para quien llega primero. Contra un rival que tiene el ojo puesto en la misma isla, un barco extra para desembarcar un turno antes puede inclinar la balanza por un PV neto.",
+            "tags": ["endgame", "scoring"]
+          },
+          {
+            "id": "feed-engine",
+            "icon": "⚡",
+            "title": "Alimenta el motor de barcos",
+            "body": "La expansión marítima quema recursos rápido, así que los turnos muertos duelen más. Ancla en Campos de Oro y hexágonos 6/8 para la Lana y la Madera que mantienen una ruta en marcha.",
+            "tags": ["probability", "resources"]
           }
         ]
       }

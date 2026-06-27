@@ -834,36 +834,78 @@
       "strategy": {
         "beginner": [
           {
-            "id": "ship-network",
+            "id": "ships-movable",
             "icon": "⛵",
-            "title": "Ships are roads you can move",
-            "body": "Once per turn, the open end of a ship chain can be moved. Build ships loosely at first; you'll reroute them toward whichever island your opponents underbid.",
+            "title": "Ships are movable roads",
+            "body": "Build ships to cross water; once per turn you can re-route the open end of a chain. Lay them loosely, then aim at whichever island opponents leave open.",
             "tags": ["ships", "opening"]
           },
           {
-            "id": "settle-new-islands",
+            "id": "ship-economy",
+            "icon": "🐑",
+            "title": "Ships cost wood + wool",
+            "body": "Land roads are wood + brick, but every ship is 1 lumber + 1 wool. Pick a start with steady wool and wood so you can actually afford to sail.",
+            "tags": ["ships", "resources"]
+          },
+          {
+            "id": "new-island-bonus",
             "icon": "🏝️",
-            "title": "Island VPs beat resource VPs",
-            "body": "Most scenarios grant +1–2 VP per first-settlement on a new island. A 4-pip spot on a new island usually beats an 8-pip spot at home once you factor in the bonus.",
+            "title": "Chase new-island bonuses",
+            "body": "Most scenarios award bonus VP for your first settlement on each new island — often worth more than a hotter number back home.",
             "tags": ["placement", "scoring"]
+          },
+          {
+            "id": "gold-wild",
+            "icon": "🪙",
+            "title": "Gold is a wild resource",
+            "body": "Gold-field hexes pay out any resource you choose, so a gold spot is more flexible than its pip count looks. Treat it like a premium number.",
+            "tags": ["placement", "resources"]
           }
         ],
         "intermediate": [
           {
             "id": "pirate-vs-robber",
             "icon": "🏴‍☠️",
-            "title": "Pirate, not robber, on shipping leaders",
-            "body": "On a 7, move the pirate onto a hex full of opponent ships rather than robbing production. It freezes their expansion AND lets you steal — two birds, one die.",
+            "title": "Pirate beats robber at sea",
+            "body": "On a 7, parking the pirate beside an opponent's ships freezes their sea expansion and still lets you steal — usually better than blocking a land hex.",
             "tags": ["robber", "ships"]
+          },
+          {
+            "id": "longest-route-ships",
+            "icon": "🛣️",
+            "title": "Longest Route counts ships too",
+            "body": "Longest Trade Route adds roads and ships together. When rivals wall off your land, a sea leg can win or hold the 2 VP.",
+            "tags": ["longest-route", "tempo"]
+          },
+          {
+            "id": "ship-roi",
+            "icon": "🧭",
+            "title": "Make every ship pay",
+            "body": "An island settlement is several ships plus the build. Commit only when the new production or island bonus clearly earns those resources back.",
+            "tags": ["resources", "planning"]
           }
         ],
         "advanced": [
           {
             "id": "chain-break",
             "icon": "⚠️",
-            "title": "Guard the fragile end of your chain",
-            "body": "A single opponent ship placed at an ambiguous junction can sever your longest shipping route from the settlement that anchors it — nullifying Longest Route and possibly 2 VP. Leave no unprotected endings in the last 3 turns.",
+            "title": "Guard your route's open end",
+            "body": "A single enemy ship at an ambiguous junction can cut your longest route from its anchor settlement, costing Longest Route and 2 VP. Leave no open ends in the final turns.",
             "tags": ["endgame", "longest-route"]
+          },
+          {
+            "id": "landing-race",
+            "icon": "🏁",
+            "title": "Win the landing race",
+            "body": "First-settlement bonuses go to whoever arrives first. Against a rival eyeing the same island, an extra ship to land one turn early can swing a net VP.",
+            "tags": ["endgame", "scoring"]
+          },
+          {
+            "id": "feed-engine",
+            "icon": "⚡",
+            "title": "Feed the ship engine",
+            "body": "Sea expansion burns resources fast, so dead turns hurt more. Anchor on gold and 6/8 hexes for the wool and wood that keep a route moving.",
+            "tags": ["probability", "resources"]
           }
         ]
       }

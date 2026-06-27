@@ -792,48 +792,78 @@
       "strategy": {
         "beginner": [
           {
-            "id": "ship-network",
+            "id": "ships-movable",
             "icon": "⛵",
-            "title": "Ships are roads you can move",
-            "body": "Once per turn, the open end of a ship chain can be moved. Build ships loosely at first; you'll reroute them toward whichever island your opponents underbid.",
-            "tags": [
-              "ships",
-              "opening"
-            ]
+            "title": "Navios são estradas móveis",
+            "body": "Construa navios para atravessar a água; uma vez por turno pode redirecionar a extremidade aberta de uma cadeia. Coloque-os sem compromisso e aponte para a ilha que os adversários deixarem em aberto.",
+            "tags": ["ships", "opening"]
           },
           {
-            "id": "settle-new-islands",
+            "id": "ship-economy",
+            "icon": "🐑",
+            "title": "Navios custam Madeira + Lã",
+            "body": "As estradas terrestres custam Madeira + Tijolo, mas cada navio custa 1 Madeira + 1 Lã. Escolha um início com Lã e Madeira regulares para se poder dar ao luxo de navegar.",
+            "tags": ["ships", "resources"]
+          },
+          {
+            "id": "new-island-bonus",
             "icon": "🏝️",
-            "title": "Island VPs beat resource VPs",
-            "body": "Most scenarios grant +1–2 VP per first-settlement on a new island. A 4-pip spot on a new island usually beats an 8-pip spot at home once you factor in the bonus.",
-            "tags": [
-              "placement",
-              "scoring"
-            ]
+            "title": "Vá atrás dos bónus de nova ilha",
+            "body": "A maioria dos cenários dá VP de bónus pela sua primeira povoação em cada nova ilha — muitas vezes vale mais do que um número mais quente lá em casa.",
+            "tags": ["placement", "scoring"]
+          },
+          {
+            "id": "gold-wild",
+            "icon": "🪙",
+            "title": "O Ouro é um recurso selvagem",
+            "body": "Os hexágonos de Campo de Ouro dão qualquer recurso à sua escolha, por isso um local de ouro é mais flexível do que as pintas sugerem. Trate-o como um número premium.",
+            "tags": ["placement", "resources"]
           }
         ],
         "intermediate": [
           {
             "id": "pirate-vs-robber",
             "icon": "🏴‍☠️",
-            "title": "Pirate, not robber, on shipping leaders",
-            "body": "On a 7, move the pirate onto a hex full of opponent ships rather than robbing production. It freezes their expansion AND lets you steal — two birds, one die.",
-            "tags": [
-              "robber",
-              "ships"
-            ]
+            "title": "No mar, o Pirata vence o Ladrão",
+            "body": "Com um 7, encostar o Pirata aos navios de um adversário congela a expansão marítima dele e mesmo assim permite-lhe roubar — normalmente melhor do que bloquear um hexágono de terra.",
+            "tags": ["robber", "ships"]
+          },
+          {
+            "id": "longest-route-ships",
+            "icon": "🛣️",
+            "title": "A Maior Rota também conta navios",
+            "body": "A Maior Rota soma estradas e navios. Quando os rivais lhe bloqueiam a expansão em terra, um troço por mar pode ganhar ou segurar os 2 VP.",
+            "tags": ["longest-route", "tempo"]
+          },
+          {
+            "id": "ship-roi",
+            "icon": "🧭",
+            "title": "Faça cada navio render",
+            "body": "Uma povoação numa ilha custa vários navios mais a própria construção. Avance só quando a nova produção ou o bónus de ilha recuperarem claramente esses recursos.",
+            "tags": ["resources", "planning"]
           }
         ],
         "advanced": [
           {
             "id": "chain-break",
             "icon": "⚠️",
-            "title": "Guard the fragile end of your chain",
-            "body": "A single opponent ship placed at an ambiguous junction can sever your longest shipping route from the settlement that anchors it — nullifying Longest Route and possibly 2 VP. Leave no unprotected endings in the last 3 turns.",
-            "tags": [
-              "endgame",
-              "longest-route"
-            ]
+            "title": "Proteja a extremidade aberta da sua rota",
+            "body": "Um único navio inimigo num cruzamento ambíguo pode cortar a sua rota mais longa da povoação que a ancora, custando-lhe a Maior Rota e 2 VP. Não deixe extremidades abertas nos últimos turnos.",
+            "tags": ["endgame", "longest-route"]
+          },
+          {
+            "id": "landing-race",
+            "icon": "🏁",
+            "title": "Ganhe a corrida ao desembarque",
+            "body": "Os bónus de primeira povoação vão para quem chega primeiro. Contra um rival de olho na mesma ilha, um navio extra para desembarcar um turno mais cedo pode valer um VP líquido.",
+            "tags": ["endgame", "scoring"]
+          },
+          {
+            "id": "feed-engine",
+            "icon": "⚡",
+            "title": "Alimente o motor dos navios",
+            "body": "A expansão marítima queima recursos depressa, por isso os turnos mortos doem mais. Ancore-se em Campos de Ouro e hexágonos de 6/8 pela Lã e Madeira que mantêm a rota em movimento.",
+            "tags": ["probability", "resources"]
           }
         ]
       }

@@ -933,48 +933,78 @@
       "strategy": {
         "beginner": [
           {
-            "id": "ship-network",
+            "id": "ships-movable",
             "icon": "⛵",
-            "title": "Ships are roads you can move",
-            "body": "Once per turn, the open end of a ship chain can be moved. Build ships loosely at first; you'll reroute them toward whichever island your opponents underbid.",
-            "tags": [
-              "ships",
-              "opening"
-            ]
+            "title": "Les bateaux sont des routes mobiles",
+            "body": "Construisez des bateaux pour traverser l'eau ; une fois par tour, vous pouvez dérouter l'extrémité ouverte d'une chaîne. Posez-les sans trop vous engager, puis visez l'île que les adversaires laissent libre.",
+            "tags": ["ships", "opening"]
           },
           {
-            "id": "settle-new-islands",
+            "id": "ship-economy",
+            "icon": "🐑",
+            "title": "Les bateaux coûtent bois + laine",
+            "body": "Les routes terrestres, c'est bois + argile, mais chaque bateau coûte 1 bois + 1 laine. Choisissez un départ avec un flux régulier de laine et de bois pour pouvoir vraiment naviguer.",
+            "tags": ["ships", "resources"]
+          },
+          {
+            "id": "new-island-bonus",
             "icon": "🏝️",
-            "title": "Island VPs beat resource VPs",
-            "body": "Most scenarios grant +1–2 VP per first-settlement on a new island. A 4-pip spot on a new island usually beats an 8-pip spot at home once you factor in the bonus.",
-            "tags": [
-              "placement",
-              "scoring"
-            ]
+            "title": "Courez après les bonus de nouvelle île",
+            "body": "La plupart des scénarios accordent des PV bonus pour votre première colonie sur chaque nouvelle île — souvent plus que ne vaut un meilleur numéro chez vous.",
+            "tags": ["placement", "scoring"]
+          },
+          {
+            "id": "gold-wild",
+            "icon": "🪙",
+            "title": "L'or est une ressource libre",
+            "body": "Les cases champ d'or produisent la ressource de votre choix : un emplacement sur l'or est donc plus souple que son nombre de pips ne le laisse croire. Traitez-le comme un numéro de premier choix.",
+            "tags": ["placement", "resources"]
           }
         ],
         "intermediate": [
           {
             "id": "pirate-vs-robber",
             "icon": "🏴‍☠️",
-            "title": "Pirate, not robber, on shipping leaders",
-            "body": "On a 7, move the pirate onto a hex full of opponent ships rather than robbing production. It freezes their expansion AND lets you steal — two birds, one die.",
-            "tags": [
-              "robber",
-              "ships"
-            ]
+            "title": "En mer, le Pirate bat le Voleur",
+            "body": "Sur un 7, poser le Pirate à côté des bateaux d'un adversaire gèle son expansion maritime tout en vous laissant voler — généralement mieux que de bloquer une case terrestre.",
+            "tags": ["robber", "ships"]
+          },
+          {
+            "id": "longest-route-ships",
+            "icon": "🛣️",
+            "title": "La Route la Plus Longue compte aussi les bateaux",
+            "body": "La Route la Plus Longue additionne routes et bateaux. Quand les adversaires verrouillent vos terres, un tronçon maritime peut vous faire gagner ou conserver les 2 PV.",
+            "tags": ["longest-route", "tempo"]
+          },
+          {
+            "id": "ship-roi",
+            "icon": "🧭",
+            "title": "Rentabilisez chaque bateau",
+            "body": "Une colonie insulaire, c'est plusieurs bateaux plus la construction. Ne vous lancez que si la nouvelle production ou le bonus d'île rembourse clairement ces ressources.",
+            "tags": ["resources", "planning"]
           }
         ],
         "advanced": [
           {
             "id": "chain-break",
             "icon": "⚠️",
-            "title": "Guard the fragile end of your chain",
-            "body": "A single opponent ship placed at an ambiguous junction can sever your longest shipping route from the settlement that anchors it — nullifying Longest Route and possibly 2 VP. Leave no unprotected endings in the last 3 turns.",
-            "tags": [
-              "endgame",
-              "longest-route"
-            ]
+            "title": "Protégez l'extrémité ouverte de votre route",
+            "body": "Un seul bateau adverse à une jonction ambiguë peut couper votre route la plus longue de sa colonie d'ancrage, vous coûtant la Route la Plus Longue et 2 PV. Ne laissez aucune extrémité ouverte dans les derniers tours.",
+            "tags": ["endgame", "longest-route"]
+          },
+          {
+            "id": "landing-race",
+            "icon": "🏁",
+            "title": "Gagnez la course à l'accostage",
+            "body": "Les bonus de première colonie reviennent au premier arrivé. Face à un rival qui lorgne la même île, un bateau de plus pour accoster un tour plus tôt peut faire la différence d'un PV net.",
+            "tags": ["endgame", "scoring"]
+          },
+          {
+            "id": "feed-engine",
+            "icon": "⚡",
+            "title": "Alimentez la machine à bateaux",
+            "body": "L'expansion maritime brûle les ressources vite, donc les tours blancs coûtent plus cher. Ancrez-vous sur les champs d'or et les cases 6/8 pour la laine et le bois qui font avancer votre route.",
+            "tags": ["probability", "resources"]
           }
         ]
       }
