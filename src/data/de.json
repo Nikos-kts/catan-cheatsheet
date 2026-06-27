@@ -36,15 +36,15 @@
       "diceNote": "Red numbers (6 and 8) have the highest per-roll chance. A 7 rolls the robber."
     },
     "strategy": {
-      "heading": "Strategy Guide",
-      "subheading": "Tips grouped by level. Use the pills to filter.",
-      "filterLabel": "Filter by level",
-      "levelAll": "All",
-      "level_beginner": "Beginner",
-      "level_intermediate": "Intermediate",
-      "level_advanced": "Advanced",
-      "countTips": "tips",
-      "empty": "No strategy tips for this selection yet."
+      "heading": "Strategie-Leitfaden",
+      "subheading": "Tipps nach Stufe gruppiert. Zum Filtern die Schaltflächen nutzen.",
+      "filterLabel": "Nach Stufe filtern",
+      "levelAll": "Alle",
+      "level_beginner": "Anfänger",
+      "level_intermediate": "Fortgeschritten",
+      "level_advanced": "Experte",
+      "countTips": "Tipps",
+      "empty": "Noch keine Strategietipps für diese Auswahl."
     },
     "tools": {
       "heading": "Interactive Tools",
