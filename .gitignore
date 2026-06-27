@@ -26,3 +26,6 @@ npm-debug.log*
 # OS temp files
 *.tmp
 *.swp
+
+# Claude Code worktrees (parallel agent workspaces)
+.claude/worktrees/
