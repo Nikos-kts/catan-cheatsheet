@@ -37,15 +37,13 @@
     },
     "strategy": {
       "heading": "Strategy Guide",
-      "subheading": "Tips grouped by level. Use the pills to filter, or overlay tips from other expansions.",
+      "subheading": "Tips grouped by level. Use the pills to filter.",
       "filterLabel": "Filter by level",
       "levelAll": "All",
       "level_beginner": "Beginner",
       "level_intermediate": "Intermediate",
       "level_advanced": "Advanced",
       "countTips": "tips",
-      "extrasLabel": "Also show strategy from:",
-      "overlayBadge": "from",
       "empty": "No strategy tips for this selection yet."
     },
     "tools": {

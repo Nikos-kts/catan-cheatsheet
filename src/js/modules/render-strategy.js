@@ -1,12 +1,8 @@
-// Strategy-tab renderer (🧠). Shows tips bucketed by level (beginner,
-// intermediate, advanced) with a pill filter (All + per-level). A secondary
-// checkbox group lets users overlay strategy tips from *other* games
-// (persisted as `catan-strategy-extras`).
+// Strategy-tab renderer (🧠). Shows tips for the selected game bucketed by
+// level (beginner, intermediate, advanced) with a pill filter (All + per-level).
 
 import { state } from "./state.js";
 import { initAccordions } from "./accordions.js";
-import { setJSON } from "./storage.js";
-import { STORAGE_KEYS } from "./constants.js";
 
 const LEVELS = ["beginner", "intermediate", "advanced"];
 
@@ -30,9 +26,7 @@ export function renderStrategy(game) {
   }
   main.appendChild(desc);
 
-  // Build combined tips list: primary game + any overlay extras.
-  const primary = game.strategy || {};
-  const overlays = getOverlayStrategies();
+  const strategy = game.strategy || {};
 
   // Level pill filter
   const pills = document.createElement("div");
@@ -40,17 +34,12 @@ export function renderStrategy(game) {
   pills.setAttribute("role", "tablist");
   pills.setAttribute("aria-label", ui.filterLabel || "Filter by level");
 
-  const pillAll = makePill(ui.levelAll || "All", "all", true);
-  pills.appendChild(pillAll);
+  pills.appendChild(makePill(ui.levelAll || "All", "all", true));
   LEVELS.forEach((lvl) => {
     const label = ui["level_" + lvl] || capitalize(lvl);
     pills.appendChild(makePill(label, lvl, false));
   });
   main.appendChild(pills);
-
-  // Overlay toggle (secondary) — "Also show strategy from:"
-  const extrasWrap = buildExtrasToggle(ui);
-  if (extrasWrap) main.appendChild(extrasWrap);
 
   // Body container holding the level sections; re-rendered on filter change.
   const body = document.createElement("div");
@@ -64,7 +53,7 @@ export function renderStrategy(game) {
     LEVELS.forEach((lvl) => {
       if (activeLevel !== "all" && activeLevel !== lvl) return;
 
-      const tips = collectTips(lvl, primary, overlays, ui);
+      const tips = Array.isArray(strategy[lvl]) ? strategy[lvl] : [];
       if (!tips.length) return;
       anyShown = true;
 
@@ -80,7 +69,7 @@ export function renderStrategy(game) {
 
       const list = document.createElement("div");
       list.className = "strategy-list";
-      tips.forEach((tip) => list.appendChild(buildTipCard(tip, ui)));
+      tips.forEach((tip) => list.appendChild(buildTipCard(tip)));
 
       const bodyWrap = document.createElement("div");
       bodyWrap.className = "collapsible-body";
@@ -116,79 +105,7 @@ export function renderStrategy(game) {
   renderLevels("all");
 }
 
-function buildExtrasToggle(ui) {
-  const others = Object.entries(state.data.games || {}).filter(
-    ([id]) => id !== state.game,
-  );
-  if (!others.length) return null;
-
-  const wrap = document.createElement("div");
-  wrap.className = "strategy-extras";
-
-  const label = document.createElement("div");
-  label.className = "strategy-extras-label";
-  label.textContent = ui.extrasLabel || "Also show strategy from:";
-  wrap.appendChild(label);
-
-  const row = document.createElement("div");
-  row.className = "strategy-extras-row";
-
-  others.forEach(([id, g]) => {
-    // Only offer games that actually have a strategy block.
-    if (!g.strategy) return;
-    const chk = document.createElement("label");
-    chk.className = "strategy-extra-chip";
-    const input = document.createElement("input");
-    input.type = "checkbox";
-    input.value = id;
-    input.checked = state.strategyExtras.includes(id);
-    input.addEventListener("change", () => {
-      if (input.checked) {
-        if (!state.strategyExtras.includes(id)) state.strategyExtras.push(id);
-      } else {
-        state.strategyExtras = state.strategyExtras.filter((x) => x !== id);
-      }
-      setJSON(STORAGE_KEYS.strategyExtras, state.strategyExtras);
-      // Re-render whole tab to pick up new tips.
-      renderStrategy(state.data.games[state.game]);
-    });
-    chk.appendChild(input);
-    const span = document.createElement("span");
-    span.textContent = g.name || id;
-    chk.appendChild(span);
-    row.appendChild(chk);
-  });
-
-  if (!row.childNodes.length) return null;
-  wrap.appendChild(row);
-  return wrap;
-}
-
-function getOverlayStrategies() {
-  const out = [];
-  (state.strategyExtras || []).forEach((id) => {
-    const g = state.data.games && state.data.games[id];
-    if (g && g.strategy) out.push({ id, name: g.name || id, strategy: g.strategy });
-  });
-  return out;
-}
-
-function collectTips(level, primaryStrategy, overlays, ui) {
-  const out = [];
-  const primaryTips = Array.isArray(primaryStrategy[level])
-    ? primaryStrategy[level]
-    : [];
-  primaryTips.forEach((t) => out.push({ ...t, _source: null }));
-  overlays.forEach((ov) => {
-    const tips = Array.isArray(ov.strategy[level]) ? ov.strategy[level] : [];
-    tips.forEach((t) =>
-      out.push({ ...t, _source: ov.name, _sourceBadge: ui.overlayBadge || "from" }),
-    );
-  });
-  return out;
-}
-
-function buildTipCard(tip, ui) {
+function buildTipCard(tip) {
   const card = document.createElement("article");
   card.className = "strategy-card";
 
@@ -202,14 +119,6 @@ function buildTipCard(tip, ui) {
   title.className = "strategy-card-title";
   title.textContent = tip.title || "";
   head.appendChild(title);
-
-  if (tip._source) {
-    const badge = document.createElement("span");
-    badge.className = "strategy-card-source";
-    badge.textContent = `${tip._sourceBadge || "from"} ${tip._source}`;
-    head.appendChild(badge);
-  }
-
   card.appendChild(head);
 
   if (tip.body) {

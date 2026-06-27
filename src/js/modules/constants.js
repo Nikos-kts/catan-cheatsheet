@@ -76,5 +76,4 @@ export const STORAGE_KEYS = {
   lang: "catan-lang",
   game: "catan-game",
   tab: "catan-tab",
-  strategyExtras: "catan-strategy-extras",
 };

@@ -7,7 +7,7 @@ import {
   STORAGE_KEYS,
   VALID_TABS,
 } from "./modules/constants.js";
-import { getString, setString, getJSON } from "./modules/storage.js";
+import { getString, setString } from "./modules/storage.js";
 import { loadData } from "./modules/data-loader.js";
 import { updateGameBanner } from "./modules/theme.js";
 import { initTabs, syncActiveTab, initStickyTabs } from "./modules/tabs.js";
@@ -23,8 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const savedLang = getString(STORAGE_KEYS.lang);
   const savedGame = getString(STORAGE_KEYS.game);
   const savedTab = getString(STORAGE_KEYS.tab);
-  const savedExtras = getJSON(STORAGE_KEYS.strategyExtras, []);
-  if (Array.isArray(savedExtras)) state.strategyExtras = savedExtras;
 
   const langSelect = document.getElementById("lang-select");
   if (langSelect && savedLang && SUPPORTED_LANGS.includes(savedLang)) {

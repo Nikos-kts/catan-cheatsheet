@@ -4,8 +4,6 @@ export const state = {
   game: "base",
   tab: "cards",
   data: null,
-  // extra expansion strategy overlays (array of game ids). Populated from storage.
-  strategyExtras: [],
 };
 
 const listeners = new Set();
