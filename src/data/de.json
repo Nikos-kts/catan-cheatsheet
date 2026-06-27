@@ -1574,48 +1574,85 @@
       "strategy": {
         "beginner": [
           {
-            "id": "build-city-first",
+            "id": "cities-engine",
             "icon": "🏛️",
-            "title": "Race to a second city fast",
-            "body": "Only cities produce commodities, and almost every progress-card effect assumes you have commodities to spend. Two cities by turn 5–6 is the C&K version of 'good opening'.",
-            "tags": [
-              "cities",
-              "opening"
-            ]
+            "title": "Städte sind dein Motor",
+            "body": "Nur Städte produzieren Waren (Münze, Tuch, Papier), und fast jede Karte in Städte & Ritter braucht sie. Ziel auf eine zweite Stadt bis Zug 5–6.",
+            "tags": ["cities", "opening"]
           },
           {
-            "id": "keep-a-knight",
+            "id": "match-terrain",
+            "icon": "🗺️",
+            "title": "Gelände auf deine Leiste abstimmen",
+            "body": "Erz liefert Münze (Politik), Wolle liefert Tuch (Handel), Holz liefert Papier (Wissenschaft). Setze deine Städte auf die Ware, die die gewünschte Leiste füttert.",
+            "tags": ["placement", "resources"]
+          },
+          {
+            "id": "first-attack",
             "icon": "⚔️",
-            "title": "Always have one active knight",
-            "body": "An active knight defends Catan during barbarian attacks. Being the sole defender earns Defender of Catan (VP), and being undefended loses you a city — the swing is huge.",
-            "tags": [
-              "knights",
-              "barbarians"
-            ]
+            "title": "Sei bereit für den ersten Barbarenangriff",
+            "body": "Baue und aktiviere früh einen Ritter — das Barbarenschiff landet schneller, als neue Spieler denken, und wenn Catan fällt, verliert der schwächste Verteidiger eine Stadt.",
+            "tags": ["knights", "barbarians"]
+          },
+          {
+            "id": "protect-last-city",
+            "icon": "🚨",
+            "title": "Verliere nie deine letzte Stadt",
+            "body": "Das ist das Allerwichtigste in Städte & Ritter. Verlierst du deine letzte Stadt, stockt dein Motor: Siedlungen produzieren keine Waren, also liegt jede gekaufte Verbesserung brach, bis du neu baust. Schütze sie über alles.",
+            "tags": ["cities", "barbarians"]
+          },
+          {
+            "id": "city-walls",
+            "icon": "🧱",
+            "title": "Mauern bauen, bevor eine 7 wehtut",
+            "body": "Jede Stadtmauer lässt dich zwei Karten mehr halten. Wenn sich Waren stapeln, schützen Mauern deine Hand davor, bei einer 7 halbiert zu werden.",
+            "tags": ["cities", "robber"]
           }
         ],
         "intermediate": [
           {
-            "id": "track-tempo",
-            "icon": "📏",
-            "title": "Pick one track and commit",
-            "body": "Trade, Science and Politics each unlock powerful tempo spikes at levels 3+. Spreading across all three keeps you at level 1 in all — a wasted tempo.",
-            "tags": [
-              "improvements",
-              "tempo"
-            ]
+            "id": "focus-one-track",
+            "icon": "🎯",
+            "title": "Eine Leiste fokussieren, alle drei antippen",
+            "body": "Treibe eine Leiste auf Stufe 3+, schnapp dir aber trotzdem die günstigen Stufe-1-Verbesserungen der anderen beiden. Jede gehaltene Stufe lässt dich die Fortschrittskarte dieser Farbe ziehen — etwas Breite hält also den Kartenfluss am Laufen, während deine Hauptleiste gewinnt.",
+            "tags": ["improvements", "tempo"]
+          },
+          {
+            "id": "level-three-payoff",
+            "icon": "📈",
+            "title": "Stufe 3 ist der eigentliche Lohn",
+            "body": "Wissenschaft 3 bringt den Aquädukt (einen freien Rohstoff, wenn du sonst leer ausgehst), Politik 3 schaltet mächtige Ritter frei, Handel 3 bringt bessere Tauschraten. Bring deine Hauptleiste schnell dorthin.",
+            "tags": ["improvements", "planning"]
+          },
+          {
+            "id": "promote-knights",
+            "icon": "🐴",
+            "title": "Ritter befördern, nicht nur anhäufen",
+            "body": "Ein mächtiger Ritter (Stufe 3) bringt 3 Stärke für dieselbe Aktivierung mit einem Getreide und übertrumpft feindliche Ritter, wenn du sie verdrängst oder den Räuber vertreibst. Qualität schlägt eine Masse einfacher Ritter.",
+            "tags": ["knights", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "metro-timing",
+            "id": "defender-vp",
+            "icon": "🛡️",
+            "title": "Sammle SP als Verteidiger von Catan",
+            "body": "Bei jedem abgewehrten Angriff bekommt der allein stärkste Verteidiger einen SP als Verteidiger von Catan. Pro Partie gibt es mehrere Angriffe, daher ist es ein stiller Weg zu mehreren SP, immer wieder der stärkste Ritter zu sein.",
+            "tags": ["barbarians", "scoring"]
+          },
+          {
+            "id": "metropolis-timing",
             "icon": "🏙️",
-            "title": "Time the metropolis before barbarians",
-            "body": "Reaching track level 4 lets you build a metropolis (2 extra VP). Do it when barbarians are 1–2 rolls from landing: the metropolis city can't be pillaged, so your VP is locked in even if Catan falls.",
-            "tags": [
-              "endgame",
-              "barbarians"
-            ]
+            "title": "Die Metropole um die Barbaren herum timen",
+            "body": "Stufe 4 einer Leiste baut eine Stadt zur Metropole aus (+2 SP), die nie geplündert werden kann. Sichere sie dir, wenn die Barbaren noch 1–2 Würfe vom Landen entfernt sind, damit deine SP sicher sind, selbst wenn eine Stadt fällt.",
+            "tags": ["endgame", "barbarians"]
+          },
+          {
+            "id": "swing-cards",
+            "icon": "🎴",
+            "title": "Auf die entscheidenden Karten hinarbeiten",
+            "body": "Wenige Fortschrittskarten entscheiden Partien: Drucker und Verfassung sind dauerhafte Siegpunkte, der Bischof beraubt alle rund um ein Feld, der Alchemist bestimmt die Würfel. Lenke deine Leiste auf das Deck, das dein Spiel gewinnt.",
+            "tags": ["endgame", "progress-cards"]
           }
         ]
       }

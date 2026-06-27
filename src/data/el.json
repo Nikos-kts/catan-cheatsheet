@@ -1589,48 +1589,85 @@
       "strategy": {
         "beginner": [
           {
-            "id": "build-city-first",
+            "id": "cities-engine",
             "icon": "🏛️",
-            "title": "Race to a second city fast",
-            "body": "Only cities produce commodities, and almost every progress-card effect assumes you have commodities to spend. Two cities by turn 5–6 is the C&K version of 'good opening'.",
-            "tags": [
-              "cities",
-              "opening"
-            ]
+            "title": "Οι πόλεις είναι η μηχανή σου",
+            "body": "Μόνο οι πόλεις παράγουν εμπορεύματα (Νόμισμα, Ύφασμα, Χαρτί), και σχεδόν κάθε κάρτα στις Πόλεις & Ιππότες τα χρειάζεται. Στόχευσε σε δεύτερη πόλη μέχρι τον γύρο 5–6.",
+            "tags": ["cities", "opening"]
           },
           {
-            "id": "keep-a-knight",
+            "id": "match-terrain",
+            "icon": "🗺️",
+            "title": "Ταίριαξε το έδαφος με τον δείκτη σου",
+            "body": "Το Μετάλλευμα δίνει Νόμισμα (Πολιτική), το Μαλλί Ύφασμα (Εμπόριο), η Ξυλεία Χαρτί (Επιστήμη). Βάλε πόλεις στο εμπόρευμα που τροφοδοτεί τον δείκτη που θες να ανεβάσεις.",
+            "tags": ["placement", "resources"]
+          },
+          {
+            "id": "first-attack",
             "icon": "⚔️",
-            "title": "Always have one active knight",
-            "body": "An active knight defends Catan during barbarian attacks. Being the sole defender earns Defender of Catan (VP), and being undefended loses you a city — the swing is huge.",
-            "tags": [
-              "knights",
-              "barbarians"
-            ]
+            "title": "Έτοιμος για την πρώτη επίθεση των βαρβάρων",
+            "body": "Χτίσε και ενεργοποίησε έναν ιππότη νωρίς — το πλοίο των βαρβάρων φτάνει πιο γρήγορα απ' ό,τι περιμένουν οι νέοι παίκτες, και όταν πέφτει το Catan ο πιο αδύναμος αμυνόμενος χάνει μια πόλη.",
+            "tags": ["knights", "barbarians"]
+          },
+          {
+            "id": "protect-last-city",
+            "icon": "🚨",
+            "title": "Μη χάσεις ποτέ την τελευταία σου πόλη",
+            "body": "Είναι το πιο σημαντικό πράγμα στις Πόλεις & Ιππότες. Αν χάσεις την τελευταία πόλη, η μηχανή σου παγώνει: οι οικισμοί δεν παράγουν εμπορεύματα, οπότε κάθε βελτίωση που αγόρασες μένει άχρηστη μέχρι να ξαναχτίσεις. Φύλαξέ την πάνω απ' όλα.",
+            "tags": ["cities", "barbarians"]
+          },
+          {
+            "id": "city-walls",
+            "icon": "🧱",
+            "title": "Χτίσε τείχη πριν σε πονέσει το 7",
+            "body": "Κάθε τείχος πόλης σου επιτρέπει να κρατάς δύο κάρτες παραπάνω. Καθώς μαζεύονται τα εμπορεύματα, τα τείχη εμποδίζουν το 7 να σου αδειάσει το χέρι.",
+            "tags": ["cities", "robber"]
           }
         ],
         "intermediate": [
           {
-            "id": "track-tempo",
-            "icon": "📏",
-            "title": "Pick one track and commit",
-            "body": "Trade, Science and Politics each unlock powerful tempo spikes at levels 3+. Spreading across all three keeps you at level 1 in all — a wasted tempo.",
-            "tags": [
-              "improvements",
-              "tempo"
-            ]
+            "id": "focus-one-track",
+            "icon": "🎯",
+            "title": "Επικεντρώσου σε έναν δείκτη, άγγιξε και τους τρεις",
+            "body": "Ανέβασε έναν δείκτη στο επίπεδο 3+, αλλά πάρε και φθηνές βελτιώσεις επιπέδου 1 στους άλλους δύο. Κάθε επίπεδο που έχεις σου επιτρέπει να τραβάς την κάρτα προόδου εκείνου του χρώματος, οπότε λίγο εύρος κρατά τις κάρτες να ρέουν ενώ ο κύριος δείκτης σου σε πάει στη νίκη.",
+            "tags": ["improvements", "tempo"]
+          },
+          {
+            "id": "level-three-payoff",
+            "icon": "📈",
+            "title": "Το επίπεδο 3 είναι η πραγματική ανταμοιβή",
+            "body": "Η Επιστήμη 3 δίνει το Υδραγωγείο (δωρεάν πόρος όταν δεν παράγεις τίποτα), η Πολιτική 3 ξεκλειδώνει τους ισχυρούς ιππότες, το Εμπόριο 3 φέρνει καλύτερες ισοτιμίες ανταλλαγής. Φτάσε εκεί γρήγορα με τον κύριο δείκτη σου.",
+            "tags": ["improvements", "planning"]
+          },
+          {
+            "id": "promote-knights",
+            "icon": "🐴",
+            "title": "Αναβάθμισε τους ιππότες, μη τους στοιβάζεις",
+            "body": "Ένας ισχυρός (επιπέδου 3) ιππότης δίνει 3 δύναμη με την ίδια ενεργοποίηση ενός σιταριού, και υπερισχύει εχθρικών ιπποτών όταν τους εκτοπίζεις ή κυνηγάς τον ληστή. Η ποιότητα νικά το πλήθος των βασικών.",
+            "tags": ["knights", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "metro-timing",
+            "id": "defender-vp",
+            "icon": "🛡️",
+            "title": "Μάζεψε ΠΝ Υπερασπιστή του Catan",
+            "body": "Σε κάθε επίθεση που αποκρούεται, ο μοναδικός ισχυρότερος αμυνόμενος παίρνει έναν Πόντο Νίκης Υπερασπιστή του Catan. Υπάρχουν αρκετές επιθέσεις ανά παιχνίδι, οπότε το να είσαι ξανά και ξανά ο κορυφαίος ιππότης είναι ένας αθόρυβος δρόμος προς πολλούς πόντους.",
+            "tags": ["barbarians", "scoring"]
+          },
+          {
+            "id": "metropolis-timing",
             "icon": "🏙️",
-            "title": "Time the metropolis before barbarians",
-            "body": "Reaching track level 4 lets you build a metropolis (2 extra VP). Do it when barbarians are 1–2 rolls from landing: the metropolis city can't be pillaged, so your VP is locked in even if Catan falls.",
-            "tags": [
-              "endgame",
-              "barbarians"
-            ]
+            "title": "Χρονόμετρησε τη Μητρόπολη γύρω από τους βαρβάρους",
+            "body": "Το επίπεδο 4 ενός δείκτη αναβαθμίζει μια πόλη σε Μητρόπολη (+2 ΠΝ) που δεν λεηλατείται ποτέ. Κλείδωσέ την όταν οι βάρβαροι απέχουν 1–2 ζαριές από την άφιξη, ώστε οι ΠΝ σου να είναι ασφαλείς ακόμα κι αν πέσει μια πόλη.",
+            "tags": ["endgame", "barbarians"]
+          },
+          {
+            "id": "swing-cards",
+            "icon": "🎴",
+            "title": "Χτίσε προς τις καθοριστικές κάρτες",
+            "body": "Μερικές κάρτες προόδου κρίνουν παιχνίδια: ο Εκτυπωτής και το Σύνταγμα είναι μόνιμοι Πόντοι Νίκης, ο Επίσκοπος λεηλατεί μια ολόκληρη συστάδα, ο Αλχημιστής ρυθμίζει τα ζάρια. Κατεύθυνε τον δείκτη σου προς την τράπουλα που κερδίζει το παιχνίδι σου.",
+            "tags": ["endgame", "progress-cards"]
           }
         ]
       }

@@ -1586,48 +1586,85 @@
       "strategy": {
         "beginner": [
           {
-            "id": "build-city-first",
+            "id": "cities-engine",
             "icon": "🏛️",
-            "title": "Race to a second city fast",
-            "body": "Only cities produce commodities, and almost every progress-card effect assumes you have commodities to spend. Two cities by turn 5–6 is the C&K version of 'good opening'.",
-            "tags": [
-              "cities",
-              "opening"
-            ]
+            "title": "Vos villes, votre moteur",
+            "body": "Seules les villes produisent des marchandises (Pièce, Tissu, Papier), et presque chaque carte de Villes & Chevaliers en réclame. Visez une deuxième ville dès le tour 5–6.",
+            "tags": ["cities", "opening"]
           },
           {
-            "id": "keep-a-knight",
+            "id": "match-terrain",
+            "icon": "🗺️",
+            "title": "Accordez le terrain à votre voie",
+            "body": "Le Minerai donne la Pièce (Politique), la Laine donne le Tissu (Commerce), le Bois donne le Papier (Science). Placez vos villes sur la marchandise qui alimente la voie visée.",
+            "tags": ["placement", "resources"]
+          },
+          {
+            "id": "first-attack",
             "icon": "⚔️",
-            "title": "Always have one active knight",
-            "body": "An active knight defends Catan during barbarian attacks. Being the sole defender earns Defender of Catan (VP), and being undefended loses you a city — the swing is huge.",
-            "tags": [
-              "knights",
-              "barbarians"
-            ]
+            "title": "Préparez la première attaque barbare",
+            "body": "Recrutez et activez un chevalier tôt : le navire barbare arrive plus vite qu'on ne le croit, et si Catane tombe, le défenseur le plus faible perd une ville.",
+            "tags": ["knights", "barbarians"]
+          },
+          {
+            "id": "protect-last-city",
+            "icon": "🚨",
+            "title": "Ne perdez jamais votre dernière ville",
+            "body": "C'est la chose la plus importante de Villes & Chevaliers. Sans ville, votre moteur cale : les colonies ne produisent aucune marchandise, et toutes vos améliorations restent inutiles jusqu'à la reconstruction. Protégez-la avant tout.",
+            "tags": ["cities", "barbarians"]
+          },
+          {
+            "id": "city-walls",
+            "icon": "🧱",
+            "title": "Élevez des murailles avant qu'un 7 fasse mal",
+            "body": "Chaque muraille augmente votre limite de main de 2 cartes. Quand les marchandises s'accumulent, elles évitent qu'un 7 ne ravage votre main.",
+            "tags": ["cities", "robber"]
           }
         ],
         "intermediate": [
           {
-            "id": "track-tempo",
-            "icon": "📏",
-            "title": "Pick one track and commit",
-            "body": "Trade, Science and Politics each unlock powerful tempo spikes at levels 3+. Spreading across all three keeps you at level 1 in all — a wasted tempo.",
-            "tags": [
-              "improvements",
-              "tempo"
-            ]
+            "id": "focus-one-track",
+            "icon": "🎯",
+            "title": "Concentrez une voie, touchez les trois",
+            "body": "Poussez une voie au niveau 3+, mais prenez quand même les améliorations bon marché de niveau 1 sur les deux autres. Chaque niveau atteint permet de tirer la carte de progrès de cette couleur : un peu d'étendue garde les cartes en main pendant que votre voie principale gagne.",
+            "tags": ["improvements", "tempo"]
+          },
+          {
+            "id": "level-three-payoff",
+            "icon": "📈",
+            "title": "Le niveau 3, la vraie récompense",
+            "body": "Science 3 donne l'Aqueduc (une ressource gratuite quand vous ne produisez rien), Politique 3 débloque les chevaliers puissants, Commerce 3 offre de meilleurs ratios d'échange. Amenez-y votre voie principale rapidement.",
+            "tags": ["improvements", "planning"]
+          },
+          {
+            "id": "promote-knights",
+            "icon": "🐴",
+            "title": "Promouvez vos chevaliers, ne les empilez pas",
+            "body": "Un chevalier puissant (niveau 3) apporte 3 de force pour la même activation à 1 Blé, et surclasse les chevaliers ennemis quand vous les chassez ou poursuivez le Voleur. La qualité vaut mieux qu'une foule de basiques.",
+            "tags": ["knights", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "metro-timing",
+            "id": "defender-vp",
+            "icon": "🛡️",
+            "title": "Accumulez les PV de Défenseur de Catane",
+            "body": "À chaque attaque repoussée, le défenseur le plus fort remporte un point de victoire Défenseur de Catane. Il y a plusieurs attaques par partie : rester le meilleur chevalier encore et encore est un chemin discret vers plusieurs PV.",
+            "tags": ["barbarians", "scoring"]
+          },
+          {
+            "id": "metropolis-timing",
             "icon": "🏙️",
-            "title": "Time the metropolis before barbarians",
-            "body": "Reaching track level 4 lets you build a metropolis (2 extra VP). Do it when barbarians are 1–2 rolls from landing: the metropolis city can't be pillaged, so your VP is locked in even if Catan falls.",
-            "tags": [
-              "endgame",
-              "barbarians"
-            ]
+            "title": "Calez la métropole sur les barbares",
+            "body": "Le niveau 4 d'une voie transforme une ville en métropole (+2 PV), impossible à piller. Verrouillez-la quand les barbares sont à 1–2 lancers de débarquer, pour garder vos PV même si une ville tombe.",
+            "tags": ["endgame", "barbarians"]
+          },
+          {
+            "id": "swing-cards",
+            "icon": "🎴",
+            "title": "Visez les cartes décisives",
+            "body": "Quelques cartes de progrès décident des parties : l'Imprimeur et la Constitution sont des points de victoire que l'on garde, l'Évêque pille tout un secteur, l'Alchimiste fixe les dés. Orientez votre voie vers le paquet qui vous fera gagner.",
+            "tags": ["endgame", "progress-cards"]
           }
         ]
       }

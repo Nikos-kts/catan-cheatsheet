@@ -1573,48 +1573,85 @@
       "strategy": {
         "beginner": [
           {
-            "id": "build-city-first",
+            "id": "cities-engine",
             "icon": "🏛️",
-            "title": "Race to a second city fast",
-            "body": "Only cities produce commodities, and almost every progress-card effect assumes you have commodities to spend. Two cities by turn 5–6 is the C&K version of 'good opening'.",
-            "tags": [
-              "cities",
-              "opening"
-            ]
+            "title": "Las ciudades son tu motor",
+            "body": "Solo las ciudades producen mercancías (Moneda, Tela, Papel), y casi toda carta de Ciudades y Caballeros las necesita. Apunta a una segunda ciudad para el turno 5–6.",
+            "tags": ["cities", "opening"]
           },
           {
-            "id": "keep-a-knight",
+            "id": "match-terrain",
+            "icon": "🗺️",
+            "title": "Adapta el terreno a tu vía",
+            "body": "El Mineral da Moneda (Política), la Lana da Tela (Comercio) y la Madera da Papel (Ciencia). Coloca tus ciudades sobre la mercancía que alimenta la vía que quieres.",
+            "tags": ["placement", "resources"]
+          },
+          {
+            "id": "first-attack",
             "icon": "⚔️",
-            "title": "Always have one active knight",
-            "body": "An active knight defends Catan during barbarian attacks. Being the sole defender earns Defender of Catan (VP), and being undefended loses you a city — the swing is huge.",
-            "tags": [
-              "knights",
-              "barbarians"
-            ]
+            "title": "Prepárate para el primer ataque bárbaro",
+            "body": "Recluta y activa un caballero pronto: el barco bárbaro llega antes de lo que esperan los novatos, y cuando Catan cae el defensor más débil pierde una ciudad.",
+            "tags": ["knights", "barbarians"]
+          },
+          {
+            "id": "protect-last-city",
+            "icon": "🚨",
+            "title": "Nunca pierdas tu última ciudad",
+            "body": "Es lo más importante de Ciudades y Caballeros. Sin ciudades tu motor se para: los poblados no producen mercancías, así que cada mejora que compraste queda inútil hasta que reconstruyas. Protégela por encima de todo.",
+            "tags": ["cities", "barbarians"]
+          },
+          {
+            "id": "city-walls",
+            "icon": "🧱",
+            "title": "Amuralla antes de que el 7 duela",
+            "body": "Cada muralla te deja guardar dos cartas más. Cuando las mercancías se acumulan, las murallas evitan que un 7 te vacíe la mano.",
+            "tags": ["cities", "robber"]
           }
         ],
         "intermediate": [
           {
-            "id": "track-tempo",
-            "icon": "📏",
-            "title": "Pick one track and commit",
-            "body": "Trade, Science and Politics each unlock powerful tempo spikes at levels 3+. Spreading across all three keeps you at level 1 in all — a wasted tempo.",
-            "tags": [
-              "improvements",
-              "tempo"
-            ]
+            "id": "focus-one-track",
+            "icon": "🎯",
+            "title": "Céntrate en una vía, pero toca las tres",
+            "body": "Lleva una vía a nivel 3+, pero coge también las mejoras baratas de nivel 1 en las otras dos. Cada nivel que tengas te deja robar la carta de progreso de ese color, así que un poco de amplitud mantiene el flujo de cartas mientras tu vía principal gana.",
+            "tags": ["improvements", "tempo"]
+          },
+          {
+            "id": "level-three-payoff",
+            "icon": "📈",
+            "title": "El nivel 3 es la verdadera recompensa",
+            "body": "Ciencia 3 da el Acueducto (un recurso gratis cuando no produces), Política 3 desbloquea caballeros poderosos y Comercio 3 mejora tus ratios de cambio. Lleva tu vía principal allí rápido.",
+            "tags": ["improvements", "planning"]
+          },
+          {
+            "id": "promote-knights",
+            "icon": "🐴",
+            "title": "Promociona caballeros, no solo los acumules",
+            "body": "Un caballero poderoso (nivel 3) aporta 3 de fuerza por el mismo Trigo de activación, y supera a los caballeros enemigos al desplazarlos o perseguir al Ladrón. La calidad vence a un montón de básicos.",
+            "tags": ["knights", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "metro-timing",
+            "id": "defender-vp",
+            "icon": "🛡️",
+            "title": "Acumula PV de Defensor de Catan",
+            "body": "En cada ataque repelido, el defensor más fuerte se lleva un PV de Defensor de Catan. Hay varios ataques por partida, así que ser el mejor caballero una y otra vez es un camino discreto hacia varios puntos.",
+            "tags": ["barbarians", "scoring"]
+          },
+          {
+            "id": "metropolis-timing",
             "icon": "🏙️",
-            "title": "Time the metropolis before barbarians",
-            "body": "Reaching track level 4 lets you build a metropolis (2 extra VP). Do it when barbarians are 1–2 rolls from landing: the metropolis city can't be pillaged, so your VP is locked in even if Catan falls.",
-            "tags": [
-              "endgame",
-              "barbarians"
-            ]
+            "title": "Cronometra la metrópoli con los bárbaros",
+            "body": "El nivel 4 de una vía convierte una ciudad en metrópoli (+2 PV) que nunca puede ser saqueada. Asegúrala cuando los bárbaros estén a 1–2 tiradas de desembarcar, para que tus PV estén a salvo aunque caiga una ciudad.",
+            "tags": ["endgame", "barbarians"]
+          },
+          {
+            "id": "swing-cards",
+            "icon": "🎴",
+            "title": "Apunta a las cartas decisivas",
+            "body": "Unas pocas cartas de progreso deciden partidas: la Imprenta y la Constitución son PV que conservas, el Obispo saquea todo un grupo y el Alquimista fija los dados. Orienta tu vía hacia el mazo que gana tu partida.",
+            "tags": ["endgame", "progress-cards"]
           }
         ]
       }

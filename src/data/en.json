@@ -1458,36 +1458,85 @@
       "strategy": {
         "beginner": [
           {
-            "id": "build-city-first",
+            "id": "cities-engine",
             "icon": "🏛️",
-            "title": "Race to a second city fast",
-            "body": "Only cities produce commodities, and almost every progress-card effect assumes you have commodities to spend. Two cities by turn 5–6 is the C&K version of 'good opening'.",
+            "title": "Cities are your engine",
+            "body": "Only cities make commodities (coin, cloth, paper), and almost every Cities & Knights card needs them. Aim for a second city by turn 5–6.",
             "tags": ["cities", "opening"]
           },
           {
-            "id": "keep-a-knight",
+            "id": "match-terrain",
+            "icon": "🗺️",
+            "title": "Match terrain to your track",
+            "body": "Ore makes coin (Politics), wool makes cloth (Trade), wood makes paper (Science). Put cities on the commodity that feeds the track you want.",
+            "tags": ["placement", "resources"]
+          },
+          {
+            "id": "first-attack",
             "icon": "⚔️",
-            "title": "Always have one active knight",
-            "body": "An active knight defends Catan during barbarian attacks. Being the sole defender earns Defender of Catan (VP), and being undefended loses you a city — the swing is huge.",
+            "title": "Be ready for the first barbarian attack",
+            "body": "Build and activate a knight early — the barbarian ship lands sooner than new players expect, and when Catan falls the weakest defender loses a city.",
             "tags": ["knights", "barbarians"]
+          },
+          {
+            "id": "protect-last-city",
+            "icon": "🚨",
+            "title": "Never lose your last city",
+            "body": "This is the single most important thing in Cities & Knights. Lose your last city and your engine stalls: settlements make no commodities, so every improvement you bought sits useless until you rebuild. Guard it above all else.",
+            "tags": ["cities", "barbarians"]
+          },
+          {
+            "id": "city-walls",
+            "icon": "🧱",
+            "title": "Wall up before a 7 hurts",
+            "body": "Each city wall lets you hold two more cards. As commodities pile up, walls stop a robber roll from gutting your hand.",
+            "tags": ["cities", "robber"]
           }
         ],
         "intermediate": [
           {
-            "id": "track-tempo",
-            "icon": "📏",
-            "title": "Pick one track and commit",
-            "body": "Trade, Science and Politics each unlock powerful tempo spikes at levels 3+. Spreading across all three keeps you at level 1 in all — a wasted tempo.",
+            "id": "focus-one-track",
+            "icon": "🎯",
+            "title": "Focus one track, but touch all three",
+            "body": "Drive one track to level 3+, yet still grab cheap level-1 improvements on the other two. Every level you hold lets you draw that colour's progress card, so a little breadth keeps cards flowing while your main track wins.",
             "tags": ["improvements", "tempo"]
+          },
+          {
+            "id": "level-three-payoff",
+            "icon": "📈",
+            "title": "Level 3 is the real payoff",
+            "body": "Science 3 gives the Aqueduct (a free resource on dead rolls), Politics 3 unlocks mighty knights, Trade 3 brings better trade rates. Get your main track there fast.",
+            "tags": ["improvements", "planning"]
+          },
+          {
+            "id": "promote-knights",
+            "icon": "🐴",
+            "title": "Promote knights, don't just stack them",
+            "body": "A mighty (level-3) knight brings 3 strength for the same one-grain activation, and outranks enemy knights when you displace them or chase the robber. Quality beats a crowd of basics.",
+            "tags": ["knights", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "metro-timing",
+            "id": "defender-vp",
+            "icon": "🛡️",
+            "title": "Stack up Defender of Catan VPs",
+            "body": "Each repelled attack, the single strongest defender takes a Defender of Catan victory point. There are several attacks per game, so being top knight again and again is a quiet path to multiple points.",
+            "tags": ["barbarians", "scoring"]
+          },
+          {
+            "id": "metropolis-timing",
             "icon": "🏙️",
-            "title": "Time the metropolis before barbarians",
-            "body": "Reaching track level 4 lets you build a metropolis (2 extra VP). Do it when barbarians are 1–2 rolls from landing: the metropolis city can't be pillaged, so your VP is locked in even if Catan falls.",
+            "title": "Time the metropolis around barbarians",
+            "body": "Track level 4 upgrades a city to a metropolis (+2 VP) that can never be pillaged. Lock it in when barbarians are 1–2 rolls from landing, so your VP is safe even if a city falls.",
             "tags": ["endgame", "barbarians"]
+          },
+          {
+            "id": "swing-cards",
+            "icon": "🎴",
+            "title": "Build toward the swing cards",
+            "body": "A few progress cards decide games: Printer and Constitution are kept victory points, Bishop loots a whole cluster, Alchemist sets the dice. Steer your track toward the deck that wins your game.",
+            "tags": ["endgame", "progress-cards"]
           }
         ]
       }

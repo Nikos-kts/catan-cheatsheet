@@ -1449,48 +1449,85 @@
       "strategy": {
         "beginner": [
           {
-            "id": "build-city-first",
+            "id": "cities-engine",
             "icon": "🏛️",
-            "title": "Race to a second city fast",
-            "body": "Only cities produce commodities, and almost every progress-card effect assumes you have commodities to spend. Two cities by turn 5–6 is the C&K version of 'good opening'.",
-            "tags": [
-              "cities",
-              "opening"
-            ]
+            "title": "Steden zijn je motor",
+            "body": "Alleen steden maken handelsgoederen (munt, laken, papier), en bijna elke Steden & Ridders-kaart heeft ze nodig. Mik op een tweede stad rond beurt 5–6.",
+            "tags": ["cities", "opening"]
           },
           {
-            "id": "keep-a-knight",
+            "id": "match-terrain",
+            "icon": "🗺️",
+            "title": "Stem terrein af op je baan",
+            "body": "Erts geeft munt (Politiek), wol geeft laken (Handel), hout geeft papier (Wetenschap). Zet je steden op het handelsgoed dat de baan voedt die je wilt.",
+            "tags": ["placement", "resources"]
+          },
+          {
+            "id": "first-attack",
             "icon": "⚔️",
-            "title": "Always have one active knight",
-            "body": "An active knight defends Catan during barbarian attacks. Being the sole defender earns Defender of Catan (VP), and being undefended loses you a city — the swing is huge.",
-            "tags": [
-              "knights",
-              "barbarians"
-            ]
+            "title": "Wees klaar voor de eerste barbarenaanval",
+            "body": "Bouw en activeer vroeg een ridder — het barbarenschip landt sneller dan nieuwe spelers denken, en als Catan valt verliest de zwakste verdediger een stad.",
+            "tags": ["knights", "barbarians"]
+          },
+          {
+            "id": "protect-last-city",
+            "icon": "🚨",
+            "title": "Verlies nooit je laatste stad",
+            "body": "Dit is veruit het belangrijkste in Steden & Ridders. Verlies je laatste stad en je motor valt stil: nederzettingen maken geen handelsgoederen, dus elke verbetering die je kocht ligt nutteloos tot je herbouwt. Bescherm haar boven alles.",
+            "tags": ["cities", "barbarians"]
+          },
+          {
+            "id": "city-walls",
+            "icon": "🧱",
+            "title": "Bouw stadsmuren vóór een 7 pijn doet",
+            "body": "Elke stadsmuur laat je twee kaarten extra houden. Naarmate handelsgoederen zich opstapelen, voorkomt een muur dat een 7 je hand leegrooft.",
+            "tags": ["cities", "robber"]
           }
         ],
         "intermediate": [
           {
-            "id": "track-tempo",
-            "icon": "📏",
-            "title": "Pick one track and commit",
-            "body": "Trade, Science and Politics each unlock powerful tempo spikes at levels 3+. Spreading across all three keeps you at level 1 in all — a wasted tempo.",
-            "tags": [
-              "improvements",
-              "tempo"
-            ]
+            "id": "focus-one-track",
+            "icon": "🎯",
+            "title": "Focus op één baan, maar raak alle drie aan",
+            "body": "Stuw één baan naar niveau 3+, maar pik ook goedkope niveau-1-verbeteringen op de andere twee mee. Elk niveau dat je bezit laat je een voortgangskaart van die kleur trekken, dus wat breedte houdt de kaarten binnenstromen terwijl je hoofdbaan het spel wint.",
+            "tags": ["improvements", "tempo"]
+          },
+          {
+            "id": "level-three-payoff",
+            "icon": "📈",
+            "title": "Niveau 3 is de echte beloning",
+            "body": "Wetenschap 3 geeft het Aquaduct (een gratis grondstof als je niets produceert), Politiek 3 ontgrendelt machtige ridders, Handel 3 brengt betere ruilkoersen. Breng je hoofdbaan daar snel naartoe.",
+            "tags": ["improvements", "planning"]
+          },
+          {
+            "id": "promote-knights",
+            "icon": "🐴",
+            "title": "Bevorder ridders, stapel ze niet alleen op",
+            "body": "Een machtige ridder (niveau 3) levert 3 kracht voor dezelfde activering met 1 graan, en overtreft vijandelijke ridders als je ze verdringt of de rover opjaagt. Kwaliteit verslaat een leger basisridders.",
+            "tags": ["knights", "tempo"]
           }
         ],
         "advanced": [
           {
-            "id": "metro-timing",
+            "id": "defender-vp",
+            "icon": "🛡️",
+            "title": "Verzamel Verdediger van Catan-OP",
+            "body": "Bij elke afgeslagen aanval krijgt de sterkste verdediger een Verdediger van Catan-overwinningspunt. Er zijn meerdere aanvallen per spel, dus telkens weer de sterkste ridder zijn is een stille weg naar meerdere punten.",
+            "tags": ["barbarians", "scoring"]
+          },
+          {
+            "id": "metropolis-timing",
             "icon": "🏙️",
-            "title": "Time the metropolis before barbarians",
-            "body": "Reaching track level 4 lets you build a metropolis (2 extra VP). Do it when barbarians are 1–2 rolls from landing: the metropolis city can't be pillaged, so your VP is locked in even if Catan falls.",
-            "tags": [
-              "endgame",
-              "barbarians"
-            ]
+            "title": "Plan je metropool rond de barbaren",
+            "body": "Baanniveau 4 maakt van een stad een metropool (+2 OP) die nooit geplunderd kan worden. Zet hem vast als de barbaren nog 1–2 worpen van landing zijn, zodat je OP veilig is, ook al valt er een stad.",
+            "tags": ["endgame", "barbarians"]
+          },
+          {
+            "id": "swing-cards",
+            "icon": "🎴",
+            "title": "Bouw naar de beslissende kaarten",
+            "body": "Een paar voortgangskaarten beslissen spellen: Drukpers en Grondwet zijn behouden overwinningspunten, Bisschop plundert een hele cluster, Alchemist bepaalt de dobbelsteen. Stuur je baan naar het deck dat jouw spel wint.",
+            "tags": ["endgame", "progress-cards"]
           }
         ]
       }
