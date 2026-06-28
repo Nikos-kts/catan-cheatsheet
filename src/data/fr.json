@@ -554,7 +554,7 @@
             "detail": "Negotiate freely with other players during your turn — rates are whatever you can convince them to accept."
           }
         ],
-        "tradingNote": "You can only trade on your own turn, and only before or after the roll (not during production).",
+        "tradingNote": "You can only trade during your own Action phase — that is, after you roll and collect resources, never before the roll.",
         "turnFlow": [
           {
             "icon": "🃏",
@@ -786,7 +786,7 @@
               "type": "special",
               "icon": "🏆",
               "name": "Bonus Nouvelle Île",
-              "description": "Dans la plupart des scénarios Marins, la première colonie sur une nouvelle île rapporte 1 PV supplémentaire.",
+              "description": "Dans la plupart des scénarios Marins, la première colonie sur une nouvelle île rapporte des PV bonus (souvent 2, parfois 1).",
               "usages": [
                 "Planifiez des routes de bateaux vers des îles lointaines",
                 "Plusieurs joueurs peuvent gagner des PV de la même île"
@@ -797,7 +797,7 @@
               "type": "special",
               "icon": "🏴‍☠️",
               "name": "Pirate",
-              "description": "Le Pirate remplace le Voleur dans Marins. Déplacez-le sur n'importe quelle case maritime pour bloquer les bateaux.",
+              "description": "Le Pirate s'ajoute au Voleur dans Marins (les deux restent en jeu). Déplacez-le sur n'importe quelle case maritime pour bloquer les bateaux.",
               "usages": [
                 "Activé en lançant un 7 ou en jouant un Chevalier",
                 "Bloque le mouvement des bateaux à travers cette case"
@@ -808,7 +808,7 @@
       ],
       "gameplay": {
         "players": "3–4",
-        "vpToWin": "13",
+        "vpToWin": "Variable selon le scénario (12–14)",
         "setup": [
           "Configuration standard de Catan plus adaptations pour les scénarios Marins.",
           "Chaque joueur reçoit 15 bateaux en plus du matériel normal.",
@@ -883,11 +883,11 @@
           },
           {
             "name": "La Tribu Oubliée",
-            "vp": "12 PV",
-            "description": "Les villages sur les petites îles produisent des jetons de tissu.",
+            "vp": "13 PV",
+            "description": "Faites naviguer des bateaux vers des arêtes spéciales pour récolter des jetons de PV, des cartes de développement et des ports.",
             "details": [
-              "Établir des routes commerciales vers les villages",
-              "Paire de jetons de tissu = 1 PV"
+              "Construire un bateau sur une arête avec un jeton de PV (1 PV chacun), une carte de développement ou un port pour le récupérer",
+              "Colonies uniquement sur les hexagones avec un pion numéro"
             ]
           },
           {
@@ -922,7 +922,7 @@
             "vp": "12 PV",
             "description": "Disposition d'îles entièrement aléatoire.",
             "details": [
-              "+1 PV par colonie sur île inexplorée"
+              "+1 PV pour la première colonie sur chaque île inexplorée"
             ]
           }
         ]
@@ -1085,7 +1085,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
                   "name": "Grand marchand",
                   "count": 2,
-                  "description": "Regardez la main d'un adversaire adjacent à un de vos bâtiments. Prenez 2 cartes (ressource ou marchandise) de votre choix.",
+                  "description": "Regardez la main d'un adversaire ayant plus de points de victoire que vous. Prenez 2 cartes (ressource ou marchandise) de votre choix.",
                   "usages": [
                     "Obtenir des informations sur une main adverse",
                     "Voler 2 cartes spécifiques"
@@ -1124,7 +1124,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
                   "name": "Monopole de ressource",
                   "count": 4,
-                  "description": "Nommez 1 type de ressource. Chaque adversaire qui a 2+ de ce type doit vous donner exactement 2 cartes.",
+                  "description": "Nommez 1 type de ressource. Chaque adversaire doit vous donner 2 cartes de ce type s'il les a ; celui qui n'en a qu'1 doit vous la donner.",
                   "usages": [
                     "Collecter jusqu'à 6 ressources de 3 adversaires",
                     "Moins puissant que Monopole de base mais toujours fort"
@@ -1210,7 +1210,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
                   "name": "Irrigation",
                   "count": 2,
-                  "description": "Prenez 2 cartes Blé de la banque pour chaque colonie/ville adjacente à un hex Champ.",
+                  "description": "Prenez 2 cartes Blé de la banque pour chaque hex Champ adjacent à au moins un de vos bâtiments.",
                   "usages": [
                     "Grosse poussée de Blé si bien placé",
                     "Idéal pour activer des chevaliers"
@@ -1223,7 +1223,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
                   "name": "Médecine",
                   "count": 2,
-                  "description": "Ce tour, vous pouvez améliorer une colonie en ville à coût réduit : seulement 1 Minerai + 1 Blé (au lieu de 3 Minerai + 2 Blé).",
+                  "description": "Ce tour, vous pouvez améliorer une colonie en ville à coût réduit : seulement 2 Minerai + 1 Blé (au lieu de 3 Minerai + 2 Blé).",
                   "usages": [
                     "Construire une ville pour une fraction du coût",
                     "Étendre rapidement votre réseau de villes"
@@ -1236,7 +1236,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
                   "name": "Extraction",
                   "count": 2,
-                  "description": "Prenez 2 cartes Minerai de la banque pour chaque colonie/ville adjacente à un hex Montagne.",
+                  "description": "Prenez 2 cartes Minerai de la banque pour chaque hex Montagne adjacent à au moins un de vos bâtiments.",
                   "usages": [
                     "Gros gain de Minerai si proche de plusieurs montagnes",
                     "Alimenter upgrades de ville et recrutement de chevaliers"
@@ -1374,7 +1374,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
                   "name": "Espion",
                   "count": 3,
-                  "description": "Regardez la main d'un adversaire adjacent à un de vos bâtiments et volez 1 carte Progrès de votre choix.",
+                  "description": "Regardez la main de cartes Progrès d'un adversaire et volez 1 carte de votre choix.",
                   "usages": [
                     "Obtenir des infos et voler une carte puissante",
                     "Déstabiliser la stratégie d'un adversaire"
@@ -1387,7 +1387,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
                   "name": "Seigneur de guerre",
                   "count": 2,
-                  "description": "Activez tous vos chevaliers gratuitement (sans payer Blé ou Minerai).",
+                  "description": "Activez tous vos chevaliers gratuitement (sans payer le Blé habituel).",
                   "usages": [
                     "Préparer rapidement la défense contre les barbares",
                     "Économiser des ressources d'activation"
@@ -1423,7 +1423,7 @@
               "description": "Chaque fois qu'un bateau est lancé, les Barbares avancent. Quand ils atteignent Catane, une bataille est résolue. Si les défenseurs perdent, le joueur avec le moins de chevaliers perd une ville.",
               "usages": [
                 "Construisez et activez des Chevaliers pour vous défendre",
-                "Les remparts protègent une ville de la rétrogradation"
+                "Les remparts n'empêchent PAS le pillage ; ils augmentent seulement la limite de défausse sur un 7 (+2 chacun)"
               ]
             }
           ]
@@ -1522,11 +1522,11 @@
           },
           {
             "title": "Chevaliers",
-            "detail": "3 niveaux de force : Basique, Fort, Puissant. Doivent être recrutés puis activés (1 Blé + 1 Minerai). Peuvent se déplacer, chasser des chevaliers ennemis plus faibles ou chasser le Voleur. Tous désactivés après attaque barbare."
+            "detail": "3 niveaux de force : Basique, Fort, Puissant. Doivent être recrutés puis activés (1 Blé). Peuvent se déplacer, chasser des chevaliers ennemis plus faibles ou chasser le Voleur. Tous désactivés après attaque barbare."
           },
           {
             "title": "Attaque Barbare",
-            "detail": "Force barbare = nombre total de villes sur le plateau. Force de défense = somme des chevaliers actifs. Si les barbares gagnent : le joueur avec le moins de chevaliers actifs perd une ville (rétrogradée en colonie). Les Métropoles sont immunes."
+            "detail": "Force barbare = nombre total de villes sur le plateau. Force de défense = somme des chevaliers actifs. Si les barbares gagnent : le joueur avec la plus faible force totale de chevaliers actifs perd une ville (rétrogradée en colonie). Les Métropoles sont immunes."
           },
           {
             "title": "Murailles",
@@ -1549,12 +1549,12 @@
           {
             "icon": "🃏",
             "title": "Play a progress card (optional)",
-            "detail": "Up to 1 progress card before rolling if you have them."
+            "detail": "Only the Alchemist (Alchemy) card may be played before rolling."
           },
           {
             "icon": "🎲",
             "title": "Roll production + event die",
-            "detail": "Red + yellow production dice AND the colored event die (barbarian, town gate, or castle)."
+            "detail": "Red + yellow production dice AND the colored event die (barbarian ship, or one of the three city-improvement icons: Trade, Science, Politics)."
           },
           {
             "icon": "🌾",
@@ -1564,7 +1564,7 @@
           {
             "icon": "🏴‍☠️",
             "title": "Barbarian advance",
-            "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, undefended cities become settlements; strongest-knight player wins a Defender of Catan VP."
+            "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, a battle resolves: if knights are too weak, the lowest-strength defender(s) each lose a city (→ settlement); if knights are strong enough, the single strongest defender wins a Defender of Catan VP."
           },
           {
             "icon": "🕵️",
@@ -1948,7 +1948,7 @@
                 "icon": "⚔️",
                 "level": "beginner",
                 "title": "Ayez un chevalier avant qu'ils débarquent",
-                "body": "Les barbares frappent la côte, et une colonie côtière sans défense est détruite, pas seulement rétrogradée. Construisez au moins un chevalier avant l'arrivée de l'armée.",
+                "body": "Les barbares frappent la côte, et une colonie côtière sans défense peut être conquise — elle ne rapporte plus de PV jusqu'à ce que vous la libériez avec des chevaliers, mais elle n'est pas détruite. Construisez au moins un chevalier avant l'arrivée de l'armée.",
                 "tags": ["barbarians", "defense"]
               },
               {
@@ -2111,7 +2111,7 @@
               "type": "mission",
               "icon": "🌶️",
               "name": "Cargaison d'Épices",
-              "description": "Naviguez jusqu'à une île aux épices lointaine et rapportez la cargaison pour des PV.",
+              "description": "Naviguez jusqu'à une île aux épices lointaine et livrez la cargaison au Conseil de Catan pour des PV.",
               "usages": [
                 "Chaque cargaison complétée rapporte 1 PV",
                 "Vous devez aller et revenir de l'île aux épices"
@@ -2122,9 +2122,9 @@
               "type": "mission",
               "icon": "🐟",
               "name": "Camp de Pêche",
-              "description": "Établissez un camp de pêche sur une côte découverte pour obtenir des jetons de poisson chaque round.",
+              "description": "Capturez des cargaisons de poisson sur les bancs de poissons (une fois par phase de déplacement, lancez un dé correspondant à un banc exploré) et amenez-les au Conseil de Catan.",
               "usages": [
-                "Les jetons de poisson peuvent être échangés contre des ressources",
+                "Livrez les cargaisons de poisson au Conseil de Catan pour progresser sur la piste de mission poisson",
                 "Positionnez-vous près des cases côtières avec de bons chiffres"
               ]
             },
@@ -2135,8 +2135,8 @@
               "name": "Repaire Pirate",
               "description": "Découvrez et détruisez des repaires pirates dispersés aux confins. Chaque repaire éliminé rapporte 1 PV.",
               "usages": [
-                "Atteignez le repaire avec un bateau pour l'éliminer",
-                "Rapporte 1 PV immédiatement à la découverte"
+                "Déchargez des équipages sur l'hexagone d'or — le 3e capture le repaire",
+                "La capture vous fait progresser sur la piste de mission pirate — elle ne rapporte rien à la découverte"
               ]
             }
           ]
@@ -2181,11 +2181,11 @@
           },
           {
             "title": "Colons",
-            "detail": "Coût : 1 Blé + 1 Minerai. Transportés sur les bateaux. Construire une colonie en déchargeant à une intersection terrestre."
+            "detail": "Coût : 1 Argile + 1 Bois + 1 Laine + 1 Blé (comme une colonie). Transportés sur les bateaux. Construire une colonie en déchargeant à une intersection terrestre."
           },
           {
             "title": "Équipages",
-            "detail": "Coût : 1 Blé + 1 Laine. Utilisés pour les captures de repaires pirates et l'activation de fermes d'épices."
+            "detail": "Coût : 1 Laine + 1 Minerai. Utilisés pour les captures de repaires pirates et l'activation de fermes d'épices."
           },
           {
             "title": "Navire Pirate",
@@ -2244,7 +2244,7 @@
         ]
       },
       "reference": {
-        "tradingNote": "E&P keeps base bank/harbour ratios but adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
+        "tradingNote": "E&P uses a 3:1 bank rate with no ports (or 2 gold for any 1 resource, twice per turn) and adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
       },
       "strategy": {
         "beginner": [
@@ -2282,7 +2282,7 @@
             "id": "settle-islands",
             "icon": "🏝️",
             "title": "Colonisez les îles que vous découvrez",
-            "body": "Les colons (1 Blé + 1 Minerai) voyagent sur un bateau et débarquent sur une nouvelle intersection terrestre. De nouvelles îles, c'est de la production en plus et davantage d'emplacements portuaires — c'est par la mer que vous grandissez.",
+            "body": "Les colons (1 Argile + 1 Bois + 1 Laine + 1 Blé) voyagent sur un bateau et débarquent sur une nouvelle intersection terrestre. De nouvelles îles, c'est de la production en plus et davantage d'emplacements portuaires — c'est par la mer que vous grandissez.",
             "tags": ["settlers", "expansion"]
           },
           {
@@ -2296,7 +2296,7 @@
             "id": "load-crews",
             "icon": "👥",
             "title": "Embarquez des équipages, pas seulement des colons",
-            "body": "Les équipages (1 Blé + 1 Laine) sont les bêtes de somme des missions : ils capturent les repaires pirates, activent les fermes d'épices et rapportent du poisson. Un bateau avec un équipage fait ce qu'un colon ne peut pas faire.",
+            "body": "Les équipages (1 Laine + 1 Minerai) sont les bêtes de somme des missions : ils capturent les repaires pirates, activent les fermes d'épices et rapportent du poisson. Un bateau avec un équipage fait ce qu'un colon ne peut pas faire.",
             "tags": ["crews", "missions"]
           },
           {

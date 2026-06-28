@@ -500,7 +500,7 @@
             "detail": "Negotiate freely with other players during your turn — rates are whatever you can convince them to accept."
           }
         ],
-        "tradingNote": "You can only trade on your own turn, and only before or after the roll (not during production).",
+        "tradingNote": "You can only trade during your own Action phase — that is, after you roll and collect resources, never before the roll.",
         "turnFlow": [
           {
             "icon": "🃏",
@@ -725,7 +725,7 @@
               "type": "special",
               "icon": "🏆",
               "name": "Bónus por Nova Ilha",
-              "description": "Na maioria dos cenários de Navegantes, colocar a sua primeira povoação numa nova ilha dá-lhe 1 Ponto de Vitória extra.",
+              "description": "Na maioria dos cenários de Navegantes, colocar a sua primeira povoação numa nova ilha dá-lhe Pontos de Vitória de bónus (normalmente 2, às vezes 1).",
               "usages": []
             },
             {
@@ -733,7 +733,7 @@
               "type": "special",
               "icon": "🏴‍☠️",
               "name": "Pirata",
-              "description": "O Pirata substitui o Ladrão nos Navegantes. Mova-o para qualquer hexágono de mar para bloquear navios. Roube a um jogador adjacente com um navio aí.",
+              "description": "O Pirata junta-se ao Ladrão nos Navegantes (ambos permanecem em jogo). Mova-o para qualquer hexágono de mar para bloquear navios. Roube a um jogador adjacente com um navio aí.",
               "usages": []
             }
           ]
@@ -941,7 +941,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
                   "name": "Grande Mercador",
                   "count": 2,
-                  "description": "Olhe a mão de um oponente adjacente e tome 2 cartas à sua escolha.",
+                  "description": "Olhe a mão de um oponente com mais pontos de vitória que você e tome 2 cartas à sua escolha.",
                   "usages": [
                     "Obter informação",
                     "Roubar 2 cartas específicas"
@@ -980,7 +980,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
                   "name": "Monopólio de Recurso",
                   "count": 4,
-                  "description": "Nomeie 1 recurso. Cada oponente com 2+ desse recurso deve dar exatamente 2 cartas.",
+                  "description": "Nomeie 1 recurso. Cada oponente deve dar 2 cartas desse recurso se as tiver; quem tiver apenas 1 deve dar essa 1.",
                   "usages": [
                     "Coletar muitos recursos de oponentes"
                   ]
@@ -1065,7 +1065,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
                   "name": "Irrigação",
                   "count": 2,
-                  "description": "Pegue 2 cartas de Trigo do banco por cada povoação/cidade adjacente a um hex de Trigo.",
+                  "description": "Pegue 2 cartas de Trigo do banco por cada hex de Trigo adjacente a pelo menos uma de suas construções.",
                   "usages": [
                     "Grande impulso de Trigo",
                     "Ótimo para ativar cavaleiros"
@@ -1078,7 +1078,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
                   "name": "Medicina",
                   "count": 2,
-                  "description": "Melhore uma povoação para cidade por apenas 1 Minério + 1 Trigo (em vez de 3 Minério + 2 Trigo).",
+                  "description": "Melhore uma povoação para cidade por apenas 2 Minério + 1 Trigo (em vez de 3 Minério + 2 Trigo).",
                   "usages": [
                     "Construir cidade a baixo custo",
                     "Expandir rapidamente"
@@ -1091,7 +1091,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
                   "name": "Mineração",
                   "count": 2,
-                  "description": "Pegue 2 Minérios do banco por cada povoação/cidade adjacente a um hex de Montanha.",
+                  "description": "Pegue 2 Minérios do banco por cada hex de Montanha adjacente a pelo menos uma de suas construções.",
                   "usages": [
                     "Grande fonte de Minério com bom posicionamento"
                   ]
@@ -1231,7 +1231,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
                   "name": "Senhor da Guerra",
                   "count": 2,
-                  "description": "Ative todos os seus cavaleiros gratuitamente (sem pagar Trigo+Minério).",
+                  "description": "Ative todos os seus cavaleiros gratuitamente (sem pagar o Trigo habitual).",
                   "usages": [
                     "Preparar defesa instantânea"
                   ]
@@ -1308,7 +1308,7 @@
               "description": "Cada vez que sair um navio, o token Bárbaro avança. Quando chega a Catan, resolve-se uma batalha. Se os bárbaros vencerem, o jogador com menos cavaleiros perde uma cidade.",
               "usages": [
                 "Construa e ative Cavaleiros para defender",
-                "As Muralhas protegem uma cidade de ser rebaixada"
+                "As Muralhas NÃO evitam o saque; só aumentam o limite de descarte num 7 (+2 cada)"
               ]
             }
           ]
@@ -1364,11 +1364,11 @@
           },
           {
             "title": "Cavaleiros",
-            "detail": "3 níveis de força: Básico, Forte, Poderoso. Devem ser recrutados e depois ativados (custa 1 Grão + 1 Minério). Podem mover, deslocar cavaleiros mais fracos ou expulsar o ladrão. Todos desativam após ataque bárbaro."
+            "detail": "3 níveis de força: Básico, Forte, Poderoso. Devem ser recrutados e depois ativados (custa 1 Grão). Podem mover, deslocar cavaleiros mais fracos ou expulsar o ladrão. Todos desativam após ataque bárbaro."
           },
           {
             "title": "Ataque Bárbaro",
-            "detail": "Força bárbara = número de cidades em jogo. Força dos defensores = soma dos cavaleiros ativos. Se os bárbaros vencerem: o jogador com menos cavaleiros ativos perde uma cidade (rebaixada a povoação). Metrópoles são imunes."
+            "detail": "Força bárbara = número de cidades em jogo. Força dos defensores = soma dos cavaleiros ativos. Se os bárbaros vencerem: o jogador com a menor força total de cavaleiros ativos perde uma cidade (rebaixada a povoação). Metrópoles são imunes."
           },
           {
             "title": "Muros da Cidade",
@@ -1390,12 +1390,12 @@
           {
             "icon": "🃏",
             "title": "Play a progress card (optional)",
-            "detail": "Up to 1 progress card before rolling if you have them."
+            "detail": "Only the Alchemist (Alchemy) card may be played before rolling."
           },
           {
             "icon": "🎲",
             "title": "Roll production + event die",
-            "detail": "Red + yellow production dice AND the colored event die (barbarian, town gate, or castle)."
+            "detail": "Red + yellow production dice AND the colored event die (barbarian ship, or one of the three city-improvement icons: Trade, Science, Politics)."
           },
           {
             "icon": "🌾",
@@ -1405,7 +1405,7 @@
           {
             "icon": "🏴‍☠️",
             "title": "Barbarian advance",
-            "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, undefended cities become settlements; strongest-knight player wins a Defender of Catan VP."
+            "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, a battle resolves: if knights are too weak, the lowest-strength defender(s) each lose a city (→ settlement); if knights are strong enough, the single strongest defender wins a Defender of Catan VP."
           },
           {
             "icon": "🕵️",
@@ -1713,7 +1713,7 @@
                 "icon": "⚔️",
                 "level": "beginner",
                 "title": "Tenha um cavaleiro antes de desembarcarem",
-                "body": "Os bárbaros atacam a costa, e uma povoação costeira indefesa é destruída, não apenas reduzida. Construa pelo menos um cavaleiro antes de o exército chegar.",
+                "body": "Os bárbaros atacam a costa, e uma povoação costeira indefesa pode ser conquistada — deixa de dar VP até a libertar com cavaleiros, mas não é destruída. Construa pelo menos um cavaleiro antes de o exército chegar.",
                 "tags": ["barbarians", "defense"]
               },
               {
@@ -1876,7 +1876,7 @@
               "type": "mission",
               "icon": "🌶️",
               "name": "Spice Haul",
-              "description": "Sail your ship to a distant spice island and haul spices back to your home island for Victory Points.",
+              "description": "Sail your ship to a distant spice island and deliver the spice sack to the Council of Catan for Victory Points.",
               "usages": [
                 "Each completed haul earns 1 VP",
                 "Requires reaching and returning from the spice tile"
@@ -1887,9 +1887,9 @@
               "type": "mission",
               "icon": "🐟",
               "name": "Fish Camp",
-              "description": "Establish a fish camp on a discovered coast to generate fish tokens each round.",
+              "description": "Catch fish hauls at fish shoals (once per Movement phase roll a die matching an explored shoal), then sail them to the Council of Catan.",
               "usages": [
-                "Fish tokens can be traded for resources",
+                "Deliver fish hauls to the Council of Catan to advance the fish mission track",
                 "Position near coastal hexes with good numbers"
               ]
             },
@@ -1900,8 +1900,8 @@
               "name": "Pirate Lair",
               "description": "Discover and destroy pirate lairs scattered across the frontier. Each cleared lair earns 1 Victory Point.",
               "usages": [
-                "Reach the lair with a ship to clear it",
-                "Earns 1 VP immediately upon discovery"
+                "Unload crew onto the gold field — the lair is captured by the 3rd crew",
+                "Capturing advances your pirate mission track — it does not score on discovery"
               ]
             }
           ]
@@ -1946,11 +1946,11 @@
           },
           {
             "title": "Colonizadores",
-            "detail": "Custo: 1 Grão + 1 Minério. Carregados em navios. Construa uma povoação descarregando numa interseção terrestre."
+            "detail": "Custo: 1 Argila + 1 Madeira + 1 Lã + 1 Grão (como uma povoação). Carregados em navios. Construa uma povoação descarregando numa interseção terrestre."
           },
           {
             "title": "Tripulações",
-            "detail": "Custo: 1 Grão + 1 Lã. Usadas para capturar covis piratas e ativar fazendas de especiarias."
+            "detail": "Custo: 1 Lã + 1 Minério. Usadas para capturar covis piratas e ativar fazendas de especiarias."
           },
           {
             "title": "Navio Pirata",
@@ -1973,7 +1973,7 @@
         ]
       },
       "reference": {
-        "tradingNote": "E&P keeps base bank/harbour ratios but adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
+        "tradingNote": "E&P uses a 3:1 bank rate with no ports (or 2 gold for any 1 resource, twice per turn) and adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
       },
       "strategy": {
         "beginner": [
@@ -2011,7 +2011,7 @@
             "id": "settle-islands",
             "icon": "🏝️",
             "title": "Colonize as ilhas que descobrir",
-            "body": "Os colonos (1 Grão + 1 Minério) viajam num navio e desembarcam numa nova interseção terrestre. Ilhas novas significam nova produção e mais locais para portos — a expansão por mar é como se cresce.",
+            "body": "Os colonos (1 Argila + 1 Madeira + 1 Lã + 1 Grão) viajam num navio e desembarcam numa nova interseção terrestre. Ilhas novas significam nova produção e mais locais para portos — a expansão por mar é como se cresce.",
             "tags": ["settlers", "expansion"]
           },
           {
@@ -2025,7 +2025,7 @@
             "id": "load-crews",
             "icon": "👥",
             "title": "Carregue tripulações, não só colonos",
-            "body": "As tripulações (1 Grão + 1 Lã) são a força de trabalho das missões: capturam covis piratas, ativam fazendas de especiarias e trazem peixe. Um navio com uma tripulação faz o que um colono não consegue.",
+            "body": "As tripulações (1 Lã + 1 Minério) são a força de trabalho das missões: capturam covis piratas, ativam fazendas de especiarias e trazem peixe. Um navio com uma tripulação faz o que um colono não consegue.",
             "tags": ["crews", "missions"]
           },
           {

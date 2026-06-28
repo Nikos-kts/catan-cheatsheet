@@ -500,7 +500,7 @@
             "detail": "Negotiate freely with other players during your turn — rates are whatever you can convince them to accept."
           }
         ],
-        "tradingNote": "You can only trade on your own turn, and only before or after the roll (not during production).",
+        "tradingNote": "You can only trade during your own Action phase — that is, after you roll and collect resources, never before the roll.",
         "turnFlow": [
           {
             "icon": "🃏",
@@ -691,7 +691,7 @@
               "type": "special",
               "icon": "🏆",
               "name": "New Island Bonus",
-              "description": "In most Seafarers scenarios, placing your first settlement on a new island earns you 1 extra Victory Point.",
+              "description": "In most Seafarers scenarios, placing your first settlement on a new island earns you bonus Victory Points (usually 2, sometimes 1).",
               "usages": [
                 "Plan ship routes to reach distant islands quickly",
                 "Multiple players can earn VP from the same island"
@@ -702,7 +702,7 @@
               "type": "special",
               "icon": "🏴‍☠️",
               "name": "Pirate",
-              "description": "The Pirate replaces the Robber in Seafarers. Move it to any sea hex to block ships. Steal from an adjacent player with a ship there.",
+              "description": "The Pirate is added alongside the Robber in Seafarers (both stay in play). Move it to any sea hex to block ships. Steal from an adjacent player with a ship there.",
               "usages": [
                 "Activated by rolling a 7 or playing a Knight",
                 "Blocks ship movement through that hex"
@@ -786,11 +786,11 @@
           },
           {
             "name": "The Forgotten Tribe",
-            "vp": "12 VP",
-            "description": "Villages on small islands produce cloth tokens.",
+            "vp": "13 VP",
+            "description": "Sail ships to special edges to collect VP tokens, dev cards, and ports.",
             "details": [
-              "Establish trade routes to villages",
-              "Pair of cloth tokens = 1 VP"
+              "Build a ship onto an edge with a VP token (1 VP each), dev card, or port to claim it",
+              "Settlements only allowed on hexes with a number disc"
             ]
           },
           {
@@ -824,7 +824,7 @@
             "name": "New World",
             "vp": "12 VP",
             "description": "Fully randomized island layout.",
-            "details": ["+1 VP per settlement on unexplored island"]
+            "details": ["+1 VP for first settlement on each unexplored island"]
           }
         ]
       },
@@ -925,7 +925,7 @@
               "type": "commodity",
               "icon": "🧵",
               "name": "Cloth",
-              "description": "Commodity produced by upgraded Pasture cities (Metropolis). Used to advance in the Trade column of city improvements.",
+              "description": "Commodity produced by cities on Pasture hexes. Used to advance in the Trade column of city improvements.",
               "usages": [
                 "Produced by cities on Pasture hexes (doubled roll)",
                 "Invest in Trade city improvements"
@@ -936,7 +936,7 @@
               "type": "commodity",
               "icon": "🪙",
               "name": "Coin",
-              "description": "Commodity produced by upgraded Mountain cities. Used to advance in the Science column.",
+              "description": "Commodity produced by upgraded Mountain cities. Used to advance in the Politics column.",
               "usages": [
                 "Produced by cities on Mountain hexes",
                 "Invest in Science city improvements"
@@ -947,7 +947,7 @@
               "type": "commodity",
               "icon": "📜",
               "name": "Paper",
-              "description": "Commodity produced by upgraded Forest cities. Used to advance in the Politics column.",
+              "description": "Commodity produced by upgraded Forest cities. Used to advance in the Science column.",
               "usages": [
                 "Produced by cities on Forest hexes",
                 "Invest in Politics city improvements"
@@ -986,7 +986,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
                   "name": "Master Merchant",
                   "count": 2,
-                  "description": "Look at the hand cards of an opponent who has a settlement or city adjacent to one of your own. Take 2 resource or commodity cards of your choice from that hand.",
+                  "description": "Look at the hand cards of an opponent who has more victory points than you. Take 2 resource or commodity cards of your choice from that hand.",
                   "usages": [
                     "Gain intelligence on an opponent's hand",
                     "Steal 2 specific cards from a neighbor"
@@ -1025,7 +1025,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
                   "name": "Resource Monopoly",
                   "count": 4,
-                  "description": "Name 1 resource type. Each opponent who has 2 or more of that resource must give you exactly 2 of them.",
+                  "description": "Name 1 resource type. Each opponent must give you 2 cards of that resource if they have them; a player with only 1 must give that 1.",
                   "usages": [
                     "Collect up to 6 resources from 3 opponents",
                     "Weaker than base game Monopoly but still powerful"
@@ -1111,7 +1111,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
                   "name": "Irrigation",
                   "count": 2,
-                  "description": "Take 2 grain cards from the bank for each of your settlements and cities adjacent to a field hex.",
+                  "description": "Take 2 grain cards from the bank for each field hex adjacent to at least one of your buildings.",
                   "usages": [
                     "Massive grain boost if well-positioned on fields",
                     "Great for fueling knight activations"
@@ -1124,7 +1124,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
                   "name": "Medicine",
                   "count": 2,
-                  "description": "This turn, you may upgrade one settlement to a city at a reduced cost: only 1 Ore + 1 Grain (instead of 3 Ore + 2 Grain).",
+                  "description": "This turn, you may upgrade one settlement to a city at a reduced cost: only 2 Ore + 1 Grain (instead of 3 Ore + 2 Grain).",
                   "usages": [
                     "Build a city at a fraction of the normal cost",
                     "Quickly expand your city network"
@@ -1137,7 +1137,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
                   "name": "Mining",
                   "count": 2,
-                  "description": "Take 2 ore cards from the bank for each of your settlements and cities adjacent to a mountain hex.",
+                  "description": "Take 2 ore cards from the bank for each mountain hex adjacent to at least one of your buildings.",
                   "usages": [
                     "Huge ore gain if you border multiple mountains",
                     "Fuel city upgrades and knight recruitment"
@@ -1288,7 +1288,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
                   "name": "Warlord",
                   "count": 2,
-                  "description": "Activate all of your knights for free (without paying grain and ore).",
+                  "description": "Activate all of your knights for free (without paying the usual grain cost).",
                   "usages": [
                     "Instantly prepare all knights for barbarian defense",
                     "Save significant resources on activations"
@@ -1367,7 +1367,7 @@
               "description": "Each turn a ship is rolled, the Barbarian token advances. When it reaches Catan, a battle is resolved. If barbarians win, the player with fewest knights loses a city.",
               "usages": [
                 "Build and activate Knights to defend",
-                "City Walls protect one city from being downgraded"
+                "City Walls do NOT stop pillage; they only raise your 7-discard limit (+2 each)"
               ]
             }
           ]
@@ -1423,11 +1423,11 @@
           },
           {
             "title": "Knights",
-            "detail": "3 strength levels: Basic, Strong, Mighty. Must be recruited then activated (costs 1 Grain + 1 Ore). Can move, displace weaker enemy knights, or chase the robber. All deactivate after barbarian attack."
+            "detail": "3 strength levels: Basic, Strong, Mighty. Must be recruited then activated (costs 1 Grain). Can move, displace weaker enemy knights, or chase the robber. All deactivate after barbarian attack."
           },
           {
             "title": "Barbarian Attack",
-            "detail": "Barbarian strength = total cities on board. Defender strength = sum of active knights. If barbarians win: player with fewest active knights loses a city (downgraded to settlement). Metropolises are immune."
+            "detail": "Barbarian strength = total cities on board. Defender strength = sum of active knights. If barbarians win: player(s) with the lowest total active-knight strength lose a city (downgraded to settlement). Metropolises are immune."
           },
           {
             "title": "City Walls",
@@ -1446,10 +1446,10 @@
       "reference": {
         "tradingNote": "C&K adds commodity trades via the Trade Progress deck and the Merchant token (2:1 on an adjacent hex). Commodities (coin / paper / cloth) also trade 4:1 at the bank.",
         "turnFlow": [
-          { "icon": "🃏", "title": "Play a progress card (optional)", "detail": "Up to 1 progress card before rolling if you have them." },
-          { "icon": "🎲", "title": "Roll production + event die", "detail": "Red + yellow production dice AND the colored event die (barbarian, town gate, or castle)." },
+          { "icon": "🃏", "title": "Play a progress card (optional)", "detail": "Only the Alchemist (Alchemy) card may be played before rolling." },
+          { "icon": "🎲", "title": "Roll production + event die", "detail": "Red + yellow production dice AND the colored event die (barbarian ship, or one of the three city-improvement icons: Trade, Science, Politics)." },
           { "icon": "🌾", "title": "Production & commodities", "detail": "Settlements → 1 resource. Cities → 1 resource + 1 commodity from pasture/forest/mountain hexes." },
-          { "icon": "🏴‍☠️", "title": "Barbarian advance", "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, undefended cities become settlements; strongest-knight player wins a Defender of Catan VP." },
+          { "icon": "🏴‍☠️", "title": "Barbarian advance", "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, a battle resolves: if knights are too weak, the lowest-strength defender(s) each lose a city (→ settlement); if knights are strong enough, the single strongest defender wins a Defender of Catan VP." },
           { "icon": "🕵️", "title": "On a 7: Robber", "detail": "As base game. Knights on the board are unaffected." },
           { "icon": "🤝", "title": "Trade / Build / Activate knights", "detail": "Spend resources & commodities. Knights must be activated (1 Grain) before they can move/chase robber." },
           { "icon": "➡️", "title": "Pass", "detail": "End turn, hand dice to left." }
@@ -1790,7 +1790,7 @@
                 "icon": "⚔️",
                 "level": "beginner",
                 "title": "Have a knight before they land",
-                "body": "Barbarians strike the coast, and an undefended coastal settlement is destroyed, not just downgraded. Build at least one knight before the army arrives.",
+                "body": "Barbarians strike the coast, and an undefended coastal building can be conquered — it stops scoring VP until you liberate it with knights, but it is not destroyed. Build at least one knight before the army arrives.",
                 "tags": ["barbarians", "defense"]
               },
               {
@@ -1953,7 +1953,7 @@
               "type": "mission",
               "icon": "🌶️",
               "name": "Spice Haul",
-              "description": "Sail your ship to a distant spice island and haul spices back to your home island for Victory Points.",
+              "description": "Sail your ship to a distant spice island and deliver the spice sack to the Council of Catan for Victory Points.",
               "usages": [
                 "Each completed haul earns 1 VP",
                 "Requires reaching and returning from the spice tile"
@@ -1964,9 +1964,9 @@
               "type": "mission",
               "icon": "🐟",
               "name": "Fish Camp",
-              "description": "Establish a fish camp on a discovered coast to generate fish tokens each round.",
+              "description": "Catch fish hauls at fish shoals (once per Movement phase roll a die matching an explored shoal), then sail them to the Council of Catan.",
               "usages": [
-                "Fish tokens can be traded for resources",
+                "Deliver fish hauls to the Council of Catan to advance the fish mission track",
                 "Position near coastal hexes with good numbers"
               ]
             },
@@ -1977,8 +1977,8 @@
               "name": "Pirate Lair",
               "description": "Discover and destroy pirate lairs scattered across the frontier. Each cleared lair earns 1 Victory Point.",
               "usages": [
-                "Reach the lair with a ship to clear it",
-                "Earns 1 VP immediately upon discovery"
+                "Unload crew onto the gold field — the lair is captured by the 3rd crew",
+                "Capturing advances your pirate mission track — it does not score on discovery"
               ]
             }
           ]
@@ -2023,11 +2023,11 @@
           },
           {
             "title": "Settlers",
-            "detail": "Cost: 1 Grain + 1 Ore. Carried on ships. Build a settlement by unloading at a land hex intersection."
+            "detail": "Cost: 1 Brick + 1 Lumber + 1 Wool + 1 Grain (same as a settlement). Carried on ships. Build a settlement by unloading at a land hex intersection."
           },
           {
             "title": "Crews",
-            "detail": "Cost: 1 Grain + 1 Wool. Used for pirate lair captures and spice farm activation."
+            "detail": "Cost: 1 Wool + 1 Ore. Used for pirate lair captures and spice farm activation."
           },
           {
             "title": "Pirate Ship",
@@ -2084,7 +2084,7 @@
         ]
       },
       "reference": {
-        "tradingNote": "E&P keeps base bank/harbour ratios but adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
+        "tradingNote": "E&P uses a 3:1 bank rate with no ports (or 2 gold for any 1 resource, twice per turn) and adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
       },
       "strategy": {
         "beginner": [
@@ -2122,7 +2122,7 @@
             "id": "settle-islands",
             "icon": "🏝️",
             "title": "Settle the islands you discover",
-            "body": "Settlers (1 grain + 1 ore) ride a ship and drop on a new land intersection. Fresh islands mean new production and more harbor spots — expansion by sea is how you grow.",
+            "body": "Settlers (1 brick + 1 lumber + 1 wool + 1 grain) ride a ship and drop on a new land intersection. Fresh islands mean new production and more harbor spots — expansion by sea is how you grow.",
             "tags": ["settlers", "expansion"]
           },
           {
@@ -2136,7 +2136,7 @@
             "id": "load-crews",
             "icon": "👥",
             "title": "Load crews, not just settlers",
-            "body": "Crews (1 grain + 1 wool) are the mission workhorses: they capture pirate lairs, activate spice farms and bring in fish. A ship carrying a crew does work a settler can't.",
+            "body": "Crews (1 wool + 1 ore) are the mission workhorses: they capture pirate lairs, activate spice farms and bring in fish. A ship carrying a crew does work a settler can't.",
             "tags": ["crews", "missions"]
           },
           {

@@ -552,7 +552,7 @@
             "detail": "Negotiate freely with other players during your turn — rates are whatever you can convince them to accept."
           }
         ],
-        "tradingNote": "You can only trade on your own turn, and only before or after the roll (not during production).",
+        "tradingNote": "You can only trade during your own Action phase — that is, after you roll and collect resources, never before the roll.",
         "turnFlow": [
           {
             "icon": "🃏",
@@ -784,7 +784,7 @@
               "type": "special",
               "icon": "🏆",
               "name": "V.P. Bonus Eiland Stichting",
-              "description": "Een extra punt (Catan token munt) elke allereerste keer als een speler op dat specifieke eiland (via verschepen) een nieuw dorp uitschrijft.",
+              "description": "Meestal 2 punten, soms 1 (Catan token munt) elke allereerste keer als een speler op dat specifieke eiland (via verschepen) een nieuw dorp uitschrijft.",
               "usages": [
                 "Beloningsprincipe met ontdekkingsprikkel in losse scenario ontwerpen",
                 "Speler bouwt stad / dorp aan ten minste 1 heuvel/gras/hout/steen/koren land van specifieke oversteken"
@@ -1004,7 +1004,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
                   "name": "Meesterhandelaar",
                   "count": 2,
-                  "description": "Kijk naar de hand van een aangrenzende tegenstander en neem 2 kaarten naar keuze.",
+                  "description": "Kijk naar de hand van een tegenstander met meer overwinningspunten dan jij en neem 2 kaarten naar keuze.",
                   "usages": [
                     "Krijg informatie",
                     "Steel 2 specifieke kaarten"
@@ -1043,7 +1043,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
                   "name": "Grondstofmonopolie",
                   "count": 4,
-                  "description": "Noem 1 grondstof. Elke tegenstander met 2+ van die grondstof moet je precies 2 geven.",
+                  "description": "Noem 1 grondstof. Elke tegenstander moet je 2 kaarten van die grondstof geven als hij ze heeft; wie er maar 1 heeft, geeft die 1.",
                   "usages": [
                     "Verzamel veel grondstoffen van tegenstanders"
                   ]
@@ -1127,7 +1127,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
                   "name": "Irrigatie",
                   "count": 2,
-                  "description": "Neem 2 Tarwe-kaarten uit de voorraad voor elke nederzetting/stad naast een Tarwe-hex.",
+                  "description": "Neem 2 Tarwe-kaarten uit de voorraad voor elke Tarwe-hex naast minstens één van jouw gebouwen.",
                   "usages": [
                     "Grote tarweboost",
                     "Goed om ridders te activeren"
@@ -1140,7 +1140,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
                   "name": "Geneeskunde",
                   "count": 2,
-                  "description": "Upgrade een nederzetting naar stad voor slechts 1 Oer + 1 Tarwe (in plaats van 3 Oer + 2 Tarwe).",
+                  "description": "Upgrade een nederzetting naar stad voor slechts 2 Oer + 1 Tarwe (in plaats van 3 Oer + 2 Tarwe).",
                   "usages": [
                     "Goedkoop stad bouwen",
                     "Snel uitbreiden"
@@ -1153,7 +1153,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
                   "name": "Mijnbouw",
                   "count": 2,
-                  "description": "Neem 2 Oer uit de voorraad voor elke nederzetting/stad naast een Berg-hex.",
+                  "description": "Neem 2 Oer uit de voorraad voor elke Berg-hex naast minstens één van jouw gebouwen.",
                   "usages": [
                     "Grote Oerbron bij goede plaatsing"
                   ]
@@ -1293,7 +1293,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
                   "name": "Oorlogsheer",
                   "count": 2,
-                  "description": "Activeer al jouw ridders gratis (zonder Tarwe+Oer te betalen).",
+                  "description": "Activeer al jouw ridders gratis (zonder de gebruikelijke Tarwe te betalen).",
                   "usages": [
                     "Bereid onmiddellijke verdediging voor"
                   ]
@@ -1412,12 +1412,12 @@
           {
             "icon": "🃏",
             "title": "Play a progress card (optional)",
-            "detail": "Up to 1 progress card before rolling if you have them."
+            "detail": "Only the Alchemist (Alchemy) card may be played before rolling."
           },
           {
             "icon": "🎲",
             "title": "Roll production + event die",
-            "detail": "Red + yellow production dice AND the colored event die (barbarian, town gate, or castle)."
+            "detail": "Red + yellow production dice AND the colored event die (barbarian ship, or one of the three city-improvement icons: Trade, Science, Politics)."
           },
           {
             "icon": "🌾",
@@ -1427,7 +1427,7 @@
           {
             "icon": "🏴‍☠️",
             "title": "Barbarian advance",
-            "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, undefended cities become settlements; strongest-knight player wins a Defender of Catan VP."
+            "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, a battle resolves: if knights are too weak, the lowest-strength defender(s) each lose a city (→ settlement); if knights are strong enough, the single strongest defender wins a Defender of Catan VP."
           },
           {
             "icon": "🕵️",
@@ -1719,7 +1719,7 @@
                 "icon": "⚔️",
                 "level": "beginner",
                 "title": "Zorg voor een ridder voordat ze landen",
-                "body": "Barbaren slaan toe op de kust, en een onverdedigd kustdorp wordt verwoest, niet alleen gedegradeerd. Bouw minstens één ridder voordat het leger aankomt.",
+                "body": "Barbaren slaan toe op de kust, en een onverdedigd kustdorp kan veroverd worden — het levert geen OP meer op tot je het met ridders bevrijdt, maar het wordt niet verwoest. Bouw minstens één ridder voordat het leger aankomt.",
                 "tags": ["barbarians", "defense"]
               },
               {
@@ -1912,7 +1912,7 @@
       ],
       "gameplay": {
         "players": "2–4",
-        "vpToWin": "15-17",
+        "vpToWin": "17",
         "setup": [
           "Opzetten in een groot driehoek of langwerpig framework de boten de crews al de plastic componenten apart leggen"
         ],
@@ -1931,7 +1931,7 @@
         "scenarios": []
       },
       "reference": {
-        "tradingNote": "E&P keeps base bank/harbour ratios but adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
+        "tradingNote": "E&P uses a 3:1 bank rate with no ports (or 2 gold for any 1 resource, twice per turn) and adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
       },
       "strategy": {
         "beginner": [
@@ -1969,7 +1969,7 @@
             "id": "settle-islands",
             "icon": "🏝️",
             "title": "Koloniseer de eilanden die je ontdekt",
-            "body": "Kolonisten (1 graan + 1 erts) varen mee op een schip en stappen uit op een nieuw kruispunt aan land. Nieuwe eilanden betekenen nieuwe productie en meer havenplekken — uitbreiden over zee is hoe je groeit.",
+            "body": "Kolonisten (1 klei + 1 hout + 1 wol + 1 graan) varen mee op een schip en stappen uit op een nieuw kruispunt aan land. Nieuwe eilanden betekenen nieuwe productie en meer havenplekken — uitbreiden over zee is hoe je groeit.",
             "tags": ["settlers", "expansion"]
           },
           {
@@ -1983,7 +1983,7 @@
             "id": "load-crews",
             "icon": "👥",
             "title": "Laad crews, niet alleen kolonisten",
-            "body": "Crews (1 graan + 1 wol) zijn de werkpaarden van de missies: ze veroveren piratenkampen, activeren specerijenboerderijen en halen vis binnen. Een schip met een crew doet werk dat een kolonist niet kan.",
+            "body": "Crews (1 wol + 1 erts) zijn de werkpaarden van de missies: ze veroveren piratenkampen, activeren specerijenboerderijen en halen vis binnen. Een schip met een crew doet werk dat een kolonist niet kan.",
             "tags": ["crews", "missions"]
           },
           {

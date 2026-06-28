@@ -554,7 +554,7 @@
             "detail": "Negotiate freely with other players during your turn — rates are whatever you can convince them to accept."
           }
         ],
-        "tradingNote": "You can only trade on your own turn, and only before or after the roll (not during production).",
+        "tradingNote": "You can only trade during your own Action phase — that is, after you roll and collect resources, never before the roll.",
         "turnFlow": [
           {
             "icon": "🃏",
@@ -786,7 +786,7 @@
               "type": "special",
               "icon": "🏆",
               "name": "Neue Insel Bonus",
-              "description": "In den meisten Seefahrer-Szenarien erhält man 1 Extra-Siegpunkt für die erste Siedlung auf einer neuen Insel.",
+              "description": "In den meisten Seefahrer-Szenarien erhält man Bonus-Siegpunkte (meist 2, manchmal 1) für die erste Siedlung auf einer neuen Insel.",
               "usages": [
                 "Schiffsrouten zu entlegenen Inseln planen",
                 "Mehrere Spieler können VP von derselben Insel verdienen"
@@ -797,7 +797,7 @@
               "type": "special",
               "icon": "🏴‍☠️",
               "name": "Pirat",
-              "description": "Der Pirat ersetzt den Räuber in Seefahrer. Auf einem Seefeld platziert blockiert er Schiffe und stiehlt von angrenzenden Spielern.",
+              "description": "Der Pirat ergänzt den Räuber in Seefahrer (beide bleiben im Spiel). Auf einem Seefeld platziert blockiert er Schiffe und stiehlt von angrenzenden Spielern.",
               "usages": [
                 "Aktiviert durch Würfeln einer 7 oder Spielen eines Ritters",
                 "Blockiert Schiffsbewegung durch das Feld"
@@ -808,7 +808,7 @@
       ],
       "gameplay": {
         "players": "3–4",
-        "vpToWin": "13",
+        "vpToWin": "Szenarioabhängig (12–14)",
         "setup": [
           "Standard-Catan-Aufbau plus Seerahmen-Anpassungen für Seefahrer-Szenarien.",
           "Jeder Spieler erhält 15 Schiffe zusätzlich zu den normalen Spielmaterialien.",
@@ -883,11 +883,11 @@
           },
           {
             "name": "Der vergessene Stamm",
-            "vp": "12 SP",
-            "description": "Dörfer auf kleinen Inseln produzieren Stoffmarken.",
+            "vp": "13 SP",
+            "description": "Schiffe zu besonderen Kanten segeln, um SP-Marken, Entwicklungskarten und Häfen einzusammeln.",
             "details": [
-              "Handelsrouten zu Dörfern aufbauen",
-              "Paar Stoffmarken = 1 SP"
+              "Schiff auf eine Kante mit SP-Marke (je 1 SP), Entwicklungskarte oder Hafen bauen, um sie zu nehmen",
+              "Siedlungen nur auf Feldern mit Zahlenchip erlaubt"
             ]
           },
           {
@@ -922,7 +922,7 @@
             "vp": "12 SP",
             "description": "Komplett zufälliges Insellayout.",
             "details": [
-              "+1 SP pro Siedlung auf unerforschter Insel"
+              "+1 SP für erste Siedlung auf jeder unerforschten Insel"
             ]
           }
         ]
@@ -1024,7 +1024,7 @@
               "type": "commodity",
               "icon": "🧵",
               "name": "Tuch",
-              "description": "Ware von ausgebauten Weidestadt-Metropolen. Wird für Verbesserungen der Handelsspalte verwendet.",
+              "description": "Ware von Städten auf Weidefeldern. Wird für Verbesserungen der Handelsspalte verwendet.",
               "usages": [
                 "Von Städten auf Weidelandfeldern produziert",
                 "In Handelsstadtverbesserungen investieren"
@@ -1085,7 +1085,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
                   "name": "Meisterhändler",
                   "count": 2,
-                  "description": "Schau dir die Hand eines benachbarten Gegners an und nimm 2 Karten deiner Wahl.",
+                  "description": "Schau dir die Hand eines Gegners mit mehr Siegpunkten als du an und nimm 2 Karten deiner Wahl.",
                   "usages": [
                     "Informationen über gegnerische Hände erhalten",
                     "Gezielt 2 Karten stehlen"
@@ -1124,7 +1124,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
                   "name": "Rohstoffmonopol",
                   "count": 4,
-                  "description": "Nenne 1 Rohstoff. Jeder Gegner mit 2+ dieser Ressource muss dir genau 2 Karten geben.",
+                  "description": "Nenne 1 Rohstoff. Jeder Gegner muss dir 2 Karten dieser Ressource geben, wenn er sie hat; wer nur 1 hat, gibt diese 1.",
                   "usages": [
                     "Sammle viele Rohstoffe von mehreren Gegnern",
                     "Stark, aber weniger mächtig als Basis-Monopol"
@@ -1210,7 +1210,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
                   "name": "Bewässerung",
                   "count": 2,
-                  "description": "Nimm 2 Weizenkarten pro Siedlung/Stadt neben einem Feld mit Getreide aus der Bank.",
+                  "description": "Nimm 2 Weizenkarten pro Getreidefeld neben mindestens einem deiner Gebäude aus der Bank.",
                   "usages": [
                     "Großer Weizeschub bei guter Platzierung",
                     "Gut zum Aktivieren von Rittern"
@@ -1223,7 +1223,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
                   "name": "Medizin",
                   "count": 2,
-                  "description": "Verbessere eine Siedlung zur Stadt für nur 1 Erz + 1 Weizen (statt 3 Erz + 2 Weizen).",
+                  "description": "Verbessere eine Siedlung zur Stadt für nur 2 Erz + 1 Weizen (statt 3 Erz + 2 Weizen).",
                   "usages": [
                     "Stadt günstig bauen",
                     "Schnell mehr Städte errichten"
@@ -1236,7 +1236,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
                   "name": "Bergbau",
                   "count": 2,
-                  "description": "Nimm 2 Erz aus der Bank für jede Siedlung/Stadt neben einem Gebirgsfeld.",
+                  "description": "Nimm 2 Erz aus der Bank für jedes Gebirgsfeld neben mindestens einem deiner Gebäude.",
                   "usages": [
                     "Große Erzquelle bei guter Platzierung"
                   ]
@@ -1376,7 +1376,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
                   "name": "Kriegsherr",
                   "count": 2,
-                  "description": "Aktiviere alle deine Ritter kostenlos (ohne Weizen+Erz zu zahlen).",
+                  "description": "Aktiviere alle deine Ritter kostenlos (ohne den üblichen Weizen zu zahlen).",
                   "usages": [
                     "Bereite sofortige Verteidigung vor"
                   ]
@@ -1453,7 +1453,7 @@
               "description": "Wenn ein Schiff gewürfelt wird, rücken die Barbaren vor. Wenn sie Catan erreichen, wird eine Schlacht ausgewertet. Verlieren die Verteidiger, verliert der Spieler mit den wenigsten Rittern eine Stadt.",
               "usages": [
                 "Ritter bauen und aktivieren, um zu verteidigen",
-                "Stadtmauern schützen eine Stadt vor dem Abbau"
+                "Stadtmauern verhindern keine Plünderung; sie erhöhen nur das Handkartenlimit bei einer 7 (+2 je Mauer)"
               ]
             }
           ]
@@ -1510,11 +1510,11 @@
           },
           {
             "title": "Ritter",
-            "detail": "3 Stärkestufen: Einfach, Stark, Mächtig. Müssen rekrutiert und dann aktiviert werden (1 Getreide + 1 Erz). Können bewegt werden, schwächere feindliche Ritter verdrängen oder den Räuber vertreiben. Alle werden nach Barbarenangriff deaktiviert."
+            "detail": "3 Stärkestufen: Einfach, Stark, Mächtig. Müssen rekrutiert und dann aktiviert werden (1 Getreide). Können bewegt werden, schwächere feindliche Ritter verdrängen oder den Räuber vertreiben. Alle werden nach Barbarenangriff deaktiviert."
           },
           {
             "title": "Barbarenangriff",
-            "detail": "Barbarenstärke = Gesamtzahl der Städte auf dem Spielplan. Verteidigungsstärke = Summe aktiver Ritter. Wenn die Barbaren gewinnen: Spieler mit wenigsten aktiven Rittern verliert eine Stadt (wird zur Siedlung). Metropolen sind immun."
+            "detail": "Barbarenstärke = Gesamtzahl der Städte auf dem Spielplan. Verteidigungsstärke = Summe aktiver Ritter. Wenn die Barbaren gewinnen: Spieler mit der geringsten Gesamtstärke aktiver Ritter verliert eine Stadt (wird zur Siedlung). Metropolen sind immun."
           },
           {
             "title": "Stadtmauern",
@@ -1537,12 +1537,12 @@
           {
             "icon": "🃏",
             "title": "Play a progress card (optional)",
-            "detail": "Up to 1 progress card before rolling if you have them."
+            "detail": "Only the Alchemist (Alchemy) card may be played before rolling."
           },
           {
             "icon": "🎲",
             "title": "Roll production + event die",
-            "detail": "Red + yellow production dice AND the colored event die (barbarian, town gate, or castle)."
+            "detail": "Red + yellow production dice AND the colored event die (barbarian ship, or one of the three city-improvement icons: Trade, Science, Politics)."
           },
           {
             "icon": "🌾",
@@ -1552,7 +1552,7 @@
           {
             "icon": "🏴‍☠️",
             "title": "Barbarian advance",
-            "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, undefended cities become settlements; strongest-knight player wins a Defender of Catan VP."
+            "detail": "On a barbarian event die face, the barbarian ship advances. If it reaches Catan, a battle resolves: if knights are too weak, the lowest-strength defender(s) each lose a city (→ settlement); if knights are strong enough, the single strongest defender wins a Defender of Catan VP."
           },
           {
             "icon": "🕵️",
@@ -1936,7 +1936,7 @@
                 "icon": "⚔️",
                 "level": "beginner",
                 "title": "Habe einen Ritter, bevor sie landen",
-                "body": "Barbaren treffen die Küste, und eine ungeschützte Küstensiedlung wird zerstört, nicht nur zurückgestuft. Baue mindestens einen Ritter, bevor das Heer eintrifft.",
+                "body": "Barbaren treffen die Küste, und eine ungeschützte Küstensiedlung kann erobert werden — sie bringt keine SP mehr, bis du sie mit Rittern befreist, wird aber nicht zerstört. Baue mindestens einen Ritter, bevor das Heer eintrifft.",
                 "tags": ["barbarians", "defense"]
               },
               {
@@ -2099,7 +2099,7 @@
               "type": "mission",
               "icon": "🌶️",
               "name": "Gewürztransport",
-              "description": "Segele zu einer fernen Gewürzinsel und bringe Gewürze zur Heimatinsel für Siegpunkte.",
+              "description": "Segele zu einer fernen Gewürzinsel und liefere den Gewürzsack an den Rat von Catan für Siegpunkte.",
               "usages": [
                 "Jeder abgeschlossene Transport bringt 1 SP",
                 "Reise von der Gewürzinsel zurück erforderlich"
@@ -2110,9 +2110,9 @@
               "type": "mission",
               "icon": "🐟",
               "name": "Fischlager",
-              "description": "Errichte ein Fischlager an einer entdeckten Küste, um jede Runde Fischmarker zu erhalten.",
+              "description": "Fange Fischfänge an Fischschwärmen (würfle einmal pro Bewegungsphase eine zu einem erkundeten Schwarm passende Zahl) und bringe sie zum Rat von Catan.",
               "usages": [
-                "Fischmarker können gegen Rohstoffe getauscht werden",
+                "Fischfänge an den Rat von Catan liefern, um auf der Fisch-Missionsleiste vorzurücken",
                 "In Küstenfeldern mit guten Zahlen positionieren"
               ]
             },
@@ -2123,8 +2123,8 @@
               "name": "Piratenversteck",
               "description": "Entdecke und zerstöre Piratenverstecke der Grenzregion. Jedes beseitigte Versteck bringt 1 SP.",
               "usages": [
-                "Mit einem Schiff zum Versteck segeln, um es zu räumen",
-                "Bringt sofort 1 SP nach der Entdeckung"
+                "Crew auf das Goldfeld abladen — die 3. Crew erobert das Versteck",
+                "Das Erobern rückt dich auf der Piraten-Missionsleiste vor — bei der Entdeckung gibt es keine Punkte"
               ]
             }
           ]
@@ -2169,11 +2169,11 @@
           },
           {
             "title": "Siedler",
-            "detail": "Kosten: 1 Getreide + 1 Erz. Werden auf Schiffen transportiert. Siedlung bauen durch Abladen an einer Landfeld-Kreuzung."
+            "detail": "Kosten: 1 Lehm + 1 Holz + 1 Wolle + 1 Getreide (wie eine Siedlung). Werden auf Schiffen transportiert. Siedlung bauen durch Abladen an einer Landfeld-Kreuzung."
           },
           {
             "title": "Crews",
-            "detail": "Kosten: 1 Getreide + 1 Wolle. Für Piratenversteck-Eroberungen und Gewürzfarm-Aktivierung benötigt."
+            "detail": "Kosten: 1 Wolle + 1 Erz. Für Piratenversteck-Eroberungen und Gewürzfarm-Aktivierung benötigt."
           },
           {
             "title": "Piratenschiff",
@@ -2232,7 +2232,7 @@
         ]
       },
       "reference": {
-        "tradingNote": "E&P keeps base bank/harbour ratios but adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
+        "tradingNote": "E&P uses a 3:1 bank rate with no ports (or 2 gold for any 1 resource, twice per turn) and adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
       },
       "strategy": {
         "beginner": [
@@ -2270,7 +2270,7 @@
             "id": "settle-islands",
             "icon": "🏝️",
             "title": "Besiedle die Inseln, die du entdeckst",
-            "body": "Siedler (1 Getreide + 1 Erz) reisen per Schiff und werden an einer neuen Kreuzung an Land abgesetzt. Frische Inseln bringen neue Produktion und mehr Hafenplätze — Expansion über das Meer ist dein Wachstum.",
+            "body": "Siedler (1 Lehm + 1 Holz + 1 Wolle + 1 Getreide) reisen per Schiff und werden an einer neuen Kreuzung an Land abgesetzt. Frische Inseln bringen neue Produktion und mehr Hafenplätze — Expansion über das Meer ist dein Wachstum.",
             "tags": ["settlers", "expansion"]
           },
           {
@@ -2284,7 +2284,7 @@
             "id": "load-crews",
             "icon": "👥",
             "title": "Lade Crews, nicht nur Siedler",
-            "body": "Crews (1 Getreide + 1 Wolle) sind die Arbeitstiere der Missionen: Sie erobern Piratenverstecke, aktivieren Gewürzfarmen und holen Fisch. Ein Schiff mit Crew leistet, was ein Siedler nicht kann.",
+            "body": "Crews (1 Wolle + 1 Erz) sind die Arbeitstiere der Missionen: Sie erobern Piratenverstecke, aktivieren Gewürzfarmen und holen Fisch. Ein Schiff mit Crew leistet, was ein Siedler nicht kann.",
             "tags": ["crews", "missions"]
           },
           {
