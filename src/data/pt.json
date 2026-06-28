@@ -110,7 +110,10 @@
               "name": "Madeira",
               "count": 19,
               "description": "Produzido pelos hexágonos de Floresta quando o seu número é rolado.",
-              "usages": []
+              "usages": [
+                "Construir Estrada (Madeira + Tijolo)",
+                "Construir Povoação (Madeira + Tijolo + Lã + Grão)"
+              ]
             },
             {
               "id": "brick",
@@ -120,7 +123,10 @@
               "name": "Tijolo",
               "count": 19,
               "description": "Produzido pelos hexágonos de Colina quando o seu número é rolado.",
-              "usages": []
+              "usages": [
+                "Construir Estrada (Madeira + Tijolo)",
+                "Construir Povoação (Madeira + Tijolo + Lã + Grão)"
+              ]
             },
             {
               "id": "wool",
@@ -130,7 +136,11 @@
               "name": "Lã",
               "count": 19,
               "description": "Produzido pelos hexágonos de Pastagem quando o seu número é rolado.",
-              "usages": []
+              "usages": [
+                "Construir Povoação (Madeira + Tijolo + Lã + Grão)",
+                "Construir Cidade (× no custo da Cidade)",
+                "Comprar Carta de Desenvolvimento (Minério + Grão + Lã)"
+              ]
             },
             {
               "id": "grain",
@@ -140,7 +150,11 @@
               "name": "Grão",
               "count": 19,
               "description": "Produzido pelos hexágonos de Campos quando o seu número é rolado.",
-              "usages": []
+              "usages": [
+                "Construir Povoação (Madeira + Tijolo + Lã + Grão)",
+                "Atualizar para Cidade (Minério×3 + Grão×2)",
+                "Comprar Carta de Desenvolvimento (Minério + Grão + Lã)"
+              ]
             },
             {
               "id": "ore",
@@ -150,7 +164,10 @@
               "name": "Minério",
               "count": 19,
               "description": "Produzido pelos hexágonos de Montanha quando o seu número é rolado.",
-              "usages": []
+              "usages": [
+                "Atualizar para Cidade (Minério×3 + Grão×2)",
+                "Comprar Carta de Desenvolvimento (Minério + Grão + Lã)"
+              ]
             }
           ]
         },
@@ -167,7 +184,10 @@
               "name": "Cavaleiro",
               "count": 14,
               "description": "Desloque o Ladrão para qualquer hexágono de terreno. Roube uma carta de recurso de um oponente adjacente.",
-              "usages": []
+              "usages": [
+                "Ative antes de lançar os dados",
+                "Receba a carta de Maior Exército ao jogar 3 cavaleiros (2 VP)"
+              ]
             },
             {
               "id": "road-building",
@@ -177,7 +197,10 @@
               "name": "Construção de Estradas",
               "count": 2,
               "description": "Coloque 2 novas estradas no tabuleiro como se as tivesse acabado de construir.",
-              "usages": []
+              "usages": [
+                "Expanda a sua rede rapidamente",
+                "Dispute a Estrada Mais Longa (2 VP com ≥5 estradas)"
+              ]
             },
             {
               "id": "year-of-plenty",
@@ -187,7 +210,10 @@
               "name": "Ano da Abundância",
               "count": 2,
               "description": "Tome quaisquer 2 cartas de recurso do banco. Adicione-as à sua mão.",
-              "usages": []
+              "usages": [
+                "Obtenha os recursos exatos de que precisa para construir",
+                "Complete uma combinação a que falta um recurso"
+              ]
             },
             {
               "id": "monopoly",
@@ -197,7 +223,10 @@
               "name": "Monopólio",
               "count": 2,
               "description": "Nomeie um tipo de recurso. Todos os outros jogadores devem dar-lhe todas as suas cartas desse tipo.",
-              "usages": []
+              "usages": [
+                "Atrapalhe um adversário prestes a fazer uma grande construção",
+                "Reúna um recurso de que precisa com urgência"
+              ]
             },
             {
               "id": "chapel",
@@ -207,7 +236,10 @@
               "name": "Capela",
               "count": 1,
               "description": "Vale 1 Ponto de Vitória. Mantida em segredo até a revelar para vencer (ou até o fim do jogo).",
-              "usages": []
+              "usages": [
+                "Conta para os 10 VP necessários para vencer",
+                "Revele todas de uma vez para surpreender os adversários ao reclamar a vitória"
+              ]
             },
             {
               "id": "great-hall",
@@ -217,7 +249,10 @@
               "name": "Grande Sala",
               "count": 1,
               "description": "Vale 1 Ponto de Vitória. Mantida em segredo até a revelar para vencer (ou até o fim do jogo).",
-              "usages": []
+              "usages": [
+                "Conta para os 10 VP necessários para vencer",
+                "Revele todas de uma vez para surpreender os adversários ao reclamar a vitória"
+              ]
             },
             {
               "id": "library",
@@ -227,7 +262,10 @@
               "name": "Biblioteca",
               "count": 1,
               "description": "Vale 1 Ponto de Vitória. Mantida em segredo até a revelar para vencer (ou até o fim do jogo).",
-              "usages": []
+              "usages": [
+                "Conta para os 10 VP necessários para vencer",
+                "Revele todas de uma vez para surpreender os adversários ao reclamar a vitória"
+              ]
             },
             {
               "id": "market",
@@ -237,7 +275,10 @@
               "name": "Mercado",
               "count": 1,
               "description": "Vale 1 Ponto de Vitória. Mantida em segredo até a revelar para vencer (ou até o fim do jogo).",
-              "usages": []
+              "usages": [
+                "Conta para os 10 VP necessários para vencer",
+                "Revele todas de uma vez para surpreender os adversários ao reclamar a vitória"
+              ]
             },
             {
               "id": "university",
@@ -247,7 +288,10 @@
               "name": "Universidade",
               "count": 1,
               "description": "Vale 1 Ponto de Vitória. Mantida em segredo até a revelar para vencer (ou até o fim do jogo).",
-              "usages": []
+              "usages": [
+                "Conta para os 10 VP necessários para vencer",
+                "Revele todas de uma vez para surpreender os adversários ao reclamar a vitória"
+              ]
             }
           ]
         },
@@ -263,7 +307,10 @@
               "image": "src/assets/images/basic/longest-road.png",
               "name": "Estrada Mais Longa",
               "description": "Atribuída ao primeiro jogador com uma estrada contínua de 5+ segmentos. Vale 2 Pontos de Vitória. Outro jogador pode roubá-la construindo uma estrada mais longa.",
-              "usages": []
+              "usages": [
+                "Construa estradas agressivamente para reclamar a carta",
+                "Quebre a estrada de um adversário colocando uma povoação no meio"
+              ]
             },
             {
               "id": "largest-army",
@@ -272,7 +319,10 @@
               "image": "src/assets/images/basic/longest-army.png",
               "name": "Maior Exército",
               "description": "Atribuído ao primeiro jogador que joga 3 cartas de Cavaleiro. Vale 2 Pontos de Vitória. Outro jogador pode roubá-lo jogando mais Cavaleiros.",
-              "usages": []
+              "usages": [
+                "Jogue Cavaleiros para controlar o Ladrão e ganhar 2 VP",
+                "Proteja os hexágonos de trigo/minério do Ladrão"
+              ]
             }
           ]
         },
@@ -288,7 +338,12 @@
               "image": "src/assets/images/common/building-cost.png",
               "name": "Carta de Custos de Construção",
               "description": "Carta de referência mostrando todos os custos de construção em Catan.",
-              "usages": []
+              "usages": [
+                "Estrada: 1 Madeira + 1 Tijolo",
+                "Povoação: 1 Madeira + 1 Tijolo + 1 Lã + 1 Grão",
+                "Cidade: 3 Minério + 2 Grão",
+                "Carta de Desenvolvimento: 1 Minério + 1 Grão + 1 Lã"
+              ]
             }
           ]
         }
@@ -784,7 +839,85 @@
             "detail": "Permite mover o Ladrão OU o Pirata."
           }
         ],
-        "scenarios": []
+        "scenarios": [
+          {
+            "name": "Rumo a Novas Costas",
+            "vp": "14 VP",
+            "description": "Colonize ilhas pequenas do outro lado do mar.",
+            "details": [
+              "+2 VP pela primeira povoação em cada ilha pequena"
+            ]
+          },
+          {
+            "name": "As Quatro Ilhas",
+            "vp": "13 VP",
+            "description": "Quatro ilhas separadas para colonizar.",
+            "details": [
+              "+2 VP pela primeira povoação em cada ilha inexplorada"
+            ]
+          },
+          {
+            "name": "As Ilhas de Nevoeiro",
+            "vp": "12 VP",
+            "description": "Hexágonos virados para baixo revelados quando constrói ao lado.",
+            "details": [
+              "Ganha 1 recurso na descoberta",
+              "O terreno desconhecido acrescenta um desafio de exploração"
+            ]
+          },
+          {
+            "name": "Através do Deserto",
+            "vp": "14 VP",
+            "description": "Um deserto divide a ilha em regiões.",
+            "details": [
+              "+2 VP pela primeira povoação em cada região inexplorada"
+            ]
+          },
+          {
+            "name": "A Tribo Esquecida",
+            "vp": "13 VP",
+            "description": "Navegue até arestas especiais para recolher fichas de VP, cartas de desenvolvimento e portos.",
+            "details": [
+              "Construa um navio numa aresta com uma ficha de VP (1 VP cada), carta de desenvolvimento ou porto para o reclamar",
+              "Povoações só são permitidas em hexágonos com disco de número"
+            ]
+          },
+          {
+            "name": "Tecido para Catan",
+            "vp": "14 VP",
+            "description": "Fichas de tecido obtidas por rotas comerciais com aldeias.",
+            "details": [
+              "O jogo também pode terminar quando 5+ aldeias ficarem vazias",
+              "Roube tecido ou recursos através do Pirata"
+            ]
+          },
+          {
+            "name": "As Ilhas dos Piratas",
+            "vp": "10 VP + fortaleza",
+            "description": "Construa navios de guerra e conquiste as fortalezas piratas.",
+            "details": [
+              "Cartas de Cavaleiro convertem navios em navios de guerra",
+              "Sem peças de Maior Rota/Maior Exército"
+            ]
+          },
+          {
+            "name": "As Maravilhas de Catan",
+            "vp": "10+ VP ou Maravilha",
+            "description": "Reclame e construa uma de 5 Maravilhas para vencer.",
+            "details": [
+              "4 níveis, cada um custa 5 recursos",
+              "Complete a sua Maravilha OU alcance 10+ VP com o nível de maravilha mais alto"
+            ]
+          },
+          {
+            "name": "Novo Mundo",
+            "vp": "12 VP",
+            "description": "Disposição de ilhas totalmente aleatória.",
+            "details": [
+              "+1 VP pela primeira povoação em cada ilha inexplorada"
+            ]
+          }
+        ]
       },
       "reference": {
         "tradingNote": "Seafarers keeps base-game trading ratios — no new trade rules, but coastal ports remain exceptionally strong when shipping routes connect them."
@@ -1575,6 +1708,76 @@
             "details": [
               "Incentiva estratégia de construção em portos"
             ]
+          },
+          {
+            "name": "Cartas de Evento CATAN",
+            "vp": "Variante",
+            "description": "Um baralho de 37 cartas de evento substitui o lançamento dos dados.",
+            "details": [
+              "As cartas têm números de produção + eventos especiais",
+              "Os eventos incluem Terramoto, Epidemia, Bons Vizinhos",
+              "A carta de Ano Novo provoca a baralhação do baralho"
+            ]
+          },
+          {
+            "name": "CATAN para Dois",
+            "vp": "Variante",
+            "description": "Variante para 2 jogadores com jogadores neutros.",
+            "details": [
+              "Fase de produção dupla (role duas vezes)",
+              "Fichas de comércio para trocas forçadas ou para mover o Ladrão",
+              "Deve construir para os jogadores neutros quando constrói"
+            ]
+          },
+          {
+            "name": "Os Pescadores de Catan",
+            "vp": "10 VP",
+            "description": "Um hexágono de lago substitui o deserto, com zonas de pesca nas costas.",
+            "details": [
+              "Fichas de peixe ganhas com a produção",
+              "Gaste peixe: remover o Ladrão (2), roubar carta (3), recurso grátis (4), estrada grátis (5), carta de desenvolvimento grátis (7)",
+              "Bota velha = precisa de +1 VP para vencer"
+            ]
+          },
+          {
+            "name": "Rios de Catan",
+            "vp": "10 VP",
+            "description": "Peças de rio substituem 7 hexágonos. As pontes atravessam os rios.",
+            "details": [
+              "Custo da ponte: 2 Tijolos + 1 Madeira",
+              "Moedas de ouro das peças de rio",
+              "Catanês Mais Rico (1 VP) / Mais Pobre (-2 VP)"
+            ]
+          },
+          {
+            "name": "Comboios de Mercadores",
+            "vp": "12 VP",
+            "description": "As carroças formam comboios a partir do bebedouro.",
+            "details": [
+              "Carroças obtidas ao construir, colocadas por votação",
+              "Edifícios entre 2 carroças = +1 VP cada",
+              "As carroças contam para a Maior Rota"
+            ]
+          },
+          {
+            "name": "Ataque dos Bárbaros",
+            "vp": "12 VP",
+            "description": "Hexágono de castelo no tabuleiro. Os cavaleiros defendem contra os desembarques bárbaros.",
+            "details": [
+              "Sem Ladrão nem cartas de desenvolvimento base",
+              "Cavaleiros colocados nas arestas dos hexágonos",
+              "3 bárbaros conquistam um hexágono; prisioneiros = VP"
+            ]
+          },
+          {
+            "name": "Comerciantes e Bárbaros (cenário principal)",
+            "vp": "13 VP",
+            "description": "3 hexágonos de mercadoria. As carroças transportam bens entre eles.",
+            "details": [
+              "Melhorias de carroça aumentam o movimento",
+              "Ouro ganho com as entregas",
+              "Os bárbaros bloqueiam estradas"
+            ]
           }
         ]
       },
@@ -1968,6 +2171,42 @@
             "description": "Aprenda os princípios da exploração.",
             "details": [
               "Descubra hexágonos, construa povoações em novas ilhas"
+            ]
+          },
+          {
+            "name": "Covis Piratas",
+            "vp": "+ missão",
+            "description": "Capture covis piratas em hexágonos de campo de ouro.",
+            "details": [
+              "Coloque 3 tripulações para capturar um covil",
+              "O Herói (dado mais alto + tripulação) avança a mais no trilho de missões"
+            ]
+          },
+          {
+            "name": "Peixe para Catan",
+            "vp": "+ missão",
+            "description": "Pesque e entregue peixe ao Conselho de Catan.",
+            "details": [
+              "Role o dado durante o movimento; cardume correspondente = carga de peixe",
+              "Entregue ao Conselho para avançar no trilho de missões"
+            ]
+          },
+          {
+            "name": "Especiarias para Catan",
+            "vp": "+ missão",
+            "description": "Entregue sacos de especiarias ao Conselho.",
+            "details": [
+              "Desembarque a tripulação na fazenda de especiarias, carregue o saco de especiarias e entregue",
+              "Cada fazenda concede um bónus permanente (Viagem Rápida, Bónus Pirata, Ouro Rápido)"
+            ]
+          },
+          {
+            "name": "Exploradores e Piratas (Completo)",
+            "vp": "17 VP",
+            "description": "A experiência completa com as 3 missões.",
+            "details": [
+              "Todas as missões ativas em simultâneo",
+              "As posições no trilho de missões e as fichas de VP de bónus contribuem para a vitória"
             ]
           }
         ]

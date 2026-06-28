@@ -742,7 +742,7 @@
     "seafarers": {
       "name": "Catan: Zeevaarders",
       "descriptionTitle": "⛵ Omdat één eiland niet genoeg drama was",
-      "description": "Verken meerdere eilanden, bouw schepen en vind nieuwe grondstoffen. Het modulaire bord creëert nieuwe kansen en conflicten om havens en handelsroutes.",
+      "description": "Verken een archipel van eilanden, want blijkbaar was vriendschappen verpesten op één stuk land niet bevredigend genoeg. Bouw schepen om de zeeën te bevaren, ontdek nieuwe eilanden met goudvelden (waar iedereen meteen om gaat vechten) en sticht dorpen op verre kusten voor bonus-OP. Nu kan je wegblokkerende aartsvijand je ook over de oceaan achtervolgen.",
       "sections": [
         {
           "id": "ships",
@@ -754,51 +754,51 @@
               "type": "ship",
               "icon": "⛵",
               "name": "Schip",
-              "description": "Handelswegen van Catan maar gebouwd over zeetegels.",
+              "description": "Schepen verlengen je handelsroutes over zeetegels. Ze werken als wegen op zee.",
               "usages": [
                 "Kosten: 1 Hout + 1 Wol",
-                "Iedere ronde kan precies het allerlaatste schip uit jouw open routeketten verscheept worden naar open kruispunten.",
-                "Maximaal 15 stuk voor de speler"
+                "Het eindschip van een open route mag eenmaal per beurt verplaatst worden",
+                "Maximaal 15 schepen per speler"
               ]
             },
             {
               "id": "gold-field",
               "type": "resource",
               "icon": "🪙",
-              "name": "Goudrivier / Goudveld",
-              "description": "Heeft men kans om in Goud te graven, dán kun je dit in theorie vrij opnemen naar wat jou bevalt. Ze zijn wildcard productietegels.",
+              "name": "Goudveld",
+              "description": "Speciale tegel die een vrije grondstof oplevert. Als het getal wordt gegooid, kiezen aangrenzende spelers een willekeurige grondstof naar keuze uit de bank.",
               "usages": [
-                "1 Willekeurige open grondstof bij uitrollen goud getal",
-                "Meerdere bij een opgewaardeerde stad."
+                "Zeer waardevol — de moeite waard om er vroeg te bouwen",
+                "Elk aangrenzend dorp levert 1 vrije grondstof naar keuze op"
               ]
             }
           ]
         },
         {
           "id": "seafarers-special",
-          "title": "Speciale Regels in Zeevaarders",
+          "title": "Speciale Regels",
           "icon": "🗺️",
           "cards": [
             {
               "id": "discovery-vp",
               "type": "special",
               "icon": "🏆",
-              "name": "V.P. Bonus Eiland Stichting",
-              "description": "Meestal 2 punten, soms 1 (Catan token munt) elke allereerste keer als een speler op dat specifieke eiland (via verschepen) een nieuw dorp uitschrijft.",
+              "name": "Nieuwe-eilandbonus",
+              "description": "In de meeste Zeevaarders-scenario's levert je eerste dorp op een nieuw eiland je bonus-overwinningspunten op (meestal 2, soms 1).",
               "usages": [
-                "Beloningsprincipe met ontdekkingsprikkel in losse scenario ontwerpen",
-                "Speler bouwt stad / dorp aan ten minste 1 heuvel/gras/hout/steen/koren land van specifieke oversteken"
+                "Plan scheepsroutes om verre eilanden snel te bereiken",
+                "Meerdere spelers kunnen OP verdienen op hetzelfde eiland"
               ]
             },
             {
               "id": "pirate",
               "type": "special",
               "icon": "🏴‍☠️",
-              "name": "Piraat de struikrover overzee",
-              "description": "Werkt hetzelfde. Blokt kruispunt. Piraat mag een schip verplaatsen tegenhouden in de zee op dat blok",
+              "name": "Piraat",
+              "description": "De piraat komt in Zeevaarders naast de rover erbij (beide blijven in het spel). Verplaats hem naar een willekeurige zeetegel om schepen te blokkeren. Steel van een aangrenzende speler die daar een schip heeft.",
               "usages": [
-                "Rol 7 -> de speler verschuift Rover OF Piraat",
-                "Blokkeert schepen door die grens heen."
+                "Geactiveerd door een 7 te gooien of een ridderkaart te spelen",
+                "Blokkeert scheepsbeweging door die tegel heen"
               ]
             }
           ]
@@ -808,40 +808,123 @@
         "players": "3–4",
         "vpToWin": "Scenario-afhankelijk (12–14)",
         "setup": [
-          "Veranderlijke tegelkaarten die zee randen verbreden",
-          "Een hoop water tegels tussen meerdere vaste eilanden."
+          "Gebruikt een speciaal Zeevaarders-zeeraamwerk met meerdere eilanden.",
+          "Plaats terreintegels, zeetegels en goudveldtegels volgens de scenariokaart.",
+          "Elke speler krijgt 15 schepen naast de standaard speelstukken.",
+          "Zowel de rover als de piraat zijn in het spel."
         ],
         "turnOverview": [
           {
-            "title": "Actie plus!",
-            "detail": "Kies voor boot steden of verhuis over en bouw."
+            "title": "Productie & Actie",
+            "detail": "Net als in het basisspel, maar schepen kunnen gebouwd en verplaatst worden. Bij een 7 kies je of je de rover OF de piraat verplaatst."
           },
           {
-            "title": "Bootje Verplaatsen",
-            "detail": "Niet gekoppelde boten mogen per turn op einde verzet worden in water tegels zolang ze gekoppeld strarten."
+            "title": "Schepen Verplaatsen",
+            "detail": "Eenmaal per beurt verplaats je 1 schip met een open uiteinde (niet aan beide kanten verbonden) naar een nieuwe toegestane plek."
           }
         ],
         "keyRules": [
           {
-            "title": "Boten",
-            "detail": "Telt samen mee voor langste handelsroute. Mag niet wegliggers met elkaar in verwarring mixen behalve waar je steden hebt getegeld."
+            "title": "Schepen",
+            "detail": "Kosten: 1 Hout + 1 Wol. Geplaatst op de randen van zeetegels. Tellen mee voor de Langste Handelsroute. Mogen niet verplaatst worden in de beurt waarin ze gebouwd zijn."
           },
           {
-            "title": "Goudvelden Opbrengst",
-            "detail": "Bij een dorps ligging pakt speler de kaart op vrije gemaakte beslissing "
+            "title": "Goudvelden",
+            "detail": "Als het getal wordt gegooid, kiest elke aangrenzende speler 1 willekeurige grondstof (2 voor een stad)."
           },
           {
-            "title": "De Ontdekker Route Fiches",
-            "detail": "Extra Vp."
+            "title": "Piraat",
+            "detail": "Verplaats naar een willekeurige zeetegel. Steel 1 grondstof van een speler die daar een schip heeft. Blokkeert het plaatsen/verplaatsen van schepen."
+          },
+          {
+            "title": "Langste Handelsroute",
+            "detail": "Wegen en schepen vormen samen één route, maar verbinden alleen via je eigen gebouwen (dorpen/steden)."
+          },
+          {
+            "title": "Wegenbouwkaart",
+            "detail": "Hiermee bouw je 2 wegen, 2 schepen of 1 van elk."
+          },
+          {
+            "title": "Ridderkaart",
+            "detail": "Hiermee verplaats je de rover OF de piraat."
           }
         ],
         "scenarios": [
           {
-            "name": "Scenario's",
-            "vp": "14",
-            "description": "Verderop bouwen",
+            "name": "Op naar nieuwe kusten",
+            "vp": "14 OP",
+            "description": "Sticht dorpen op kleine eilanden verspreid over zee.",
             "details": [
-              "Variaties van the board in regelboekje van Zeevaarders!"
+              "+2 OP voor het eerste dorp op elk klein eiland"
+            ]
+          },
+          {
+            "name": "De vier eilanden",
+            "vp": "13 OP",
+            "description": "Vier aparte eilanden om te koloniseren.",
+            "details": [
+              "+2 OP voor het eerste dorp op elk onverkend eiland"
+            ]
+          },
+          {
+            "name": "De misteilanden",
+            "vp": "12 OP",
+            "description": "Verdekte tegels worden onthuld zodra je ernaast bouwt.",
+            "details": [
+              "Krijg 1 grondstof bij ontdekking",
+              "Onbekend terrein voegt een ontdekkingsuitdaging toe"
+            ]
+          },
+          {
+            "name": "Door de woestijn",
+            "vp": "14 OP",
+            "description": "Een woestijn verdeelt het eiland in regio's.",
+            "details": [
+              "+2 OP voor het eerste dorp in elke onverkende regio"
+            ]
+          },
+          {
+            "name": "De vergeten stam",
+            "vp": "13 OP",
+            "description": "Vaar met schepen naar speciale randen om OP-fiches, ontwikkelingskaarten en havens te verzamelen.",
+            "details": [
+              "Bouw een schip op een rand met een OP-fiche (1 OP per stuk), ontwikkelingskaart of haven om die te claimen",
+              "Dorpen zijn alleen toegestaan op tegels met een getalfiche"
+            ]
+          },
+          {
+            "name": "Stof voor Catan",
+            "vp": "14 OP",
+            "description": "Stoffiches uit handelsroutes naar de dorpen.",
+            "details": [
+              "Het spel kan ook eindigen als 5+ dorpen leeg zijn",
+              "Steel stof of grondstoffen met de piraat"
+            ]
+          },
+          {
+            "name": "De piraateilanden",
+            "vp": "10 OP + fort",
+            "description": "Bouw oorlogsschepen en verover piratenforten.",
+            "details": [
+              "Ridderkaarten maken van schepen oorlogsschepen",
+              "Geen fiches voor Langste Handelsroute/Grootste Riddermacht"
+            ]
+          },
+          {
+            "name": "De wonderen van Catan",
+            "vp": "10+ OP of wonder",
+            "description": "Claim en bouw een van de 5 wonderen om te winnen.",
+            "details": [
+              "4 niveaus, elk kost 5 grondstoffen",
+              "Voltooi je wonder OF bereik 10+ OP met het hoogste wonderniveau"
+            ]
+          },
+          {
+            "name": "Nieuwe wereld",
+            "vp": "12 OP",
+            "description": "Volledig willekeurige eilandindeling.",
+            "details": [
+              "+1 OP voor het eerste dorp op elk onverkend eiland"
             ]
           }
         ]
@@ -884,7 +967,7 @@
           {
             "id": "pirate-vs-robber",
             "icon": "🏴‍☠️",
-            "title": "Op zee wint de piraat van de struikrover",
+            "title": "Op zee wint de piraat van de rover",
             "body": "Bij een 7 parkeer je de piraat naast de schepen van een tegenstander: dat bevriest zijn uitbreiding op zee én je mag nog steeds stelen — meestal beter dan een landtegel blokkeren.",
             "tags": ["robber", "ships"]
           },
@@ -1359,17 +1442,18 @@
         },
         {
           "id": "barbarians",
-          "title": "De Barbaren Boten",
+          "title": "Barbaren",
           "icon": "⚔️",
           "cards": [
             {
               "id": "barbarian-track",
               "type": "special",
               "icon": "🏴‍☠️",
-              "name": "Aanval vanuit Zee",
-              "description": "Tel de koppen en sla ze allemaal ter neer! Zoniet, speler met minste verdediging omlaag met de stad!",
+              "name": "Barbarenaanval",
+              "description": "Telkens als er een schip wordt gegooid, schuift de barbarenfiche op. Wanneer die Catan bereikt, wordt er een gevecht uitgevochten. Als de barbaren winnen, verliest de speler met de laagste totale ridderkracht een stad.",
               "usages": [
-                "Activeer ridders (graan)."
+                "Bouw en activeer ridders om te verdedigen",
+                "Stadsmuren stoppen de plundering NIET; ze verhogen alleen je handlimiet bij een 7 (+2 per stuk)"
               ]
             }
           ]
@@ -1400,8 +1484,36 @@
         ],
         "keyRules": [
           {
-            "title": "Metropool Beschermingskaart",
-            "detail": "Heeft iemand zijn stadsniveau uitgeput = ontvang die kroon / fort poort op the stadtegel = Extra punten!"
+            "title": "Handelsgoederen",
+            "detail": "Steden produceren naast grondstoffen ook handelsgoederen: Munt (bergen), Laken (weiden), Papier (bossen). Worden gebruikt om de stadsverbeteringsbanen vooruit te helpen."
+          },
+          {
+            "title": "Stadsverbeteringen",
+            "detail": "3 banen — Handel, Wetenschap, Politiek. Vorder door handelsgoederen uit te geven. Niveau 3 ontgrendelt een permanente vaardigheid. Niveau 4 levert een Metropool op (2 OP)."
+          },
+          {
+            "title": "Metropool",
+            "detail": "Wie als eerste niveau 4 op een baan bereikt, krijgt die Metropool (op een stad geplaatst, totaal 4 OP). Wie als eerste niveau 5 bereikt, krijgt permanente controle. Kan niet geplunderd worden."
+          },
+          {
+            "title": "Ridders",
+            "detail": "3 sterktes: Basis, Sterk, Machtig. Moeten gerekruteerd en daarna geactiveerd worden (kost 1 Graan). Kunnen bewegen, zwakkere vijandelijke ridders verdringen of de rover opjagen. Alle worden gedeactiveerd na een barbarenaanval."
+          },
+          {
+            "title": "Barbarenaanval",
+            "detail": "Barbarensterkte = totaal aantal steden op het bord. Verdedigingssterkte = som van actieve ridders. Als de barbaren winnen: de speler(s) met de laagste totale sterkte aan actieve ridders verliezen een stad (teruggebracht tot nederzetting). Metropolen zijn immuun."
+          },
+          {
+            "title": "Stadsmuren",
+            "detail": "Onder steden geplaatst. Elke muur verhoogt je handlimiet bij een 7 met +2. Max. 3 muren."
+          },
+          {
+            "title": "Voortgangskaarten",
+            "detail": "Getrokken op basis van de evenementdobbelsteen + je baanniveau. Handlimiet van 4 voortgangskaarten. Veel unieke effecten verspreid over 3 decks (Handel, Wetenschap, Politiek)."
+          },
+          {
+            "title": "De Handelaar",
+            "detail": "Via een voortgangskaart geplaatst op een hex naast je gebouw. Geeft 2:1-ruil op die grondstof en is 1 OP waard."
           }
         ],
         "scenarios": []
@@ -1534,32 +1646,34 @@
     },
     "traders-barbarians": {
       "name": "Catan: Handelaren & Barbaren",
-      "descriptionTitle": "🐫 Vijf manieren om een goed spel te compliceren",
-      "description": "Verzameling scenario's die handel, karavanen en barbaarse invasies introduceert in verschillende varianten. Elk scenario verandert de spelflow.",
+      "descriptionTitle": "🐫 Vijf manieren om een prima bordspel ingewikkelder te maken",
+      "description": "Een verzameling van vijf scenario's en varianten die nieuwe dimensies aan het klassieke spel toevoegen — omdat iemand bij Catan Studio naar het basisspel keek en dacht 'er moeten meer kamelen bij.' Met handelsroutes waarop je goederen over het eiland bezorgt als een onbetaalde stagiair, barbareninvasies die je scherp houden, en genoeg variantregels om je regelboek dikker dan een telefoonboek te maken. Perfect voor de groep die het basisspel Catan al 200 keer heeft gespeeld en frisse redenen nodig heeft om ruzie te maken.",
       "sections": [
         {
           "id": "trade-routes",
-          "title": "Goudkamelen",
+          "title": "Handelsroutekaarten",
           "icon": "🚗",
           "cards": [
             {
               "id": "caravan",
               "type": "trade",
               "icon": "🐪",
-              "name": "De Karavaan",
-              "description": "Kamelen als wegelement die twee punten aan je road toebrengen.",
+              "name": "Karavaan",
+              "description": "In het scenario Handelaren & Barbaren vervoeren karavanen goederen over wegen. Goederen afleveren bij het vriendelijke dorp levert overwinningspunten op.",
               "usages": [
-                "Verbeter stappen"
+                "Verplaats karavanen tot 3 wegsegmenten per beurt",
+                "Verdien 1 OP per afgeleverde goederenfiche"
               ]
             },
             {
               "id": "gold",
               "type": "trade",
               "icon": "🪙",
-              "name": "Goud!",
-              "description": "Met dit kan je betalen wanneer t mist in grond.",
+              "name": "Goudmuntfiche",
+              "description": "Verdiend door handelsroutes te voltooien of goederen af te leveren. Kan worden gebruikt als een joker-grondstof of in bepaalde scenario's worden ingewisseld voor OP.",
               "usages": [
-                "Wildcarding de economie"
+                "Uitgeven als elke grondstofsoort",
+                "Inwisselen voor OP bij het vriendelijke dorp"
               ]
             }
           ]
@@ -1567,19 +1681,103 @@
       ],
       "gameplay": {
         "players": "2–4",
-        "vpToWin": "12-14",
+        "vpToWin": "Varieert per scenario (10–13)",
         "setup": [
-          "Speel scenario apart of combineer alles door de varianten mix als visserij in the zee / 2 speler systemem en events aan elkaar te lijmen,"
+          "Modulaire uitbreiding — 4 losse varianten en 5 losse scenario's.",
+          "Varianten en scenario's kunnen vrij worden gecombineerd.",
+          "Bevat een 2-spelersvariant met neutrale spelers."
         ],
-        "turnOverview": [],
-        "keyRules": [],
+        "keyRules": [
+          {
+            "title": "Modulair ontwerp",
+            "detail": "Elke variant/elk scenario voegt specifieke regels toe of verandert ze. Kies en combineer vrij met het basisspel."
+          }
+        ],
         "scenarios": [
           {
-            "name": "Rivers of Catan / Handel / Vissende havens",
-            "vp": "13",
-            "description": "Je volgt alle combinaties.",
+            "name": "De Vriendelijke Struikrover",
+            "vp": "Variant",
+            "description": "De struikrover mag niet worden verplaatst naar een veld met een gebouw van een speler die slechts 2 OP heeft.",
             "details": [
-              "Geweldige mix"
+              "Beschermt beginners tegen vroege aanvallen"
+            ]
+          },
+          {
+            "name": "De Havenmeester",
+            "vp": "11 OP",
+            "description": "Het Sterkste-Havens-plaatje (2 OP) voor de speler met de meeste OP in gebouwen op havens.",
+            "details": [
+              "Stimuleert een havenbouwstrategie"
+            ]
+          },
+          {
+            "name": "CATAN Gebeurteniskaarten",
+            "vp": "Variant",
+            "description": "Een gebeurtenisstapel van 37 kaarten vervangt het dobbelen.",
+            "details": [
+              "Kaarten hebben productiegetallen + speciale gebeurtenissen",
+              "Gebeurtenissen zijn onder meer Aardbeving, Epidemie, Goede Buren",
+              "De Nieuwjaarkaart zorgt dat de stapel opnieuw wordt geschud"
+            ]
+          },
+          {
+            "name": "CATAN met z'n Tweeën",
+            "vp": "Variant",
+            "description": "2-spelersvariant met neutrale spelers.",
+            "details": [
+              "Dubbele productiefase (tweemaal werpen)",
+              "Ruilfiches voor gedwongen ruil of het verzetten van de struikrover",
+              "Je moet voor neutrale spelers bouwen wanneer je zelf bouwt"
+            ]
+          },
+          {
+            "name": "De Vissers van Catan",
+            "vp": "10 OP",
+            "description": "Een meerveld vervangt de woestijn, met visgronden langs de kusten.",
+            "details": [
+              "Visfiches verdiend uit productie",
+              "Vis uitgeven: struikrover verwijderen (2), kaart stelen (3), gratis grondstof (4), gratis weg (5), gratis ontwikkelingskaart (7)",
+              "Oude laars = +1 OP nodig om te winnen"
+            ]
+          },
+          {
+            "name": "De Rivieren van Catan",
+            "vp": "10 OP",
+            "description": "Rivierplaatjes vervangen 7 velden. Bruggen steken rivieren over.",
+            "details": [
+              "Brugkosten: 2 Klei + 1 Hout",
+              "Goudmunten van rivierplaatjes",
+              "Rijkste Cataniër (1 OP) / Armste (-2 OP)"
+            ]
+          },
+          {
+            "name": "Koopmanswagens",
+            "vp": "12 OP",
+            "description": "Wagens vormen treinen vanaf de drinkplaats.",
+            "details": [
+              "Wagens verzameld bij het bouwen, geplaatst via stemming",
+              "Gebouwen tussen 2 wagens = +1 OP elk",
+              "Wagens tellen mee voor de Langste Handelsroute"
+            ]
+          },
+          {
+            "name": "De Barbarenaanval",
+            "vp": "12 OP",
+            "description": "Een kasteelveld op het bord. Ridders verdedigen tegen barbaarse landingen.",
+            "details": [
+              "Geen struikrover of standaard ontwikkelingskaarten",
+              "Ridders geplaatst op de randen van velden",
+              "3 barbaren veroveren een veld; gevangenen = OP"
+            ]
+          },
+          {
+            "name": "Handelaren & Barbaren (hoofdscenario)",
+            "vp": "13 OP",
+            "description": "3 goederenvelden. Wagens vervoeren goederen ertussen.",
+            "details": [
+              "Wagenupgrades vergroten de beweging",
+              "Goud verdiend uit leveringen",
+              "Barbaren blokkeren wegen"
             ]
           }
         ]
@@ -1869,42 +2067,45 @@
     },
     "explorers-pirates": {
       "name": "Catan: Ontdekkers & Piraten",
-      "descriptionTitle": "🏴‍☠️ Catan wordt ontdekkingsreiziger (zonder controverse)",
-      "description": "Zeil naar nieuwe eilanden, vestig posten en bestrijd piraten. Missies en verkenning bieden nieuwe manieren om te scoren en te concurreren op zee.",
+      "descriptionTitle": "🏴‍☠️ Catan wordt ontdekkingsreiziger (zonder de controverse)",
+      "description": "Hijs de zeilen en verken onbekende wateren, want stilzitten op een bekend eiland werd saai. Bouw schepen en havens, voltooi missies zoals specerijenhandel of visvangsten (ja, vis — het toppunt van avontuur), en koloniseer nieuwe landen ver van huis. Zie het als de ambitieuze oudere broer van Zeevaarders die in het buitenland heeft gestudeerd en er maar niet over ophoudt. Meer losse onderdelen, meer missies, meer 'wacht, wie is er aan de beurt?'-momenten.",
       "sections": [
         {
           "id": "missions",
-          "title": "Schippers Missies",
+          "title": "Missietegels",
           "icon": "🎯",
           "cards": [
             {
               "id": "spice-haul",
               "type": "mission",
               "icon": "🌶️",
-              "name": "Specerijen Eiland",
-              "description": "Binnenvaren, uitladen, kruiden zak inladen en thuisbrengen voor winst in je Haven",
+              "name": "Specerijentransport",
+              "description": "Vaar je schip naar een ver specerijeneiland en lever de specerijenzak af bij de Raad van Catan voor overwinningspunten.",
               "usages": [
-                "Missions"
+                "Elke voltooide levering levert 1 OP op",
+                "Vereist het bereiken van en terugkeren van de specerijentegel"
               ]
             },
             {
               "id": "fish-camp",
               "type": "mission",
               "icon": "🐟",
-              "name": "Visser Vloot",
-              "description": "Rondhangen als nummer is geweest the vissen met vloot verplaatsen.",
+              "name": "Viskamp",
+              "description": "Vang visvangsten bij visscholen (gooi eenmaal per bewegingsfase een getal dat past bij een verkende school) en vaar ze naar de Raad van Catan.",
               "usages": [
-                "Spaar Vis"
+                "Lever visvangsten af bij de Raad van Catan om op het vis-missiespoor vooruit te komen",
+                "Positioneer je bij kusttegels met goede getallen"
               ]
             },
             {
               "id": "pirate-lair",
               "type": "mission",
               "icon": "🏴‍☠️",
-              "name": "Piraat Kampement Vegen",
-              "description": "Vechters of kolonisten worden uitgegooit op land the eiland the vijanden verslagen",
+              "name": "Piratenkamp",
+              "description": "Ontdek en vernietig piratenkampen verspreid over het grensgebied. Elk opgeruimd kamp levert 1 overwinningspunt op.",
               "usages": [
-                "Kustwacht voor VPs"
+                "Laad crew uit op het goudveld — het kamp wordt veroverd door de 3e crew",
+                "Veroveren brengt je vooruit op het piraten-missiespoor — bij ontdekking scoort het niet"
               ]
             }
           ]
@@ -1914,21 +2115,102 @@
         "players": "2–4",
         "vpToWin": "17",
         "setup": [
-          "Opzetten in een groot driehoek of langwerpig framework de boten de crews al de plastic componenten apart leggen"
+          "Grote afwijking van het basisspel: geen ontwikkelingskaarten, geen steden, geen rover.",
+          "Het bord heeft een starteiland + 2 onverkende gebieden (omgekeerde tegels).",
+          "Het eerste stuk is een havendorp (aan de kust, 2 OP waard); het tweede is een gewoon dorp.",
+          "Elke speler begint met 2 goudstukken.",
+          "Ruil met de voorraad tegen 3:1 (geen havens). Ruil 2 goud voor 1 grondstof (twee keer per beurt)."
         ],
         "turnOverview": [
           {
-            "title": "Vloot vaart!",
-            "detail": "Korte 4 velden stap en betalen voor meer verplaatsingen."
+            "title": "1. Productie",
+            "detail": "Gooi de dobbelstenen voor grondstoffen. Spelers zonder productie ontvangen in plaats daarvan 1 goud."
+          },
+          {
+            "title": "2. Ruilen & Bouwen",
+            "detail": "Ruil, bouw dorpen/schepen, werf kolonisten en crews aan."
+          },
+          {
+            "title": "3. Scheepsbeweging",
+            "detail": "Elk schip heeft 4 bewegingspunten. Betaal 1 wol voor +2 BP. Schepen vervoeren kolonisten, crews, specerijenzakken en visvangsten."
           }
         ],
         "keyRules": [
           {
-            "title": "Havendorp Opbouwe",
-            "detail": "Kunt 2 kleinere bootjes of crew the stad vullen (waarde is 2 pnt)"
+            "title": "Havendorpen",
+            "detail": "2 OP waard. Gebouwd op kustmarkeringen. Kan 1 groot stuk of 2 kleine stukken bevatten. Schepen moeten ernaast worden gebouwd."
+          },
+          {
+            "title": "Schepen",
+            "detail": "Kosten: 1 wol + 1 hout. Hebben 4 BP per beurt. Vervoeren stukken naar bestemmingen. Maximaal 2 schepen per rand."
+          },
+          {
+            "title": "Verkennen",
+            "detail": "Een schip naast een omgekeerde tegel bewegen draait hem om. Landtegels krijgen een getalfiche. Krijg 1 bijpassende grondstof (of 2 goud) bij ontdekking."
+          },
+          {
+            "title": "Kolonisten",
+            "detail": "Kosten: 1 klei + 1 hout + 1 wol + 1 graan (net als een dorp). Worden op schepen vervoerd. Bouw een dorp door uit te laden op een kruispunt bij een landtegel."
+          },
+          {
+            "title": "Crews",
+            "detail": "Kosten: 1 wol + 1 erts. Gebruikt voor het veroveren van piratenkampen en het activeren van specerijenboerderijen."
+          },
+          {
+            "title": "Piratenschip",
+            "detail": "Bij een 7: plaats je piratenschip op een zeetegel. Steel 1 grondstof van een speler met een schip daar. Er langs varen kost 1 goud tol."
+          },
+          {
+            "title": "Piraat verjagen",
+            "detail": "Een schip dat nog niet bewogen heeft en naast de piratentegel ligt, gooit 1 dobbelsteen; een 6 verjaagt de piraat."
           }
         ],
-        "scenarios": []
+        "scenarios": [
+          {
+            "name": "Land in zicht!",
+            "vp": "Introductie",
+            "description": "Leer de basis van verkennen.",
+            "details": [
+              "Ontdek tegels, bouw dorpen op nieuwe eilanden"
+            ]
+          },
+          {
+            "name": "Piratenkampen",
+            "vp": "+ missie",
+            "description": "Verover piratenkampen op goudveldtegels.",
+            "details": [
+              "Zet 3 crew in om een kamp te veroveren",
+              "De held (hoogste worp + crew) komt extra vooruit op het missiespoor"
+            ]
+          },
+          {
+            "name": "Vis voor Catan",
+            "vp": "+ missie",
+            "description": "Vang vis en lever af bij de Raad van Catan.",
+            "details": [
+              "Gooi een dobbelsteen tijdens het bewegen; bijpassende visschool = visvangst",
+              "Lever af bij de Raad om vooruit te komen op het missiespoor"
+            ]
+          },
+          {
+            "name": "Specerijen voor Catan",
+            "vp": "+ missie",
+            "description": "Lever specerijenzakken af bij de Raad.",
+            "details": [
+              "Laad crew uit op een specerijenboerderij, laad een specerijenzak in, lever af",
+              "Elke boerderij geeft een blijvende bonus (Snelle Reis, Piratenbonus, Snel Goud)"
+            ]
+          },
+          {
+            "name": "Ontdekkers & Piraten (Volledig)",
+            "vp": "17 OP",
+            "description": "De volledige ervaring met alle 3 de missies.",
+            "details": [
+              "Alle missies tegelijk actief",
+              "Posities op het missiespoor en bonus-OP-tegels dragen bij aan de overwinning"
+            ]
+          }
+        ]
       },
       "reference": {
         "tradingNote": "E&P uses a 3:1 bank rate with no ports (or 2 gold for any 1 resource, twice per turn) and adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
