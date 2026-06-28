@@ -1209,7 +1209,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
                   "name": "Bisschop",
                   "count": 2,
-                  "description": "Betaal 1 handelsgoed om een voortgangskaart van een tegenstander te laten ontkrachten (naar afleg).",
+                  "description": "Verplaats de rover naar een nieuwe hex. Steel 1 willekeurige kaart (grondstof of handelsgoed) van elke tegenstander met een gebouw op die hex.",
                   "usages": [
                     "Neutraliseer belangrijke acties van tegenstanders"
                   ]
@@ -1233,7 +1233,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
                   "name": "Deserteur",
                   "count": 2,
-                  "description": "Betaal 1 handelsgoed, neem een actieve vijandelijke ridder (deactiveer) en rekruteer hem als jouw eigen (inactief).",
+                  "description": "Kies een speler; hij moet één van zijn ridders van het bord halen. Daarna mag je één eigen ridder van gelijke of lagere sterkte plaatsen.",
                   "usages": [
                     "Verzwak vijandelijke ridders en versterk de jouwe"
                   ]
@@ -1257,7 +1257,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
                   "name": "Intrige",
                   "count": 2,
-                  "description": "Ruil 1 kaart uit jouw hand met 1 kaart uit de hand van een tegenstander (willekeurig gekozen).",
+                  "description": "Voer de actie 'Ridder verdringen' uit zonder een eigen ridder te gebruiken. De verdrongen ridder moet op een kruispunt staan dat met jouw route verbonden is.",
                   "usages": [
                     "Maak handen van tegenstanders chaotisch"
                   ]

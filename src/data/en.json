@@ -207,7 +207,7 @@
               "type": "development",
               "icon": "🎁",
               "image": "src/assets/images/basic/development-cards/year-of-plenty.png",
-              "name": "Year of Plenty",
+              "name": "Year of Plenty (Invention)",
               "count": 2,
               "description": "Take any 2 resource cards from the bank. Add them to your hand.",
               "usages": [
@@ -305,7 +305,7 @@
               "type": "special",
               "icon": "🛣️",
               "image": "src/assets/images/basic/longest-road.png",
-              "name": "Longest Road",
+              "name": "Longest Road (Longest Route)",
               "description": "Awarded to the first player with a continuous road of 5+ segments. Worth 2 Victory Points. Another player can steal it by building a longer road.",
               "usages": [
                 "Build roads aggressively to claim the card",
@@ -984,7 +984,7 @@
                   "type": "progress-trade",
                   "icon": "🧑‍💼",
                   "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
-                  "name": "Master Merchant",
+                  "name": "Master Merchant (Guild Dues)",
                   "count": 2,
                   "description": "Look at the hand cards of an opponent who has more victory points than you. Take 2 resource or commodity cards of your choice from that hand.",
                   "usages": [
@@ -1057,7 +1057,7 @@
                   "type": "progress-science",
                   "icon": "⚗️",
                   "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.png",
-                  "name": "Alchemist",
+                  "name": "Alchemist (Alchemy)",
                   "count": 2,
                   "description": "Before rolling the dice on your turn, choose the result of the production dice (both numbers). The event die is still rolled normally.",
                   "usages": [
@@ -1083,7 +1083,7 @@
                   "type": "progress-science",
                   "icon": "🔧",
                   "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.png",
-                  "name": "Engineer",
+                  "name": "Engineer (Engineering)",
                   "count": 1,
                   "description": "Build 1 city wall for free (no resources required). Place it under one of your cities.",
                   "usages": [
@@ -1096,7 +1096,7 @@
                   "type": "progress-science",
                   "icon": "💡",
                   "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.png",
-                  "name": "Inventor",
+                  "name": "Inventor (Invention)",
                   "count": 2,
                   "description": "Swap 2 number tokens on the board. You may not swap the tokens with the numbers 2, 6, 8, or 12.",
                   "usages": [
@@ -1148,7 +1148,7 @@
                   "type": "progress-science",
                   "icon": "🖨️",
                   "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
-                  "name": "Printer",
+                  "name": "Printer (Printing)",
                   "count": 1,
                   "description": "Worth 1 Victory Point. This card remains face-up in front of you for the rest of the game.",
                   "usages": [
@@ -1174,7 +1174,7 @@
                   "type": "progress-science",
                   "icon": "🔨",
                   "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
-                  "name": "Smith",
+                  "name": "Smith (Smithing)",
                   "count": 2,
                   "description": "Promote up to 2 of your knights for free (e.g., Basic → Strong, or Strong → Mighty).",
                   "usages": [
@@ -1195,9 +1195,9 @@
                   "type": "progress-politics",
                   "icon": "⛪",
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
-                  "name": "Bishop",
+                  "name": "Bishop (Taxation)",
                   "count": 2,
-                  "description": "Move the robber to any hex. Each opponent with a building adjacent to the robber's new hex must give you 1 resource of their choice.",
+                  "description": "Move the robber to a new hex. Steal 1 random card (resource or commodity) from each opponent with a building on the robber's new hex.",
                   "usages": [
                     "Collect 1 resource from each affected opponent",
                     "Relocate the robber to disrupt multiple players"
@@ -1221,9 +1221,9 @@
                   "type": "progress-politics",
                   "icon": "🏃",
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
-                  "name": "Deserter",
+                  "name": "Deserter (Treason)",
                   "count": 2,
-                  "description": "Remove one of an opponent's knights from the board. The opponent takes the knight piece back to their supply.",
+                  "description": "Choose another player; they must remove one of their knights from the board. You may then place one of your knights of equal or lower strength.",
                   "usages": [
                     "Weaken an opponent's defense before a barbarian attack",
                     "Remove a knight blocking your road"
@@ -1234,7 +1234,7 @@
                   "type": "progress-politics",
                   "icon": "🤝",
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
-                  "name": "Diplomat",
+                  "name": "Diplomat (Diplomacy)",
                   "count": 2,
                   "description": "Remove any open road (a road with at least one end not connected to another road, settlement, or city). If it is your own road, you may immediately place it elsewhere for free.",
                   "usages": [
@@ -1249,7 +1249,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
                   "name": "Intrigue",
                   "count": 2,
-                  "description": "Displace an opponent's knight from an intersection adjacent to one of your own buildings. The opponent must move their knight to another legal intersection or remove it from the board.",
+                  "description": "Displace an opponent's knight without using one of your own knights. The target knight must be on an intersection connected to one of your routes; the opponent then moves it to a legal intersection or removes it.",
                   "usages": [
                     "Clear a key intersection for your own use",
                     "Force an opponent's knight out of a strategic position"
@@ -1260,7 +1260,7 @@
                   "type": "progress-politics",
                   "icon": "💣",
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.png",
-                  "name": "Saboteur",
+                  "name": "Saboteur (Sabotage)",
                   "count": 2,
                   "description": "Each opponent with equal or more victory points than you must discard half of their hand cards (rounded down).",
                   "usages": [
@@ -1273,7 +1273,7 @@
                   "type": "progress-politics",
                   "icon": "🕵️",
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
-                  "name": "Spy",
+                  "name": "Spy (Espionage)",
                   "count": 3,
                   "description": "Look at an opponent's hand of progress cards and steal 1 of your choice.",
                   "usages": [
@@ -1286,7 +1286,7 @@
                   "type": "progress-politics",
                   "icon": "⚔️",
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
-                  "name": "Warlord",
+                  "name": "Warlord (Encouragement)",
                   "count": 2,
                   "description": "Activate all of your knights for free (without paying the usual grain cost).",
                   "usages": [
@@ -1598,7 +1598,7 @@
             "details": ["Protects beginners from early-game targeting"]
           },
           {
-            "name": "Harbors of Catan",
+            "name": "The Harbor Master (Strongest Ports / Harbors of Catan)",
             "vp": "11 VP",
             "description": "Strongest Ports tile (2 VP) for the player with most VP in buildings on ports.",
             "details": ["Encourages port building strategy"]
@@ -1624,7 +1624,7 @@
             ]
           },
           {
-            "name": "Fishing on Catan",
+            "name": "The Fishermen of Catan (Fishing on Catan)",
             "vp": "10 VP",
             "description": "Lake hex replaces desert with fishing grounds on coasts.",
             "details": [
@@ -1664,7 +1664,7 @@
             ]
           },
           {
-            "name": "Trade Routes",
+            "name": "Traders & Barbarians (main scenario)",
             "vp": "13 VP",
             "description": "3 commodity hexes. Wagons transport goods between them.",
             "details": [
@@ -1690,7 +1690,7 @@
           {
             "id": "fishermen",
             "icon": "🐟",
-            "name": "The Fishermen of Catan",
+            "name": "The Fishermen of Catan (Fishing on Catan)",
             "tips": [
               {
                 "id": "fish-insurance",
@@ -1845,7 +1845,7 @@
           {
             "id": "harbor-master",
             "icon": "⚓",
-            "name": "The Harbor Master",
+            "name": "The Harbor Master (Strongest Ports / Harbors of Catan)",
             "tips": [
               {
                 "id": "harbor-cities",

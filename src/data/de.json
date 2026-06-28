@@ -1292,7 +1292,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
                   "name": "Bischof",
                   "count": 2,
-                  "description": "Zahle eine Ware, um eine gegnerische Fortschrittskarte zu entwerten (zum Ablagestapel).",
+                  "description": "Bewege den Räuber auf ein neues Feld. Stiehl 1 zufällige Karte (Rohstoff oder Ware) von jedem Gegner mit einem Gebäude an diesem Feld.",
                   "usages": [
                     "Gegnerische Schlüsselaktionen neutralisieren"
                   ]
@@ -1316,7 +1316,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
                   "name": "Deserteur",
                   "count": 2,
-                  "description": "Zahle 1 Ware, nimm einen aktiven feindlichen Ritter (deaktiviere ihn) und rekrutiere ihn als deinen eigenen (inaktiv).",
+                  "description": "Wähle einen Gegner; er muss einen seiner Ritter vom Plan entfernen. Du darfst dann einen eigenen Ritter gleicher oder niedrigerer Stärke einsetzen.",
                   "usages": [
                     "Feindliche Ritter schwächen und eigene Truppen stärken"
                   ]
@@ -1340,7 +1340,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
                   "name": "Intrige",
                   "count": 2,
-                  "description": "Tausche 1 Karte aus deiner Hand mit 1 Karte aus der Hand eines Gegners (zufällig ausgewählt).",
+                  "description": "Führe die Aktion „Ritter verdrängen“ aus, ohne einen eigenen Ritter zu nutzen. Der verdrängte Ritter muss an einer mit deiner Route verbundenen Kreuzung stehen.",
                   "usages": [
                     "Handdesorganisation von Gegnern"
                   ]

@@ -1296,7 +1296,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
                   "name": "Évêque",
                   "count": 2,
-                  "description": "Déplacez le Voleur sur n'importe quel hex. Chaque adversaire avec un bâtiment adjacent doit vous donner 1 ressource de son choix.",
+                  "description": "Déplacez le Voleur sur un nouvel hex. Volez 1 carte au hasard (ressource ou marchandise) à chaque adversaire ayant un bâtiment sur cet hex.",
                   "usages": [
                     "Collecter 1 ressource de chaque adversaire affecté",
                     "Relocaliser le Voleur pour perturber plusieurs joueurs"
@@ -1322,7 +1322,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
                   "name": "Déserteur",
                   "count": 2,
-                  "description": "Retirez un chevalier adverse du plateau. L'adversaire reprend la pièce dans sa réserve.",
+                  "description": "Choisissez un adversaire ; il doit retirer un de ses chevaliers du plateau. Vous pouvez alors placer un de vos chevaliers de force égale ou inférieure.",
                   "usages": [
                     "Affaiblir une défense avant une attaque barbare",
                     "Retirer un chevalier qui bloque une route"
@@ -1348,7 +1348,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
                   "name": "Intrigue",
                   "count": 2,
-                  "description": "Déplacez un chevalier adverse d'une intersection adjacente à un de vos bâtiments. L'adversaire doit le déplacer légalement ou le retirer.",
+                  "description": "Effectuez l'action « Repousser un chevalier » sans utiliser un de vos chevaliers. Le chevalier visé doit être sur une intersection reliée à une de vos routes ; l'adversaire le déplace légalement ou le retire.",
                   "usages": [
                     "Libérer une intersection clé",
                     "Forcer un adversaire à repositionner son chevalier"

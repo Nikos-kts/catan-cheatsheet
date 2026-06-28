@@ -1292,7 +1292,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
                   "name": "Obispo",
                   "count": 2,
-                  "description": "Paga 1 mercancía para descartar una carta de progreso de un oponente.",
+                  "description": "Mueve al Ladrón a un nuevo hexágono. Roba 1 carta al azar (recurso o mercancía) de cada oponente con un edificio en ese hexágono.",
                   "usages": [
                     "Neutralizar cartas clave de rivales"
                   ]
@@ -1316,7 +1316,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
                   "name": "Desertor",
                   "count": 2,
-                  "description": "Paga 1 mercancía, toma un caballero enemigo activo (desactívalo) y reclútalo como tuyo (inactivo).",
+                  "description": "Elige a otro jugador; debe retirar uno de sus caballeros del tablero. Luego puedes colocar uno de tus caballeros de fuerza igual o menor.",
                   "usages": [
                     "Debilitar caballeros enemigos y reforzar los tuyos"
                   ]
@@ -1340,7 +1340,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
                   "name": "Intriga",
                   "count": 2,
-                  "description": "Intercambia 1 carta de tu mano con 1 carta aleatoria de la mano de un oponente.",
+                  "description": "Realiza la acción «Desplazar un caballero» sin usar uno de tus caballeros. El caballero objetivo debe estar en un cruce conectado a una de tus rutas.",
                   "usages": [
                     "Desorganizar manos rivales"
                   ]

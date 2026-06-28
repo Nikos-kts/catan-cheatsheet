@@ -1147,7 +1147,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
                   "name": "Bispo",
                   "count": 2,
-                  "description": "Pague 1 mercadoria para anular uma carta de progresso de um oponente (colocando-a no descarte).",
+                  "description": "Mova o ladrão para um novo hexágono. Roube 1 carta aleatória (recurso ou mercadoria) de cada oponente com uma construção nesse hexágono.",
                   "usages": [
                     "Neutralizar ações-chave de oponentes"
                   ]
@@ -1171,7 +1171,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
                   "name": "Desertor",
                   "count": 2,
-                  "description": "Pague 1 mercadoria, tome um cavaleiro inimigo ativo (desative-o) e recrute-o como seu (inativo).",
+                  "description": "Escolha outro jogador; ele deve remover um cavaleiro do tabuleiro. Depois você pode colocar um cavaleiro seu de força igual ou menor.",
                   "usages": [
                     "Enfraquecer cavaleiros inimigos e fortalecer os seus"
                   ]
@@ -1195,7 +1195,7 @@
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
                   "name": "Intriga",
                   "count": 2,
-                  "description": "Troque 1 carta de sua mão com 1 carta aleatória da mão de um oponente.",
+                  "description": "Faça a ação 'Deslocar um cavaleiro' sem usar um de seus cavaleiros. O cavaleiro alvo deve estar num cruzamento ligado a uma de suas rotas.",
                   "usages": [
                     "Desorganizar as mãos dos oponentes"
                   ]
