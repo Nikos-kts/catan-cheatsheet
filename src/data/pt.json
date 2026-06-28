@@ -1669,10 +1669,10 @@
               "type": "trade",
               "icon": "🪙",
               "name": "Gold Coin Token",
-              "description": "Earned by completing trade routes or delivering goods. Can be used like a wild resource or traded for VP in certain scenarios.",
+              "description": "Moedas de ouro, ganhas ao entregar mercadorias ou ao trocar recursos com a reserva. Gasta 2 ouros para tirar 1 recurso à escolha da reserva — no máximo duas vezes por turno. O ouro não é um recurso universal e não vale pontos de vitória.",
               "usages": [
-                "Spend as any resource type",
-                "Trade for VP at the friendly village"
+                "2 ouros por 1 recurso à escolha da reserva (máx. duas vezes por turno)",
+                "Ganha ouro ao entregar mercadorias ou trocar recursos com a reserva"
               ]
             }
           ]

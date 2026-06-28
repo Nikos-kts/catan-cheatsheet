@@ -1683,10 +1683,10 @@
               "type": "trade",
               "icon": "🪙",
               "name": "Goldmünz-Marker",
-              "description": "Durch abgeschlossene Handelsrouten verdient. Kann als beliebiger Rohstoff verwendet werden.",
+              "description": "Goldmünzen, verdient durch das Liefern von Waren oder den Tausch von Rohstoffen mit dem Vorrat. Gib 2 Gold aus, um einen beliebigen Rohstoff aus dem Vorrat zu nehmen — höchstens zweimal pro Zug. Gold ist kein Joker-Rohstoff und keine Siegpunkte wert.",
               "usages": [
-                "Als beliebigen Rohstoff ausgeben",
-                "Im freundlichen Dorf gegen SP tauschen"
+                "2 Gold für 1 beliebigen Rohstoff aus dem Vorrat (max. zweimal pro Zug)",
+                "Gold durch Warenlieferung oder Rohstofftausch mit dem Vorrat verdienen"
               ]
             }
           ]

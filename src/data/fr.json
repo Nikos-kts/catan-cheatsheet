@@ -1695,10 +1695,10 @@
               "type": "trade",
               "icon": "🪙",
               "name": "Jeton Monnaie d'Or",
-              "description": "Gagné en complétant des routes commerciales. Peut être utilisé comme n'importe quel type de ressource.",
+              "description": "Pièces d'or, gagnées en livrant des marchandises ou en échangeant des ressources avec la réserve. Dépensez 2 ors pour prendre 1 ressource au choix dans la réserve — deux fois par tour au maximum. L'or n'est pas une ressource joker et ne vaut aucun point de victoire.",
               "usages": [
-                "Dépensez comme n'importe quelle ressource",
-                "Échangez contre des PV au village ami"
+                "2 ors pour 1 ressource au choix dans la réserve (max. deux fois par tour)",
+                "Gagnez de l'or en livrant des marchandises ou en échangeant des ressources avec la réserve"
               ]
             }
           ]

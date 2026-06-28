@@ -1567,10 +1567,10 @@
               "type": "trade",
               "icon": "🪙",
               "name": "Gold Coin Token",
-              "description": "Earned by completing trade routes or delivering goods. Can be used like a wild resource or traded for VP in certain scenarios.",
+              "description": "Gold coins, earned by delivering goods or by trading resources to the supply. Spend 2 gold to take any 1 resource from the supply — at most twice per turn. Gold is never a wild resource and is never worth victory points.",
               "usages": [
-                "Spend as any resource type",
-                "Trade for VP at the friendly village"
+                "Spend 2 gold for any 1 resource from the supply (max twice per turn)",
+                "Earn gold by delivering goods or trading resources to the supply"
               ]
             }
           ]

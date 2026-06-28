@@ -1670,10 +1670,10 @@
               "type": "trade",
               "icon": "🪙",
               "name": "Goudmuntfiche",
-              "description": "Verdiend door handelsroutes te voltooien of goederen af te leveren. Kan worden gebruikt als een joker-grondstof of in bepaalde scenario's worden ingewisseld voor OP.",
+              "description": "Goudmunten, verdiend door goederen af te leveren of grondstoffen met de voorraad te ruilen. Geef 2 goud uit om 1 willekeurige grondstof uit de voorraad te nemen — hoogstens twee keer per beurt. Goud is geen joker-grondstof en is geen OP waard.",
               "usages": [
-                "Uitgeven als elke grondstofsoort",
-                "Inwisselen voor OP bij het vriendelijke dorp"
+                "2 goud voor 1 willekeurige grondstof uit de voorraad (max. twee keer per beurt)",
+                "Verdien goud door goederen af te leveren of grondstoffen met de voorraad te ruilen"
               ]
             }
           ]

@@ -1682,10 +1682,10 @@
               "type": "trade",
               "icon": "🪙",
               "name": "Ficha de Moneda de Oro",
-              "description": "Ganada al completar rutas comerciales. Puede usarse como cualquier tipo de recurso.",
+              "description": "Monedas de oro, ganadas al entregar mercancías o al cambiar recursos con la reserva. Gasta 2 oros para tomar 1 recurso cualquiera de la reserva — como máximo dos veces por turno. El oro no es un recurso comodín y no vale puntos de victoria.",
               "usages": [
-                "Gástala como cualquier recurso",
-                "Cámbiala por PV en el pueblo amigo"
+                "2 oros por 1 recurso cualquiera de la reserva (máx. dos veces por turno)",
+                "Gana oro entregando mercancías o cambiando recursos con la reserva"
               ]
             }
           ]
