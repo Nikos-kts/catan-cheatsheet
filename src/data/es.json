@@ -1670,11 +1670,11 @@
               "id": "caravan",
               "type": "trade",
               "icon": "🐪",
-              "name": "Caravana",
-              "description": "Las caravanas transportan mercancías por caminos. Entregar mercancías al pueblo amigo se recompensa con PV.",
+              "name": "Caravana (Merchant Train)",
+              "description": "En el escenario Las Caravanas (renombrado 'Merchant Trains' en la 6.ª edición), los camellos —llamados carros en la nueva edición— extienden rutas desde el oasis central (el 'abrevadero'). Cada vez que se construye o se mejora un poblado, los jugadores votan por el derecho a colocar el siguiente camello; cada voto cuesta 1 Trigo o 1 Lana.",
               "usages": [
-                "Mueve caravanas hasta 3 tramos de camino por turno",
-                "Gana 1 PV por cada ficha de mercancía entregada"
+                "Un poblado o ciudad en una ruta de camellos (carros) otorga +1 PV extra",
+                "Una ruta de camellos cuenta el doble para el Camino más Largo (Ruta más Larga)"
               ]
             },
             {
@@ -1769,13 +1769,13 @@
             ]
           },
           {
-            "name": "Caravanas",
+            "name": "Las Caravanas (Merchant Trains)",
             "vp": "12 PV",
-            "description": "Vagones forman trenes desde el abrevadero.",
+            "description": "Los camellos (carros en los 'Merchant Trains' de la 6.ª edición) forman rutas desde el oasis central (abrevadero).",
             "details": [
-              "Vagones recolectados al construir, colocados por votación",
-              "Edificios entre 2 vagones = +1 PV cada uno",
-              "Vagones cuentan para la Ruta Más Larga"
+              "Vota para colocar un camello cada vez que se construye o mejora un poblado (paga 1 Trigo o 1 Lana)",
+              "Un poblado o ciudad en una ruta de camellos = +1 PV",
+              "Las rutas de camellos cuentan el doble para el Camino más Largo (Ruta más Larga)"
             ]
           },
           {
@@ -1897,30 +1897,30 @@
           {
             "id": "caravans",
             "icon": "🐪",
-            "name": "Caravanas",
+            "name": "Las Caravanas (Merchant Trains)",
             "tips": [
               {
                 "id": "caravan-place",
                 "icon": "🗺️",
                 "level": "beginner",
-                "title": "Coloca a lo largo de las rutas de camellos",
-                "body": "Tu salida sigue las rutas de los abrevaderos, no los pips más calientes. Asiéntate donde tus caravanas puedan alcanzar los abrevaderos: esas entregas son una gran parte de tus ingresos.",
+                "title": "Construye por donde pasarán las rutas",
+                "body": "Puntúas haciendo que los camellos (carros) pasen por tus propios poblados y ciudades: un edificio en una ruta de camellos vale +1 PV. Coloca tus primeros edificios donde las rutas desde el oasis puedan alcanzarlos de forma natural.",
                 "tags": ["caravans", "placement"]
               },
               {
                 "id": "caravan-idle",
                 "icon": "🐫",
                 "level": "intermediate",
-                "title": "Nunca dejes un camello parado",
-                "body": "Una caravana parada no gana nada. Cada turno, avanza una hacia un abrevadero —idealmente hasta él—; entregar de forma constante vale más que un cargamento perfecto que llega tarde.",
+                "title": "Gana las votaciones de colocación",
+                "body": "Cada vez que alguien construye o mejora un poblado hay una votación para colocar el siguiente camello (1 Trigo o 1 Lana). Gasta para dirigir las rutas a través de tus propios edificios —y lejos de los rivales—, porque esos votos son tu verdadera forma de puntuar.",
                 "tags": ["caravans", "tempo"]
               },
               {
                 "id": "caravan-race",
                 "icon": "🏁",
                 "level": "advanced",
-                "title": "Corre o esquiva por los abrevaderos",
-                "body": "Fíjate a qué abrevaderos apuntan tus rivales. Esprinta hacia uno disputado solo cuando vayas a ganar con claridad; si no, toma el camino más largo hasta un abrevadero libre para puntuar seguro.",
+                "title": "Doble beneficio con el Camino más Largo",
+                "body": "Una ruta de camellos (carros) cuenta el doble para el Camino más Largo (Ruta más Larga). Planifica rutas que también sirvan como tu red de caminos, para que los mismos camellos puntúen tus edificios y te den el bono de 2 PV.",
                 "tags": ["caravans", "denial"]
               }
             ]

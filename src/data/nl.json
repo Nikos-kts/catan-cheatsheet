@@ -1658,11 +1658,11 @@
               "id": "caravan",
               "type": "trade",
               "icon": "🐪",
-              "name": "Karavaan",
-              "description": "In het scenario Handelaren & Barbaren vervoeren karavanen goederen over wegen. Goederen afleveren bij het vriendelijke dorp levert overwinningspunten op.",
+              "name": "Karavaan (Merchant Train)",
+              "description": "In het scenario De Karavanen (in de 6e editie 'Merchant Trains' genoemd) verlengen kamelen — in de nieuwe editie wagens genoemd — routes vanaf de centrale oase (de 'drinkplaats'). Telkens als er een dorp wordt gebouwd of uitgebreid, stemmen de spelers over het recht om de volgende kameel te plaatsen; elke stem kost 1 Graan of 1 Wol.",
               "usages": [
-                "Verplaats karavanen tot 3 wegsegmenten per beurt",
-                "Verdien 1 OP per afgeleverde goederenfiche"
+                "Een dorp of stad op een kamelenroute (wagenroute) levert +1 extra OP op",
+                "Een kamelenroute telt dubbel voor de Langste Handelsroute (Langste Route)"
               ]
             },
             {
@@ -1751,13 +1751,13 @@
             ]
           },
           {
-            "name": "Koopmanswagens",
+            "name": "De Karavanen (Merchant Trains)",
             "vp": "12 OP",
-            "description": "Wagens vormen treinen vanaf de drinkplaats.",
+            "description": "Kamelen (wagens in de 'Merchant Trains' van de 6e editie) vormen routes vanaf de centrale oase (drinkplaats).",
             "details": [
-              "Wagens verzameld bij het bouwen, geplaatst via stemming",
-              "Gebouwen tussen 2 wagens = +1 OP elk",
-              "Wagens tellen mee voor de Langste Handelsroute"
+              "Stem om een kameel te plaatsen telkens als er een dorp wordt gebouwd of uitgebreid (betaal 1 Graan of 1 Wol)",
+              "Een dorp of stad op een kamelenroute = +1 OP",
+              "Kamelenroutes tellen dubbel voor de Langste Handelsroute (Langste Route)"
             ]
           },
           {
@@ -1879,30 +1879,30 @@
           {
             "id": "caravans",
             "icon": "🐪",
-            "name": "De Karavanen",
+            "name": "De Karavanen (Merchant Trains)",
             "tips": [
               {
                 "id": "caravan-place",
                 "icon": "🗺️",
                 "level": "beginner",
-                "title": "Bouw langs de kamelenpaden",
-                "body": "Je openingszet volgt de oaseroutes, niet de heetste getallen. Bouw waar je karavanen oases kunnen bereiken — die leveringen vormen een groot deel van je inkomen.",
+                "title": "Bouw waar de routes zullen lopen",
+                "body": "Je scoort door kamelen (wagens) door je eigen dorpen en steden te laten trekken — een gebouw op een kamelenroute is +1 OP waard. Plaats je eerste gebouwen waar routes vanaf de oase ze op natuurlijke wijze kunnen bereiken.",
                 "tags": ["caravans", "placement"]
               },
               {
                 "id": "caravan-idle",
                 "icon": "🐫",
                 "level": "intermediate",
-                "title": "Laat nooit een kameel stilstaan",
-                "body": "Een stilstaande karavaan levert niets op. Schuif er elke beurt eentje richting — het liefst tot op — een oase; gestage levering verslaat een perfecte buit die te laat aankomt.",
+                "title": "Win de plaatsingsstemmingen",
+                "body": "Telkens als iemand een dorp bouwt of uitbreidt, is er een stemming om de volgende kameel te plaatsen (1 Graan of 1 Wol). Geef uit om routes door je eigen gebouwen te sturen — en weg van die van rivalen — want via die stemmen scoor je daadwerkelijk.",
                 "tags": ["caravans", "tempo"]
               },
               {
                 "id": "caravan-race",
                 "icon": "🏁",
                 "level": "advanced",
-                "title": "Race om oases of ontwijk ze",
-                "body": "Lees af op welke oases rivalen mikken. Sprint alleen naar een betwiste oase als je duidelijk wint; neem anders de langere route naar een vrije oase voor een gegarandeerde score.",
+                "title": "Dubbel profiteren met de Langste Handelsroute",
+                "body": "Een kamelenroute (wagenroute) telt dubbel voor de Langste Handelsroute (Langste Route). Plan routes die tegelijk je wegennet vormen, zodat dezelfde kamelen je gebouwen laten scoren én je de bonus van 2 OP opleveren.",
                 "tags": ["caravans", "denial"]
               }
             ]

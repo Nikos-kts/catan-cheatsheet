@@ -1555,11 +1555,11 @@
               "id": "caravan",
               "type": "trade",
               "icon": "🐪",
-              "name": "Caravan",
-              "description": "In the Traders & Barbarians scenario, caravans carry goods along roads. Delivering goods to the friendly village earns Victory Points.",
+              "name": "Caravan (Merchant Train)",
+              "description": "In The Caravans scenario (renamed 'Merchant Trains' in the 6th edition), camels — called wagons in the new edition — extend routes out from the central oasis (the 'watering hole'). Whenever a settlement is built or upgraded, players vote for the right to place the next camel; each vote costs 1 wheat or 1 wool.",
               "usages": [
-                "Move caravans up to 3 road segments per turn",
-                "Earn 1 VP per delivered goods token"
+                "A settlement or city on a camel (wagon) route scores +1 extra VP",
+                "A camel route counts double toward the Longest Road (Longest Route)"
               ]
             },
             {
@@ -1644,13 +1644,13 @@
             ]
           },
           {
-            "name": "Merchant Trains",
+            "name": "The Caravans (Merchant Trains)",
             "vp": "12 VP",
-            "description": "Wagons form trains from the watering hole.",
+            "description": "Camels (wagons in the 6th-edition 'Merchant Trains') form routes out from the central oasis (watering hole).",
             "details": [
-              "Wagons collected when building, placed via voting",
-              "Buildings between 2 wagons = +1 VP each",
-              "Wagons count toward Longest Route"
+              "Vote to place a camel whenever a settlement is built or upgraded (pay 1 wheat or 1 wool)",
+              "A settlement or city on a camel route = +1 VP",
+              "Camel routes count double for the Longest Road (Longest Route)"
             ]
           },
           {
@@ -1752,30 +1752,30 @@
           {
             "id": "caravans",
             "icon": "🐪",
-            "name": "The Caravans",
+            "name": "The Caravans (Merchant Trains)",
             "tips": [
               {
                 "id": "caravan-place",
                 "icon": "🗺️",
                 "level": "beginner",
-                "title": "Place along the camel paths",
-                "body": "Your opening follows the oasis routes, not the hottest pips. Settle where your caravans can reach oases — those deliveries are a big slice of your income.",
+                "title": "Build where the routes will run",
+                "body": "You score by having camels (wagons) pass through your own settlements and cities — a building on a camel route is worth +1 VP. Place your early buildings where routes from the oasis can naturally reach them.",
                 "tags": ["caravans", "placement"]
               },
               {
                 "id": "caravan-idle",
                 "icon": "🐫",
                 "level": "intermediate",
-                "title": "Never leave a camel idle",
-                "body": "A parked caravan earns nothing. Each turn, advance one toward — ideally onto — an oasis; steady delivery beats a perfect haul that arrives too late.",
+                "title": "Win the placement votes",
+                "body": "Every time anyone builds or upgrades a settlement there's a vote to place the next camel (1 wheat or 1 wool). Spend to steer routes through your own buildings — and away from rivals' — because those votes are how you actually score.",
                 "tags": ["caravans", "tempo"]
               },
               {
                 "id": "caravan-race",
                 "icon": "🏁",
                 "level": "advanced",
-                "title": "Race or dodge for oases",
-                "body": "Read which oases rivals are aiming at. Sprint a contested one only when you'll clearly win; otherwise take the longer path to an uncontested oasis for a guaranteed score.",
+                "title": "Double-dip with Longest Road",
+                "body": "A camel (wagon) route counts double toward the Longest Road (Longest Route). Plan routes that also serve as your road network so the same camels score your buildings and hand you the 2-VP bonus.",
                 "tags": ["caravans", "denial"]
               }
             ]

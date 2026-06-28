@@ -1671,11 +1671,11 @@
               "id": "caravan",
               "type": "trade",
               "icon": "🐪",
-              "name": "Karawane",
-              "description": "Karawanen transportieren Waren auf Straßen. Waren ins freundliche Dorf liefern bringt Siegpunkte.",
+              "name": "Karawane (Merchant Train)",
+              "description": "Im Szenario Die Karawanen (in der 6. Edition 'Merchant Trains' genannt) verlängern Kamele — in der neuen Edition Wagen genannt — Routen von der zentralen Oase (der 'Wasserstelle') aus. Immer wenn eine Siedlung gebaut oder zur Stadt ausgebaut wird, stimmen die Spieler über das Recht ab, das nächste Kamel zu setzen; jede Stimme kostet 1 Getreide oder 1 Wolle.",
               "usages": [
-                "Karawanen bis zu 3 Straßenabschnitte pro Zug bewegen",
-                "1 SP pro geliefertem Warenmarker verdienen"
+                "Eine Siedlung oder Stadt an einer Kamel-Route (Wagen-Route) bringt +1 zusätzlichen SP",
+                "Eine Kamel-Route zählt doppelt für die Längste Handelsstraße (Längste Handelsroute)"
               ]
             },
             {
@@ -1770,13 +1770,13 @@
             ]
           },
           {
-            "name": "Karawanen",
+            "name": "Die Karawanen (Merchant Trains)",
             "vp": "12 SP",
-            "description": "Wagen bilden Züge von der Tränke.",
+            "description": "Kamele (in der 6. Edition 'Merchant Trains' Wagen) bilden Routen von der zentralen Oase (Wasserstelle) aus.",
             "details": [
-              "Wagen beim Bauen gesammelt, per Abstimmung platziert",
-              "Gebäude zwischen 2 Wagen = +1 SP je",
-              "Wagen zählen zur Längsten Route"
+              "Stimme über das Setzen eines Kamels ab, wann immer eine Siedlung gebaut oder ausgebaut wird (zahle 1 Getreide oder 1 Wolle)",
+              "Eine Siedlung oder Stadt an einer Kamel-Route = +1 SP",
+              "Kamel-Routen zählen doppelt für die Längste Handelsstraße (Längste Handelsroute)"
             ]
           },
           {
@@ -1898,30 +1898,30 @@
           {
             "id": "caravans",
             "icon": "🐪",
-            "name": "Die Karawanen",
+            "name": "Die Karawanen (Merchant Trains)",
             "tips": [
               {
                 "id": "caravan-place",
                 "icon": "🗺️",
                 "level": "beginner",
-                "title": "Entlang der Kamelwege siedeln",
-                "body": "Dein Start folgt den Oasenrouten, nicht den heißesten Zahlen. Siedle dort, wo deine Karawanen Oasen erreichen — diese Lieferungen machen einen großen Teil deines Einkommens aus.",
+                "title": "Baue dort, wo die Routen verlaufen",
+                "body": "Du punktest, indem Kamele (Wagen) durch deine eigenen Siedlungen und Städte ziehen — ein Gebäude an einer Kamel-Route ist +1 SP wert. Setze deine frühen Gebäude dorthin, wo Routen von der Oase sie natürlich erreichen können.",
                 "tags": ["caravans", "placement"]
               },
               {
                 "id": "caravan-idle",
                 "icon": "🐫",
                 "level": "intermediate",
-                "title": "Lass nie ein Kamel untätig",
-                "body": "Eine geparkte Karawane bringt nichts. Bewege jeden Zug eine Richtung Oase — idealerweise auf eine; stetige Lieferungen schlagen den perfekten Transport, der zu spät kommt.",
+                "title": "Gewinne die Platzierungs-Abstimmungen",
+                "body": "Jedes Mal, wenn jemand eine Siedlung baut oder ausbaut, wird über das Setzen des nächsten Kamels abgestimmt (1 Getreide oder 1 Wolle). Gib aus, um Routen durch deine eigenen Gebäude zu lenken — und weg von denen der Rivalen — denn über diese Stimmen punktest du tatsächlich.",
                 "tags": ["caravans", "tempo"]
               },
               {
                 "id": "caravan-race",
                 "icon": "🏁",
                 "level": "advanced",
-                "title": "Um Oasen wetteifern oder ausweichen",
-                "body": "Erkenne, welche Oasen deine Rivalen anvisieren. Sprinte nur dann zu einer umkämpften, wenn du klar gewinnst; sonst nimm den längeren Weg zu einer freien Oase für sichere Punkte.",
+                "title": "Doppelt kassieren mit der Längsten Handelsstraße",
+                "body": "Eine Kamel-Route (Wagen-Route) zählt doppelt für die Längste Handelsstraße (Längste Handelsroute). Plane Routen, die zugleich dein Straßennetz bilden, sodass dieselben Kamele deine Gebäude punkten lassen und dir den 2-SP-Bonus bringen.",
                 "tags": ["caravans", "denial"]
               }
             ]

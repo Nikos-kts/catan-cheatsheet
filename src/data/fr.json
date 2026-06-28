@@ -1683,11 +1683,11 @@
               "id": "caravan",
               "type": "trade",
               "icon": "🐪",
-              "name": "Caravane",
-              "description": "Les caravanes transportent des marchandises le long des routes. Livrer des marchandises au village ami rapporte des PV.",
+              "name": "Caravane (Merchant Train)",
+              "description": "Dans le scénario Les Caravanes (renommé 'Merchant Trains' dans la 6e édition), les chameaux — appelés chariots dans la nouvelle édition — prolongent des routes depuis l'oasis centrale (le 'point d'eau'). Chaque fois qu'une colonie est construite ou améliorée, les joueurs votent pour le droit de placer le prochain chameau ; chaque vote coûte 1 Blé ou 1 Laine.",
               "usages": [
-                "Déplacez les caravanes jusqu'à 3 tronçons de route par tour",
-                "Gagnez 1 PV par jeton de marchandise livré"
+                "Une colonie ou une ville sur une route de chameaux (chariots) rapporte +1 PV supplémentaire",
+                "Une route de chameaux compte double pour la Plus Longue Route (Plus Long Itinéraire)"
               ]
             },
             {
@@ -1782,13 +1782,13 @@
             ]
           },
           {
-            "name": "Caravanes",
+            "name": "Les Caravanes (Merchant Trains)",
             "vp": "12 PV",
-            "description": "Des wagons forment des trains depuis l'abreuvoir.",
+            "description": "Les chameaux (chariots dans les 'Merchant Trains' de la 6e édition) forment des routes depuis l'oasis centrale (point d'eau).",
             "details": [
-              "Wagons collectés lors de la construction, placés par vote",
-              "Bâtiments entre 2 wagons = +1 PV chacun",
-              "Wagons comptent pour la Route la Plus Longue"
+              "Votez pour placer un chameau chaque fois qu'une colonie est construite ou améliorée (payez 1 Blé ou 1 Laine)",
+              "Une colonie ou une ville sur une route de chameaux = +1 PV",
+              "Les routes de chameaux comptent double pour la Plus Longue Route (Plus Long Itinéraire)"
             ]
           },
           {
@@ -1910,30 +1910,30 @@
           {
             "id": "caravans",
             "icon": "🐪",
-            "name": "Les Caravanes",
+            "name": "Les Caravanes (Merchant Trains)",
             "tips": [
               {
                 "id": "caravan-place",
                 "icon": "🗺️",
                 "level": "beginner",
-                "title": "Placez-vous le long des pistes à chameaux",
-                "body": "Votre ouverture suit les routes des oasis, pas les meilleurs chiffres. Installez-vous là où vos caravanes atteignent les oasis — ces livraisons représentent une grande part de vos revenus.",
+                "title": "Construisez là où passeront les routes",
+                "body": "Vous marquez en faisant passer les chameaux (chariots) par vos propres colonies et villes : un bâtiment sur une route de chameaux vaut +1 PV. Placez vos premiers bâtiments là où les routes partant de l'oasis peuvent naturellement les atteindre.",
                 "tags": ["caravans", "placement"]
               },
               {
                 "id": "caravan-idle",
                 "icon": "🐫",
                 "level": "intermediate",
-                "title": "Ne laissez jamais un chameau inactif",
-                "body": "Une caravane à l'arrêt ne rapporte rien. Chaque tour, faites-en avancer une vers une oasis — idéalement dessus ; une livraison régulière vaut mieux qu'un chargement parfait arrivé trop tard.",
+                "title": "Remportez les votes de placement",
+                "body": "Chaque fois que quelqu'un construit ou améliore une colonie, un vote a lieu pour placer le prochain chameau (1 Blé ou 1 Laine). Dépensez pour orienter les routes à travers vos propres bâtiments — et à l'écart de ceux des rivaux — car ce sont ces votes qui vous font réellement marquer.",
                 "tags": ["caravans", "tempo"]
               },
               {
                 "id": "caravan-race",
                 "icon": "🏁",
                 "level": "advanced",
-                "title": "Foncez ou contournez pour les oasis",
-                "body": "Repérez les oasis visées par vos rivaux. Ne sprintez vers une oasis disputée que si vous gagnez clairement ; sinon, prenez le chemin plus long vers une oasis libre pour un score garanti.",
+                "title": "Faites coup double avec la Plus Longue Route",
+                "body": "Une route de chameaux (chariots) compte double pour la Plus Longue Route (Plus Long Itinéraire). Planifiez des routes qui servent aussi de réseau routier, afin que les mêmes chameaux fassent marquer vos bâtiments et vous offrent le bonus de 2 PV.",
                 "tags": ["caravans", "denial"]
               }
             ]

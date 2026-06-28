@@ -1657,11 +1657,11 @@
               "id": "caravan",
               "type": "trade",
               "icon": "🐪",
-              "name": "Caravan",
-              "description": "In the Traders & Barbarians scenario, caravans carry goods along roads. Delivering goods to the friendly village earns Victory Points.",
+              "name": "Caravana (Merchant Train)",
+              "description": "No cenário As Caravanas (renomeado 'Merchant Trains' na 6.ª edição), os camelos — chamados carroças na nova edição — prolongam rotas a partir do oásis central (o 'bebedouro'). Sempre que uma povoação é construída ou melhorada, os jogadores votam pelo direito de colocar o próximo camelo; cada voto custa 1 Grão ou 1 Lã.",
               "usages": [
-                "Move caravans up to 3 road segments per turn",
-                "Earn 1 VP per delivered goods token"
+                "Uma povoação ou cidade numa rota de camelos (carroças) vale +1 VP extra",
+                "Uma rota de camelos conta a dobrar para a Estrada Mais Longa (Rota Mais Longa)"
               ]
             },
             {
@@ -1750,13 +1750,13 @@
             ]
           },
           {
-            "name": "Comboios de Mercadores",
+            "name": "As Caravanas (Merchant Trains)",
             "vp": "12 VP",
-            "description": "As carroças formam comboios a partir do bebedouro.",
+            "description": "Camelos (carroças nos 'Merchant Trains' da 6.ª edição) formam rotas a partir do oásis central (bebedouro).",
             "details": [
-              "Carroças obtidas ao construir, colocadas por votação",
-              "Edifícios entre 2 carroças = +1 VP cada",
-              "As carroças contam para a Maior Rota"
+              "Vote para colocar um camelo sempre que uma povoação é construída ou melhorada (pague 1 Grão ou 1 Lã)",
+              "Uma povoação ou cidade numa rota de camelos = +1 VP",
+              "As rotas de camelos contam a dobrar para a Estrada Mais Longa (Rota Mais Longa)"
             ]
           },
           {
@@ -1878,30 +1878,30 @@
           {
             "id": "caravans",
             "icon": "🐪",
-            "name": "As Caravanas",
+            "name": "As Caravanas (Merchant Trains)",
             "tips": [
               {
                 "id": "caravan-place",
                 "icon": "🗺️",
                 "level": "beginner",
-                "title": "Coloque ao longo dos trilhos dos camelos",
-                "body": "A sua abertura segue as rotas dos oásis, não os números mais quentes. Estabeleça-se onde as suas caravanas alcançam os oásis — essas entregas são uma grande fatia do seu rendimento.",
+                "title": "Construa por onde passarão as rotas",
+                "body": "Pontua fazendo os camelos (carroças) passarem pelas suas próprias povoações e cidades — um edifício numa rota de camelos vale +1 VP. Coloque os seus primeiros edifícios onde as rotas a partir do oásis os possam alcançar naturalmente.",
                 "tags": ["caravans", "placement"]
               },
               {
                 "id": "caravan-idle",
                 "icon": "🐫",
                 "level": "intermediate",
-                "title": "Nunca deixe um camelo parado",
-                "body": "Uma caravana parada não rende nada. Em cada turno, avance uma em direção a um oásis — idealmente até ele; entregas regulares valem mais do que uma carga perfeita que chega tarde demais.",
+                "title": "Ganhe as votações de colocação",
+                "body": "Sempre que alguém constrói ou melhora uma povoação há uma votação para colocar o próximo camelo (1 Grão ou 1 Lã). Gaste para encaminhar as rotas pelos seus próprios edifícios — e para longe dos rivais — porque é através desses votos que realmente pontua.",
                 "tags": ["caravans", "tempo"]
               },
               {
                 "id": "caravan-race",
                 "icon": "🏁",
                 "level": "advanced",
-                "title": "Corra ou desvie-se pelos oásis",
-                "body": "Perceba quais os oásis que os rivais cobiçam. Dispute um oásis contestado só quando for claro que ganha; caso contrário, faça o caminho mais longo até um oásis livre para garantir os pontos.",
+                "title": "Lucre a dobrar com a Estrada Mais Longa",
+                "body": "Uma rota de camelos (carroças) conta a dobrar para a Estrada Mais Longa (Rota Mais Longa). Planeie rotas que sirvam também de rede de estradas, para que os mesmos camelos pontuem os seus edifícios e lhe deem o bónus de 2 VP.",
                 "tags": ["caravans", "denial"]
               }
             ]
