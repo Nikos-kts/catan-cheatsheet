@@ -137,7 +137,6 @@
               "description": "Produzida pelos terrenos de pasto quando sai o respetivo número.",
               "usages": [
                 "Construir uma aldeia (Madeira + Argila + Lã + Cereal)",
-                "Construir uma cidade (× no custo da cidade)",
                 "Comprar uma carta de desenvolvimento (Minério + Cereal + Lã)"
               ]
             },
@@ -702,7 +701,7 @@
             "id": "production-variance",
             "icon": "📊",
             "title": "Procure o valor esperado, não a variância",
-            "body": "Dois hexágonos de 4 pintas produzem, a longo prazo, o mesmo total que um hexágono de 8 pintas, mas com menos variância — menos turnos em branco. Para construir com regularidade, prefira distribuir a produção por 3-4 números médios em vez de acumular dois números fortes.",
+            "body": "Dois hexágonos de 2 pintas produzem, a longo prazo, o mesmo total que um hexágono de 4 pintas, mas com menos variância — menos turnos em branco. Para construir com regularidade, prefira distribuir a produção por 3-4 números médios em vez de acumular dois números fortes.",
             "tags": [
               "probabilidade",
               "planeamento"

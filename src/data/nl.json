@@ -137,7 +137,6 @@
               "description": "Geproduceerd door weidetegels als hun getal wordt gegooid.",
               "usages": [
                 "Bouw een dorp (hout + leem + wol + graan)",
-                "Bouw een stad (× in stadskosten)",
                 "Koop een ontwikkelingskaart (erts + graan + wol)"
               ]
             },
@@ -702,7 +701,7 @@
             "id": "production-variance",
             "icon": "📊",
             "title": "Jaag op verwachtingswaarde, niet op variantie",
-            "body": "Twee tegels van 4 stippen leveren op de lange termijn evenveel op als één tegel van 8 stippen, maar met minder variantie — minder lege beurten. Wil je gestaag bouwen, spreid je dan over 3-4 middelmatige getallen in plaats van twee hete getallen te stapelen.",
+            "body": "Twee tegels van 2 stippen leveren op de lange termijn evenveel op als één tegel van 4 stippen, maar met minder variantie — minder lege beurten. Wil je gestaag bouwen, spreid je dan over 3-4 middelmatige getallen in plaats van twee hete getallen te stapelen.",
             "tags": [
               "kansen",
               "planning"

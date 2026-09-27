@@ -137,7 +137,6 @@
               "description": "Producida por los hexágonos de pasto cuando sale su número.",
               "usages": [
                 "Construye un poblado (madera + arcilla + lana + cereales)",
-                "Construye una ciudad (× en el coste de la ciudad)",
                 "Compra una carta de desarrollo (mineral + cereales + lana)"
               ]
             },
@@ -702,7 +701,7 @@
             "id": "production-variance",
             "icon": "📊",
             "title": "Busca valor esperado, no varianza",
-            "body": "Dos hexágonos de 4 puntitos producen a la larga lo mismo que uno de 8 puntitos, pero con menos varianza — menos turnos en blanco. Para construir con regularidad, reparte tu producción entre 3-4 números medios en vez de concentrarla en dos números calientes.",
+            "body": "Dos hexágonos de 2 puntitos producen a la larga lo mismo que uno de 4 puntitos, pero con menos varianza — menos turnos en blanco. Para construir con regularidad, reparte tu producción entre 3-4 números medios en vez de concentrarla en dos números calientes.",
             "tags": [
               "probabilidad",
               "planificación"

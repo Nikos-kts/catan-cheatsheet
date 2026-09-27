@@ -137,7 +137,6 @@
               "description": "Produced by Pasture hexes when their number is rolled.",
               "usages": [
                 "Build a Settlement (Lumber + Brick + Wool + Grain)",
-                "Build a City (× in City cost)",
                 "Buy a Development Card (Ore + Grain + Wool)"
               ]
             },
@@ -618,7 +617,7 @@
             "id": "production-variance",
             "icon": "📊",
             "title": "Chase expected value, not variance",
-            "body": "Two 4-pip hexes produce the same long-run total as one 8-pip hex, but with less variance — fewer empty turns. For consistent builds, prefer spreading across 3-4 medium numbers over stacking two hot numbers.",
+            "body": "Two 2-pip hexes produce the same long-run total as one 4-pip hex, but with less variance — fewer empty turns. For consistent builds, prefer spreading across 3-4 medium numbers over stacking two hot numbers.",
             "tags": ["probability", "planning"]
           },
           {
