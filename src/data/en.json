@@ -1595,6 +1595,30 @@
             "title": "The Merchant",
             "detail": "Placed via progress card on a hex adjacent to your building. Gives 2:1 trade on that resource and is worth 1 VP."
           }
+        ],
+        "scenarios": [
+          {
+            "name": "Combining with Seafarers",
+            "vp": "Scenario +2 VP",
+            "description": "Play Cities & Knights on a Seafarers scenario map. Add 2 VP to that scenario's victory target.",
+            "details": [
+              "Best fits: Heading for New Shores or Through the Desert (16 VP each). Avoid The Fog Islands and The Four Islands — they make the barbarians much tougher.",
+              "Barbarians attack all islands at once: cities and active knights on every island count.",
+              "Ships count as roads for all C&K rules. Knights can move along ship routes, stop on sea intersections and chase away the pirate from there.",
+              "Gold fields produce resources only, never commodities. The merchant can't be placed on a gold field."
+            ]
+          },
+          {
+            "name": "5–6 Player Extension (5–6 Player Expansion)",
+            "vp": "13 VP",
+            "description": "Adds a 5th and 6th player. Also needs the base game's 5–6 player set; all other C&K rules are unchanged.",
+            "details": [
+              "Board: the larger 5–6 player island, with the C&K barbarian track alongside.",
+              "Special Build Phase after every turn: in clockwise order, each other player may build (incl. knights, city walls and city improvements) and activate or promote knights.",
+              "No trading, progress cards or knight actions in the Special Build Phase. A knight activated there can act on its owner's next turn.",
+              "2025 6th ed: paired turns replace the Special Build Phase — the player 3 seats to the active player's left also takes an Action phase, but may not trade with other players."
+            ]
+          }
         ]
       },
       "reference": {
