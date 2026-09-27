@@ -1821,6 +1821,155 @@
         ]
       },
       "reference": {
+        "buildingCosts": [
+          {
+            "id": "road",
+            "icon": "🛣️",
+            "name": "Carretera",
+            "vp": "0 PV",
+            "cost": [
+              {
+                "resource": "Madera",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Arcilla",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              }
+            ],
+            "note": "Debe conectar con tu red. Máx. 15 por jugador."
+          },
+          {
+            "id": "settlement",
+            "icon": "🏠",
+            "name": "Poblado",
+            "vp": "1 PV",
+            "cost": [
+              {
+                "resource": "Madera",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Arcilla",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              },
+              {
+                "resource": "Lana",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Cereales",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Respeta la regla de la distancia (2 caminos). Máx. 5 por jugador."
+          },
+          {
+            "id": "city",
+            "icon": "🏛️",
+            "name": "Ciudad",
+            "vp": "2 PV",
+            "cost": [
+              {
+                "resource": "Mineral",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 3
+              },
+              {
+                "resource": "Cereales",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 2
+              }
+            ],
+            "note": "Amplía un poblado. Junto a Bosque, Pasto o Montaña produce 1 materia prima + 1 mercancía; junto a Cerro o Sembrado, 2 materias primas. Máx. 4 por jugador."
+          },
+          {
+            "id": "city-wall",
+            "icon": "🏰",
+            "name": "Muralla",
+            "vp": "0 PV",
+            "cost": [
+              {
+                "resource": "Arcilla",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 2
+              }
+            ],
+            "note": "Solo bajo una ciudad (1 por ciudad, máx. 3). Cada muralla suma 2 a tu límite de cartas en la mano cuando sale un 7; se pierde si su ciudad es saqueada."
+          },
+          {
+            "id": "knight",
+            "icon": "🛡️",
+            "name": "Caballero",
+            "vp": "0 PV",
+            "cost": [
+              {
+                "resource": "Lana",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Mineral",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              }
+            ],
+            "note": "Un caballero simple, colocado inactivo en una encrucijada libre conectada a tus carreteras."
+          },
+          {
+            "id": "promote-knight",
+            "icon": "⬆️",
+            "name": "Promocionar caballero",
+            "vp": "0 PV",
+            "cost": [
+              {
+                "resource": "Lana",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Mineral",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              }
+            ],
+            "note": "Simple → fuerte, o fuerte → poderoso (el poderoso requiere Política 3). Conserva su lado activo/inactivo."
+          },
+          {
+            "id": "activate-knight",
+            "icon": "⚡",
+            "name": "Activar caballero",
+            "vp": "0 PV",
+            "cost": [
+              {
+                "resource": "Cereales",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Mismo coste para cualquier nivel. Un caballero no puede actuar en el turno en que se activa."
+          }
+        ],
         "tradingNote": "Ciudades y caballeros añade comercio de mercancías mediante el mazo de progreso de Comercio y la figura del comerciante (2:1 en un hexágono adyacente). Las mercancías (monedas / papel / tela) también se cambian 4:1 con la reserva.",
         "turnFlow": [
           {

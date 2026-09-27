@@ -1821,6 +1821,155 @@
         ]
       },
       "reference": {
+        "buildingCosts": [
+          {
+            "id": "road",
+            "icon": "🛣️",
+            "name": "Straat",
+            "vp": "0 OP",
+            "cost": [
+              {
+                "resource": "Hout",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Leem",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              }
+            ],
+            "note": "Moet aansluiten op je stratennet. Max. 15 per speler."
+          },
+          {
+            "id": "settlement",
+            "icon": "🏠",
+            "name": "Dorp",
+            "vp": "1 OP",
+            "cost": [
+              {
+                "resource": "Hout",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Leem",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              },
+              {
+                "resource": "Wol",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Graan",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Houd je aan de afstandsregel (2 paden). Max. 5 per speler."
+          },
+          {
+            "id": "city",
+            "icon": "🏛️",
+            "name": "Stad",
+            "vp": "2 OP",
+            "cost": [
+              {
+                "resource": "Erts",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 3
+              },
+              {
+                "resource": "Graan",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 2
+              }
+            ],
+            "note": "Ontstaat door een dorp uit te bouwen. Aan bos, weide of bergen levert hij 1 grondstof + 1 handelswaar op; aan heuvels of akkers 2 grondstoffen. Max. 4 per speler."
+          },
+          {
+            "id": "city-wall",
+            "icon": "🏰",
+            "name": "Stadsmuur",
+            "vp": "0 OP",
+            "cost": [
+              {
+                "resource": "Leem",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 2
+              }
+            ],
+            "note": "Alleen onder een stad (1 per stad, max. 3). Elke muur verhoogt je handkaartenlimiet bij een 7 met 2; hij verdwijnt als de stad geplunderd wordt."
+          },
+          {
+            "id": "knight",
+            "icon": "🛡️",
+            "name": "Ridder",
+            "vp": "0 OP",
+            "cost": [
+              {
+                "resource": "Wol",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Erts",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              }
+            ],
+            "note": "Een eenvoudige ridder, inactief geplaatst op een lege driesprong die aansluit op je straten."
+          },
+          {
+            "id": "promote-knight",
+            "icon": "⬆️",
+            "name": "Ridder bevorderen",
+            "vp": "0 OP",
+            "cost": [
+              {
+                "resource": "Wol",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Erts",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              }
+            ],
+            "note": "Eenvoudig → sterk, of sterk → machtig (machtig vereist Politiek 3). Behoudt zijn actieve/inactieve kant."
+          },
+          {
+            "id": "activate-knight",
+            "icon": "⚡",
+            "name": "Ridder activeren",
+            "vp": "0 OP",
+            "cost": [
+              {
+                "resource": "Graan",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Zelfde kosten voor elk niveau. Een ridder kan niet in actie komen in de beurt waarin hij geactiveerd wordt."
+          }
+        ],
         "tradingNote": "S&R voegt handel in handelswaren toe via de stapel Handel-ontwikkelingskaarten en de handelaar (2:1 op een aangrenzende tegel). Handelswaren (munt / papier / doek) kun je ook 4:1 met de bank ruilen.",
         "turnFlow": [
           {

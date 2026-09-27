@@ -1808,6 +1808,85 @@
         ]
       },
       "reference": {
+        "buildingCosts": [
+          {
+            "id": "road",
+            "icon": "🛣️",
+            "name": "Road",
+            "vp": "0 VP",
+            "cost": [
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 }
+            ],
+            "note": "Must connect to your network. Max 15 per player."
+          },
+          {
+            "id": "settlement",
+            "icon": "🏠",
+            "name": "Settlement",
+            "vp": "1 VP",
+            "cost": [
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+            ],
+            "note": "Respect the 2-edge distance rule. Max 5 per player."
+          },
+          {
+            "id": "city",
+            "icon": "🏛️",
+            "name": "City",
+            "vp": "2 VP",
+            "cost": [
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 3 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 2 }
+            ],
+            "note": "Upgrades a settlement. Next to forest, pasture or mountains it yields 1 resource + 1 commodity; next to hills or fields, 2 resources. Max 4 per player."
+          },
+          {
+            "id": "city-wall",
+            "icon": "🏰",
+            "name": "City Wall",
+            "vp": "0 VP",
+            "cost": [
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 2 }
+            ],
+            "note": "Only under a city (1 per city, max 3). Each wall adds 2 to your hand limit on a 7; lost if its city is pillaged."
+          },
+          {
+            "id": "knight",
+            "icon": "🛡️",
+            "name": "Knight",
+            "vp": "0 VP",
+            "cost": [
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 1 }
+            ],
+            "note": "A basic knight, placed inactive on an empty intersection connected to your roads."
+          },
+          {
+            "id": "promote-knight",
+            "icon": "⬆️",
+            "name": "Promote Knight",
+            "vp": "0 VP",
+            "cost": [
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 1 }
+            ],
+            "note": "Basic → strong, or strong → mighty (mighty needs Politics 3). Keeps its active/inactive side."
+          },
+          {
+            "id": "activate-knight",
+            "icon": "⚡",
+            "name": "Activate Knight",
+            "vp": "0 VP",
+            "cost": [
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+            ],
+            "note": "Same cost for every level. A knight can't act on the turn it is activated."
+          }
+        ],
         "tradingNote": "C&K adds commodity trades via the Trade Progress deck and the Merchant token (2:1 on an adjacent hex). Commodities (coin / paper / cloth) also trade 4:1 at the bank.",
         "turnFlow": [
           { "icon": "🃏", "title": "Play a progress card (optional)", "detail": "Only the Alchemist (Alchemy) card may be played before rolling." },

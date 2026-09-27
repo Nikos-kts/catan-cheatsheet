@@ -1821,6 +1821,155 @@
         ]
       },
       "reference": {
+        "buildingCosts": [
+          {
+            "id": "road",
+            "icon": "🛣️",
+            "name": "Δρόμος",
+            "vp": "0 ΠΝ",
+            "cost": [
+              {
+                "resource": "Ξύλο",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Πηλός",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              }
+            ],
+            "note": "Πρέπει να συνδέεται με το δίκτυό σου. Έως 15 ανά παίκτη."
+          },
+          {
+            "id": "settlement",
+            "icon": "🏠",
+            "name": "Οικισμός",
+            "vp": "1 ΠΝ",
+            "cost": [
+              {
+                "resource": "Ξύλο",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Πηλός",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              },
+              {
+                "resource": "Μαλλί",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Σιτάρι",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Τήρησε τον κανόνα απόστασης των 2 πλευρών. Έως 5 ανά παίκτη."
+          },
+          {
+            "id": "city",
+            "icon": "🏛️",
+            "name": "Πόλη",
+            "vp": "2 ΠΝ",
+            "cost": [
+              {
+                "resource": "Πέτρα",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 3
+              },
+              {
+                "resource": "Σιτάρι",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 2
+              }
+            ],
+            "note": "Αναβαθμίζει έναν οικισμό. Δίπλα σε Δάσος, Λιβάδι ή Βουνά δίνει 1 πρώτη ύλη + 1 εμπόρευμα· δίπλα σε Λόφους ή Χωράφια, 2 πρώτες ύλες. Έως 4 ανά παίκτη."
+          },
+          {
+            "id": "city-wall",
+            "icon": "🏰",
+            "name": "Τείχος Πόλης",
+            "vp": "0 ΠΝ",
+            "cost": [
+              {
+                "resource": "Πηλός",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 2
+              }
+            ],
+            "note": "Μόνο κάτω από πόλη (1 ανά πόλη, έως 3). Κάθε τείχος ανεβάζει κατά 2 το όριο καρτών στο χέρι όταν έρθει 7· χάνεται αν λεηλατηθεί η πόλη του."
+          },
+          {
+            "id": "knight",
+            "icon": "🛡️",
+            "name": "Ιππότης",
+            "vp": "0 ΠΝ",
+            "cost": [
+              {
+                "resource": "Μαλλί",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Πέτρα",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              }
+            ],
+            "note": "Απλός ιππότης, μπαίνει ανενεργός σε κενή διασταύρωση που συνδέεται με τους δρόμους σου."
+          },
+          {
+            "id": "promote-knight",
+            "icon": "⬆️",
+            "name": "Αναβάθμιση Ιππότη",
+            "vp": "0 ΠΝ",
+            "cost": [
+              {
+                "resource": "Μαλλί",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Πέτρα",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              }
+            ],
+            "note": "Απλός → Δυνατός ή Δυνατός → Ισχυρός (ο Ισχυρός θέλει Πολιτική 3). Κρατά την ενεργή/ανενεργή πλευρά του."
+          },
+          {
+            "id": "activate-knight",
+            "icon": "⚡",
+            "name": "Ενεργοποίηση Ιππότη",
+            "vp": "0 ΠΝ",
+            "cost": [
+              {
+                "resource": "Σιτάρι",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Ίδιο κόστος για κάθε επίπεδο. Ο ιππότης δεν μπορεί να δράσει στον γύρο που ενεργοποιείται."
+          }
+        ],
         "tradingNote": "Οι Πόλεις & Ιππότες προσθέτουν ανταλλαγές εμπορευμάτων μέσω της στοίβας Καρτών Προόδου Εμπορίου και του Εμπόρου (2:1 σε γειτονικό εξάγωνο). Τα εμπορεύματα (Νόμισμα / Χαρτί / Ύφασμα) ανταλλάσσονται επίσης 4:1 με την τράπεζα.",
         "turnFlow": [
           {

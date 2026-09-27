@@ -1821,6 +1821,155 @@
         ]
       },
       "reference": {
+        "buildingCosts": [
+          {
+            "id": "road",
+            "icon": "🛣️",
+            "name": "Estrada",
+            "vp": "0 PV",
+            "cost": [
+              {
+                "resource": "Madeira",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Argila",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              }
+            ],
+            "note": "Tem de estar ligada à sua rede. Máx. 15 por jogador."
+          },
+          {
+            "id": "settlement",
+            "icon": "🏠",
+            "name": "Aldeia",
+            "vp": "1 PV",
+            "cost": [
+              {
+                "resource": "Madeira",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Argila",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              },
+              {
+                "resource": "Lã",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Cereal",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Respeite a regra da distância (2 caminhos). Máx. 5 por jogador."
+          },
+          {
+            "id": "city",
+            "icon": "🏛️",
+            "name": "Cidade",
+            "vp": "2 PV",
+            "cost": [
+              {
+                "resource": "Minério",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 3
+              },
+              {
+                "resource": "Cereal",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 2
+              }
+            ],
+            "note": "Amplia uma aldeia. Junto a Floresta, Pasto ou Montanhas produz 1 matéria-prima + 1 mercadoria; junto a Colinas ou Lavoura, 2 matérias-primas. Máx. 4 por jogador."
+          },
+          {
+            "id": "city-wall",
+            "icon": "🏰",
+            "name": "Muralha",
+            "vp": "0 PV",
+            "cost": [
+              {
+                "resource": "Argila",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 2
+              }
+            ],
+            "note": "Só debaixo de uma cidade (1 por cidade, máx. 3). Cada muralha aumenta em 2 o limite de cartas na mão quando sai um 7; perde-se se a cidade for saqueada."
+          },
+          {
+            "id": "knight",
+            "icon": "🛡️",
+            "name": "Cavaleiro",
+            "vp": "0 PV",
+            "cost": [
+              {
+                "resource": "Lã",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Minério",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              }
+            ],
+            "note": "Um cavaleiro básico, colocado inativo numa encruzilhada livre ligada às suas estradas."
+          },
+          {
+            "id": "promote-knight",
+            "icon": "⬆️",
+            "name": "Promover cavaleiro",
+            "vp": "0 PV",
+            "cost": [
+              {
+                "resource": "Lã",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Minério",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              }
+            ],
+            "note": "Básico → forte, ou forte → poderoso (o poderoso exige Política 3). Mantém o lado ativo/inativo."
+          },
+          {
+            "id": "activate-knight",
+            "icon": "⚡",
+            "name": "Ativar cavaleiro",
+            "vp": "0 PV",
+            "cost": [
+              {
+                "resource": "Cereal",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Mesmo custo para qualquer nível. Um cavaleiro não pode agir no turno em que é ativado."
+          }
+        ],
         "tradingNote": "Cidades e Cavaleiros acrescenta trocas de mercadorias através do baralho de progresso de Comércio e da ficha do mercador (2:1 num hexágono adjacente). As mercadorias (moeda / papel / tecido) também se trocam a 4:1 com o banco.",
         "turnFlow": [
           {
