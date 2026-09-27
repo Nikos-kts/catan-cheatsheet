@@ -1750,6 +1750,39 @@
                 "Spend 2 gold for any 1 resource from the supply (max twice per turn)",
                 "Earn gold by delivering goods or trading resources to the supply"
               ]
+            },
+            {
+              "id": "goods",
+              "type": "trade",
+              "icon": "📦",
+              "name": "Commodities",
+              "description": "Traders & Barbarians main scenario. Your wagon picks up one commodity at a time at the center of a trade hex (commodity hex) and hauls it to the hex that needs it.",
+              "usages": [
+                "Quarry: needs tools — supplies sand and marble",
+                "Glassworks: needs sand — supplies glass and tools",
+                "Castle: needs marble and glass — supplies tools and sand",
+                "Each delivery = 1 VP plus 1–5 gold — more as you upgrade your baggage train (wagon)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "barbarians",
+          "title": "Barbarian Attack",
+          "icon": "⚔️",
+          "cards": [
+            {
+              "id": "barbarian-knight",
+              "type": "special",
+              "icon": "🛡️",
+              "name": "Knight",
+              "description": "Barbarian Attack scenario only. Knights enter play through this scenario's development cards and stand on hex edges, like roads. They free the coast by outnumbering the barbarians on a hex.",
+              "usages": [
+                "End of turn: move each knight up to 3 edges — pay 1 grain to move that knight up to 5",
+                "Victory when a hex's edges hold more knights than there are barbarians on it — the barbarians become prisoners",
+                "Every 2 prisoners = 1 VP; an involved player left without a prisoner takes 3 gold",
+                "After each victory a die roll sends some knights home — 3 gold for each knight lost"
+              ]
             }
           ]
         }
