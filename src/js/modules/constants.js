@@ -59,7 +59,7 @@ export const GAME_THEME = {
   },
 };
 
-export const SUPPORTED_LANGS = ["en", "de", "el", "es", "fr", "nl", "pt"];
+export const SUPPORTED_LANGS = ["en", "el", "es", "nl", "pt"];
 export const DATA_PATH = "src/data/";
 
 // Valid tab ids (used by storage + tab controller)
