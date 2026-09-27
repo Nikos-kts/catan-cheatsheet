@@ -137,7 +137,8 @@
               "description": "Producida por los hexágonos de Prado cuando se lanza su número.",
               "usages": [
                 "Construir Poblado (Madera + Arcilla + Lana + Trigo)",
-                "Comprar Carta de Desarrollo (Mineral + Trigo + Lana)"
+                "Comprar Carta de Desarrollo (Mineral + Trigo + Lana)",
+                "Buy a Development Card (Ore + Grain + Wool)"
               ]
             },
             {
@@ -759,7 +760,10 @@
               "usages": [
                 "Costo: 1 Madera + 1 Lana",
                 "El último barco de una ruta abierta puede moverse una vez por turno",
-                "Máx. 15 barcos por jugador"
+                "Máx. 15 barcos por jugador",
+                "Placed on a sea edge touching a settlement/city or another ship you own",
+                "Counts toward Longest Trade Route (Longest Route)",
+                "A ship cannot be moved on the turn it was built"
               ]
             },
             {
@@ -770,7 +774,20 @@
               "description": "Hexágono especial que produce un recurso libre. Los jugadores adyacentes eligen cualquier recurso del banco.",
               "usages": [
                 "Muy valioso — asiéntate aquí cuanto antes",
-                "Cada poblado adyacente genera 1 recurso libre a elección"
+                "Cada poblado adyacente genera 1 recurso libre a elección",
+                "Each adjacent city yields 2 free resources of choice (any mix)"
+              ]
+            },
+            {
+              "id": "warship",
+              "type": "ship",
+              "icon": "⚔️",
+              "name": "Warship",
+              "description": "The Pirate Islands scenario only. Reveal a Knight card to turn one normal ship of your route into a warship (lay it on its side).",
+              "usages": [
+                "Converts the normal ship closest to your route's starting settlement",
+                "4 players: Victory Point cards also count as Knights",
+                "Your warship count is your strength against pirate attacks and your fortress"
               ]
             }
           ]
@@ -799,7 +816,65 @@
               "description": "El Pirata se suma al Ladrón en Navegantes (ambos permanecen en juego). Muévelo a cualquier hexágono marítimo para bloquear barcos.",
               "usages": [
                 "Se activa al sacar un 7 o jugar un Caballero",
-                "Bloquea el movimiento de barcos por ese hexágono"
+                "No ship may be built on, or moved to/from, an edge of its hex"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "scenario-pieces",
+          "title": "Scenario Pieces",
+          "icon": "🧩",
+          "cards": [
+            {
+              "id": "fortress",
+              "type": "special",
+              "icon": "🏰",
+              "name": "Pirate Fortress",
+              "description": "The Pirate Islands scenario only. Each player has a fortress in their colour on the western islands (a settlement on 3 tokens). You must capture yours to win.",
+              "usages": [
+                "When your ship route reaches it, attack at the end of your turn: roll 1 die",
+                "More warships than the roll: remove 1 of its 3 tokens. Tie: lose 1 ship. Fewer: lose 2 ships",
+                "Your turn ends after an attack (max 1 attack per turn)",
+                "All 3 tokens gone: it becomes your settlement (1 VP, produces, can become a city)"
+              ]
+            },
+            {
+              "id": "wonder",
+              "type": "special",
+              "icon": "🏛️",
+              "name": "Wonder",
+              "description": "The Wonders of Catan scenario only. Meet a Wonder's requirement, claim it, then build its 4 levels.",
+              "usages": [
+                "5 Wonders, each with its own start requirement (e.g. a city at a port + 5+ consecutive, unbranched roads/ships)",
+                "Only 1 Wonder per player; once claimed, no one else may build it",
+                "Each level costs the same 5 resources; build as many levels per turn as you can afford",
+                "Win by completing level 4, OR at 10+ VP with a higher Wonder level than everyone else"
+              ]
+            },
+            {
+              "id": "village",
+              "type": "special",
+              "icon": "🏘️",
+              "name": "Village",
+              "description": "Cloth for Catan scenario only. The number discs on the 4 small islands are villages, each starting with 5 cloth tokens. No one may build settlements on those islands.",
+              "usages": [
+                "Connect a ship route from your settlement/city to a village: take 1 cloth at once",
+                "Whenever its number is rolled, every player connected to it takes 1 cloth",
+                "A route to a village is closed: its ships can't be moved",
+                "An empty village stops producing cloth"
+              ]
+            },
+            {
+              "id": "cloth-token",
+              "type": "special",
+              "icon": "🧺",
+              "name": "Cloth Token",
+              "description": "Cloth for Catan scenario only. Earned from villages; collect pairs for VP.",
+              "usages": [
+                "2 cloth tokens = 1 VP; an unpaired token is worth nothing",
+                "You can't move the Pirate until you have a route to a village; after that, the Pirate may steal a cloth token instead of a resource",
+                "The game also ends when 5+ of the 8 villages are empty (most VP wins; tie: most cloth)"
               ]
             }
           ]
@@ -807,17 +882,22 @@
       ],
       "gameplay": {
         "players": "3–4",
-        "vpToWin": "Varía por escenario (12–14)",
+        "vpToWin": "Varies by scenario (10–14)",
         "setup": [
           "Configuración estándar de Catan más adaptaciones para escenarios de Navegantes.",
           "Cada jugador recibe 15 barcos además del material normal.",
           "Colocar la figura de Pirata en un hexágono de mar.",
-          "Según el escenario: montar islas fijas o variables."
+          "Robber and Pirate start where the scenario says (Pirate Islands has no Robber; Wonders of Catan has no Pirate).",
+          "Starting settlements follow the scenario (some must go on the main island). A coastal starting settlement may take a ship instead of a road."
         ],
         "turnOverview": [
           {
             "title": "Producción y Acción",
             "detail": "Como en el juego base, pero se pueden construir y mover barcos. Con un 7: mover el Ladrón O el Pirata."
+          },
+          {
+            "title": "Ship Movement",
+            "detail": "Once per turn, move 1 ship that has an open end (not connected on both sides) to a new legal position. Not a ship built this turn, or one in a closed route between two of your buildings."
           }
         ],
         "keyRules": [
@@ -834,8 +914,8 @@
             "detail": "Mover a cualquier hexágono de mar. Robar 1 recurso de un jugador con barco allí. Bloquea construcción/movimiento de barcos."
           },
           {
-            "title": "Ruta Más Larga",
-            "detail": "Caminos y barcos forman una ruta, pero solo se conectan a través de edificios propios (poblados/ciudades)."
+            "title": "Longest Trade Route (Longest Route)",
+            "detail": "Roads and ships combine into a route, but only connect through your own buildings (settlements/cities)."
           },
           {
             "title": "Carta de Construcción",
@@ -844,6 +924,10 @@
           {
             "title": "Bonos de Isla",
             "detail": "En muchos escenarios, el primer jugador en una nueva isla recibe bonus de PV."
+          },
+          {
+            "title": "New-Island Bonus",
+            "detail": "In scenarios with this bonus, your first settlement on each new island (or region) earns +2 VP (+1 in Wonders of Catan and New World), even if others settled there first. The VP tokens go under that settlement."
           }
         ],
         "scenarios": [
@@ -868,7 +952,7 @@
             "vp": "12 PV",
             "description": "Hexágonos boca abajo revelados al construir adyacente.",
             "details": [
-              "1 recurso al descubrir",
+              "A road/ship next to an empty space reveals the next hex: land → take 1 of its resource; sea → nothing",
               "Terreno desconocido añade desafío de exploración"
             ]
           },
@@ -895,7 +979,9 @@
             "description": "Fichas de tela de rutas comerciales con aldeas.",
             "details": [
               "El juego puede terminar cuando 5+ aldeas estén vacías",
-              "Robar tela o recursos vía pirata"
+              "Robar tela o recursos vía pirata",
+              "Connect a ship route to a village: 1 cloth now, +1 whenever its number is rolled",
+              "2 cloth tokens = 1 VP"
             ]
           },
           {
@@ -904,7 +990,9 @@
             "description": "Construir barcos de guerra y conquistar fortalezas piratas.",
             "details": [
               "Cartas de Caballero convierten barcos en barcos de guerra",
-              "Sin Ruta Más Larga / Ejército Más Grande"
+              "Sin Ruta Más Larga / Ejército Más Grande",
+              "Each player has their own pirate fortress",
+              "Attack your fortress: roll 1 die; more warships than the roll removes 1 of its 3 tokens"
             ]
           },
           {
@@ -913,7 +1001,9 @@
             "description": "Reclamar y construir una de 5 Maravillas para ganar.",
             "details": [
               "4 niveles, cada uno cuesta 5 recursos",
-              "Completar la Maravilla O alcanzar 10+ PV con el nivel más alto"
+              "Completar la Maravilla O alcanzar 10+ PV con el nivel más alto",
+              "Each Wonder has its own requirement to start",
+              "Claimed Wonders are exclusive"
             ]
           },
           {
@@ -921,13 +1011,176 @@
             "vp": "12 PV",
             "description": "Disposición de islas totalmente aleatoria.",
             "details": [
-              "+1 PV por primer poblado en cada isla inexplorada"
+              "+1 PV por primer poblado en cada isla inexplorada",
+              "Hexes are placed at random; players take turns placing the ports"
             ]
           }
         ]
       },
       "reference": {
-        "tradingNote": "Seafarers keeps base-game trading ratios — no new trade rules, but coastal ports remain exceptionally strong when shipping routes connect them."
+        "tradingNote": "Seafarers keeps base-game trading ratios — no new trade rules, but coastal ports remain exceptionally strong when shipping routes connect them.",
+        "buildingCosts": [
+          {
+            "id": "road",
+            "icon": "🛣️",
+            "name": "Road",
+            "vp": "0 VP",
+            "cost": [
+              {
+                "resource": "Lumber",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Brick",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              }
+            ],
+            "note": "Max 15 per player. Can't share a coastal edge with a ship; links to ships only at your settlement/city."
+          },
+          {
+            "id": "ship",
+            "icon": "⛵",
+            "name": "Ship",
+            "vp": "0 VP",
+            "cost": [
+              {
+                "resource": "Lumber",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Wool",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              }
+            ],
+            "note": "Max 15 per player. You may move 1 open-end ship per turn."
+          },
+          {
+            "id": "settlement",
+            "icon": "🏠",
+            "name": "Settlement",
+            "vp": "1 VP",
+            "cost": [
+              {
+                "resource": "Lumber",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Brick",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              },
+              {
+                "resource": "Wool",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Grain",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Distance rule applies on every island. Max 5 per player. Your first on a new island may earn bonus VP (scenario rules)."
+          },
+          {
+            "id": "city",
+            "icon": "🏛️",
+            "name": "City",
+            "vp": "2 VP",
+            "cost": [
+              {
+                "resource": "Ore",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 3
+              },
+              {
+                "resource": "Grain",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 2
+              }
+            ],
+            "note": "Upgrades a settlement. Produces 2 per hex; 2 of your choice from a gold field. Max 4 per player."
+          },
+          {
+            "id": "dev-card",
+            "icon": "🃏",
+            "name": "Development Card",
+            "vp": "—",
+            "cost": [
+              {
+                "resource": "Ore",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              },
+              {
+                "resource": "Grain",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              },
+              {
+                "resource": "Wool",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              }
+            ],
+            "note": "Knight moves the Robber OR the Pirate; Road Building can place ships too."
+          }
+        ],
+        "turnFlow": [
+          {
+            "icon": "🃏",
+            "title": "Play a dev card (optional)",
+            "detail": "Dev cards bought on a previous turn. Knight lets you move Robber OR Pirate."
+          },
+          {
+            "icon": "🎲",
+            "title": "Roll the dice",
+            "detail": "Hexes produce as normal; gold fields give any resource of choice (1 per settlement, 2 per city)."
+          },
+          {
+            "icon": "🏴‍☠️",
+            "title": "On a 7: Robber or Pirate",
+            "detail": "Players with >7 cards discard half. Move the Robber OR the Pirate and steal 1 random card (Pirate: from a player with a ship on that hex)."
+          },
+          {
+            "icon": "🤝",
+            "title": "Trade",
+            "detail": "Bank 4:1, generic port 3:1, specific port 2:1, or trade resources with other players (no gifts)."
+          },
+          {
+            "icon": "🔨",
+            "title": "Build",
+            "detail": "Roads, ships, settlements, cities, dev cards — plus scenario pieces."
+          },
+          {
+            "icon": "⛵",
+            "title": "Move one ship (optional)",
+            "detail": "Once per turn, move an open-end ship (not built this turn, not in a closed route) to any legal edge."
+          },
+          {
+            "icon": "➡️",
+            "title": "Pass",
+            "detail": "Pass the dice to the player on your left."
+          }
+        ]
       },
       "strategy": {
         "beginner": [
@@ -1022,6 +1275,7 @@
               "id": "cloth",
               "type": "commodity",
               "icon": "🧵",
+              "image": "src/assets/images/cities-and-knights/commodities/textile.png",
               "name": "Tela",
               "description": "Mercancía producida por ciudades mejoradas en Prado. Usada para avanzar en la columna de Comercio.",
               "usages": [
@@ -1033,6 +1287,7 @@
               "id": "coin",
               "type": "commodity",
               "icon": "🪙",
+              "image": "src/assets/images/cities-and-knights/commodities/coin.png",
               "name": "Moneda",
               "description": "Mercancía producida por ciudades mejoradas en Montaña. Usada para la columna de Política.",
               "usages": [
@@ -1044,6 +1299,7 @@
               "id": "paper",
               "type": "commodity",
               "icon": "📜",
+              "image": "src/assets/images/cities-and-knights/commodities/paper.png",
               "name": "Papel",
               "description": "Mercancía producida por ciudades mejoradas en Bosque. Usada para la columna de Ciencia.",
               "usages": [
@@ -1237,7 +1493,8 @@
                   "count": 2,
                   "description": "Toma 2 Minerales del banco por cada montaña adyacente a al menos uno de tus edificios.",
                   "usages": [
-                    "Fuente grande de Minerales"
+                    "Fuente grande de Minerales",
+                    "Fuel city upgrades and knight recruitment"
                   ]
                 },
                 {
@@ -1246,34 +1503,37 @@
                   "icon": "🖨️",
                   "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
                   "name": "Imprenta",
-                  "count": 2,
+                  "count": 1,
                   "description": "Roba 2 cartas de progreso y guarda 1.",
                   "usages": [
-                    "Ventaja de cartas"
+                    "Ventaja de cartas",
+                    "Cannot be stolen or lost"
                   ]
                 },
                 {
                   "id": "road-building",
                   "type": "progress-science",
-                  "icon": "🛣️",
+                  "icon": "🛤️",
                   "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.png",
                   "name": "Construcción de Caminos",
                   "count": 2,
                   "description": "Construye 2 carreteras gratis inmediatamente.",
                   "usages": [
-                    "Rápido bloqueo de rutas"
+                    "Rápido bloqueo de rutas",
+                    "Compete for Longest Road (2 VP)"
                   ]
                 },
                 {
                   "id": "smith",
                   "type": "progress-science",
-                  "icon": "🛠️",
+                  "icon": "🔨",
                   "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
                   "name": "Herrero",
                   "count": 2,
                   "description": "Paga 1 Mineral: activa un caballero reclutado inmediatamente.",
                   "usages": [
-                    "Activar caballeros sin Trigo"
+                    "Activar caballeros sin Trigo",
+                    "Prepare for barbarian attacks efficiently"
                   ]
                 }
               ]
@@ -1282,7 +1542,7 @@
               "id": "politics",
               "title": "Política",
               "icon": "🏛️",
-              "color": "#c0392b",
+              "color": "#2980b9",
               "cards": [
                 {
                   "id": "bishop",
@@ -1293,7 +1553,8 @@
                   "count": 2,
                   "description": "Mueve al Ladrón a un nuevo hexágono. Roba 1 carta al azar (recurso o mercancía) de cada oponente con un edificio en ese hexágono.",
                   "usages": [
-                    "Neutralizar cartas clave de rivales"
+                    "Neutralizar cartas clave de rivales",
+                    "Relocate the robber to disrupt multiple players"
                   ]
                 },
                 {
@@ -1302,10 +1563,11 @@
                   "icon": "📜",
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.png",
                   "name": "Constitución",
-                  "count": 2,
+                  "count": 1,
                   "description": "Gana 1 habilidad permanente basada en tu nivel más alto de mejora de ciudad.",
                   "usages": [
-                    "Ventajas a largo plazo según tu especialización"
+                    "Ventajas a largo plazo según tu especialización",
+                    "Cannot be stolen or lost"
                   ]
                 },
                 {
@@ -1317,31 +1579,34 @@
                   "count": 2,
                   "description": "Elige a otro jugador; debe retirar uno de sus caballeros del tablero. Luego puedes colocar uno de tus caballeros de fuerza igual o menor.",
                   "usages": [
-                    "Debilitar caballeros enemigos y reforzar los tuyos"
+                    "Debilitar caballeros enemigos y reforzar los tuyos",
+                    "Remove a knight blocking your road"
                   ]
                 },
                 {
                   "id": "diplomat",
                   "type": "progress-politics",
-                  "icon": "🫡",
+                  "icon": "🤝",
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
                   "name": "Diplomático",
                   "count": 2,
                   "description": "Mueve la lealtad de un marcador neutral a tu favor.",
                   "usages": [
-                    "Controlar marcadores neutrales"
+                    "Controlar marcadores neutrales",
+                    "Remove an opponent's road to break their Longest Road"
                   ]
                 },
                 {
                   "id": "intrigue",
                   "type": "progress-politics",
-                  "icon": "🕵️‍♀️",
+                  "icon": "🗡️",
                   "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
                   "name": "Intriga",
                   "count": 2,
                   "description": "Realiza la acción «Desplazar un caballero» sin usar uno de tus caballeros. El caballero objetivo debe estar en un cruce conectado a una de tus rutas.",
                   "usages": [
-                    "Desorganizar manos rivales"
+                    "Desorganizar manos rivales",
+                    "Force an opponent's knight out of a strategic position"
                   ]
                 },
                 {
@@ -1353,7 +1618,8 @@
                   "count": 2,
                   "description": "Cada oponente con igual o más PV que tú debe descartar la mitad de su mano (redondeada hacia abajo).",
                   "usages": [
-                    "Presionar a los jugadores líderes"
+                    "Presionar a los jugadores líderes",
+                    "Effective when you are behind in VP"
                   ]
                 },
                 {
@@ -1365,7 +1631,8 @@
                   "count": 3,
                   "description": "Mira la mano de cartas de progreso de un rival y roba 1 carta a tu elección.",
                   "usages": [
-                    "Obtener información y robar cartas poderosas"
+                    "Obtener información y robar cartas poderosas",
+                    "Disrupt an opponent's planned strategy"
                   ]
                 },
                 {
@@ -1377,7 +1644,8 @@
                   "count": 2,
                   "description": "Activa todos tus caballeros gratis (sin pagar el Trigo habitual).",
                   "usages": [
-                    "Preparar defensa masiva instantánea"
+                    "Preparar defensa masiva instantánea",
+                    "Save significant resources on activations"
                   ]
                 },
                 {
@@ -1389,7 +1657,8 @@
                   "count": 2,
                   "description": "Cada oponente con más PV que tú debe darte 2 cartas (recurso o mercancía) a su elección.",
                   "usages": [
-                    "Obtener cartas de jugadores que van por delante"
+                    "Obtener cartas de jugadores que van por delante",
+                    "Most effective when you are trailing in VP"
                   ]
                 }
               ]
@@ -1527,7 +1796,30 @@
             "detail": "Colocado vía carta de progreso en un hexágono adyacente a tu edificio. Da comercio 2:1 de ese recurso y vale 1 PV."
           }
         ],
-        "scenarios": []
+        "scenarios": [
+          {
+            "name": "Combining with Seafarers",
+            "vp": "Scenario +2 VP",
+            "description": "Play Cities & Knights on a Seafarers scenario map. Add 2 VP to that scenario's victory target.",
+            "details": [
+              "Best fits: Heading for New Shores or Through the Desert (16 VP each). Avoid The Fog Islands and The Four Islands — they make the barbarians much tougher.",
+              "Barbarians attack all islands at once: cities and active knights on every island count.",
+              "Ships count as roads for all C&K rules. Knights can move along ship routes, stop on sea intersections and chase away the pirate from there.",
+              "Gold fields produce resources only, never commodities. The merchant can't be placed on a gold field."
+            ]
+          },
+          {
+            "name": "5–6 Player Extension (5–6 Player Expansion)",
+            "vp": "13 VP",
+            "description": "Adds a 5th and 6th player. Also needs the base game's 5–6 player set; all other C&K rules are unchanged.",
+            "details": [
+              "Board: the larger 5–6 player island, with the C&K barbarian track alongside.",
+              "Special Build Phase after every turn: in clockwise order, each other player may build (incl. knights, city walls and city improvements) and activate or promote knights.",
+              "No trading, progress cards or knight actions in the Special Build Phase. A knight activated there can act on its owner's next turn.",
+              "2025 6th ed: paired turns replace the Special Build Phase — the player 3 seats to the active player's left also takes an Action phase, but may not trade with other players."
+            ]
+          }
+        ]
       },
       "reference": {
         "tradingNote": "C&K adds commodity trades via the Trade Progress deck and the Merchant token (2:1 on an adjacent hex). Commodities (coin / paper / cloth) also trade 4:1 at the bank.",
@@ -1686,6 +1978,39 @@
                 "2 oros por 1 recurso cualquiera de la reserva (máx. dos veces por turno)",
                 "Gana oro entregando mercancías o cambiando recursos con la reserva"
               ]
+            },
+            {
+              "id": "goods",
+              "type": "trade",
+              "icon": "📦",
+              "name": "Commodities",
+              "description": "Traders & Barbarians main scenario. Your wagon picks up one commodity at a time at the center of a trade hex (commodity hex) and hauls it to the hex that needs it.",
+              "usages": [
+                "Quarry: needs tools — supplies sand and marble",
+                "Glassworks: needs sand — supplies glass and tools",
+                "Castle: needs marble and glass — supplies tools and sand",
+                "Each delivery = 1 VP plus 1–5 gold — more as you upgrade your baggage train (wagon)"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "barbarians",
+          "title": "Barbarian Attack",
+          "icon": "⚔️",
+          "cards": [
+            {
+              "id": "barbarian-knight",
+              "type": "special",
+              "icon": "🛡️",
+              "name": "Knight",
+              "description": "Barbarian Attack scenario only. Knights enter play through this scenario's development cards and stand on hex edges, like roads. They free the coast by outnumbering the barbarians on a hex.",
+              "usages": [
+                "End of turn: move each knight up to 3 edges — pay 1 grain to move that knight up to 5",
+                "Victory when a hex's edges hold more knights than there are barbarians on it — the barbarians become prisoners",
+                "Every 2 prisoners = 1 VP; an involved player left without a prisoner takes 3 gold",
+                "After each victory a die roll sends some knights home — 3 gold for each knight lost"
+              ]
             }
           ]
         }
@@ -1697,12 +2022,6 @@
           "Configuración estándar de Catan con escenarios y variantes modulares.",
           "Cada escenario tiene sus propias reglas de preparación y materiales especiales.",
           "Las variantes se pueden combinar entre sí."
-        ],
-        "turnOverview": [
-          {
-            "title": "Flujo Básico",
-            "detail": "Como en el juego base: lanzar dados, recoger recursos, comerciar y construir. Los escenarios añaden acciones y materiales adicionales."
-          }
         ],
         "keyRules": [
           {
@@ -2089,7 +2408,7 @@
       "sections": [
         {
           "id": "missions",
-          "title": "Fichas de Misión",
+          "title": "Missions",
           "icon": "🎯",
           "cards": [
             {
@@ -2124,6 +2443,147 @@
                 "Descarga tripulación en el hexágono de oro — la 3.ª captura la guarida",
                 "Capturarla te hace avanzar en la pista de misión pirata — no puntúa al descubrirla"
               ]
+            },
+            {
+              "id": "council-of-catan",
+              "type": "special",
+              "icon": "👑",
+              "name": "Council of Catan",
+              "description": "Island stronghold just off the starting island (it counts as a sea hex). Deliver fish hauls and spice sacks at its anchor docks.",
+              "usages": [
+                "Unload when either end of your ship touches an anchor",
+                "Each fish haul delivered → +1 step on the fish track",
+                "Each spice sack delivered → +1 step on the spice track",
+                "No pirate ship may be placed on it"
+              ]
+            },
+            {
+              "id": "fish-haul",
+              "type": "mission",
+              "icon": "🐟",
+              "name": "Fish Haul",
+              "description": "Large cargo piece (6 in the supply). Catch it at a fish shoal and deliver it to the Council of Catan.",
+              "usages": [
+                "Catch: an empty ship with an end next to a shoal holding a haul loads it",
+                "Fills the whole hold — 1 per ship or harbor settlement",
+                "Deliver at a Council anchor → +1 step on the fish track (haul returns to the supply)",
+                "A pirate ship placed on a shoal removes its haul"
+              ]
+            },
+            {
+              "id": "spice-sack",
+              "type": "mission",
+              "icon": "🌶️",
+              "name": "Spice Sack",
+              "description": "Small cargo piece. Load one by dropping a crew on a spice hex, then deliver it to the Council of Catan.",
+              "usages": [
+                "Drop 1 crew on a spice hex → load 1 spice sack straight away",
+                "Only 1 sack per player from each spice hex",
+                "Small piece: 2 fit in a ship or harbor settlement",
+                "Deliver at a Council anchor → +1 step on the spice track per sack"
+              ]
+            },
+            {
+              "id": "spice-hex",
+              "type": "special",
+              "icon": "🌶️",
+              "name": "Spice Hex (Spice Farm)",
+              "description": "Village hex found while exploring. Put 1 crew on it (the crew stays for good) to load a spice sack and gain its permanent ability.",
+              "usages": [
+                "On discovery: take 2 gold and place 1 spice sack per player on it",
+                "Swift Voyage: all your ships get +1 MP (both Swift Voyage hexes: +2)",
+                "Pirate Bonus: you chase the pirate on a 6 or the hex's number (both: 4, 5 or 6)",
+                "Fast Gold: once per turn, sell 1 resource for 1 gold (both: twice)",
+                "No roads or settlements on it until you have placed a crew there"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pieces",
+          "title": "Game Pieces",
+          "icon": "⚓",
+          "cards": [
+            {
+              "id": "harbor-settlement",
+              "type": "special",
+              "icon": "⚓",
+              "name": "Harbor Settlement",
+              "description": "Upgrade of one of your coastal settlements, worth 2 VP. Home port for your new ships, settlers and crews.",
+              "usages": [
+                "Cost: 2 Grain + 2 Ore — replaces a coastal settlement (max 4 per player)",
+                "Collects 1 resource like a settlement (not 2 like a city)",
+                "New ships are built next to it; new settlers and crews go in it or an adjacent ship",
+                "Holds 1 large piece (settler, fish haul) or 2 small pieces (crews, spice sacks)"
+              ]
+            },
+            {
+              "id": "ship",
+              "type": "ship",
+              "icon": "⛵",
+              "name": "Ship",
+              "description": "Carries your cargo across the sea. Unlike Seafarers ships, which form routes like roads, E&P ships sail freely using movement points.",
+              "usages": [
+                "Cost: 1 Lumber + 1 Wool — build next to one of your harbor settlements",
+                "4 movement points per turn; pay 1 Wool for +2 (once per ship per turn)",
+                "Holds 1 large piece (settler, fish haul) or 2 small pieces (crews, spice sacks)",
+                "Up to 2 ships per sea edge; discovering a hex ends that ship's move",
+                "3 ships per player — with none left, remove one (its cargo is lost) to build a new one"
+              ]
+            },
+            {
+              "id": "settler",
+              "type": "special",
+              "icon": "🧑‍🌾",
+              "name": "Settler",
+              "description": "Large cargo piece (2 per player). Ship it to new land and swap it for a settlement.",
+              "usages": [
+                "Cost: 1 Brick + 1 Lumber + 1 Wool + 1 Grain (same as a settlement)",
+                "Placed in your harbor settlement or an adjacent ship — never on land",
+                "Ship end next to a land intersection → return ship + settler, place a free settlement",
+                "Distance rule applies; no building on intersections touching an unexplored hex"
+              ]
+            },
+            {
+              "id": "crew",
+              "type": "special",
+              "icon": "🧑‍✈️",
+              "name": "Crew",
+              "description": "Small cargo piece — your warriors and merchants for pirate lairs and spice hexes.",
+              "usages": [
+                "Cost: 1 Wool + 1 Ore",
+                "Placed in your harbor settlement or an adjacent ship; 2 fit in either",
+                "Pirate lair: the 3rd crew on it (any mix of players) captures it",
+                "Spice hex: 1 crew per player, and it stays there → load 1 spice sack"
+              ]
+            },
+            {
+              "id": "pirate-ship",
+              "type": "special",
+              "icon": "🏴‍☠️",
+              "name": "Pirate Ship",
+              "description": "Each player owns one, but only one is on the board at a time. It targets ships, not settlements.",
+              "usages": [
+                "On your 7: place or move your pirate ship (an opponent's goes back to its owner)",
+                "Steal 1 random resource from one player with a ship on that hex (1 gold if they have no cards)",
+                "Tribute: 1 gold per ship moved onto, along or off its hex (its owner pays nothing)",
+                "Never on a sea hex next to the starting island, nor on the outer frame",
+                "Chase: each unmoved ship beside its hex rolls 1 die — a 6 drives it off and you place yours"
+              ]
+            },
+            {
+              "id": "gold-coin",
+              "type": "resource",
+              "icon": "🪙",
+              "name": "Gold Coin",
+              "description": "Universal currency in E&P. Each player starts with 2 gold; extras are awarded for no-production turns and exploration.",
+              "usages": [
+                "2 gold → 1 resource of your choice (max twice per turn)",
+                "3 identical resources → 1 gold at the supply",
+                "A production roll (not a 7) gives you nothing → take 1 gold",
+                "Discover a hex with no resource (sea, gold field, fish shoal, spice hex) → 2 gold",
+                "Tribute: 1 gold per ship moved onto, along or off an opponent's pirate hex"
+              ]
             }
           ]
         }
@@ -2154,8 +2614,8 @@
         ],
         "keyRules": [
           {
-            "title": "Poblados Portuarios",
-            "detail": "Valen 2 PV. Construidos en marcadores de costa. Pueden contener 1 pieza grande o 2 pequeñas. Los barcos deben construirse adyacentes."
+            "title": "Harbor Settlements",
+            "detail": "Worth 2 VP. Upgrade one of your coastal settlements for 2 Grain + 2 Ore (max 4). Can hold 1 large piece or 2 small pieces. Ships must be built adjacent."
           },
           {
             "title": "Barcos",
@@ -2180,29 +2640,35 @@
           {
             "title": "Ahuyentar al Pirata",
             "detail": "Barco inmóvil junto a hexágono pirata lanza 1 dado; un 6 ahuyenta al pirata."
+          },
+          {
+            "title": "Missions",
+            "detail": "Taking part in a lair capture, or delivering a fish haul or spice sack, moves your marker 1 space (a lair's hero moves 1 more); you score the VP symbols shown next to it. The player furthest along a track holds its VP card (bonus VP tile, +1 VP); on a tie, the marker that arrived first keeps it."
           }
         ],
         "scenarios": [
           {
             "name": "¡Tierra a la Vista!",
-            "vp": "Introductorio",
+            "vp": "8 VP",
             "description": "Aprender lo básico de exploración.",
             "details": [
-              "Descubrir hexágonos, construir poblados en nuevas islas"
+              "Descubrir hexágonos, construir poblados en nuevas islas",
+              "No crews, missions or pirate ships yet — a 7 only forces discards"
             ]
           },
           {
             "name": "Guaridas Piratas",
-            "vp": "+ misión",
+            "vp": "12 VP",
             "description": "Capturar guaridas piratas en hexágonos de oro.",
             "details": [
               "Colocar 3 tripulación para capturar una guarida",
-              "Héroe (mejor dado + tripulación) avanza extra en la pista de misión"
+              "Héroe (mejor dado + tripulación) avanza extra en la pista de misión",
+              "Furthest along the track holds the Greatest Pirate Scourge VP card (bonus VP tile): +1 VP"
             ]
           },
           {
             "name": "Peces para Catan",
-            "vp": "+ misión",
+            "vp": "15 VP",
             "description": "Pescar y entregar peces al Consejo de Catan.",
             "details": [
               "Lanzar dado durante movimiento; banco de peces coincidente = captura",
@@ -2211,7 +2677,7 @@
           },
           {
             "name": "Especias para Catan",
-            "vp": "+ misión",
+            "vp": "15 VP",
             "description": "Entregar sacos de especias al Consejo.",
             "details": [
               "Descargar tripulación en granja de especias, cargar saco, entregar",
@@ -2230,7 +2696,226 @@
         ]
       },
       "reference": {
-        "tradingNote": "E&P uses a 3:1 bank rate with no ports (or 2 gold for any 1 resource, twice per turn) and adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
+        "buildingCosts": [
+          {
+            "id": "road",
+            "icon": "🛣️",
+            "name": "Road",
+            "vp": "0 VP",
+            "cost": [
+              {
+                "resource": "Lumber",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Brick",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              }
+            ],
+            "note": "Only on explored land. No Longest Road (Longest Route) card in E&P."
+          },
+          {
+            "id": "settlement",
+            "icon": "🏠",
+            "name": "Settlement",
+            "vp": "1 VP",
+            "cost": [
+              {
+                "resource": "Lumber",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Brick",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              },
+              {
+                "resource": "Wool",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Grain",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Build along your road, or place one free by landing a settler. Distance rule applies."
+          },
+          {
+            "id": "harbor-settlement",
+            "icon": "⚓",
+            "name": "Harbor Settlement",
+            "vp": "2 VP",
+            "cost": [
+              {
+                "resource": "Grain",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 2
+              },
+              {
+                "resource": "Ore",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 2
+              }
+            ],
+            "note": "Replaces one of your coastal settlements. Collects 1 resource. Max 4 per player."
+          },
+          {
+            "id": "ship",
+            "icon": "⛵",
+            "name": "Ship",
+            "vp": "0 VP",
+            "cost": [
+              {
+                "resource": "Lumber",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Wool",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              }
+            ],
+            "note": "Build next to your harbor settlement. 4 MP per turn. Max 2 per edge, 3 per player."
+          },
+          {
+            "id": "extra-ship-move",
+            "icon": "💨",
+            "name": "Extra Ship Move",
+            "vp": "0 VP",
+            "cost": [
+              {
+                "resource": "Wool",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              }
+            ],
+            "note": "+2 MP for one ship. Once per ship per turn."
+          },
+          {
+            "id": "settler",
+            "icon": "🧑‍🌾",
+            "name": "Settler",
+            "vp": "0 VP",
+            "cost": [
+              {
+                "resource": "Lumber",
+                "icon": "🌲",
+                "image": "src/assets/images/common/lumber.png",
+                "qty": 1
+              },
+              {
+                "resource": "Brick",
+                "icon": "🧱",
+                "image": "src/assets/images/common/brick.png",
+                "qty": 1
+              },
+              {
+                "resource": "Wool",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Grain",
+                "icon": "🌾",
+                "image": "src/assets/images/common/grain.png",
+                "qty": 1
+              }
+            ],
+            "note": "Placed in a harbor settlement or adjacent ship. Land it to place a free settlement."
+          },
+          {
+            "id": "crew",
+            "icon": "🧑‍✈️",
+            "name": "Crew",
+            "vp": "0 VP",
+            "cost": [
+              {
+                "resource": "Wool",
+                "icon": "🐑",
+                "image": "src/assets/images/common/wool.png",
+                "qty": 1
+              },
+              {
+                "resource": "Ore",
+                "icon": "⛏️",
+                "image": "src/assets/images/common/ore.png",
+                "qty": 1
+              }
+            ],
+            "note": "Captures pirate lairs and works spice hexes."
+          }
+        ],
+        "trading": [
+          {
+            "icon": "🏦",
+            "title": "Supply",
+            "ratio": "3:1",
+            "detail": "3 identical resources → 1 other resource or 1 gold, during your trade & build phase (Action phase). No ports in E&P."
+          },
+          {
+            "icon": "🪙",
+            "title": "Gold Coin",
+            "ratio": "2 gold : 1 res",
+            "detail": "Spend 2 gold for any 1 resource. Max twice per turn."
+          },
+          {
+            "icon": "🤝",
+            "title": "Player Trade",
+            "ratio": "any:any",
+            "detail": "Trade resources and gold with other players during your trade & build phase."
+          }
+        ],
+        "tradingNote": "E&P uses a 3:1 bank rate with no ports (or 2 gold for any 1 resource, twice per turn) and adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible.",
+        "turnFlow": [
+          {
+            "icon": "🎲",
+            "title": "Roll & produce",
+            "detail": "Settlements and harbor settlements collect 1 resource each; captured gold fields pay 2 gold per building. Got nothing (not on a 7)? Take 1 gold."
+          },
+          {
+            "icon": "🏴‍☠️",
+            "title": "On a 7: pirate ship",
+            "detail": "Players with more than 7 resource cards discard half. Place or move your pirate ship, then steal 1 random resource from one player with a ship on that hex (no pirate in Land Ho!)."
+          },
+          {
+            "icon": "🤝",
+            "title": "Trade",
+            "detail": "With players (resources and gold), the supply at 3:1 (for a resource or 1 gold), or 2 gold → 1 resource (twice per turn)."
+          },
+          {
+            "icon": "🔨",
+            "title": "Build",
+            "detail": "Roads, settlements, harbor settlements, ships, settlers and crews, mixed freely with trading. No cities, no development cards."
+          },
+          {
+            "icon": "⛵",
+            "title": "Move ships",
+            "detail": "4 MP each (+2 for 1 wool). Explore, load/unload, pay tribute, chase the pirate, catch fish, land settlers and crews, deliver to the Council. No trading or building now, except settling with a settler."
+          },
+          {
+            "icon": "➡️",
+            "title": "Resolve & pass",
+            "detail": "Resolve any pirate lair captured this turn, then pass the dice. Reach the scenario's VP target (17 in the full game) on your turn and you win at once."
+          }
+        ]
       },
       "strategy": {
         "beginner": [
