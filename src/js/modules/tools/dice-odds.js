@@ -33,7 +33,6 @@ export function mount(root, ui = {}) {
     const btn = document.createElement("button");
     btn.type = "button";
     btn.className = "dice-num-btn";
-    btn.dataset.num = String(n);
     btn.setAttribute(
       "data-tooltip",
       `${WAYS[n]}/36 (${((WAYS[n] / 36) * 100).toFixed(2)}%)`,

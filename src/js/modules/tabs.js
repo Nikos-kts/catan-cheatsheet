@@ -1,7 +1,7 @@
 // Tab controller: click/keyboard switching (roving tabindex), sticky-tab
 // shadow toggle, and persistence of the active tab.
 
-import { state, notify } from "./state.js";
+import { state } from "./state.js";
 import { VALID_TABS, STORAGE_KEYS } from "./constants.js";
 import { setString } from "./storage.js";
 
@@ -52,7 +52,6 @@ export function initTabs(onChange) {
       b.setAttribute("aria-selected", active ? "true" : "false");
       b.tabIndex = active ? 0 : -1;
     });
-    notify("tab");
     if (typeof onChange === "function") onChange();
   }
 

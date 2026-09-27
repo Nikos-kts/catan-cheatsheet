@@ -16,7 +16,6 @@
   --ocean: #2980b9;
   --ore: #7f8c8d;
   --wheat: #f39c12;
-  --wool: #2ecc71;
   --wood: #8b5e3c;
   --text: #2c2c2c;
   --text-lt: #555;
@@ -400,10 +399,6 @@ main {
   border-top-color: var(--forest);
 }
 
-.card.progress {
-  border-top-color: var(--wheat);
-}
-
 .card.progress-trade {
   border-top-color: #d4a017;
 }
@@ -512,10 +507,6 @@ details[open] > .subcategory-summary {
   white-space: nowrap;
 }
 
-.subcategory-collapsible > .card-grid {
-  padding: 1rem;
-}
-
 /* ── Placeholder Thumbnail ── */
 .card-thumbnail-placeholder {
   background: linear-gradient(135deg, #e8dcc8 0%, #d4c9b0 100%);
@@ -587,22 +578,6 @@ details[open] > .subcategory-summary {
 }
 
 /* ── Gameplay Tab ── */
-.gameplay-section {
-  margin-bottom: 2rem;
-}
-
-.gameplay-section h2 {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--text);
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.4rem;
-  border-bottom: 3px solid var(--sand-dk);
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
 .rule-list {
   list-style: none;
   padding: 0;
@@ -756,7 +731,7 @@ footer {
 }
 
 .footer-sponsor a {
-  color: var(--accent, #c0392b);
+  color: #c0392b;
   text-decoration: none;
   font-weight: 600;
   display: inline-flex;
@@ -868,30 +843,6 @@ footer {
 [data-tooltip]:focus-visible::after {
   opacity: 1;
   transform: translateX(-50%) scale(1);
-}
-
-/* ── Generic image placeholder (used by modules/image.js) ── */
-.img-placeholder {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.35rem;
-  background: linear-gradient(135deg, #e8dcc8 0%, #d4c9b0 100%);
-  color: var(--text-lt);
-  font-size: 0.75rem;
-  min-height: 60px;
-  padding: 0.5rem;
-  border-radius: 6px;
-  text-align: center;
-}
-.img-placeholder-icon {
-  font-size: 1.8rem;
-  opacity: 0.55;
-}
-.img-placeholder-label {
-  opacity: 0.8;
-  font-style: italic;
 }
 
 /* ── Reference tab ── */

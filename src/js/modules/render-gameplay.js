@@ -48,39 +48,13 @@ export function renderGameplay(game) {
   }
 
   if (gp.setup && gp.setup.length) {
-    renderRuleSection(
-      main,
-      state.data.ui.titleSetup || "Setup",
-      "⚙️",
-      gp.setup,
-      { collapsible: true },
-    );
+    renderRuleSection(main, state.data.ui.titleSetup || "Setup", "⚙️", gp.setup);
   }
   if (gp.turnOverview && gp.turnOverview.length) {
-    renderRuleSection(
-      main,
-      state.data.ui.titleTurn || "Turn Overview",
-      "🔄",
-      gp.turnOverview,
-      { collapsible: true },
-    );
+    renderRuleSection(main, state.data.ui.titleTurn || "Turn Overview", "🔄", gp.turnOverview);
   }
   if (gp.keyRules && gp.keyRules.length) {
-    renderRuleSection(
-      main,
-      state.data.ui.titleRules || "Key Rules",
-      "📜",
-      gp.keyRules,
-      { collapsible: true },
-    );
-  }
-  if (gp.specialRules && gp.specialRules.length) {
-    renderRuleSection(
-      main,
-      state.data.ui.titleSpecial || "Special Rules",
-      "⚡",
-      gp.specialRules,
-    );
+    renderRuleSection(main, state.data.ui.titleRules || "Key Rules", "📜", gp.keyRules);
   }
 
   if (gp.scenarios && gp.scenarios.length) {
@@ -142,24 +116,7 @@ export function renderGameplay(game) {
   initAccordions();
 }
 
-function renderRuleSection(parent, title, icon, rules, options = {}) {
-  const collapsible = options.collapsible === true;
-
-  if (!collapsible) {
-    const sec = document.createElement("div");
-    sec.className = "gameplay-section";
-    const h = document.createElement("h2");
-    h.innerHTML = `${icon} ${title}`;
-    sec.appendChild(h);
-
-    const ul = document.createElement("ul");
-    ul.className = "rule-list";
-    rules.forEach((rule) => ul.appendChild(buildRuleItem(rule)));
-    sec.appendChild(ul);
-    parent.appendChild(sec);
-    return;
-  }
-
+function renderRuleSection(parent, title, icon, rules) {
   const details = document.createElement("details");
   details.className = "gameplay-collapsible subcategory-collapsible";
   details.open = false;

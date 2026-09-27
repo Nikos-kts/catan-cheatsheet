@@ -9,9 +9,9 @@ A lightweight, browser-based reference for Catan card explanations — supports 
 ## Features
 
 - **Games / Expansions**: Base Catan, Seafarers, Cities & Knights, Traders & Barbarians, Explorers & Pirates
-- **Languages**: English, German (Deutsch), Spanish (Español), French (Français), Greek (Ελληνικά), Dutch (Nederlands), Portuguese (Português)
-- **Five tabs**: 🃏 Cards, 🎲 Gameplay, 📋 Reference (building costs / dice probabilities / trading ratios / turn flow), 🧠 Strategy (beginner → advanced tips with per-expansion overlays), 🧮 Tools (dice odds calculator, starting-spot helper, robber 7-timer)
-- Selections are remembered across sessions via `localStorage` (`catan-lang`, `catan-game`, `catan-tab`, `catan-strategy-extras`)
+- **Languages**: English, Greek (Ελληνικά), Spanish (Español), Dutch (Nederlands), Portuguese (Português, European)
+- **Five tabs**: 🃏 Cards, 🎲 Gameplay, 📋 Reference (building costs / dice probabilities / trading ratios / turn flow), 🧠 Strategy (beginner → advanced tips per game), 🧮 Tools (dice odds calculator, starting-spot helper, robber 7-timer)
+- Selections are remembered across sessions via `localStorage` (`catan-lang`, `catan-game`, `catan-tab`)
 - Pure HTML + CSS + vanilla JavaScript ES modules — no build step needed
 - Accessible: `role="tablist"` tabs with arrow-key navigation, `aria-live` content region, `prefers-reduced-motion`-aware animations
 
@@ -25,14 +25,13 @@ src/
 ├── js/
 │   ├── app.js          # Thin bootstrapper wiring modules together
 │   └── modules/        # ES modules (split per responsibility)
-│       ├── state.js            # Central state + pub/sub
+│       ├── state.js            # Central app state
 │       ├── constants.js        # Game maps, theme, localStorage keys
 │       ├── storage.js          # localStorage wrapper
 │       ├── data-loader.js      # Fetch + EN fallback for missing keys
 │       ├── theme.js            # Per-game theming / banner
 │       ├── tabs.js             # Tab switching + sticky tabs + a11y
 │       ├── accordions.js       # Single-open accordion animation
-│       ├── image.js            # buildImage() placeholder helper
 │       ├── render-cards.js     # Cards tab
 │       ├── render-gameplay.js  # Gameplay tab
 │       ├── render-reference.js # Reference tab (📋)
@@ -44,12 +43,10 @@ src/
 │           └── robber-timer.js # 7-frequency tracker
 ├── data/
 │   ├── en.json         # English (canonical)
-│   ├── de.json         # German
-│   ├── es.json         # Spanish
-│   ├── fr.json         # French
 │   ├── el.json         # Greek
+│   ├── es.json         # Spanish
 │   ├── nl.json         # Dutch
-│   └── pt.json         # Portuguese
+│   └── pt.json         # Portuguese (European)
 └── assets/
     └── images/
         ├── basic/                    # Base Catan images
@@ -123,25 +120,10 @@ Each expansion has a dedicated folder under `src/assets/images/`. Follow this wo
    ```html
    <option value="it">🇮🇹 Italiano</option>
    ```
+5. Add the code to `SUPPORTED_LANGS` in `src/js/modules/constants.js`.
 
-### Syncing and Automation
-
-A helper script was added at `scripts/sync-translations.js` to keep other language files in sync with `en.json` and (optionally) translate missing strings using a LibreTranslate-style endpoint.
-
-Quick usage (from project root):
-
-```bash
-# install runtime dependency used by the script (only needed once)
-npm install node-fetch@2
-
-# structural sync only (writes changes to files)
-node scripts/sync-translations.js
-
-# sync + translate strings (requires a translation service URL and key)
-TRANSLATE=true NODE_TRANSLATE_URL=<url> NODE_TRANSLATE_KEY=<key> node scripts/sync-translations.js
-```
-
-The script merges missing keys from `en.json` into each target language file, aligns array entries by `id`, and preserves non-translatable identifiers (ids, types, image paths). It also prints a warning for any game that is missing an expected top-level block (`sections`, `gameplay`, `reference`, or `strategy`). Use the `TRANSLATE` mode only with a translation provider you control.
+Every language file mirrors the structure of `en.json` (same keys, same array
+items, same `id`s); only the human-readable text differs.
 
 > **Missing translations fall back gracefully:** at runtime, the app merges
 > any keys still missing from a language file with the English values loaded
@@ -177,9 +159,7 @@ Strategy tips live under `games.<id>.strategy` with three level buckets:
 ```
 
 Each tip needs `id`, `title`, and `body`; `icon` and `tags` are optional.
-Tips from other expansions can be overlaid in the UI via the "Also show
-strategy from:" checkboxes on the Strategy tab (persisted as
-`catan-strategy-extras` in `localStorage`).
+Tags are shown as `#hashtags`, so translate them in each language file.
 
 ## Adding a Tool
 
@@ -210,7 +190,7 @@ Add a new key under "games" in each language's JSON file following the existing 
 
 ## Validation
 
-After editing or syncing translations, validate JSON quickly:
+After editing the data files, validate JSON quickly:
 
 ```bash
 # using jq to check JSON validity

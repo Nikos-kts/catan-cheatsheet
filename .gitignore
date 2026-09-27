@@ -11,9 +11,6 @@ Desktop.ini
 # Reference PDFs (large files, not needed in repo)
 docs/
 
-# Node
-node_modules/
-npm-debug.log*
 
 # VS Code
 .vscode/*
@@ -29,3 +26,6 @@ npm-debug.log*
 
 # Claude Code worktrees (parallel agent workspaces)
 .claude/worktrees/
+
+# Playwright MCP browser artifacts (screenshots, snapshots)
+.playwright-mcp/
