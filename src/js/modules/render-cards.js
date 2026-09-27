@@ -159,6 +159,7 @@ export function renderCards(game) {
 export function buildCard(card) {
   const el = document.createElement("div");
   el.className = `card ${card.type || ""}`;
+  if (card.id) el.dataset.cardId = card.id;
 
   if (card.image) {
     const wrap = document.createElement("div");

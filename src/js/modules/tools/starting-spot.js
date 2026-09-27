@@ -147,7 +147,7 @@ export function score(hexes) {
   return { total, pips, diversity, deserts, breakdown };
 }
 
-function getVerdict(total, ui) {
+export function getVerdict(total, ui) {
   if (total >= 12) return { cls: "verdict-great", label: ui.verdictGreat || "Excellent spot" };
   if (total >= 9) return { cls: "verdict-good", label: ui.verdictGood || "Strong spot" };
   if (total >= 6) return { cls: "verdict-ok", label: ui.verdictOk || "Decent spot" };

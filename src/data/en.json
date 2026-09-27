@@ -88,6 +88,75 @@
         "sevensObserved": "Sevens observed",
         "sevensExpected": "Sevens expected"
       }
+    },
+    "tabLearn": "Learn",
+    "learn": {
+      "heading": "Learn Catan",
+      "intro": "For new players and mixed-language tables: find any card by the name printed on it, learn the rules people get wrong, test yourself and practise your opening.",
+      "finder": {
+        "title": "Can't read your card?",
+        "hint": "Type the name printed on the card, building or scenario — in any of these languages:",
+        "placeholder": "Card, building or scenario name…",
+        "loading": "Loading all languages…",
+        "empty": "No match — try fewer letters or another spelling.",
+        "error": "Could not load the language files. Check your connection and try again.",
+        "matched": "Matched",
+        "open": "Open",
+        "namesLabel": "Name in every language",
+        "kind_card": "Card",
+        "kind_cost": "Building",
+        "kind_scenario": "Scenario"
+      },
+      "mistakes": {
+        "title": "Rules people get wrong",
+        "lead": "Even experienced tables get these wrong. Each fix comes from the official rulebook.",
+        "empty": "No common mistakes listed for this game yet.",
+        "myth": "Myth",
+        "rule": "Rule"
+      },
+      "quiz": {
+        "title": "Rules quiz",
+        "lead": "Eight quick questions on this game's rules, costs and dice odds.",
+        "start": "Start quiz",
+        "best": "Your best: {best}",
+        "progress": "Question {n} of {total}",
+        "correct": "Correct!",
+        "wrong": "Not quite.",
+        "next": "Next",
+        "finish": "See result",
+        "again": "Play again",
+        "perfect": "Perfect round — you could teach this game!",
+        "great": "Great job — just a couple to brush up on.",
+        "keepGoing": "Good start — read the rules above and try again.",
+        "supportText": "This cheat sheet is a free fan project. If it helps your table, you can support it:",
+        "supportLink": "☕ Donate via PayPal",
+        "true": "True",
+        "false": "False",
+        "and": "and",
+        "costQ": "{item}: what does it cost?",
+        "costExplain": "{item} costs {cost}.",
+        "diceMostQ": "Apart from 7, which numbers are rolled most often?",
+        "diceMostExplain": "6 and 8 can each be rolled 5 ways out of 36 — only 7 (6 ways) is more common.",
+        "sevenQ": "How often is a 7 rolled?",
+        "sevenExplain": "7 can be rolled 6 ways out of 36 — 1 roll in 6.",
+        "oneIn": "1 in {n}",
+        "pipsQ": "How many dots (pips) are printed on the {n} number disc?",
+        "diceExplain": "{n} can be rolled {ways} ways out of 36, so its disc shows {ways} dots."
+      },
+      "trainer": {
+        "title": "Placement trainer",
+        "intro": "A random board, set up exactly like the rulebook's Variable Setup. Tap any corner to see what a settlement there would produce.",
+        "newBoard": "New board",
+        "showBest": "Show best spots",
+        "hideBest": "Hide best spots",
+        "boardLabel": "Catan board",
+        "note": "Pips = the dots under each number: how many of the 36 dice combinations roll it. Harbors are not shown.",
+        "tapHint": "Tap a corner of the board to place a settlement.",
+        "tapSub": "You'll see its production, how it ranks among all 54 corners, and which corners the distance rule blocks.",
+        "rank": "#{rank} of {total}",
+        "summary": "{pips} pips · {kinds} resource types · score {score}",
+        "blockedNote": "Faded corners are blocked: no settlement may be built next to another (distance rule)."
+      }
     }
   },
   "games": {

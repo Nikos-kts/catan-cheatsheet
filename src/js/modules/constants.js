@@ -68,6 +68,7 @@ export const VALID_TABS = [
   "gameplay",
   "reference",
   "strategy",
+  "learn",
   "tools",
 ];
 
@@ -76,4 +77,8 @@ export const STORAGE_KEYS = {
   lang: "catan-lang",
   game: "catan-game",
   tab: "catan-tab",
+  quizBest: "catan-quiz-best",
 };
+
+// Donation link (same as the footer) for the "support this project" prompts.
+export const SUPPORT_URL = "https://www.paypal.com/donate/?hosted_button_id=VJVL67LPK7JTG";

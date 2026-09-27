@@ -5,6 +5,13 @@ import { state } from "./state.js";
 import { VALID_TABS, STORAGE_KEYS } from "./constants.js";
 import { setString } from "./storage.js";
 
+let selectTabImpl = null;
+
+/** Switch tabs programmatically (e.g. the card finder's "Open" button). */
+export function activateTab(tabId) {
+  if (selectTabImpl) selectTabImpl(tabId);
+}
+
 /**
  * @param {() => void} onChange Called (sync) after the tab changes; host
  *   should re-render the appropriate tab content.
@@ -54,6 +61,8 @@ export function initTabs(onChange) {
     });
     if (typeof onChange === "function") onChange();
   }
+
+  selectTabImpl = selectTab;
 
   // Expose for boot-time sync after restore-from-storage
   initTabs._syncActive = () => {

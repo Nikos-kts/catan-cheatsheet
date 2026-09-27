@@ -15,6 +15,7 @@ import { renderCards } from "./modules/render-cards.js";
 import { renderGameplay } from "./modules/render-gameplay.js";
 import { renderReference } from "./modules/render-reference.js";
 import { renderStrategy } from "./modules/render-strategy.js";
+import { renderLearn } from "./modules/render-learn.js";
 import { renderTools } from "./modules/render-tools.js";
 
 // ── Boot ────────────────────────────────────────────────────────────────────
@@ -97,6 +98,7 @@ function populateGameSelector() {
   const tabGameplay = document.getElementById("tab-gameplay");
   const tabReference = document.getElementById("tab-reference");
   const tabStrategy = document.getElementById("tab-strategy");
+  const tabLearn = document.getElementById("tab-learn");
   const tabTools = document.getElementById("tab-tools");
   if (tabCards) tabCards.textContent = `🃏 ${ui.tabCards || "Cards"}`;
   if (tabGameplay)
@@ -105,6 +107,7 @@ function populateGameSelector() {
     tabReference.textContent = `📋 ${ui.tabReference || "Reference"}`;
   if (tabStrategy)
     tabStrategy.textContent = `🧠 ${ui.tabStrategy || "Strategy"}`;
+  if (tabLearn) tabLearn.textContent = `🎓 ${ui.tabLearn || "Learn"}`;
   if (tabTools) tabTools.textContent = `🧮 ${ui.tabTools || "Tools"}`;
 }
 
@@ -130,6 +133,9 @@ function renderActiveTab() {
       break;
     case "strategy":
       renderStrategy(game);
+      break;
+    case "learn":
+      renderLearn(game);
       break;
     case "tools":
       renderTools(game);
