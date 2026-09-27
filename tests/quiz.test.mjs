@@ -1,6 +1,6 @@
 import { test } from "node:test";
 import assert from "node:assert/strict";
-import { buildQuiz, formatCost } from "../src/js/modules/learn/quiz.js";
+import { buildQuiz, formatCost, parseBest } from "../src/js/modules/learn/quiz.js";
 import { createRng } from "../src/js/modules/learn/random.js";
 
 const UI = {
@@ -88,4 +88,23 @@ test("the same seed produces the same round", () => {
 
 test("formatCost joins quantities and resources", () => {
   assert.equal(formatCost(cost(["Grain", 2], ["Ore", 3])), "2 Grain + 3 Ore");
+});
+
+test("every dice question type shows up across rounds", () => {
+  const texts = new Set();
+  for (let seed = 1; seed <= 40; seed++) {
+    buildQuiz({ game: GAME, baseGame: BASE, ui: UI, rng: createRng(seed), size: 8 })
+      .filter((q) => q.kind === "dice")
+      .forEach((q) => texts.add(q.text.includes("dots") ? "pips" : q.text));
+  }
+  assert.ok(texts.has("pips"));
+  assert.ok(texts.has(UI.sevenQ));
+  assert.ok(texts.has(UI.diceMostQ));
+});
+
+test("parseBest reads 'score/total' and rejects anything else", () => {
+  assert.deepEqual(parseBest("6/8"), { score: 6, total: 8 });
+  assert.equal(parseBest(null), null);
+  assert.equal(parseBest("garbage"), null);
+  assert.equal(parseBest("9/8"), null);
 });

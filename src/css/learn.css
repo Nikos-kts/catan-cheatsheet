@@ -1,5 +1,10 @@
 /* ── Learn tab ──────────────────────────────────────────────────────────── */
-/* Uses the palette from styles.css; --theme-accent follows the selected game. */
+/* Uses the palette from styles.css; --theme-accent follows the selected game.
+   --learn-accent is a darker shade for text and filled buttons (WCAG AA on white). */
+
+:root {
+  --learn-accent: color-mix(in srgb, var(--theme-accent) 75%, #000);
+}
 
 .learn-hero {
   position: relative;
@@ -11,7 +16,7 @@
   background:
     radial-gradient(circle at 88% 12%, rgba(255, 255, 255, 0.22) 0 18%, transparent 19%),
     radial-gradient(circle at 96% 70%, rgba(255, 255, 255, 0.12) 0 12%, transparent 13%),
-    linear-gradient(135deg, var(--theme-accent) 0%, #2c2c2c 160%);
+    linear-gradient(135deg, var(--learn-accent) 0%, #2c2c2c 160%);
   box-shadow: var(--shadow);
 }
 
@@ -112,6 +117,7 @@
 
 .finder-result {
   --result-accent: var(--theme-accent);
+  --result-accent-dk: color-mix(in srgb, var(--result-accent) 75%, #000);
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 0.9rem;
@@ -157,7 +163,7 @@
 
 .finder-game {
   background: color-mix(in srgb, var(--result-accent) 14%, #fff);
-  color: var(--result-accent);
+  color: var(--result-accent-dk);
   font-weight: 700;
 }
 
@@ -200,7 +206,7 @@
   font-size: 0.85rem;
   font-weight: 700;
   color: #fff;
-  background: var(--result-accent);
+  background: var(--result-accent-dk);
   border: none;
   border-radius: 999px;
   padding: 0.45rem 0.9rem;
@@ -213,11 +219,11 @@
   filter: brightness(1.1);
 }
 
-.card.card-flash {
-  animation: card-flash 2.2s ease-out;
+.learn-flash {
+  animation: learn-flash 2.2s ease-out;
 }
 
-@keyframes card-flash {
+@keyframes learn-flash {
   0%, 35% {
     box-shadow: 0 0 0 4px var(--theme-accent), 0 8px 24px rgba(0, 0, 0, 0.25);
     transform: scale(1.02);
@@ -423,7 +429,7 @@
   margin-top: 0.9rem;
   padding: 0.7rem 1.4rem;
   border: none;
-  background: var(--theme-accent);
+  background: var(--learn-accent);
   color: #fff;
   font-weight: 700;
 }
@@ -471,7 +477,7 @@
 }
 
 .quiz-support a {
-  color: var(--theme-accent);
+  color: var(--learn-accent);
   font-weight: 700;
 }
 
@@ -524,6 +530,7 @@
   transition: opacity 0.2s ease;
 }
 
+.hex-water .hex-shape { fill: #2e86c1; }
 .hex-lumber .hex-shape { fill: #2e7d32; }
 .hex-wool .hex-shape { fill: #9ccc65; }
 .hex-grain .hex-shape { fill: #f2c94c; }
@@ -586,6 +593,12 @@
   fill: #fff;
   stroke: var(--theme-accent);
   stroke-width: 2.5;
+}
+
+.corner:focus-visible .corner-hit {
+  fill: rgba(255, 255, 255, 0.35);
+  stroke: #1b1b1b;
+  stroke-width: 3;
 }
 
 .corner.is-selected .corner-dot {
@@ -659,6 +672,12 @@
   padding: 0.2rem 0.6rem;
   border-radius: 999px;
 }
+
+/* Darker than the Tools-tab pills so white text passes WCAG AA. */
+.trainer-verdict.verdict-great { background: #196f3d; }
+.trainer-verdict.verdict-good { background: #1e8449; }
+.trainer-verdict.verdict-ok { background: #9a5b00; }
+.trainer-verdict.verdict-weak { background: #a04000; }
 
 .trainer-hexes {
   list-style: none;
@@ -738,11 +757,16 @@
 @media (prefers-reduced-motion: reduce) {
   .finder-result,
   .quiz-score,
-  .card.card-flash,
   .learn-chip,
   .quiz-option,
-  .quiz-primary {
+  .quiz-primary,
+  .quiz-progress-bar {
     animation: none;
     transition: none;
+  }
+  .learn-flash {
+    animation: none;
+    outline: 3px solid var(--learn-accent);
+    outline-offset: 3px;
   }
 }

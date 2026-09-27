@@ -105,7 +105,8 @@
         "namesLabel": "Name in every language",
         "kind_card": "Card",
         "kind_cost": "Building",
-        "kind_scenario": "Scenario"
+        "kind_scenario": "Scenario",
+        "results": "{n} results"
       },
       "mistakes": {
         "title": "Rules people get wrong",
@@ -155,7 +156,10 @@
         "tapSub": "You'll see its production, how it ranks among all 54 corners, and which corners the distance rule blocks.",
         "rank": "#{rank} of {total}",
         "summary": "{pips} pips · {kinds} resource types · score {score}",
-        "blockedNote": "Faded corners are blocked: no settlement may be built next to another (distance rule)."
+        "blockedNote": "Faded corners are blocked: no settlement may be built next to another (distance rule).",
+        "sea": "Sea",
+        "bestLabel": "best spot {n}",
+        "blockedLabel": "blocked by the distance rule"
       }
     }
   },

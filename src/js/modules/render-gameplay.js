@@ -70,9 +70,10 @@ export function renderGameplay(game) {
     const grid = document.createElement("div");
     grid.className = "variant-grid";
 
-    gp.scenarios.forEach((s) => {
+    gp.scenarios.forEach((s, i) => {
       const card = document.createElement("div");
       card.className = "variant-card";
+      card.dataset.scenarioIndex = String(i);
 
       const nameRow = document.createElement("div");
       nameRow.className = "variant-name";

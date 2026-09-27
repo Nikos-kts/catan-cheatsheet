@@ -12,6 +12,11 @@ async function fetchJSON(url) {
   return res.json();
 }
 
+/** One language file exactly as stored (no English fallback merged in). */
+export function loadLanguageFile(lang) {
+  return fetchJSON(`${DATA_PATH}${lang}.json`);
+}
+
 function isObject(v) {
   return v && typeof v === "object" && !Array.isArray(v);
 }

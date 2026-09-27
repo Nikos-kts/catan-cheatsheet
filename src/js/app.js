@@ -123,6 +123,8 @@ function renderActiveTab() {
   if (!game) return;
 
   updateGameBanner(state.game);
+  // The Learn tab manages its own live regions; announcing the whole tab is noise.
+  document.getElementById("content")?.setAttribute("aria-live", state.tab === "learn" ? "off" : "polite");
 
   switch (state.tab) {
     case "gameplay":

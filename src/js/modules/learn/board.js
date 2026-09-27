@@ -127,11 +127,16 @@ export function scoreCorner(hexes) {
   return score(hexes.map((h) => ({ res: h.res, num: h.num == null ? "-" : String(h.num) })));
 }
 
-/** Every corner with its production, best first. */
+/**
+ * Every corner with its production, best first. Coastal corners list the sea hexes
+ * they touch as `water`, which scores like desert/water in the Tools-tab helper (−2).
+ */
 export function rankCorners(board) {
   return buildCorners(board)
     .map((c) => {
-      const hexes = c.hexes.map((i) => board.hexes[i]);
+      const land = c.hexes.map((i) => board.hexes[i]);
+      const sea = Array.from({ length: 3 - land.length }, () => ({ res: "water", num: null }));
+      const hexes = [...land, ...sea];
       return { id: c.id, x: c.x, y: c.y, neighbors: c.neighbors, hexes, score: scoreCorner(hexes) };
     })
     .sort((a, b) => b.score.total - a.score.total || b.score.pips - a.score.pips || a.id - b.id);

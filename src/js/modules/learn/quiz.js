@@ -72,11 +72,19 @@ function diceQuestions(t, rng) {
   const seven = shuffle([6, 12, 36, 3].map((n) => fill(t.oneIn, { n })), rng);
   const n = pick([2, 3, 4, 5, 6, 8, 9, 10, 11, 12], rng);
   const pips = ["1", "2", "3", "4", "5"];
-  return [
+  return shuffle([
     { type: "mc", kind: "dice", text: t.diceMostQ, options: most, answer: most.indexOf(pair(6, 8)), explain: t.diceMostExplain },
     { type: "mc", kind: "dice", text: t.sevenQ, options: seven, answer: seven.indexOf(fill(t.oneIn, { n: 6 })), explain: t.sevenExplain },
     { type: "mc", kind: "dice", text: fill(t.pipsQ, { n }), options: pips, answer: WAYS[n] - 1, explain: fill(t.diceExplain, { n, ways: WAYS[n] }) },
-  ];
+  ], rng);
+}
+
+/** Parse a stored best score ("6/8"); anything malformed yields null. */
+export function parseBest(value) {
+  const m = /^(\d+)\/(\d+)$/.exec(String(value ?? ""));
+  if (!m) return null;
+  const [score, total] = [Number(m[1]), Number(m[2])];
+  return total > 0 && score <= total ? { score, total } : null;
 }
 
 /**

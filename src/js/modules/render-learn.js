@@ -27,7 +27,7 @@ export function renderLearn(game) {
     el.className = `learn-section learn-${section.id}`;
     el.id = `learn-${section.id}`;
 
-    const h = document.createElement("h2");
+    const h = document.createElement("h3");
     h.className = "learn-section-title";
     h.textContent = `${section.icon} ${sectionUi.title || section.title}`;
     el.appendChild(h);
@@ -45,7 +45,7 @@ function buildHero(ui) {
   const hero = document.createElement("div");
   hero.className = "learn-hero";
 
-  const title = document.createElement("h1");
+  const title = document.createElement("h2");
   title.className = "learn-hero-title";
   title.textContent = `🎓 ${ui.heading || "Learn Catan"}`;
   hero.appendChild(title);

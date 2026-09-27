@@ -143,6 +143,7 @@ function renderBuildingCosts(items) {
   items.forEach((item) => {
     const card = document.createElement("div");
     card.className = "reference-card";
+    if (item.id) card.dataset.refId = item.id;
 
     const head = document.createElement("div");
     head.className = "reference-card-head";

@@ -4,12 +4,13 @@
 import { state } from "../state.js";
 import { STORAGE_KEYS, SUPPORT_URL } from "../constants.js";
 import { getString, setString } from "../storage.js";
-import { buildQuiz } from "./quiz.js";
+import { buildQuiz, parseBest } from "./quiz.js";
 import { createRng } from "./random.js";
 
 const ROUND_SIZE = 8;
 
-const fill = (template, vars) => String(template).replace(/\{(\w+)\}/g, (_, k) => (k in vars ? vars[k] : ""));
+const fill = (template, vars) => String(template).replace(/\{(\w+)\}/g, (_, k) => String(vars[k] ?? ""));
+let questionSeq = 0;
 
 export function mount(root, { game, gameId, ui }) {
   const bestKey = `${STORAGE_KEYS.quizBest}-${gameId}`;
@@ -30,12 +31,17 @@ export function mount(root, { game, gameId, ui }) {
   showIntro(card, ui, bestKey, start);
 }
 
+function bestText(ui, bestKey) {
+  const best = parseBest(getString(bestKey));
+  return best ? fill(ui.best || "Your best: {best}", { best: `${best.score}/${best.total}` }) : "";
+}
+
 function showIntro(card, ui, bestKey, start) {
-  const best = getString(bestKey);
   card.replaceChildren(
     node("p", "quiz-lead", ui.lead || "Eight quick questions on this game's rules, costs and dice odds."),
   );
-  if (best) card.appendChild(node("p", "quiz-best", fill(ui.best || "Your best: {best}", { best })));
+  const best = bestText(ui, bestKey);
+  if (best) card.appendChild(node("p", "quiz-best", best));
   card.appendChild(button("quiz-primary", ui.start || "Start quiz", start));
 }
 
@@ -48,7 +54,10 @@ function showQuestion(card, questions, index, score, ui, bestKey, restart) {
 
   const counter = node("p", "quiz-counter", fill(ui.progress || "Question {n} of {total}", { n: index + 1, total: questions.length }));
   const prompt = node("p", "quiz-question", q.text);
+  prompt.id = `quiz-q-${(questionSeq += 1)}`;
   const options = node("div", `quiz-options${q.type === "tf" ? " is-tf" : ""}`);
+  options.setAttribute("role", "group");
+  options.setAttribute("aria-labelledby", prompt.id);
   const feedback = node("div", "quiz-feedback");
   feedback.setAttribute("aria-live", "polite");
 
@@ -83,8 +92,8 @@ function showQuestion(card, questions, index, score, ui, bestKey, restart) {
 }
 
 function showResult(card, score, total, ui, bestKey, restart) {
-  const previous = Number(getString(bestKey)?.split("/")[0] || 0);
-  if (score >= previous) setString(bestKey, `${score}/${total}`);
+  const previous = parseBest(getString(bestKey));
+  if (!previous || score / total >= previous.score / previous.total) setString(bestKey, `${score}/${total}`);
 
   const ring = node("div", "quiz-score");
   ring.style.setProperty("--pct", `${Math.round((score / total) * 100)}%`);
@@ -105,13 +114,12 @@ function showResult(card, score, total, ui, bestKey, restart) {
   link.textContent = ui.supportLink || "☕ Donate via PayPal";
   support.appendChild(link);
 
-  card.replaceChildren(
-    ring,
-    node("p", "quiz-message", message),
-    node("p", "quiz-best", fill(ui.best || "Your best: {best}", { best: getString(bestKey) })),
-    button("quiz-primary", ui.again || "Play again", restart),
-    support,
-  );
+  const again = button("quiz-primary", ui.again || "Play again", restart);
+  card.replaceChildren(ring, node("p", "quiz-message", message));
+  const best = bestText(ui, bestKey);
+  if (best) card.appendChild(node("p", "quiz-best", best));
+  card.append(again, support);
+  again.focus({ preventScroll: true });
 }
 
 function node(tag, className, value) {

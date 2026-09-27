@@ -72,3 +72,36 @@ test("works on the real data files: a Greek card name finds the English card", (
   assert.equal(hit.entry.id, "knight");
   assert.equal(hit.entry.names.en, real.en.games.base.sections.flatMap((s) => s.cards || []).find((c) => c.id === "knight").name);
 });
+
+const multiGame = {
+  en: { games: {
+    base: { reference: { buildingCosts: [{ id: "road", name: "Road" }] } },
+    "explorers-pirates": {
+      sections: [{ id: "m", cards: [{ id: "council", name: "Council of Catan" }, { id: "wonder", name: "Wonder" }] }],
+      reference: { buildingCosts: [{ id: "road", name: "Road" }] },
+    },
+  } },
+  nl: { games: {
+    base: { reference: { buildingCosts: [{ id: "road", name: "Straat" }] } },
+    "explorers-pirates": {
+      sections: [{ id: "m", cards: [{ id: "council", name: "Raad van Catan" }, { id: "wonder", name: "Wonder" }] }],
+      reference: { buildingCosts: [{ id: "road", name: "Straat" }] },
+    },
+  } },
+};
+
+test("a building shared by several games resolves to the reader's selected game", () => {
+  const hits = search(buildIndex(multiGame), "road", { preferGame: "explorers-pirates" });
+  assert.equal(hits[0].entry.game, "explorers-pirates");
+  assert.equal(hits.filter((h) => h.entry.kind === "cost").length, 1);
+});
+
+test("fuzzy matches are dropped when there are real matches", () => {
+  const hits = search(buildIndex(multiGame), "road");
+  assert.ok(!hits.some((h) => h.entry.id === "council"), "Raad ≈ road must not show up");
+});
+
+test("when several languages match equally, the reader's language wins", () => {
+  const [hit] = search(buildIndex(multiGame), "Wonder", { preferLang: "nl" });
+  assert.equal(hit.lang, "nl");
+});

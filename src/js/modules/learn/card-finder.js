@@ -74,20 +74,31 @@ function termScore(q, term) {
   return distance <= maxDistance ? SCORE.fuzzy - distance * 5 : 0;
 }
 
-/** Best matches first: [{ entry, score, lang }] where `lang` is the language that matched. */
-export function search(index, query, { limit = 8 } = {}) {
+/**
+ * Best matches first: [{ entry, score, lang }] where `lang` is the language that matched.
+ * `preferGame` wins ties (and duplicate buildings); `preferLang` wins equal-scoring languages.
+ * Typo-tolerant matches are only returned when nothing matches directly.
+ */
+export function search(index, query, { limit = 8, preferGame = null, preferLang = null } = {}) {
   const q = normalize(query);
   if (q.length < MIN_QUERY) return [];
-  const hits = [];
+  let hits = [];
   index.forEach((entry) => {
     let best = { score: 0, lang: null };
     entry.terms.forEach(({ lang, norm }) => {
       const s = termScore(q, norm);
-      if (s > best.score) best = { score: s, lang };
+      if (s > best.score || (s === best.score && s > 0 && lang === preferLang)) best = { score: s, lang };
     });
     if (best.score > 0) hits.push({ entry, ...best });
   });
-  hits.sort((a, b) => b.score - a.score || (a.entry.names.en || "").localeCompare(b.entry.names.en || ""));
+  if (hits.some((h) => h.score > SCORE.fuzzy)) hits = hits.filter((h) => h.score > SCORE.fuzzy);
+  const preferred = (hit) => (hit.entry.game === preferGame ? 0 : 1);
+  hits.sort(
+    (a, b) =>
+      b.score - a.score ||
+      preferred(a) - preferred(b) ||
+      (a.entry.names.en || "").localeCompare(b.entry.names.en || ""),
+  );
 
   // The same building (e.g. "Road") appears in several games — keep the first one only.
   const seenCosts = new Set();

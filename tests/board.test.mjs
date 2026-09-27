@@ -83,3 +83,12 @@ test("best spots respect the distance rule", () => {
     if (a.id !== b.id) assert.ok(!corners[a.id].neighbors.includes(b.id));
   }));
 });
+
+test("coastal corners count missing sea hexes like the Tools-tab helper (−2 each)", () => {
+  const ranked = rankCorners(generateBoard(createRng(13)));
+  ranked.forEach((c) => assert.equal(c.hexes.length, 3, "every corner lists 3 hexes (land or sea)"));
+  const coast = ranked.find((c) => c.hexes.filter((h) => h.res === "water").length === 2 && c.hexes.some((h) => h.num));
+  const land = coast.hexes.find((h) => h.res !== "water");
+  assert.equal(coast.score.total, coast.score.pips - 4);
+  assert.ok(land.num);
+});

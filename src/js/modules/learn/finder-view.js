@@ -1,22 +1,24 @@
 // Card finder UI: type the name printed on a card (in any supported language) and
 // see it explained in the reader's language, with its name in every language.
 
-import { SUPPORTED_LANGS, GAME_IMAGE, GAME_THEME } from "../constants.js";
+import { SUPPORTED_LANGS, GAME_IMAGE, GAME_THEME, STORAGE_KEYS } from "../constants.js";
 import { state } from "../state.js";
-import { loadData } from "../data-loader.js";
+import { loadLanguageFile } from "../data-loader.js";
 import { activateTab } from "../tabs.js";
+import { setString } from "../storage.js";
 import { buildIndex, search } from "./card-finder.js";
 
 const FLAGS = { en: "🇬🇧", el: "🇬🇷", es: "🇪🇸", nl: "🇳🇱", pt: "🇵🇹" };
 const KIND_TAB = { card: "cards", cost: "reference", scenario: "gameplay" };
 const DEBOUNCE_MS = 120;
 const FLASH_MS = 2200;
+const ACCORDION_MS = 320; // accordions.js animates max-height over 300ms
 
 let indexPromise = null; // built once per page load, shared by every mount
 
 function loadIndex() {
   if (!indexPromise) {
-    indexPromise = Promise.all(SUPPORTED_LANGS.map((lang) => loadData(lang).then((data) => [lang, data])))
+    indexPromise = Promise.all(SUPPORTED_LANGS.map((lang) => loadLanguageFile(lang).then((data) => [lang, data])))
       .then((pairs) => buildIndex(Object.fromEntries(pairs)))
       .catch((err) => {
         indexPromise = null; // allow a retry on the next keystroke
@@ -52,8 +54,10 @@ export function mount(root, { ui }) {
     try {
       const index = await loadIndex();
       if (input.value !== query) return; // a newer keystroke is pending
-      const hits = search(index, query);
-      status.textContent = hits.length ? "" : ui.empty || "No match — try fewer letters or another spelling.";
+      const hits = search(index, query, { preferGame: state.game, preferLang: state.lang });
+      status.textContent = hits.length
+        ? (ui.results || "{n} results").replace("{n}", hits.length)
+        : ui.empty || "No match — try fewer letters or another spelling.";
       results.replaceChildren(...hits.map((hit) => buildResult(hit, ui)));
     } catch (err) {
       console.error("Card finder index failed:", err);
@@ -136,26 +140,52 @@ function allCards(game) {
   ]);
 }
 
+// Switch game + tab directly (no "change" event, so the Learn tab isn't rebuilt first),
+// then reveal the matching item.
 function openEntry(entry) {
   const select = document.getElementById("game-select");
-  if (select && select.value !== entry.game) {
+  if (select && state.game !== entry.game) {
     select.value = entry.game;
-    select.dispatchEvent(new Event("change"));
+    state.game = entry.game;
+    setString(STORAGE_KEYS.game, entry.game);
   }
   activateTab(KIND_TAB[entry.kind]);
-  window.scrollTo({ top: document.getElementById("tabs")?.offsetTop || 0, behavior: "smooth" });
-  if (entry.kind === "card") requestAnimationFrame(() => flashCard(entry.id));
+  const selector = {
+    card: `[data-card-id="${CSS.escape(entry.id)}"]`,
+    cost: `[data-ref-id="${CSS.escape(entry.id)}"]`,
+    scenario: `[data-scenario-index="${entry.id.replace("scenario-", "")}"]`,
+  }[entry.kind];
+  const target = document.querySelector(`#content ${selector}`);
+  if (target) reveal(target);
+  else scrollBelowTabs(document.getElementById("content"));
 }
 
-function flashCard(cardId) {
-  const card = document.querySelector(`#content [data-card-id="${CSS.escape(cardId)}"]`);
-  if (!card) return;
-  for (let node = card.parentElement; node; node = node.parentElement) {
-    if (node.tagName === "DETAILS") node.open = true;
+function reveal(target) {
+  let opened = false;
+  for (let node = target.parentElement; node; node = node.parentElement) {
+    if (node.tagName === "DETAILS" && !node.open) {
+      node.open = true;
+      opened = true;
+    }
   }
-  card.classList.add("card-flash");
-  card.scrollIntoView({ behavior: "smooth", block: "center" });
-  setTimeout(() => card.classList.remove("card-flash"), FLASH_MS);
+  // Let the accordion finish its height animation (and its own scroll) first.
+  setTimeout(() => {
+    scrollBelowTabs(target, true);
+    target.classList.add("learn-flash");
+    target.setAttribute("tabindex", "-1");
+    target.focus({ preventScroll: true });
+    setTimeout(() => target.classList.remove("learn-flash"), FLASH_MS);
+  }, opened ? ACCORDION_MS : 0);
+}
+
+function scrollBelowTabs(el, center = false) {
+  if (!el) return;
+  const tabsHeight = document.getElementById("tabs")?.offsetHeight || 0;
+  const rect = el.getBoundingClientRect();
+  const free = window.innerHeight - tabsHeight;
+  const offset = center && rect.height < free ? (free - rect.height) / 2 : 8;
+  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: Math.max(0, rect.top + window.scrollY - tabsHeight - offset), behavior: reduce ? "auto" : "smooth" });
 }
 
 function el(tag, className, text) {
