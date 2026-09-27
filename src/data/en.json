@@ -2099,7 +2099,7 @@
       "sections": [
         {
           "id": "missions",
-          "title": "Mission Tiles",
+          "title": "Missions",
           "icon": "🎯",
           "cards": [
             {
@@ -2134,6 +2134,147 @@
                 "Unload crew onto the gold field — the lair is captured by the 3rd crew",
                 "Capturing advances your pirate mission track — it does not score on discovery"
               ]
+            },
+            {
+              "id": "council-of-catan",
+              "type": "special",
+              "icon": "👑",
+              "name": "Council of Catan",
+              "description": "Island stronghold just off the starting island (it counts as a sea hex). Deliver fish hauls and spice sacks at its anchor docks.",
+              "usages": [
+                "Unload when either end of your ship touches an anchor",
+                "Each fish haul delivered → +1 step on the fish track",
+                "Each spice sack delivered → +1 step on the spice track",
+                "No pirate ship may be placed on it"
+              ]
+            },
+            {
+              "id": "fish-haul",
+              "type": "mission",
+              "icon": "🐟",
+              "name": "Fish Haul",
+              "description": "Large cargo piece (6 in the supply). Catch it at a fish shoal and deliver it to the Council of Catan.",
+              "usages": [
+                "Catch: an empty ship with an end next to a shoal holding a haul loads it",
+                "Fills the whole hold — 1 per ship or harbor settlement",
+                "Deliver at a Council anchor → +1 step on the fish track (haul returns to the supply)",
+                "A pirate ship placed on a shoal removes its haul"
+              ]
+            },
+            {
+              "id": "spice-sack",
+              "type": "mission",
+              "icon": "🌶️",
+              "name": "Spice Sack",
+              "description": "Small cargo piece. Load one by dropping a crew on a spice hex, then deliver it to the Council of Catan.",
+              "usages": [
+                "Drop 1 crew on a spice hex → load 1 spice sack straight away",
+                "Only 1 sack per player from each spice hex",
+                "Small piece: 2 fit in a ship or harbor settlement",
+                "Deliver at a Council anchor → +1 step on the spice track per sack"
+              ]
+            },
+            {
+              "id": "spice-hex",
+              "type": "special",
+              "icon": "🌶️",
+              "name": "Spice Hex (Spice Farm)",
+              "description": "Village hex found while exploring. Put 1 crew on it (the crew stays for good) to load a spice sack and gain its permanent ability.",
+              "usages": [
+                "On discovery: take 2 gold and place 1 spice sack per player on it",
+                "Swift Voyage: all your ships get +1 MP (both Swift Voyage hexes: +2)",
+                "Pirate Bonus: you chase the pirate on a 6 or the hex's number (both: 4, 5 or 6)",
+                "Fast Gold: once per turn, sell 1 resource for 1 gold (both: twice)",
+                "No roads or settlements on it until you have placed a crew there"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "pieces",
+          "title": "Game Pieces",
+          "icon": "⚓",
+          "cards": [
+            {
+              "id": "harbor-settlement",
+              "type": "special",
+              "icon": "⚓",
+              "name": "Harbor Settlement",
+              "description": "Upgrade of one of your coastal settlements, worth 2 VP. Home port for your new ships, settlers and crews.",
+              "usages": [
+                "Cost: 2 Grain + 2 Ore — replaces a coastal settlement (max 4 per player)",
+                "Collects 1 resource like a settlement (not 2 like a city)",
+                "New ships are built next to it; new settlers and crews go in it or an adjacent ship",
+                "Holds 1 large piece (settler, fish haul) or 2 small pieces (crews, spice sacks)"
+              ]
+            },
+            {
+              "id": "ship",
+              "type": "ship",
+              "icon": "⛵",
+              "name": "Ship",
+              "description": "Carries your cargo across the sea. Unlike Seafarers ships, which form routes like roads, E&P ships sail freely using movement points.",
+              "usages": [
+                "Cost: 1 Lumber + 1 Wool — build next to one of your harbor settlements",
+                "4 movement points per turn; pay 1 Wool for +2 (once per ship per turn)",
+                "Holds 1 large piece (settler, fish haul) or 2 small pieces (crews, spice sacks)",
+                "Up to 2 ships per sea edge; discovering a hex ends that ship's move",
+                "3 ships per player — with none left, remove one (its cargo is lost) to build a new one"
+              ]
+            },
+            {
+              "id": "settler",
+              "type": "special",
+              "icon": "🧑‍🌾",
+              "name": "Settler",
+              "description": "Large cargo piece (2 per player). Ship it to new land and swap it for a settlement.",
+              "usages": [
+                "Cost: 1 Brick + 1 Lumber + 1 Wool + 1 Grain (same as a settlement)",
+                "Placed in your harbor settlement or an adjacent ship — never on land",
+                "Ship end next to a land intersection → return ship + settler, place a free settlement",
+                "Distance rule applies; no building on intersections touching an unexplored hex"
+              ]
+            },
+            {
+              "id": "crew",
+              "type": "special",
+              "icon": "🧑‍✈️",
+              "name": "Crew",
+              "description": "Small cargo piece — your warriors and merchants for pirate lairs and spice hexes.",
+              "usages": [
+                "Cost: 1 Wool + 1 Ore",
+                "Placed in your harbor settlement or an adjacent ship; 2 fit in either",
+                "Pirate lair: the 3rd crew on it (any mix of players) captures it",
+                "Spice hex: 1 crew per player, and it stays there → load 1 spice sack"
+              ]
+            },
+            {
+              "id": "pirate-ship",
+              "type": "special",
+              "icon": "🏴‍☠️",
+              "name": "Pirate Ship",
+              "description": "Each player owns one, but only one is on the board at a time. It targets ships, not settlements.",
+              "usages": [
+                "On your 7: place or move your pirate ship (an opponent's goes back to its owner)",
+                "Steal 1 random resource from one player with a ship on that hex (1 gold if they have no cards)",
+                "Tribute: 1 gold per ship moved onto, along or off its hex (its owner pays nothing)",
+                "Never on a sea hex next to the starting island, nor on the outer frame",
+                "Chase: each unmoved ship beside its hex rolls 1 die — a 6 drives it off and you place yours"
+              ]
+            },
+            {
+              "id": "gold-coin",
+              "type": "resource",
+              "icon": "🪙",
+              "name": "Gold Coin",
+              "description": "Universal currency in E&P. Each player starts with 2 gold; extras are awarded for no-production turns and exploration.",
+              "usages": [
+                "2 gold → 1 resource of your choice (max twice per turn)",
+                "3 identical resources → 1 gold at the supply",
+                "A production roll (not a 7) gives you nothing → take 1 gold",
+                "Discover a hex with no resource (sea, gold field, fish shoal, spice hex) → 2 gold",
+                "Tribute: 1 gold per ship moved onto, along or off an opponent's pirate hex"
+              ]
             }
           ]
         }
@@ -2165,7 +2306,7 @@
         "keyRules": [
           {
             "title": "Harbor Settlements",
-            "detail": "Worth 2 VP. Built on coast markers. Can hold 1 large piece or 2 small pieces. Ships must be built adjacent."
+            "detail": "Worth 2 VP. Upgrade one of your coastal settlements for 2 Grain + 2 Ore (max 4). Can hold 1 large piece or 2 small pieces. Ships must be built adjacent."
           },
           {
             "title": "Ships",
@@ -2190,27 +2331,32 @@
           {
             "title": "Chase Away Pirate",
             "detail": "Unmoved ship adjacent to pirate hex rolls 1 die; a 6 chases the pirate away."
+          },
+          {
+            "title": "Missions",
+            "detail": "Taking part in a lair capture, or delivering a fish haul or spice sack, moves your marker 1 space (a lair's hero moves 1 more); you score the VP symbols shown next to it. The player furthest along a track holds its VP card (bonus VP tile, +1 VP); on a tie, the marker that arrived first keeps it."
           }
         ],
         "scenarios": [
           {
             "name": "Land Ho!",
-            "vp": "Introductory",
+            "vp": "8 VP",
             "description": "Learn exploration basics.",
-            "details": ["Discover hexes, build settlements on new islands"]
+            "details": ["Discover hexes, build settlements on new islands", "No crews, missions or pirate ships yet — a 7 only forces discards"]
           },
           {
             "name": "Pirate Lairs",
-            "vp": "+ mission",
+            "vp": "12 VP",
             "description": "Capture pirate lairs on gold field hexes.",
             "details": [
               "Place 3 crew to capture a lair",
-              "Hero (highest die + crew) advances extra on mission track"
+              "Hero (highest die + crew) advances extra on mission track",
+              "Furthest along the track holds the Greatest Pirate Scourge VP card (bonus VP tile): +1 VP"
             ]
           },
           {
             "name": "Fish for Catan",
-            "vp": "+ mission",
+            "vp": "15 VP",
             "description": "Catch and deliver fish to the Council of Catan.",
             "details": [
               "Roll die during movement; matching fish shoal = fish haul",
@@ -2219,7 +2365,7 @@
           },
           {
             "name": "Spices for Catan",
-            "vp": "+ mission",
+            "vp": "15 VP",
             "description": "Deliver spice sacks to the Council.",
             "details": [
               "Unload crew on spice farm, load spice sack, deliver",
@@ -2238,7 +2384,102 @@
         ]
       },
       "reference": {
-        "tradingNote": "E&P uses a 3:1 bank rate with no ports (or 2 gold for any 1 resource, twice per turn) and adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible."
+        "buildingCosts": [
+          {
+            "id": "road",
+            "icon": "🛣️",
+            "name": "Road",
+            "vp": "0 VP",
+            "cost": [
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 }
+            ],
+            "note": "Only on explored land. No Longest Road (Longest Route) card in E&P."
+          },
+          {
+            "id": "settlement",
+            "icon": "🏠",
+            "name": "Settlement",
+            "vp": "1 VP",
+            "cost": [
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+            ],
+            "note": "Build along your road, or place one free by landing a settler. Distance rule applies."
+          },
+          {
+            "id": "harbor-settlement",
+            "icon": "⚓",
+            "name": "Harbor Settlement",
+            "vp": "2 VP",
+            "cost": [
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 2 },
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 2 }
+            ],
+            "note": "Replaces one of your coastal settlements. Collects 1 resource. Max 4 per player."
+          },
+          {
+            "id": "ship",
+            "icon": "⛵",
+            "name": "Ship",
+            "vp": "0 VP",
+            "cost": [
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 }
+            ],
+            "note": "Build next to your harbor settlement. 4 MP per turn. Max 2 per edge, 3 per player."
+          },
+          {
+            "id": "extra-ship-move",
+            "icon": "💨",
+            "name": "Extra Ship Move",
+            "vp": "—",
+            "cost": [
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 }
+            ],
+            "note": "+2 MP for one ship. Once per ship per turn."
+          },
+          {
+            "id": "settler",
+            "icon": "🧑‍🌾",
+            "name": "Settler",
+            "vp": "—",
+            "cost": [
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+            ],
+            "note": "Placed in a harbor settlement or adjacent ship. Land it to place a free settlement."
+          },
+          {
+            "id": "crew",
+            "icon": "🧑‍✈️",
+            "name": "Crew",
+            "vp": "—",
+            "cost": [
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 1 }
+            ],
+            "note": "Captures pirate lairs and works spice hexes."
+          }
+        ],
+        "trading": [
+          { "icon": "🏦", "title": "Supply", "ratio": "3:1", "detail": "3 identical resources → 1 other resource or 1 gold, during your trade & build phase (Action phase). No ports in E&P." },
+          { "icon": "🪙", "title": "Gold Coin", "ratio": "2 gold : 1 res", "detail": "Spend 2 gold for any 1 resource. Max twice per turn." },
+          { "icon": "🤝", "title": "Player Trade", "ratio": "any:any", "detail": "Trade resources and gold with other players during your trade & build phase." }
+        ],
+        "tradingNote": "E&P uses a 3:1 bank rate with no ports (or 2 gold for any 1 resource, twice per turn) and adds mission-driven trades (fish for Council VPs, spice sacks for mission progress). Treat mission rewards as better than any bank trade when feasible.",
+        "turnFlow": [
+          { "icon": "🎲", "title": "Roll & produce", "detail": "Settlements and harbor settlements collect 1 resource each; captured gold fields pay 2 gold per building. Got nothing (not on a 7)? Take 1 gold." },
+          { "icon": "🏴‍☠️", "title": "On a 7: pirate ship", "detail": "Players with more than 7 resource cards discard half. Place or move your pirate ship, then steal 1 random resource from one player with a ship on that hex (no pirate in Land Ho!)." },
+          { "icon": "🤝", "title": "Trade", "detail": "With players (resources and gold), the supply at 3:1 (for a resource or 1 gold), or 2 gold → 1 resource (twice per turn)." },
+          { "icon": "🔨", "title": "Build", "detail": "Roads, settlements, harbor settlements, ships, settlers and crews, mixed freely with trading. No cities, no development cards." },
+          { "icon": "⛵", "title": "Move ships", "detail": "4 MP each (+2 for 1 wool). Explore, load/unload, pay tribute, chase the pirate, catch fish, land settlers and crews, deliver to the Council. No trading or building now, except settling with a settler." },
+          { "icon": "➡️", "title": "Resolve & pass", "detail": "Resolve any pirate lair captured this turn, then pass the dice. Reach the scenario's VP target (17 in the full game) on your turn and you win at once." }
+        ]
       },
       "strategy": {
         "beginner": [
