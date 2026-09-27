@@ -711,6 +711,70 @@
             "tags": ["trading", "politics"]
           }
         ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "start-resources-second-settlement",
+            "myth": "At setup, you collect starting resources for both of your settlements.",
+            "rule": "You collect starting resources for only 1 settlement: your second one (in the beginner setup, the one marked on the rulebook's map). Take 1 matching card for each terrain hex next to it. The desert gives nothing.",
+            "ref": "CATAN rulebook (classic), pp. 3, 12–13"
+          },
+          {
+            "id": "settlement-needs-own-road",
+            "myth": "After setup, you can build a settlement anywhere, as long as it follows the distance rule.",
+            "rule": "After setup, every new settlement must connect to one of your own roads. It must also follow the distance rule: no intersection next to it may hold a settlement or city, not even your own.",
+            "ref": "CATAN rulebook (classic), p. 5"
+          },
+          {
+            "id": "trade-only-with-active-player",
+            "myth": "Any two players can trade with each other at any time, even when it isn't their turn.",
+            "rule": "Every trade must involve the player whose turn it is. Other players may trade with that player, but not with each other or with the bank.",
+            "ref": "CATAN rulebook (classic), pp. 4, 14"
+          },
+          {
+            "id": "port-2to1-one-resource",
+            "myth": "A 2:1 port also lets you trade your other resources at 3:1.",
+            "rule": "A 2:1 port only improves the rate for the resource shown on it. Your other resources still trade at 4:1, unless you also have a settlement or city on a 3:1 port or on the matching 2:1 port.",
+            "ref": "CATAN rulebook (classic), p. 9"
+          },
+          {
+            "id": "bank-shortage-nobody-gets",
+            "myth": "If the bank runs short of a resource, the players owed it split whatever cards are left.",
+            "rule": "If the bank can't give every player all of a resource they produced, no one gets that resource that turn. Only if a single player is owed it do they take whatever is left.",
+            "ref": "CATAN rulebook (classic), p. 4"
+          },
+          {
+            "id": "discard-only-over-seven",
+            "myth": "When a 7 is rolled, anyone holding 7 or more cards must discard half.",
+            "rule": "When a 7 is rolled, only players holding more than 7 resource cards (8 or more) discard half, rounded down. Holding exactly 7 is safe.",
+            "ref": "CATAN rulebook (classic), p. 11"
+          },
+          {
+            "id": "dev-cards-safe-from-robber",
+            "myth": "Development cards in your hand count toward the 7-card limit and can be stolen by the robber.",
+            "rule": "When a 7 is rolled, development cards don't count toward the number of cards in your hand: only resource cards are counted for discards. The robber can only ever steal resource cards, never development cards.",
+            "ref": "CATAN rulebook (2025), p. 9"
+          },
+          {
+            "id": "knight-causes-no-discard",
+            "myth": "Playing a Knight also makes everyone with more than 7 cards discard half.",
+            "rule": "Only a rolled 7 makes players discard. Playing a Knight moves the robber and lets you steal, but nobody discards.",
+            "ref": "catan.com FAQ; CATAN rulebook (classic), p. 8"
+          },
+          {
+            "id": "no-dev-card-on-turn-bought",
+            "myth": "You can buy a Knight or Monopoly card and play it on the same turn.",
+            "rule": "A development card can't be played on the turn you bought it. Victory Point cards are the only exception: if one brings you to 10 VP, reveal it at once and win.",
+            "ref": "CATAN rulebook (classic), p. 7"
+          },
+          {
+            "id": "longest-road-needs-longer",
+            "myth": "Building a road as long as the Longest Road (Longest Route) holder's takes the card from them.",
+            "rule": "To take Longest Road (Longest Route) from another player, your continuous road must be longer than theirs. Building one of equal length isn't enough: the holder keeps the card.",
+            "ref": "CATAN rulebook (classic), p. 9; catan.com FAQ"
+          }
+        ]
       }
     },
     "seafarers": {
@@ -1127,6 +1191,58 @@
             "title": "Feed the ship engine",
             "body": "Sea expansion burns resources fast, so dead turns hurt more. Anchor on gold and 6/8 hexes for the wool and wood that keep a route moving.",
             "tags": ["probability", "resources"]
+          }
+        ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "roads-ships-join-at-buildings",
+            "myth": "You can build a ship straight off the end of your road at an empty corner, and the two then count as one route.",
+            "rule": "Roads and ships join only at your own settlement or city. A ship can't extend a road (or vice versa), and a road and ship meeting at an empty corner count as separate routes for Longest Trade Route (Longest Route).",
+            "ref": "Seafarers rulebook (classic), p. 4"
+          },
+          {
+            "id": "no-moving-new-ships",
+            "myth": "You can build a ship and then move that same ship on the same turn.",
+            "rule": "You may move only 1 ship per turn, and never a ship you built that same turn. A new ship stays put until your next turn.",
+            "ref": "Seafarers rulebook (classic), p. 4"
+          },
+          {
+            "id": "closed-route-ships-locked",
+            "myth": "If an opponent builds a settlement in the middle of your ship line, those ships become free to move.",
+            "rule": "Ships in an unbroken line linking two of your settlements/cities can't be moved, even if the move wouldn't break the link and even if an opponent later settles on that line.",
+            "ref": "Seafarers rulebook (2025), p. 2; catan.com FAQ"
+          },
+          {
+            "id": "pirate-robs-ships-only",
+            "myth": "Putting the pirate next to a coastal settlement lets you steal from its owner, even if they have no ship there.",
+            "rule": "On a 7 or a Knight you may move the pirate instead of the robber. You then steal 1 random resource from one player with a ship on an edge of its hex; a coastal settlement alone doesn't make its owner a target.",
+            "ref": "Seafarers rulebook (classic), p. 6; catan.com FAQ"
+          },
+          {
+            "id": "pirate-freezes-ships",
+            "myth": "Ships already next to the pirate can simply sail away from it.",
+            "rule": "No ship may be built on, moved onto, or moved away from an edge of the pirate's hex. Roads, settlements and cities next to it are not blocked.",
+            "ref": "Seafarers rulebook (classic), p. 6; catan.com FAQ"
+          },
+          {
+            "id": "gold-is-any-resource",
+            "myth": "Gold fields produce gold cards that you can trade or spend.",
+            "rule": "There are no gold cards. A producing gold field gives 1 resource of your choice per adjacent settlement and 2 per adjacent city, in any combination.",
+            "ref": "Seafarers rulebook (classic), p. 6"
+          },
+          {
+            "id": "road-building-ships",
+            "myth": "In Seafarers, the Road Building card can still only place roads, just as the card text says.",
+            "rule": "In Seafarers, the Road Building card lets you build 2 roads, 2 ships, or 1 road and 1 ship, all for free.",
+            "ref": "Seafarers rulebook (classic), p. 5"
+          },
+          {
+            "id": "island-bonus-for-everyone",
+            "myth": "In Heading for New Shores, only the first player to settle a small island gets its bonus victory points.",
+            "rule": "In Heading for New Shores, your first settlement on each small island earns you 2 bonus VP, even if other players settled that island before you.",
+            "ref": "Seafarers rulebook (classic), p. 8"
           }
         ]
       }
@@ -1787,6 +1903,58 @@
             "tags": ["endgame", "progress-cards"]
           }
         ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "robber-waits-for-barbarians",
+            "myth": "From the very first 7 of the game, the roller moves the robber and steals a card.",
+            "rule": "Until the barbarians attack for the first time, the robber can't be moved (not even by a knight or progress card), and the player who rolls a 7 steals nothing. Players over the hand limit still discard half.",
+            "ref": "Cities & Knights rulebook (classic), p. 5"
+          },
+          {
+            "id": "no-action-on-activation-turn",
+            "myth": "You can activate a knight and use it for an action on the same turn.",
+            "rule": "A knight can't take an action on the turn it was activated. You may act with an already-active knight and then reactivate it later that turn, so it is ready to defend.",
+            "ref": "Cities & Knights rulebook (classic), pp. 9–10"
+          },
+          {
+            "id": "knights-reset-after-attack",
+            "myth": "Your knights stay active after the barbarian attack is over.",
+            "rule": "After every barbarian attack, win or lose, all knights on the board are turned to their inactive side. Each must be activated again before it can act or help defend.",
+            "ref": "Cities & Knights rulebook (classic), p. 11"
+          },
+          {
+            "id": "no-last-second-knights",
+            "myth": "When the barbarian ship lands, players can still activate knights to join the defense.",
+            "rule": "The barbarians attack the moment the event die moves the ship onto Catan, before production and before anyone can trade or build. Only knights that are already active count; you can't activate more in response.",
+            "ref": "Cities & Knights rulebook (classic), pp. 5, 11; catan.com FAQ"
+          },
+          {
+            "id": "walls-dont-stop-barbarians",
+            "myth": "A city wall protects its city from being pillaged by the barbarians.",
+            "rule": "City walls don't stop the barbarians. A wall only lets you hold 2 more cards when a 7 is rolled; if its city is pillaged, the wall is removed too.",
+            "ref": "Cities & Knights rulebook (classic), p. 6; catan.com FAQ"
+          },
+          {
+            "id": "knights-block-roads",
+            "myth": "Knights only defend against the barbarians; they can't block roads or break Longest Road.",
+            "rule": "An opponent's knight, even an inactive one, stops you from building a road past its intersection and splits your road when counting Longest Road (Longest Route).",
+            "ref": "Cities & Knights rulebook (classic), p. 9"
+          },
+          {
+            "id": "commodities-are-hand-cards",
+            "myth": "Commodity cards don't count toward your hand limit when a 7 is rolled.",
+            "rule": "Commodities are hand cards just like resources: they count toward your hand limit when a 7 is rolled, and the robber can steal them.",
+            "ref": "Cities & Knights rulebook (classic), p. 7"
+          },
+          {
+            "id": "only-alchemist-before-roll",
+            "myth": "You may play any progress card before rolling the dice.",
+            "rule": "Alchemist (Alchemy) is the only progress card you may play before rolling the dice. All other progress cards are played after the roll.",
+            "ref": "Cities & Knights rulebook (classic), p. 9"
+          }
+        ]
       }
     },
     "traders-barbarians": {
@@ -2215,6 +2383,58 @@
                 "tags": ["event-cards", "robber"]
               }
             ]
+          }
+        ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "friendly-robber-still-discard",
+            "myth": "With the Friendly Robber, a player with only 2 VP is exempt from discarding on a 7, however many cards they hold.",
+            "rule": "Friendly Robber: the robber can't be moved next to a player with only 2 VP (if no hex is legal, it goes to the desert) or used to steal from them, but on a 7 they still discard half their resource cards (rounded down) if holding over 7.",
+            "ref": "Traders & Barbarians rulebook (classic), p. 3"
+          },
+          {
+            "id": "old-boot-not-minus-vp",
+            "myth": "In The Fishermen of Catan (Fishing on Catan), the old boot is a −1 VP penalty that lowers your score.",
+            "rule": "The Fishermen of Catan (Fishing on Catan): the old boot doesn't lower your VP total — whoever holds it simply needs 1 extra VP to win (11 instead of 10).",
+            "ref": "Traders & Barbarians rulebook (classic), p. 9; catan.com FAQ"
+          },
+          {
+            "id": "rivers-no-road-across",
+            "myth": "In Rivers of Catan, you can cross a river with an ordinary road.",
+            "rule": "Rivers of Catan: roads may never be built on a path that crosses a river — only a bridge (2 brick + 1 lumber) can cross, and a Road Building card can't build bridges.",
+            "ref": "Traders & Barbarians rulebook (classic), p. 11; catan.com FAQ"
+          },
+          {
+            "id": "wealthiest-settler-tie",
+            "myth": "In Rivers of Catan, you keep the Wealthiest Settler tile if another player only ties your gold count.",
+            "rule": "Rivers of Catan: you lose the Wealthiest Settler (Wealthiest Catanian) tile as soon as anyone ties your gold; it's set aside until one player alone has the most.",
+            "ref": "Traders & Barbarians rulebook (classic), pp. 11–12"
+          },
+          {
+            "id": "caravans-road-on-camel-path",
+            "myth": "In The Caravans (Merchant Trains), you can't build a road on a path that already has a camel (wagon).",
+            "rule": "The Caravans (Merchant Trains): a road may share a path with a camel (wagon), and each such road counts as 2 segments toward Longest Road (Longest Route).",
+            "ref": "Traders & Barbarians rulebook (classic), pp. 13–14"
+          },
+          {
+            "id": "barbarian-attack-dev-cards-immediate",
+            "myth": "In Barbarian Attack, you can keep development cards in hand and play them on a later turn.",
+            "rule": "Barbarian Attack: you must reveal and resolve each development card as soon as you buy it — you can't save it — and you may buy and play several in one turn.",
+            "ref": "Traders & Barbarians rulebook (classic), p. 17"
+          },
+          {
+            "id": "tb-wagon-rival-roads",
+            "myth": "In the Traders & Barbarians main scenario, your wagon can't drive on other players' roads.",
+            "rule": "Traders & Barbarians main scenario: your wagon may use rivals' roads — each costs 1 movement point plus 1 gold paid to the road's owner (+2 movement points if a barbarian is on it).",
+            "ref": "Traders & Barbarians rulebook (classic), p. 21"
+          },
+          {
+            "id": "tb-no-longest-road",
+            "myth": "The Longest Road (Longest Route) card still earns 2 VP in the Traders & Barbarians main scenario.",
+            "rule": "Traders & Barbarians main scenario: the Longest Road (Longest Route) card isn't used, so no one scores its 2 VP — roads still matter, since your wagon moves along your own roads for 1 movement point instead of 2.",
+            "ref": "Traders & Barbarians rulebook (classic), p. 21"
           }
         ]
       }
@@ -2697,6 +2917,58 @@
             "title": "Race to 17, bank the cheap points",
             "body": "Victory comes from harbor settlements, settlements, mission-track positions and bonus VP tiles. Late game, take the cheapest point available — a harbor settlement or one mission step often beats a far-flung new island.",
             "tags": ["endgame", "scoring"]
+          }
+        ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "harbor-settlement-production",
+            "myth": "A harbor settlement produces double, like a city: 2 resources instead of 1 from each adjacent hex whose number is rolled.",
+            "rule": "A harbor settlement is worth 2 VP but produces exactly like a regular settlement, not double like a city: e.g. 1 ore, not 2, when an adjacent mountain's number is rolled.",
+            "ref": "Explorers & Pirates rulebook (classic), p. 5"
+          },
+          {
+            "id": "no-trade-build-after-moving",
+            "myth": "Once your ships have moved, you can still trade or buy new pieces, as long as it's your turn.",
+            "rule": "You trade and build before the Movement phase. Once it begins you can't trade or build; the one exception is founding a settlement with a settler ship, at no extra cost.",
+            "ref": "Explorers & Pirates rulebook (classic), p. 3"
+          },
+          {
+            "id": "pirate-tribute-to-supply",
+            "myth": "Tribute for sailing past a pirate ship is paid to the pirate ship's owner.",
+            "rule": "Tribute is 1 gold per ship, paid to the supply, not to the pirate's owner. Once paid, that ship may move onto, along and off the pirate's hex freely for the rest of the turn.",
+            "ref": "Explorers & Pirates rulebook (classic), p. 7"
+          },
+          {
+            "id": "discovery-ends-ship-move",
+            "myth": "A ship that reveals a new hex can keep sailing with its leftover movement points.",
+            "rule": "Discovering a hex ends that ship's movement for the turn and its unused movement points are lost. Ships you haven't moved yet this turn may still sail.",
+            "ref": "Explorers & Pirates rulebook (classic), p. 4"
+          },
+          {
+            "id": "chase-needs-unmoved-ship",
+            "myth": "A ship that has already sailed this turn can still roll to chase away the pirate ship.",
+            "rule": "Only a ship that hasn't moved yet this turn and has an end touching a corner of the pirate's hex may roll to chase the pirate ship away. It may still sail after rolling.",
+            "ref": "Explorers & Pirates rulebook (classic), p. 8"
+          },
+          {
+            "id": "gold-safe-on-seven",
+            "myth": "Gold coins count toward your hand on a 7, so you may have to discard some gold.",
+            "rule": "On a 7, only resource cards count: a player with more than 7 resource cards discards half of them (rounded down). Gold coins are never counted or discarded.",
+            "ref": "Explorers & Pirates rulebook (classic), pp. 3, 7"
+          },
+          {
+            "id": "pirate-lair-shared-capture",
+            "myth": "To capture a pirate lair, all three crews on it must be your own.",
+            "rule": "A pirate lair is captured by the 3rd crew placed on it, whoever owns the crews. Every player with a crew there gets 2 gold and advances on the Pirate Lairs track.",
+            "ref": "Explorers & Pirates rulebook (classic), p. 10"
+          },
+          {
+            "id": "settler-distance-rule",
+            "myth": "A settler ship can found a settlement on any coastal corner, even right next to another settlement.",
+            "rule": "A settlement founded by a settler ship must obey the distance rule. You return the ship and its settler to your supply and place the settlement at no extra cost.",
+            "ref": "Explorers & Pirates rulebook (classic), p. 5"
           }
         ]
       }
