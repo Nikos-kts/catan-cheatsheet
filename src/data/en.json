@@ -1077,6 +1077,7 @@
               "id": "cloth",
               "type": "commodity",
               "icon": "🧵",
+              "image": "src/assets/images/cities-and-knights/commodities/textile.png",
               "name": "Cloth",
               "description": "Commodity produced by cities on Pasture hexes. Used to advance in the Trade column of city improvements.",
               "usages": [
@@ -1088,6 +1089,7 @@
               "id": "coin",
               "type": "commodity",
               "icon": "🪙",
+              "image": "src/assets/images/cities-and-knights/commodities/coin.png",
               "name": "Coin",
               "description": "Commodity produced by upgraded Mountain cities. Used to advance in the Politics column.",
               "usages": [
@@ -1099,6 +1101,7 @@
               "id": "paper",
               "type": "commodity",
               "icon": "📜",
+              "image": "src/assets/images/cities-and-knights/commodities/paper.png",
               "name": "Paper",
               "description": "Commodity produced by upgraded Forest cities. Used to advance in the Science column.",
               "usages": [
