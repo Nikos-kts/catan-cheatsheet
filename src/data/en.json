@@ -2492,7 +2492,7 @@
             "id": "extra-ship-move",
             "icon": "💨",
             "name": "Extra Ship Move",
-            "vp": "—",
+            "vp": "0 VP",
             "cost": [
               { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 }
             ],
@@ -2502,7 +2502,7 @@
             "id": "settler",
             "icon": "🧑‍🌾",
             "name": "Settler",
-            "vp": "—",
+            "vp": "0 VP",
             "cost": [
               { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
               { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 },
@@ -2515,7 +2515,7 @@
             "id": "crew",
             "icon": "🧑‍✈️",
             "name": "Crew",
-            "vp": "—",
+            "vp": "0 VP",
             "cost": [
               { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
               { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 1 }
