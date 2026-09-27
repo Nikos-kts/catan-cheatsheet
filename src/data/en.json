@@ -665,7 +665,10 @@
               "usages": [
                 "Cost: 1 Lumber + 1 Wool",
                 "Can be moved (the end ship of an open route) once per turn",
-                "Max 15 ships per player"
+                "Max 15 ships per player",
+                "Placed on a sea edge touching a settlement/city or another ship you own",
+                "Counts toward Longest Trade Route (Longest Route)",
+                "A ship cannot be moved on the turn it was built"
               ]
             },
             {
@@ -676,7 +679,20 @@
               "description": "Special hex that produces a wild resource. When its number is rolled, adjacent players choose any resource they want from the bank.",
               "usages": [
                 "Highly valuable — worth settling early",
-                "Each adjacent settlement yields 1 free resource of choice"
+                "Each adjacent settlement yields 1 free resource of choice",
+                "Each adjacent city yields 2 free resources of choice (any mix)"
+              ]
+            },
+            {
+              "id": "warship",
+              "type": "ship",
+              "icon": "⚔️",
+              "name": "Warship",
+              "description": "The Pirate Islands scenario only. Reveal a Knight card to turn one normal ship of your route into a warship (lay it on its side).",
+              "usages": [
+                "Converts the normal ship closest to your route's starting settlement",
+                "4 players: Victory Point cards also count as Knights",
+                "Your warship count is your strength against pirate attacks and your fortress"
               ]
             }
           ]
@@ -705,7 +721,65 @@
               "description": "The Pirate is added alongside the Robber in Seafarers (both stay in play). Move it to any sea hex to block ships. Steal from an adjacent player with a ship there.",
               "usages": [
                 "Activated by rolling a 7 or playing a Knight",
-                "Blocks ship movement through that hex"
+                "No ship may be built on, or moved to/from, an edge of its hex"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "scenario-pieces",
+          "title": "Scenario Pieces",
+          "icon": "🧩",
+          "cards": [
+            {
+              "id": "fortress",
+              "type": "special",
+              "icon": "🏰",
+              "name": "Pirate Fortress",
+              "description": "The Pirate Islands scenario only. Each player has a fortress in their colour on the western islands (a settlement on 3 tokens). You must capture yours to win.",
+              "usages": [
+                "When your ship route reaches it, attack at the end of your turn: roll 1 die",
+                "More warships than the roll: remove 1 of its 3 tokens. Tie: lose 1 ship. Fewer: lose 2 ships",
+                "Your turn ends after an attack (max 1 attack per turn)",
+                "All 3 tokens gone: it becomes your settlement (1 VP, produces, can become a city)"
+              ]
+            },
+            {
+              "id": "wonder",
+              "type": "special",
+              "icon": "🏛️",
+              "name": "Wonder",
+              "description": "The Wonders of Catan scenario only. Meet a Wonder's requirement, claim it, then build its 4 levels.",
+              "usages": [
+                "5 Wonders, each with its own start requirement (e.g. a city at a port + 5+ consecutive, unbranched roads/ships)",
+                "Only 1 Wonder per player; once claimed, no one else may build it",
+                "Each level costs the same 5 resources; build as many levels per turn as you can afford",
+                "Win by completing level 4, OR at 10+ VP with a higher Wonder level than everyone else"
+              ]
+            },
+            {
+              "id": "village",
+              "type": "special",
+              "icon": "🏘️",
+              "name": "Village",
+              "description": "Cloth for Catan scenario only. The number discs on the 4 small islands are villages, each starting with 5 cloth tokens. No one may build settlements on those islands.",
+              "usages": [
+                "Connect a ship route from your settlement/city to a village: take 1 cloth at once",
+                "Whenever its number is rolled, every player connected to it takes 1 cloth",
+                "A route to a village is closed: its ships can't be moved",
+                "An empty village stops producing cloth"
+              ]
+            },
+            {
+              "id": "cloth-token",
+              "type": "special",
+              "icon": "🧺",
+              "name": "Cloth Token",
+              "description": "Cloth for Catan scenario only. Earned from villages; collect pairs for VP.",
+              "usages": [
+                "2 cloth tokens = 1 VP; an unpaired token is worth nothing",
+                "You can't move the Pirate until you have a route to a village; after that, the Pirate may steal a cloth token instead of a resource",
+                "The game also ends when 5+ of the 8 villages are empty (most VP wins; tie: most cloth)"
               ]
             }
           ]
@@ -713,12 +787,13 @@
       ],
       "gameplay": {
         "players": "3–4",
-        "vpToWin": "Varies by scenario (12–14)",
+        "vpToWin": "Varies by scenario (10–14)",
         "setup": [
           "Uses a special Seafarers sea frame with multiple islands.",
           "Place terrain hexes, sea hexes, and gold field hexes per scenario map.",
           "Each player receives 15 ships in addition to standard pieces.",
-          "Robber and Pirate are both in play."
+          "Robber and Pirate start where the scenario says (Pirate Islands has no Robber; Wonders of Catan has no Pirate).",
+          "Starting settlements follow the scenario (some must go on the main island). A coastal starting settlement may take a ship instead of a road."
         ],
         "turnOverview": [
           {
@@ -727,7 +802,7 @@
           },
           {
             "title": "Ship Movement",
-            "detail": "Once per turn, move 1 ship that has an open end (not connected on both sides) to a new legal position."
+            "detail": "Once per turn, move 1 ship that has an open end (not connected on both sides) to a new legal position. Not a ship built this turn, or one in a closed route between two of your buildings."
           }
         ],
         "keyRules": [
@@ -744,7 +819,7 @@
             "detail": "Move to any sea hex. Steal 1 resource from a player with a ship there. Blocks ship placement/movement."
           },
           {
-            "title": "Longest Route",
+            "title": "Longest Trade Route (Longest Route)",
             "detail": "Roads and ships combine into a route, but only connect through your own buildings (settlements/cities)."
           },
           {
@@ -754,6 +829,10 @@
           {
             "title": "Knight card",
             "detail": "Lets you move the Robber OR the Pirate."
+          },
+          {
+            "title": "New-Island Bonus",
+            "detail": "In scenarios with this bonus, your first settlement on each new island (or region) earns +2 VP (+1 in Wonders of Catan and New World), even if others settled there first. The VP tokens go under that settlement."
           }
         ],
         "scenarios": [
@@ -774,7 +853,7 @@
             "vp": "12 VP",
             "description": "Facedown hexes revealed when you build adjacent.",
             "details": [
-              "Gain 1 resource on discovery",
+              "A road/ship next to an empty space reveals the next hex: land → take 1 of its resource; sea → nothing",
               "Unknown terrain adds exploration challenge"
             ]
           },
@@ -799,7 +878,9 @@
             "description": "Cloth tokens from village trade routes.",
             "details": [
               "Game can also end when 5+ villages are empty",
-              "Steal cloth or resources via pirate"
+              "Steal cloth or resources via pirate",
+              "Connect a ship route to a village: 1 cloth now, +1 whenever its number is rolled",
+              "2 cloth tokens = 1 VP"
             ]
           },
           {
@@ -808,7 +889,9 @@
             "description": "Build warships and conquer pirate fortresses.",
             "details": [
               "Knight cards convert ships to warships",
-              "No Longest Route/Largest Army tiles"
+              "No Longest Route/Largest Army tiles",
+              "Each player has their own pirate fortress",
+              "Attack your fortress: roll 1 die; more warships than the roll removes 1 of its 3 tokens"
             ]
           },
           {
@@ -817,19 +900,90 @@
             "description": "Claim and build one of 5 Wonders to win.",
             "details": [
               "4 levels, each costs 5 resources",
-              "Complete your Wonder OR reach 10+ VP with highest wonder level"
+              "Complete your Wonder OR reach 10+ VP with highest wonder level",
+              "Each Wonder has its own requirement to start",
+              "Claimed Wonders are exclusive"
             ]
           },
           {
             "name": "New World",
             "vp": "12 VP",
             "description": "Fully randomized island layout.",
-            "details": ["+1 VP for first settlement on each unexplored island"]
+            "details": ["+1 VP for first settlement on each unexplored island", "Hexes are placed at random; players take turns placing the ports"]
           }
         ]
       },
       "reference": {
-        "tradingNote": "Seafarers keeps base-game trading ratios — no new trade rules, but coastal ports remain exceptionally strong when shipping routes connect them."
+        "tradingNote": "Seafarers keeps base-game trading ratios — no new trade rules, but coastal ports remain exceptionally strong when shipping routes connect them.",
+        "buildingCosts": [
+          {
+            "id": "road",
+            "icon": "🛣️",
+            "name": "Road",
+            "vp": "0 VP",
+            "cost": [
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 }
+            ],
+            "note": "Max 15 per player. Can't share a coastal edge with a ship; links to ships only at your settlement/city."
+          },
+          {
+            "id": "ship",
+            "icon": "⛵",
+            "name": "Ship",
+            "vp": "0 VP",
+            "cost": [
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 }
+            ],
+            "note": "Max 15 per player. You may move 1 open-end ship per turn."
+          },
+          {
+            "id": "settlement",
+            "icon": "🏠",
+            "name": "Settlement",
+            "vp": "1 VP",
+            "cost": [
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+            ],
+            "note": "Distance rule applies on every island. Max 5 per player. Your first on a new island may earn bonus VP (scenario rules)."
+          },
+          {
+            "id": "city",
+            "icon": "🏛️",
+            "name": "City",
+            "vp": "2 VP",
+            "cost": [
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 3 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 2 }
+            ],
+            "note": "Upgrades a settlement. Produces 2 per hex; 2 of your choice from a gold field. Max 4 per player."
+          },
+          {
+            "id": "dev-card",
+            "icon": "🃏",
+            "name": "Development Card",
+            "vp": "—",
+            "cost": [
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 }
+            ],
+            "note": "Knight moves the Robber OR the Pirate; Road Building can place ships too."
+          }
+        ],
+        "turnFlow": [
+          { "icon": "🃏", "title": "Play a dev card (optional)", "detail": "Dev cards bought on a previous turn. Knight lets you move Robber OR Pirate." },
+          { "icon": "🎲", "title": "Roll the dice", "detail": "Hexes produce as normal; gold fields give any resource of choice (1 per settlement, 2 per city)." },
+          { "icon": "🏴‍☠️", "title": "On a 7: Robber or Pirate", "detail": "Players with >7 cards discard half. Move the Robber OR the Pirate and steal 1 random card (Pirate: from a player with a ship on that hex)." },
+          { "icon": "🤝", "title": "Trade", "detail": "Bank 4:1, generic port 3:1, specific port 2:1, or trade resources with other players (no gifts)." },
+          { "icon": "🔨", "title": "Build", "detail": "Roads, ships, settlements, cities, dev cards — plus scenario pieces." },
+          { "icon": "⛵", "title": "Move one ship (optional)", "detail": "Once per turn, move an open-end ship (not built this turn, not in a closed route) to any legal edge." },
+          { "icon": "➡️", "title": "Pass", "detail": "Pass the dice to the player on your left." }
+        ]
       },
       "strategy": {
         "beginner": [
