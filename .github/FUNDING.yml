@@ -2,4 +2,4 @@
 # Supported options: github, patreon, open_collective, ko_fi, tidelift, community_bridge,
 #                    liberapay, issuehunt, otechie, lfx_crowdfunding, polar, buy_me_a_coffee, thanks_dev, custom
 
-github: [Nikos-kts]
+custom: ["https://www.paypal.com/donate/?hosted_button_id=VJVL67LPK7JTG"]

@@ -4,13 +4,13 @@ A lightweight, browser-based reference for Catan card explanations — supports 
 
 > **⚠️ Legal Notice:** This is an independent community project. CATAN® and all related marks are trademarks of Catan GmbH & Co. KG and Catan Studio Inc. This project is **not** affiliated with, endorsed by, or connected to Catan GmbH, Catan Studio, or any official Catan entity. See [DISCLAIMER.md](./DISCLAIMER.md) for full details.
 
-[![Sponsor](https://img.shields.io/badge/Sponsor-%E2%9D%A4-pink?logo=github-sponsors)](https://github.com/sponsors/Nikos-kts)
+[![Donate](https://img.shields.io/badge/Donate-PayPal-00457C?logo=paypal)](https://www.paypal.com/donate/?hosted_button_id=VJVL67LPK7JTG)
 
 ## Features
 
 - **Games / Expansions**: Base Catan, Seafarers, Cities & Knights, Traders & Barbarians, Explorers & Pirates
 - **Languages**: English, Greek (Ελληνικά), Spanish (Español), Dutch (Nederlands), Portuguese (Português, European)
-- **Five tabs**: 🃏 Cards, 🎲 Gameplay, 📋 Reference (building costs / dice probabilities / trading ratios / turn flow), 🧠 Strategy (beginner → advanced tips per game), 🧮 Tools (dice odds calculator, starting-spot helper, robber 7-timer)
+- **Six tabs**: 🃏 Cards, 🎲 Gameplay, 📋 Reference (building costs / dice probabilities / trading ratios / turn flow), 🧠 Strategy (beginner → advanced tips per game), 🎓 Learn (card finder across all languages, rules people get wrong, rules quiz, placement trainer), 🧮 Tools (dice odds calculator, starting-spot helper, robber 7-timer)
 - Selections are remembered across sessions via `localStorage` (`catan-lang`, `catan-game`, `catan-tab`)
 - Pure HTML + CSS + vanilla JavaScript ES modules — no build step needed
 - Accessible: `role="tablist"` tabs with arrow-key navigation, `aria-live` content region, `prefers-reduced-motion`-aware animations
@@ -21,7 +21,8 @@ A lightweight, browser-based reference for Catan card explanations — supports 
 index.html              # Main page (root)
 src/
 ├── css/
-│   └── styles.css      # Styles (earthy Catan colour palette)
+│   ├── styles.css      # Styles (earthy Catan colour palette)
+│   └── learn.css       # Learn tab styles
 ├── js/
 │   ├── app.js          # Thin bootstrapper wiring modules together
 │   └── modules/        # ES modules (split per responsibility)
@@ -36,7 +37,9 @@ src/
 │       ├── render-gameplay.js  # Gameplay tab
 │       ├── render-reference.js # Reference tab (📋)
 │       ├── render-strategy.js  # Strategy tab (🧠)
+│       ├── render-learn.js     # Learn tab (🎓)
 │       ├── render-tools.js     # Tools tab (🧮)
+│       ├── learn/              # Learn tab: card finder, quiz, board trainer (+ views)
 │       └── tools/
 │           ├── dice-odds.js    # Probability calculator
 │           ├── starting-spot.js# Heuristic spot scorer
@@ -200,8 +203,17 @@ for f in src/data/*.json; do jq . "$f" > /dev/null || echo "Invalid JSON: $f"; d
 git --no-pager diff -- src/data/
 ```
 
+## Tests
+
+The Learn tab's logic (card search, quiz generation, board generation and scoring)
+is plain ES modules with unit tests using Node's built-in runner — no install needed:
+
+```bash
+node --test 'tests/**/*.test.mjs'
+```
+
 _Community reference — not affiliated with Catan Studio. See [DISCLAIMER.md](./DISCLAIMER.md) for full legal notice._
 
 ## Support This Project
 
-If you find this cheatsheet helpful, consider sponsoring its continued development via **[GitHub Sponsors](https://github.com/sponsors/Nikos-kts)**. Sponsorships help keep the project maintained and expanded with new languages and expansions.
+If you find this cheatsheet helpful, consider supporting its continued development via **[PayPal](https://www.paypal.com/donate/?hosted_button_id=VJVL67LPK7JTG)**. Donations help keep the project maintained and expanded with new languages and expansions.
