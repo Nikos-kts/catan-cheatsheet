@@ -97,22 +97,22 @@ Each expansion has a dedicated folder under `src/assets/images/`. Follow this wo
 ### Workflow
 
 1. **Fetch / download** the image (card art, board tile, token, etc.)
-2. **Rename** it clearly, using lowercase and hyphens (e.g. `ore-card.png`, `robber-token.png`)
+2. **Rename** it clearly, using lowercase and hyphens (e.g. `ore-card.webp`, `robber-token.webp`)
 3. **Drop** it into the correct expansion folder
 4. **Reference** it in `index.html` or inside a card definition:
    ```html
-   <img src="src/assets/images/basic/ore-card.png" alt="Ore card" />
+   <img src="src/assets/images/basic/ore-card.webp" alt="Ore card" />
    ```
    Or inside a JSON card entry:
    ```json
-   "image": "src/assets/images/seafarers/ship.png"
+   "image": "src/assets/images/seafarers/ship.webp"
    ```
 
 ### Naming conventions
 
 - Use lowercase letters, numbers and hyphens only — no spaces
-- Prefer descriptive names: `knight-card.png` over `img1.png`
-- Recommended formats: `.png` (transparency), `.webp` (smaller size), `.jpg` (photos)
+- Prefer descriptive names: `knight-card.webp` over `img1.webp`
+- Use `.webp` (small files, supports transparency). Keep images close to their display size — card art is shown at most 170px tall, so ~510px tall is plenty (existing cards are ~30 KB each); a 600 KB PNG per card makes the site slow on phones
 
 ## Adding a New Language
 

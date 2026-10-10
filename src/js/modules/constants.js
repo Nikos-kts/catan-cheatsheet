@@ -2,14 +2,14 @@
 
 // Game → cover image map
 export const GAME_IMAGE = {
-  base: "src/assets/images/basic/catan.png",
-  seafarers: "src/assets/images/seafarers/catan-seafarers.png",
+  base: "src/assets/images/basic/catan.webp",
+  seafarers: "src/assets/images/seafarers/catan-seafarers.webp",
   "cities-knights":
-    "src/assets/images/cities-and-knights/catan-cities-and-knights.png",
+    "src/assets/images/cities-and-knights/catan-cities-and-knights.webp",
   "traders-barbarians":
-    "src/assets/images/traders-and-barbarians/catan-traders-and-barbarians.png",
+    "src/assets/images/traders-and-barbarians/catan-traders-and-barbarians.webp",
   "explorers-pirates":
-    "src/assets/images/explorers-and-pirates/catan-explorers-and-pirates.png",
+    "src/assets/images/explorers-and-pirates/catan-explorers-and-pirates.webp",
 };
 
 // Game → official rules URL map

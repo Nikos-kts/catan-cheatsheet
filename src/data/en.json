@@ -188,7 +188,7 @@
               "id": "lumber",
               "type": "resource",
               "icon": "🌲",
-              "image": "src/assets/images/common/lumber.png",
+              "image": "src/assets/images/common/lumber.webp",
               "name": "Lumber",
               "count": 19,
               "description": "Produced by Forest hexes when their number is rolled.",
@@ -201,7 +201,7 @@
               "id": "brick",
               "type": "resource",
               "icon": "🧱",
-              "image": "src/assets/images/common/brick.png",
+              "image": "src/assets/images/common/brick.webp",
               "name": "Brick",
               "count": 19,
               "description": "Produced by Hills hexes when their number is rolled.",
@@ -214,7 +214,7 @@
               "id": "wool",
               "type": "resource",
               "icon": "🐑",
-              "image": "src/assets/images/common/wool.png",
+              "image": "src/assets/images/common/wool.webp",
               "name": "Wool",
               "count": 19,
               "description": "Produced by Pasture hexes when their number is rolled.",
@@ -227,7 +227,7 @@
               "id": "grain",
               "type": "resource",
               "icon": "🌾",
-              "image": "src/assets/images/common/grain.png",
+              "image": "src/assets/images/common/grain.webp",
               "name": "Grain",
               "count": 19,
               "description": "Produced by Fields hexes when their number is rolled.",
@@ -241,7 +241,7 @@
               "id": "ore",
               "type": "resource",
               "icon": "⛏️",
-              "image": "src/assets/images/common/ore.png",
+              "image": "src/assets/images/common/ore.webp",
               "name": "Ore",
               "count": 19,
               "description": "Produced by Mountain hexes when their number is rolled.",
@@ -261,7 +261,7 @@
               "id": "knight",
               "type": "development",
               "icon": "⚔️",
-              "image": "src/assets/images/basic/development-cards/knight.png",
+              "image": "src/assets/images/basic/development-cards/knight.webp",
               "name": "Knight",
               "count": 14,
               "description": "Move the Robber to any terrain hex. Steal one resource card from an adjacent opponent.",
@@ -274,7 +274,7 @@
               "id": "road-building",
               "type": "development",
               "icon": "🛤️",
-              "image": "src/assets/images/basic/development-cards/road-building.png",
+              "image": "src/assets/images/basic/development-cards/road-building.webp",
               "name": "Road Building",
               "count": 2,
               "description": "Place 2 new roads on the board as if you had just built them.",
@@ -287,7 +287,7 @@
               "id": "year-of-plenty",
               "type": "development",
               "icon": "🎁",
-              "image": "src/assets/images/basic/development-cards/year-of-plenty.png",
+              "image": "src/assets/images/basic/development-cards/year-of-plenty.webp",
               "name": "Year of Plenty (Invention)",
               "count": 2,
               "description": "Take any 2 resource cards from the bank. Add them to your hand.",
@@ -300,7 +300,7 @@
               "id": "monopoly",
               "type": "development",
               "icon": "💰",
-              "image": "src/assets/images/basic/development-cards/monopoly.png",
+              "image": "src/assets/images/basic/development-cards/monopoly.webp",
               "name": "Monopoly",
               "count": 2,
               "description": "Name any resource type. All other players must give you all of their cards of that type.",
@@ -313,7 +313,7 @@
               "id": "chapel",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/chappel.png",
+              "image": "src/assets/images/basic/development-cards/chappel.webp",
               "name": "Chapel",
               "count": 1,
               "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
@@ -326,7 +326,7 @@
               "id": "great-hall",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/great-hall.png",
+              "image": "src/assets/images/basic/development-cards/great-hall.webp",
               "name": "Great Hall",
               "count": 1,
               "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
@@ -339,7 +339,7 @@
               "id": "library",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/library.png",
+              "image": "src/assets/images/basic/development-cards/library.webp",
               "name": "Library",
               "count": 1,
               "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
@@ -352,7 +352,7 @@
               "id": "market",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/market.png",
+              "image": "src/assets/images/basic/development-cards/market.webp",
               "name": "Market",
               "count": 1,
               "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
@@ -365,7 +365,7 @@
               "id": "university",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/university.png",
+              "image": "src/assets/images/basic/development-cards/university.webp",
               "name": "University",
               "count": 1,
               "description": "Worth 1 Victory Point. Kept secret until you reveal it to win (or until the game ends).",
@@ -385,7 +385,7 @@
               "id": "longest-road",
               "type": "special",
               "icon": "🛣️",
-              "image": "src/assets/images/basic/longest-road.png",
+              "image": "src/assets/images/basic/longest-road.webp",
               "name": "Longest Road (Longest Route)",
               "description": "Awarded to the first player with a continuous road of 5+ segments. Worth 2 Victory Points. Another player can steal it by building a longer road.",
               "usages": [
@@ -397,7 +397,7 @@
               "id": "largest-army",
               "type": "special",
               "icon": "🪖",
-              "image": "src/assets/images/basic/longest-army.png",
+              "image": "src/assets/images/basic/longest-army.webp",
               "name": "Largest Army",
               "description": "Awarded to the first player who plays 3 Knight cards. Worth 2 Victory Points. Another player can steal it by playing more Knights.",
               "usages": [
@@ -416,7 +416,7 @@
               "id": "building-cost-card",
               "type": "resource",
               "icon": "🔨",
-              "image": "src/assets/images/common/building-cost.png",
+              "image": "src/assets/images/common/building-cost.webp",
               "name": "Building Cost Card",
               "description": "Reference card showing all construction costs in Catan.",
               "usages": [
@@ -513,8 +513,8 @@
             "name": "Road",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.webp", "qty": 1 }
             ],
             "note": "Must connect to your network. Max 15 per player."
           },
@@ -524,10 +524,10 @@
             "name": "Settlement",
             "vp": "1 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 },
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.webp", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 1 }
             ],
             "note": "Respect the 2-edge distance rule. Max 5 per player."
           },
@@ -537,8 +537,8 @@
             "name": "City",
             "vp": "2 VP",
             "cost": [
-              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 3 },
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 2 }
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.webp", "qty": 3 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 2 }
             ],
             "note": "Upgrades a settlement; produces 2 resources per roll. Max 4 per player."
           },
@@ -548,9 +548,9 @@
             "name": "Development Card",
             "vp": "—",
             "cost": [
-              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 1 },
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 },
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 }
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.webp", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 }
             ],
             "note": "Cannot be played on the turn bought (except VP cards on a winning turn)."
           }
@@ -1067,8 +1067,8 @@
             "name": "Road",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.webp", "qty": 1 }
             ],
             "note": "Max 15 per player. Can't share a coastal edge with a ship; links to ships only at your settlement/city."
           },
@@ -1078,8 +1078,8 @@
             "name": "Ship",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 }
             ],
             "note": "Max 15 per player. You may move 1 open-end ship per turn."
           },
@@ -1089,10 +1089,10 @@
             "name": "Settlement",
             "vp": "1 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 },
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.webp", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 1 }
             ],
             "note": "Distance rule applies on every island. Max 5 per player. Your first on a new island may earn bonus VP (scenario rules)."
           },
@@ -1102,8 +1102,8 @@
             "name": "City",
             "vp": "2 VP",
             "cost": [
-              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 3 },
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 2 }
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.webp", "qty": 3 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 2 }
             ],
             "note": "Upgrades a settlement. Produces 2 per hex; 2 of your choice from a gold field. Max 4 per player."
           },
@@ -1113,9 +1113,9 @@
             "name": "Development Card",
             "vp": "—",
             "cost": [
-              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 1 },
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 },
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 }
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.webp", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 }
             ],
             "note": "Knight moves the Robber OR the Pirate; Road Building can place ships too."
           }
@@ -1275,7 +1275,7 @@
               "id": "cloth",
               "type": "commodity",
               "icon": "🧵",
-              "image": "src/assets/images/cities-and-knights/commodities/textile.png",
+              "image": "src/assets/images/cities-and-knights/commodities/textile.webp",
               "name": "Cloth",
               "description": "Commodity produced by cities on Pasture hexes. Used to advance in the Trade column of city improvements.",
               "usages": [
@@ -1287,7 +1287,7 @@
               "id": "coin",
               "type": "commodity",
               "icon": "🪙",
-              "image": "src/assets/images/cities-and-knights/commodities/coin.png",
+              "image": "src/assets/images/cities-and-knights/commodities/coin.webp",
               "name": "Coin",
               "description": "Commodity produced by upgraded Mountain cities. Used to advance in the Politics column.",
               "usages": [
@@ -1299,7 +1299,7 @@
               "id": "paper",
               "type": "commodity",
               "icon": "📜",
-              "image": "src/assets/images/cities-and-knights/commodities/paper.png",
+              "image": "src/assets/images/cities-and-knights/commodities/paper.webp",
               "name": "Paper",
               "description": "Commodity produced by upgraded Forest cities. Used to advance in the Science column.",
               "usages": [
@@ -1324,7 +1324,7 @@
                   "id": "commercial-harbor",
                   "type": "progress-trade",
                   "icon": "⚓",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.webp",
                   "name": "Commercial Harbor",
                   "count": 2,
                   "description": "Each opponent must choose a commodity card from their hand and give it to you in exchange for a resource card of your choice from your hand.",
@@ -1337,7 +1337,7 @@
                   "id": "master-merchant",
                   "type": "progress-trade",
                   "icon": "🧑‍💼",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.webp",
                   "name": "Master Merchant (Guild Dues)",
                   "count": 2,
                   "description": "Look at the hand cards of an opponent who has more victory points than you. Take 2 resource or commodity cards of your choice from that hand.",
@@ -1350,7 +1350,7 @@
                   "id": "merchant",
                   "type": "progress-trade",
                   "icon": "🏪",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.webp",
                   "name": "Merchant",
                   "count": 6,
                   "description": "Place the Merchant on any land hex adjacent to one of your settlements or cities. While you hold the Merchant, you trade that hex's resource at 2:1. Worth 1 VP.",
@@ -1363,7 +1363,7 @@
                   "id": "merchant-fleet",
                   "type": "progress-trade",
                   "icon": "🚢",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.webp",
                   "name": "Merchant Fleet",
                   "count": 2,
                   "description": "Select 1 type of resource or commodity. For the remainder of this turn, you may trade 2 of that type for any 1 other resource or commodity.",
@@ -1376,7 +1376,7 @@
                   "id": "resource-monopoly",
                   "type": "progress-trade",
                   "icon": "💎",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.webp",
                   "name": "Resource Monopoly",
                   "count": 4,
                   "description": "Name 1 resource type. Each opponent must give you 2 cards of that resource if they have them; a player with only 1 must give that 1.",
@@ -1389,7 +1389,7 @@
                   "id": "trade-monopoly",
                   "type": "progress-trade",
                   "icon": "📊",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.webp",
                   "name": "Trade Monopoly",
                   "count": 2,
                   "description": "Name 1 commodity type. Each opponent who has 1 or more of that commodity must give you exactly 1 of them.",
@@ -1410,7 +1410,7 @@
                   "id": "alchemist",
                   "type": "progress-science",
                   "icon": "⚗️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.webp",
                   "name": "Alchemist (Alchemy)",
                   "count": 2,
                   "description": "Before rolling the dice on your turn, choose the result of the production dice (both numbers). The event die is still rolled normally.",
@@ -1423,7 +1423,7 @@
                   "id": "crane",
                   "type": "progress-science",
                   "icon": "🏗️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.webp",
                   "name": "Crane",
                   "count": 2,
                   "description": "This turn, you may build one city improvement for 1 fewer commodity than the normal cost.",
@@ -1436,7 +1436,7 @@
                   "id": "engineer",
                   "type": "progress-science",
                   "icon": "🔧",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.webp",
                   "name": "Engineer (Engineering)",
                   "count": 1,
                   "description": "Build 1 city wall for free (no resources required). Place it under one of your cities.",
@@ -1449,7 +1449,7 @@
                   "id": "inventor",
                   "type": "progress-science",
                   "icon": "💡",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.webp",
                   "name": "Inventor (Invention)",
                   "count": 2,
                   "description": "Swap 2 number tokens on the board. You may not swap the tokens with the numbers 2, 6, 8, or 12.",
@@ -1462,7 +1462,7 @@
                   "id": "irrigation",
                   "type": "progress-science",
                   "icon": "💧",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.webp",
                   "name": "Irrigation",
                   "count": 2,
                   "description": "Take 2 grain cards from the bank for each field hex adjacent to at least one of your buildings.",
@@ -1475,7 +1475,7 @@
                   "id": "medicine",
                   "type": "progress-science",
                   "icon": "💊",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.webp",
                   "name": "Medicine",
                   "count": 2,
                   "description": "This turn, you may upgrade one settlement to a city at a reduced cost: only 2 Ore + 1 Grain (instead of 3 Ore + 2 Grain).",
@@ -1488,7 +1488,7 @@
                   "id": "mining",
                   "type": "progress-science",
                   "icon": "⛏️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.webp",
                   "name": "Mining",
                   "count": 2,
                   "description": "Take 2 ore cards from the bank for each mountain hex adjacent to at least one of your buildings.",
@@ -1501,7 +1501,7 @@
                   "id": "printer",
                   "type": "progress-science",
                   "icon": "🖨️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.webp",
                   "name": "Printer (Printing)",
                   "count": 1,
                   "description": "Worth 1 Victory Point. This card remains face-up in front of you for the rest of the game.",
@@ -1514,7 +1514,7 @@
                   "id": "road-building",
                   "type": "progress-science",
                   "icon": "🛤️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.webp",
                   "name": "Road Building",
                   "count": 2,
                   "description": "Place 2 roads on the board for free, as if you had just built them.",
@@ -1527,7 +1527,7 @@
                   "id": "smith",
                   "type": "progress-science",
                   "icon": "🔨",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.webp",
                   "name": "Smith (Smithing)",
                   "count": 2,
                   "description": "Promote up to 2 of your knights for free (e.g., Basic → Strong, or Strong → Mighty).",
@@ -1548,7 +1548,7 @@
                   "id": "bishop",
                   "type": "progress-politics",
                   "icon": "⛪",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.webp",
                   "name": "Bishop (Taxation)",
                   "count": 2,
                   "description": "Move the robber to a new hex. Steal 1 random card (resource or commodity) from each opponent with a building on the robber's new hex.",
@@ -1561,7 +1561,7 @@
                   "id": "constitution",
                   "type": "progress-politics",
                   "icon": "📜",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.webp",
                   "name": "Constitution",
                   "count": 1,
                   "description": "Worth 1 Victory Point. This card remains face-up in front of you for the rest of the game.",
@@ -1574,7 +1574,7 @@
                   "id": "deserter",
                   "type": "progress-politics",
                   "icon": "🏃",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.webp",
                   "name": "Deserter (Treason)",
                   "count": 2,
                   "description": "Choose another player; they must remove one of their knights from the board. You may then place one of your knights of equal or lower strength.",
@@ -1587,7 +1587,7 @@
                   "id": "diplomat",
                   "type": "progress-politics",
                   "icon": "🤝",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.webp",
                   "name": "Diplomat (Diplomacy)",
                   "count": 2,
                   "description": "Remove any open road (a road with at least one end not connected to another road, settlement, or city). If it is your own road, you may immediately place it elsewhere for free.",
@@ -1600,7 +1600,7 @@
                   "id": "intrigue",
                   "type": "progress-politics",
                   "icon": "🗡️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.webp",
                   "name": "Intrigue",
                   "count": 2,
                   "description": "Displace an opponent's knight without using one of your own knights. The target knight must be on an intersection connected to one of your routes; the opponent then moves it to a legal intersection or removes it.",
@@ -1613,7 +1613,7 @@
                   "id": "saboteur",
                   "type": "progress-politics",
                   "icon": "💣",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.webp",
                   "name": "Saboteur (Sabotage)",
                   "count": 2,
                   "description": "Each opponent with equal or more victory points than you must discard half of their hand cards (rounded down).",
@@ -1626,7 +1626,7 @@
                   "id": "spy",
                   "type": "progress-politics",
                   "icon": "🕵️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.webp",
                   "name": "Spy (Espionage)",
                   "count": 3,
                   "description": "Look at an opponent's hand of progress cards and steal 1 of your choice.",
@@ -1639,7 +1639,7 @@
                   "id": "warlord",
                   "type": "progress-politics",
                   "icon": "⚔️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.webp",
                   "name": "Warlord (Encouragement)",
                   "count": 2,
                   "description": "Activate all of your knights for free (without paying the usual grain cost).",
@@ -1652,7 +1652,7 @@
                   "id": "wedding",
                   "type": "progress-politics",
                   "icon": "💒",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.webp",
                   "name": "Wedding",
                   "count": 2,
                   "description": "Each opponent with more victory points than you must give you 2 resource or commodity cards of their choice.",
@@ -1744,11 +1744,11 @@
             "detail": "Production dice determines resources. Event dice advances barbarians or triggers progress card draws.",
             "images": [
               {
-                "src": "src/assets/images/common/roll-dice.png",
+                "src": "src/assets/images/common/roll-dice.webp",
                 "alt": "Roll Dice"
               },
               {
-                "src": "src/assets/images/cities-and-knights/event-dice.png",
+                "src": "src/assets/images/cities-and-knights/event-dice.webp",
                 "alt": "Event Dice"
               }
             ]
@@ -1829,8 +1829,8 @@
             "name": "Road",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.webp", "qty": 1 }
             ],
             "note": "Must connect to your network. Max 15 per player."
           },
@@ -1840,10 +1840,10 @@
             "name": "Settlement",
             "vp": "1 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 },
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.webp", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 1 }
             ],
             "note": "Respect the 2-edge distance rule. Max 5 per player."
           },
@@ -1853,8 +1853,8 @@
             "name": "City",
             "vp": "2 VP",
             "cost": [
-              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 3 },
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 2 }
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.webp", "qty": 3 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 2 }
             ],
             "note": "Upgrades a settlement. Next to forest, pasture or mountains it yields 1 resource + 1 commodity; next to hills or fields, 2 resources. Max 4 per player."
           },
@@ -1864,7 +1864,7 @@
             "name": "City Wall",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 2 }
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.webp", "qty": 2 }
             ],
             "note": "Only under a city (1 per city, max 3). Each wall adds 2 to your hand limit on a 7; lost if its city is pillaged."
           },
@@ -1874,8 +1874,8 @@
             "name": "Knight",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
-              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 1 }
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 },
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.webp", "qty": 1 }
             ],
             "note": "A basic knight, placed inactive on an empty intersection connected to your roads."
           },
@@ -1885,8 +1885,8 @@
             "name": "Promote Knight",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
-              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 1 }
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 },
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.webp", "qty": 1 }
             ],
             "note": "Basic → strong, or strong → mighty (mighty needs Politics 3). Keeps its active/inactive side."
           },
@@ -1896,7 +1896,7 @@
             "name": "Activate Knight",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 1 }
             ],
             "note": "Same cost for every level. A knight can't act on the turn it is activated."
           }
@@ -2831,8 +2831,8 @@
             "name": "Road",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.webp", "qty": 1 }
             ],
             "note": "Only on explored land. No Longest Road (Longest Route) card in E&P."
           },
@@ -2842,10 +2842,10 @@
             "name": "Settlement",
             "vp": "1 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 },
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.webp", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 1 }
             ],
             "note": "Build along your road, or place one free by landing a settler. Distance rule applies."
           },
@@ -2855,8 +2855,8 @@
             "name": "Harbor Settlement",
             "vp": "2 VP",
             "cost": [
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 2 },
-              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 2 }
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 2 },
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.webp", "qty": 2 }
             ],
             "note": "Replaces one of your coastal settlements. Collects 1 resource. Max 4 per player."
           },
@@ -2866,8 +2866,8 @@
             "name": "Ship",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 }
             ],
             "note": "Build next to your harbor settlement. 4 MP per turn. Max 2 per edge, 3 per player."
           },
@@ -2877,7 +2877,7 @@
             "name": "Extra Ship Move",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 }
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 }
             ],
             "note": "+2 MP for one ship. Once per ship per turn."
           },
@@ -2887,10 +2887,10 @@
             "name": "Settler",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.png", "qty": 1 },
-              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.png", "qty": 1 },
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
-              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.png", "qty": 1 }
+              { "resource": "Lumber", "icon": "🌲", "image": "src/assets/images/common/lumber.webp", "qty": 1 },
+              { "resource": "Brick", "icon": "🧱", "image": "src/assets/images/common/brick.webp", "qty": 1 },
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 },
+              { "resource": "Grain", "icon": "🌾", "image": "src/assets/images/common/grain.webp", "qty": 1 }
             ],
             "note": "Placed in a harbor settlement or adjacent ship. Land it to place a free settlement."
           },
@@ -2900,8 +2900,8 @@
             "name": "Crew",
             "vp": "0 VP",
             "cost": [
-              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.png", "qty": 1 },
-              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.png", "qty": 1 }
+              { "resource": "Wool", "icon": "🐑", "image": "src/assets/images/common/wool.webp", "qty": 1 },
+              { "resource": "Ore", "icon": "⛏️", "image": "src/assets/images/common/ore.webp", "qty": 1 }
             ],
             "note": "Captures pirate lairs and works spice hexes."
           }

@@ -105,7 +105,7 @@
               "id": "lumber",
               "type": "resource",
               "icon": "🌲",
-              "image": "src/assets/images/common/lumber.png",
+              "image": "src/assets/images/common/lumber.webp",
               "name": "Ξύλο",
               "count": 19,
               "description": "Παράγεται από τα εξάγωνα δάσους όταν έρθει ο αριθμός τους.",
@@ -118,7 +118,7 @@
               "id": "brick",
               "type": "resource",
               "icon": "🧱",
-              "image": "src/assets/images/common/brick.png",
+              "image": "src/assets/images/common/brick.webp",
               "name": "Πηλός",
               "count": 19,
               "description": "Παράγεται από τα εξάγωνα λόφων όταν έρθει ο αριθμός τους.",
@@ -131,7 +131,7 @@
               "id": "wool",
               "type": "resource",
               "icon": "🐑",
-              "image": "src/assets/images/common/wool.png",
+              "image": "src/assets/images/common/wool.webp",
               "name": "Μαλλί",
               "count": 19,
               "description": "Παράγεται από τα εξάγωνα λιβαδιών όταν έρθει ο αριθμός τους.",
@@ -144,7 +144,7 @@
               "id": "grain",
               "type": "resource",
               "icon": "🌾",
-              "image": "src/assets/images/common/grain.png",
+              "image": "src/assets/images/common/grain.webp",
               "name": "Σιτάρι",
               "count": 19,
               "description": "Παράγεται από τα εξάγωνα χωραφιών όταν έρθει ο αριθμός τους.",
@@ -158,7 +158,7 @@
               "id": "ore",
               "type": "resource",
               "icon": "⛏️",
-              "image": "src/assets/images/common/ore.png",
+              "image": "src/assets/images/common/ore.webp",
               "name": "Πέτρα",
               "count": 19,
               "description": "Παράγεται από τα εξάγωνα βουνών όταν έρθει ο αριθμός τους.",
@@ -178,7 +178,7 @@
               "id": "knight",
               "type": "development",
               "icon": "⚔️",
-              "image": "src/assets/images/basic/development-cards/knight.png",
+              "image": "src/assets/images/basic/development-cards/knight.webp",
               "name": "Ιππότης",
               "count": 14,
               "description": "Μετακίνησε τον Ληστή σε οποιοδήποτε εξάγωνο γης. Κλέψε μία κάρτα πρώτης ύλης από έναν αντίπαλο που γειτονεύει με αυτό.",
@@ -191,7 +191,7 @@
               "id": "road-building",
               "type": "development",
               "icon": "🛤️",
-              "image": "src/assets/images/basic/development-cards/road-building.png",
+              "image": "src/assets/images/basic/development-cards/road-building.webp",
               "name": "Κατασκευή Δρόμων",
               "count": 2,
               "description": "Τοποθέτησε 2 νέους δρόμους στο ταμπλό σαν να τους είχες μόλις χτίσει.",
@@ -204,7 +204,7 @@
               "id": "year-of-plenty",
               "type": "development",
               "icon": "🎁",
-              "image": "src/assets/images/basic/development-cards/year-of-plenty.png",
+              "image": "src/assets/images/basic/development-cards/year-of-plenty.webp",
               "name": "Χρονιά Αφθονίας (Invention)",
               "count": 2,
               "description": "Πάρε οποιεσδήποτε 2 κάρτες πρώτων υλών από την τράπεζα. Πρόσθεσέ τες στο χέρι σου.",
@@ -217,7 +217,7 @@
               "id": "monopoly",
               "type": "development",
               "icon": "💰",
-              "image": "src/assets/images/basic/development-cards/monopoly.png",
+              "image": "src/assets/images/basic/development-cards/monopoly.webp",
               "name": "Μονοπώλιο",
               "count": 2,
               "description": "Δήλωσε ένα είδος πρώτης ύλης. Όλοι οι άλλοι παίκτες πρέπει να σου δώσουν όλες τις κάρτες τους αυτού του είδους.",
@@ -230,7 +230,7 @@
               "id": "chapel",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/chappel.png",
+              "image": "src/assets/images/basic/development-cards/chappel.webp",
               "name": "Παρεκκλήσι",
               "count": 1,
               "description": "Αξίζει 1 πόντο νίκης. Την κρατάς κρυφή μέχρι να την αποκαλύψεις για να νικήσεις (ή μέχρι το τέλος του παιχνιδιού).",
@@ -243,7 +243,7 @@
               "id": "great-hall",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/great-hall.png",
+              "image": "src/assets/images/basic/development-cards/great-hall.webp",
               "name": "Μεγάλη Αίθουσα",
               "count": 1,
               "description": "Αξίζει 1 πόντο νίκης. Την κρατάς κρυφή μέχρι να την αποκαλύψεις για να νικήσεις (ή μέχρι το τέλος του παιχνιδιού).",
@@ -256,7 +256,7 @@
               "id": "library",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/library.png",
+              "image": "src/assets/images/basic/development-cards/library.webp",
               "name": "Βιβλιοθήκη",
               "count": 1,
               "description": "Αξίζει 1 πόντο νίκης. Την κρατάς κρυφή μέχρι να την αποκαλύψεις για να νικήσεις (ή μέχρι το τέλος του παιχνιδιού).",
@@ -269,7 +269,7 @@
               "id": "market",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/market.png",
+              "image": "src/assets/images/basic/development-cards/market.webp",
               "name": "Αγορά",
               "count": 1,
               "description": "Αξίζει 1 πόντο νίκης. Την κρατάς κρυφή μέχρι να την αποκαλύψεις για να νικήσεις (ή μέχρι το τέλος του παιχνιδιού).",
@@ -282,7 +282,7 @@
               "id": "university",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/university.png",
+              "image": "src/assets/images/basic/development-cards/university.webp",
               "name": "Πανεπιστήμιο",
               "count": 1,
               "description": "Αξίζει 1 πόντο νίκης. Την κρατάς κρυφή μέχρι να την αποκαλύψεις για να νικήσεις (ή μέχρι το τέλος του παιχνιδιού).",
@@ -302,7 +302,7 @@
               "id": "longest-road",
               "type": "special",
               "icon": "🛣️",
-              "image": "src/assets/images/basic/longest-road.png",
+              "image": "src/assets/images/basic/longest-road.webp",
               "name": "Μεγαλύτερος Δρόμος (Μεγαλύτερη Διαδρομή)",
               "description": "Απονέμεται στον πρώτο παίκτη με συνεχόμενο δρόμο 5+ τμημάτων. Αξίζει 2 πόντους νίκης. Άλλος παίκτης μπορεί να τον κλέψει χτίζοντας μεγαλύτερο δρόμο.",
               "usages": [
@@ -314,7 +314,7 @@
               "id": "largest-army",
               "type": "special",
               "icon": "🪖",
-              "image": "src/assets/images/basic/longest-army.png",
+              "image": "src/assets/images/basic/longest-army.webp",
               "name": "Μεγαλύτερος Στρατός",
               "description": "Απονέμεται στον πρώτο παίκτη που θα παίξει 3 κάρτες Ιππότη. Αξίζει 2 πόντους νίκης. Άλλος παίκτης μπορεί να τον κλέψει παίζοντας περισσότερους Ιππότες.",
               "usages": [
@@ -333,7 +333,7 @@
               "id": "building-cost-card",
               "type": "resource",
               "icon": "🔨",
-              "image": "src/assets/images/common/building-cost.png",
+              "image": "src/assets/images/common/building-cost.webp",
               "name": "Πίνακας Κόστους Κατασκευής",
               "description": "Κάρτα αναφοράς με όλα τα κόστη κατασκευής στο Κατάν.",
               "usages": [
@@ -433,13 +433,13 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Πηλός",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -454,25 +454,25 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Πηλός",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -487,13 +487,13 @@
               {
                 "resource": "Πέτρα",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 3
               },
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               }
             ],
@@ -508,19 +508,19 @@
               {
                 "resource": "Πέτρα",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               },
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               },
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -1028,13 +1028,13 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Πηλός",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -1049,13 +1049,13 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -1070,25 +1070,25 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Πηλός",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -1103,13 +1103,13 @@
               {
                 "resource": "Πέτρα",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 3
               },
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               }
             ],
@@ -1124,19 +1124,19 @@
               {
                 "resource": "Πέτρα",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               },
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               },
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -1274,7 +1274,7 @@
               "id": "cloth",
               "type": "commodity",
               "icon": "🧵",
-              "image": "src/assets/images/cities-and-knights/commodities/textile.png",
+              "image": "src/assets/images/cities-and-knights/commodities/textile.webp",
               "name": "Ύφασμα",
               "description": "Εμπόρευμα που παράγουν οι πόλεις σε εξάγωνα Λιβαδιών. Χρησιμοποιείται για να προχωρήσεις στη στήλη Εμπορίου των βελτιώσεων πόλης.",
               "usages": [
@@ -1286,7 +1286,7 @@
               "id": "coin",
               "type": "commodity",
               "icon": "🪙",
-              "image": "src/assets/images/cities-and-knights/commodities/coin.png",
+              "image": "src/assets/images/cities-and-knights/commodities/coin.webp",
               "name": "Νόμισμα",
               "description": "Εμπόρευμα από αναβαθμισμένες πόλεις σε Βουνά. Χρησιμοποιείται για τη στήλη Πολιτικής.",
               "usages": [
@@ -1298,7 +1298,7 @@
               "id": "paper",
               "type": "commodity",
               "icon": "📜",
-              "image": "src/assets/images/cities-and-knights/commodities/paper.png",
+              "image": "src/assets/images/cities-and-knights/commodities/paper.webp",
               "name": "Χαρτί",
               "description": "Εμπόρευμα από αναβαθμισμένες πόλεις σε Δάση. Χρησιμοποιείται για τη στήλη Επιστήμης.",
               "usages": [
@@ -1323,7 +1323,7 @@
                   "id": "commercial-harbor",
                   "type": "progress-trade",
                   "icon": "⚓",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.webp",
                   "name": "Εμπορικό Λιμάνι",
                   "count": 2,
                   "description": "Κάθε αντίπαλος πρέπει να διαλέξει μια κάρτα εμπορεύματος από το χέρι του και να σου τη δώσει με αντάλλαγμα μια κάρτα πρώτης ύλης της επιλογής σου από το δικό σου χέρι.",
@@ -1336,7 +1336,7 @@
                   "id": "master-merchant",
                   "type": "progress-trade",
                   "icon": "🧑‍💼",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.webp",
                   "name": "Μεγάλος Έμπορος (Guild Dues)",
                   "count": 2,
                   "description": "Δες τις κάρτες στο χέρι ενός αντιπάλου με περισσότερους πόντους νίκης από εσένα. Πάρε από αυτό το χέρι 2 κάρτες πρώτων υλών ή εμπορευμάτων της επιλογής σου.",
@@ -1349,7 +1349,7 @@
                   "id": "merchant",
                   "type": "progress-trade",
                   "icon": "🏪",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.webp",
                   "name": "Έμπορος",
                   "count": 6,
                   "description": "Τοποθέτησε τον Έμπορο σε οποιοδήποτε εξάγωνο γης δίπλα σε έναν οικισμό ή μια πόλη σου. Όσο έχεις τον Έμπορο, ανταλλάσσεις την πρώτη ύλη αυτού του εξαγώνου με αναλογία 2:1. Αξίζει 1 ΠΝ.",
@@ -1362,7 +1362,7 @@
                   "id": "merchant-fleet",
                   "type": "progress-trade",
                   "icon": "🚢",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.webp",
                   "name": "Εμπορικός Στόλος",
                   "count": 2,
                   "description": "Διάλεξε 1 είδος πρώτης ύλης ή εμπορεύματος. Για τον υπόλοιπο γύρο σου, μπορείς να ανταλλάσσεις 2 κάρτες αυτού του είδους με οποιαδήποτε 1 άλλη πρώτη ύλη ή εμπόρευμα.",
@@ -1375,7 +1375,7 @@
                   "id": "resource-monopoly",
                   "type": "progress-trade",
                   "icon": "💎",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.webp",
                   "name": "Μονοπώλιο Πρώτων Υλών",
                   "count": 4,
                   "description": "Δήλωσε 1 είδος πρώτης ύλης. Κάθε αντίπαλος πρέπει να σου δώσει 2 κάρτες αυτής της πρώτης ύλης, αν τις έχει· όποιος έχει μόνο 1 σου δίνει αυτή τη 1.",
@@ -1388,7 +1388,7 @@
                   "id": "trade-monopoly",
                   "type": "progress-trade",
                   "icon": "📊",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.webp",
                   "name": "Μονοπώλιο Εμπορίου",
                   "count": 2,
                   "description": "Δήλωσε 1 είδος εμπορεύματος. Κάθε αντίπαλος που έχει 1 ή περισσότερα από αυτό το εμπόρευμα πρέπει να σου δώσει ακριβώς 1.",
@@ -1409,7 +1409,7 @@
                   "id": "alchemist",
                   "type": "progress-science",
                   "icon": "⚗️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.webp",
                   "name": "Αλχημιστής (Alchemy)",
                   "count": 2,
                   "description": "Πριν ρίξεις τα ζάρια στον γύρο σου, διάλεξε το αποτέλεσμα των ζαριών παραγωγής (και τους δύο αριθμούς). Το ζάρι γεγονότων ρίχνεται κανονικά.",
@@ -1422,7 +1422,7 @@
                   "id": "crane",
                   "type": "progress-science",
                   "icon": "🏗️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.webp",
                   "name": "Γερανός",
                   "count": 2,
                   "description": "Σε αυτόν τον γύρο, μπορείς να χτίσεις μία βελτίωση πόλης με 1 εμπόρευμα λιγότερο από το κανονικό κόστος.",
@@ -1435,7 +1435,7 @@
                   "id": "engineer",
                   "type": "progress-science",
                   "icon": "🔧",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.webp",
                   "name": "Μηχανικός (Engineering)",
                   "count": 1,
                   "description": "Χτίσε 1 τείχος πόλης δωρεάν (χωρίς πρώτες ύλες). Τοποθέτησέ το κάτω από μία από τις πόλεις σου.",
@@ -1448,7 +1448,7 @@
                   "id": "inventor",
                   "type": "progress-science",
                   "icon": "💡",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.webp",
                   "name": "Εφευρέτης (Invention)",
                   "count": 2,
                   "description": "Αντάλλαξε μεταξύ τους 2 αριθμημένους δείκτες στο ταμπλό. Δεν επιτρέπεται να ανταλλάξεις τους δείκτες με τους αριθμούς 2, 6, 8 ή 12.",
@@ -1461,7 +1461,7 @@
                   "id": "irrigation",
                   "type": "progress-science",
                   "icon": "💧",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.webp",
                   "name": "Άρδευση",
                   "count": 2,
                   "description": "Πάρε από την τράπεζα 2 κάρτες Σιταριού για κάθε εξάγωνο χωραφιών δίπλα σε τουλάχιστον ένα κτίριό σου.",
@@ -1474,7 +1474,7 @@
                   "id": "medicine",
                   "type": "progress-science",
                   "icon": "💊",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.webp",
                   "name": "Ιατρική",
                   "count": 2,
                   "description": "Σε αυτόν τον γύρο, μπορείς να αναβαθμίσεις έναν οικισμό σε πόλη με μειωμένο κόστος: μόνο 2 Πέτρα + 1 Σιτάρι (αντί για 3 Πέτρα + 2 Σιτάρι).",
@@ -1487,7 +1487,7 @@
                   "id": "mining",
                   "type": "progress-science",
                   "icon": "⛏️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.webp",
                   "name": "Εξόρυξη",
                   "count": 2,
                   "description": "Πάρε από την τράπεζα 2 κάρτες Πέτρας για κάθε εξάγωνο βουνών δίπλα σε τουλάχιστον ένα κτίριό σου.",
@@ -1500,7 +1500,7 @@
                   "id": "printer",
                   "type": "progress-science",
                   "icon": "🖨️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.webp",
                   "name": "Τυπογράφος (Printing)",
                   "count": 1,
                   "description": "Αξίζει 1 Πόντο Νίκης. Αυτή η κάρτα μένει ανοιχτή μπροστά σου για το υπόλοιπο του παιχνιδιού.",
@@ -1513,7 +1513,7 @@
                   "id": "road-building",
                   "type": "progress-science",
                   "icon": "🛤️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.webp",
                   "name": "Κατασκευή Δρόμων",
                   "count": 2,
                   "description": "Τοποθέτησε 2 δρόμους στο ταμπλό δωρεάν, σαν να τους είχες μόλις χτίσει.",
@@ -1526,7 +1526,7 @@
                   "id": "smith",
                   "type": "progress-science",
                   "icon": "🔨",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.webp",
                   "name": "Σιδηρουργός (Smithing)",
                   "count": 2,
                   "description": "Αναβάθμισε έως 2 από τους ιππότες σου δωρεάν (π.χ. Απλός → Δυνατός ή Δυνατός → Ισχυρός).",
@@ -1547,7 +1547,7 @@
                   "id": "bishop",
                   "type": "progress-politics",
                   "icon": "⛪",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.webp",
                   "name": "Επίσκοπος (Taxation)",
                   "count": 2,
                   "description": "Μετακίνησε τον Ληστή σε νέο εξάγωνο. Κλέψε 1 τυχαία κάρτα (πρώτη ύλη ή εμπόρευμα) από κάθε αντίπαλο με κτίριο στο νέο εξάγωνο του Ληστή.",
@@ -1560,7 +1560,7 @@
                   "id": "constitution",
                   "type": "progress-politics",
                   "icon": "📜",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.webp",
                   "name": "Σύνταγμα",
                   "count": 1,
                   "description": "Αξίζει 1 Πόντο Νίκης. Μένει ανοιχτή μπροστά σου για το υπόλοιπο του παιχνιδιού.",
@@ -1573,7 +1573,7 @@
                   "id": "deserter",
                   "type": "progress-politics",
                   "icon": "🏃",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.webp",
                   "name": "Λιποτάκτης (Treason)",
                   "count": 2,
                   "description": "Διάλεξε έναν αντίπαλο· πρέπει να αφαιρέσει έναν ιππότη του από το ταμπλό. Μετά μπορείς να τοποθετήσεις έναν δικό σου ιππότη ίσης ή μικρότερης δύναμης.",
@@ -1586,7 +1586,7 @@
                   "id": "diplomat",
                   "type": "progress-politics",
                   "icon": "🤝",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.webp",
                   "name": "Διπλωμάτης (Diplomacy)",
                   "count": 2,
                   "description": "Αφαίρεσε οποιονδήποτε ανοιχτό δρόμο (δρόμο που τουλάχιστον η μία άκρη του δεν συνδέεται με άλλον δρόμο, οικισμό ή πόλη). Αν είναι δικός σου, μπορείς να τον τοποθετήσεις αμέσως αλλού δωρεάν.",
@@ -1599,7 +1599,7 @@
                   "id": "intrigue",
                   "type": "progress-politics",
                   "icon": "🗡️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.webp",
                   "name": "Δολοπλοκία",
                   "count": 2,
                   "description": "Εκτόπισε έναν ιππότη αντιπάλου χωρίς να χρησιμοποιήσεις δικό σου ιππότη. Ο ιππότης-στόχος πρέπει να βρίσκεται σε διασταύρωση συνδεδεμένη με έναν από τους δρόμους σου· ο αντίπαλος τον μετακινεί σε επιτρεπτή διασταύρωση ή τον αφαιρεί.",
@@ -1612,7 +1612,7 @@
                   "id": "saboteur",
                   "type": "progress-politics",
                   "icon": "💣",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.webp",
                   "name": "Σαμποτέρ (Sabotage)",
                   "count": 2,
                   "description": "Κάθε αντίπαλος με ίσους ή περισσότερους πόντους νίκης από σένα πρέπει να πετάξει τις μισές κάρτες από το χέρι του (στρογγυλοποίηση προς τα κάτω).",
@@ -1625,7 +1625,7 @@
                   "id": "spy",
                   "type": "progress-politics",
                   "icon": "🕵️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.webp",
                   "name": "Κατάσκοπος (Espionage)",
                   "count": 3,
                   "description": "Δες το χέρι καρτών προόδου ενός αντιπάλου και κλέψε 1 κάρτα προόδου της επιλογής σου.",
@@ -1638,7 +1638,7 @@
                   "id": "warlord",
                   "type": "progress-politics",
                   "icon": "⚔️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.webp",
                   "name": "Πολέμαρχος (Encouragement)",
                   "count": 2,
                   "description": "Ενεργοποίησε όλους τους ιππότες σου δωρεάν (χωρίς να πληρώσεις το συνηθισμένο κόστος σε Σιτάρι).",
@@ -1651,7 +1651,7 @@
                   "id": "wedding",
                   "type": "progress-politics",
                   "icon": "💒",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.webp",
                   "name": "Γάμος",
                   "count": 2,
                   "description": "Κάθε αντίπαλος με περισσότερους πόντους νίκης από σένα πρέπει να σου δώσει 2 κάρτες πρώτων υλών ή εμπορευμάτων της επιλογής του.",
@@ -1743,11 +1743,11 @@
             "detail": "Τα ζάρια παραγωγής καθορίζουν τις πρώτες ύλες. Το ζάρι γεγονότων φέρνει τους βαρβάρους πιο κοντά ή ενεργοποιεί τράβηγμα καρτών προόδου.",
             "images": [
               {
-                "src": "src/assets/images/common/roll-dice.png",
+                "src": "src/assets/images/common/roll-dice.webp",
                 "alt": "Ρίξιμο ζαριών"
               },
               {
-                "src": "src/assets/images/cities-and-knights/event-dice.png",
+                "src": "src/assets/images/cities-and-knights/event-dice.webp",
                 "alt": "Ζάρι γεγονότων"
               }
             ]
@@ -1831,13 +1831,13 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Πηλός",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -1852,25 +1852,25 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Πηλός",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -1885,13 +1885,13 @@
               {
                 "resource": "Πέτρα",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 3
               },
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               }
             ],
@@ -1906,7 +1906,7 @@
               {
                 "resource": "Πηλός",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 2
               }
             ],
@@ -1921,13 +1921,13 @@
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Πέτρα",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               }
             ],
@@ -1942,13 +1942,13 @@
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Πέτρα",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               }
             ],
@@ -1963,7 +1963,7 @@
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -2854,13 +2854,13 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Πηλός",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -2875,25 +2875,25 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Πηλός",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -2908,13 +2908,13 @@
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               },
               {
                 "resource": "Πέτρα",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 2
               }
             ],
@@ -2929,13 +2929,13 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -2950,7 +2950,7 @@
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -2965,25 +2965,25 @@
               {
                 "resource": "Ξύλο",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Πηλός",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Σιτάρι",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -2998,13 +2998,13 @@
               {
                 "resource": "Μαλλί",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Πέτρα",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               }
             ],

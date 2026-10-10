@@ -105,7 +105,7 @@
               "id": "lumber",
               "type": "resource",
               "icon": "🌲",
-              "image": "src/assets/images/common/lumber.png",
+              "image": "src/assets/images/common/lumber.webp",
               "name": "Hout",
               "count": 19,
               "description": "Geproduceerd door bostegels als hun getal wordt gegooid.",
@@ -118,7 +118,7 @@
               "id": "brick",
               "type": "resource",
               "icon": "🧱",
-              "image": "src/assets/images/common/brick.png",
+              "image": "src/assets/images/common/brick.webp",
               "name": "Leem",
               "count": 19,
               "description": "Geproduceerd door heuveltegels als hun getal wordt gegooid.",
@@ -131,7 +131,7 @@
               "id": "wool",
               "type": "resource",
               "icon": "🐑",
-              "image": "src/assets/images/common/wool.png",
+              "image": "src/assets/images/common/wool.webp",
               "name": "Wol",
               "count": 19,
               "description": "Geproduceerd door weidetegels als hun getal wordt gegooid.",
@@ -144,7 +144,7 @@
               "id": "grain",
               "type": "resource",
               "icon": "🌾",
-              "image": "src/assets/images/common/grain.png",
+              "image": "src/assets/images/common/grain.webp",
               "name": "Graan",
               "count": 19,
               "description": "Geproduceerd door akkertegels als hun getal wordt gegooid.",
@@ -158,7 +158,7 @@
               "id": "ore",
               "type": "resource",
               "icon": "⛏️",
-              "image": "src/assets/images/common/ore.png",
+              "image": "src/assets/images/common/ore.webp",
               "name": "Erts",
               "count": 19,
               "description": "Geproduceerd door bergtegels als hun getal wordt gegooid.",
@@ -178,7 +178,7 @@
               "id": "knight",
               "type": "development",
               "icon": "⚔️",
-              "image": "src/assets/images/basic/development-cards/knight.png",
+              "image": "src/assets/images/basic/development-cards/knight.webp",
               "name": "Ridder",
               "count": 14,
               "description": "Verplaats de struikrover naar een landtegel naar keuze. Steel één grondstofkaart van een medespeler met een dorp of stad aan die tegel.",
@@ -191,7 +191,7 @@
               "id": "road-building",
               "type": "development",
               "icon": "🛤️",
-              "image": "src/assets/images/basic/development-cards/road-building.png",
+              "image": "src/assets/images/basic/development-cards/road-building.webp",
               "name": "Stratenbouw",
               "count": 2,
               "description": "Plaats 2 nieuwe straten op het speelbord alsof je ze net hebt gebouwd.",
@@ -204,7 +204,7 @@
               "id": "year-of-plenty",
               "type": "development",
               "icon": "🎁",
-              "image": "src/assets/images/basic/development-cards/year-of-plenty.png",
+              "image": "src/assets/images/basic/development-cards/year-of-plenty.webp",
               "name": "Uitvinding (Invention)",
               "count": 2,
               "description": "Neem 2 grondstofkaarten naar keuze van de bank. Voeg ze toe aan je hand.",
@@ -217,7 +217,7 @@
               "id": "monopoly",
               "type": "development",
               "icon": "💰",
-              "image": "src/assets/images/basic/development-cards/monopoly.png",
+              "image": "src/assets/images/basic/development-cards/monopoly.webp",
               "name": "Monopolie",
               "count": 2,
               "description": "Noem één grondstofsoort. Alle andere spelers moeten al hun kaarten van deze soort aan jou afstaan.",
@@ -230,7 +230,7 @@
               "id": "chapel",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/chappel.png",
+              "image": "src/assets/images/basic/development-cards/chappel.webp",
               "name": "Kathedraal",
               "count": 1,
               "description": "1 overwinningspunt waard. Blijft geheim tot je de kaart onthult om te winnen (of tot het einde van het spel).",
@@ -243,7 +243,7 @@
               "id": "great-hall",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/great-hall.png",
+              "image": "src/assets/images/basic/development-cards/great-hall.webp",
               "name": "Parlement",
               "count": 1,
               "description": "1 overwinningspunt waard. Blijft geheim tot je de kaart onthult om te winnen (of tot het einde van het spel).",
@@ -256,7 +256,7 @@
               "id": "library",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/library.png",
+              "image": "src/assets/images/basic/development-cards/library.webp",
               "name": "Bibliotheek",
               "count": 1,
               "description": "1 overwinningspunt waard. Blijft geheim tot je de kaart onthult om te winnen (of tot het einde van het spel).",
@@ -269,7 +269,7 @@
               "id": "market",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/market.png",
+              "image": "src/assets/images/basic/development-cards/market.webp",
               "name": "Markt",
               "count": 1,
               "description": "1 overwinningspunt waard. Blijft geheim tot je de kaart onthult om te winnen (of tot het einde van het spel).",
@@ -282,7 +282,7 @@
               "id": "university",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/university.png",
+              "image": "src/assets/images/basic/development-cards/university.webp",
               "name": "Universiteit",
               "count": 1,
               "description": "1 overwinningspunt waard. Blijft geheim tot je de kaart onthult om te winnen (of tot het einde van het spel).",
@@ -302,7 +302,7 @@
               "id": "longest-road",
               "type": "special",
               "icon": "🛣️",
-              "image": "src/assets/images/basic/longest-road.png",
+              "image": "src/assets/images/basic/longest-road.webp",
               "name": "Langste handelsroute (Langste route)",
               "description": "Voor de eerste speler met een aaneengesloten route van 5+ straten. 2 overwinningspunten waard. Een medespeler kan de kaart afpakken door een langere route te bouwen.",
               "usages": [
@@ -314,7 +314,7 @@
               "id": "largest-army",
               "type": "special",
               "icon": "🪖",
-              "image": "src/assets/images/basic/longest-army.png",
+              "image": "src/assets/images/basic/longest-army.webp",
               "name": "Grootste riddermacht",
               "description": "Voor de eerste speler die 3 ridderkaarten heeft gespeeld. 2 overwinningspunten waard. Een medespeler kan de kaart afpakken door meer ridderkaarten te spelen.",
               "usages": [
@@ -333,7 +333,7 @@
               "id": "building-cost-card",
               "type": "resource",
               "icon": "🔨",
-              "image": "src/assets/images/common/building-cost.png",
+              "image": "src/assets/images/common/building-cost.webp",
               "name": "Bouwkostenkaart",
               "description": "Overzichtskaart met alle bouwkosten van Catan.",
               "usages": [
@@ -433,13 +433,13 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Leem",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -454,25 +454,25 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Leem",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -487,13 +487,13 @@
               {
                 "resource": "Erts",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 3
               },
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               }
             ],
@@ -508,19 +508,19 @@
               {
                 "resource": "Erts",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               },
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               },
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -1028,13 +1028,13 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Leem",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -1049,13 +1049,13 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -1070,25 +1070,25 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Leem",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -1103,13 +1103,13 @@
               {
                 "resource": "Erts",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 3
               },
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               }
             ],
@@ -1124,19 +1124,19 @@
               {
                 "resource": "Erts",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               },
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               },
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -1274,7 +1274,7 @@
               "id": "cloth",
               "type": "commodity",
               "icon": "🧵",
-              "image": "src/assets/images/cities-and-knights/commodities/textile.png",
+              "image": "src/assets/images/cities-and-knights/commodities/textile.webp",
               "name": "Doek",
               "description": "Handelswaar die steden aan weidetegels opleveren. Hiermee ga je vooruit in de kolom Handel van de stadsuitbouw.",
               "usages": [
@@ -1286,7 +1286,7 @@
               "id": "coin",
               "type": "commodity",
               "icon": "🪙",
-              "image": "src/assets/images/cities-and-knights/commodities/coin.png",
+              "image": "src/assets/images/cities-and-knights/commodities/coin.webp",
               "name": "Munt",
               "description": "Handelswaar die steden aan bergtegels opleveren. Hiermee ga je vooruit in de kolom Politiek.",
               "usages": [
@@ -1298,7 +1298,7 @@
               "id": "paper",
               "type": "commodity",
               "icon": "📜",
-              "image": "src/assets/images/cities-and-knights/commodities/paper.png",
+              "image": "src/assets/images/cities-and-knights/commodities/paper.webp",
               "name": "Papier",
               "description": "Handelswaar die steden aan bostegels opleveren. Hiermee ga je vooruit in de kolom Wetenschap.",
               "usages": [
@@ -1323,7 +1323,7 @@
                   "id": "commercial-harbor",
                   "type": "progress-trade",
                   "icon": "⚓",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.webp",
                   "name": "Handelshaven",
                   "count": 2,
                   "description": "Elke medespeler moet een handelswaarkaart naar keuze uit zijn hand aan jou geven, in ruil voor een grondstofkaart die jij uit je eigen hand kiest.",
@@ -1336,7 +1336,7 @@
                   "id": "master-merchant",
                   "type": "progress-trade",
                   "icon": "🧑‍💼",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.webp",
                   "name": "Meesterhandelaar (Guild Dues)",
                   "count": 2,
                   "description": "Bekijk de handkaarten van een medespeler met meer overwinningspunten dan jij. Neem 2 grondstof- of handelswaarkaarten naar keuze uit die hand.",
@@ -1349,7 +1349,7 @@
                   "id": "merchant",
                   "type": "progress-trade",
                   "icon": "🏪",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.webp",
                   "name": "Handelaar",
                   "count": 6,
                   "description": "Zet de handelaar op een landtegel naast een van je dorpen of steden. Zolang jij de handelaar hebt, ruil je de grondstof van die tegel 2:1. Waard 1 OP.",
@@ -1362,7 +1362,7 @@
                   "id": "merchant-fleet",
                   "type": "progress-trade",
                   "icon": "🚢",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.webp",
                   "name": "Handelsvloot",
                   "count": 2,
                   "description": "Kies 1 soort grondstof of handelswaar. De rest van deze beurt mag je 2 kaarten van die soort ruilen tegen 1 andere grondstof of handelswaar naar keuze.",
@@ -1375,7 +1375,7 @@
                   "id": "resource-monopoly",
                   "type": "progress-trade",
                   "icon": "💎",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.webp",
                   "name": "Grondstoffenmonopolie",
                   "count": 4,
                   "description": "Noem 1 soort grondstof. Elke medespeler moet je 2 kaarten van die grondstof geven als hij ze heeft; wie er maar 1 heeft, geeft die 1.",
@@ -1388,7 +1388,7 @@
                   "id": "trade-monopoly",
                   "type": "progress-trade",
                   "icon": "📊",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.webp",
                   "name": "Handelsmonopolie",
                   "count": 2,
                   "description": "Noem 1 soort handelswaar. Elke medespeler die er 1 of meer van heeft, moet je er precies 1 van geven.",
@@ -1409,7 +1409,7 @@
                   "id": "alchemist",
                   "type": "progress-science",
                   "icon": "⚗️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.webp",
                   "name": "Alchemist (Alchemy)",
                   "count": 2,
                   "description": "Kies in je beurt vóór het gooien de uitkomst van de opbrengstdobbelstenen (beide getallen). De gebeurtenisdobbelsteen wordt gewoon gegooid.",
@@ -1422,7 +1422,7 @@
                   "id": "crane",
                   "type": "progress-science",
                   "icon": "🏗️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.webp",
                   "name": "Bouwkraan",
                   "count": 2,
                   "description": "Deze beurt kost één stadsuitbouw je 1 handelswaar minder dan normaal.",
@@ -1435,7 +1435,7 @@
                   "id": "engineer",
                   "type": "progress-science",
                   "icon": "🔧",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.webp",
                   "name": "Ingenieur (Engineering)",
                   "count": 1,
                   "description": "Bouw gratis 1 stadsmuur (geen grondstoffen nodig). Zet hem onder een van je steden.",
@@ -1448,7 +1448,7 @@
                   "id": "inventor",
                   "type": "progress-science",
                   "icon": "💡",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.webp",
                   "name": "Uitvinder (Invention)",
                   "count": 2,
                   "description": "Verwissel 2 getallenfiches op het speelbord. De fiches met de getallen 2, 6, 8 en 12 mag je niet verwisselen.",
@@ -1461,7 +1461,7 @@
                   "id": "irrigation",
                   "type": "progress-science",
                   "icon": "💧",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.webp",
                   "name": "Irrigatie",
                   "count": 2,
                   "description": "Neem 2 graankaarten van de bank voor elke akkertegel die aan minstens één van je gebouwen grenst.",
@@ -1474,7 +1474,7 @@
                   "id": "medicine",
                   "type": "progress-science",
                   "icon": "💊",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.webp",
                   "name": "Geneeskunde",
                   "count": 2,
                   "description": "Deze beurt mag je één dorp goedkoper uitbouwen tot stad: slechts 2 erts + 1 graan (in plaats van 3 erts + 2 graan).",
@@ -1487,7 +1487,7 @@
                   "id": "mining",
                   "type": "progress-science",
                   "icon": "⛏️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.webp",
                   "name": "Mijnbouw",
                   "count": 2,
                   "description": "Neem 2 ertskaarten van de bank voor elke bergtegel die aan minstens één van je gebouwen grenst.",
@@ -1500,7 +1500,7 @@
                   "id": "printer",
                   "type": "progress-science",
                   "icon": "🖨️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.webp",
                   "name": "Boekdrukkunst (Printing)",
                   "count": 1,
                   "description": "Waard 1 overwinningspunt. Deze kaart blijft de rest van het spel open voor je liggen.",
@@ -1513,7 +1513,7 @@
                   "id": "road-building",
                   "type": "progress-science",
                   "icon": "🛤️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.webp",
                   "name": "Stratenbouw",
                   "count": 2,
                   "description": "Zet 2 straten gratis op het speelbord, alsof je ze net gebouwd hebt.",
@@ -1526,7 +1526,7 @@
                   "id": "smith",
                   "type": "progress-science",
                   "icon": "🔨",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.webp",
                   "name": "Smeedkunst (Smithing)",
                   "count": 2,
                   "description": "Bevorder gratis tot 2 van je ridders (bijv. eenvoudig → sterk, of sterk → machtig).",
@@ -1547,7 +1547,7 @@
                   "id": "bishop",
                   "type": "progress-politics",
                   "icon": "⛪",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.webp",
                   "name": "Bisschop (Taxation)",
                   "count": 2,
                   "description": "Verplaats de struikrover naar een nieuwe tegel. Steel 1 willekeurige kaart (grondstof of handelswaar) van elke medespeler met een gebouw aan die tegel.",
@@ -1560,7 +1560,7 @@
                   "id": "constitution",
                   "type": "progress-politics",
                   "icon": "📜",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.webp",
                   "name": "Grondwet",
                   "count": 1,
                   "description": "Waard 1 overwinningspunt. Deze kaart blijft de rest van het spel open voor je liggen.",
@@ -1573,7 +1573,7 @@
                   "id": "deserter",
                   "type": "progress-politics",
                   "icon": "🏃",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.webp",
                   "name": "Overloper (Treason)",
                   "count": 2,
                   "description": "Kies een medespeler; die moet een van zijn ridders van het speelbord halen. Daarna mag je een eigen ridder van gelijke of lagere kracht plaatsen.",
@@ -1586,7 +1586,7 @@
                   "id": "diplomat",
                   "type": "progress-politics",
                   "icon": "🤝",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.webp",
                   "name": "Diplomaat (Diplomacy)",
                   "count": 2,
                   "description": "Verwijder een open straat naar keuze (een straat waarvan minstens één uiteinde niet aansluit op een andere straat, een dorp of een stad). Is het je eigen straat, dan mag je hem meteen gratis ergens anders neerleggen.",
@@ -1599,7 +1599,7 @@
                   "id": "intrigue",
                   "type": "progress-politics",
                   "icon": "🗡️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.webp",
                   "name": "Intrige",
                   "count": 2,
                   "description": "Verdrijf een ridder van een medespeler zonder een eigen ridder te gebruiken. Die ridder moet op een driesprong staan die met een van je routes verbonden is; de eigenaar verplaatst hem dan naar een toegestane driesprong of haalt hem van het speelbord.",
@@ -1612,7 +1612,7 @@
                   "id": "saboteur",
                   "type": "progress-politics",
                   "icon": "💣",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.webp",
                   "name": "Saboteur (Sabotage)",
                   "count": 2,
                   "description": "Elke medespeler met evenveel of meer overwinningspunten dan jij moet de helft van zijn handkaarten afleggen (naar beneden afgerond).",
@@ -1625,7 +1625,7 @@
                   "id": "spy",
                   "type": "progress-politics",
                   "icon": "🕵️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.webp",
                   "name": "Spion (Espionage)",
                   "count": 3,
                   "description": "Bekijk de ontwikkelingskaarten in de hand van een medespeler en steel er 1 naar keuze.",
@@ -1638,7 +1638,7 @@
                   "id": "warlord",
                   "type": "progress-politics",
                   "icon": "⚔️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.webp",
                   "name": "Krijgsheer (Encouragement)",
                   "count": 2,
                   "description": "Activeer gratis al je ridders (zonder het gebruikelijke graan te betalen).",
@@ -1651,7 +1651,7 @@
                   "id": "wedding",
                   "type": "progress-politics",
                   "icon": "💒",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.webp",
                   "name": "Bruiloft",
                   "count": 2,
                   "description": "Elke medespeler met meer overwinningspunten dan jij moet je 2 grondstof- of handelswaarkaarten geven die hij zelf kiest.",
@@ -1743,11 +1743,11 @@
             "detail": "De opbrengstdobbelstenen bepalen de grondstoffen. De gebeurtenisdobbelsteen laat de barbaren oprukken of laat spelers ontwikkelingskaarten trekken.",
             "images": [
               {
-                "src": "src/assets/images/common/roll-dice.png",
+                "src": "src/assets/images/common/roll-dice.webp",
                 "alt": "Dobbelstenen gooien"
               },
               {
-                "src": "src/assets/images/cities-and-knights/event-dice.png",
+                "src": "src/assets/images/cities-and-knights/event-dice.webp",
                 "alt": "Gebeurtenisdobbelsteen"
               }
             ]
@@ -1831,13 +1831,13 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Leem",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -1852,25 +1852,25 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Leem",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -1885,13 +1885,13 @@
               {
                 "resource": "Erts",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 3
               },
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               }
             ],
@@ -1906,7 +1906,7 @@
               {
                 "resource": "Leem",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 2
               }
             ],
@@ -1921,13 +1921,13 @@
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Erts",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               }
             ],
@@ -1942,13 +1942,13 @@
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Erts",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               }
             ],
@@ -1963,7 +1963,7 @@
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -2854,13 +2854,13 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Leem",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -2875,25 +2875,25 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Leem",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -2908,13 +2908,13 @@
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               },
               {
                 "resource": "Erts",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 2
               }
             ],
@@ -2929,13 +2929,13 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -2950,7 +2950,7 @@
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -2965,25 +2965,25 @@
               {
                 "resource": "Hout",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Leem",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Graan",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -2998,13 +2998,13 @@
               {
                 "resource": "Wol",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Erts",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               }
             ],

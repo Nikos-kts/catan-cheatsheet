@@ -105,7 +105,7 @@
               "id": "lumber",
               "type": "resource",
               "icon": "🌲",
-              "image": "src/assets/images/common/lumber.png",
+              "image": "src/assets/images/common/lumber.webp",
               "name": "Madera",
               "count": 19,
               "description": "Producida por los hexágonos de bosque cuando sale su número.",
@@ -118,7 +118,7 @@
               "id": "brick",
               "type": "resource",
               "icon": "🧱",
-              "image": "src/assets/images/common/brick.png",
+              "image": "src/assets/images/common/brick.webp",
               "name": "Arcilla",
               "count": 19,
               "description": "Producida por los hexágonos de cerro cuando sale su número.",
@@ -131,7 +131,7 @@
               "id": "wool",
               "type": "resource",
               "icon": "🐑",
-              "image": "src/assets/images/common/wool.png",
+              "image": "src/assets/images/common/wool.webp",
               "name": "Lana",
               "count": 19,
               "description": "Producida por los hexágonos de pasto cuando sale su número.",
@@ -144,7 +144,7 @@
               "id": "grain",
               "type": "resource",
               "icon": "🌾",
-              "image": "src/assets/images/common/grain.png",
+              "image": "src/assets/images/common/grain.webp",
               "name": "Cereales",
               "count": 19,
               "description": "Producidos por los hexágonos de sembrado cuando sale su número.",
@@ -158,7 +158,7 @@
               "id": "ore",
               "type": "resource",
               "icon": "⛏️",
-              "image": "src/assets/images/common/ore.png",
+              "image": "src/assets/images/common/ore.webp",
               "name": "Mineral",
               "count": 19,
               "description": "Producido por los hexágonos de montaña cuando sale su número.",
@@ -178,7 +178,7 @@
               "id": "knight",
               "type": "development",
               "icon": "⚔️",
-              "image": "src/assets/images/basic/development-cards/knight.png",
+              "image": "src/assets/images/basic/development-cards/knight.webp",
               "name": "Caballero",
               "count": 14,
               "description": "Mueve el ladrón a cualquier hexágono de terreno. Roba una carta de materia prima a un rival adyacente a ese hexágono.",
@@ -191,7 +191,7 @@
               "id": "road-building",
               "type": "development",
               "icon": "🛤️",
-              "image": "src/assets/images/basic/development-cards/road-building.png",
+              "image": "src/assets/images/basic/development-cards/road-building.webp",
               "name": "Carreteras",
               "count": 2,
               "description": "Coloca 2 carreteras nuevas en el tablero como si acabaras de construirlas.",
@@ -204,7 +204,7 @@
               "id": "year-of-plenty",
               "type": "development",
               "icon": "🎁",
-              "image": "src/assets/images/basic/development-cards/year-of-plenty.png",
+              "image": "src/assets/images/basic/development-cards/year-of-plenty.webp",
               "name": "Invento",
               "count": 2,
               "description": "Toma 2 cartas de materia prima cualesquiera de la reserva y añádelas a tu mano.",
@@ -217,7 +217,7 @@
               "id": "monopoly",
               "type": "development",
               "icon": "💰",
-              "image": "src/assets/images/basic/development-cards/monopoly.png",
+              "image": "src/assets/images/basic/development-cards/monopoly.webp",
               "name": "Monopolio",
               "count": 2,
               "description": "Elige un tipo de materia prima. Todos los demás jugadores deben darte todas sus cartas de ese tipo.",
@@ -230,7 +230,7 @@
               "id": "chapel",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/chappel.png",
+              "image": "src/assets/images/basic/development-cards/chappel.webp",
               "name": "Iglesia",
               "count": 1,
               "description": "Vale 1 punto de victoria. Se guarda en secreto hasta que la reveles para ganar (o hasta el final de la partida).",
@@ -243,7 +243,7 @@
               "id": "great-hall",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/great-hall.png",
+              "image": "src/assets/images/basic/development-cards/great-hall.webp",
               "name": "Ayuntamiento",
               "count": 1,
               "description": "Vale 1 punto de victoria. Se guarda en secreto hasta que la reveles para ganar (o hasta el final de la partida).",
@@ -256,7 +256,7 @@
               "id": "library",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/library.png",
+              "image": "src/assets/images/basic/development-cards/library.webp",
               "name": "Biblioteca",
               "count": 1,
               "description": "Vale 1 punto de victoria. Se guarda en secreto hasta que la reveles para ganar (o hasta el final de la partida).",
@@ -269,7 +269,7 @@
               "id": "market",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/market.png",
+              "image": "src/assets/images/basic/development-cards/market.webp",
               "name": "Mercado",
               "count": 1,
               "description": "Vale 1 punto de victoria. Se guarda en secreto hasta que la reveles para ganar (o hasta el final de la partida).",
@@ -282,7 +282,7 @@
               "id": "university",
               "type": "development",
               "icon": "⭐",
-              "image": "src/assets/images/basic/development-cards/university.png",
+              "image": "src/assets/images/basic/development-cards/university.webp",
               "name": "Universidad",
               "count": 1,
               "description": "Vale 1 punto de victoria. Se guarda en secreto hasta que la reveles para ganar (o hasta el final de la partida).",
@@ -302,7 +302,7 @@
               "id": "longest-road",
               "type": "special",
               "icon": "🛣️",
-              "image": "src/assets/images/basic/longest-road.png",
+              "image": "src/assets/images/basic/longest-road.webp",
               "name": "Mayor ruta comercial",
               "description": "Se otorga al primer jugador con una ruta continua de 5+ carreteras. Vale 2 puntos de victoria. Otro jugador puede quitártela construyendo una ruta más larga.",
               "usages": [
@@ -314,7 +314,7 @@
               "id": "largest-army",
               "type": "special",
               "icon": "🪖",
-              "image": "src/assets/images/basic/longest-army.png",
+              "image": "src/assets/images/basic/longest-army.webp",
               "name": "Mayor ejército",
               "description": "Se otorga al primer jugador que juega 3 cartas de Caballero. Vale 2 puntos de victoria. Otro jugador puede quitártela jugando más Caballeros.",
               "usages": [
@@ -333,7 +333,7 @@
               "id": "building-cost-card",
               "type": "resource",
               "icon": "🔨",
-              "image": "src/assets/images/common/building-cost.png",
+              "image": "src/assets/images/common/building-cost.webp",
               "name": "Tabla de costes de construcción",
               "description": "Tabla de referencia con todos los costes de construcción de Catan.",
               "usages": [
@@ -433,13 +433,13 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Arcilla",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -454,25 +454,25 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Arcilla",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -487,13 +487,13 @@
               {
                 "resource": "Mineral",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 3
               },
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               }
             ],
@@ -508,19 +508,19 @@
               {
                 "resource": "Mineral",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               },
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               },
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -1028,13 +1028,13 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Arcilla",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -1049,13 +1049,13 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -1070,25 +1070,25 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Arcilla",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -1103,13 +1103,13 @@
               {
                 "resource": "Mineral",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 3
               },
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               }
             ],
@@ -1124,19 +1124,19 @@
               {
                 "resource": "Mineral",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               },
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               },
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -1274,7 +1274,7 @@
               "id": "cloth",
               "type": "commodity",
               "icon": "🧵",
-              "image": "src/assets/images/cities-and-knights/commodities/textile.png",
+              "image": "src/assets/images/cities-and-knights/commodities/textile.webp",
               "name": "Tela",
               "description": "Mercancía que producen las ciudades en hexágonos de pasto. Sirve para avanzar en la columna de Comercio de las mejoras de ciudad.",
               "usages": [
@@ -1286,7 +1286,7 @@
               "id": "coin",
               "type": "commodity",
               "icon": "🪙",
-              "image": "src/assets/images/cities-and-knights/commodities/coin.png",
+              "image": "src/assets/images/cities-and-knights/commodities/coin.webp",
               "name": "Monedas",
               "description": "Mercancía que producen las ciudades en hexágonos de montaña. Sirve para avanzar en la columna de Política.",
               "usages": [
@@ -1298,7 +1298,7 @@
               "id": "paper",
               "type": "commodity",
               "icon": "📜",
-              "image": "src/assets/images/cities-and-knights/commodities/paper.png",
+              "image": "src/assets/images/cities-and-knights/commodities/paper.webp",
               "name": "Papel",
               "description": "Mercancía que producen las ciudades en hexágonos de bosque. Sirve para avanzar en la columna de Ciencia.",
               "usages": [
@@ -1323,7 +1323,7 @@
                   "id": "commercial-harbor",
                   "type": "progress-trade",
                   "icon": "⚓",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/commercial-harbor.webp",
                   "name": "Puerto de mercancías",
                   "count": 2,
                   "description": "Cada rival debe elegir una carta de mercancía de su mano y dártela a cambio de una carta de materia prima de tu mano, a tu elección.",
@@ -1336,7 +1336,7 @@
                   "id": "master-merchant",
                   "type": "progress-trade",
                   "icon": "🧑‍💼",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/master-merchant.webp",
                   "name": "Maestro comerciante (Guild Dues)",
                   "count": 2,
                   "description": "Mira la mano de un rival que tenga más puntos de victoria que tú. Toma de esa mano 2 cartas de materia prima o mercancía a tu elección.",
@@ -1349,7 +1349,7 @@
                   "id": "merchant",
                   "type": "progress-trade",
                   "icon": "🏪",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant.webp",
                   "name": "Comerciante",
                   "count": 6,
                   "description": "Coloca el comerciante en cualquier hexágono de terreno adyacente a uno de tus poblados o ciudades. Mientras controles al comerciante, cambias la materia prima de ese hexágono a 2:1. Vale 1 PV.",
@@ -1362,7 +1362,7 @@
                   "id": "merchant-fleet",
                   "type": "progress-trade",
                   "icon": "🚢",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/merchant-fleet.webp",
                   "name": "Flota mercante",
                   "count": 2,
                   "description": "Elige 1 tipo de materia prima o mercancía. Hasta el final de este turno, puedes cambiar 2 cartas de ese tipo por 1 carta de cualquier otra materia prima o mercancía.",
@@ -1375,7 +1375,7 @@
                   "id": "resource-monopoly",
                   "type": "progress-trade",
                   "icon": "💎",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/resource-monopoly.webp",
                   "name": "Monopolio de materias primas",
                   "count": 4,
                   "description": "Nombra 1 tipo de materia prima. Cada rival debe darte 2 cartas de esa materia prima si las tiene; quien solo tenga 1 debe darte esa única carta.",
@@ -1388,7 +1388,7 @@
                   "id": "trade-monopoly",
                   "type": "progress-trade",
                   "icon": "📊",
-                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/trade/trade-monopoly.webp",
                   "name": "Monopolio de mercancías",
                   "count": 2,
                   "description": "Nombra 1 tipo de mercancía. Cada rival que tenga 1 o más de esa mercancía debe darte exactamente 1.",
@@ -1409,7 +1409,7 @@
                   "id": "alchemist",
                   "type": "progress-science",
                   "icon": "⚗️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/alchemist.webp",
                   "name": "Alquimista (Alchemy)",
                   "count": 2,
                   "description": "Antes de tirar los dados en tu turno, elige el resultado de los dados de producción (ambos números). El dado de acontecimientos se tira de forma normal.",
@@ -1422,7 +1422,7 @@
                   "id": "crane",
                   "type": "progress-science",
                   "icon": "🏗️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/crane.webp",
                   "name": "Grúa",
                   "count": 2,
                   "description": "Este turno puedes construir una mejora de ciudad pagando 1 mercancía menos de lo normal.",
@@ -1435,7 +1435,7 @@
                   "id": "engineer",
                   "type": "progress-science",
                   "icon": "🔧",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/engineer.webp",
                   "name": "Ingeniero (Engineering)",
                   "count": 1,
                   "description": "Construye 1 muralla gratis (sin gastar materias primas). Colócala debajo de una de tus ciudades.",
@@ -1448,7 +1448,7 @@
                   "id": "inventor",
                   "type": "progress-science",
                   "icon": "💡",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/inventor.webp",
                   "name": "Inventor (Invention)",
                   "count": 2,
                   "description": "Intercambia 2 fichas numeradas del tablero. No puedes intercambiar las fichas con los números 2, 6, 8 o 12.",
@@ -1461,7 +1461,7 @@
                   "id": "irrigation",
                   "type": "progress-science",
                   "icon": "💧",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/irrigation.webp",
                   "name": "Irrigación",
                   "count": 2,
                   "description": "Toma 2 cartas de cereales de la reserva por cada hexágono de sembrado adyacente a al menos uno de tus edificios.",
@@ -1474,7 +1474,7 @@
                   "id": "medicine",
                   "type": "progress-science",
                   "icon": "💊",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/medicine.webp",
                   "name": "Medicina",
                   "count": 2,
                   "description": "Este turno puedes ampliar un poblado a ciudad a coste reducido: solo 2 minerales + 1 cereal (en lugar de 3 minerales + 2 cereales).",
@@ -1487,7 +1487,7 @@
                   "id": "mining",
                   "type": "progress-science",
                   "icon": "⛏️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/mining.webp",
                   "name": "Minería",
                   "count": 2,
                   "description": "Toma 2 cartas de mineral de la reserva por cada hexágono de montaña adyacente a al menos uno de tus edificios.",
@@ -1500,7 +1500,7 @@
                   "id": "printer",
                   "type": "progress-science",
                   "icon": "🖨️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/printer.webp",
                   "name": "Imprenta",
                   "count": 1,
                   "description": "Vale 1 punto de victoria. Esta carta queda boca arriba delante de ti durante el resto de la partida.",
@@ -1513,7 +1513,7 @@
                   "id": "road-building",
                   "type": "progress-science",
                   "icon": "🛤️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/road-building.webp",
                   "name": "Carreteras",
                   "count": 2,
                   "description": "Coloca 2 carreteras gratis en el tablero, como si acabaras de construirlas.",
@@ -1526,7 +1526,7 @@
                   "id": "smith",
                   "type": "progress-science",
                   "icon": "🔨",
-                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/science/smith.webp",
                   "name": "Fragua (Smithing)",
                   "count": 2,
                   "description": "Promociona gratis hasta 2 de tus caballeros (p. ej., simple → fuerte, o fuerte → poderoso).",
@@ -1547,7 +1547,7 @@
                   "id": "bishop",
                   "type": "progress-politics",
                   "icon": "⛪",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/bishop.webp",
                   "name": "Obispo (Taxation)",
                   "count": 2,
                   "description": "Mueve al ladrón a otro hexágono. Roba 1 carta al azar (materia prima o mercancía) a cada rival con un edificio en el nuevo hexágono del ladrón.",
@@ -1560,7 +1560,7 @@
                   "id": "constitution",
                   "type": "progress-politics",
                   "icon": "📜",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/constitution.webp",
                   "name": "Constitución",
                   "count": 1,
                   "description": "Vale 1 punto de victoria. Esta carta queda boca arriba delante de ti durante el resto de la partida.",
@@ -1573,7 +1573,7 @@
                   "id": "deserter",
                   "type": "progress-politics",
                   "icon": "🏃",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/deserter.webp",
                   "name": "Desertor (Treason)",
                   "count": 2,
                   "description": "Elige a otro jugador; debe retirar uno de sus caballeros del tablero. Luego puedes colocar uno de tus caballeros de fuerza igual o menor.",
@@ -1586,7 +1586,7 @@
                   "id": "diplomat",
                   "type": "progress-politics",
                   "icon": "🤝",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/diplomat.webp",
                   "name": "Diplomático (Diplomacy)",
                   "count": 2,
                   "description": "Retira cualquier carretera abierta (con al menos un extremo sin conectar a otra carretera, poblado o ciudad). Si es tuya, puedes volver a colocarla de inmediato en otro sitio, gratis.",
@@ -1599,7 +1599,7 @@
                   "id": "intrigue",
                   "type": "progress-politics",
                   "icon": "🗡️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/intrigue.webp",
                   "name": "Intriga",
                   "count": 2,
                   "description": "Expulsa a un caballero rival sin usar ninguno de tus caballeros. El caballero debe estar en una encrucijada conectada a una de tus rutas; su dueño lo desplaza a una encrucijada válida o lo retira.",
@@ -1612,7 +1612,7 @@
                   "id": "saboteur",
                   "type": "progress-politics",
                   "icon": "💣",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/saboteur.webp",
                   "name": "Saboteador (Sabotage)",
                   "count": 2,
                   "description": "Cada rival con tantos o más puntos de victoria que tú debe descartar la mitad de sus cartas de la mano (redondeando hacia abajo).",
@@ -1625,7 +1625,7 @@
                   "id": "spy",
                   "type": "progress-politics",
                   "icon": "🕵️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/spy.webp",
                   "name": "Espía (Espionage)",
                   "count": 3,
                   "description": "Mira las cartas de progreso que un rival tiene en la mano y róbale 1 a tu elección.",
@@ -1638,7 +1638,7 @@
                   "id": "warlord",
                   "type": "progress-politics",
                   "icon": "⚔️",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/warlord.webp",
                   "name": "Estratega (Encouragement)",
                   "count": 2,
                   "description": "Activa gratis todos tus caballeros (sin pagar el coste habitual en cereales).",
@@ -1651,7 +1651,7 @@
                   "id": "wedding",
                   "type": "progress-politics",
                   "icon": "💒",
-                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.png",
+                  "image": "src/assets/images/cities-and-knights/development-cards/politics/wedding.webp",
                   "name": "Boda",
                   "count": 2,
                   "description": "Cada rival con más puntos de victoria que tú debe darte 2 cartas de materia prima o mercancía a su elección.",
@@ -1743,11 +1743,11 @@
             "detail": "Los dados de producción determinan las materias primas. El dado de acontecimientos hace avanzar a los bárbaros o permite robar cartas de progreso.",
             "images": [
               {
-                "src": "src/assets/images/common/roll-dice.png",
+                "src": "src/assets/images/common/roll-dice.webp",
                 "alt": "Tirar los dados"
               },
               {
-                "src": "src/assets/images/cities-and-knights/event-dice.png",
+                "src": "src/assets/images/cities-and-knights/event-dice.webp",
                 "alt": "Dado de acontecimientos"
               }
             ]
@@ -1831,13 +1831,13 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Arcilla",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -1852,25 +1852,25 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Arcilla",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -1885,13 +1885,13 @@
               {
                 "resource": "Mineral",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 3
               },
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               }
             ],
@@ -1906,7 +1906,7 @@
               {
                 "resource": "Arcilla",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 2
               }
             ],
@@ -1921,13 +1921,13 @@
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Mineral",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               }
             ],
@@ -1942,13 +1942,13 @@
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Mineral",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               }
             ],
@@ -1963,7 +1963,7 @@
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -2854,13 +2854,13 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Arcilla",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               }
             ],
@@ -2875,25 +2875,25 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Arcilla",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -2908,13 +2908,13 @@
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 2
               },
               {
                 "resource": "Mineral",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 2
               }
             ],
@@ -2929,13 +2929,13 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -2950,7 +2950,7 @@
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               }
             ],
@@ -2965,25 +2965,25 @@
               {
                 "resource": "Madera",
                 "icon": "🌲",
-                "image": "src/assets/images/common/lumber.png",
+                "image": "src/assets/images/common/lumber.webp",
                 "qty": 1
               },
               {
                 "resource": "Arcilla",
                 "icon": "🧱",
-                "image": "src/assets/images/common/brick.png",
+                "image": "src/assets/images/common/brick.webp",
                 "qty": 1
               },
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Cereales",
                 "icon": "🌾",
-                "image": "src/assets/images/common/grain.png",
+                "image": "src/assets/images/common/grain.webp",
                 "qty": 1
               }
             ],
@@ -2998,13 +2998,13 @@
               {
                 "resource": "Lana",
                 "icon": "🐑",
-                "image": "src/assets/images/common/wool.png",
+                "image": "src/assets/images/common/wool.webp",
                 "qty": 1
               },
               {
                 "resource": "Mineral",
                 "icon": "⛏️",
-                "image": "src/assets/images/common/ore.png",
+                "image": "src/assets/images/common/ore.webp",
                 "qty": 1
               }
             ],
