@@ -36,4 +36,6 @@ export function applyGameTheme(gameId) {
   root.style.setProperty("--sand", theme.body);
   root.style.setProperty("--sand-dk", theme.sandDk);
   root.style.setProperty("--theme-accent", theme.tabActive);
+  // Match the phone's browser bar to the game's colour.
+  document.querySelector('meta[name="theme-color"]')?.setAttribute("content", theme.tabActive);
 }

@@ -25,6 +25,14 @@
   --theme-accent: #c0392b;
 }
 
+/* Taps act immediately: no double-tap-to-zoom on controls that get tapped fast. */
+button,
+summary,
+select,
+[role="button"] {
+  touch-action: manipulation;
+}
+
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   background: var(--sand);
@@ -1478,5 +1486,17 @@ footer {
   }
   .spot-row-label {
     margin-bottom: -0.25rem;
+  }
+}
+
+/* iOS zooms the page when a focused control's text is under 16px. Kept last so
+   it wins over the per-component sizes above. */
+@media (max-width: 900px) {
+  select,
+  input,
+  textarea,
+  .control-group select,
+  .spot-select {
+    font-size: 16px;
   }
 }
