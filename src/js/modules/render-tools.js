@@ -7,8 +7,10 @@ import { initAccordions } from "./accordions.js";
 import * as diceOdds from "./tools/dice-odds.js";
 import * as startingSpot from "./tools/starting-spot.js";
 import * as robberTimer from "./tools/robber-timer.js";
+import * as keepAwake from "./tools/keep-awake.js";
 
 const TOOLS = [
+  { id: "keep-awake", icon: "🔆", uiKey: "keepAwake", module: keepAwake },
   { id: "dice-odds", icon: "🎲", uiKey: "diceOdds", module: diceOdds },
   { id: "starting-spot", icon: "📍", uiKey: "startingSpot", module: startingSpot },
   { id: "robber-timer", icon: "🕵️", uiKey: "robberTimer", module: robberTimer },

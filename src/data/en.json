@@ -87,6 +87,15 @@
         "rolls": "Total rolls",
         "sevensObserved": "Sevens observed",
         "sevensExpected": "Sevens expected"
+      },
+      "keepAwake": {
+        "title": "Keep screen on",
+        "intro": "Stop your phone from dimming or locking while the cheat sheet sits next to the board.",
+        "turnOn": "Keep the screen on",
+        "turnOff": "Screen stays on — tap to turn off",
+        "on": "The screen will stay on while this page is open.",
+        "blocked": "Your browser is not allowing it right now (battery saver?).",
+        "unsupported": "This browser can't keep the screen on. Raise the auto-lock time in your phone's settings instead."
       }
     },
     "tabLearn": "Learn",

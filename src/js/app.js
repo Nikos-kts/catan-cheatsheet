@@ -17,6 +17,7 @@ import { renderReference } from "./modules/render-reference.js";
 import { renderStrategy } from "./modules/render-strategy.js";
 import { renderLearn } from "./modules/render-learn.js";
 import { renderTools } from "./modules/render-tools.js";
+import { initKeepAwake } from "./modules/tools/keep-awake.js";
 
 // Tab id → [ui key, English fallback]; the icons live in index.html.
 const TAB_LABELS = {
@@ -64,6 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
   syncActiveTab();
   initStickyTabs();
+  initKeepAwake();
 
   loadAndRender();
 });

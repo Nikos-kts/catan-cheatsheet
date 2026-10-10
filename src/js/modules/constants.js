@@ -78,6 +78,7 @@ export const STORAGE_KEYS = {
   game: "catan-game",
   tab: "catan-tab",
   quizBest: "catan-quiz-best",
+  keepAwake: "catan-keep-awake",
 };
 
 // Donation link (same as the footer) for the "support this project" prompts.
