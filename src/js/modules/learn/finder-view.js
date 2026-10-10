@@ -7,14 +7,13 @@ import { loadLanguageFile } from "../data-loader.js";
 import { activateTab } from "../tabs.js";
 import { setString } from "../storage.js";
 import { buildIndex, search } from "./card-finder.js";
-import { scrollBelowTabs } from "./scroll.js";
+import { isPhone, scrollBelowTabs } from "./scroll.js";
 
 const FLAGS = { en: "🇬🇧", el: "🇬🇷", es: "🇪🇸", nl: "🇳🇱", pt: "🇵🇹" };
 const KIND_TAB = { card: "cards", cost: "reference", scenario: "gameplay" };
 const DEBOUNCE_MS = 120;
 const FLASH_MS = 2200;
 const ACCORDION_MS = 320; // accordions.js animates max-height over 300ms
-const PHONE = "(max-width: 760px)";
 
 let indexPromise = null; // built once per page load, shared by every mount
 
@@ -73,7 +72,7 @@ export function mount(root, { ui }) {
   // On phones the keyboard covers half the screen: bring the search box to the top
   // so the results stay visible above it.
   input.addEventListener("focus", () => {
-    if (window.matchMedia(PHONE).matches) scrollBelowTabs(root.closest(".learn-section") || root);
+    if (isPhone()) scrollBelowTabs(root.closest(".learn-section") || root);
   });
   input.addEventListener("keydown", (e) => {
     if (e.key === "Enter") input.blur(); // dismiss the on-screen keyboard to reveal the results

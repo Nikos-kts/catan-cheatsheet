@@ -436,6 +436,11 @@
   margin-top: 1rem;
 }
 
+/* "Next" is scrolled into view after an answer: don't leave it glued to the screen edge. */
+.quiz-feedback .quiz-primary {
+  scroll-margin-bottom: 1.5rem;
+}
+
 .quiz-verdict {
   font-weight: 800;
   font-size: 1.05rem;

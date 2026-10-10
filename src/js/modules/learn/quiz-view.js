@@ -6,7 +6,7 @@ import { STORAGE_KEYS, SUPPORT_URL } from "../constants.js";
 import { getString, setString } from "../storage.js";
 import { buildQuiz, parseBest } from "./quiz.js";
 import { createRng } from "./random.js";
-import { keepTopVisible } from "./scroll.js";
+import { focusGently, giveRoom } from "./scroll.js";
 
 const ROUND_SIZE = 8;
 
@@ -83,14 +83,14 @@ function showQuestion(card, questions, index, score, ui, bestKey, restart) {
             : showQuestion(card, questions, index + 1, score + (correct ? 1 : 0), ui, bestKey, restart),
         );
         feedback.appendChild(next);
-        next.focus();
+        focusGently(next);
       }),
     );
   });
 
   card.replaceChildren(progress, counter, prompt, options, feedback);
   options.querySelector("button")?.focus({ preventScroll: true });
-  keepTopVisible(card); // a long explanation may have pushed the card's top off-screen
+  giveRoom(card); // the answer, explanation and "Next" should fit below without a jump
 }
 
 function showResult(card, score, total, ui, bestKey, restart) {
@@ -122,6 +122,7 @@ function showResult(card, score, total, ui, bestKey, restart) {
   if (best) card.appendChild(node("p", "quiz-best", best));
   card.append(again, support);
   again.focus({ preventScroll: true });
+  giveRoom(card);
 }
 
 function node(tag, className, value) {
