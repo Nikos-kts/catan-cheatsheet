@@ -10,9 +10,10 @@ A lightweight, browser-based reference for Catan card explanations — supports 
 
 - **Games / Expansions**: Base Catan, Seafarers, Cities & Knights, Traders & Barbarians, Explorers & Pirates
 - **Languages**: English, Greek (Ελληνικά), Spanish (Español), Dutch (Nederlands), Portuguese (Português, European)
-- **Six tabs**: 🃏 Cards, 🎲 Gameplay, 📋 Reference (building costs / dice probabilities / trading ratios / turn flow), 🧠 Strategy (beginner → advanced tips per game), 🎓 Learn (card finder across all languages, rules people get wrong, rules quiz, placement trainer), 🧮 Tools (dice odds calculator, starting-spot helper, robber 7-timer)
+- **Six tabs**: 🃏 Cards, 🎲 Gameplay, 📋 Reference (building costs / dice probabilities / trading ratios / turn flow), 🧠 Strategy (beginner → advanced tips per game), 🎓 Learn (card finder across all languages, rules people get wrong, rules quiz, placement trainer), 🧮 Tools (keep-screen-on toggle, dice odds calculator, starting-spot helper, robber 7-timer)
 - Selections are remembered across sessions via `localStorage` (`catan-lang`, `catan-game`, `catan-tab`)
 - Pure HTML + CSS + vanilla JavaScript ES modules — no build step needed
+- Phone-first: all tabs visible on small screens, compact header, WebP images sized for display (the whole image set is ~1.3 MB)
 - Accessible: `role="tablist"` tabs with arrow-key navigation, `aria-live` content region, `prefers-reduced-motion`-aware animations
 
 ## Project Structure
