@@ -6,6 +6,9 @@
     "footer": "Referencia comunitaria — no afiliada a Catan Studio.",
     "tabCards": "Cartas",
     "tabGameplay": "Cómo jugar",
+    "tabReference": "Referencia",
+    "tabStrategy": "Estrategia",
+    "tabTools": "Herramientas",
     "noGameplay": "Pronto habrá información sobre cómo jugar.",
     "labelPlayers": "Jugadores",
     "labelVP": "Puntos de victoria para ganar",
@@ -13,9 +16,6 @@
     "titleTurn": "Resumen del turno",
     "titleRules": "Reglas clave",
     "titleScenarios": "Escenarios y variantes",
-    "tabReference": "Referencia",
-    "tabStrategy": "Estrategia",
-    "tabTools": "Herramientas",
     "reference": {
       "heading": "Chuleta numérica",
       "subheading": "Cifras exactas para consultar de un vistazo en mitad del turno.",
@@ -87,6 +87,90 @@
         "rolls": "Total de tiradas",
         "sevensObserved": "Sietes obtenidos",
         "sevensExpected": "Sietes esperados"
+      },
+      "keepAwake": {
+        "title": "Pantalla siempre encendida",
+        "intro": "Evita que la pantalla del móvil se oscurezca o se bloquee mientras tienes la chuleta junto al tablero.",
+        "turnOn": "Mantener la pantalla encendida",
+        "turnOff": "Activo — pulsa para desactivar",
+        "on": "La pantalla seguirá encendida mientras esta página esté abierta.",
+        "blocked": "Tu navegador no lo permite ahora mismo (¿ahorro de batería?).",
+        "unsupported": "Este navegador no puede mantener la pantalla encendida. Como alternativa, aumenta el tiempo de bloqueo automático en los ajustes del móvil."
+      }
+    },
+    "tabLearn": "Aprender",
+    "learn": {
+      "heading": "Aprende Catan",
+      "intro": "Para quienes empiezan y para mesas donde se mezclan idiomas: encuentra cualquier carta por el nombre que lleva impreso, aprende las reglas que se suelen jugar mal, ponte a prueba y practica dónde colocar tus primeros poblados.",
+      "finder": {
+        "title": "¿No entiendes tu carta?",
+        "hint": "Escribe el nombre impreso en la carta, construcción o escenario — en cualquiera de estos idiomas:",
+        "placeholder": "Carta, construcción o escenario…",
+        "loading": "Cargando todos los idiomas…",
+        "empty": "Sin coincidencias — prueba con menos letras o escríbelo de otra forma.",
+        "error": "No se han podido cargar los archivos de idioma. Comprueba tu conexión e inténtalo de nuevo.",
+        "matched": "Coincide con",
+        "open": "Abrir",
+        "namesLabel": "Nombre en todos los idiomas",
+        "kind_card": "Carta",
+        "kind_cost": "Construcción",
+        "kind_scenario": "Escenario",
+        "results": "Resultados: {n}"
+      },
+      "mistakes": {
+        "title": "Reglas que se juegan mal",
+        "lead": "Hasta las mesas más veteranas se equivocan con estas. Cada corrección sale del reglamento oficial.",
+        "empty": "Aún no hay errores frecuentes para este juego.",
+        "myth": "Mito",
+        "rule": "Regla",
+        "tapHint": "Pulsa un mito para ver qué dice de verdad el reglamento."
+      },
+      "quiz": {
+        "title": "Test de reglas",
+        "lead": "Ocho preguntas rápidas sobre las reglas, los costes y las probabilidades de los dados de este juego.",
+        "start": "Empezar el test",
+        "best": "Tu mejor marca: {best}",
+        "progress": "Pregunta {n} de {total}",
+        "correct": "¡Correcto!",
+        "wrong": "No exactamente.",
+        "next": "Siguiente",
+        "finish": "Ver resultado",
+        "again": "Jugar otra vez",
+        "perfect": "Ronda perfecta — ¡podrías dar clases de este juego!",
+        "great": "Muy bien — solo te queda un par por repasar.",
+        "keepGoing": "Buen comienzo — lee las reglas de arriba e inténtalo de nuevo.",
+        "supportText": "Esta chuleta es un proyecto gratuito hecho por fans. Si le sirve a tu mesa, puedes apoyarlo:",
+        "supportLink": "☕ Donar con PayPal",
+        "true": "Verdadero",
+        "false": "Falso",
+        "and": "y",
+        "costQ": "{item}: ¿cuánto cuesta?",
+        "costExplain": "{item}: cuesta {cost}.",
+        "diceMostQ": "Aparte del 7, ¿qué números salen más a menudo?",
+        "diceMostExplain": "El 6 y el 8 salen cada uno en 5 de las 36 combinaciones — solo el 7 (6 combinaciones) es más frecuente.",
+        "sevenQ": "¿Con qué frecuencia sale un 7?",
+        "sevenExplain": "El 7 sale en 6 de las 36 combinaciones — 1 de cada 6 tiradas.",
+        "oneIn": "1 de cada {n} tiradas",
+        "pipsQ": "¿Cuántos puntitos tiene la ficha numerada del {n}?",
+        "diceExplain": "El {n} sale en {ways} de las 36 combinaciones, y su ficha lo indica con el mismo número de puntitos: {ways}."
+      },
+      "trainer": {
+        "title": "Entrenador de colocación",
+        "intro": "Un tablero aleatorio, montado tal como indica la Disposición variable del reglamento. Pulsa cualquier encrucijada para ver qué produciría un poblado allí.",
+        "newBoard": "Nuevo tablero",
+        "showBest": "Ver las mejores",
+        "hideBest": "Ocultar mejores",
+        "boardLabel": "Tablero de Catan",
+        "note": "Los puntitos bajo cada número indican cuántas de las 36 combinaciones de dados dan ese resultado. Los puertos no se muestran.",
+        "tapHint": "Pulsa una encrucijada del tablero para colocar un poblado.",
+        "tapSub": "Verás su producción, qué puesto ocupa entre las 54 encrucijadas y cuáles bloquea la regla de la distancia.",
+        "rank": "#{rank} de {total}",
+        "summary": "Puntitos: {pips} · Materias primas: {kinds} · Puntuación: {score}",
+        "blockedNote": "Las encrucijadas atenuadas están bloqueadas: no se puede construir un poblado junto a otro (regla de la distancia).",
+        "sea": "Mar",
+        "desert": "Desierto",
+        "bestLabel": "mejor posición {n}",
+        "blockedLabel": "bloqueada por la regla de la distancia"
       }
     }
   },
@@ -738,6 +822,70 @@
             ]
           }
         ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "start-resources-second-settlement",
+            "myth": "En la fase de fundación, recibes materias primas iniciales por tus dos poblados.",
+            "rule": "Recibes materias primas iniciales solo por 1 poblado: el segundo (en la disposición inicial para principiantes, el que está marcado en el mapa del reglamento). Toma 1 carta de la materia prima correspondiente por cada hexágono de terreno adyacente a él. El desierto no da nada.",
+            "ref": "Reglamento de CATAN (edición clásica), págs. 3, 12–13"
+          },
+          {
+            "id": "settlement-needs-own-road",
+            "myth": "Tras la fase de fundación, puedes construir un poblado en cualquier sitio, siempre que respete la regla de la distancia.",
+            "rule": "Tras la fase de fundación, todo poblado nuevo debe conectar con una de tus carreteras. Además, debe respetar la regla de la distancia: en ninguna encrucijada adyacente puede haber un poblado o una ciudad, ni siquiera tuyos.",
+            "ref": "Reglamento de CATAN (edición clásica), pág. 5"
+          },
+          {
+            "id": "trade-only-with-active-player",
+            "myth": "Dos jugadores cualesquiera pueden comerciar entre sí en cualquier momento, aunque no sea el turno de ninguno de los dos.",
+            "rule": "En todo intercambio debe participar el jugador en turno. Los demás jugadores pueden comerciar con él, pero no entre ellos ni con la reserva.",
+            "ref": "Reglamento de CATAN (edición clásica), págs. 4, 14"
+          },
+          {
+            "id": "port-2to1-one-resource",
+            "myth": "Un puerto 2:1 también te permite cambiar tus otras materias primas a 3:1.",
+            "rule": "Un puerto 2:1 solo mejora la tasa de cambio de la materia prima que aparece en él. Tus otras materias primas se siguen cambiando a 4:1, salvo que también tengas un poblado o una ciudad en un puerto 3:1 o en el puerto 2:1 correspondiente.",
+            "ref": "Reglamento de CATAN (edición clásica), pág. 9"
+          },
+          {
+            "id": "bank-shortage-nobody-gets",
+            "myth": "Si en la reserva no quedan cartas suficientes de una materia prima, los jugadores a los que les corresponde se reparten las que queden.",
+            "rule": "Si la reserva no tiene cartas suficientes de una materia prima para dar a todos los jugadores lo que han producido, nadie recibe esa materia prima en ese turno. Solo si le corresponde a un único jugador, este se lleva las que queden.",
+            "ref": "Reglamento de CATAN (edición clásica), pág. 4"
+          },
+          {
+            "id": "discard-only-over-seven",
+            "myth": "Cuando sale un 7, todo el que tenga 7 o más cartas debe descartar la mitad.",
+            "rule": "Cuando sale un 7, solo los jugadores con más de 7 cartas de materia prima (8 o más) descartan la mitad, redondeando hacia abajo. Con exactamente 7 estás a salvo.",
+            "ref": "Reglamento de CATAN (edición clásica), pág. 11"
+          },
+          {
+            "id": "dev-cards-safe-from-robber",
+            "myth": "Las cartas de desarrollo de tu mano cuentan para el límite de 7 cartas y el ladrón te las puede robar.",
+            "rule": "Cuando sale un 7, las cartas de desarrollo no cuentan para el número de cartas de tu mano: para descartar solo se cuentan las cartas de materia prima. El ladrón solo puede robar cartas de materia prima, nunca cartas de desarrollo.",
+            "ref": "Reglamento de CATAN (2025), pág. 9"
+          },
+          {
+            "id": "knight-causes-no-discard",
+            "myth": "Jugar un Caballero también obliga a descartar la mitad a todo el que tenga más de 7 cartas.",
+            "rule": "Solo un 7 en la tirada obliga a los jugadores a descartar. Jugar un Caballero mueve el ladrón y te permite robar, pero nadie descarta.",
+            "ref": "catan.com FAQ; Reglamento de CATAN (edición clásica), pág. 8"
+          },
+          {
+            "id": "no-dev-card-on-turn-bought",
+            "myth": "Puedes comprar una carta de Caballero o de Monopolio y jugarla en el mismo turno.",
+            "rule": "Una carta de desarrollo no se puede jugar en el turno en que la compras. Las cartas de puntos de victoria son la única excepción: si con una de ellas llegas a 10 PV, revélala al instante y gana.",
+            "ref": "Reglamento de CATAN (edición clásica), pág. 7"
+          },
+          {
+            "id": "longest-road-needs-longer",
+            "myth": "Construir una ruta tan larga como la del jugador que tiene la Mayor ruta comercial le quita la tarjeta.",
+            "rule": "Para quitarle la Mayor ruta comercial a otro jugador, tu ruta continua debe ser más larga que la suya. Construir una de la misma longitud no basta: quien tiene la tarjeta la conserva.",
+            "ref": "Reglamento de CATAN (edición clásica), pág. 9; catan.com FAQ"
+          }
+        ]
       }
     },
     "seafarers": {
@@ -1256,6 +1404,58 @@
             "title": "Alimenta el motor de barcos",
             "body": "La expansión marítima quema materias primas deprisa, así que los turnos muertos duelen más. Echa el ancla en ríos auríferos y hexágonos de 6/8 para tener la lana y la madera que mantienen una ruta en marcha.",
             "tags": ["probabilidad", "materias-primas"]
+          }
+        ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "roads-ships-join-at-buildings",
+            "myth": "Puedes construir un barco a continuación del extremo de tu carretera en una encrucijada libre, y los dos cuentan entonces como una sola ruta.",
+            "rule": "Las carreteras y los barcos solo se unen en un poblado o una ciudad tuyos. Un barco no puede prolongar una carretera (ni al revés), y una carretera y un barco que coinciden en una encrucijada libre cuentan como rutas separadas para la Mayor ruta comercial.",
+            "ref": "Reglamento de Navegantes (edición clásica), pág. 4"
+          },
+          {
+            "id": "no-moving-new-ships",
+            "myth": "Puedes construir un barco y trasladar ese mismo barco en el mismo turno.",
+            "rule": "Solo puedes trasladar 1 barco por turno, y nunca uno que hayas construido en ese mismo turno. Un barco nuevo se queda donde está hasta tu siguiente turno.",
+            "ref": "Reglamento de Navegantes (edición clásica), pág. 4"
+          },
+          {
+            "id": "closed-route-ships-locked",
+            "myth": "Si un rival funda un poblado en mitad de tu ruta marítima, los barcos de esa ruta ya se pueden trasladar.",
+            "rule": "Los barcos de una ruta marítima ininterrumpida que une dos de tus poblados/ciudades no se pueden trasladar, aunque el traslado no rompiera la unión y aunque un rival funde después un poblado en esa ruta.",
+            "ref": "Reglamento de Navegantes (2025), pág. 2; catan.com FAQ"
+          },
+          {
+            "id": "pirate-robs-ships-only",
+            "myth": "Colocar el pirata junto a un poblado de costa te permite robar a su dueño, aunque no tenga ningún barco allí.",
+            "rule": "Con un 7 o un Caballero puedes mover el pirata en lugar del ladrón. Entonces robas 1 materia prima al azar a un jugador que tenga un barco en un camino del hexágono del pirata; un poblado de costa por sí solo no convierte a su dueño en objetivo.",
+            "ref": "Reglamento de Navegantes (edición clásica), pág. 6; catan.com FAQ"
+          },
+          {
+            "id": "pirate-freezes-ships",
+            "myth": "Los barcos que ya están junto al pirata se pueden trasladar sin más para alejarse de él.",
+            "rule": "Ningún barco se puede construir en un camino del hexágono del pirata, ni trasladarse a él o desde él. Las carreteras, los poblados y las ciudades adyacentes no quedan bloqueados.",
+            "ref": "Reglamento de Navegantes (edición clásica), pág. 6; catan.com FAQ"
+          },
+          {
+            "id": "gold-is-any-resource",
+            "myth": "Los ríos auríferos producen cartas de oro que puedes intercambiar o gastar.",
+            "rule": "No existen cartas de oro. Un río aurífero que produce da 1 materia prima a tu elección por cada poblado adyacente y 2 por cada ciudad adyacente, en cualquier combinación.",
+            "ref": "Reglamento de Navegantes (edición clásica), pág. 6"
+          },
+          {
+            "id": "road-building-ships",
+            "myth": "En Navegantes, la carta de Carreteras sigue permitiendo colocar solo carreteras, tal como dice el texto de la carta.",
+            "rule": "En Navegantes, la carta de Carreteras te permite construir 2 carreteras, 2 barcos, o 1 carretera y 1 barco, todo gratis.",
+            "ref": "Reglamento de Navegantes (edición clásica), pág. 5"
+          },
+          {
+            "id": "island-bonus-for-everyone",
+            "myth": "En Rumbo a nuevas orillas, solo el primer jugador que funda un poblado en un islote se lleva sus puntos de victoria especiales.",
+            "rule": "En Rumbo a nuevas orillas, tu primer poblado en cada islote te da 2 PV especiales, aunque otros jugadores hayan fundado un poblado en ese islote antes que tú.",
+            "ref": "Reglamento de Navegantes (edición clásica), pág. 8"
           }
         ]
       }
@@ -2093,6 +2293,58 @@
             "tags": ["final-de-partida", "cartas-de-progreso"]
           }
         ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "robber-waits-for-barbarians",
+            "myth": "Desde el primer 7 de la partida, quien lo saca mueve el ladrón y roba una carta.",
+            "rule": "Hasta el primer ataque bárbaro, el ladrón no se puede mover (ni siquiera con un caballero o una carta de progreso), y quien saca un 7 no roba nada. Los jugadores que superan el límite de cartas en la mano siguen descartando la mitad.",
+            "ref": "Reglamento de Ciudades y caballeros (edición clásica), pág. 5"
+          },
+          {
+            "id": "no-action-on-activation-turn",
+            "myth": "Puedes activar un caballero y usarlo para una acción en el mismo turno.",
+            "rule": "Un caballero no puede realizar ninguna acción en el turno en que se activa. Sí puedes actuar con un caballero que ya estaba activo y volver a activarlo más tarde en ese turno, para que esté listo para defender.",
+            "ref": "Reglamento de Ciudades y caballeros (edición clásica), págs. 9–10"
+          },
+          {
+            "id": "knights-reset-after-attack",
+            "myth": "Tus caballeros siguen activos cuando termina el ataque bárbaro.",
+            "rule": "Tras cada ataque bárbaro, se gane o se pierda, todos los caballeros del tablero se giran a su lado inactivo. Cada uno debe activarse de nuevo antes de poder actuar o ayudar en la defensa.",
+            "ref": "Reglamento de Ciudades y caballeros (edición clásica), pág. 11"
+          },
+          {
+            "id": "no-last-second-knights",
+            "myth": "Cuando la flota bárbara desembarca, los jugadores todavía pueden activar caballeros para sumarse a la defensa.",
+            "rule": "Los bárbaros atacan en el momento en que el dado de acontecimientos lleva la flota bárbara a Catán, antes de la producción y antes de que nadie pueda comerciar o construir. Solo cuentan los caballeros que ya están activos; no puedes activar más en respuesta.",
+            "ref": "Reglamento de Ciudades y caballeros (edición clásica), págs. 5, 11; catan.com FAQ"
+          },
+          {
+            "id": "walls-dont-stop-barbarians",
+            "myth": "Una muralla protege a su ciudad del saqueo de los bárbaros.",
+            "rule": "Las murallas no detienen a los bárbaros. Una muralla solo te permite tener 2 cartas más en la mano cuando sale un 7; si su ciudad es saqueada, la muralla también se retira.",
+            "ref": "Reglamento de Ciudades y caballeros (edición clásica), pág. 6; catan.com FAQ"
+          },
+          {
+            "id": "knights-block-roads",
+            "myth": "Los caballeros solo defienden contra los bárbaros; no pueden bloquear carreteras ni cortar la Mayor ruta comercial.",
+            "rule": "El caballero de un rival, aunque esté inactivo, te impide construir una carretera más allá de su encrucijada y divide tu ruta al contar la Mayor ruta comercial.",
+            "ref": "Reglamento de Ciudades y caballeros (edición clásica), pág. 9"
+          },
+          {
+            "id": "commodities-are-hand-cards",
+            "myth": "Las cartas de mercancía no cuentan para tu límite de cartas en la mano cuando sale un 7.",
+            "rule": "Las mercancías son cartas de la mano igual que las materias primas: cuentan para tu límite de cartas en la mano cuando sale un 7, y el ladrón puede robarlas.",
+            "ref": "Reglamento de Ciudades y caballeros (edición clásica), pág. 7"
+          },
+          {
+            "id": "only-alchemist-before-roll",
+            "myth": "Puedes jugar cualquier carta de progreso antes de tirar los dados.",
+            "rule": "Alquimista (Alchemy) es la única carta de progreso que puedes jugar antes de tirar los dados. Todas las demás cartas de progreso se juegan después de la tirada.",
+            "ref": "Reglamento de Ciudades y caballeros (edición clásica), pág. 9"
+          }
+        ]
       }
     },
     "traders-barbarians": {
@@ -2545,6 +2797,58 @@
                 "tags": ["cartas-de-evento", "ladrón"]
               }
             ]
+          }
+        ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "friendly-robber-still-discard",
+            "myth": "Con la variante Ladrón piadoso, un jugador que solo tenga 2 PV se libra de descartar con un 7, tenga las cartas que tenga.",
+            "rule": "Ladrón piadoso: el ladrón no se puede colocar en un hexágono con un edificio de un jugador que solo tenga 2 PV (si ningún hexágono es válido, va al desierto) ni usarse para robarle, pero con un 7 ese jugador sigue descartando la mitad de sus cartas de materia prima (redondeando hacia abajo) si tiene más de 7.",
+            "ref": "Reglamento de Mercaderes y bárbaros (edición clásica), pág. 3"
+          },
+          {
+            "id": "old-boot-not-minus-vp",
+            "myth": "En Los pescadores de Catán (Fishing on Catan), la bota vieja es una penalización de −1 PV que reduce tu puntuación.",
+            "rule": "Los pescadores de Catán (Fishing on Catan): la bota vieja no reduce tu total de PV — quien la tiene simplemente necesita 1 PV más para ganar (11 en lugar de 10).",
+            "ref": "Reglamento de Mercaderes y bárbaros (edición clásica), pág. 9; catan.com FAQ"
+          },
+          {
+            "id": "rivers-no-road-across",
+            "myth": "En Los ríos de Catán, puedes cruzar un río con una carretera normal.",
+            "rule": "Los ríos de Catán: nunca se puede construir una carretera en un camino que cruza un río — solo un puente (2 arcillas + 1 madera) puede cruzarlo, y con una carta de Carreteras no se pueden construir puentes.",
+            "ref": "Reglamento de Mercaderes y bárbaros (edición clásica), pág. 11; catan.com FAQ"
+          },
+          {
+            "id": "wealthiest-settler-tie",
+            "myth": "En Los ríos de Catán, conservas la tarjeta de Colono más rico si otro jugador solo iguala tu cantidad de oro.",
+            "rule": "Los ríos de Catán: pierdes la tarjeta de Colono más rico (Wealthiest Catanian) en cuanto alguien iguala tu oro; se deja aparte hasta que un único jugador tenga más oro que nadie.",
+            "ref": "Reglamento de Mercaderes y bárbaros (edición clásica), págs. 11–12"
+          },
+          {
+            "id": "caravans-road-on-camel-path",
+            "myth": "En La ruta de las caravanas (Merchant Trains), no puedes construir una carretera en un camino donde ya hay un camello (carromato).",
+            "rule": "La ruta de las caravanas (Merchant Trains): una carretera puede compartir camino con un camello (carromato), y cada una de esas carreteras cuenta como 2 tramos para la Mayor ruta comercial.",
+            "ref": "Reglamento de Mercaderes y bárbaros (edición clásica), págs. 13–14"
+          },
+          {
+            "id": "barbarian-attack-dev-cards-immediate",
+            "myth": "En El ataque de los bárbaros, puedes guardar cartas de desarrollo en la mano y jugarlas en un turno posterior.",
+            "rule": "El ataque de los bárbaros: debes revelar y resolver cada carta de desarrollo en cuanto la compras — no puedes guardarla — y puedes comprar y jugar varias en un mismo turno.",
+            "ref": "Reglamento de Mercaderes y bárbaros (edición clásica), pág. 17"
+          },
+          {
+            "id": "tb-wagon-rival-roads",
+            "myth": "En el escenario principal de Mercaderes y bárbaros, tu carromato no puede circular por las carreteras de otros jugadores.",
+            "rule": "Escenario principal de Mercaderes y bárbaros: tu carromato puede usar las carreteras de tus rivales — cada una cuesta 1 punto de movimiento más 1 oro, que pagas al dueño de la carretera (+2 puntos de movimiento si hay un bárbaro en ella).",
+            "ref": "Reglamento de Mercaderes y bárbaros (edición clásica), pág. 21"
+          },
+          {
+            "id": "tb-no-longest-road",
+            "myth": "La tarjeta de Mayor ruta comercial sigue dando 2 PV en el escenario principal de Mercaderes y bárbaros.",
+            "rule": "Escenario principal de Mercaderes y bárbaros: la tarjeta de Mayor ruta comercial no se usa, así que nadie se lleva sus 2 PV — las carreteras siguen siendo importantes, porque tu carromato se mueve por tus propias carreteras por 1 punto de movimiento en lugar de 2.",
+            "ref": "Reglamento de Mercaderes y bárbaros (edición clásica), pág. 21"
           }
         ]
       }
@@ -3154,6 +3458,58 @@
             "title": "Corre hacia los 17, asegura los puntos baratos",
             "body": "La victoria sale de las ciudades portuarias, los poblados, las posiciones en los marcadores de misión y las tarjetas de punto de victoria. Al final de la partida, ve a por el punto más barato: una ciudad portuaria o una casilla de misión suele valer más que una isla nueva y remota.",
             "tags": ["final-de-partida", "puntuación"]
+          }
+        ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "harbor-settlement-production",
+            "myth": "Una ciudad portuaria produce el doble, como una ciudad: 2 materias primas en lugar de 1 por cada hexágono adyacente cuyo número salga en la tirada.",
+            "rule": "Una ciudad portuaria vale 2 PV, pero produce exactamente igual que un poblado normal, no el doble como una ciudad: p. ej., 1 mineral, y no 2, cuando sale el número de una montaña adyacente.",
+            "ref": "Reglamento de Piratas y exploradores (edición clásica), pág. 5"
+          },
+          {
+            "id": "no-trade-build-after-moving",
+            "myth": "Después de mover tus barcos, todavía puedes comerciar o comprar piezas nuevas, siempre que siga siendo tu turno.",
+            "rule": "Comercias y construyes antes de la fase de movimiento. Una vez que empieza, ya no puedes comerciar ni construir; la única excepción es fundar un poblado desde un barco con colono, sin coste adicional.",
+            "ref": "Reglamento de Piratas y exploradores (edición clásica), pág. 3"
+          },
+          {
+            "id": "pirate-tribute-to-supply",
+            "myth": "El tributo por pasar junto a un barco pirata se paga al dueño de ese barco pirata.",
+            "rule": "El tributo es de 1 oro por barco y se paga a la reserva, no al dueño del barco pirata. Una vez pagado, ese barco puede entrar en el hexágono del pirata, moverse por él y salir de él libremente durante el resto del turno.",
+            "ref": "Reglamento de Piratas y exploradores (edición clásica), pág. 7"
+          },
+          {
+            "id": "discovery-ends-ship-move",
+            "myth": "Un barco que descubre un hexágono nuevo puede seguir navegando con los puntos de movimiento que le quedan.",
+            "rule": "Descubrir un hexágono termina el movimiento de ese barco en este turno, y los puntos de movimiento que no haya usado se pierden. Los barcos que aún no hayas movido en este turno sí pueden navegar.",
+            "ref": "Reglamento de Piratas y exploradores (edición clásica), pág. 4"
+          },
+          {
+            "id": "chase-needs-unmoved-ship",
+            "myth": "Un barco que ya se ha movido en este turno todavía puede tirar el dado para ahuyentar al barco pirata.",
+            "rule": "Solo un barco que aún no se haya movido en este turno y cuya proa o popa toque una encrucijada del hexágono del pirata puede tirar el dado para ahuyentar al barco pirata. Después de tirar, todavía puede navegar.",
+            "ref": "Reglamento de Piratas y exploradores (edición clásica), pág. 8"
+          },
+          {
+            "id": "gold-safe-on-seven",
+            "myth": "Con un 7, las monedas de oro cuentan como cartas de tu mano, así que puede que tengas que descartar algo de oro.",
+            "rule": "Con un 7, solo cuentan las cartas de materia prima: un jugador con más de 7 cartas de materia prima descarta la mitad (redondeando hacia abajo). Las monedas de oro nunca se cuentan ni se descartan.",
+            "ref": "Reglamento de Piratas y exploradores (edición clásica), págs. 3, 7"
+          },
+          {
+            "id": "pirate-lair-shared-capture",
+            "myth": "Para conquistar una guarida de piratas, las tres unidades que hay en ella deben ser tuyas.",
+            "rule": "Una guarida de piratas se conquista con la 3.ª unidad que se coloca en ella, sean de quien sean las unidades. Cada jugador con una unidad allí recibe 2 oros y avanza en el marcador de misión de las guaridas.",
+            "ref": "Reglamento de Piratas y exploradores (edición clásica), pág. 10"
+          },
+          {
+            "id": "settler-distance-rule",
+            "myth": "Un barco con colono puede fundar un poblado en cualquier encrucijada de costa, incluso justo al lado de otro poblado.",
+            "rule": "Un poblado fundado desde un barco con colono debe respetar la regla de la distancia. Devuelves el barco y su colono a tu reserva y colocas el poblado sin coste adicional.",
+            "ref": "Reglamento de Piratas y exploradores (edición clásica), pág. 5"
           }
         ]
       }

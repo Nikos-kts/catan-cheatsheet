@@ -6,6 +6,9 @@
     "footer": "Naslagwerk van de community — niet gelieerd aan Catan Studio.",
     "tabCards": "Kaarten",
     "tabGameplay": "Spelregels",
+    "tabReference": "Naslag",
+    "tabStrategy": "Strategie",
+    "tabTools": "Hulpmiddelen",
     "noGameplay": "Spelinformatie komt eraan.",
     "labelPlayers": "Spelers",
     "labelVP": "Overwinningspunten (OP) om te winnen",
@@ -13,9 +16,6 @@
     "titleTurn": "Beurtoverzicht",
     "titleRules": "Belangrijkste regels",
     "titleScenarios": "Scenario's & varianten",
-    "tabReference": "Naslag",
-    "tabStrategy": "Strategie",
-    "tabTools": "Hulpmiddelen",
     "reference": {
       "heading": "Spiekbriefje met getallen",
       "subheading": "Harde cijfers om midden in je beurt snel even na te kijken.",
@@ -87,6 +87,90 @@
         "rolls": "Totaal aantal worpen",
         "sevensObserved": "Gegooide zevens",
         "sevensExpected": "Verwachte zevens"
+      },
+      "keepAwake": {
+        "title": "Scherm aan laten staan",
+        "intro": "Voorkom dat het scherm van je telefoon dimt of vergrendelt terwijl het spiekbriefje naast het speelbord ligt.",
+        "turnOn": "Houd het scherm aan",
+        "turnOff": "Blijft aan — tik om uit te zetten",
+        "on": "Het scherm blijft aan zolang deze pagina open is.",
+        "blocked": "Je browser staat dit nu niet toe (batterijbesparing aan?).",
+        "unsupported": "Deze browser kan het scherm niet aan laten staan. Zet de automatische vergrendeling dan op een langere tijd in de instellingen van je telefoon."
+      }
+    },
+    "tabLearn": "Leren",
+    "learn": {
+      "heading": "Catan leren",
+      "intro": "Voor nieuwe spelers en meertalige spelgroepen: zoek elke kaart op via de naam die erop staat, leer welke regels vaak fout gaan, test jezelf en oefen je startopstelling.",
+      "finder": {
+        "title": "Kaart niet te lezen?",
+        "hint": "Typ de naam die op de kaart, het gebouw of het scenario staat — in een van deze talen:",
+        "placeholder": "Kaart, gebouw of scenario…",
+        "loading": "Alle talen laden…",
+        "empty": "Niets gevonden — probeer minder letters of een andere spelling.",
+        "error": "De taalbestanden konden niet worden geladen. Controleer je verbinding en probeer het opnieuw.",
+        "matched": "Gevonden via",
+        "open": "Openen",
+        "namesLabel": "Naam in elke taal",
+        "kind_card": "Kaart",
+        "kind_cost": "Gebouw",
+        "kind_scenario": "Scenario",
+        "results": "{n} gevonden"
+      },
+      "mistakes": {
+        "title": "Regels die vaak fout gaan",
+        "lead": "Zelfs ervaren spelers gaan hiermee de mist in. De juiste regel komt steeds uit de officiële spelregels.",
+        "empty": "Nog geen veelgemaakte fouten voor dit spel.",
+        "myth": "Mythe",
+        "rule": "Regel",
+        "tapHint": "Tik op een mythe om te zien wat er echt in de spelregels staat."
+      },
+      "quiz": {
+        "title": "Regelquiz",
+        "lead": "Acht snelle vragen over de regels, bouwkosten en dobbelsteenkansen van dit spel.",
+        "start": "Start de quiz",
+        "best": "Je beste score: {best}",
+        "progress": "Vraag {n} van {total}",
+        "correct": "Goed zo!",
+        "wrong": "Helaas, niet goed.",
+        "next": "Volgende",
+        "finish": "Bekijk je resultaat",
+        "again": "Speel opnieuw",
+        "perfect": "Foutloze ronde — jij mag voortaan de spelregels uitleggen!",
+        "great": "Goed gedaan — nog een paar regels om op te frissen.",
+        "keepGoing": "Goed begin — lees de regels hierboven nog eens door en probeer het opnieuw.",
+        "supportText": "Dit spiekbriefje is een gratis fanproject. Heb je er aan tafel iets aan? Dan kun je het steunen:",
+        "supportLink": "☕ Doneer via PayPal",
+        "true": "Waar",
+        "false": "Niet waar",
+        "and": "en",
+        "costQ": "{item}: wat kost dat?",
+        "costExplain": "{item} kost {cost}.",
+        "diceMostQ": "Welke getallen worden, op de 7 na, het vaakst gegooid?",
+        "diceMostExplain": "De 6 en de 8 kun je elk op 5 van de 36 manieren gooien — alleen de 7 (6 manieren) komt vaker voor.",
+        "sevenQ": "Hoe vaak wordt er een 7 gegooid?",
+        "sevenExplain": "Een 7 kun je op 6 van de 36 manieren gooien — dat is 1 op 6 worpen.",
+        "oneIn": "1 op {n}",
+        "pipsQ": "Hoeveel stippen staan er op het getallenfiche met de {n}?",
+        "diceExplain": "Een {n} kun je op {ways} van de 36 manieren gooien, dus het aantal stippen op het fiche is ook {ways}."
+      },
+      "trainer": {
+        "title": "Startplektrainer",
+        "intro": "Een willekeurig speelbord, precies gelegd volgens de variabele opbouw uit de spelregels. Tik op een driesprong om te zien wat een dorp daar zou opleveren.",
+        "newBoard": "Nieuw bord",
+        "showBest": "Toon beste plekken",
+        "hideBest": "Verberg beste plekken",
+        "boardLabel": "Catan-speelbord",
+        "note": "De stippen onder elk getal geven aan met hoeveel van de 36 dobbelsteencombinaties je dat getal gooit. Havens worden niet getoond.",
+        "tapHint": "Tik op een driesprong om een dorp te plaatsen.",
+        "tapSub": "Je ziet de opbrengst, hoe die plek scoort tussen alle 54 driesprongen en wat de afstandsregel blokkeert.",
+        "rank": "#{rank} van {total}",
+        "summary": "Stippen: {pips} · grondstofsoorten: {kinds} · score: {score}",
+        "blockedNote": "Vervaagde driesprongen zijn geblokkeerd: naast een dorp mag je geen ander dorp bouwen (afstandsregel).",
+        "sea": "Zee",
+        "desert": "Woestijn",
+        "bestLabel": "beste plek {n}",
+        "blockedLabel": "geblokkeerd door de afstandsregel"
       }
     }
   },
@@ -738,6 +822,70 @@
             ]
           }
         ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "start-resources-second-settlement",
+            "myth": "Bij de startopstelling krijg je startgrondstoffen voor je beide dorpen.",
+            "rule": "Je krijgt startgrondstoffen voor maar 1 dorp: je tweede (in de vaste opbouw voor beginners het dorp dat op de afbeelding in de spelregels is gemarkeerd). Neem 1 bijbehorende kaart voor elke landtegel die eraan grenst. De woestijn levert niets op.",
+            "ref": "CATAN-spelregels (klassieke editie), blz. 3, 12–13"
+          },
+          {
+            "id": "settlement-needs-own-road",
+            "myth": "Na de startopstelling mag je overal een dorp bouwen, zolang je je maar aan de afstandsregel houdt.",
+            "rule": "Na de startopstelling moet elk nieuw dorp aansluiten op een van je eigen straten. Ook de afstandsregel geldt: op geen enkele aangrenzende driesprong mag een dorp of stad staan, ook niet van jezelf.",
+            "ref": "CATAN-spelregels (klassieke editie), blz. 5"
+          },
+          {
+            "id": "trade-only-with-active-player",
+            "myth": "Twee willekeurige spelers mogen op elk moment met elkaar handelen, ook als geen van beiden aan de beurt is.",
+            "rule": "Bij elke ruil moet de speler die aan de beurt is betrokken zijn. Andere spelers mogen met die speler handelen, maar niet met elkaar of met de bank.",
+            "ref": "CATAN-spelregels (klassieke editie), blz. 4, 14"
+          },
+          {
+            "id": "port-2to1-one-resource",
+            "myth": "Met een 2:1-haven mag je ook je andere grondstoffen 3:1 ruilen.",
+            "rule": "Een 2:1-haven verbetert alleen de ruilverhouding voor de grondstof die erop staat afgebeeld. Je andere grondstoffen ruil je nog steeds 4:1, tenzij je ook een dorp of stad hebt aan een 3:1-haven of aan de bijbehorende 2:1-haven.",
+            "ref": "CATAN-spelregels (klassieke editie), blz. 9"
+          },
+          {
+            "id": "bank-shortage-nobody-gets",
+            "myth": "Heeft de bank te weinig kaarten van een grondstof, dan verdelen de spelers die er recht op hebben de kaarten die er nog zijn.",
+            "rule": "Kan de bank niet elke speler zijn volledige opbrengst van een grondstof geven, dan krijgt niemand die grondstof in die beurt. Alleen als één enkele speler er recht op heeft, neemt die wat er nog over is.",
+            "ref": "CATAN-spelregels (klassieke editie), blz. 4"
+          },
+          {
+            "id": "discard-only-over-seven",
+            "myth": "Als er een 7 wordt gegooid, moet iedereen met 7 of meer kaarten de helft afleggen.",
+            "rule": "Als er een 7 wordt gegooid, leggen alleen spelers met meer dan 7 grondstofkaarten (8 of meer) de helft af, naar beneden afgerond. Met precies 7 kaarten ben je veilig.",
+            "ref": "CATAN-spelregels (klassieke editie), blz. 11"
+          },
+          {
+            "id": "dev-cards-safe-from-robber",
+            "myth": "Ontwikkelingskaarten in je hand tellen mee voor de limiet van 7 kaarten en kunnen door de struikrover worden gestolen.",
+            "rule": "Als er een 7 wordt gegooid, tellen ontwikkelingskaarten niet mee voor het aantal kaarten in je hand: voor het afleggen worden alleen grondstofkaarten geteld. De struikrover kan alleen grondstofkaarten stelen, nooit ontwikkelingskaarten.",
+            "ref": "CATAN-spelregels (2025), blz. 9"
+          },
+          {
+            "id": "knight-causes-no-discard",
+            "myth": "Ook bij het spelen van een ridderkaart moet iedereen met meer dan 7 kaarten de helft afleggen.",
+            "rule": "Alleen bij een gegooide 7 moeten spelers kaarten afleggen. Met een ridderkaart verplaats je de struikrover en mag je stelen, maar niemand legt kaarten af.",
+            "ref": "catan.com FAQ; CATAN-spelregels (klassieke editie), blz. 8"
+          },
+          {
+            "id": "no-dev-card-on-turn-bought",
+            "myth": "Je kunt een ridderkaart of een Monopolie kopen en die in dezelfde beurt spelen.",
+            "rule": "Een ontwikkelingskaart mag je niet spelen in de beurt waarin je hem koopt. Overwinningspuntkaarten zijn de enige uitzondering: brengt zo'n kaart je op 10 OP, onthul hem dan meteen en win.",
+            "ref": "CATAN-spelregels (klassieke editie), blz. 7"
+          },
+          {
+            "id": "longest-road-needs-longer",
+            "myth": "Als je een route bouwt die even lang is als die van de bezitter van de Langste handelsroute (Langste route), pak je de kaart van hem af.",
+            "rule": "Om de Langste handelsroute (Langste route) van een medespeler af te pakken, moet jouw aaneengesloten route langer zijn dan de zijne. Een even lange route bouwen is niet genoeg: de bezitter houdt de kaart.",
+            "ref": "CATAN-spelregels (klassieke editie), blz. 9; catan.com FAQ"
+          }
+        ]
       }
     },
     "seafarers": {
@@ -1256,6 +1404,58 @@
             "title": "Voed de scheepsmotor",
             "body": "Uitbreiden over zee verbrandt grondstoffen razendsnel, dus dode beurten doen extra pijn. Leun op rivierbeddingen en 6/8-tegels voor de wol en het hout die je route in beweging houden.",
             "tags": ["kansen", "grondstoffen"]
+          }
+        ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "roads-ships-join-at-buildings",
+            "myth": "Je kunt op een lege driesprong een schip direct aan het eind van je straat bouwen, en samen tellen ze dan als één route.",
+            "rule": "Straten en schepen sluiten alleen via je eigen dorp of stad op elkaar aan. Een schip kan een straat niet verlengen (en omgekeerd), en een straat en een schip die op een lege driesprong samenkomen, tellen voor de Langste handelsroute (Langste route) als aparte routes.",
+            "ref": "Zeevaarders-spelregels (klassieke editie), blz. 4"
+          },
+          {
+            "id": "no-moving-new-ships",
+            "myth": "Je kunt een schip bouwen en datzelfde schip in dezelfde beurt nog verplaatsen.",
+            "rule": "Je mag per beurt maar 1 schip verplaatsen, en nooit een schip dat je in diezelfde beurt hebt gebouwd. Een nieuw schip blijft liggen tot je volgende beurt.",
+            "ref": "Zeevaarders-spelregels (klassieke editie), blz. 4"
+          },
+          {
+            "id": "closed-route-ships-locked",
+            "myth": "Bouwt een medespeler een dorp midden in je scheepsroute, dan komen die schepen vrij en mag je ze verplaatsen.",
+            "rule": "Schepen in een ononderbroken route die twee van je dorpen/steden verbindt, mogen niet worden verplaatst, ook niet als de verbinding daarbij intact zou blijven en ook niet als een medespeler later een dorp op die route bouwt.",
+            "ref": "Zeevaarders-spelregels (2025), blz. 2; catan.com FAQ"
+          },
+          {
+            "id": "pirate-robs-ships-only",
+            "myth": "Zet je de zeerover naast een kustdorp, dan mag je van de eigenaar stelen, ook als die daar geen schip heeft.",
+            "rule": "Bij een 7 of een ridderkaart mag je de zeerover verplaatsen in plaats van de struikrover. Je steelt dan 1 willekeurige grondstof van één speler met een schip op een pad van de tegel van de zeerover; een kustdorp alleen maakt de eigenaar nog geen doelwit.",
+            "ref": "Zeevaarders-spelregels (klassieke editie), blz. 6; catan.com FAQ"
+          },
+          {
+            "id": "pirate-freezes-ships",
+            "myth": "Schepen die al naast de zeerover liggen, kunnen er gewoon van wegvaren.",
+            "rule": "Op een pad van de tegel van de zeerover mag je geen schip bouwen, en je mag er ook geen schip naartoe of vandaan verplaatsen. Straten, dorpen en steden ernaast worden niet geblokkeerd.",
+            "ref": "Zeevaarders-spelregels (klassieke editie), blz. 6; catan.com FAQ"
+          },
+          {
+            "id": "gold-is-any-resource",
+            "myth": "Rivierbeddingen leveren goudkaarten op die je kunt ruilen of uitgeven.",
+            "rule": "Goudkaarten bestaan niet. Een rivierbedding die opbrengst levert, geeft 1 grondstof naar keuze per aangrenzend dorp en 2 per aangrenzende stad, in elke combinatie.",
+            "ref": "Zeevaarders-spelregels (klassieke editie), blz. 6"
+          },
+          {
+            "id": "road-building-ships",
+            "myth": "In Zeevaarders kun je met de kaart Stratenbouw nog steeds alleen straten plaatsen, precies zoals op de kaart staat.",
+            "rule": "In Zeevaarders bouw je met de kaart Stratenbouw 2 straten, 2 schepen of 1 straat en 1 schip, allemaal gratis.",
+            "ref": "Zeevaarders-spelregels (klassieke editie), blz. 5"
+          },
+          {
+            "id": "island-bonus-for-everyone",
+            "myth": "In ‘Op naar nieuwe kusten!’ krijgt alleen de eerste speler die op een klein eiland een dorp bouwt de extra overwinningspunten van dat eiland.",
+            "rule": "In ‘Op naar nieuwe kusten!’ levert je eerste dorp op elk klein eiland je 2 bonus-OP op, ook als andere spelers eerder dan jij een dorp op dat eiland bouwden.",
+            "ref": "Zeevaarders-spelregels (klassieke editie), blz. 8"
           }
         ]
       }
@@ -2093,6 +2293,58 @@
             "tags": ["eindspel", "ontwikkelingskaarten"]
           }
         ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "robber-waits-for-barbarians",
+            "myth": "Vanaf de allereerste 7 van het spel verplaatst de speler die hem gooit de struikrover en steelt hij een kaart.",
+            "rule": "Tot de barbaren voor het eerst aanvallen, mag de struikrover niet worden verplaatst (ook niet door een ridder of ontwikkelingskaart), en wie een 7 gooit, steelt niets. Spelers boven de handkaartenlimiet leggen wel de helft af.",
+            "ref": "Steden & Ridders-spelregels (klassieke editie), blz. 5"
+          },
+          {
+            "id": "no-action-on-activation-turn",
+            "myth": "Je kunt een ridder activeren en hem in dezelfde beurt een actie laten uitvoeren.",
+            "rule": "Een ridder kan niet in actie komen in de beurt waarin hij is geactiveerd. Wel mag je een actie uitvoeren met een ridder die al actief was en hem later in die beurt opnieuw activeren, zodat hij klaarstaat voor de verdediging.",
+            "ref": "Steden & Ridders-spelregels (klassieke editie), blz. 9–10"
+          },
+          {
+            "id": "knights-reset-after-attack",
+            "myth": "Je ridders blijven actief nadat de barbarenaanval voorbij is.",
+            "rule": "Na elke barbarenaanval, gewonnen of verloren, worden alle ridders op het speelbord naar hun inactieve kant gedraaid. Elke ridder moet opnieuw worden geactiveerd voordat hij een actie kan uitvoeren of kan helpen verdedigen.",
+            "ref": "Steden & Ridders-spelregels (klassieke editie), blz. 11"
+          },
+          {
+            "id": "no-last-second-knights",
+            "myth": "Als de barbarenvloot landt, mogen spelers nog ridders activeren om mee te verdedigen.",
+            "rule": "De barbaren vallen aan op het moment dat de gebeurtenisdobbelsteen de barbarenvloot Catan laat bereiken, vóór de opbrengst en voordat iemand kan handelen of bouwen. Alleen ridders die al actief zijn, tellen mee; als reactie nog ridders activeren kan niet.",
+            "ref": "Steden & Ridders-spelregels (klassieke editie), blz. 5, 11; catan.com FAQ"
+          },
+          {
+            "id": "walls-dont-stop-barbarians",
+            "myth": "Een stadsmuur beschermt zijn stad tegen plundering door de barbaren.",
+            "rule": "Stadsmuren houden de barbaren niet tegen. Met een muur mag je alleen 2 kaarten meer houden als er een 7 wordt gegooid; wordt de stad geplunderd, dan verdwijnt ook de muur.",
+            "ref": "Steden & Ridders-spelregels (klassieke editie), blz. 6; catan.com FAQ"
+          },
+          {
+            "id": "knights-block-roads",
+            "myth": "Ridders verdedigen alleen tegen de barbaren; ze kunnen geen straten blokkeren en de Langste handelsroute niet onderbreken.",
+            "rule": "Een ridder van een medespeler, ook een inactieve, verhindert dat je een straat voorbij zijn driesprong bouwt en onderbreekt je route bij het tellen voor de Langste handelsroute (Langste route).",
+            "ref": "Steden & Ridders-spelregels (klassieke editie), blz. 9"
+          },
+          {
+            "id": "commodities-are-hand-cards",
+            "myth": "Handelswaarkaarten tellen niet mee voor je handkaartenlimiet als er een 7 wordt gegooid.",
+            "rule": "Handelswaren zijn handkaarten, net als grondstoffen: ze tellen mee voor je handkaartenlimiet als er een 7 wordt gegooid, en de struikrover kan ze stelen.",
+            "ref": "Steden & Ridders-spelregels (klassieke editie), blz. 7"
+          },
+          {
+            "id": "only-alchemist-before-roll",
+            "myth": "Je mag elke ontwikkelingskaart vóór het gooien van de dobbelstenen spelen.",
+            "rule": "Alchemist (Alchemy) is de enige ontwikkelingskaart die je vóór het gooien van de dobbelstenen mag spelen. Alle andere ontwikkelingskaarten speel je na de worp.",
+            "ref": "Steden & Ridders-spelregels (klassieke editie), blz. 9"
+          }
+        ]
       }
     },
     "traders-barbarians": {
@@ -2545,6 +2797,58 @@
                 "tags": ["gebeurteniskaarten", "struikrover"]
               }
             ]
+          }
+        ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "friendly-robber-still-discard",
+            "myth": "Met De vriendelijke rover hoeft een speler met slechts 2 OP bij een 7 niets af te leggen, hoeveel kaarten hij ook heeft.",
+            "rule": "De vriendelijke rover: de struikrover mag niet naast een speler met slechts 2 OP worden gezet (is geen enkele tegel toegestaan, dan gaat hij naar de woestijn) en je mag er niet mee van die speler stelen, maar bij een 7 legt die speler nog steeds de helft van zijn grondstofkaarten af (naar beneden afgerond) als hij er meer dan 7 heeft.",
+            "ref": "Kooplieden & Barbaren-spelregels (klassieke editie), blz. 3"
+          },
+          {
+            "id": "old-boot-not-minus-vp",
+            "myth": "In De vissers van Catan (Fishing on Catan) is de Oude Schoen een straf van −1 OP die je score verlaagt.",
+            "rule": "De vissers van Catan (Fishing on Catan): de Oude Schoen verlaagt je OP-totaal niet — wie hem heeft, heeft gewoon 1 extra OP nodig om te winnen (11 in plaats van 10).",
+            "ref": "Kooplieden & Barbaren-spelregels (klassieke editie), blz. 9; catan.com FAQ"
+          },
+          {
+            "id": "rivers-no-road-across",
+            "myth": "In De rivieren van Catan kun je met een gewone straat een rivier oversteken.",
+            "rule": "De rivieren van Catan: op een pad dat een rivier kruist, mag je nooit een straat bouwen — alleen een brug (2 leem + 1 hout) kan de rivier oversteken, en met de kaart Stratenbouw kun je geen bruggen bouwen.",
+            "ref": "Kooplieden & Barbaren-spelregels (klassieke editie), blz. 11; catan.com FAQ"
+          },
+          {
+            "id": "wealthiest-settler-tie",
+            "myth": "In De rivieren van Catan houd je de kaart Rijkste kolonist als een medespeler alleen maar evenveel goud heeft als jij.",
+            "rule": "De rivieren van Catan: je verliest de kaart Rijkste kolonist (Wealthiest Catanian) zodra iemand evenveel goud heeft als jij; de kaart wordt opzijgelegd tot één speler als enige het meeste goud heeft.",
+            "ref": "Kooplieden & Barbaren-spelregels (klassieke editie), blz. 11–12"
+          },
+          {
+            "id": "caravans-road-on-camel-path",
+            "myth": "In De trektocht (Merchant Trains) mag je geen straat bouwen op een pad waar al een kameel (huifkar) staat.",
+            "rule": "De trektocht (Merchant Trains): een straat mag een pad delen met een kameel (huifkar), en elke straat op zo'n pad telt voor de Langste handelsroute (Langste route) als 2 straten.",
+            "ref": "Kooplieden & Barbaren-spelregels (klassieke editie), blz. 13–14"
+          },
+          {
+            "id": "barbarian-attack-dev-cards-immediate",
+            "myth": "In De barbarenoverval mag je ontwikkelingskaarten in je hand houden en ze in een latere beurt spelen.",
+            "rule": "De barbarenoverval: je moet elke ontwikkelingskaart openleggen en uitvoeren zodra je hem koopt — bewaren kan niet — en je mag er in één beurt meerdere kopen en spelen.",
+            "ref": "Kooplieden & Barbaren-spelregels (klassieke editie), blz. 17"
+          },
+          {
+            "id": "tb-wagon-rival-roads",
+            "myth": "In het hoofdscenario Kooplieden & Barbaren mag je huifkar niet over de straten van andere spelers rijden.",
+            "rule": "Hoofdscenario Kooplieden & Barbaren: je huifkar mag de straten van medespelers gebruiken — elke straat kost 1 bewegingspunt plus 1 goud voor de eigenaar van de straat (+2 bewegingspunten als er een barbaar op staat).",
+            "ref": "Kooplieden & Barbaren-spelregels (klassieke editie), blz. 21"
+          },
+          {
+            "id": "tb-no-longest-road",
+            "myth": "De kaart Langste handelsroute (Langste route) levert ook in het hoofdscenario Kooplieden & Barbaren 2 OP op.",
+            "rule": "Hoofdscenario Kooplieden & Barbaren: de kaart Langste handelsroute (Langste route) wordt niet gebruikt, dus niemand krijgt die 2 OP — straten blijven wel belangrijk, want over je eigen straten rijdt je huifkar voor 1 bewegingspunt in plaats van 2.",
+            "ref": "Kooplieden & Barbaren-spelregels (klassieke editie), blz. 21"
           }
         ]
       }
@@ -3154,6 +3458,58 @@
             "title": "Race naar 17, sleep de goedkope punten binnen",
             "body": "De overwinning komt van havendorpen, dorpen, posities op het missiespoor en bonus-OP-tegels. Pak laat in het spel het goedkoopste punt dat er is — een havendorp of één stap op het missiespoor is vaak beter dan een ver afgelegen nieuw eiland.",
             "tags": ["eindspel", "scoren"]
+          }
+        ]
+      },
+      "learn": {
+        "mistakes": [
+          {
+            "id": "harbor-settlement-production",
+            "myth": "Een havendorp levert dubbel op, net als een stad: 2 grondstoffen in plaats van 1 van elke aangrenzende tegel waarvan het getal wordt gegooid.",
+            "rule": "Een havendorp is 2 OP waard, maar levert precies evenveel op als een gewoon dorp, niet dubbel zoals een stad: bijv. 1 erts, niet 2, als het getal van een aangrenzende bergtegel wordt gegooid.",
+            "ref": "Piraten & Ontdekkers-spelregels (klassieke editie), blz. 5"
+          },
+          {
+            "id": "no-trade-build-after-moving",
+            "myth": "Als je schepen al hebben bewogen, mag je nog steeds handelen of nieuwe stukken kopen, zolang je aan de beurt bent.",
+            "rule": "Handelen en bouwen doe je vóór de bewegingsfase. Zodra die begint, mag je niet meer handelen of bouwen; de enige uitzondering is een dorp stichten met een schip met een kolonist, zonder extra kosten.",
+            "ref": "Piraten & Ontdekkers-spelregels (klassieke editie), blz. 3"
+          },
+          {
+            "id": "pirate-tribute-to-supply",
+            "myth": "De tol voor het langsvaren van een piratenschip betaal je aan de eigenaar van dat piratenschip.",
+            "rule": "De tol is 1 goud per schip en gaat naar de voorraad, niet naar de eigenaar van het piratenschip. Heb je betaald, dan mag dat schip de rest van de beurt vrij op, langs en van de piratentegel varen.",
+            "ref": "Piraten & Ontdekkers-spelregels (klassieke editie), blz. 7"
+          },
+          {
+            "id": "discovery-ends-ship-move",
+            "myth": "Een schip dat een nieuwe tegel ontdekt, mag met zijn overgebleven bewegingspunten verder varen.",
+            "rule": "Een tegel ontdekken beëindigt de beweging van dat schip voor deze beurt en de ongebruikte bewegingspunten vervallen. Schepen die je deze beurt nog niet hebt bewogen, mogen nog wel varen.",
+            "ref": "Piraten & Ontdekkers-spelregels (klassieke editie), blz. 4"
+          },
+          {
+            "id": "chase-needs-unmoved-ship",
+            "myth": "Een schip dat deze beurt al heeft gevaren, mag nog gooien om het piratenschip te verjagen.",
+            "rule": "Alleen een schip dat deze beurt nog niet heeft bewogen en waarvan een uiteinde aan een driesprong van de piratentegel grenst, mag gooien om het piratenschip te verjagen. Na het gooien mag het nog varen.",
+            "ref": "Piraten & Ontdekkers-spelregels (klassieke editie), blz. 8"
+          },
+          {
+            "id": "gold-safe-on-seven",
+            "myth": "Gouden munten tellen bij een 7 mee voor je hand, dus misschien moet je wat goud afleggen.",
+            "rule": "Bij een 7 tellen alleen grondstofkaarten: een speler met meer dan 7 grondstofkaarten legt de helft ervan af (naar beneden afgerond). Gouden munten worden nooit meegeteld of afgelegd.",
+            "ref": "Piraten & Ontdekkers-spelregels (klassieke editie), blz. 3, 7"
+          },
+          {
+            "id": "pirate-lair-shared-capture",
+            "myth": "Om een piratennest te veroveren, moeten alle drie de bemanningen erop van jou zijn.",
+            "rule": "Een piratennest wordt veroverd door de 3e bemanning die erop wordt gezet, van wie die bemanningen ook zijn. Elke speler met een bemanning daar krijgt 2 goud en gaat vooruit op het piratenspoor.",
+            "ref": "Piraten & Ontdekkers-spelregels (klassieke editie), blz. 10"
+          },
+          {
+            "id": "settler-distance-rule",
+            "myth": "Een schip met een kolonist kan op elke driesprong aan de kust een dorp stichten, zelfs vlak naast een ander dorp.",
+            "rule": "Een dorp dat je met een schip met een kolonist sticht, moet aan de afstandsregel voldoen. Je legt het schip en de kolonist terug in je voorraad en plaatst het dorp zonder extra kosten.",
+            "ref": "Piraten & Ontdekkers-spelregels (klassieke editie), blz. 5"
           }
         ]
       }
