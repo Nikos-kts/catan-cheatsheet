@@ -6,6 +6,7 @@ import { STORAGE_KEYS, SUPPORT_URL } from "../constants.js";
 import { getString, setString } from "../storage.js";
 import { buildQuiz, parseBest } from "./quiz.js";
 import { createRng } from "./random.js";
+import { keepTopVisible } from "./scroll.js";
 
 const ROUND_SIZE = 8;
 
@@ -89,6 +90,7 @@ function showQuestion(card, questions, index, score, ui, bestKey, restart) {
 
   card.replaceChildren(progress, counter, prompt, options, feedback);
   options.querySelector("button")?.focus({ preventScroll: true });
+  keepTopVisible(card); // a long explanation may have pushed the card's top off-screen
 }
 
 function showResult(card, score, total, ui, bestKey, restart) {

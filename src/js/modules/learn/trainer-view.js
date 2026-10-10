@@ -218,7 +218,7 @@ function renderPanel(panel, view, ui, toolsUi, resLabel) {
     text("p", "trainer-summary", fill(ui.summary || "{pips} pips · {kinds} resource types · score {score}", {
       pips: s.pips, kinds: distinct, score: s.total.toFixed(1),
     })),
-    text("p", "trainer-sub", ui.blockedNote || "Faded corners are blocked: no settlement may be built next to another (distance rule)."),
+    text("p", "trainer-sub trainer-blocked-note", ui.blockedNote || "Faded corners are blocked: no settlement may be built next to another (distance rule)."),
   );
 }
 

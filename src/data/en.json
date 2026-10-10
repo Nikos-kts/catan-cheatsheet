@@ -113,7 +113,8 @@
         "lead": "Even experienced tables get these wrong. Each fix comes from the official rulebook.",
         "empty": "No common mistakes listed for this game yet.",
         "myth": "Myth",
-        "rule": "Rule"
+        "rule": "Rule",
+        "tapHint": "Tap a myth to see what the rulebook really says."
       },
       "quiz": {
         "title": "Rules quiz",

@@ -40,6 +40,7 @@
 }
 
 .learn-chip {
+  min-height: 40px;
   border: 1px solid rgba(255, 255, 255, 0.45);
   background: rgba(255, 255, 255, 0.14);
   color: #fff;
@@ -248,10 +249,15 @@
   position: relative;
   border: 1px solid var(--sand-dk);
   border-radius: var(--radius);
-  background: #fff;
+  background: #eaf6ee; /* the rule's colour, so cards in a row end evenly */
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+}
+
+.mistake-hint {
+  display: none; /* only relevant where the rules start collapsed (phones) */
+  color: var(--text-lt);
+  font-size: 0.88rem;
+  margin: -0.4rem 0 0.9rem;
 }
 
 .mistake::before {
@@ -271,23 +277,51 @@
 }
 
 .mistake-myth {
+  display: block; /* hides the default disclosure triangle */
+  position: relative;
+  padding-right: 2.6rem;
   background: #fdecea;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mistake-myth::-webkit-details-marker {
+  display: none;
+}
+
+.mistake-myth::after {
+  content: "▾";
+  position: absolute;
+  right: 0.8rem;
+  bottom: 0.55rem;
+  color: var(--brick);
+  font-size: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.mistake-details[open] > .mistake-myth::after {
+  transform: rotate(180deg);
+}
+
+.mistake-myth:focus-visible {
+  outline: 3px solid var(--learn-accent);
+  outline-offset: -3px;
 }
 
 .mistake-myth .mistake-text {
   color: #7b2d26;
+}
+
+/* Struck through only once revealed as wrong (collapsed myths stay easy to read). */
+.mistake-details[open] .mistake-myth .mistake-text {
   text-decoration: line-through;
   text-decoration-color: rgba(192, 57, 43, 0.45);
 }
 
-.mistake-rule {
-  background: #eaf6ee;
-  flex: 1;
-}
 
 .mistake-badge {
   display: inline-block;
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0.05em;
@@ -303,14 +337,14 @@
 }
 
 .mistake-text {
+  display: block;
   line-height: 1.45;
 }
 
 .mistake-ref {
   font-size: 0.78rem;
   color: var(--text-lt);
-  padding: 0.45rem 0.9rem;
-  border-top: 1px dashed var(--sand-dk);
+  margin-top: 0.5rem;
 }
 
 /* ── Quiz ── */
@@ -731,14 +765,84 @@
   .trainer-layout {
     grid-template-columns: 1fr;
   }
+  /* Result above the board, compact and with reserved height, so tapping a
+     corner never needs a scroll and never shifts the board. */
+  .trainer-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .trainer-btn {
+    min-height: 44px;
+    padding: 0.5rem 0.4rem;
+    font-size: 0.88rem;
+  }
+  .trainer-panel {
+    order: -1;
+    min-height: 10.75rem;
+    padding: 0.75rem 0.8rem;
+  }
+  .trainer-head {
+    margin-bottom: 0.5rem;
+  }
+  .trainer-rank {
+    font-size: 1.25rem;
+  }
+  .trainer-hexes {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    margin-bottom: 0.55rem;
+  }
+  .trainer-hexes li {
+    grid-template-columns: auto 1fr;
+    grid-template-areas: "icon num" "name name" "pips pips";
+    gap: 0.1rem 0.35rem;
+    padding: 0.4rem 0.5rem;
+  }
+  .trainer-hex-icon { grid-area: icon; }
+  .trainer-hex-num { grid-area: num; text-align: left; font-size: 1.05rem; }
+  .trainer-hex-name {
+    grid-area: name;
+    font-size: 0.78rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .trainer-hex-pips { grid-area: pips; min-height: 1em; line-height: 1; }
+  .trainer-summary {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+  }
+  .trainer-blocked-note {
+    display: none; /* explained in the hint before the first tap */
+  }
+  .mistake-hint {
+    display: block;
+  }
+  .mistake-list {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
 }
 
 @media (max-width: 480px) {
   .learn-hero {
-    padding: 1.2rem 1rem 1rem;
+    padding: 1rem 0.9rem 0.9rem;
+    margin-bottom: 1rem;
   }
   .learn-hero-title {
-    font-size: 1.35rem;
+    font-size: 1.3rem;
+  }
+  .learn-hero-intro {
+    display: none; /* the four buttons below say it all on a small screen */
+  }
+  .learn-hero-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 0.7rem;
+  }
+  .learn-chip {
+    min-height: 44px;
+    border-radius: 12px;
+    text-align: left;
   }
   .learn-section {
     padding: 1rem 0.9rem 1.1rem;

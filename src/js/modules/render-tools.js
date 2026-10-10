@@ -1,4 +1,4 @@
-// Tools-tab renderer. Wires up the three tool modules inside collapsible
+// Tools-tab renderer. Wires up the tool modules inside collapsible
 // sections. Tools are self-contained (each exposes `mount(el, ui)`), so
 // adding/removing tools here is a one-line change.
 

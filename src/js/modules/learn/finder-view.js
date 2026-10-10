@@ -7,12 +7,14 @@ import { loadLanguageFile } from "../data-loader.js";
 import { activateTab } from "../tabs.js";
 import { setString } from "../storage.js";
 import { buildIndex, search } from "./card-finder.js";
+import { scrollBelowTabs } from "./scroll.js";
 
 const FLAGS = { en: "🇬🇧", el: "🇬🇷", es: "🇪🇸", nl: "🇳🇱", pt: "🇵🇹" };
 const KIND_TAB = { card: "cards", cost: "reference", scenario: "gameplay" };
 const DEBOUNCE_MS = 120;
 const FLASH_MS = 2200;
 const ACCORDION_MS = 320; // accordions.js animates max-height over 300ms
+const PHONE = "(max-width: 760px)";
 
 let indexPromise = null; // built once per page load, shared by every mount
 
@@ -35,6 +37,9 @@ export function mount(root, { ui }) {
   input.className = "finder-input";
   input.autocomplete = "off";
   input.spellcheck = false;
+  input.setAttribute("autocapitalize", "off");
+  input.setAttribute("autocorrect", "off");
+  input.setAttribute("enterkeyhint", "search");
   input.placeholder = ui.placeholder || "Card, building or scenario name…";
   input.setAttribute("aria-label", ui.title || "Card finder");
   const status = el("p", "finder-status", "");
@@ -65,6 +70,14 @@ export function mount(root, { ui }) {
     }
   };
   input.addEventListener("focus", () => loadIndex().catch(() => {}), { once: true });
+  // On phones the keyboard covers half the screen: bring the search box to the top
+  // so the results stay visible above it.
+  input.addEventListener("focus", () => {
+    if (window.matchMedia(PHONE).matches) scrollBelowTabs(root.closest(".learn-section") || root);
+  });
+  input.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") input.blur(); // dismiss the on-screen keyboard to reveal the results
+  });
   input.addEventListener("input", () => {
     clearTimeout(timer);
     timer = setTimeout(run, DEBOUNCE_MS);
@@ -178,15 +191,6 @@ function reveal(target) {
   }, opened ? ACCORDION_MS : 0);
 }
 
-function scrollBelowTabs(el, center = false) {
-  if (!el) return;
-  const tabsHeight = document.getElementById("tabs")?.offsetHeight || 0;
-  const rect = el.getBoundingClientRect();
-  const free = window.innerHeight - tabsHeight;
-  const offset = center && rect.height < free ? (free - rect.height) / 2 : 8;
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  window.scrollTo({ top: Math.max(0, rect.top + window.scrollY - tabsHeight - offset), behavior: reduce ? "auto" : "smooth" });
-}
 
 function el(tag, className, text) {
   const node = document.createElement(tag);

@@ -18,6 +18,19 @@ import { renderStrategy } from "./modules/render-strategy.js";
 import { renderLearn } from "./modules/render-learn.js";
 import { renderTools } from "./modules/render-tools.js";
 
+// Tab id → [ui key, English fallback]; the icons live in index.html.
+const TAB_LABELS = {
+  cards: ["tabCards", "Cards"],
+  gameplay: ["tabGameplay", "Gameplay"],
+  reference: ["tabReference", "Reference"],
+  strategy: ["tabStrategy", "Strategy"],
+  learn: ["tabLearn", "Learn"],
+  tools: ["tabTools", "Tools"],
+};
+
+// BCP 47 tags for <html lang> where they differ from our language codes.
+const HTML_LANG = { pt: "pt-PT" };
+
 // ── Boot ────────────────────────────────────────────────────────────────────
 document.addEventListener("DOMContentLoaded", () => {
   // Restore persisted preferences before wiring up listeners.
@@ -45,7 +58,10 @@ document.addEventListener("DOMContentLoaded", () => {
   if (savedGame) state.game = savedGame;
   if (savedTab && VALID_TABS.includes(savedTab)) state.tab = savedTab;
 
-  initTabs(() => renderActiveTab());
+  initTabs(() => {
+    renderActiveTab();
+    scrollToContentTop();
+  });
   syncActiveTab();
   initStickyTabs();
 
@@ -61,6 +77,7 @@ async function loadAndRender() {
     showError("Could not load cheatsheet data.");
     return;
   }
+  document.documentElement.lang = HTML_LANG[state.lang] || state.lang;
   populateGameSelector();
   renderActiveTab();
   showLoading(false);
@@ -94,21 +111,17 @@ function populateGameSelector() {
   setText("app-subtitle", ui.subtitle);
   setText("footer-text", ui.footer);
 
-  const tabCards = document.getElementById("tab-cards");
-  const tabGameplay = document.getElementById("tab-gameplay");
-  const tabReference = document.getElementById("tab-reference");
-  const tabStrategy = document.getElementById("tab-strategy");
-  const tabLearn = document.getElementById("tab-learn");
-  const tabTools = document.getElementById("tab-tools");
-  if (tabCards) tabCards.textContent = `🃏 ${ui.tabCards || "Cards"}`;
-  if (tabGameplay)
-    tabGameplay.textContent = `🎲 ${ui.tabGameplay || "Gameplay"}`;
-  if (tabReference)
-    tabReference.textContent = `📋 ${ui.tabReference || "Reference"}`;
-  if (tabStrategy)
-    tabStrategy.textContent = `🧠 ${ui.tabStrategy || "Strategy"}`;
-  if (tabLearn) tabLearn.textContent = `🎓 ${ui.tabLearn || "Learn"}`;
-  if (tabTools) tabTools.textContent = `🧮 ${ui.tabTools || "Tools"}`;
+  Object.entries(TAB_LABELS).forEach(([tabId, [uiKey, fallback]]) => {
+    const label = document.querySelector(`#tab-${tabId} .tab-label`);
+    if (label) label.textContent = ui[uiKey] || fallback;
+  });
+}
+
+// After switching tabs while scrolled down, start the new tab at its top (the
+// tab bar is sticky, so it sits right below the header's natural position).
+function scrollToContentTop() {
+  const top = document.querySelector("header")?.offsetHeight || 0;
+  if (window.scrollY > top) window.scrollTo({ top });
 }
 
 function setText(id, value) {
