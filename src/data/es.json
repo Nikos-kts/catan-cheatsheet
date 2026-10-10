@@ -96,6 +96,17 @@
         "on": "La pantalla seguirá encendida mientras esta página esté abierta.",
         "blocked": "Tu navegador no lo permite ahora mismo (¿ahorro de batería?).",
         "unsupported": "Este navegador no puede mantener la pantalla encendida. Como alternativa, aumenta el tiempo de bloqueo automático en los ajustes del móvil."
+      },
+      "offline": {
+        "title": "Usar sin conexión",
+        "intro": "Tras tu primera visita, la chuleta se guarda en este dispositivo y se abre incluso sin cobertura.",
+        "ready": "Guardada en este dispositivo: se abre sin conexión.",
+        "saving": "Guardando para usarla sin conexión…",
+        "unsupported": "Este navegador no puede guardar la página para usarla sin conexión.",
+        "version": "Versión {build}",
+        "tip": "Consejo: ábrela una vez con conexión antes de un viaje para que se guarde la última versión.",
+        "updateReady": "Hay una versión nueva.",
+        "updateNow": "Actualizar"
       }
     },
     "tabLearn": "Aprender",

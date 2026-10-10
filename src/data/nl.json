@@ -96,6 +96,17 @@
         "on": "Het scherm blijft aan zolang deze pagina open is.",
         "blocked": "Je browser staat dit nu niet toe (batterijbesparing aan?).",
         "unsupported": "Deze browser kan het scherm niet aan laten staan. Zet de automatische vergrendeling dan op een langere tijd in de instellingen van je telefoon."
+      },
+      "offline": {
+        "title": "Offline gebruiken",
+        "intro": "Na je eerste bezoek wordt het spiekbriefje op dit apparaat opgeslagen, zodat het ook zonder bereik opent.",
+        "ready": "Opgeslagen op dit apparaat — opent ook zonder verbinding.",
+        "saving": "Wordt opgeslagen voor offline gebruik…",
+        "unsupported": "Deze browser kan de site niet opslaan voor offline gebruik.",
+        "version": "Versie {build}",
+        "tip": "Tip: open het één keer met verbinding voordat je op reis gaat, zodat de nieuwste versie is opgeslagen.",
+        "updateReady": "Er staat een nieuwe versie klaar.",
+        "updateNow": "Bijwerken"
       }
     },
     "tabLearn": "Leren",

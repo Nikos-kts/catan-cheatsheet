@@ -96,6 +96,17 @@
         "on": "O ecrã fica ligado enquanto esta página estiver aberta.",
         "blocked": "O navegador não o está a permitir neste momento (poupança de bateria?).",
         "unsupported": "Este navegador não consegue manter o ecrã ligado. Em alternativa, aumente o tempo de bloqueio automático nas definições do telemóvel."
+      },
+      "offline": {
+        "title": "Usar offline",
+        "intro": "Depois da primeira visita, a cábula fica guardada neste dispositivo e abre mesmo sem rede.",
+        "ready": "Guardada neste dispositivo — abre sem ligação.",
+        "saving": "A guardar para utilização offline…",
+        "unsupported": "Este navegador não consegue guardar o site para utilização offline.",
+        "version": "Versão {build}",
+        "tip": "Dica: abra-a uma vez com ligação antes de uma viagem, para que fique guardada a versão mais recente.",
+        "updateReady": "Há uma nova versão disponível.",
+        "updateNow": "Atualizar"
       }
     },
     "tabLearn": "Aprender",

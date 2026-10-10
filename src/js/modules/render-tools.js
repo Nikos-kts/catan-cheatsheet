@@ -8,9 +8,11 @@ import * as diceOdds from "./tools/dice-odds.js";
 import * as startingSpot from "./tools/starting-spot.js";
 import * as robberTimer from "./tools/robber-timer.js";
 import * as keepAwake from "./tools/keep-awake.js";
+import * as offlineStatus from "./tools/offline-status.js";
 
 const TOOLS = [
   { id: "keep-awake", icon: "🔆", uiKey: "keepAwake", module: keepAwake },
+  { id: "offline", icon: "📴", uiKey: "offline", module: offlineStatus },
   { id: "dice-odds", icon: "🎲", uiKey: "diceOdds", module: diceOdds },
   { id: "starting-spot", icon: "📍", uiKey: "startingSpot", module: startingSpot },
   { id: "robber-timer", icon: "🕵️", uiKey: "robberTimer", module: robberTimer },

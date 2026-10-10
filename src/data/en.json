@@ -96,6 +96,17 @@
         "on": "The screen will stay on while this page is open.",
         "blocked": "Your browser is not allowing it right now (battery saver?).",
         "unsupported": "This browser can't keep the screen on. Raise the auto-lock time in your phone's settings instead."
+      },
+      "offline": {
+        "title": "Use offline",
+        "intro": "After your first visit the cheat sheet is saved on this device, so it opens even with no signal.",
+        "ready": "Saved on this device — opens without a connection.",
+        "saving": "Saving for offline use…",
+        "unsupported": "This browser can't save the site for offline use.",
+        "version": "Version {build}",
+        "tip": "Tip: open it once while you have a connection before a trip, so the latest version is saved.",
+        "updateReady": "A new version is ready.",
+        "updateNow": "Update"
       }
     },
     "tabLearn": "Learn",

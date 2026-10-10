@@ -10,9 +10,10 @@ A lightweight, browser-based reference for Catan card explanations — supports 
 
 - **Games / Expansions**: Base Catan, Seafarers, Cities & Knights, Traders & Barbarians, Explorers & Pirates
 - **Languages**: English, Greek (Ελληνικά), Spanish (Español), Dutch (Nederlands), Portuguese (Português, European)
-- **Six tabs**: 🃏 Cards, 🎲 Gameplay, 📋 Reference (building costs / dice probabilities / trading ratios / turn flow), 🧠 Strategy (beginner → advanced tips per game), 🎓 Learn (card finder across all languages, rules people get wrong, rules quiz, placement trainer), 🧮 Tools (keep-screen-on toggle, dice odds calculator, starting-spot helper, robber 7-timer)
+- **Six tabs**: 🃏 Cards, 🎲 Gameplay, 📋 Reference (building costs / dice probabilities / trading ratios / turn flow), 🧠 Strategy (beginner → advanced tips per game), 🎓 Learn (card finder across all languages, rules people get wrong, rules quiz, placement trainer), 🧮 Tools (keep-screen-on toggle, offline status, dice odds calculator, starting-spot helper, robber 7-timer)
 - Selections are remembered across sessions via `localStorage` (`catan-lang`, `catan-game`, `catan-tab`)
 - Pure HTML + CSS + vanilla JavaScript ES modules — no build step needed
+- Works offline: after the first visit the whole site (~2.6 MB) is saved on the device and opens with no connection; updates are picked up automatically (see [Offline support](#offline-support))
 - Phone-first: all tabs visible on small screens, compact header, WebP images sized for display (the whole image set is ~1.3 MB)
 - Accessible: `role="tablist"` tabs with arrow-key navigation, `aria-live` content region, `prefers-reduced-motion`-aware animations
 
@@ -20,6 +21,9 @@ A lightweight, browser-based reference for Catan card explanations — supports 
 
 ```
 index.html              # Main page (root)
+sw.js                   # Service worker: offline copy + fingerprint-checked updates
+scripts/
+└── build-offline.mjs   # Regenerates the file fingerprints inside sw.js
 src/
 ├── css/
 │   ├── styles.css      # Styles (earthy Catan colour palette)
@@ -31,6 +35,8 @@ src/
 │       ├── constants.js        # Game maps, theme, localStorage keys
 │       ├── storage.js          # localStorage wrapper
 │       ├── data-loader.js      # Fetch + EN fallback for missing keys
+│       ├── offline.js          # Registers sw.js, checks for new builds
+│       ├── update-banner.js    # "New version ready" banner
 │       ├── theme.js            # Per-game theming / banner
 │       ├── tabs.js             # Tab switching + sticky tabs + a11y
 │       ├── accordions.js       # Single-open accordion animation
@@ -204,10 +210,53 @@ for f in src/data/*.json; do jq . "$f" > /dev/null || echo "Invalid JSON: $f"; d
 git --no-pager diff -- src/data/
 ```
 
+## Offline support
+
+`sw.js` keeps a complete copy of the site on the visitor's device. It contains a
+generated list of every site file with a fingerprint (SHA-256) of its content,
+plus one fingerprint for the whole build:
+
+- **Opening the app** is always served from the saved copy (instant, works with
+  no connection).
+- **Checking for updates** costs one small request: when online, the browser
+  re-checks `sw.js`. If the build fingerprint changed, only the files whose
+  fingerprint changed are downloaded; everything else is copied from the copy
+  already on the device.
+- **Every file is verified** against its fingerprint before it is accepted. A
+  half-finished deploy or a flaky connection never produces a broken or mixed
+  version: the update is dropped, the previous version keeps working, and the
+  next check tries again.
+- When a new version is ready, a small banner offers to switch to it (nothing
+  reloads by itself in the middle of a game). Tools → "Use offline" shows the
+  status and the build that is being served.
+
+**After changing any site file, regenerate the fingerprints** (otherwise
+visitors keep the old version):
+
+```bash
+node scripts/build-offline.mjs          # rewrite the generated block in sw.js
+node scripts/build-offline.mjs --check  # exit 1 if sw.js is out of date
+```
+
+To have this done automatically on every commit, enable the tracked hook once
+per clone:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+The hook fingerprints the files as they are on disk, so commit all site changes
+together. `node --test` also fails when `sw.js` is out of date.
+
+On `localhost` the worker is switched off so a saved copy never hides your
+edits; add `?offline` to the address (e.g. `http://localhost:3000/?offline`) to
+try it.
+
 ## Tests
 
 The Learn tab's logic (card search, quiz generation, board generation and scoring)
-is plain ES modules with unit tests using Node's built-in runner — no install needed:
+and the offline support (fingerprint generator, and the real `sw.js` run against a
+fake cache and network) have unit tests using Node's built-in runner — no install needed:
 
 ```bash
 node --test 'tests/**/*.test.mjs'

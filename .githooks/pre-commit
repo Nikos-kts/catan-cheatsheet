@@ -1,0 +1,11 @@
+#!/bin/sh
+# Keeps the offline fingerprints in sw.js in step with the site files, so
+# visitors' saved copies notice every change.
+# Enable once per clone:  git config core.hooksPath .githooks
+root=$(git rev-parse --show-toplevel) || exit 1
+[ -f "$root/scripts/build-offline.mjs" ] || exit 0
+node "$root/scripts/build-offline.mjs" || {
+  echo "pre-commit: could not update the offline fingerprints (is Node installed?)" >&2
+  exit 1
+}
+git -C "$root" add sw.js
