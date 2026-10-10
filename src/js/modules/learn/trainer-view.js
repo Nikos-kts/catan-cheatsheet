@@ -22,7 +22,11 @@ const fill = (template, vars) => String(template).replace(/\{(\w+)\}/g, (_, k) =
 
 export function mount(root, { ui }) {
   const toolsUi = (state.data.ui && state.data.ui.tools && state.data.ui.tools.startingSpot) || {};
-  const resLabel = (res) => (res === "water" ? ui.sea || "Sea" : toolsUi[`res_${res}`] || res);
+  const resLabel = (res) => {
+    if (res === "water") return ui.sea || "Sea";
+    if (res === "desert") return ui.desert || "Desert";
+    return toolsUi[`res_${res}`] || res;
+  };
   const view = { board: null, corners: [], byId: new Map(), best: [], selected: null, focus: 0, showBest: false, els: null };
 
   root.appendChild(text("p", "learn-lead", ui.intro ||

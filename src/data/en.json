@@ -168,6 +168,7 @@
         "summary": "{pips} pips · {kinds} resource types · score {score}",
         "blockedNote": "Faded corners are blocked: no settlement may be built next to another (distance rule).",
         "sea": "Sea",
+        "desert": "Desert",
         "bestLabel": "best spot {n}",
         "blockedLabel": "blocked by the distance rule"
       }
